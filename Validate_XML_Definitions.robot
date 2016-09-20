@@ -7,8 +7,8 @@ Resource    Global_Vars.robot
 Validate Camera Telemetry
     [Documentation]    Validate the Camera Telemetry XML file.
     [Tags]    smoke
-    Run Keyword If    "${ContInt}"=="true"    ${output}=    Run    xmlstarlet val ${folder}/sal_interfaces/camera/camera_Telemetry.xml
-    Run Keyword Unless    "${ContInt}"=="true"    ${output}=    Run    xml val ${folder}/sal_interfaces/camera/camera_Telemetry.xml
+    ${output}=    Run Keyword If    "${ContInt}"=="true"    Run    xmlstarlet val ${folder}/sal_interfaces/camera/camera_Telemetry.xml
+    ${output}=    Run Keyword Unless    "${ContInt}"=="true"    Run    xml val ${folder}/sal_interfaces/camera/camera_Telemetry.xml
     Log    ${output}
     Should Contain    ${output}    camera_Telemetry.xml - valid
 
