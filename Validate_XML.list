@@ -3,5 +3,5 @@
 --name Validate XML
 
 # List of test suites
-robot/Validate_XML_Definitions.robot
-robot/Validate_XML_Version.robot
+rbtxml/Validate_XML_Definitions.robot
+rbtxml/Validate_XML_Version.robot
