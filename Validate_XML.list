@@ -5,3 +5,4 @@
 # List of test suites
 rbtxml/Validate_XML_Definitions.robot
 rbtxml/Validate_XML_Version.robot
+rbtxml/Validate_XML_Count.robot
