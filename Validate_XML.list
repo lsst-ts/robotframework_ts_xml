@@ -3,9 +3,9 @@
 --name Validate XML
 
 # List of test suites
-rbtxml/Validate_XML_Definitions.robot
-rbtxml/Validate_XML_XSD_Telemetry.robot
-rbtxml/Validate_XML_XSD_Commands.robot
-rbtxml/Validate_XML_XSD_Events.robot
-rbtxml/Validate_XML_Version.robot
-rbtxml/Validate_XML_Count.robot
+Validate_XML_Definitions.robot
+Validate_XML_XSD_Telemetry.robot
+Validate_XML_XSD_Commands.robot
+Validate_XML_XSD_Events.robot
+Validate_XML_Version.robot
+Validate_XML_Count.robot
