@@ -23,7 +23,7 @@ Validate Camera Commands
     Should Contain    ${output}    camera_Commands.xml - valid
 
 Validate Camera Events
-    [Documentation]    Validate the Camera Events    [Documentation]    Validate the Camera Commands XML file.
+    [Documentation]    Validate the Camera Events XML file.
     [Tags]    smoke
     ${output}=    Run    ${xml} val ${folder}/sal_interfaces/camera/camera_Events.xml
     Log    ${output}
