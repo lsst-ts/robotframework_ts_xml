@@ -40,7 +40,7 @@ def GetSubsystemVersion( string ):
 # =========
 # Variables
 # =========
-subsystems = ['camera', 'dm', 'dome', 'hexapod', 'm1m3', 'm2ms', 'MTMount', 'ocs', 'rotator', 'scheduler', 'tcs']
+subsystems = ['camera', 'dm', 'dome', 'domeADB', 'domeAPS', 'domeLouvers', 'domeLWS', 'domeMONCS', 'domeTHCS', 'hexapod', 'm1m3', 'm2ms', 'MTMount', 'ocs', 'rotator', 'scheduler', 'tcs']
 
 # Create/Open test suite file.
 file = open("../Validate_XML_Version.robot","w")
