@@ -70,151 +70,151 @@ Validate Dome Telemetry Version
 	${count}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry/EFDB_Topic)" ${folder}/sal_interfaces/dome/dome_Telemetry.xml
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/dome/dome_Telemetry.xml
 	Log    ${output}
-	Should Contain X Times    ${output}    1.0.0    ${count}
+	Should Contain X Times    ${output}    3.5.0    ${count}
 
 Validate DomeADB Commands Version
 	[Documentation]    Validate the DomeADB Commands version.
 	[Tags]    smoke
-	${count}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand/EFDB_Topic)" ${folder}/sal_interfaces/dome/domeADB_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Version" -v . -n ${folder}/sal_interfaces/dome/domeADB_Telemetry.xml
+	${count}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand/EFDB_Topic)" ${folder}/sal_interfaces/domeADB/domeADB_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Version" -v . -n ${folder}/sal_interfaces/domeADB/domeADB_Telemetry.xml
 	Log    ${output}
 	Should Contain X Times    ${output}    1.0.0    ${count}
 
 Validate DomeADB Events Version
 	[Documentation]    Validate the DomeADB Events version.
 	[Tags]    smoke
-	${count}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent/EFDB_Topic)" ${folder}/sal_interfaces/dome/domeADB_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/dome/domeADB_Telemetry.xml
+	${count}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent/EFDB_Topic)" ${folder}/sal_interfaces/domeADB/domeADB_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/domeADB/domeADB_Telemetry.xml
 	Log    ${output}
 	Should Contain X Times    ${output}    1.0.0    ${count}
 
 Validate DomeADB Telemetry Version
 	[Documentation]    Validate the DomeADB Telemetry version.
 	[Tags]    smoke
-	${count}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry/EFDB_Topic)" ${folder}/sal_interfaces/dome/domeADB_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/dome/domeADB_Telemetry.xml
+	${count}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry/EFDB_Topic)" ${folder}/sal_interfaces/domeADB/domeADB_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/domeADB/domeADB_Telemetry.xml
 	Log    ${output}
-	Should Contain X Times    ${output}    1.0.0    ${count}
+	Should Contain X Times    ${output}    3.5.0    ${count}
 
 Validate DomeAPS Commands Version
 	[Documentation]    Validate the DomeAPS Commands version.
 	[Tags]    smoke
-	${count}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand/EFDB_Topic)" ${folder}/sal_interfaces/dome/domeAPS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Version" -v . -n ${folder}/sal_interfaces/dome/domeAPS_Telemetry.xml
+	${count}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand/EFDB_Topic)" ${folder}/sal_interfaces/domeAPS/domeAPS_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Version" -v . -n ${folder}/sal_interfaces/domeAPS/domeAPS_Telemetry.xml
 	Log    ${output}
 	Should Contain X Times    ${output}    1.0.0    ${count}
 
 Validate DomeAPS Events Version
 	[Documentation]    Validate the DomeAPS Events version.
 	[Tags]    smoke
-	${count}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent/EFDB_Topic)" ${folder}/sal_interfaces/dome/domeAPS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/dome/domeAPS_Telemetry.xml
+	${count}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent/EFDB_Topic)" ${folder}/sal_interfaces/domeAPS/domeAPS_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/domeAPS/domeAPS_Telemetry.xml
 	Log    ${output}
 	Should Contain X Times    ${output}    1.0.0    ${count}
 
 Validate DomeAPS Telemetry Version
 	[Documentation]    Validate the DomeAPS Telemetry version.
 	[Tags]    smoke
-	${count}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry/EFDB_Topic)" ${folder}/sal_interfaces/dome/domeAPS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/dome/domeAPS_Telemetry.xml
+	${count}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry/EFDB_Topic)" ${folder}/sal_interfaces/domeAPS/domeAPS_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/domeAPS/domeAPS_Telemetry.xml
 	Log    ${output}
-	Should Contain X Times    ${output}    1.0.0    ${count}
+	Should Contain X Times    ${output}    3.5.0    ${count}
 
 Validate DomeLouvers Commands Version
 	[Documentation]    Validate the DomeLouvers Commands version.
 	[Tags]    smoke
-	${count}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand/EFDB_Topic)" ${folder}/sal_interfaces/dome/domeLouvers_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Version" -v . -n ${folder}/sal_interfaces/dome/domeLouvers_Telemetry.xml
+	${count}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand/EFDB_Topic)" ${folder}/sal_interfaces/domeLouvers/domeLouvers_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Version" -v . -n ${folder}/sal_interfaces/domeLouvers/domeLouvers_Telemetry.xml
 	Log    ${output}
 	Should Contain X Times    ${output}    1.0.0    ${count}
 
 Validate DomeLouvers Events Version
 	[Documentation]    Validate the DomeLouvers Events version.
 	[Tags]    smoke
-	${count}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent/EFDB_Topic)" ${folder}/sal_interfaces/dome/domeLouvers_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/dome/domeLouvers_Telemetry.xml
+	${count}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent/EFDB_Topic)" ${folder}/sal_interfaces/domeLouvers/domeLouvers_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/domeLouvers/domeLouvers_Telemetry.xml
 	Log    ${output}
 	Should Contain X Times    ${output}    1.0.0    ${count}
 
 Validate DomeLouvers Telemetry Version
 	[Documentation]    Validate the DomeLouvers Telemetry version.
 	[Tags]    smoke
-	${count}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry/EFDB_Topic)" ${folder}/sal_interfaces/dome/domeLouvers_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/dome/domeLouvers_Telemetry.xml
+	${count}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry/EFDB_Topic)" ${folder}/sal_interfaces/domeLouvers/domeLouvers_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/domeLouvers/domeLouvers_Telemetry.xml
 	Log    ${output}
-	Should Contain X Times    ${output}    1.0.0    ${count}
+	Should Contain X Times    ${output}    3.5.0    ${count}
 
 Validate DomeLWS Commands Version
 	[Documentation]    Validate the DomeLWS Commands version.
 	[Tags]    smoke
-	${count}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand/EFDB_Topic)" ${folder}/sal_interfaces/dome/domeLWS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Version" -v . -n ${folder}/sal_interfaces/dome/domeLWS_Telemetry.xml
+	${count}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand/EFDB_Topic)" ${folder}/sal_interfaces/domeLWS/domeLWS_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Version" -v . -n ${folder}/sal_interfaces/domeLWS/domeLWS_Telemetry.xml
 	Log    ${output}
 	Should Contain X Times    ${output}    1.0.0    ${count}
 
 Validate DomeLWS Events Version
 	[Documentation]    Validate the DomeLWS Events version.
 	[Tags]    smoke
-	${count}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent/EFDB_Topic)" ${folder}/sal_interfaces/dome/domeLWS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/dome/domeLWS_Telemetry.xml
+	${count}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent/EFDB_Topic)" ${folder}/sal_interfaces/domeLWS/domeLWS_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/domeLWS/domeLWS_Telemetry.xml
 	Log    ${output}
 	Should Contain X Times    ${output}    1.0.0    ${count}
 
 Validate DomeLWS Telemetry Version
 	[Documentation]    Validate the DomeLWS Telemetry version.
 	[Tags]    smoke
-	${count}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry/EFDB_Topic)" ${folder}/sal_interfaces/dome/domeLWS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/dome/domeLWS_Telemetry.xml
+	${count}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry/EFDB_Topic)" ${folder}/sal_interfaces/domeLWS/domeLWS_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/domeLWS/domeLWS_Telemetry.xml
 	Log    ${output}
-	Should Contain X Times    ${output}    1.0.0    ${count}
+	Should Contain X Times    ${output}    3.5.0    ${count}
 
 Validate DomeMONCS Commands Version
 	[Documentation]    Validate the DomeMONCS Commands version.
 	[Tags]    smoke
-	${count}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand/EFDB_Topic)" ${folder}/sal_interfaces/dome/domeMONCS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Version" -v . -n ${folder}/sal_interfaces/dome/domeMONCS_Telemetry.xml
+	${count}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand/EFDB_Topic)" ${folder}/sal_interfaces/domeMONCS/domeMONCS_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Version" -v . -n ${folder}/sal_interfaces/domeMONCS/domeMONCS_Telemetry.xml
 	Log    ${output}
 	Should Contain X Times    ${output}    1.0.0    ${count}
 
 Validate DomeMONCS Events Version
 	[Documentation]    Validate the DomeMONCS Events version.
 	[Tags]    smoke
-	${count}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent/EFDB_Topic)" ${folder}/sal_interfaces/dome/domeMONCS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/dome/domeMONCS_Telemetry.xml
+	${count}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent/EFDB_Topic)" ${folder}/sal_interfaces/domeMONCS/domeMONCS_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/domeMONCS/domeMONCS_Telemetry.xml
 	Log    ${output}
 	Should Contain X Times    ${output}    1.0.0    ${count}
 
 Validate DomeMONCS Telemetry Version
 	[Documentation]    Validate the DomeMONCS Telemetry version.
 	[Tags]    smoke
-	${count}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry/EFDB_Topic)" ${folder}/sal_interfaces/dome/domeMONCS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/dome/domeMONCS_Telemetry.xml
+	${count}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry/EFDB_Topic)" ${folder}/sal_interfaces/domeMONCS/domeMONCS_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/domeMONCS/domeMONCS_Telemetry.xml
 	Log    ${output}
-	Should Contain X Times    ${output}    1.0.0    ${count}
+	Should Contain X Times    ${output}    3.5.0    ${count}
 
 Validate DomeTHCS Commands Version
 	[Documentation]    Validate the DomeTHCS Commands version.
 	[Tags]    smoke
-	${count}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand/EFDB_Topic)" ${folder}/sal_interfaces/dome/domeTHCS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Version" -v . -n ${folder}/sal_interfaces/dome/domeTHCS_Telemetry.xml
+	${count}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand/EFDB_Topic)" ${folder}/sal_interfaces/domeTHCS/domeTHCS_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Version" -v . -n ${folder}/sal_interfaces/domeTHCS/domeTHCS_Telemetry.xml
 	Log    ${output}
 	Should Contain X Times    ${output}    1.0.0    ${count}
 
 Validate DomeTHCS Events Version
 	[Documentation]    Validate the DomeTHCS Events version.
 	[Tags]    smoke
-	${count}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent/EFDB_Topic)" ${folder}/sal_interfaces/dome/domeTHCS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/dome/domeTHCS_Telemetry.xml
+	${count}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent/EFDB_Topic)" ${folder}/sal_interfaces/domeTHCS/domeTHCS_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/domeTHCS/domeTHCS_Telemetry.xml
 	Log    ${output}
 	Should Contain X Times    ${output}    1.0.0    ${count}
 
 Validate DomeTHCS Telemetry Version
 	[Documentation]    Validate the DomeTHCS Telemetry version.
 	[Tags]    smoke
-	${count}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry/EFDB_Topic)" ${folder}/sal_interfaces/dome/domeTHCS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/dome/domeTHCS_Telemetry.xml
+	${count}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry/EFDB_Topic)" ${folder}/sal_interfaces/domeTHCS/domeTHCS_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/domeTHCS/domeTHCS_Telemetry.xml
 	Log    ${output}
-	Should Contain X Times    ${output}    1.0.0    ${count}
+	Should Contain X Times    ${output}    3.5.0    ${count}
 
 Validate Hexapod Commands Version
 	[Documentation]    Validate the Hexapod Commands version.
