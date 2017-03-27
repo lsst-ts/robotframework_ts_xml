@@ -29,6 +29,48 @@ Validate Dome Commands
     Log    ${output}
     Should Contain    ${output}    dome_Commands.xml - valid
 
+Validate DomeADB Commands
+    [Documentation]    Validate the DomeADB Commands XML file.
+    [Tags]    smoke
+    ${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/domeADB/domeADB_Commands.xml
+    Log    ${output}
+    Should Contain    ${output}    domeADB_Commands.xml - valid
+
+Validate DomeAPS Commands
+    [Documentation]    Validate the DomeAPS Commands XML file.
+    [Tags]    smoke
+    ${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/domeAPS/domeAPS_Commands.xml
+    Log    ${output}
+    Should Contain    ${output}    domeAPS_Commands.xml - valid
+
+Validate DomeLWS Commands
+    [Documentation]    Validate the DomeLWS Commands XML file.
+    [Tags]    smoke
+    ${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/domeLWS/domeLWS_Commands.xml
+    Log    ${output}
+    Should Contain    ${output}    domeLWS_Commands.xml - valid
+
+Validate DomeLouvers Commands
+    [Documentation]    Validate the DomeLouvers Commands XML file.
+    [Tags]    smoke
+    ${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/domeLouvers/domeLouvers_Commands.xml
+    Log    ${output}
+    Should Contain    ${output}    domeLouvers_Commands.xml - valid
+
+Validate DomeMONCS Commands
+    [Documentation]    Validate the DomeMONCS Commands XML file.
+    [Tags]    smoke
+    ${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/domeMONCS/domeMONCS_Commands.xml
+    Log    ${output}
+    Should Contain    ${output}    domeMONCS_Commands.xml - valid
+
+Validate DomeTHCS Commands
+    [Documentation]    Validate the DomeTHCS Commands XML file.
+    [Tags]    smoke
+    ${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/domeTHCS/domeTHCS_Commands.xml
+    Log    ${output}
+    Should Contain    ${output}    domeTHCS_Commands.xml - valid
+
 Validate Hexapod Commands
     [Documentation]    Validate the Hexapod Commands XML file.
     [Tags]    smoke
@@ -56,6 +98,13 @@ Validate MTMount Commands
     ${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/MTMount/MTMount_Commands.xml
     Log    ${output}
     Should Contain    ${output}    MTMount_Commands.xml - valid
+
+Validate OCS Commands
+    [Documentation]    Validate the OCS Commands XML file.
+    [Tags]    smoke
+    ${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/ocs/ocs_Commands.xml
+    Log    ${output}
+    Should Contain    ${output}    ocs_Commands.xml - valid
 
 Validate Rotator Commands
     [Documentation]    Validate the Rotator Commands XML file.

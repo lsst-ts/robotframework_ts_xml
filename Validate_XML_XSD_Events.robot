@@ -29,6 +29,48 @@ Validate Dome Events
     Log    ${output}
     Should Contain    ${output}    dome_Events.xml - valid
 
+Validate DomeADB Events
+    [Documentation]    Validate the DomeADB Events XML file.
+    [Tags]    smoke
+    ${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/domeADB/domeADB_Events.xml
+    Log    ${output}
+    Should Contain    ${output}    domeADB_Events.xml - valid
+
+Validate DomeAPS Events
+    [Documentation]    Validate the DomeAPS Events XML file.
+    [Tags]    smoke
+    ${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/domeAPS/domeAPS_Events.xml
+    Log    ${output}
+    Should Contain    ${output}    domeAPS_Events.xml - valid
+
+Validate DomeLWS Events
+    [Documentation]    Validate the DomeLWS Events XML file.
+    [Tags]    smoke
+    ${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/domeLWS/domeLWS_Events.xml
+    Log    ${output}
+    Should Contain    ${output}    domeLWS_Events.xml - valid
+
+Validate DomeLouvers Events
+    [Documentation]    Validate the DomeLouvers Events XML file.
+    [Tags]    smoke
+    ${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/domeLouvers/domeLouvers_Events.xml
+    Log    ${output}
+    Should Contain    ${output}    domeLouvers_Events.xml - valid
+
+Validate DomeMONCS Events
+    [Documentation]    Validate the DomeMONCS Events XML file.
+    [Tags]    smoke
+    ${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/domeMONCS/domeMONCS_Events.xml
+    Log    ${output}
+    Should Contain    ${output}    domeMONCS_Events.xml - valid
+
+Validate DomeTHCS Events
+    [Documentation]    Validate the DomeTHCS Events XML file.
+    [Tags]    smoke
+    ${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/domeTHCS/domeTHCS_Events.xml
+    Log    ${output}
+    Should Contain    ${output}    domeTHCS_Events.xml - valid
+
 Validate Hexapod Events
     [Documentation]    Validate the Hexapod Events XML file.
     [Tags]    smoke
@@ -56,6 +98,13 @@ Validate MTMount Events
     ${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/MTMount/MTMount_Events.xml
     Log    ${output}
     Should Contain    ${output}    MTMount_Events.xml - valid
+
+Validate OCS Events
+    [Documentation]    Validate the OCS Events XML file.
+    [Tags]    smoke
+    ${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/ocs/ocs_Events.xml
+    Log    ${output}
+    Should Contain    ${output}    ocs_Events.xml - valid
 
 Validate Rotator Events
     [Documentation]    Validate the Rotator Events XML file.

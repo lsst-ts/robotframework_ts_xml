@@ -29,6 +29,48 @@ Validate Dome Telemetry
     Log    ${output}
     Should Contain    ${output}    dome_Telemetry.xml - valid
 
+Validate DomeADB Telemetry
+    [Documentation]    Validate the DomeADB Telemetry XML file.
+    [Tags]    smoke
+    ${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/domeADB/domeADB_Telemetry.xml
+    Log    ${output}
+    Should Contain    ${output}    domeADB_Telemetry.xml - valid
+
+Validate DomeAPS Telemetry
+    [Documentation]    Validate the DomeAPS Telemetry XML file.
+    [Tags]    smoke
+    ${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/domeAPS/domeAPS_Telemetry.xml
+    Log    ${output}
+    Should Contain    ${output}    domeAPS_Telemetry.xml - valid
+
+Validate DomeLWS Telemetry
+    [Documentation]    Validate the DomeLWS Telemetry XML file.
+    [Tags]    smoke
+    ${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/domeLWS/domeLWS_Telemetry.xml
+    Log    ${output}
+    Should Contain    ${output}    domeLWS_Telemetry.xml - valid
+
+Validate DomeLouvers Telemetry
+    [Documentation]    Validate the DomeLouvers Telemetry XML file.
+    [Tags]    smoke
+    ${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/domeLouvers/domeLouvers_Telemetry.xml
+    Log    ${output}
+    Should Contain    ${output}    domeLouvers_Telemetry.xml - valid
+
+Validate DomeMONCS Telemetry
+    [Documentation]    Validate the DomeMONCS Telemetry XML file.
+    [Tags]    smoke
+    ${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/domeMONCS/domeMONCS_Telemetry.xml
+    Log    ${output}
+    Should Contain    ${output}    domeMONCS_Telemetry.xml - valid
+
+Validate DomeTHCS Telemetry
+    [Documentation]    Validate the DomeTHCS Telemetry XML file.
+    [Tags]    smoke
+    ${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/domeTHCS/domeTHCS_Telemetry.xml
+    Log    ${output}
+    Should Contain    ${output}    domeTHCS_Telemetry.xml - valid
+
 Validate Hexapod Telemetry
     [Documentation]    Validate the Hexapod Telemetry XML file.
     [Tags]    smoke
@@ -57,12 +99,26 @@ Validate MTMount Telemetry
     Log    ${output}
     Should Contain    ${output}    MTMount_Telemetry.xml - valid
 
+Validate OCS Telemetry
+    [Documentation]    Validate the OCS Telemetry XML file.
+    [Tags]    smoke
+    ${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/ocs/ocs_Telemetry.xml
+    Log    ${output}
+    Should Contain    ${output}    ocs_Telemetry.xml - valid
+
 Validate Rotator Telemetry
     [Documentation]    Validate the Rotator Telemetry XML file.
     [Tags]    smoke
     ${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/rotator/rotator_Telemetry.xml
     Log    ${output}
     Should Contain    ${output}    rotator_Telemetry.xml - valid
+
+Validate Scheduler Telemetry
+    [Documentation]    Validate the Scheduler Telemetry XML file.
+    [Tags]    smoke
+    ${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
+    Log    ${output}
+    Should Contain    ${output}    scheduler_Telemetry.xml - valid
 
 Validate TCS Telemetry
     [Documentation]    Validate the TCS Telemetry XML file.
