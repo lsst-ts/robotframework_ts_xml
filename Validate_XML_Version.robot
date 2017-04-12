@@ -8,6 +8,22 @@ Resource    Global_Vars.robot
 ${xml}    xml
 
 *** Test Cases ***
+Validate Archiver Events Version
+	[Documentation]    Validate the Archiver Events version.
+	[Tags]    smoke
+	${count}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent/EFDB_Topic)" ${folder}/sal_interfaces/archiver/archiver_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/archiver/archiver_Telemetry.xml
+	Log    ${output}
+	Should Contain X Times    ${output}    None    ${count}
+
+Validate Archiver Telemetry Version
+	[Documentation]    Validate the Archiver Telemetry version.
+	[Tags]    smoke
+	${count}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry/EFDB_Topic)" ${folder}/sal_interfaces/archiver/archiver_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/archiver/archiver_Telemetry.xml
+	Log    ${output}
+	Should Contain X Times    ${output}    None    ${count}
+
 Validate Camera Commands Version
 	[Documentation]    Validate the Camera Commands version.
 	[Tags]    smoke
@@ -31,6 +47,22 @@ Validate Camera Telemetry Version
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/camera/camera_Telemetry.xml
 	Log    ${output}
 	Should Contain X Times    ${output}    3.2.0    ${count}
+
+Validate Catchuparchiver Events Version
+	[Documentation]    Validate the Catchuparchiver Events version.
+	[Tags]    smoke
+	${count}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent/EFDB_Topic)" ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Telemetry.xml
+	Log    ${output}
+	Should Contain X Times    ${output}    None    ${count}
+
+Validate Catchuparchiver Telemetry Version
+	[Documentation]    Validate the Catchuparchiver Telemetry version.
+	[Tags]    smoke
+	${count}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry/EFDB_Topic)" ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Telemetry.xml
+	Log    ${output}
+	Should Contain X Times    ${output}    None    ${count}
 
 Validate DM Events Version
 	[Documentation]    Validate the DM Events version.
@@ -336,6 +368,22 @@ Validate OCS Telemetry Version
 	Log    ${output}
 	Should Contain X Times    ${output}    3.2.1    ${count}
 
+Validate Processingcluster Events Version
+	[Documentation]    Validate the Processingcluster Events version.
+	[Tags]    smoke
+	${count}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent/EFDB_Topic)" ${folder}/sal_interfaces/processingcluster/processingcluster_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/processingcluster/processingcluster_Telemetry.xml
+	Log    ${output}
+	Should Contain X Times    ${output}    None    ${count}
+
+Validate Processingcluster Telemetry Version
+	[Documentation]    Validate the Processingcluster Telemetry version.
+	[Tags]    smoke
+	${count}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry/EFDB_Topic)" ${folder}/sal_interfaces/processingcluster/processingcluster_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/processingcluster/processingcluster_Telemetry.xml
+	Log    ${output}
+	Should Contain X Times    ${output}    None    ${count}
+
 Validate Rotator Commands Version
 	[Documentation]    Validate the Rotator Commands version.
 	[Tags]    smoke
@@ -367,6 +415,30 @@ Validate Scheduler Telemetry Version
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
 	Log    ${output}
 	Should Contain X Times    ${output}    3.2.0    ${count}
+
+Validate Sequencer Commands Version
+	[Documentation]    Validate the Sequencer Commands version.
+	[Tags]    smoke
+	${count}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand/EFDB_Topic)" ${folder}/sal_interfaces/sequencer/sequencer_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Version" -v . -n ${folder}/sal_interfaces/sequencer/sequencer_Telemetry.xml
+	Log    ${output}
+	Should Contain X Times    ${output}    None    ${count}
+
+Validate Sequencer Events Version
+	[Documentation]    Validate the Sequencer Events version.
+	[Tags]    smoke
+	${count}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent/EFDB_Topic)" ${folder}/sal_interfaces/sequencer/sequencer_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/sequencer/sequencer_Telemetry.xml
+	Log    ${output}
+	Should Contain X Times    ${output}    None    ${count}
+
+Validate Sequencer Telemetry Version
+	[Documentation]    Validate the Sequencer Telemetry version.
+	[Tags]    smoke
+	${count}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry/EFDB_Topic)" ${folder}/sal_interfaces/sequencer/sequencer_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/sequencer/sequencer_Telemetry.xml
+	Log    ${output}
+	Should Contain X Times    ${output}    None    ${count}
 
 Validate TCS Commands Version
 	[Documentation]    Validate the TCS Commands version.
