@@ -29,12 +29,18 @@ def CapitalizeSubsystem( subsystem ):
 		return subsystem.capitalize()
 
 def GetSubsystemVersion( string ):
-	with open("/Users/rbovill/bin/XML_Versions.txt") as versionfile:
-		for line in versionfile:
-			if string in line:
-				version = line.split(" ")[1]
-				return version
-
+    # Right now, the topic version is controlled manually, which requries a 
+    # manual configuration file.  If/when this is formallized, switch to
+    # that source.
+    version = ""
+    with open("/Users/rbovill/bin/XML_Versions.txt") as versionfile:
+        for line in versionfile:
+            if string in line:
+                line = versionfile.next()
+                while line != "\n":
+                    version+=line.split(" ")[1].rstrip() + "\\n"
+                    line = versionfile.next()   #.split(" ")[1].rstrip()
+    return version[:-2]
 
 
 # =========
@@ -61,18 +67,20 @@ file.write("\n")
 # Create Test Case table.
 file.write("*** Test Cases ***\n")
 for subsystem in subsystems:
+	# Get the list of XMLs for each CSC, to include Telemetry, Events and Commands.
 	xmls = glob.glob("/Users/rbovill/trunk/ts_xml/sal_interfaces/" + subsystem + "/" + subsystem + "*")
 	for xml in xmls:
-		topic = xml.split('/')[7].split('_')[0]
+		# Get the message type, i.e. Telemetry, Events, Commands.
 		messageType = xml.split('/')[7].split('_')[1].split('.')[0]
-		file.write("Validate " + CapitalizeSubsystem(topic) + " " + messageType + " Version\n")
-		file.write("\t[Documentation]    Validate the " + CapitalizeSubsystem(topic) + " " + messageType + " version.\n")
+		# Create the Test Cases.
+		file.write("Validate " + CapitalizeSubsystem(subsystem) + " " + messageType + " Version\n")
+		file.write("\t[Documentation]    Validate the " + CapitalizeSubsystem(subsystem) + " " + messageType + " version.\n")
 		file.write("\t[Tags]    smoke\n")
-		file.write("\t${count}=    Run    ${xml} sel -t -v \"count(/SAL" + messageType.rstrip('s') + "Set/SAL" + messageType.rstrip('s') + "/EFDB_Topic)\" ${folder}/sal_interfaces/" + subsystem + "/" + topic + "_Telemetry.xml\n")
-		file.write("\t${output}=    Run    ${xml} sel -t -m \"//SAL" + messageType.rstrip('s') + "Set/SAL" + messageType.rstrip('s') + "/Version\" -v . -n ${folder}/sal_interfaces/" + subsystem + "/" + topic + "_Telemetry.xml\n")
+		file.write("\t${output}=    Run    ${xml} sel -t -m \"//SAL" + messageType.rstrip('s') + "Set/SAL" + messageType.rstrip('s') + "/Version\" -v . -n ${folder}/sal_interfaces/" + subsystem + "/" + subsystem + "_" + messageType + ".xml\n")
 		file.write("\tLog    ${output}\n")
-		version = GetSubsystemVersion( (CapitalizeSubsystem(topic) + "_" + messageType) )
-		file.write("\tShould Contain X Times    ${output}    " + str(version).rstrip() + "    ${count}\n")
+		version = GetSubsystemVersion( ("/" + subsystem + "_" + messageType) )
+		file.write("\t${version}=    Set Variable    " + version + "\n")
+		file.write("\tShould Match    ${output}    ${version}\n")
 		file.write("\n")
 
 
