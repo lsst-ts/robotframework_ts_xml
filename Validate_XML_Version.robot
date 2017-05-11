@@ -445,7 +445,7 @@ Validate TCS Commands Version
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Version" -v . -n ${folder}/sal_interfaces/tcs/tcs_Commands.xml
 	Log    ${output}
-	${version}=    Set Variable    3.2.0\n3.2.0
+	${version}=    Set Variable    3.2.0\n3.2.0\n3.2.0
 	Should Match    ${output}    ${version}
 
 Validate TCS Events Version
@@ -453,7 +453,7 @@ Validate TCS Events Version
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/tcs/tcs_Events.xml
 	Log    ${output}
-	${version}=    Set Variable    3.2.0\n3.2.0
+	${version}=    Set Variable    3.2.0\n3.2.0\n3.5.0\n3.5.0\n3.5.0\n3.5.0\n3.5.0\n3.5.0
 	Should Match    ${output}    ${version}
 
 Validate TCS Telemetry Version
@@ -461,6 +461,6 @@ Validate TCS Telemetry Version
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/tcs/tcs_Telemetry.xml
 	Log    ${output}
-	${version}=    Set Variable    3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0
+	${version}=    Set Variable    3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.5.0\n3.5.0
 	Should Match    ${output}    ${version}
 
