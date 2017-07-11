@@ -64,22 +64,6 @@ Validate Catchuparchiver Telemetry Version
 	${version}=    Set Variable    3.5.1
 	Should Match    ${output}    ${version}
 
-Validate DM Events Version
-	[Documentation]    Validate the DM Events version.
-	[Tags]    smoke
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/dm/dm_Events.xml
-	Log    ${output}
-	${version}=    Set Variable    3.2.0\n3.2.0\n3.2.0
-	Should Match    ${output}    ${version}
-
-Validate DM Telemetry Version
-	[Documentation]    Validate the DM Telemetry version.
-	[Tags]    smoke
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/dm/dm_Telemetry.xml
-	Log    ${output}
-	${version}=    Set Variable    3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0
-	Should Match    ${output}    ${version}
-
 Validate Dome Commands Version
 	[Documentation]    Validate the Dome Commands version.
 	[Tags]    smoke
