@@ -9,3 +9,4 @@ rbtxml/Validate_XML_XSD_Commands.robot
 rbtxml/Validate_XML_XSD_Events.robot
 rbtxml/Validate_XML_Version.robot
 rbtxml/Validate_XML_Count.robot
+rbtxml/Validate_XML_NoSpaces.robot
