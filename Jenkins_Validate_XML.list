@@ -10,4 +10,4 @@ rbtxml/Validate_XML_XSD_Events.robot
 rbtxml/Validate_XML_Version.robot
 rbtxml/Validate_XML_Count.robot
 rbtxml/Validate_XML_NoSpaces.robot
-rbtxml/Validate_XML_Size.robot
+rbtxml/Validate_XML_Topic_Size.robot
