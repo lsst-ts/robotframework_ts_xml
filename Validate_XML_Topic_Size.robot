@@ -1,7 +1,6 @@
 *** Settings ***
 Documentation    Validate the subsystem XML definition files do not contain a Topic greater than 65536 bytes in total size.
-Suite Setup    Create the DataType:Size Dictionary
-Test Setup    Run Keyword If    "${ContInt}"=="true"    Set Suite Variable    ${xml}    xmlstarlet
+Suite Setup    Run Keywords    Create the DataType:Size Dictionary    AND    Run Keyword If    "${ContInt}"=="true"    Set Suite Variable    ${xml}    xmlstarlet
 Library    OperatingSystem
 Library    String
 Resource    Global_Vars.robot
