@@ -2,7 +2,7 @@
 Documentation    Validate the subsystem XML definition files contain a valid IDL_Type values.
 Suite Setup    Run Keywords    Run Keyword If    "${ContInt}"=="true"    Set Suite Variable    ${xml}    xmlstarlet
 ...			   AND    Set Suite Variable    @{TypeArray}    boolean    byte    char    double    float    int
-...			   long    octet    short    string    unsigned int    unsigned long    unsigned short
+...			   long    long long    octet    short    string    unsigned int    unsigned long    unsigned short
 Library    OperatingSystem
 Library    String
 Resource    Global_Vars.robot
