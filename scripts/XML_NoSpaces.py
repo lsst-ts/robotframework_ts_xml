@@ -15,6 +15,8 @@ def CapitalizeSubsystem( subsystem ):
 		return subsystem[0].upper() + subsystem[1:]
 	elif subsystem == "dm":
 		return "DM"
+	elif subsystem == "eec":
+		return "EEC"
 	elif subsystem == "m1m3":
 		return "M1M3"
 	elif subsystem == "m2ms":
@@ -46,7 +48,7 @@ def GetSubsystemVersion( string ):
 # =========
 # Variables
 # =========
-subsystems = ['archiver', 'camera', 'catchuparchiver', 'dome', 'domeADB', 'domeAPS', 'domeLouvers', 'domeLWS', 'domeMONCS', 'domeTHCS', 'hexapod', 'm1m3', 'm2ms', 'MTMount', 'ocs', 'processingcluster', 'rotator', 'scheduler', 'sequencer', 'tcs']
+subsystems = ['archiver', 'camera', 'catchuparchiver', 'dome', 'domeADB', 'domeAPS', 'domeLouvers', 'domeLWS', 'domeMONCS', 'domeTHCS', 'eec', 'environment', 'hexapod', 'm1m3', 'm2ms', 'MTMount', 'ocs', 'processingcluster', 'rotator', 'scheduler', 'sequencer', 'tcs']
 
 # Create/Open test suite file.
 file = open("../Validate_XML_NoSpaces.robot","w")
