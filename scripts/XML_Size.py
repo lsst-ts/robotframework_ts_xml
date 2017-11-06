@@ -17,6 +17,8 @@ def CapitalizeSubsystem( subsystem ):
 		return subsystem[0].upper() + subsystem[1:]
 	elif subsystem == "dm":
 		return "DM"
+	elif subsystem == "eec":
+		return "EEC"
 	elif subsystem == "m1m3":
 		return "M1M3"
 	elif subsystem == "m2ms":
@@ -48,7 +50,7 @@ def GetSubsystemVersion( string ):
 # =========
 # Variables
 # =========
-subsystems = ['archiver', 'camera', 'catchuparchiver', 'dome', 'domeADB', 'domeAPS', 'domeLouvers', 'domeLWS', 'domeMONCS', 'domeTHCS', 'hexapod', 'm1m3', 'm2ms', 'MTMount', 'ocs', 'processingcluster', 'rotator', 'scheduler', 'sequencer', 'tcs']
+subsystems = ['archiver', 'camera', 'catchuparchiver', 'dome', 'domeADB', 'domeAPS', 'domeLouvers', 'domeLWS', 'domeMONCS', 'domeTHCS', 'eec', 'environment', 'hexapod', 'm1m3', 'm2ms', 'MTMount', 'ocs', 'processingcluster', 'rotator', 'scheduler', 'sequencer', 'tcs']
 
 # Create/Open test suite file.
 file = open("../Validate_XML_Topic_Size.robot","w")
@@ -99,7 +101,8 @@ for subsystem in subsystems:
 			file.write("\t\    ${key}=    Set Variable    @{TypeArray}[${index}]\n")
 			file.write("\t\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort\n")
 			file.write("\t\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong\n")
-			file.write("\t\    Log Many    ${dict.${key}}    @{CountArray}[${index}]\n")
+			file.write("\t\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong\n")
+			file.write("\t\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]\n")
 			file.write("\t\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]\n")
 			file.write("\t\    ${size}=    Convert to Number    ${output}\n")
 			file.write("\t\    ${result}=    Evaluate    ${result}+${size}\n")
@@ -111,7 +114,7 @@ for subsystem in subsystems:
 file.write("*** Keywords ***\n")
 file.write("Create the DataType:Size Dictionary\n")
 file.write("\t[Tags]    smoke\n")
-file.write("\t&{dict}=    Create Dictionary    boolean=2    char=1    double=8    float=4    int=4    long=4    short=2    string=1    ushort=2    ulong=4\n")
+file.write("\t&{dict}=    Create Dictionary    boolean=2    byte=1    char=1    double=8    float=4    int=4    long=4    llong=8    octet=1    short=2    string=1    ushort=2    ulong=4\n")
 file.write("\tLog Many    &{dict}\n")
 file.write("\tSet Suite Variable    &{dict}\n")
 file.write("\n")
