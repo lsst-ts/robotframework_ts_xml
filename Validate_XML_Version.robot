@@ -232,6 +232,38 @@ Validate DomeTHCS Telemetry Version
 	${version}=    Set Variable    3.5.0
 	Should Match    ${output}    ${version}
 
+Validate EEC Commands Version
+	[Documentation]    Validate the EEC Commands version.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Version" -v . -n ${folder}/sal_interfaces/eec/eec_Commands.xml
+	Log    ${output}
+	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1
+	Should Match    ${output}    ${version}
+
+Validate EEC Events Version
+	[Documentation]    Validate the EEC Events version.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/eec/eec_Events.xml
+	Log    ${output}
+	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1
+	Should Match    ${output}    ${version}
+
+Validate EEC Telemetry Version
+	[Documentation]    Validate the EEC Telemetry version.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/eec/eec_Telemetry.xml
+	Log    ${output}
+	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1
+	Should Match    ${output}    ${version}
+
+Validate Environment Telemetry Version
+	[Documentation]    Validate the Environment Telemetry version.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/environment/environment_Telemetry.xml
+	Log    ${output}
+	${version}=    Set Variable    3.5
+	Should Match    ${output}    ${version}
+
 Validate Hexapod Commands Version
 	[Documentation]    Validate the Hexapod Commands version.
 	[Tags]    smoke
@@ -261,7 +293,7 @@ Validate M1M3 Commands Version
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Version" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
 	Log    ${output}
-	${version}=    Set Variable    2.5.3\n2.5.3\n2.5.3\n2.5.3
+	${version}=    Set Variable    3.6\n3.6\n3.6\n3.6\n3.6\n3.6\n3.6\n3.6\n3.6\n3.6\n3.6\n3.6\n3.6\n3.6\n3.6\n3.6\n3.6\n3.6\n3.6\n3.6\n3.6\n3.6\n3.6
 	Should Match    ${output}    ${version}
 
 Validate M1M3 Events Version
@@ -269,7 +301,7 @@ Validate M1M3 Events Version
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
 	Log    ${output}
-	${version}=    Set Variable    3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0
+	${version}=    Set Variable    3.6\n3.6\n3.6\n3.6\n3.6\n3.6\n3.6\n3.6\n3.6\n3.6\n3.6\n3.6\n3.6\n3.6\n3.6\n3.6\n3.6\n3.6\n3.6\n3.6\n3.6\n3.6\n3.6
 	Should Match    ${output}    ${version}
 
 Validate M1M3 Telemetry Version
@@ -277,7 +309,7 @@ Validate M1M3 Telemetry Version
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Telemetry.xml
 	Log    ${output}
-	${version}=    Set Variable    3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0
+	${version}=    Set Variable    3.6\n3.6\n3.6\n3.6\n3.6\n3.6\n3.6\n3.6\n3.6\n3.6
 	Should Match    ${output}    ${version}
 
 Validate M2MS Commands Version
@@ -429,7 +461,7 @@ Validate TCS Commands Version
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Version" -v . -n ${folder}/sal_interfaces/tcs/tcs_Commands.xml
 	Log    ${output}
-	${version}=    Set Variable    3.2.0\n3.2.0\n3.2.0
+	${version}=    Set Variable    3.2.0\n3.2.0\n3.6.0\n3.6.0\n3.6.0
 	Should Match    ${output}    ${version}
 
 Validate TCS Events Version
@@ -437,7 +469,7 @@ Validate TCS Events Version
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/tcs/tcs_Events.xml
 	Log    ${output}
-	${version}=    Set Variable    3.2.0\n3.2.0\n3.5.0\n3.5.0\n3.5.0\n3.5.0\n3.5.0\n3.5.0
+	${version}=    Set Variable    3.2.0\n3.2.0\n3.6.0\n3.5.0\n3.5.0\n3.5.0\n3.5.0\n3.5.0\n3.6.0\n3.6.0\n3.6.0
 	Should Match    ${output}    ${version}
 
 Validate TCS Telemetry Version

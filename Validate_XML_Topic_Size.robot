@@ -24,7 +24,8 @@ Validate Archiver Event archiver_logevent_archiverEntitySummaryState Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -46,7 +47,8 @@ Validate Archiver Event archiver_logevent_archiverEntityStartup Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -68,7 +70,8 @@ Validate Archiver Event archiver_logevent_archiverEntityShutdown Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -90,7 +93,8 @@ Validate Archiver Telemetry archiver_SequencerHeartbeat Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -112,7 +116,8 @@ Validate Camera Command camera_command_configure Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -134,7 +139,8 @@ Validate Camera Command camera_command_initGuiders Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -156,7 +162,8 @@ Validate Camera Command camera_command_initImage Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -178,7 +185,8 @@ Validate Camera Command camera_command_setFilter Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -200,7 +208,8 @@ Validate Camera Command camera_command_takeImages Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -222,7 +231,8 @@ Validate Camera Event camera_logevent_ccsConfigured Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -244,7 +254,8 @@ Validate Camera Event camera_logevent_endInitializeGuider Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -266,7 +277,8 @@ Validate Camera Event camera_logevent_endInitializeImage Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -288,7 +300,8 @@ Validate Camera Event camera_logevent_endLoadFilter Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -310,7 +323,8 @@ Validate Camera Event camera_logevent_endReadout Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -332,7 +346,8 @@ Validate Camera Event camera_logevent_endRotateCarousel Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -354,7 +369,8 @@ Validate Camera Event camera_logevent_endSetFilter Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -376,7 +392,8 @@ Validate Camera Event camera_logevent_endShutterClose Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -398,7 +415,8 @@ Validate Camera Event camera_logevent_endShutterOpen Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -420,7 +438,8 @@ Validate Camera Event camera_logevent_endTakeImage Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -442,7 +461,8 @@ Validate Camera Event camera_logevent_endUnloadFilter Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -464,7 +484,8 @@ Validate Camera Event camera_logevent_notReadyToTakeImage Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -486,7 +507,8 @@ Validate Camera Event camera_logevent_prepareToTakeImage Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -508,7 +530,8 @@ Validate Camera Event camera_logevent_readyToTakeImage Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -530,7 +553,8 @@ Validate Camera Event camera_logevent_startIntegration Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -552,7 +576,8 @@ Validate Camera Event camera_logevent_startLoadFilter Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -574,7 +599,8 @@ Validate Camera Event camera_logevent_startReadout Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -596,7 +622,8 @@ Validate Camera Event camera_logevent_startRotateCarousel Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -618,7 +645,8 @@ Validate Camera Event camera_logevent_startSetFilter Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -640,7 +668,8 @@ Validate Camera Event camera_logevent_startShutterClose Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -662,7 +691,8 @@ Validate Camera Event camera_logevent_startShutterOpen Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -684,7 +714,8 @@ Validate Camera Event camera_logevent_startUnloadFilter Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -706,7 +737,8 @@ Validate Camera Telemetry camera_Cold Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -728,7 +760,8 @@ Validate Camera Telemetry camera_SAS Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -750,7 +783,8 @@ Validate Camera Telemetry camera_SDS Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -772,7 +806,8 @@ Validate Camera Telemetry camera_Filter Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -794,7 +829,8 @@ Validate Camera Telemetry camera_Prot Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -816,7 +852,8 @@ Validate Camera Telemetry camera_CCS Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -838,7 +875,8 @@ Validate Camera Telemetry camera_Purge Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -860,7 +898,8 @@ Validate Camera Telemetry camera_WDS Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -882,7 +921,8 @@ Validate Camera Telemetry camera_Cluster_Encoder Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -904,7 +944,8 @@ Validate Camera Telemetry camera_Shutter Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -926,7 +967,8 @@ Validate Camera Telemetry camera_GDS Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -948,7 +990,8 @@ Validate Camera Telemetry camera_GAS Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -970,7 +1013,8 @@ Validate Camera Telemetry camera_PCMS Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -992,7 +1036,8 @@ Validate Camera Telemetry camera_Cryo Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1014,7 +1059,8 @@ Validate Camera Telemetry camera_WAS Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1036,7 +1082,8 @@ Validate Catchuparchiver Event catchuparchiver_logevent_catchuparchiverEntitySum
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1058,7 +1105,8 @@ Validate Catchuparchiver Event catchuparchiver_logevent_catchuparchiverEntitySta
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1080,7 +1128,8 @@ Validate Catchuparchiver Event catchuparchiver_logevent_catchuparchiverEntityShu
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1102,7 +1151,8 @@ Validate Catchuparchiver Telemetry catchuparchiver_SequencerHeartbeat Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1124,7 +1174,8 @@ Validate Dome Command dome_command_Crawl Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1146,7 +1197,8 @@ Validate Dome Command dome_command_Move Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1168,7 +1220,8 @@ Validate Dome Command dome_command_Park Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1190,7 +1243,8 @@ Validate Dome Command dome_command_SetLouvers Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1212,7 +1266,8 @@ Validate Dome Command dome_command_CloseShutter Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1234,7 +1289,8 @@ Validate Dome Command dome_command_OpenShutter Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1256,7 +1312,8 @@ Validate Dome Command dome_command_StopShutter Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1278,7 +1335,8 @@ Validate Dome Event dome_logevent_StateChanged Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1300,7 +1358,8 @@ Validate Dome Telemetry dome_Summary Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1322,7 +1381,8 @@ Validate DomeADB Command domeADB_command_Crawl Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1344,7 +1404,8 @@ Validate DomeADB Command domeADB_command_Move Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1366,7 +1427,8 @@ Validate DomeADB Command domeADB_command_VelocityMove Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1388,7 +1450,8 @@ Validate DomeADB Command domeADB_command_Echo Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1410,7 +1473,8 @@ Validate DomeADB Event domeADB_logevent_StateChanged Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1432,7 +1496,8 @@ Validate DomeADB Event domeADB_logevent_DriveEnabled Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1454,7 +1519,8 @@ Validate DomeADB Event domeADB_logevent_DriveDisabled Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1476,7 +1542,8 @@ Validate DomeADB Event domeADB_logevent_DriveReady Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1498,7 +1565,8 @@ Validate DomeADB Event domeADB_logevent_DriveOverTemp Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1520,7 +1588,8 @@ Validate DomeADB Event domeADB_logevent_DriveFault Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1542,7 +1611,8 @@ Validate DomeADB Event domeADB_logevent_RotationEnabled Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1564,7 +1634,8 @@ Validate DomeADB Event domeADB_logevent_RotationPrevented Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1586,7 +1657,8 @@ Validate DomeADB Event domeADB_logevent_LockingPinEngaged Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1608,7 +1680,8 @@ Validate DomeADB Event domeADB_logevent_LockingPinDisengaged Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1630,7 +1703,8 @@ Validate DomeADB Event domeADB_logevent_BrakeEngaged Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1652,7 +1726,8 @@ Validate DomeADB Event domeADB_logevent_BrakeDisengaged Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1674,7 +1749,8 @@ Validate DomeADB Event domeADB_logevent_SpeedLimitReached Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1696,7 +1772,8 @@ Validate DomeADB Event domeADB_logevent_AccelerationLimitReached Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1718,7 +1795,8 @@ Validate DomeADB Event domeADB_logevent_SpeedLimitSubsided Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1740,7 +1818,8 @@ Validate DomeADB Event domeADB_logevent_AccelerationLimitSubsided Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1762,7 +1841,8 @@ Validate DomeADB Event domeADB_logevent_EchoResponse Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1784,7 +1864,8 @@ Validate DomeADB Event domeADB_logevent_MotionModeChanged Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1806,7 +1887,8 @@ Validate DomeADB Event domeADB_logevent_SubsystemError Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1828,7 +1910,8 @@ Validate DomeADB Telemetry domeADB_status Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1850,7 +1933,8 @@ Validate DomeAPS Command domeAPS_command_Close Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1872,7 +1956,8 @@ Validate DomeAPS Command domeAPS_command_Open Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1894,7 +1979,8 @@ Validate DomeAPS Command domeAPS_command_Echo Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1916,7 +2002,8 @@ Validate DomeAPS Event domeAPS_logevent_StateChanged Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1938,7 +2025,8 @@ Validate DomeAPS Event domeAPS_logevent_DriveEnabled Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1960,7 +2048,8 @@ Validate DomeAPS Event domeAPS_logevent_DriveDisabled Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -1982,7 +2071,8 @@ Validate DomeAPS Event domeAPS_logevent_DriveReady Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2004,7 +2094,8 @@ Validate DomeAPS Event domeAPS_logevent_DriveOverTemp Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2026,7 +2117,8 @@ Validate DomeAPS Event domeAPS_logevent_DriveFault Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2048,7 +2140,8 @@ Validate DomeAPS Event domeAPS_logevent_MovementEnabled Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2070,7 +2163,8 @@ Validate DomeAPS Event domeAPS_logevent_MovementPrevented Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2092,7 +2186,8 @@ Validate DomeAPS Event domeAPS_logevent_LockingPinEngaged Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2114,7 +2209,8 @@ Validate DomeAPS Event domeAPS_logevent_LockingPinDisengaged Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2136,7 +2232,8 @@ Validate DomeAPS Event domeAPS_logevent_LockingPinHomed Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2158,7 +2255,8 @@ Validate DomeAPS Event domeAPS_logevent_LockingPinFloating Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2180,7 +2278,8 @@ Validate DomeAPS Event domeAPS_logevent_CentralLockingPinEngaged Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2202,7 +2301,8 @@ Validate DomeAPS Event domeAPS_logevent_CentralLockingPinDisengaged Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2224,7 +2324,8 @@ Validate DomeAPS Event domeAPS_logevent_CentralLockingPinHomed Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2246,7 +2347,8 @@ Validate DomeAPS Event domeAPS_logevent_CentralLockingPinFloating Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2268,7 +2370,8 @@ Validate DomeAPS Event domeAPS_logevent_BrakeEngaged Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2290,7 +2393,8 @@ Validate DomeAPS Event domeAPS_logevent_BrakeDisengaged Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2312,7 +2416,8 @@ Validate DomeAPS Event domeAPS_logevent_EchoResponse Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2334,7 +2439,8 @@ Validate DomeAPS Event domeAPS_logevent_APSSubsystemError Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2356,7 +2462,8 @@ Validate DomeAPS Telemetry domeAPS_status Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2378,7 +2485,8 @@ Validate DomeLouvers Command domeLouvers_command_SetPosition Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2400,7 +2508,8 @@ Validate DomeLouvers Command domeLouvers_command_Echo Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2422,7 +2531,8 @@ Validate DomeLouvers Event domeLouvers_logevent_StateChanged Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2444,7 +2554,8 @@ Validate DomeLouvers Event domeLouvers_logevent_DriveEnabled Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2466,7 +2577,8 @@ Validate DomeLouvers Event domeLouvers_logevent_DriveDisabled Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2488,7 +2600,8 @@ Validate DomeLouvers Event domeLouvers_logevent_DriveReady Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2510,7 +2623,8 @@ Validate DomeLouvers Event domeLouvers_logevent_DriveOverTemp Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2532,7 +2646,8 @@ Validate DomeLouvers Event domeLouvers_logevent_DriveFault Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2554,7 +2669,8 @@ Validate DomeLouvers Event domeLouvers_logevent_MovementEnabled Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2576,7 +2692,8 @@ Validate DomeLouvers Event domeLouvers_logevent_MovementPrevented Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2598,7 +2715,8 @@ Validate DomeLouvers Event domeLouvers_logevent_EchoResponse Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2620,7 +2738,8 @@ Validate DomeLouvers Event domeLouvers_logevent_SubsystemError Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2642,7 +2761,8 @@ Validate DomeLouvers Telemetry domeLouvers_status Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2664,7 +2784,8 @@ Validate DomeLWS Command domeLWS_command_CrawlLWS Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2686,7 +2807,8 @@ Validate DomeLWS Command domeLWS_command_MoveLWS Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2708,7 +2830,8 @@ Validate DomeLWS Command domeLWS_command_VelocityMoveLWS Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2730,7 +2853,8 @@ Validate DomeLWS Command domeLWS_command_EchoLWS Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2752,7 +2876,8 @@ Validate DomeLWS Event domeLWS_logevent_StateChanged Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2774,7 +2899,8 @@ Validate DomeLWS Event domeLWS_logevent_DriveEnabled Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2796,7 +2922,8 @@ Validate DomeLWS Event domeLWS_logevent_DriveDisabled Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2818,7 +2945,8 @@ Validate DomeLWS Event domeLWS_logevent_DriveReady Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2840,7 +2968,8 @@ Validate DomeLWS Event domeLWS_logevent_DriveOverTemp Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2862,7 +2991,8 @@ Validate DomeLWS Event domeLWS_logevent_DriveFault Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2884,7 +3014,8 @@ Validate DomeLWS Event domeLWS_logevent_MovementEnabled Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2906,7 +3037,8 @@ Validate DomeLWS Event domeLWS_logevent_MovementPrevented Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2928,7 +3060,8 @@ Validate DomeLWS Event domeLWS_logevent_LockingPinEngaged Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2950,7 +3083,8 @@ Validate DomeLWS Event domeLWS_logevent_LockingPinDisengaged Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2972,7 +3106,8 @@ Validate DomeLWS Event domeLWS_logevent_LockingPinHomed Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -2994,7 +3129,8 @@ Validate DomeLWS Event domeLWS_logevent_LockingPinFloating Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3016,7 +3152,8 @@ Validate DomeLWS Event domeLWS_logevent_BrakeEngaged Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3038,7 +3175,8 @@ Validate DomeLWS Event domeLWS_logevent_BrakeDisengaged Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3060,7 +3198,8 @@ Validate DomeLWS Event domeLWS_logevent_SpeedLimitReached Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3082,7 +3221,8 @@ Validate DomeLWS Event domeLWS_logevent_AccelerationLimitReached Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3104,7 +3244,8 @@ Validate DomeLWS Event domeLWS_logevent_SpeedLimitSubsided Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3126,7 +3267,8 @@ Validate DomeLWS Event domeLWS_logevent_AccelerationLimitSubsided Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3148,7 +3290,8 @@ Validate DomeLWS Event domeLWS_logevent_EchoResponse Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3170,7 +3313,8 @@ Validate DomeLWS Event domeLWS_logevent_MotionModeChanged Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3192,7 +3336,8 @@ Validate DomeLWS Event domeLWS_logevent_SubsystemError Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3214,7 +3359,8 @@ Validate DomeLWS Telemetry domeLWS_status Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3236,7 +3382,8 @@ Validate DomeMONCS Command domeMONCS_command_Echo Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3258,7 +3405,8 @@ Validate DomeMONCS Event domeMONCS_logevent_StateChanged Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3280,7 +3428,8 @@ Validate DomeMONCS Event domeMONCS_logevent_EchoResponse Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3302,7 +3451,8 @@ Validate DomeMONCS Event domeMONCS_logevent_SubsystemError Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3324,7 +3474,8 @@ Validate DomeMONCS Event domeMONCS_logevent_Interlock Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3346,7 +3497,8 @@ Validate DomeMONCS Telemetry domeMONCS_status Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3368,7 +3520,8 @@ Validate DomeTHCS Command domeTHCS_command_Echo Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3390,7 +3543,8 @@ Validate DomeTHCS Event domeTHCS_logevent_StateChanged Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3412,7 +3566,8 @@ Validate DomeTHCS Event domeTHCS_logevent_MovementEnabled Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3434,7 +3589,8 @@ Validate DomeTHCS Event domeTHCS_logevent_MovementPrevented Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3456,7 +3612,8 @@ Validate DomeTHCS Event domeTHCS_logevent_EchoResponse Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3478,7 +3635,8 @@ Validate DomeTHCS Event domeTHCS_logevent_SubsystemError Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3500,7 +3658,698 @@ Validate DomeTHCS Telemetry domeTHCS_status Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate EEC Command eec_command_operatormode Topic Size
+	[Documentation]    Validate the eec_command_operatormode topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/eec/eec_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/Count" -v . -n ${folder}/sal_interfaces/eec/eec_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/eec/eec_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate EEC Command eec_command_nighttimemode Topic Size
+	[Documentation]    Validate the eec_command_nighttimemode topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/eec/eec_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[2]/item/Count" -v . -n ${folder}/sal_interfaces/eec/eec_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/eec/eec_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate EEC Command eec_command_Enable Topic Size
+	[Documentation]    Validate the eec_command_Enable topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/eec/eec_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[3]/item/Count" -v . -n ${folder}/sal_interfaces/eec/eec_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[3]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/eec/eec_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate EEC Command eec_command_ExitControl Topic Size
+	[Documentation]    Validate the eec_command_ExitControl topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/eec/eec_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[4]/item/Count" -v . -n ${folder}/sal_interfaces/eec/eec_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/eec/eec_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate EEC Command eec_command_sethvac Topic Size
+	[Documentation]    Validate the eec_command_sethvac topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/eec/eec_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[5]/item/Count" -v . -n ${folder}/sal_interfaces/eec/eec_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/eec/eec_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate EEC Command eec_command_daytimemode Topic Size
+	[Documentation]    Validate the eec_command_daytimemode topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/eec/eec_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[6]/item/Count" -v . -n ${folder}/sal_interfaces/eec/eec_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[6]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/eec/eec_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate EEC Command eec_command_setlouvers Topic Size
+	[Documentation]    Validate the eec_command_setlouvers topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[7]/item)" -n ${folder}/sal_interfaces/eec/eec_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[7]/item/Count" -v . -n ${folder}/sal_interfaces/eec/eec_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[7]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/eec/eec_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate EEC Command eec_command_Start Topic Size
+	[Documentation]    Validate the eec_command_Start topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[8]/item)" -n ${folder}/sal_interfaces/eec/eec_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[8]/item/Count" -v . -n ${folder}/sal_interfaces/eec/eec_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[8]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/eec/eec_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate EEC Command eec_command_engineeringmode Topic Size
+	[Documentation]    Validate the eec_command_engineeringmode topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[9]/item)" -n ${folder}/sal_interfaces/eec/eec_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[9]/item/Count" -v . -n ${folder}/sal_interfaces/eec/eec_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[9]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/eec/eec_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate EEC Command eec_command_Standby Topic Size
+	[Documentation]    Validate the eec_command_Standby topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[10]/item)" -n ${folder}/sal_interfaces/eec/eec_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[10]/item/Count" -v . -n ${folder}/sal_interfaces/eec/eec_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[10]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/eec/eec_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate EEC Command eec_command_Disable Topic Size
+	[Documentation]    Validate the eec_command_Disable topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[11]/item)" -n ${folder}/sal_interfaces/eec/eec_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[11]/item/Count" -v . -n ${folder}/sal_interfaces/eec/eec_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[11]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/eec/eec_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate EEC Event eec_logevent_AppliedSettingsMatchStart Topic Size
+	[Documentation]    Validate the eec_logevent_AppliedSettingsMatchStart topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/eec/eec_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[1]/item/Count" -v . -n ${folder}/sal_interfaces/eec/eec_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[1]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/eec/eec_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate EEC Event eec_logevent_nighttimefail Topic Size
+	[Documentation]    Validate the eec_logevent_nighttimefail topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/eec/eec_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/Count" -v . -n ${folder}/sal_interfaces/eec/eec_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/eec/eec_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate EEC Event eec_logevent_RejectedCommand Topic Size
+	[Documentation]    Validate the eec_logevent_RejectedCommand topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/eec/eec_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/Count" -v . -n ${folder}/sal_interfaces/eec/eec_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/eec/eec_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate EEC Event eec_logevent_SettingsApplied Topic Size
+	[Documentation]    Validate the eec_logevent_SettingsApplied topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/eec/eec_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/eec/eec_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/eec/eec_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate EEC Event eec_logevent_DetailedState Topic Size
+	[Documentation]    Validate the eec_logevent_DetailedState topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/eec/eec_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/eec/eec_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/eec/eec_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate EEC Event eec_logevent_daytimefail Topic Size
+	[Documentation]    Validate the eec_logevent_daytimefail topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/eec/eec_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/Count" -v . -n ${folder}/sal_interfaces/eec/eec_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/eec/eec_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate EEC Event eec_logevent_InternalCommand Topic Size
+	[Documentation]    Validate the eec_logevent_InternalCommand topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/eec/eec_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/Count" -v . -n ${folder}/sal_interfaces/eec/eec_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/eec/eec_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate EEC Event eec_logevent_LoopTimeOutOfRange Topic Size
+	[Documentation]    Validate the eec_logevent_LoopTimeOutOfRange topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/eec/eec_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/Count" -v . -n ${folder}/sal_interfaces/eec/eec_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/eec/eec_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate EEC Event eec_logevent_SummaryState Topic Size
+	[Documentation]    Validate the eec_logevent_SummaryState topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/eec/eec_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/Count" -v . -n ${folder}/sal_interfaces/eec/eec_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/eec/eec_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate EEC Event eec_logevent_ErrorCode Topic Size
+	[Documentation]    Validate the eec_logevent_ErrorCode topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/eec/eec_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/Count" -v . -n ${folder}/sal_interfaces/eec/eec_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/eec/eec_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate EEC Event eec_logevent_Heartbeat Topic Size
+	[Documentation]    Validate the eec_logevent_Heartbeat topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/eec/eec_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[11]/item/Count" -v . -n ${folder}/sal_interfaces/eec/eec_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[11]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/eec/eec_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate EEC Event eec_logevent_SettingVersions Topic Size
+	[Documentation]    Validate the eec_logevent_SettingVersions topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[12]/item)" -n ${folder}/sal_interfaces/eec/eec_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[12]/item/Count" -v . -n ${folder}/sal_interfaces/eec/eec_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[12]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/eec/eec_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate EEC Telemetry eec_hvactelem Topic Size
+	[Documentation]    Validate the eec_hvactelem topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/eec/eec_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/Count" -v . -n ${folder}/sal_interfaces/eec/eec_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/eec/eec_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate EEC Telemetry eec_Timestamp Topic Size
+	[Documentation]    Validate the eec_Timestamp topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/eec/eec_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[2]/item/Count" -v . -n ${folder}/sal_interfaces/eec/eec_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/eec/eec_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate EEC Telemetry eec_nightsetpoint Topic Size
+	[Documentation]    Validate the eec_nightsetpoint topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[3]/item)" -n ${folder}/sal_interfaces/eec/eec_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[3]/item/Count" -v . -n ${folder}/sal_interfaces/eec/eec_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[3]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/eec/eec_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate EEC Telemetry eec_eectelem Topic Size
+	[Documentation]    Validate the eec_eectelem topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[4]/item)" -n ${folder}/sal_interfaces/eec/eec_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[4]/item/Count" -v . -n ${folder}/sal_interfaces/eec/eec_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/eec/eec_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate EEC Telemetry eec_LoopTime_ms Topic Size
+	[Documentation]    Validate the eec_LoopTime_ms topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[5]/item)" -n ${folder}/sal_interfaces/eec/eec_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[5]/item/Count" -v . -n ${folder}/sal_interfaces/eec/eec_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/eec/eec_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate EEC Telemetry eec_daysetpoint Topic Size
+	[Documentation]    Validate the eec_daysetpoint topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[6]/item)" -n ${folder}/sal_interfaces/eec/eec_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[6]/item/Count" -v . -n ${folder}/sal_interfaces/eec/eec_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[6]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/eec/eec_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate Environment Telemetry environment_weather Topic Size
+	[Documentation]    Validate the environment_weather topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/environment/environment_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/Count" -v . -n ${folder}/sal_interfaces/environment/environment_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/environment/environment_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3522,7 +4371,8 @@ Validate Hexapod Command hexapod_command_configureAcceleration Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3544,7 +4394,8 @@ Validate Hexapod Command hexapod_command_configureLimits Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3566,7 +4417,8 @@ Validate Hexapod Command hexapod_command_configureLut Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3588,7 +4440,8 @@ Validate Hexapod Command hexapod_command_move Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3610,7 +4463,8 @@ Validate Hexapod Command hexapod_command_configureVelocity Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3632,7 +4486,8 @@ Validate Hexapod Command hexapod_command_offset Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3654,7 +4509,8 @@ Validate Hexapod Command hexapod_command_pivot Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3676,7 +4532,8 @@ Validate Hexapod Command hexapod_command_test Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3698,7 +4555,8 @@ Validate Hexapod Event hexapod_logevent_error Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3720,7 +4578,8 @@ Validate Hexapod Event hexapod_logevent_interlock Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3742,7 +4601,8 @@ Validate Hexapod Event hexapod_logevent_limit Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3764,7 +4624,8 @@ Validate Hexapod Event hexapod_logevent_slewOK Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3786,7 +4647,8 @@ Validate Hexapod Event hexapod_logevent_tempError Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3808,7 +4670,8 @@ Validate Hexapod Event hexapod_logevent_trackLost Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3830,7 +4693,8 @@ Validate Hexapod Event hexapod_logevent_tracking Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3852,7 +4716,8 @@ Validate Hexapod Telemetry hexapod_Metrology Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3874,7 +4739,8 @@ Validate Hexapod Telemetry hexapod_LimitSensors Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3896,7 +4762,8 @@ Validate Hexapod Telemetry hexapod_Electrical Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3918,7 +4785,8 @@ Validate Hexapod Telemetry hexapod_Application Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3940,7 +4808,8 @@ Validate Hexapod Telemetry hexapod_Actuators Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -3962,15 +4831,16 @@ Validate Hexapod Telemetry hexapod_TC Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Command m1m3_command_configure Topic Size
-	[Documentation]    Validate the m1m3_command_configure topic is less than 65536 bytes in total.
+Validate M1M3 Command m1m3_command_Enable Topic Size
+	[Documentation]    Validate the m1m3_command_Enable topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3984,15 +4854,16 @@ Validate M1M3 Command m1m3_command_configure Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Command m1m3_command_status Topic Size
-	[Documentation]    Validate the m1m3_command_status topic is less than 65536 bytes in total.
+Validate M1M3 Command m1m3_command_EnterMaintenance Topic Size
+	[Documentation]    Validate the m1m3_command_EnterMaintenance topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4006,15 +4877,16 @@ Validate M1M3 Command m1m3_command_status Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Command m1m3_command_target Topic Size
-	[Documentation]    Validate the m1m3_command_target topic is less than 65536 bytes in total.
+Validate M1M3 Command m1m3_command_Standby Topic Size
+	[Documentation]    Validate the m1m3_command_Standby topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4028,15 +4900,16 @@ Validate M1M3 Command m1m3_command_target Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Command m1m3_command_update Topic Size
-	[Documentation]    Validate the m1m3_command_update topic is less than 65536 bytes in total.
+Validate M1M3 Command m1m3_command_AbortLowerM1M3 Topic Size
+	[Documentation]    Validate the m1m3_command_AbortLowerM1M3 topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4050,15 +4923,453 @@ Validate M1M3 Command m1m3_command_update Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Event m1m3_logevent_interlock Topic Size
-	[Documentation]    Validate the m1m3_logevent_interlock topic is less than 65536 bytes in total.
+Validate M1M3 Command m1m3_command_ApplyAberrationByForces Topic Size
+	[Documentation]    Validate the m1m3_command_ApplyAberrationByForces topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[5]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Command m1m3_command_ApplyAOSCorrectionByBendingModes Topic Size
+	[Documentation]    Validate the m1m3_command_ApplyAOSCorrectionByBendingModes topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[6]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[6]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Command m1m3_command_ClearAOSCorrection Topic Size
+	[Documentation]    Validate the m1m3_command_ClearAOSCorrection topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[7]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[7]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[7]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Command m1m3_command_Start Topic Size
+	[Documentation]    Validate the m1m3_command_Start topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[8]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[8]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[8]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Command m1m3_command_RaiseM1M3 Topic Size
+	[Documentation]    Validate the m1m3_command_RaiseM1M3 topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[9]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[9]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[9]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Command m1m3_command_TestForceActuator Topic Size
+	[Documentation]    Validate the m1m3_command_TestForceActuator topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[10]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[10]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[10]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Command m1m3_command_LowerM1M3 Topic Size
+	[Documentation]    Validate the m1m3_command_LowerM1M3 topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[11]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[11]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[11]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Command m1m3_command_ApplyAOSCorrectionByForces Topic Size
+	[Documentation]    Validate the m1m3_command_ApplyAOSCorrectionByForces topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[12]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[12]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[12]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Command m1m3_command_Disable Topic Size
+	[Documentation]    Validate the m1m3_command_Disable topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[13]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[13]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[13]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Command m1m3_command_ApplyAberrationByBendingModes Topic Size
+	[Documentation]    Validate the m1m3_command_ApplyAberrationByBendingModes topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[14]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[14]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[14]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Command m1m3_command_TestHardpoint Topic Size
+	[Documentation]    Validate the m1m3_command_TestHardpoint topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[15]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[15]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[15]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Command m1m3_command_ManipulateM1M3 Topic Size
+	[Documentation]    Validate the m1m3_command_ManipulateM1M3 topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[16]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[16]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[16]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Command m1m3_command_ClearAberration Topic Size
+	[Documentation]    Validate the m1m3_command_ClearAberration topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[17]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[17]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[17]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Command m1m3_command_Exit Topic Size
+	[Documentation]    Validate the m1m3_command_Exit topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[18]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[18]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[18]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Command m1m3_command_TestAir Topic Size
+	[Documentation]    Validate the m1m3_command_TestAir topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[19]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[19]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[19]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Command m1m3_command_AbortRaiseM1M3 Topic Size
+	[Documentation]    Validate the m1m3_command_AbortRaiseM1M3 topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[20]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[20]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[20]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Command m1m3_command_MoveHardpointActuators Topic Size
+	[Documentation]    Validate the m1m3_command_MoveHardpointActuators topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[21]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[21]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[21]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Command m1m3_command_ExitMaintenance Topic Size
+	[Documentation]    Validate the m1m3_command_ExitMaintenance topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[22]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[22]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[22]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Command m1m3_command_Shutdown Topic Size
+	[Documentation]    Validate the m1m3_command_Shutdown topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[23]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[23]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[23]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Event m1m3_logevent_HardpointActuatorChase Topic Size
+	[Documentation]    Validate the m1m3_logevent_HardpointActuatorChase topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4072,15 +5383,16 @@ Validate M1M3 Event m1m3_logevent_interlock Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Event m1m3_logevent_limitError Topic Size
-	[Documentation]    Validate the m1m3_logevent_limitError topic is less than 65536 bytes in total.
+Validate M1M3 Event m1m3_logevent_AirStatus Topic Size
+	[Documentation]    Validate the m1m3_logevent_AirStatus topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4094,15 +5406,16 @@ Validate M1M3 Event m1m3_logevent_limitError Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Event m1m3_logevent_targetDone Topic Size
-	[Documentation]    Validate the m1m3_logevent_targetDone topic is less than 65536 bytes in total.
+Validate M1M3 Event m1m3_logevent_ForceActuatorSafetyChecks Topic Size
+	[Documentation]    Validate the m1m3_logevent_ForceActuatorSafetyChecks topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4116,15 +5429,16 @@ Validate M1M3 Event m1m3_logevent_targetDone Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Event m1m3_logevent_targetError Topic Size
-	[Documentation]    Validate the m1m3_logevent_targetError topic is less than 65536 bytes in total.
+Validate M1M3 Event m1m3_logevent_ForceActuatorTest Topic Size
+	[Documentation]    Validate the m1m3_logevent_ForceActuatorTest topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4138,15 +5452,16 @@ Validate M1M3 Event m1m3_logevent_targetError Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Event m1m3_logevent_tempError Topic Size
-	[Documentation]    Validate the m1m3_logevent_tempError topic is less than 65536 bytes in total.
+Validate M1M3 Event m1m3_logevent_ActuatorBroadcastCounter Topic Size
+	[Documentation]    Validate the m1m3_logevent_ActuatorBroadcastCounter topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4160,15 +5475,16 @@ Validate M1M3 Event m1m3_logevent_tempError Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Event m1m3_logevent_updateDone Topic Size
-	[Documentation]    Validate the m1m3_logevent_updateDone topic is less than 65536 bytes in total.
+Validate M1M3 Event m1m3_logevent_StatusChecks Topic Size
+	[Documentation]    Validate the m1m3_logevent_StatusChecks topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4182,15 +5498,16 @@ Validate M1M3 Event m1m3_logevent_updateDone Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Event m1m3_logevent_updateError Topic Size
-	[Documentation]    Validate the m1m3_logevent_updateError topic is less than 65536 bytes in total.
+Validate M1M3 Event m1m3_logevent_CellChecks Topic Size
+	[Documentation]    Validate the m1m3_logevent_CellChecks topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4204,15 +5521,384 @@ Validate M1M3 Event m1m3_logevent_updateError Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Telemetry m1m3_LimitSensors Topic Size
-	[Documentation]    Validate the m1m3_LimitSensors topic is less than 65536 bytes in total.
+Validate M1M3 Event m1m3_logevent_HardpointActuatorBreakaway Topic Size
+	[Documentation]    Validate the m1m3_logevent_HardpointActuatorBreakaway topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Event m1m3_logevent_RaiseMirrorComplete Topic Size
+	[Documentation]    Validate the m1m3_logevent_RaiseMirrorComplete topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Event m1m3_logevent_ILCCommunication Topic Size
+	[Documentation]    Validate the m1m3_logevent_ILCCommunication topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Event m1m3_logevent_ElevationAngleChecks Topic Size
+	[Documentation]    Validate the m1m3_logevent_ElevationAngleChecks topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[11]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[11]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Event m1m3_logevent_DetailedState Topic Size
+	[Documentation]    Validate the m1m3_logevent_DetailedState topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[12]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[12]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[12]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Event m1m3_logevent_ServoLoops Topic Size
+	[Documentation]    Validate the m1m3_logevent_ServoLoops topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[13]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[13]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[13]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Event m1m3_logevent_ForceActuatorInfo Topic Size
+	[Documentation]    Validate the m1m3_logevent_ForceActuatorInfo topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[14]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[14]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[14]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Event m1m3_logevent_LowerMirrorComplete Topic Size
+	[Documentation]    Validate the m1m3_logevent_LowerMirrorComplete topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[15]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[15]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[15]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Event m1m3_logevent_HardpointActuatorInfo Topic Size
+	[Documentation]    Validate the m1m3_logevent_HardpointActuatorInfo topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[16]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[16]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[16]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Event m1m3_logevent_SettingsApplied Topic Size
+	[Documentation]    Validate the m1m3_logevent_SettingsApplied topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[17]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[17]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[17]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Event m1m3_logevent_ErrorCode Topic Size
+	[Documentation]    Validate the m1m3_logevent_ErrorCode topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[18]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[18]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[18]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Event m1m3_logevent_StartupChecks Topic Size
+	[Documentation]    Validate the m1m3_logevent_StartupChecks topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[19]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[19]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[19]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Event m1m3_logevent_SummaryState Topic Size
+	[Documentation]    Validate the m1m3_logevent_SummaryState topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[20]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[20]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[20]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Event m1m3_logevent_SettingVersions Topic Size
+	[Documentation]    Validate the m1m3_logevent_SettingVersions topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[21]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[21]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[21]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Event m1m3_logevent_ActuatorTestStatus Topic Size
+	[Documentation]    Validate the m1m3_logevent_ActuatorTestStatus topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[22]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[22]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[22]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Event m1m3_logevent_AppliedSettingsMatchStart Topic Size
+	[Documentation]    Validate the m1m3_logevent_AppliedSettingsMatchStart topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[23]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[23]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[23]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Telemetry m1m3_ForceActuatorData Topic Size
+	[Documentation]    Validate the m1m3_ForceActuatorData topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4226,15 +5912,16 @@ Validate M1M3 Telemetry m1m3_LimitSensors Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Telemetry m1m3_Metrology Topic Size
-	[Documentation]    Validate the m1m3_Metrology topic is less than 65536 bytes in total.
+Validate M1M3 Telemetry m1m3_MirrorForceData Topic Size
+	[Documentation]    Validate the m1m3_MirrorForceData topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4248,15 +5935,16 @@ Validate M1M3 Telemetry m1m3_Metrology Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Telemetry m1m3_Application Topic Size
-	[Documentation]    Validate the m1m3_Application topic is less than 65536 bytes in total.
+Validate M1M3 Telemetry m1m3_HardpointData Topic Size
+	[Documentation]    Validate the m1m3_HardpointData topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4270,15 +5958,16 @@ Validate M1M3 Telemetry m1m3_Application Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Telemetry m1m3_LUT Topic Size
-	[Documentation]    Validate the m1m3_LUT topic is less than 65536 bytes in total.
+Validate M1M3 Telemetry m1m3_AirData Topic Size
+	[Documentation]    Validate the m1m3_AirData topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4292,15 +5981,16 @@ Validate M1M3 Telemetry m1m3_LUT Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Telemetry m1m3_Actuators Topic Size
-	[Documentation]    Validate the m1m3_Actuators topic is less than 65536 bytes in total.
+Validate M1M3 Telemetry m1m3_DynamicData Topic Size
+	[Documentation]    Validate the m1m3_DynamicData topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4314,15 +6004,16 @@ Validate M1M3 Telemetry m1m3_Actuators Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Telemetry m1m3_TC Topic Size
-	[Documentation]    Validate the m1m3_TC topic is less than 65536 bytes in total.
+Validate M1M3 Telemetry m1m3_FPGAData Topic Size
+	[Documentation]    Validate the m1m3_FPGAData topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4336,15 +6027,16 @@ Validate M1M3 Telemetry m1m3_TC Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Telemetry m1m3_Electrical Topic Size
-	[Documentation]    Validate the m1m3_Electrical topic is less than 65536 bytes in total.
+Validate M1M3 Telemetry m1m3_IMSData Topic Size
+	[Documentation]    Validate the m1m3_IMSData topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4358,15 +6050,16 @@ Validate M1M3 Telemetry m1m3_Electrical Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Telemetry m1m3_Surface Topic Size
-	[Documentation]    Validate the m1m3_Surface topic is less than 65536 bytes in total.
+Validate M1M3 Telemetry m1m3_ForceActuatorStatus Topic Size
+	[Documentation]    Validate the m1m3_ForceActuatorStatus topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4380,15 +6073,16 @@ Validate M1M3 Telemetry m1m3_Surface Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Telemetry m1m3_Support Topic Size
-	[Documentation]    Validate the m1m3_Support topic is less than 65536 bytes in total.
+Validate M1M3 Telemetry m1m3_ElevationData Topic Size
+	[Documentation]    Validate the m1m3_ElevationData topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4402,7 +6096,31 @@ Validate M1M3 Telemetry m1m3_Support Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Telemetry m1m3_HardpointStatus Topic Size
+	[Documentation]    Validate the m1m3_HardpointStatus topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[10]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[10]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[10]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -4424,7 +6142,8 @@ Validate M2MS Command m2ms_command_ApplyBendingMode Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -4446,7 +6165,8 @@ Validate M2MS Command m2ms_command_ApplyForce Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -4468,7 +6188,8 @@ Validate M2MS Command m2ms_command_SetCorrectionMode Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -4490,7 +6211,8 @@ Validate M2MS Command m2ms_command_PositionMirror Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -4512,7 +6234,8 @@ Validate M2MS Command m2ms_command_MoveAxialActuator Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -4534,7 +6257,8 @@ Validate M2MS Event m2ms_logevent_M2SummaryState Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -4556,7 +6280,8 @@ Validate M2MS Event m2ms_logevent_M2DetailedState Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -4578,7 +6303,8 @@ Validate M2MS Event m2ms_logevent_M2FaultState Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -4600,7 +6326,8 @@ Validate M2MS Event m2ms_logevent_M2AssemblyInPosition Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -4622,7 +6349,8 @@ Validate M2MS Telemetry m2ms_MirrorPositionMeasured Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -4644,7 +6372,8 @@ Validate M2MS Telemetry m2ms_AxialForcesMeasured Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -4666,7 +6395,8 @@ Validate M2MS Telemetry m2ms_TangentForcesMeasured Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -4688,7 +6418,8 @@ Validate M2MS Telemetry m2ms_ZenithAngleMeasured Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -4710,7 +6441,8 @@ Validate M2MS Telemetry m2ms_AxialActuatorAbsolutePositionSteps Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -4732,7 +6464,8 @@ Validate M2MS Telemetry m2ms_TangentActuatorAbsolutePositionSteps Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -4754,7 +6487,8 @@ Validate M2MS Telemetry m2ms_AxialActuatorPositionAbsoluteEncoderPositionMeasure
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -4776,7 +6510,8 @@ Validate M2MS Telemetry m2ms_TangentActuatorPositionAbsoluteEncoderPositionMeasu
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -4798,7 +6533,8 @@ Validate M2MS Telemetry m2ms_PowerStatus Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -4820,7 +6556,8 @@ Validate M2MS Telemetry m2ms_TemperaturesMeasured Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -4842,7 +6579,8 @@ Validate M2MS Telemetry m2ms_RawDisplacement Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -4864,7 +6602,8 @@ Validate M2MS Telemetry m2ms_StepVectorUpdate Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -4886,7 +6625,8 @@ Validate M2MS Telemetry m2ms_TargetForces Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -4908,7 +6648,8 @@ Validate M2MS Telemetry m2ms_SystemStatus Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -4930,7 +6671,8 @@ Validate M2MS Telemetry m2ms_RawTelemetry Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -4952,7 +6694,8 @@ Validate M2MS Telemetry m2ms_ActuatorLimitSwitches Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -4974,7 +6717,8 @@ Validate MTMount Command MTMount_command_closeMirrorCover Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -4996,7 +6740,8 @@ Validate MTMount Command MTMount_command_configure Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5018,7 +6763,8 @@ Validate MTMount Command MTMount_command_disableCamWrap Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5040,7 +6786,8 @@ Validate MTMount Command MTMount_command_enableCamWrap Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5062,7 +6809,8 @@ Validate MTMount Command MTMount_command_moveToTarget Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5084,7 +6832,8 @@ Validate MTMount Command MTMount_command_openMirrorCover Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5106,7 +6855,8 @@ Validate MTMount Command MTMount_command_trackTarget Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5128,7 +6878,8 @@ Validate MTMount Command MTMount_command_clearerror Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5150,7 +6901,8 @@ Validate MTMount Event MTMount_logevent_mountState Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5172,7 +6924,8 @@ Validate MTMount Event MTMount_logevent_mountWarning Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5194,7 +6947,8 @@ Validate MTMount Event MTMount_logevent_mountError Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5216,7 +6970,8 @@ Validate MTMount Event MTMount_logevent_mountInPosition Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5238,7 +6993,8 @@ Validate MTMount Telemetry MTMount_Az Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5260,7 +7016,8 @@ Validate MTMount Telemetry MTMount_Alt Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5282,7 +7039,8 @@ Validate MTMount Telemetry MTMount_Az_CW Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5304,7 +7062,8 @@ Validate MTMount Telemetry MTMount_Az_OSS Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5326,7 +7085,8 @@ Validate MTMount Telemetry MTMount_Alt_OSS Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5348,7 +7108,8 @@ Validate MTMount Telemetry MTMount_Az_TC Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5370,7 +7131,8 @@ Validate MTMount Telemetry MTMount_Alt_TC Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5392,7 +7154,8 @@ Validate MTMount Telemetry MTMount_Bal Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5414,7 +7177,8 @@ Validate MTMount Telemetry MTMount_MC Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5436,7 +7200,8 @@ Validate MTMount Telemetry MTMount_Cam_CW Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5458,7 +7223,8 @@ Validate MTMount Telemetry MTMount_Cab_TC Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5480,7 +7246,8 @@ Validate MTMount Telemetry MTMount_DP_1 Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5502,7 +7269,8 @@ Validate MTMount Telemetry MTMount_DP_2 Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5524,7 +7292,8 @@ Validate MTMount Telemetry MTMount_MotionParameters Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5546,7 +7315,8 @@ Validate OCS Command ocs_command_sequence Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5568,7 +7338,8 @@ Validate OCS Command ocs_command_script Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5590,7 +7361,8 @@ Validate OCS Event ocs_logevent_ocsEntitySummaryState Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5612,7 +7384,8 @@ Validate OCS Event ocs_logevent_ocsEntityStartup Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5634,7 +7407,8 @@ Validate OCS Event ocs_logevent_ocsEntityShutdown Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5656,7 +7430,8 @@ Validate OCS Event ocs_logevent_ocsCommandIssued Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5678,7 +7453,8 @@ Validate OCS Event ocs_logevent_ocsCommandStatus Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5700,7 +7476,8 @@ Validate OCS Event ocs_logevent_ocsCurrentScript Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5722,7 +7499,8 @@ Validate OCS Event ocs_logevent_ocsNextScript Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5744,7 +7522,8 @@ Validate OCS Event ocs_logevent_ocsScriptStart Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5766,7 +7545,8 @@ Validate OCS Event ocs_logevent_ocsScriptEnd Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5788,7 +7568,8 @@ Validate OCS Event ocs_logevent_ocsScriptError Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5810,7 +7591,8 @@ Validate OCS Event ocs_logevent_ocsScriptEntititesInUse Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5832,7 +7614,8 @@ Validate OCS Telemetry ocs_SequencerHeartbeat Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5854,7 +7637,8 @@ Validate Processingcluster Event processingcluster_logevent_processingclusterEnt
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5876,7 +7660,8 @@ Validate Processingcluster Event processingcluster_logevent_processingclusterEnt
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5898,7 +7683,8 @@ Validate Processingcluster Event processingcluster_logevent_processingclusterEnt
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5920,7 +7706,8 @@ Validate Processingcluster Telemetry processingcluster_SequencerHeartbeat Topic 
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5942,7 +7729,8 @@ Validate Rotator Command rotator_command_configureAcceleration Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5964,7 +7752,8 @@ Validate Rotator Command rotator_command_configureVelocity Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -5986,7 +7775,8 @@ Validate Rotator Command rotator_command_move Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6008,7 +7798,8 @@ Validate Rotator Command rotator_command_track Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6030,7 +7821,8 @@ Validate Rotator Command rotator_command_test Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6052,7 +7844,8 @@ Validate Rotator Event rotator_logevent_error Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6074,7 +7867,8 @@ Validate Rotator Event rotator_logevent_interlock Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6096,7 +7890,8 @@ Validate Rotator Event rotator_logevent_limit Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6118,7 +7913,8 @@ Validate Rotator Event rotator_logevent_moveOK Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6140,7 +7936,8 @@ Validate Rotator Event rotator_logevent_tempError Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6162,7 +7959,8 @@ Validate Rotator Event rotator_logevent_trackLost Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6184,7 +7982,8 @@ Validate Rotator Event rotator_logevent_tracking Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6206,7 +8005,8 @@ Validate Rotator Telemetry rotator_LimitSensors Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6228,7 +8028,8 @@ Validate Rotator Telemetry rotator_Position Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6250,7 +8051,8 @@ Validate Rotator Telemetry rotator_Electrical Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6272,7 +8074,8 @@ Validate Rotator Telemetry rotator_TC Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6294,7 +8097,8 @@ Validate Scheduler Telemetry scheduler_timeHandler Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6316,7 +8120,8 @@ Validate Scheduler Telemetry scheduler_cloud Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6338,7 +8143,8 @@ Validate Scheduler Telemetry scheduler_seeing Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6360,7 +8166,8 @@ Validate Scheduler Telemetry scheduler_filterSwap Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6382,7 +8189,8 @@ Validate Scheduler Telemetry scheduler_schedulerConfig Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6404,7 +8212,8 @@ Validate Scheduler Telemetry scheduler_driverConfig Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6426,7 +8235,8 @@ Validate Scheduler Telemetry scheduler_field Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6448,7 +8258,8 @@ Validate Scheduler Telemetry scheduler_obsSiteConfig Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6470,7 +8281,8 @@ Validate Scheduler Telemetry scheduler_telescopeConfig Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6492,7 +8304,8 @@ Validate Scheduler Telemetry scheduler_rotatorConfig Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6514,7 +8327,8 @@ Validate Scheduler Telemetry scheduler_domeConfig Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6536,7 +8350,8 @@ Validate Scheduler Telemetry scheduler_cameraConfig Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6558,7 +8373,8 @@ Validate Scheduler Telemetry scheduler_slewConfig Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6580,7 +8396,8 @@ Validate Scheduler Telemetry scheduler_opticsLoopCorrConfig Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6602,7 +8419,8 @@ Validate Scheduler Telemetry scheduler_parkConfig Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6624,7 +8442,8 @@ Validate Scheduler Telemetry scheduler_generalPropConfig Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6646,7 +8465,8 @@ Validate Scheduler Telemetry scheduler_sequencePropConfig Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6668,7 +8488,8 @@ Validate Scheduler Telemetry scheduler_blockPusher Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6690,7 +8511,8 @@ Validate Scheduler Telemetry scheduler_observatoryState Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6712,7 +8534,8 @@ Validate Scheduler Telemetry scheduler_target Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6734,7 +8557,8 @@ Validate Scheduler Telemetry scheduler_observation Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6756,7 +8580,8 @@ Validate Scheduler Telemetry scheduler_interestedProposal Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6778,7 +8603,8 @@ Validate Scheduler Telemetry scheduler_parameters Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6800,7 +8626,8 @@ Validate Scheduler Telemetry scheduler_Application Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6822,7 +8649,8 @@ Validate Scheduler Telemetry scheduler_program Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6844,7 +8672,8 @@ Validate Scheduler Telemetry scheduler_progress Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6866,7 +8695,8 @@ Validate Scheduler Telemetry scheduler_rankingData Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6888,7 +8718,8 @@ Validate Scheduler Telemetry scheduler_econstraints Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6910,7 +8741,8 @@ Validate Scheduler Telemetry scheduler_iconstraints Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6932,7 +8764,8 @@ Validate Sequencer Command sequencer_command_sequence Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6954,7 +8787,8 @@ Validate Sequencer Command sequencer_command_script Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6976,7 +8810,8 @@ Validate Sequencer Event sequencer_logevent_sequencerEntitySummaryState Topic Si
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -6998,7 +8833,8 @@ Validate Sequencer Event sequencer_logevent_sequencerEntityStartup Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -7020,7 +8856,8 @@ Validate Sequencer Event sequencer_logevent_sequencerEntityShutdown Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -7042,7 +8879,8 @@ Validate Sequencer Event sequencer_logevent_sequencerCommandIssued Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -7064,7 +8902,8 @@ Validate Sequencer Event sequencer_logevent_sequencerCommandStatus Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -7086,7 +8925,8 @@ Validate Sequencer Event sequencer_logevent_sequencerCurrentScript Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -7108,7 +8948,8 @@ Validate Sequencer Event sequencer_logevent_sequencerNextScript Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -7130,7 +8971,8 @@ Validate Sequencer Event sequencer_logevent_sequencerScriptStart Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -7152,7 +8994,8 @@ Validate Sequencer Event sequencer_logevent_sequencerScriptEnd Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -7174,7 +9017,8 @@ Validate Sequencer Event sequencer_logevent_sequencerScriptError Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -7196,7 +9040,8 @@ Validate Sequencer Event sequencer_logevent_sequencerScriptEntititesInUse Topic 
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -7218,7 +9063,8 @@ Validate Sequencer Telemetry sequencer_SequencerHeartbeat Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -7240,7 +9086,8 @@ Validate TCS Command tcs_command_wfpCalculate Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -7262,15 +9109,16 @@ Validate TCS Command tcs_command_wfpSimulate Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate TCS Command tcs_command_injectError Topic Size
-	[Documentation]    Validate the tcs_command_injectError topic is less than 65536 bytes in total.
+Validate TCS Command tcs_command_filterChangeRequest Topic Size
+	[Documentation]    Validate the tcs_command_filterChangeRequest topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7284,7 +9132,54 @@ Validate TCS Command tcs_command_injectError Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate TCS Command tcs_command_stopMotion Topic Size
+	[Documentation]    Validate the tcs_command_stopMotion topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/tcs/tcs_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[4]/item/Count" -v . -n ${folder}/sal_interfaces/tcs/tcs_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcs/tcs_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate TCS Command tcs_command_target Topic Size
+	[Documentation]    Validate the tcs_command_target topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/tcs/tcs_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[5]/item/Count" -v . -n ${folder}/sal_interfaces/tcs/tcs_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcs/tcs_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -7306,7 +9201,8 @@ Validate TCS Event tcs_logevent_wfpDataReady Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -7328,7 +9224,8 @@ Validate TCS Event tcs_logevent_zemaxError Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -7350,7 +9247,8 @@ Validate TCS Event tcs_logevent_InternalCommand Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -7372,7 +9270,8 @@ Validate TCS Event tcs_logevent_DetailedState Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -7394,7 +9293,8 @@ Validate TCS Event tcs_logevent_Heartbeat Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -7416,7 +9316,8 @@ Validate TCS Event tcs_logevent_LoopTimeOutOfRange Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -7438,7 +9339,8 @@ Validate TCS Event tcs_logevent_RejectedCommand Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -7460,7 +9362,77 @@ Validate TCS Event tcs_logevent_HeartbeatIn Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate TCS Event tcs_logevent_FilterChangeInPosition Topic Size
+	[Documentation]    Validate the tcs_logevent_FilterChangeInPosition topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/tcs/tcs_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/Count" -v . -n ${folder}/sal_interfaces/tcs/tcs_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcs/tcs_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate TCS Event tcs_logevent_TargetInPosition Topic Size
+	[Documentation]    Validate the tcs_logevent_TargetInPosition topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/tcs/tcs_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/Count" -v . -n ${folder}/sal_interfaces/tcs/tcs_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcs/tcs_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate TCS Event tcs_logevent_SettingsApplied Topic Size
+	[Documentation]    Validate the tcs_logevent_SettingsApplied topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/tcs/tcs_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[11]/item/Count" -v . -n ${folder}/sal_interfaces/tcs/tcs_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[11]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcs/tcs_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -7482,7 +9454,8 @@ Validate TCS Telemetry tcs_kernel_PointingModel Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -7504,7 +9477,8 @@ Validate TCS Telemetry tcs_AOCS Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -7526,7 +9500,8 @@ Validate TCS Telemetry tcs_kernel_TimeKeeper Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -7548,7 +9523,8 @@ Validate TCS Telemetry tcs_kernel_Site Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -7570,7 +9546,8 @@ Validate TCS Telemetry tcs_kernel_Target Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -7592,7 +9569,8 @@ Validate TCS Telemetry tcs_kernel_PointingControl Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -7614,7 +9592,8 @@ Validate TCS Telemetry tcs_kernel_TrackRefSys Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -7636,7 +9615,8 @@ Validate TCS Telemetry tcs_ZEMAX Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -7658,7 +9638,8 @@ Validate TCS Telemetry tcs_kernel_PointingLog Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -7680,7 +9661,8 @@ Validate TCS Telemetry tcs_kernel_DawdleFilter Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -7702,7 +9684,8 @@ Validate TCS Telemetry tcs_kernel_OpticsVt Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -7724,7 +9707,8 @@ Validate TCS Telemetry tcs_WEP Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -7746,7 +9730,8 @@ Validate TCS Telemetry tcs_kernel_TrackingTarget Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -7768,7 +9753,8 @@ Validate TCS Telemetry tcs_kernel_FK5Target Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -7790,7 +9776,8 @@ Validate TCS Telemetry tcs_LoopTime_ms Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -7812,7 +9799,8 @@ Validate TCS Telemetry tcs_Timestamp Topic Size
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Log Many    ${dict.${key}}    @{CountArray}[${index}]
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
 	\    ${size}=    Convert to Number    ${output}
 	\    ${result}=    Evaluate    ${result}+${size}
@@ -7822,7 +9810,7 @@ Validate TCS Telemetry tcs_Timestamp Topic Size
 *** Keywords ***
 Create the DataType:Size Dictionary
 	[Tags]    smoke
-	&{dict}=    Create Dictionary    boolean=2    char=1    double=8    float=4    int=4    long=4    short=2    string=1    ushort=2    ulong=4
+	&{dict}=    Create Dictionary    boolean=2    byte=1    char=1    double=8    float=4    int=4    long=4    llong=8    octet=1    short=2    string=1    ushort=2    ulong=4
 	Log Many    &{dict}
 	Set Suite Variable    &{dict}
 
