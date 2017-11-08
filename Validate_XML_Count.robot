@@ -255,6 +255,14 @@ Validate EEC Telemetry XML Counts
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
+Validate Environment Telemetry XML Counts
+	[Documentation]    Validate the Environment Telemetry XML count.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/environment/environment_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
 Validate Hexapod Commands XML Counts
 	[Documentation]    Validate the Hexapod Commands XML count.
 	[Tags]    smoke

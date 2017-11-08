@@ -2,53 +2,7 @@
 # -*- coding: utf-8 -*-
 import glob
 import re
-
-# =========
-# Functions
-# =========
-#def GenerateTestCases(  str  ):
-#print "Hello"
-#return 
-
-def CapitalizeSubsystem( subsystem ):
-	if re.match("^dome\S+", subsystem):
-		return subsystem[0].upper() + subsystem[1:]
-	elif subsystem == "dm":
-		return "DM"
-	elif subsystem == "eec":
-		return "EEC"
-	elif subsystem == "m1m3":
-		return "M1M3"
-	elif subsystem == "m2ms":
-		return "M2MS"
-	elif subsystem == "MTMount":
-		return subsystem
-	elif subsystem == "tcs":
-		return "TCS"
-	elif subsystem == "ocs":
-		return "OCS"
-	else:
-		return subsystem.capitalize()
-
-def GetSubsystemVersion( string ):
-    # Right now, the topic version is controlled manually, which requries a 
-    # manual configuration file.  If/when this is formallized, switch to
-    # that source.
-    version = ""
-    with open("/Users/rbovill/bin/XML_Versions.txt") as versionfile:
-        for line in versionfile:
-            if string in line:
-                line = versionfile.next()
-                while line != "\n":
-                    version+=line.split(" ")[1].rstrip() + "\\n"
-                    line = versionfile.next()   #.split(" ")[1].rstrip()
-    return version[:-2]
-
-
-# =========
-# Variables
-# =========
-subsystems = ['archiver', 'camera', 'catchuparchiver', 'dome', 'domeADB', 'domeAPS', 'domeLouvers', 'domeLWS', 'domeMONCS', 'domeTHCS', 'eec', 'hexapod', 'm1m3', 'm2ms', 'MTMount', 'ocs', 'processingcluster', 'rotator', 'scheduler', 'sequencer', 'tcs']
+import xml_common
 
 # Create/Open test suite file.
 file = open("../Validate_XML_Count.robot","w")
@@ -68,15 +22,15 @@ file.write("\n")
 
 # Create Test Case table.
 file.write("*** Test Cases ***\n")
-for subsystem in subsystems:
+for subsystem in xml_common.subsystems:
 	# Get the list of XMLs for each CSC, to include Telemetry, Events and Commands.
 	xmls = glob.glob("/Users/rbovill/trunk/ts_xml/sal_interfaces/" + subsystem + "/" + subsystem + "*")
 	for xml in xmls:
 		# Get the message type, i.e. Telemetry, Events, Commands.
 		messageType = xml.split('/')[7].split('_')[1].split('.')[0]
 		# Create the Test Cases.
-		file.write("Validate " + CapitalizeSubsystem(subsystem) + " " + messageType + " XML Counts\n")
-		file.write("\t[Documentation]    Validate the " + CapitalizeSubsystem(subsystem) + " " + messageType + " XML count.\n")
+		file.write("Validate " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType + " XML Counts\n")
+		file.write("\t[Documentation]    Validate the " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType + " XML count.\n")
 		file.write("\t[Tags]    smoke\n")
 		file.write("\t${output}=    Run    ${xml} sel -t -m \"//SAL" + messageType.rstrip('s') + "Set/SAL" + messageType.rstrip('s') + "/item/Count\" -v . -n ${folder}/sal_interfaces/" + subsystem + "/" + subsystem + "_" + messageType + ".xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\\\n/,/g'\n")
 		file.write("\tLog    ${output}\n")
