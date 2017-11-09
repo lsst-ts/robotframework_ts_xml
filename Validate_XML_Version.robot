@@ -64,6 +64,30 @@ Validate Catchuparchiver Telemetry Version
 	${version}=    Set Variable    3.5.1
 	Should Match    ${output}    ${version}
 
+Validate DMHeaderService Commands Version
+	[Documentation]    Validate the DMHeaderService Commands version.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Version" -v . -n ${folder}/sal_interfaces/dmHeaderService/dmHeaderService_Commands.xml
+	Log    ${output}
+	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1
+	Should Match    ${output}    ${version}
+
+Validate DMHeaderService Events Version
+	[Documentation]    Validate the DMHeaderService Events version.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/dmHeaderService/dmHeaderService_Events.xml
+	Log    ${output}
+	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1
+	Should Match    ${output}    ${version}
+
+Validate DMHeaderService Telemetry Version
+	[Documentation]    Validate the DMHeaderService Telemetry version.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/dmHeaderService/dmHeaderService_Telemetry.xml
+	Log    ${output}
+	${version}=    Set Variable    3.5.1\n3.5.1
+	Should Match    ${output}    ${version}
+
 Validate Dome Commands Version
 	[Documentation]    Validate the Dome Commands version.
 	[Tags]    smoke

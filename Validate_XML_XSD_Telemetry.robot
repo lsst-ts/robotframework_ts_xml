@@ -26,7 +26,7 @@ Validate Catchuparchiver Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   catchuparchiver_Telemetry.xml - valid
 
-Validate Dmheaderservice Telemetry XML file
+Validate DMHeaderService Telemetry XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/dmHeaderService/dmHeaderService_Telemetry.xml
 	Log    ${output}

@@ -26,7 +26,7 @@ Validate Catchuparchiver Events XML file
 	Log    ${output}
 	Should Contain    ${output}   catchuparchiver_Events.xml - valid
 
-Validate Dmheaderservice Events XML file
+Validate DMHeaderService Events XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/dmHeaderService/dmHeaderService_Events.xml
 	Log    ${output}

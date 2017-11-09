@@ -8,7 +8,7 @@ import re
 # Variables
 # =========
 """Defines the array of Commandable SAL Components, or CSCs."""
-subsystems = ['archiver', 'camera', 'catchuparchiver', 'dome', 'domeADB', 'domeAPS', 'domeLouvers', 'domeLWS', 'domeMONCS', 'domeTHCS', 'eec', 'environment', 'hexapod', 'm1m3', 'm2ms', 'MTMount', 'ocs', 'processingcluster', 'rotator', 'scheduler', 'sequencer', 'tcs']
+subsystems = ['archiver', 'camera', 'catchuparchiver', 'dmHeaderService', 'dome', 'domeADB', 'domeAPS', 'domeLouvers', 'domeLWS', 'domeMONCS', 'domeTHCS', 'eec', 'environment', 'hexapod', 'm1m3', 'm2ms', 'MTMount', 'ocs', 'processingcluster', 'rotator', 'scheduler', 'sequencer', 'tcs']
 
 
 # =========
@@ -19,8 +19,8 @@ def CapitalizeSubsystem( subsystem ):
 	"""Certain CSC abbreviations are capitalized in non-standard ways. This function correctly handles that capitalization."""
 	if re.match("^dome\S+", subsystem):
 		return subsystem[0].upper() + subsystem[1:]
-	elif subsystem == "dm":
-		return "DM"
+	elif subsystem == "dmHeaderService":
+		return "DMHeaderService"
 	elif subsystem == "eec":
 		return "EEC"
 	elif subsystem == "m1m3":

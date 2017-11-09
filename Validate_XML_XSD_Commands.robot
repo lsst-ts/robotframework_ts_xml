@@ -14,7 +14,7 @@ Validate Camera Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   camera_Commands.xml - valid
 
-Validate Dmheaderservice Commands XML file
+Validate DMHeaderService Commands XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/dmHeaderService/dmHeaderService_Commands.xml
 	Log    ${output}

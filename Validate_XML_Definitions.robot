@@ -57,6 +57,27 @@ Validate Catchuparchiver Telemetry
 	Log    ${output}
 	Should Contain    ${output}   catchuparchiver_Telemetry.xml - valid
 
+Validate DMHeaderService Commands
+	[Documentation]    Validate the DMHeaderService Commands XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/dmHeaderService/dmHeaderService_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   dmHeaderService_Commands.xml - valid
+
+Validate DMHeaderService Events
+	[Documentation]    Validate the DMHeaderService Events XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/dmHeaderService/dmHeaderService_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   dmHeaderService_Events.xml - valid
+
+Validate DMHeaderService Telemetry
+	[Documentation]    Validate the DMHeaderService Telemetry XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/dmHeaderService/dmHeaderService_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   dmHeaderService_Telemetry.xml - valid
+
 Validate Dome Commands
 	[Documentation]    Validate the Dome Commands XML file.
 	[Tags]    smoke
