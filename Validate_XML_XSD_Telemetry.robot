@@ -14,6 +14,12 @@ Validate Archiver Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   archiver_Telemetry.xml - valid
 
+Validate Calibrationelectrometer Telemetry XML file
+	[Tags]    smoke
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   calibrationElectrometer_Telemetry.xml - valid
+
 Validate Camera Telemetry XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/camera/camera_Telemetry.xml
@@ -139,6 +145,12 @@ Validate Sequencer Telemetry XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/sequencer/sequencer_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   sequencer_Telemetry.xml - valid
+
+Validate Summitfacility Telemetry XML file
+	[Tags]    smoke
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/summitFacility/summitFacility_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   summitFacility_Telemetry.xml - valid
 
 Validate TCS Telemetry XML file
 	[Tags]    smoke

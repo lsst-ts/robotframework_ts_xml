@@ -14,6 +14,12 @@ Validate Archiver Events XML file
 	Log    ${output}
 	Should Contain    ${output}   archiver_Events.xml - valid
 
+Validate Calibrationelectrometer Events XML file
+	[Tags]    smoke
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   calibrationElectrometer_Events.xml - valid
+
 Validate Camera Events XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/camera/camera_Events.xml
@@ -127,6 +133,12 @@ Validate Sequencer Events XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/sequencer/sequencer_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   sequencer_Events.xml - valid
+
+Validate Summitfacility Events XML file
+	[Tags]    smoke
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/summitFacility/summitFacility_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   summitFacility_Events.xml - valid
 
 Validate TCS Events XML file
 	[Tags]    smoke

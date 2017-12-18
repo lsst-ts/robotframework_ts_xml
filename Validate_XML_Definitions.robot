@@ -22,6 +22,27 @@ Validate Archiver Telemetry
 	Log    ${output}
 	Should Contain    ${output}   archiver_Telemetry.xml - valid
 
+Validate Calibrationelectrometer Commands
+	[Documentation]    Validate the Calibrationelectrometer Commands XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   calibrationElectrometer_Commands.xml - valid
+
+Validate Calibrationelectrometer Events
+	[Documentation]    Validate the Calibrationelectrometer Events XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   calibrationElectrometer_Events.xml - valid
+
+Validate Calibrationelectrometer Telemetry
+	[Documentation]    Validate the Calibrationelectrometer Telemetry XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   calibrationElectrometer_Telemetry.xml - valid
+
 Validate Camera Commands
 	[Documentation]    Validate the Camera Commands XML file.
 	[Tags]    smoke
@@ -420,6 +441,27 @@ Validate Sequencer Telemetry
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/sequencer/sequencer_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   sequencer_Telemetry.xml - valid
+
+Validate Summitfacility Commands
+	[Documentation]    Validate the Summitfacility Commands XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/summitFacility/summitFacility_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   summitFacility_Commands.xml - valid
+
+Validate Summitfacility Events
+	[Documentation]    Validate the Summitfacility Events XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/summitFacility/summitFacility_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   summitFacility_Events.xml - valid
+
+Validate Summitfacility Telemetry
+	[Documentation]    Validate the Summitfacility Telemetry XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/summitFacility/summitFacility_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   summitFacility_Telemetry.xml - valid
 
 Validate TCS Commands
 	[Documentation]    Validate the TCS Commands XML file.

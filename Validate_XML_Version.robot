@@ -24,6 +24,30 @@ Validate Archiver Telemetry Version
 	${version}=    Set Variable    3.5.1
 	Should Match    ${output}    ${version}
 
+Validate Calibrationelectrometer Commands Version
+	[Documentation]    Validate the Calibrationelectrometer Commands version.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Version" -v . -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Commands.xml
+	Log    ${output}
+	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1
+	Should Match    ${output}    ${version}
+
+Validate Calibrationelectrometer Events Version
+	[Documentation]    Validate the Calibrationelectrometer Events version.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
+	Log    ${output}
+	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1
+	Should Match    ${output}    ${version}
+
+Validate Calibrationelectrometer Telemetry Version
+	[Documentation]    Validate the Calibrationelectrometer Telemetry version.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Telemetry.xml
+	Log    ${output}
+	${version}=    Set Variable    3.5.1\n3.5.1
+	Should Match    ${output}    ${version}
+
 Validate Camera Commands Version
 	[Documentation]    Validate the Camera Commands version.
 	[Tags]    smoke
@@ -476,6 +500,30 @@ Validate Sequencer Telemetry Version
 	[Documentation]    Validate the Sequencer Telemetry version.
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/sequencer/sequencer_Telemetry.xml
+	Log    ${output}
+	${version}=    Set Variable    3.5.1
+	Should Match    ${output}    ${version}
+
+Validate Summitfacility Commands Version
+	[Documentation]    Validate the Summitfacility Commands version.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Version" -v . -n ${folder}/sal_interfaces/summitFacility/summitFacility_Commands.xml
+	Log    ${output}
+	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1
+	Should Match    ${output}    ${version}
+
+Validate Summitfacility Events Version
+	[Documentation]    Validate the Summitfacility Events version.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/summitFacility/summitFacility_Events.xml
+	Log    ${output}
+	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1\n3.5.1
+	Should Match    ${output}    ${version}
+
+Validate Summitfacility Telemetry Version
+	[Documentation]    Validate the Summitfacility Telemetry version.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/summitFacility/summitFacility_Telemetry.xml
 	Log    ${output}
 	${version}=    Set Variable    3.5.1
 	Should Match    ${output}    ${version}

@@ -8,6 +8,12 @@ Resource    Global_Vars.robot
 ${xml}    xml
 
 *** Test Cases ***
+Validate Calibrationelectrometer Commands XML file
+	[Tags]    smoke
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   calibrationElectrometer_Commands.xml - valid
+
 Validate Camera Commands XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/camera/camera_Commands.xml
@@ -109,6 +115,12 @@ Validate Sequencer Commands XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/sequencer/sequencer_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   sequencer_Commands.xml - valid
+
+Validate Summitfacility Commands XML file
+	[Tags]    smoke
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/summitFacility/summitFacility_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   summitFacility_Commands.xml - valid
 
 Validate TCS Commands XML file
 	[Tags]    smoke
