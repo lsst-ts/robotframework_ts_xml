@@ -101,7 +101,7 @@ Validate Archiver Telemetry archiver_SequencerHeartbeat Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_Disable Topic Size
+Validate CalibrationElectrometer Command calibrationElectrometer_command_Disable Topic Size
 	[Documentation]    Validate the calibrationElectrometer_command_Disable topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -124,7 +124,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_Disable
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_Power Topic Size
+Validate CalibrationElectrometer Command calibrationElectrometer_command_Power Topic Size
 	[Documentation]    Validate the calibrationElectrometer_command_Power topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -147,7 +147,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_Power T
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_StartScanReachIntensity Topic Size
+Validate CalibrationElectrometer Command calibrationElectrometer_command_StartScanReachIntensity Topic Size
 	[Documentation]    Validate the calibrationElectrometer_command_StartScanReachIntensity topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -170,7 +170,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_StartSc
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_SetIntegrationTime Topic Size
+Validate CalibrationElectrometer Command calibrationElectrometer_command_SetIntegrationTime Topic Size
 	[Documentation]    Validate the calibrationElectrometer_command_SetIntegrationTime topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -193,7 +193,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_SetInte
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_ExitControl Topic Size
+Validate CalibrationElectrometer Command calibrationElectrometer_command_ExitControl Topic Size
 	[Documentation]    Validate the calibrationElectrometer_command_ExitControl topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -216,7 +216,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_ExitCon
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_Enable Topic Size
+Validate CalibrationElectrometer Command calibrationElectrometer_command_Enable Topic Size
 	[Documentation]    Validate the calibrationElectrometer_command_Enable topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -239,7 +239,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_Enable 
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_Standby Topic Size
+Validate CalibrationElectrometer Command calibrationElectrometer_command_Standby Topic Size
 	[Documentation]    Validate the calibrationElectrometer_command_Standby topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -262,7 +262,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_Standby
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_SetDigitalFilter Topic Size
+Validate CalibrationElectrometer Command calibrationElectrometer_command_SetDigitalFilter Topic Size
 	[Documentation]    Validate the calibrationElectrometer_command_SetDigitalFilter topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -285,7 +285,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_SetDigi
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_StartScanDt Topic Size
+Validate CalibrationElectrometer Command calibrationElectrometer_command_StartScanDt Topic Size
 	[Documentation]    Validate the calibrationElectrometer_command_StartScanDt topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -308,7 +308,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_StartSc
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_SetMode Topic Size
+Validate CalibrationElectrometer Command calibrationElectrometer_command_SetMode Topic Size
 	[Documentation]    Validate the calibrationElectrometer_command_SetMode topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -331,7 +331,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_SetMode
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_StartScan Topic Size
+Validate CalibrationElectrometer Command calibrationElectrometer_command_StartScan Topic Size
 	[Documentation]    Validate the calibrationElectrometer_command_StartScan topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -354,7 +354,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_StartSc
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_PerformZeroCalib Topic Size
+Validate CalibrationElectrometer Command calibrationElectrometer_command_PerformZeroCalib Topic Size
 	[Documentation]    Validate the calibrationElectrometer_command_PerformZeroCalib topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -377,7 +377,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_Perform
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_Start Topic Size
+Validate CalibrationElectrometer Command calibrationElectrometer_command_Start Topic Size
 	[Documentation]    Validate the calibrationElectrometer_command_Start topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -400,7 +400,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_Start T
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_SetRange Topic Size
+Validate CalibrationElectrometer Command calibrationElectrometer_command_SetRange Topic Size
 	[Documentation]    Validate the calibrationElectrometer_command_SetRange topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -423,7 +423,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_SetRang
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_StopScan Topic Size
+Validate CalibrationElectrometer Command calibrationElectrometer_command_StopScan Topic Size
 	[Documentation]    Validate the calibrationElectrometer_command_StopScan topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -446,7 +446,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_StopSca
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_IntegrationTime Topic Size
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_IntegrationTime Topic Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_IntegrationTime topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -469,7 +469,7 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Integrat
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_SummaryState Topic Size
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_SummaryState Topic Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_SummaryState topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -492,8 +492,8 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_SummaryS
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_internalState Topic Size
-	[Documentation]    Validate the calibrationElectrometer_logevent_internalState topic is less than 65536 bytes in total.
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_DetailedState Topic Size
+	[Documentation]    Validate the calibrationElectrometer_logevent_DetailedState topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -515,8 +515,8 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_internal
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_DetailedState Topic Size
-	[Documentation]    Validate the calibrationElectrometer_logevent_DetailedState topic is less than 65536 bytes in total.
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_SettingVersions Topic Size
+	[Documentation]    Validate the calibrationElectrometer_logevent_SettingVersions topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -538,8 +538,8 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Detailed
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_SettingVersions Topic Size
-	[Documentation]    Validate the calibrationElectrometer_logevent_SettingVersions topic is less than 65536 bytes in total.
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_Heartbeat Topic Size
+	[Documentation]    Validate the calibrationElectrometer_logevent_Heartbeat topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -561,8 +561,8 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_SettingV
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Heartbeat Topic Size
-	[Documentation]    Validate the calibrationElectrometer_logevent_Heartbeat topic is less than 65536 bytes in total.
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_ErrorCode Topic Size
+	[Documentation]    Validate the calibrationElectrometer_logevent_ErrorCode topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -584,8 +584,8 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Heartbea
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_ErrorCode Topic Size
-	[Documentation]    Validate the calibrationElectrometer_logevent_ErrorCode topic is less than 65536 bytes in total.
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_measureRange Topic Size
+	[Documentation]    Validate the calibrationElectrometer_logevent_measureRange topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -607,8 +607,8 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_ErrorCod
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_measureRange Topic Size
-	[Documentation]    Validate the calibrationElectrometer_logevent_measureRange topic is less than 65536 bytes in total.
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_Intensity Topic Size
+	[Documentation]    Validate the calibrationElectrometer_logevent_Intensity topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -630,8 +630,8 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_measureR
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Intensity Topic Size
-	[Documentation]    Validate the calibrationElectrometer_logevent_Intensity topic is less than 65536 bytes in total.
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_digitalFilterChange Topic Size
+	[Documentation]    Validate the calibrationElectrometer_logevent_digitalFilterChange topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -653,8 +653,8 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Intensit
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_digitalFilterChange Topic Size
-	[Documentation]    Validate the calibrationElectrometer_logevent_digitalFilterChange topic is less than 65536 bytes in total.
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_AppliedSettingsMatchStart Topic Size
+	[Documentation]    Validate the calibrationElectrometer_logevent_AppliedSettingsMatchStart topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -676,8 +676,8 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_digitalF
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_AppliedSettingsMatchStart Topic Size
-	[Documentation]    Validate the calibrationElectrometer_logevent_AppliedSettingsMatchStart topic is less than 65536 bytes in total.
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_LoopTimeOutOfRange Topic Size
+	[Documentation]    Validate the calibrationElectrometer_logevent_LoopTimeOutOfRange topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -699,8 +699,8 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_AppliedS
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_LoopTimeOutOfRange Topic Size
-	[Documentation]    Validate the calibrationElectrometer_logevent_LoopTimeOutOfRange topic is less than 65536 bytes in total.
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_SettingsApplied_ReadingSettings Topic Size
+	[Documentation]    Validate the calibrationElectrometer_logevent_SettingsApplied_ReadingSettings topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -722,8 +722,8 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_LoopTime
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_SettingsApplied_ReadingSettings Topic Size
-	[Documentation]    Validate the calibrationElectrometer_logevent_SettingsApplied_ReadingSettings topic is less than 65536 bytes in total.
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_IntensityReq Topic Size
+	[Documentation]    Validate the calibrationElectrometer_logevent_IntensityReq topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -745,8 +745,8 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Settings
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_IntensityReq Topic Size
-	[Documentation]    Validate the calibrationElectrometer_logevent_IntensityReq topic is less than 65536 bytes in total.
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_RejectedCommand Topic Size
+	[Documentation]    Validate the calibrationElectrometer_logevent_RejectedCommand topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -768,8 +768,8 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Intensit
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_RejectedCommand Topic Size
-	[Documentation]    Validate the calibrationElectrometer_logevent_RejectedCommand topic is less than 65536 bytes in total.
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_SettingsApplied_SerialConfiguration Topic Size
+	[Documentation]    Validate the calibrationElectrometer_logevent_SettingsApplied_SerialConfiguration topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -791,8 +791,8 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Rejected
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_SettingsApplied_SerialConfiguration Topic Size
-	[Documentation]    Validate the calibrationElectrometer_logevent_SettingsApplied_SerialConfiguration topic is less than 65536 bytes in total.
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_InternalCommand Topic Size
+	[Documentation]    Validate the calibrationElectrometer_logevent_InternalCommand topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -814,8 +814,8 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Settings
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_InternalCommand Topic Size
-	[Documentation]    Validate the calibrationElectrometer_logevent_InternalCommand topic is less than 65536 bytes in total.
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_measureType Topic Size
+	[Documentation]    Validate the calibrationElectrometer_logevent_measureType topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -837,30 +837,7 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Internal
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_measureType Topic Size
-	[Documentation]    Validate the calibrationElectrometer_logevent_measureType topic is less than 65536 bytes in total.
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[18]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[18]/item/Count" -v . -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[18]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < 65536
-
-Validate Calibrationelectrometer Telemetry calibrationElectrometer_Timestamp Topic Size
+Validate CalibrationElectrometer Telemetry calibrationElectrometer_Timestamp Topic Size
 	[Documentation]    Validate the calibrationElectrometer_Timestamp topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -883,7 +860,7 @@ Validate Calibrationelectrometer Telemetry calibrationElectrometer_Timestamp Top
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Calibrationelectrometer Telemetry calibrationElectrometer_LoopTime_ms Topic Size
+Validate CalibrationElectrometer Telemetry calibrationElectrometer_LoopTime_ms Topic Size
 	[Documentation]    Validate the calibrationElectrometer_LoopTime_ms topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -1872,7 +1849,7 @@ Validate Camera Telemetry camera_WAS Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Catchuparchiver Event catchuparchiver_logevent_catchuparchiverEntitySummaryState Topic Size
+Validate CatchupArchiver Event catchuparchiver_logevent_catchuparchiverEntitySummaryState Topic Size
 	[Documentation]    Validate the catchuparchiver_logevent_catchuparchiverEntitySummaryState topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -1895,7 +1872,7 @@ Validate Catchuparchiver Event catchuparchiver_logevent_catchuparchiverEntitySum
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Catchuparchiver Event catchuparchiver_logevent_catchuparchiverEntityStartup Topic Size
+Validate CatchupArchiver Event catchuparchiver_logevent_catchuparchiverEntityStartup Topic Size
 	[Documentation]    Validate the catchuparchiver_logevent_catchuparchiverEntityStartup topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -1918,7 +1895,7 @@ Validate Catchuparchiver Event catchuparchiver_logevent_catchuparchiverEntitySta
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Catchuparchiver Event catchuparchiver_logevent_catchuparchiverEntityShutdown Topic Size
+Validate CatchupArchiver Event catchuparchiver_logevent_catchuparchiverEntityShutdown Topic Size
 	[Documentation]    Validate the catchuparchiver_logevent_catchuparchiverEntityShutdown topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -1941,7 +1918,7 @@ Validate Catchuparchiver Event catchuparchiver_logevent_catchuparchiverEntityShu
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Catchuparchiver Telemetry catchuparchiver_SequencerHeartbeat Topic Size
+Validate CatchupArchiver Telemetry catchuparchiver_SequencerHeartbeat Topic Size
 	[Documentation]    Validate the catchuparchiver_SequencerHeartbeat topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -8864,7 +8841,7 @@ Validate OCS Telemetry ocs_SequencerHeartbeat Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Processingcluster Event processingcluster_logevent_processingclusterEntitySummaryState Topic Size
+Validate ProcessingCluster Event processingcluster_logevent_processingclusterEntitySummaryState Topic Size
 	[Documentation]    Validate the processingcluster_logevent_processingclusterEntitySummaryState topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -8887,7 +8864,7 @@ Validate Processingcluster Event processingcluster_logevent_processingclusterEnt
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Processingcluster Event processingcluster_logevent_processingclusterEntityStartup Topic Size
+Validate ProcessingCluster Event processingcluster_logevent_processingclusterEntityStartup Topic Size
 	[Documentation]    Validate the processingcluster_logevent_processingclusterEntityStartup topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -8910,7 +8887,7 @@ Validate Processingcluster Event processingcluster_logevent_processingclusterEnt
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Processingcluster Event processingcluster_logevent_processingclusterEntityShutdown Topic Size
+Validate ProcessingCluster Event processingcluster_logevent_processingclusterEntityShutdown Topic Size
 	[Documentation]    Validate the processingcluster_logevent_processingclusterEntityShutdown topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -8933,7 +8910,7 @@ Validate Processingcluster Event processingcluster_logevent_processingclusterEnt
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Processingcluster Telemetry processingcluster_SequencerHeartbeat Topic Size
+Validate ProcessingCluster Telemetry processingcluster_SequencerHeartbeat Topic Size
 	[Documentation]    Validate the processingcluster_SequencerHeartbeat topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -10313,7 +10290,7 @@ Validate Sequencer Telemetry sequencer_SequencerHeartbeat Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Summitfacility Command summitFacility_command_Enable Topic Size
+Validate SummitFacility Command summitFacility_command_Enable Topic Size
 	[Documentation]    Validate the summitFacility_command_Enable topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -10336,7 +10313,7 @@ Validate Summitfacility Command summitFacility_command_Enable Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Summitfacility Command summitFacility_command_ExitControl Topic Size
+Validate SummitFacility Command summitFacility_command_ExitControl Topic Size
 	[Documentation]    Validate the summitFacility_command_ExitControl topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -10359,7 +10336,7 @@ Validate Summitfacility Command summitFacility_command_ExitControl Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Summitfacility Command summitFacility_command_Start Topic Size
+Validate SummitFacility Command summitFacility_command_Start Topic Size
 	[Documentation]    Validate the summitFacility_command_Start topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -10382,7 +10359,7 @@ Validate Summitfacility Command summitFacility_command_Start Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Summitfacility Command summitFacility_command_EnterControl Topic Size
+Validate SummitFacility Command summitFacility_command_EnterControl Topic Size
 	[Documentation]    Validate the summitFacility_command_EnterControl topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -10405,7 +10382,7 @@ Validate Summitfacility Command summitFacility_command_EnterControl Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Summitfacility Command summitFacility_command_Standby Topic Size
+Validate SummitFacility Command summitFacility_command_Standby Topic Size
 	[Documentation]    Validate the summitFacility_command_Standby topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -10428,7 +10405,7 @@ Validate Summitfacility Command summitFacility_command_Standby Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Summitfacility Command summitFacility_command_Disable Topic Size
+Validate SummitFacility Command summitFacility_command_Disable Topic Size
 	[Documentation]    Validate the summitFacility_command_Disable topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -10451,7 +10428,7 @@ Validate Summitfacility Command summitFacility_command_Disable Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Summitfacility Event summitFacility_logevent_AppliedSettingsMatchStart Topic Size
+Validate SummitFacility Event summitFacility_logevent_AppliedSettingsMatchStart Topic Size
 	[Documentation]    Validate the summitFacility_logevent_AppliedSettingsMatchStart topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -10474,7 +10451,7 @@ Validate Summitfacility Event summitFacility_logevent_AppliedSettingsMatchStart 
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Summitfacility Event summitFacility_logevent_SummaryState Topic Size
+Validate SummitFacility Event summitFacility_logevent_SummaryState Topic Size
 	[Documentation]    Validate the summitFacility_logevent_SummaryState topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -10497,7 +10474,7 @@ Validate Summitfacility Event summitFacility_logevent_SummaryState Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Summitfacility Event summitFacility_logevent_ErrorCode Topic Size
+Validate SummitFacility Event summitFacility_logevent_ErrorCode Topic Size
 	[Documentation]    Validate the summitFacility_logevent_ErrorCode topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -10520,7 +10497,7 @@ Validate Summitfacility Event summitFacility_logevent_ErrorCode Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Summitfacility Event summitFacility_logevent_SettingVersions Topic Size
+Validate SummitFacility Event summitFacility_logevent_SettingVersions Topic Size
 	[Documentation]    Validate the summitFacility_logevent_SettingVersions topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -10543,7 +10520,7 @@ Validate Summitfacility Event summitFacility_logevent_SettingVersions Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate Summitfacility Telemetry summitFacility_ServerStatus Topic Size
+Validate SummitFacility Telemetry summitFacility_ServerStatus Topic Size
 	[Documentation]    Validate the summitFacility_ServerStatus topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}

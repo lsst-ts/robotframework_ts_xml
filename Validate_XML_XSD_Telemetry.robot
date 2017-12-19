@@ -14,7 +14,7 @@ Validate Archiver Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   archiver_Telemetry.xml - valid
 
-Validate Calibrationelectrometer Telemetry XML file
+Validate CalibrationElectrometer Telemetry XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Telemetry.xml
 	Log    ${output}
@@ -26,7 +26,7 @@ Validate Camera Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   camera_Telemetry.xml - valid
 
-Validate Catchuparchiver Telemetry XML file
+Validate CatchupArchiver Telemetry XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Telemetry.xml
 	Log    ${output}
@@ -122,7 +122,7 @@ Validate OCS Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   ocs_Telemetry.xml - valid
 
-Validate Processingcluster Telemetry XML file
+Validate ProcessingCluster Telemetry XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/processingcluster/processingcluster_Telemetry.xml
 	Log    ${output}
@@ -146,7 +146,7 @@ Validate Sequencer Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   sequencer_Telemetry.xml - valid
 
-Validate Summitfacility Telemetry XML file
+Validate SummitFacility Telemetry XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/summitFacility/summitFacility_Telemetry.xml
 	Log    ${output}

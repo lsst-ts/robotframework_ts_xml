@@ -8,7 +8,7 @@ Resource    Global_Vars.robot
 ${xml}    xml
 
 *** Test Cases ***
-Validate Calibrationelectrometer Commands XML file
+Validate CalibrationElectrometer Commands XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Commands.xml
 	Log    ${output}
@@ -116,7 +116,7 @@ Validate Sequencer Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   sequencer_Commands.xml - valid
 
-Validate Summitfacility Commands XML file
+Validate SummitFacility Commands XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/summitFacility/summitFacility_Commands.xml
 	Log    ${output}

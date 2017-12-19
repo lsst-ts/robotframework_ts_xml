@@ -19,6 +19,14 @@ def CapitalizeSubsystem( subsystem ):
 	"""Certain CSC abbreviations are capitalized in non-standard ways. This function correctly handles that capitalization."""
 	if re.match("^dome\S+", subsystem):
 		return subsystem[0].upper() + subsystem[1:]
+	elif subsystem == "catchuparchiver":
+		return "CatchupArchiver"
+	elif subsystem == "processingcluster":
+		return "ProcessingCluster"
+	elif subsystem == "summitFacility":
+		return "SummitFacility"
+	elif subsystem == "calibrationElectrometer":
+		return "CalibrationElectrometer"
 	elif subsystem == "dmHeaderService":
 		return "DMHeaderService"
 	elif subsystem == "eec":
