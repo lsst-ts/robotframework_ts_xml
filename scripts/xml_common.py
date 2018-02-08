@@ -8,7 +8,7 @@ import re
 # Variables
 # =========
 """Defines the array of Commandable SAL Components, or CSCs."""
-subsystems = ['archiver', 'calibrationElectrometer', 'camera', 'catchuparchiver', 'dmHeaderService', 'dome', 'domeADB', 'domeAPS', 'domeLouvers', 'domeLWS', 'domeMONCS', 'domeTHCS', 'eec', 'environment', 'hexapod', 'm1m3', 'm2ms', 'MTMount', 'ocs', 'processingcluster', 'rotator', 'scheduler', 'sequencer', 'summitFacility', 'tcs']
+subsystems = ['archiver', 'calibrationElectrometer', 'camera', 'catchuparchiver', 'dmHeaderService', 'dome', 'domeADB', 'domeAPS', 'domeLouvers', 'domeLWS', 'domeMONCS', 'domeTHCS', 'eec', 'environment', 'hexapod', 'm1m3', 'm2ms', 'MTMount', 'ocs', 'processingcluster', 'rotator', 'scheduler', 'sequencer', 'summitFacility', 'tcs', 'tcsAOS', 'tcsWEP']
 
 
 # =========
@@ -41,6 +41,10 @@ def CapitalizeSubsystem( subsystem ):
 		return "TCS"
 	elif subsystem == "ocs":
 		return "OCS"
+	elif subsystem == "tcsAOS":
+		return "TCSAOS"
+	elif subsystem == "tcsWEP":
+		return "TCSWEP"
 	else:
 		return subsystem.capitalize()
 
