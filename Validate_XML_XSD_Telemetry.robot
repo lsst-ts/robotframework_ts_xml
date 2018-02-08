@@ -158,3 +158,21 @@ Validate TCS Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   tcs_Telemetry.xml - valid
 
+Validate Tcsaocs Telemetry XML file
+	[Tags]    smoke
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/tcsAOCS/tcsAOCS_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   tcsAOCS_Telemetry.xml - valid
+
+Validate TCSWEP Telemetry XML file
+	[Tags]    smoke
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/tcsWEP/tcsWEP_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   tcsWEP_Telemetry.xml - valid
+
+Validate Vms Telemetry XML file
+	[Tags]    smoke
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/vms/vms_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   vms_Telemetry.xml - valid
+

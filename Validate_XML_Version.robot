@@ -552,3 +552,19 @@ Validate TCS Telemetry Version
 	${version}=    Set Variable    3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.5.0\n3.5.0
 	Should Match    ${output}    ${version}
 
+Validate TCSWEP Events Version
+	[Documentation]    Validate the TCSWEP Events version.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	Log    ${output}
+	${version}=    Set Variable    
+	Should Match    ${output}    ${version}
+
+Validate TCSWEP Telemetry Version
+	[Documentation]    Validate the TCSWEP Telemetry version.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Telemetry.xml
+	Log    ${output}
+	${version}=    Set Variable    
+	Should Match    ${output}    ${version}
+

@@ -484,3 +484,17 @@ Validate TCS Telemetry
 	Log    ${output}
 	Should Contain    ${output}   tcs_Telemetry.xml - valid
 
+Validate TCSWEP Events
+	[Documentation]    Validate the TCSWEP Events XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   tcsWEP_Events.xml - valid
+
+Validate TCSWEP Telemetry
+	[Documentation]    Validate the TCSWEP Telemetry XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/tcsWEP/tcsWEP_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   tcsWEP_Telemetry.xml - valid
+

@@ -551,3 +551,19 @@ Validate TCS Telemetry XML Counts
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
+Validate TCSWEP Events XML Counts
+	[Documentation]    Validate the TCSWEP Events XML count.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
+Validate TCSWEP Telemetry XML Counts
+	[Documentation]    Validate the TCSWEP Telemetry XML count.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
