@@ -484,6 +484,27 @@ Validate TCS Telemetry
 	Log    ${output}
 	Should Contain    ${output}   tcs_Telemetry.xml - valid
 
+Validate TCSAOCS Commands
+	[Documentation]    Validate the TCSAOCS Commands XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/tcsAOCS/tcsAOCS_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   tcsAOCS_Commands.xml - valid
+
+Validate TCSAOCS Events
+	[Documentation]    Validate the TCSAOCS Events XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/tcsAOCS/tcsAOCS_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   tcsAOCS_Events.xml - valid
+
+Validate TCSAOCS Telemetry
+	[Documentation]    Validate the TCSAOCS Telemetry XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/tcsAOCS/tcsAOCS_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   tcsAOCS_Telemetry.xml - valid
+
 Validate TCSWEP Events
 	[Documentation]    Validate the TCSWEP Events XML file.
 	[Tags]    smoke
@@ -497,4 +518,25 @@ Validate TCSWEP Telemetry
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/tcsWEP/tcsWEP_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   tcsWEP_Telemetry.xml - valid
+
+Validate VMS Commands
+	[Documentation]    Validate the VMS Commands XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/vms/vms_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   vms_Commands.xml - valid
+
+Validate VMS Events
+	[Documentation]    Validate the VMS Events XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/vms/vms_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   vms_Events.xml - valid
+
+Validate VMS Telemetry
+	[Documentation]    Validate the VMS Telemetry XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/vms/vms_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   vms_Telemetry.xml - valid
 

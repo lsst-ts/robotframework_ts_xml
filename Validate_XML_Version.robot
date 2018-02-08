@@ -552,6 +552,30 @@ Validate TCS Telemetry Version
 	${version}=    Set Variable    3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.5.0\n3.5.0
 	Should Match    ${output}    ${version}
 
+Validate TCSAOCS Commands Version
+	[Documentation]    Validate the TCSAOCS Commands version.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Version" -v . -n ${folder}/sal_interfaces/tcsAOCS/tcsAOCS_Commands.xml
+	Log    ${output}
+	${version}=    Set Variable    
+	Should Match    ${output}    ${version}
+
+Validate TCSAOCS Events Version
+	[Documentation]    Validate the TCSAOCS Events version.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/tcsAOCS/tcsAOCS_Events.xml
+	Log    ${output}
+	${version}=    Set Variable    
+	Should Match    ${output}    ${version}
+
+Validate TCSAOCS Telemetry Version
+	[Documentation]    Validate the TCSAOCS Telemetry version.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/tcsAOCS/tcsAOCS_Telemetry.xml
+	Log    ${output}
+	${version}=    Set Variable    
+	Should Match    ${output}    ${version}
+
 Validate TCSWEP Events Version
 	[Documentation]    Validate the TCSWEP Events version.
 	[Tags]    smoke
@@ -564,6 +588,30 @@ Validate TCSWEP Telemetry Version
 	[Documentation]    Validate the TCSWEP Telemetry version.
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Telemetry.xml
+	Log    ${output}
+	${version}=    Set Variable    
+	Should Match    ${output}    ${version}
+
+Validate VMS Commands Version
+	[Documentation]    Validate the VMS Commands version.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Version" -v . -n ${folder}/sal_interfaces/vms/vms_Commands.xml
+	Log    ${output}
+	${version}=    Set Variable    
+	Should Match    ${output}    ${version}
+
+Validate VMS Events Version
+	[Documentation]    Validate the VMS Events version.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/vms/vms_Events.xml
+	Log    ${output}
+	${version}=    Set Variable    
+	Should Match    ${output}    ${version}
+
+Validate VMS Telemetry Version
+	[Documentation]    Validate the VMS Telemetry version.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/vms/vms_Telemetry.xml
 	Log    ${output}
 	${version}=    Set Variable    
 	Should Match    ${output}    ${version}
