@@ -12,3 +12,4 @@ rbtxml/Validate_XML_Count.robot
 rbtxml/Validate_XML_NoSpaces.robot
 rbtxml/Validate_XML_Topic_Size.robot
 rbtxml/Validate_XML_IDLTypes.robot
+rbtxml/Validate_XML_ReservedWords.robot
