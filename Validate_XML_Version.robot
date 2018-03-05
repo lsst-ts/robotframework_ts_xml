@@ -37,7 +37,7 @@ Validate CalibrationElectrometer Events Version
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
 	Log    ${output}
-	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1
+	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1
 	Should Match    ${output}    ${version}
 
 Validate CalibrationElectrometer Telemetry Version
@@ -341,7 +341,7 @@ Validate M1M3 Commands Version
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Version" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
 	Log    ${output}
-	${version}=    Set Variable    3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0
+	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1
 	Should Match    ${output}    ${version}
 
 Validate M1M3 Events Version
@@ -349,7 +349,7 @@ Validate M1M3 Events Version
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
 	Log    ${output}
-	${version}=    Set Variable    3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0
+	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1
 	Should Match    ${output}    ${version}
 
 Validate M1M3 Telemetry Version
@@ -357,7 +357,7 @@ Validate M1M3 Telemetry Version
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Telemetry.xml
 	Log    ${output}
-	${version}=    Set Variable    3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0\n3.6.0
+	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1
 	Should Match    ${output}    ${version}
 
 Validate M2MS Commands Version
