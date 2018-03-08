@@ -317,7 +317,7 @@ Validate Hexapod Commands Version
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Version" -v . -n ${folder}/sal_interfaces/hexapod/hexapod_Commands.xml
 	Log    ${output}
-	${version}=    Set Variable    3.1.0\n3.1.0\n3.1.0\n3.1.0\n3.1.0\n3.1.0\n3.1.0\n3.1.0
+	${version}=    Set Variable    3.3.0\n3.3.0\n3.3.0\n3.3.0\n3.3.0\n3.3.0\n3.3.0\n3.3.0\n3.3.0\n3.3.0\n3.3.0\n3.3.0
 	Should Match    ${output}    ${version}
 
 Validate Hexapod Events Version
@@ -325,7 +325,7 @@ Validate Hexapod Events Version
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/hexapod/hexapod_Events.xml
 	Log    ${output}
-	${version}=    Set Variable    3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0
+	${version}=    Set Variable    3.3.0\n3.3.0\n3.3.0\n3.3.0\n3.3.0\n3.3.0\n3.3.0\n3.3.0
 	Should Match    ${output}    ${version}
 
 Validate Hexapod Telemetry Version
@@ -469,7 +469,7 @@ Validate Rotator Telemetry Version
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/rotator/rotator_Telemetry.xml
 	Log    ${output}
-	${version}=    Set Variable    3.2.0\n3.2.0\n3.2.0\n3.2.0
+	${version}=    Set Variable    3.3.0\n3.3.0\n3.3.0\n3.3.0\n3.3.0\n3.3.0
 	Should Match    ${output}    ${version}
 
 Validate Scheduler Telemetry Version
