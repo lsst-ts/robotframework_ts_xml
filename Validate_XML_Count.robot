@@ -1,5 +1,6 @@
 *** Settings ***
-Documentation    Validate the subsystem XML definition files contain a count value.nTest Setup    Run Keyword If    "${ContInt}"=="true"    Set Suite Variable    ${xml}    xmlstarlet
+Documentation    Validate the subsystem XML definition files contain a count value.
+Test Setup    Run Keyword If    "${ContInt}"=="true"    Set Suite Variable    ${xml}    xmlstarlet
 Library    OperatingSystem
 Resource    Global_Vars.robot
 
@@ -571,6 +572,14 @@ Validate TCSAOCS Telemetry XML Counts
 	[Documentation]    Validate the TCSAOCS Telemetry XML count.
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/tcsAOCS/tcsAOCS_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
+Validate TCSWEP Commands XML Counts
+	[Documentation]    Validate the TCSWEP Commands XML count.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
