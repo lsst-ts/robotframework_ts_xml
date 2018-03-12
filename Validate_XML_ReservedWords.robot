@@ -1129,22 +1129,6 @@ Validate TCSAOCS Telemetry EFDB_Name Values Do Not Use MySQL Reserved Words
 	Log    ${output}
 	Should Not Contain MySQL Reserved Word    ${output}
 
-Validate TCSWEP Commands EFDB_Name Values Do Not Use IDL Reserved words
-	[Documentation]    Validate the TCSWEP Commands <EFDB_Name> tags do not contain IDL Reserved Words.
-	[Tags]    smoke
-	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain IDL Reserved Word    ${output}
-
-Validate TCSWEP Commands EFDB_Name Values Do Not Use MySQL Reserved Words
-	[Documentation]    Validate the TCSWEP Commands <EFDB_Name> tags do not contain MySQL Reserved Words.
-	[Tags]    smoke
-	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain MySQL Reserved Word    ${output}
-
 Validate TCSWEP Events EFDB_Name Values Do Not Use IDL Reserved words
 	[Documentation]    Validate the TCSWEP Events <EFDB_Name> tags do not contain IDL Reserved Words.
 	[Tags]    smoke
