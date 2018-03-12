@@ -25,14 +25,14 @@ for topictype in ["Commands", "Events", "Telemetry"]:
 	# Create Test Case table.
 	file.write("*** Test Cases ***\n")
 	# Determine which subsystems have the appropriate XML definition file.
-	xmls = glob.glob("/Users/rbovill/trunk/ts_xml/sal_interfaces/*/*_" + topictype + ".xml")
-	for xml in xmls:
-		# Get the message type, i.e. Telemetry, Events, Commands.
-		subsystem = xml.split('/')[6]
-		# Create the Test Cases.
-		file.write("Validate " + xml_common.CapitalizeSubsystem(subsystem) + " " + topictype + " XML file\n")
-		file.write("\t[Tags]    smoke\n")
-		file.write("\t${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SAL" + topictype.rstrip("s") + "Set.xsd ${folder}/sal_interfaces/" + subsystem + "/" + subsystem + "_" + topictype + ".xml\n")
-		file.write("\tLog    ${output}\n")
-		file.write("\tShould Contain    ${output}   " + subsystem + "_" + topictype + ".xml - valid\n")
-		file.write("\n")
+	for subsystem in xml_common.subsystems:
+		# Get the list of XMLs for each CSC, to include Telemetry, Events and Commands.
+		xmls = glob.glob("/Users/rbovill/trunk/ts_xml/sal_interfaces/" + subsystem + "/" + subsystem + "_" + topictype + "*")
+		for xml in xmls:
+			# Create the Test Cases.
+			file.write("Validate " + xml_common.CapitalizeSubsystem(subsystem) + " " + topictype + " XML file\n")
+			file.write("\t[Tags]    smoke\n")
+			file.write("\t${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SAL" + topictype.rstrip("s") + "Set.xsd ${folder}/sal_interfaces/" + subsystem + "/" + subsystem + "_" + topictype + ".xml\n")
+			file.write("\tLog    ${output}\n")
+			file.write("\tShould Contain    ${output}   " + subsystem + "_" + topictype + ".xml - valid\n")
+			file.write("\n")
