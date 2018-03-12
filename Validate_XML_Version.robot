@@ -304,14 +304,6 @@ Validate EEC Telemetry Version
 	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1
 	Should Match    ${output}    ${version}
 
-Validate Environment Telemetry Version
-	[Documentation]    Validate the Environment Telemetry version.
-	[Tags]    smoke
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/environment/environment_Telemetry.xml
-	Log    ${output}
-	${version}=    Set Variable    3.5
-	Should Match    ${output}    ${version}
-
 Validate Hexapod Commands Version
 	[Documentation]    Validate the Hexapod Commands version.
 	[Tags]    smoke
