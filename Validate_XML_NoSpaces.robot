@@ -456,34 +456,6 @@ Validate EEC Telemetry <EFDB_Name> element
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate Environment Telemetry <Subsystem> element
-	[Documentation]    Validate the Environment Telemetry <Subsystem> elements do not contain embedded spaces.
-	[Tags]    smoke
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Subsystem" -v . -n ${folder}/sal_interfaces/environment/environment_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate Environment Telemetry <EFDB_Topic> element
-	[Documentation]    Validate the Environment Telemetry <EFDB_Topic> elements do not contain embedded spaces.
-	[Tags]    smoke
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/EFDB_Topic" -v . -n ${folder}/sal_interfaces/environment/environment_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate Environment Telemetry <Alias> element
-	[Documentation]    Validate the Environment Telemetry <Alias> elements do not contain embedded spaces.
-	[Tags]    smoke
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/environment/environment_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate Environment Telemetry <EFDB_Name> element
-	[Documentation]    Validate the Environment Telemetry <EFDB_Name> elements do not contain embedded spaces.
-	[Tags]    smoke
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/environment/environment_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
 Validate Hexapod Commands <Subsystem> element
 	[Documentation]    Validate the Hexapod Commands <Subsystem> elements do not contain embedded spaces.
 	[Tags]    smoke
