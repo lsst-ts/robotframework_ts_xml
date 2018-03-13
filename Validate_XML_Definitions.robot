@@ -8,6 +8,13 @@ Resource    Global_Vars.robot
 ${xml}    xml
 
 *** Test Cases ***
+Validate Archiver Commands
+	[Documentation]    Validate the Archiver Commands XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/archiver/archiver_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   archiver_Commands.xml - valid
+
 Validate Archiver Events
 	[Documentation]    Validate the Archiver Events XML file.
 	[Tags]    smoke
@@ -63,6 +70,13 @@ Validate Camera Telemetry
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/camera/camera_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   camera_Telemetry.xml - valid
+
+Validate CatchupArchiver Commands
+	[Documentation]    Validate the CatchupArchiver Commands XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   catchuparchiver_Commands.xml - valid
 
 Validate CatchupArchiver Events
 	[Documentation]    Validate the CatchupArchiver Events XML file.
@@ -379,19 +393,26 @@ Validate OCS Telemetry
 	Log    ${output}
 	Should Contain    ${output}   ocs_Telemetry.xml - valid
 
-Validate ProcessingCluster Events
-	[Documentation]    Validate the ProcessingCluster Events XML file.
+Validate PromptProcessing Commands
+	[Documentation]    Validate the PromptProcessing Commands XML file.
 	[Tags]    smoke
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/processingcluster/processingcluster_Events.xml
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/promptprocessing/promptprocessing_Commands.xml
 	Log    ${output}
-	Should Contain    ${output}   processingcluster_Events.xml - valid
+	Should Contain    ${output}   promptprocessing_Commands.xml - valid
 
-Validate ProcessingCluster Telemetry
-	[Documentation]    Validate the ProcessingCluster Telemetry XML file.
+Validate PromptProcessing Events
+	[Documentation]    Validate the PromptProcessing Events XML file.
 	[Tags]    smoke
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/processingcluster/processingcluster_Telemetry.xml
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/promptprocessing/promptprocessing_Events.xml
 	Log    ${output}
-	Should Contain    ${output}   processingcluster_Telemetry.xml - valid
+	Should Contain    ${output}   promptprocessing_Events.xml - valid
+
+Validate PromptProcessing Telemetry
+	[Documentation]    Validate the PromptProcessing Telemetry XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/promptprocessing/promptprocessing_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   promptprocessing_Telemetry.xml - valid
 
 Validate Rotator Commands
 	[Documentation]    Validate the Rotator Commands XML file.

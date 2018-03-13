@@ -8,6 +8,12 @@ Resource    Global_Vars.robot
 ${xml}    xml
 
 *** Test Cases ***
+Validate Archiver Commands XML file
+	[Tags]    smoke
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/archiver/archiver_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   archiver_Commands.xml - valid
+
 Validate CalibrationElectrometer Commands XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Commands.xml
@@ -19,6 +25,12 @@ Validate Camera Commands XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/camera/camera_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   camera_Commands.xml - valid
+
+Validate CatchupArchiver Commands XML file
+	[Tags]    smoke
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   catchuparchiver_Commands.xml - valid
 
 Validate DMHeaderService Commands XML file
 	[Tags]    smoke
@@ -103,6 +115,12 @@ Validate OCS Commands XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/ocs/ocs_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   ocs_Commands.xml - valid
+
+Validate PromptProcessing Commands XML file
+	[Tags]    smoke
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/promptprocessing/promptprocessing_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   promptprocessing_Commands.xml - valid
 
 Validate Rotator Commands XML file
 	[Tags]    smoke

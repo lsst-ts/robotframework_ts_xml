@@ -8,7 +8,7 @@ import re
 # Variables
 # =========
 """Defines the array of Commandable SAL Components, or CSCs."""
-subsystems = ['archiver', 'calibrationElectrometer', 'camera', 'catchuparchiver', 'dmHeaderService', 'dome', 'domeADB', 'domeAPS', 'domeLouvers', 'domeLWS', 'domeMONCS', 'domeTHCS', 'eec', 'environment', 'hexapod', 'm1m3', 'm2ms', 'MTMount', 'ocs', 'processingcluster', 'rotator', 'scheduler', 'sequencer', 'summitFacility', 'tcs', 'tcsAOCS', 'tcsWEP', 'vms']
+subsystems = ['archiver', 'calibrationElectrometer', 'camera', 'catchuparchiver', 'dmHeaderService', 'dome', 'domeADB', 'domeAPS', 'domeLouvers', 'domeLWS', 'domeMONCS', 'domeTHCS', 'eec', 'environment', 'hexapod', 'm1m3', 'm2ms', 'MTMount', 'ocs', 'promptprocessing', 'rotator', 'scheduler', 'sequencer', 'summitFacility', 'tcs', 'tcsAOCS', 'tcsWEP', 'vms']
 
 
 # =========
@@ -21,8 +21,8 @@ def CapitalizeSubsystem( subsystem ):
 		return subsystem[0].upper() + subsystem[1:]
 	elif subsystem == "catchuparchiver":
 		return "CatchupArchiver"
-	elif subsystem == "processingcluster":
-		return "ProcessingCluster"
+	elif subsystem == "promptprocessing":
+		return "PromptProcessing"
 	elif subsystem == "summitFacility":
 		return "SummitFacility"
 	elif subsystem == "calibrationElectrometer":

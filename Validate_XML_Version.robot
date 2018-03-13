@@ -8,12 +8,20 @@ Resource    Global_Vars.robot
 ${xml}    xml
 
 *** Test Cases ***
+Validate Archiver Commands Version
+	[Documentation]    Validate the Archiver Commands version.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Version" -v . -n ${folder}/sal_interfaces/archiver/archiver_Commands.xml
+	Log    ${output}
+	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1
+	Should Match    ${output}    ${version}
+
 Validate Archiver Events Version
 	[Documentation]    Validate the Archiver Events version.
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/archiver/archiver_Events.xml
 	Log    ${output}
-	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1
+	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1
 	Should Match    ${output}    ${version}
 
 Validate Archiver Telemetry Version
@@ -72,12 +80,20 @@ Validate Camera Telemetry Version
 	${version}=    Set Variable    3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0
 	Should Match    ${output}    ${version}
 
+Validate CatchupArchiver Commands Version
+	[Documentation]    Validate the CatchupArchiver Commands version.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Version" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	Log    ${output}
+	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1
+	Should Match    ${output}    ${version}
+
 Validate CatchupArchiver Events Version
 	[Documentation]    Validate the CatchupArchiver Events version.
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
 	Log    ${output}
-	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1
+	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1
 	Should Match    ${output}    ${version}
 
 Validate CatchupArchiver Telemetry Version
@@ -432,18 +448,26 @@ Validate OCS Telemetry Version
 	${version}=    Set Variable    3.2.1
 	Should Match    ${output}    ${version}
 
-Validate ProcessingCluster Events Version
-	[Documentation]    Validate the ProcessingCluster Events version.
+Validate PromptProcessing Commands Version
+	[Documentation]    Validate the PromptProcessing Commands version.
 	[Tags]    smoke
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/processingcluster/processingcluster_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Version" -v . -n ${folder}/sal_interfaces/promptprocessing/promptprocessing_Commands.xml
 	Log    ${output}
-	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1
+	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1
 	Should Match    ${output}    ${version}
 
-Validate ProcessingCluster Telemetry Version
-	[Documentation]    Validate the ProcessingCluster Telemetry version.
+Validate PromptProcessing Events Version
+	[Documentation]    Validate the PromptProcessing Events version.
 	[Tags]    smoke
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/processingcluster/processingcluster_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/promptprocessing/promptprocessing_Events.xml
+	Log    ${output}
+	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1
+	Should Match    ${output}    ${version}
+
+Validate PromptProcessing Telemetry Version
+	[Documentation]    Validate the PromptProcessing Telemetry version.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/promptprocessing/promptprocessing_Telemetry.xml
 	Log    ${output}
 	${version}=    Set Variable    3.5.1
 	Should Match    ${output}    ${version}

@@ -116,11 +116,11 @@ Validate OCS Events XML file
 	Log    ${output}
 	Should Contain    ${output}   ocs_Events.xml - valid
 
-Validate ProcessingCluster Events XML file
+Validate PromptProcessing Events XML file
 	[Tags]    smoke
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/processingcluster/processingcluster_Events.xml
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/promptprocessing/promptprocessing_Events.xml
 	Log    ${output}
-	Should Contain    ${output}   processingcluster_Events.xml - valid
+	Should Contain    ${output}   promptprocessing_Events.xml - valid
 
 Validate Rotator Events XML file
 	[Tags]    smoke
