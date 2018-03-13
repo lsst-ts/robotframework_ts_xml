@@ -9,7 +9,7 @@ file = open("../Validate_XML_Count.robot","w")
 
 # Create Settings header.
 file.write("*** Settings ***\n")
-file.write("Documentation    Validate the subsystem XML definition files contain a count value.n")
+file.write("Documentation    Validate the subsystem XML definition files contain a count value.\n")
 file.write("Test Setup    Run Keyword If    \"${ContInt}\"==\"true\"    Set Suite Variable    ${xml}    xmlstarlet\n")
 file.write("Library    OperatingSystem\n")
 file.write("Resource    Global_Vars.robot\n")

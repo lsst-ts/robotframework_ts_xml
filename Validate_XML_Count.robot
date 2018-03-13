@@ -1,5 +1,6 @@
 *** Settings ***
-Documentation    Validate the subsystem XML definition files contain a count value.nTest Setup    Run Keyword If    "${ContInt}"=="true"    Set Suite Variable    ${xml}    xmlstarlet
+Documentation    Validate the subsystem XML definition files contain a count value.
+Test Setup    Run Keyword If    "${ContInt}"=="true"    Set Suite Variable    ${xml}    xmlstarlet
 Library    OperatingSystem
 Resource    Global_Vars.robot
 
@@ -315,14 +316,6 @@ Validate EEC Telemetry XML Counts
 	[Documentation]    Validate the EEC Telemetry XML count.
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/eec/eec_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
-Validate Environment Telemetry XML Counts
-	[Documentation]    Validate the Environment Telemetry XML count.
-	[Tags]    smoke
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/environment/environment_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,

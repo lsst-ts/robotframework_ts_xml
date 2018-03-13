@@ -86,12 +86,6 @@ Validate EEC Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   eec_Telemetry.xml - valid
 
-Validate Environment Telemetry XML file
-	[Tags]    smoke
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/environment/environment_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   environment_Telemetry.xml - valid
-
 Validate Hexapod Telemetry XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/hexapod/hexapod_Telemetry.xml
