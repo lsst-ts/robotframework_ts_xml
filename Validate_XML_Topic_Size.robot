@@ -7323,8 +7323,8 @@ Validate M1M3 Command m1m3_command_ClearOffsetForces Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Command m1m3_command_ApplyAberrationByBendingModes Topic Size
-	[Documentation]    Validate the m1m3_command_ApplyAberrationByBendingModes topic is less than 65536 bytes in total.
+Validate M1M3 Command m1m3_command_ApplyAberrationForcesByBendingModes Topic Size
+	[Documentation]    Validate the m1m3_command_ApplyAberrationForcesByBendingModes topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7346,8 +7346,8 @@ Validate M1M3 Command m1m3_command_ApplyAberrationByBendingModes Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Command m1m3_command_ApplyAberrationByForces Topic Size
-	[Documentation]    Validate the m1m3_command_ApplyAberrationByForces topic is less than 65536 bytes in total.
+Validate M1M3 Command m1m3_command_ApplyAberrationForces Topic Size
+	[Documentation]    Validate the m1m3_command_ApplyAberrationForces topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7369,8 +7369,8 @@ Validate M1M3 Command m1m3_command_ApplyAberrationByForces Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Command m1m3_command_ClearAberration Topic Size
-	[Documentation]    Validate the m1m3_command_ClearAberration topic is less than 65536 bytes in total.
+Validate M1M3 Command m1m3_command_ClearAberrationForces Topic Size
+	[Documentation]    Validate the m1m3_command_ClearAberrationForces topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7392,8 +7392,8 @@ Validate M1M3 Command m1m3_command_ClearAberration Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Command m1m3_command_ApplyAOSCorrectionByBendingModes Topic Size
-	[Documentation]    Validate the m1m3_command_ApplyAOSCorrectionByBendingModes topic is less than 65536 bytes in total.
+Validate M1M3 Command m1m3_command_ApplyActiveOpticForcesByBendingModes Topic Size
+	[Documentation]    Validate the m1m3_command_ApplyActiveOpticForcesByBendingModes topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7415,8 +7415,8 @@ Validate M1M3 Command m1m3_command_ApplyAOSCorrectionByBendingModes Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Command m1m3_command_ApplyAOSCorrectionByForces Topic Size
-	[Documentation]    Validate the m1m3_command_ApplyAOSCorrectionByForces topic is less than 65536 bytes in total.
+Validate M1M3 Command m1m3_command_ApplyActiveOpticForces Topic Size
+	[Documentation]    Validate the m1m3_command_ApplyActiveOpticForces topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7438,8 +7438,8 @@ Validate M1M3 Command m1m3_command_ApplyAOSCorrectionByForces Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Command m1m3_command_ClearAOSCorrection Topic Size
-	[Documentation]    Validate the m1m3_command_ClearAOSCorrection topic is less than 65536 bytes in total.
+Validate M1M3 Command m1m3_command_ClearActiveOpticForces Topic Size
+	[Documentation]    Validate the m1m3_command_ClearActiveOpticForces topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7576,8 +7576,8 @@ Validate M1M3 Command m1m3_command_TurnPowerOff Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Command m1m3_command_UncontrolledLowerM1M3 Topic Size
-	[Documentation]    Validate the m1m3_command_UncontrolledLowerM1M3 topic is less than 65536 bytes in total.
+Validate M1M3 Command m1m3_command_EnableHardpointCorrections Topic Size
+	[Documentation]    Validate the m1m3_command_EnableHardpointCorrections topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7599,8 +7599,8 @@ Validate M1M3 Command m1m3_command_UncontrolledLowerM1M3 Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Command m1m3_command_EnableHardpointCorrections Topic Size
-	[Documentation]    Validate the m1m3_command_EnableHardpointCorrections topic is less than 65536 bytes in total.
+Validate M1M3 Command m1m3_command_DisableHardpointCorrections Topic Size
+	[Documentation]    Validate the m1m3_command_DisableHardpointCorrections topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7622,8 +7622,8 @@ Validate M1M3 Command m1m3_command_EnableHardpointCorrections Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Command m1m3_command_DisableHardpointCorrections Topic Size
-	[Documentation]    Validate the m1m3_command_DisableHardpointCorrections topic is less than 65536 bytes in total.
+Validate M1M3 Command m1m3_command_RunMirrorForceProfile Topic Size
+	[Documentation]    Validate the m1m3_command_RunMirrorForceProfile topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7645,8 +7645,8 @@ Validate M1M3 Command m1m3_command_DisableHardpointCorrections Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Command m1m3_command_RunHardpointCorrectionProfile Topic Size
-	[Documentation]    Validate the m1m3_command_RunHardpointCorrectionProfile topic is less than 65536 bytes in total.
+Validate M1M3 Command m1m3_command_AbortProfile Topic Size
+	[Documentation]    Validate the m1m3_command_AbortProfile topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7668,8 +7668,8 @@ Validate M1M3 Command m1m3_command_RunHardpointCorrectionProfile Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Command m1m3_command_AbortProfile Topic Size
-	[Documentation]    Validate the m1m3_command_AbortProfile topic is less than 65536 bytes in total.
+Validate M1M3 Command m1m3_command_ApplyOffsetForcesByMirrorForce Topic Size
+	[Documentation]    Validate the m1m3_command_ApplyOffsetForcesByMirrorForce topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7691,8 +7691,8 @@ Validate M1M3 Command m1m3_command_AbortProfile Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Command m1m3_command_ApplyOffsetForcesByMirrorForce Topic Size
-	[Documentation]    Validate the m1m3_command_ApplyOffsetForcesByMirrorForce topic is less than 65536 bytes in total.
+Validate M1M3 Command m1m3_command_UpdatePID Topic Size
+	[Documentation]    Validate the m1m3_command_UpdatePID topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7714,8 +7714,8 @@ Validate M1M3 Command m1m3_command_ApplyOffsetForcesByMirrorForce Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Command m1m3_command_UpdatePID Topic Size
-	[Documentation]    Validate the m1m3_command_UpdatePID topic is less than 65536 bytes in total.
+Validate M1M3 Command m1m3_command_ResetPID Topic Size
+	[Documentation]    Validate the m1m3_command_ResetPID topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7737,8 +7737,8 @@ Validate M1M3 Command m1m3_command_UpdatePID Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Command m1m3_command_ResetPID Topic Size
-	[Documentation]    Validate the m1m3_command_ResetPID topic is less than 65536 bytes in total.
+Validate M1M3 Command m1m3_command_SetThermalSetpoint Topic Size
+	[Documentation]    Validate the m1m3_command_SetThermalSetpoint topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7944,8 +7944,8 @@ Validate M1M3 Event m1m3_logevent_ForceActuatorInfo Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Event m1m3_logevent_HardpointActuatorMotionState Topic Size
-	[Documentation]    Validate the m1m3_logevent_HardpointActuatorMotionState topic is less than 65536 bytes in total.
+Validate M1M3 Event m1m3_logevent_ILCWarning Topic Size
+	[Documentation]    Validate the m1m3_logevent_ILCWarning topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7967,8 +7967,8 @@ Validate M1M3 Event m1m3_logevent_HardpointActuatorMotionState Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Event m1m3_logevent_ILCWarning Topic Size
-	[Documentation]    Validate the m1m3_logevent_ILCWarning topic is less than 65536 bytes in total.
+Validate M1M3 Event m1m3_logevent_InterlockWarning Topic Size
+	[Documentation]    Validate the m1m3_logevent_InterlockWarning topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7990,8 +7990,8 @@ Validate M1M3 Event m1m3_logevent_ILCWarning Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Event m1m3_logevent_InterlockWarning Topic Size
-	[Documentation]    Validate the m1m3_logevent_InterlockWarning topic is less than 65536 bytes in total.
+Validate M1M3 Event m1m3_logevent_AirSupplyStatus Topic Size
+	[Documentation]    Validate the m1m3_logevent_AirSupplyStatus topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8013,8 +8013,8 @@ Validate M1M3 Event m1m3_logevent_InterlockWarning Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Event m1m3_logevent_AirSupplyStatus Topic Size
-	[Documentation]    Validate the m1m3_logevent_AirSupplyStatus topic is less than 65536 bytes in total.
+Validate M1M3 Event m1m3_logevent_AirSupplyWarning Topic Size
+	[Documentation]    Validate the m1m3_logevent_AirSupplyWarning topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8036,8 +8036,8 @@ Validate M1M3 Event m1m3_logevent_AirSupplyStatus Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Event m1m3_logevent_AirSupplyWarning Topic Size
-	[Documentation]    Validate the m1m3_logevent_AirSupplyWarning topic is less than 65536 bytes in total.
+Validate M1M3 Event m1m3_logevent_InterlockStatus Topic Size
+	[Documentation]    Validate the m1m3_logevent_InterlockStatus topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8059,8 +8059,8 @@ Validate M1M3 Event m1m3_logevent_AirSupplyWarning Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Event m1m3_logevent_InterlockStatus Topic Size
-	[Documentation]    Validate the m1m3_logevent_InterlockStatus topic is less than 65536 bytes in total.
+Validate M1M3 Event m1m3_logevent_DisplacementSensorWarning Topic Size
+	[Documentation]    Validate the m1m3_logevent_DisplacementSensorWarning topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8082,8 +8082,8 @@ Validate M1M3 Event m1m3_logevent_InterlockStatus Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Event m1m3_logevent_DisplacementSensorWarning Topic Size
-	[Documentation]    Validate the m1m3_logevent_DisplacementSensorWarning topic is less than 65536 bytes in total.
+Validate M1M3 Event m1m3_logevent_InclinometerSensorWarning Topic Size
+	[Documentation]    Validate the m1m3_logevent_InclinometerSensorWarning topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8105,8 +8105,8 @@ Validate M1M3 Event m1m3_logevent_DisplacementSensorWarning Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Event m1m3_logevent_InclinometerSensorWarning Topic Size
-	[Documentation]    Validate the m1m3_logevent_InclinometerSensorWarning topic is less than 65536 bytes in total.
+Validate M1M3 Event m1m3_logevent_AccelerometerWarning Topic Size
+	[Documentation]    Validate the m1m3_logevent_AccelerometerWarning topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8128,8 +8128,8 @@ Validate M1M3 Event m1m3_logevent_InclinometerSensorWarning Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Event m1m3_logevent_AccelerometerWarning Topic Size
-	[Documentation]    Validate the m1m3_logevent_AccelerometerWarning topic is less than 65536 bytes in total.
+Validate M1M3 Event m1m3_logevent_ForceSetpointWarning Topic Size
+	[Documentation]    Validate the m1m3_logevent_ForceSetpointWarning topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8151,8 +8151,8 @@ Validate M1M3 Event m1m3_logevent_AccelerometerWarning Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Event m1m3_logevent_ForceActuatorSetpointWarning Topic Size
-	[Documentation]    Validate the m1m3_logevent_ForceActuatorSetpointWarning topic is less than 65536 bytes in total.
+Validate M1M3 Event m1m3_logevent_ForceActuatorState Topic Size
+	[Documentation]    Validate the m1m3_logevent_ForceActuatorState topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8174,8 +8174,8 @@ Validate M1M3 Event m1m3_logevent_ForceActuatorSetpointWarning Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Event m1m3_logevent_AppliedForces Topic Size
-	[Documentation]    Validate the m1m3_logevent_AppliedForces topic is less than 65536 bytes in total.
+Validate M1M3 Event m1m3_logevent_HardpointMonitorInfo Topic Size
+	[Documentation]    Validate the m1m3_logevent_HardpointMonitorInfo topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8197,8 +8197,8 @@ Validate M1M3 Event m1m3_logevent_AppliedForces Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Event m1m3_logevent_ForceActuatorDataRejection Topic Size
-	[Documentation]    Validate the m1m3_logevent_ForceActuatorDataRejection topic is less than 65536 bytes in total.
+Validate M1M3 Event m1m3_logevent_CellLightStatus Topic Size
+	[Documentation]    Validate the m1m3_logevent_CellLightStatus topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8220,8 +8220,8 @@ Validate M1M3 Event m1m3_logevent_ForceActuatorDataRejection Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Event m1m3_logevent_HardpointMonitorInfo Topic Size
-	[Documentation]    Validate the m1m3_logevent_HardpointMonitorInfo topic is less than 65536 bytes in total.
+Validate M1M3 Event m1m3_logevent_CellLightWarning Topic Size
+	[Documentation]    Validate the m1m3_logevent_CellLightWarning topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8243,8 +8243,8 @@ Validate M1M3 Event m1m3_logevent_HardpointMonitorInfo Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Event m1m3_logevent_CellLightStatus Topic Size
-	[Documentation]    Validate the m1m3_logevent_CellLightStatus topic is less than 65536 bytes in total.
+Validate M1M3 Event m1m3_logevent_PowerStatus Topic Size
+	[Documentation]    Validate the m1m3_logevent_PowerStatus topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8266,8 +8266,8 @@ Validate M1M3 Event m1m3_logevent_CellLightStatus Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Event m1m3_logevent_CellLightWarning Topic Size
-	[Documentation]    Validate the m1m3_logevent_CellLightWarning topic is less than 65536 bytes in total.
+Validate M1M3 Event m1m3_logevent_PowerWarning Topic Size
+	[Documentation]    Validate the m1m3_logevent_PowerWarning topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8289,8 +8289,8 @@ Validate M1M3 Event m1m3_logevent_CellLightWarning Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Event m1m3_logevent_PowerStatus Topic Size
-	[Documentation]    Validate the m1m3_logevent_PowerStatus topic is less than 65536 bytes in total.
+Validate M1M3 Event m1m3_logevent_ForceActuatorForceWarning Topic Size
+	[Documentation]    Validate the m1m3_logevent_ForceActuatorForceWarning topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8312,8 +8312,8 @@ Validate M1M3 Event m1m3_logevent_PowerStatus Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Event m1m3_logevent_PowerWarning Topic Size
-	[Documentation]    Validate the m1m3_logevent_PowerWarning topic is less than 65536 bytes in total.
+Validate M1M3 Event m1m3_logevent_GyroWarning Topic Size
+	[Documentation]    Validate the m1m3_logevent_GyroWarning topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8335,8 +8335,8 @@ Validate M1M3 Event m1m3_logevent_PowerWarning Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Event m1m3_logevent_ForceActuatorForceWarning Topic Size
-	[Documentation]    Validate the m1m3_logevent_ForceActuatorForceWarning topic is less than 65536 bytes in total.
+Validate M1M3 Event m1m3_logevent_PowerSupplyStatus Topic Size
+	[Documentation]    Validate the m1m3_logevent_PowerSupplyStatus topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8358,8 +8358,8 @@ Validate M1M3 Event m1m3_logevent_ForceActuatorForceWarning Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Event m1m3_logevent_GyroWarning Topic Size
-	[Documentation]    Validate the m1m3_logevent_GyroWarning topic is less than 65536 bytes in total.
+Validate M1M3 Event m1m3_logevent_AppliedOffsetForces Topic Size
+	[Documentation]    Validate the m1m3_logevent_AppliedOffsetForces topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8381,8 +8381,8 @@ Validate M1M3 Event m1m3_logevent_GyroWarning Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Event m1m3_logevent_PowerSupplyStatus Topic Size
-	[Documentation]    Validate the m1m3_logevent_PowerSupplyStatus topic is less than 65536 bytes in total.
+Validate M1M3 Event m1m3_logevent_AppliedStaticForces Topic Size
+	[Documentation]    Validate the m1m3_logevent_AppliedStaticForces topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8404,8 +8404,8 @@ Validate M1M3 Event m1m3_logevent_PowerSupplyStatus Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Event m1m3_logevent_AppliedOffsetForces Topic Size
-	[Documentation]    Validate the m1m3_logevent_AppliedOffsetForces topic is less than 65536 bytes in total.
+Validate M1M3 Event m1m3_logevent_AppliedActiveOpticForces Topic Size
+	[Documentation]    Validate the m1m3_logevent_AppliedActiveOpticForces topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8427,8 +8427,8 @@ Validate M1M3 Event m1m3_logevent_AppliedOffsetForces Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Event m1m3_logevent_AppliedStaticForces Topic Size
-	[Documentation]    Validate the m1m3_logevent_AppliedStaticForces topic is less than 65536 bytes in total.
+Validate M1M3 Event m1m3_logevent_AppliedAberrationForces Topic Size
+	[Documentation]    Validate the m1m3_logevent_AppliedAberrationForces topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8450,8 +8450,8 @@ Validate M1M3 Event m1m3_logevent_AppliedStaticForces Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Event m1m3_logevent_AppliedActiveOpticsForces Topic Size
-	[Documentation]    Validate the m1m3_logevent_AppliedActiveOpticsForces topic is less than 65536 bytes in total.
+Validate M1M3 Event m1m3_logevent_AppliedAzimuthForces Topic Size
+	[Documentation]    Validate the m1m3_logevent_AppliedAzimuthForces topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8473,8 +8473,8 @@ Validate M1M3 Event m1m3_logevent_AppliedActiveOpticsForces Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Event m1m3_logevent_AppliedAberrationForces Topic Size
-	[Documentation]    Validate the m1m3_logevent_AppliedAberrationForces topic is less than 65536 bytes in total.
+Validate M1M3 Event m1m3_logevent_CommandRejectionWarning Topic Size
+	[Documentation]    Validate the m1m3_logevent_CommandRejectionWarning topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8496,8 +8496,8 @@ Validate M1M3 Event m1m3_logevent_AppliedAberrationForces Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Event m1m3_logevent_AppliedAzimuthForces Topic Size
-	[Documentation]    Validate the m1m3_logevent_AppliedAzimuthForces topic is less than 65536 bytes in total.
+Validate M1M3 Event m1m3_logevent_PIDInfo Topic Size
+	[Documentation]    Validate the m1m3_logevent_PIDInfo topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8519,8 +8519,8 @@ Validate M1M3 Event m1m3_logevent_AppliedAzimuthForces Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Event m1m3_logevent_CommandRejectionWarning Topic Size
-	[Documentation]    Validate the m1m3_logevent_CommandRejectionWarning topic is less than 65536 bytes in total.
+Validate M1M3 Event m1m3_logevent_HardpointActuatorWarning Topic Size
+	[Documentation]    Validate the m1m3_logevent_HardpointActuatorWarning topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8542,8 +8542,8 @@ Validate M1M3 Event m1m3_logevent_CommandRejectionWarning Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Event m1m3_logevent_PIDInfo Topic Size
-	[Documentation]    Validate the m1m3_logevent_PIDInfo topic is less than 65536 bytes in total.
+Validate M1M3 Event m1m3_logevent_HardpointMonitorWarning Topic Size
+	[Documentation]    Validate the m1m3_logevent_HardpointMonitorWarning topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8565,8 +8565,514 @@ Validate M1M3 Event m1m3_logevent_PIDInfo Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Telemetry m1m3_ForceActuatorStatus Topic Size
-	[Documentation]    Validate the m1m3_ForceActuatorStatus topic is less than 65536 bytes in total.
+Validate M1M3 Event m1m3_logevent_HardpointActuatorState Topic Size
+	[Documentation]    Validate the m1m3_logevent_HardpointActuatorState topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[36]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[36]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[36]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Event m1m3_logevent_HardpointMonitorState Topic Size
+	[Documentation]    Validate the m1m3_logevent_HardpointMonitorState topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[37]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[37]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[37]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Event m1m3_logevent_ForceActuatorWarning Topic Size
+	[Documentation]    Validate the m1m3_logevent_ForceActuatorWarning topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[38]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[38]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[38]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Event m1m3_logevent_RejectedStaticForces Topic Size
+	[Documentation]    Validate the m1m3_logevent_RejectedStaticForces topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[39]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[39]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[39]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Event m1m3_logevent_RejectedElevationForces Topic Size
+	[Documentation]    Validate the m1m3_logevent_RejectedElevationForces topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[40]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[40]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[40]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Event m1m3_logevent_RejectedAzimuthForces Topic Size
+	[Documentation]    Validate the m1m3_logevent_RejectedAzimuthForces topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[41]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[41]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[41]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Event m1m3_logevent_RejectedThermalForces Topic Size
+	[Documentation]    Validate the m1m3_logevent_RejectedThermalForces topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[42]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[42]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[42]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Event m1m3_logevent_RejectedActiveOpticForces Topic Size
+	[Documentation]    Validate the m1m3_logevent_RejectedActiveOpticForces topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[43]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[43]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[43]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Event m1m3_logevent_RejectedAberrationForces Topic Size
+	[Documentation]    Validate the m1m3_logevent_RejectedAberrationForces topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[44]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[44]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[44]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Event m1m3_logevent_RejectedBalanceForces Topic Size
+	[Documentation]    Validate the m1m3_logevent_RejectedBalanceForces topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[45]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[45]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[45]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Event m1m3_logevent_RejectedVelocityForces Topic Size
+	[Documentation]    Validate the m1m3_logevent_RejectedVelocityForces topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[46]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[46]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[46]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Event m1m3_logevent_RejectedAccelerationForces Topic Size
+	[Documentation]    Validate the m1m3_logevent_RejectedAccelerationForces topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[47]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[47]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[47]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Event m1m3_logevent_RejectedOffsetForces Topic Size
+	[Documentation]    Validate the m1m3_logevent_RejectedOffsetForces topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[48]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[48]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[48]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Event m1m3_logevent_RejectedForces Topic Size
+	[Documentation]    Validate the m1m3_logevent_RejectedForces topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[49]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[49]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[49]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Event m1m3_logevent_AppliedElevationForces Topic Size
+	[Documentation]    Validate the m1m3_logevent_AppliedElevationForces topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[50]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[50]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[50]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Event m1m3_logevent_AppliedAccelerationForces Topic Size
+	[Documentation]    Validate the m1m3_logevent_AppliedAccelerationForces topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[51]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[51]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[51]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Event m1m3_logevent_AppliedThermalForces Topic Size
+	[Documentation]    Validate the m1m3_logevent_AppliedThermalForces topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[52]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[52]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[52]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Event m1m3_logevent_AppliedVelocityForces Topic Size
+	[Documentation]    Validate the m1m3_logevent_AppliedVelocityForces topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[53]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[53]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[53]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Event m1m3_logevent_AppliedBalanceForces Topic Size
+	[Documentation]    Validate the m1m3_logevent_AppliedBalanceForces topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[54]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[54]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[54]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Event m1m3_logevent_AppliedForces Topic Size
+	[Documentation]    Validate the m1m3_logevent_AppliedForces topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[55]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[55]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[55]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Event m1m3_logevent_RejectedCylinderForces Topic Size
+	[Documentation]    Validate the m1m3_logevent_RejectedCylinderForces topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[56]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[56]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[56]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Event m1m3_logevent_AppliedCylinderForces Topic Size
+	[Documentation]    Validate the m1m3_logevent_AppliedCylinderForces topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[57]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[57]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[57]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < 65536
+
+Validate M1M3 Telemetry m1m3_ForceActuatorData Topic Size
+	[Documentation]    Validate the m1m3_ForceActuatorData topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8588,8 +9094,8 @@ Validate M1M3 Telemetry m1m3_ForceActuatorStatus Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Telemetry m1m3_ForceActuatorData Topic Size
-	[Documentation]    Validate the m1m3_ForceActuatorData topic is less than 65536 bytes in total.
+Validate M1M3 Telemetry m1m3_InclinometerData Topic Size
+	[Documentation]    Validate the m1m3_InclinometerData topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8611,8 +9117,8 @@ Validate M1M3 Telemetry m1m3_ForceActuatorData Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Telemetry m1m3_FPGAData Topic Size
-	[Documentation]    Validate the m1m3_FPGAData topic is less than 65536 bytes in total.
+Validate M1M3 Telemetry m1m3_OuterLoopData Topic Size
+	[Documentation]    Validate the m1m3_OuterLoopData topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8634,8 +9140,8 @@ Validate M1M3 Telemetry m1m3_FPGAData Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Telemetry m1m3_InclinometerData Topic Size
-	[Documentation]    Validate the m1m3_InclinometerData topic is less than 65536 bytes in total.
+Validate M1M3 Telemetry m1m3_AccelerometerData Topic Size
+	[Documentation]    Validate the m1m3_AccelerometerData topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8657,8 +9163,8 @@ Validate M1M3 Telemetry m1m3_InclinometerData Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Telemetry m1m3_OuterLoopData Topic Size
-	[Documentation]    Validate the m1m3_OuterLoopData topic is less than 65536 bytes in total.
+Validate M1M3 Telemetry m1m3_HardpointActuatorData Topic Size
+	[Documentation]    Validate the m1m3_HardpointActuatorData topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8680,8 +9186,8 @@ Validate M1M3 Telemetry m1m3_OuterLoopData Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Telemetry m1m3_AccelerometerData Topic Size
-	[Documentation]    Validate the m1m3_AccelerometerData topic is less than 65536 bytes in total.
+Validate M1M3 Telemetry m1m3_IMSData Topic Size
+	[Documentation]    Validate the m1m3_IMSData topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8703,8 +9209,8 @@ Validate M1M3 Telemetry m1m3_AccelerometerData Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Telemetry m1m3_HardpointStatus Topic Size
-	[Documentation]    Validate the m1m3_HardpointStatus topic is less than 65536 bytes in total.
+Validate M1M3 Telemetry m1m3_GyroData Topic Size
+	[Documentation]    Validate the m1m3_GyroData topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8726,8 +9232,8 @@ Validate M1M3 Telemetry m1m3_HardpointStatus Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Telemetry m1m3_HardpointData Topic Size
-	[Documentation]    Validate the m1m3_HardpointData topic is less than 65536 bytes in total.
+Validate M1M3 Telemetry m1m3_PowerSupplyData Topic Size
+	[Documentation]    Validate the m1m3_PowerSupplyData topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8749,8 +9255,8 @@ Validate M1M3 Telemetry m1m3_HardpointData Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Telemetry m1m3_IMSData Topic Size
-	[Documentation]    Validate the m1m3_IMSData topic is less than 65536 bytes in total.
+Validate M1M3 Telemetry m1m3_PIDData Topic Size
+	[Documentation]    Validate the m1m3_PIDData topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8772,8 +9278,8 @@ Validate M1M3 Telemetry m1m3_IMSData Topic Size
 	Log    ${result}
 	Should Be True    ${result} < 65536
 
-Validate M1M3 Telemetry m1m3_MirrorForceData Topic Size
-	[Documentation]    Validate the m1m3_MirrorForceData topic is less than 65536 bytes in total.
+Validate M1M3 Telemetry m1m3_HardpointMonitorData Topic Size
+	[Documentation]    Validate the m1m3_HardpointMonitorData topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8782,98 +9288,6 @@ Validate M1M3 Telemetry m1m3_MirrorForceData Topic Size
 	@{CountArray}=    Split to Lines    ${output}
 	Comment    Get the Type of each argument for the topic.
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[10]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < 65536
-
-Validate M1M3 Telemetry m1m3_HardpointMonitorStatus Topic Size
-	[Documentation]    Validate the m1m3_HardpointMonitorStatus topic is less than 65536 bytes in total.
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[11]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[11]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[11]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < 65536
-
-Validate M1M3 Telemetry m1m3_GyroData Topic Size
-	[Documentation]    Validate the m1m3_GyroData topic is less than 65536 bytes in total.
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[12]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[12]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[12]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < 65536
-
-Validate M1M3 Telemetry m1m3_PowerSupplyData Topic Size
-	[Documentation]    Validate the m1m3_PowerSupplyData topic is less than 65536 bytes in total.
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[13]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[13]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[13]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < 65536
-
-Validate M1M3 Telemetry m1m3_PIDData Topic Size
-	[Documentation]    Validate the m1m3_PIDData topic is less than 65536 bytes in total.
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[14]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[14]/item/Count" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[14]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/m1m3/m1m3_Telemetry.xml
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
