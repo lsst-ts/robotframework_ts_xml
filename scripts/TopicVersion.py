@@ -6,7 +6,9 @@ import subprocess
 import os
 import xml_common
 
-file = open(os.environ['HOME']+"/bin/XML_Versions.txt","w")
+#file = open(os.environ['HOME']+"/bin/XML_Versions.txt","w")
+script_path = os.path.dirname(__file__)
+file = open(script_path+"/Versions.txt","w")
 
 for subsystem in xml_common.subsystems:
 	# Get the list of XMLs for each CSC, to include Telemetry, Events and Commands.
