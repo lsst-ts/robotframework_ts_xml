@@ -11,7 +11,7 @@ file = open("../Validate_XML_Topic_Size.robot","w")
 
 # Create Settings header.
 file.write("*** Settings ***\n")
-file.write("Documentation    Validate the subsystem XML definition files do not contain a Topic greater than 65536 bytes in total size.\n")
+file.write("Documentation    Validate the subsystem XML definition files do not contain a Topic greater than 65536 bytes in total size or that exceeds 4096 total arguments.\n")
 file.write("Suite Setup    Run Keywords    Create the DataType:Size Dictionary    AND    Run Keyword If    \"${ContInt}\"==\"true\"    Set Suite Variable    ${xml}    xmlstarlet\n")
 file.write("Library    OperatingSystem\n")
 file.write("Library    String\n")
@@ -40,7 +40,7 @@ for subsystem in xml_common.subsystems:
 		for index, topic in enumerate(topics):
 			index += 1
 			# Create the Test Cases.
-			file.write("Validate " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType.rstrip("s") + " " + topic + " Topic Size\n")
+			file.write("Validate " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType.rstrip("s") + " " + topic + " Topic Byte Size\n")
 			file.write("\t[Documentation]    Validate the " + topic + " topic is less than 65536 bytes in total.\n")
 			file.write("\t[Tags]    smoke\n")
 			file.write("\t[Setup]    Set Test Variable    ${result}    ${0}\n")
@@ -61,7 +61,21 @@ for subsystem in xml_common.subsystems:
 			file.write("\t\    ${size}=    Convert to Number    ${output}\n")
 			file.write("\t\    ${result}=    Evaluate    ${result}+${size}\n")
 			file.write("\tLog    ${result}\n")
-			file.write("\tShould Be True    ${result} < 65536\n")
+			file.write("\tShould Be True    ${result} < ${65536}\n")
+			file.write("\n")
+
+			file.write("Validate " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType.rstrip("s") + " " + topic + " Topic Columns\n")
+			file.write("\t[Documentation]    Validate the " + topic + " topic has less than 4096 total arguments, each representing a column in the EFD.s\n")
+			file.write("\t[Tags]    smoke\n")
+			file.write("\t[Setup]    Set Test Variable    ${total}    ${0}\n")
+			file.write("\tComment    Get the Count of each argument for the topic.\n")
+			file.write("\t${itemCount}=    Run    ${xml} sel -t -v \"count(" + salxmlpath + "[" + str(index) + "]/item)\" -n ${folder}/" + xmlfile + "\n")
+			file.write("\t${output}=    Run    ${xml} sel -t -m \"/" + salxmlpath + "[" + str(index) + "]/item/Count\" -v . -n ${folder}/" + xmlfile + "\n")
+			file.write("\t@{CountArray}=    Split to Lines    ${output}\n")
+			file.write("\t:FOR    ${item}    IN    @{CountArray}\n")
+			file.write("\t\    ${total}=    Evaluate    ${total}+${item}\n")
+			file.write("\tLog    ${total}\n")
+			file.write("\tShould Be True    ${total} <= ${4096}\n")
 			file.write("\n")
 
 # Create Datatype:Size Dictionary
