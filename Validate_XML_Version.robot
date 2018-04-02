@@ -325,7 +325,7 @@ Validate Hexapod Commands Version
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Version" -v . -n ${folder}/sal_interfaces/hexapod/hexapod_Commands.xml
 	Log    ${output}
-	${version}=    Set Variable    3.3.0\n3.3.0\n3.3.0\n3.3.0\n3.3.0\n3.3.0\n3.3.0\n3.3.0\n3.3.0\n3.3.0\n3.3.0\n3.3.0
+	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1
 	Should Match    ${output}    ${version}
 
 Validate Hexapod Events Version
@@ -333,7 +333,7 @@ Validate Hexapod Events Version
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/hexapod/hexapod_Events.xml
 	Log    ${output}
-	${version}=    Set Variable    3.3.0\n3.3.0\n3.3.0\n3.3.0\n3.3.0\n3.3.0\n3.3.0\n3.3.0
+	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1
 	Should Match    ${output}    ${version}
 
 Validate Hexapod Telemetry Version
@@ -341,7 +341,7 @@ Validate Hexapod Telemetry Version
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/hexapod/hexapod_Telemetry.xml
 	Log    ${output}
-	${version}=    Set Variable    3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0
+	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1
 	Should Match    ${output}    ${version}
 
 Validate M1M3 Commands Version
@@ -469,7 +469,7 @@ Validate Rotator Commands Version
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Version" -v . -n ${folder}/sal_interfaces/rotator/rotator_Commands.xml
 	Log    ${output}
-	${version}=    Set Variable    3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0
+	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1
 	Should Match    ${output}    ${version}
 
 Validate Rotator Events Version
@@ -477,7 +477,7 @@ Validate Rotator Events Version
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/rotator/rotator_Events.xml
 	Log    ${output}
-	${version}=    Set Variable    3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0
+	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1
 	Should Match    ${output}    ${version}
 
 Validate Rotator Telemetry Version
@@ -485,7 +485,7 @@ Validate Rotator Telemetry Version
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/rotator/rotator_Telemetry.xml
 	Log    ${output}
-	${version}=    Set Variable    3.3.0\n3.3.0\n3.3.0\n3.3.0\n3.3.0\n3.3.0
+	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1
 	Should Match    ${output}    ${version}
 
 Validate Scheduler Telemetry Version
@@ -588,6 +588,30 @@ Validate TCSAOCS Telemetry Version
 	[Documentation]    Validate the TCSAOCS Telemetry version.
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/tcsAOCS/tcsAOCS_Telemetry.xml
+	Log    ${output}
+	${version}=    Set Variable    3.5.1
+	Should Match    ${output}    ${version}
+
+Validate TCSOFC Commands Version
+	[Documentation]    Validate the TCSOFC Commands version.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Version" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Commands.xml
+	Log    ${output}
+	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1
+	Should Match    ${output}    ${version}
+
+Validate TCSOFC Events Version
+	[Documentation]    Validate the TCSOFC Events version.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	Log    ${output}
+	${version}=    Set Variable    3.5.1
+	Should Match    ${output}    ${version}
+
+Validate TCSOFC Telemetry Version
+	[Documentation]    Validate the TCSOFC Telemetry version.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Telemetry.xml
 	Log    ${output}
 	${version}=    Set Variable    3.5.1
 	Should Match    ${output}    ${version}

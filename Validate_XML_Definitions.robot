@@ -519,6 +519,27 @@ Validate TCSAOCS Telemetry
 	Log    ${output}
 	Should Contain    ${output}   tcsAOCS_Telemetry.xml - valid
 
+Validate TCSOFC Commands
+	[Documentation]    Validate the TCSOFC Commands XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/tcsOfc/tcsOfc_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   tcsOfc_Commands.xml - valid
+
+Validate TCSOFC Events
+	[Documentation]    Validate the TCSOFC Events XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   tcsOfc_Events.xml - valid
+
+Validate TCSOFC Telemetry
+	[Documentation]    Validate the TCSOFC Telemetry XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/tcsOfc/tcsOfc_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   tcsOfc_Telemetry.xml - valid
+
 Validate TCSWEP Events
 	[Documentation]    Validate the TCSWEP Events XML file.
 	[Tags]    smoke

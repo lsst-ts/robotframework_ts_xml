@@ -152,6 +152,12 @@ Validate TCSAOCS Events XML file
 	Log    ${output}
 	Should Contain    ${output}   tcsAOCS_Events.xml - valid
 
+Validate TCSOFC Events XML file
+	[Tags]    smoke
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   tcsOfc_Events.xml - valid
+
 Validate TCSWEP Events XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
