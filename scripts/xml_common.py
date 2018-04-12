@@ -8,7 +8,7 @@ import re
 # Variables
 # =========
 """Defines the array of Commandable SAL Components, or CSCs."""
-subsystems = ['archiver', 'calibrationElectrometer', 'camera', 'catchuparchiver', 'dmHeaderService', 'dome', 'domeADB', 'domeAPS', 'domeLouvers', 'domeLWS', 'domeMONCS', 'domeTHCS', 'eec', 'hexapod', 'm1m3', 'm2ms', 'MTMount', 'ocs', 'promptprocessing', 'rotator', 'scheduler', 'sequencer', 'summitFacility', 'tcs', 'tcsAOCS', 'tcsOfc', 'tcsWEP', 'vms']
+subsystems = ['archiver', 'atMonochromator', 'calibrationElectrometer', 'camera', 'catchuparchiver', 'dmHeaderService', 'dome', 'domeADB', 'domeAPS', 'domeLouvers', 'domeLWS', 'domeMONCS', 'domeTHCS', 'eec', 'hexapod', 'm1m3', 'm2ms', 'MTMount', 'ocs', 'promptprocessing', 'rotator', 'scheduler', 'sequencer', 'summitFacility', 'tcs', 'tcsAOCS', 'tcsOfc', 'tcsWEP', 'vms']
 
 
 # =========
@@ -19,6 +19,8 @@ def CapitalizeSubsystem( subsystem ):
 	"""Certain CSC abbreviations are capitalized in non-standard ways. This function correctly handles that capitalization."""
 	if re.match("^dome\S+", subsystem):
 		return subsystem[0].upper() + subsystem[1:]
+	elif subsystem == "atMonochromator":
+		return "ATMonochromator"
 	elif subsystem == "catchuparchiver":
 		return "CatchupArchiver"
 	elif subsystem == "promptprocessing":

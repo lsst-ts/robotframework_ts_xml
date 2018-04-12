@@ -29,6 +29,27 @@ Validate Archiver Telemetry
 	Log    ${output}
 	Should Contain    ${output}   archiver_Telemetry.xml - valid
 
+Validate ATMonochromator Commands
+	[Documentation]    Validate the ATMonochromator Commands XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/atMonochromator/atMonochromator_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   atMonochromator_Commands.xml - valid
+
+Validate ATMonochromator Events
+	[Documentation]    Validate the ATMonochromator Events XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/atMonochromator/atMonochromator_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   atMonochromator_Events.xml - valid
+
+Validate ATMonochromator Telemetry
+	[Documentation]    Validate the ATMonochromator Telemetry XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/atMonochromator/atMonochromator_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   atMonochromator_Telemetry.xml - valid
+
 Validate CalibrationElectrometer Commands
 	[Documentation]    Validate the CalibrationElectrometer Commands XML file.
 	[Tags]    smoke

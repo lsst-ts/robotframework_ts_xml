@@ -14,6 +14,12 @@ Validate Archiver Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   archiver_Telemetry.xml - valid
 
+Validate ATMonochromator Telemetry XML file
+	[Tags]    smoke
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/atMonochromator/atMonochromator_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   atMonochromator_Telemetry.xml - valid
+
 Validate CalibrationElectrometer Telemetry XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Telemetry.xml

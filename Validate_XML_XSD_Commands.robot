@@ -14,6 +14,12 @@ Validate Archiver Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   archiver_Commands.xml - valid
 
+Validate ATMonochromator Commands XML file
+	[Tags]    smoke
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/atMonochromator/atMonochromator_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   atMonochromator_Commands.xml - valid
+
 Validate CalibrationElectrometer Commands XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Commands.xml

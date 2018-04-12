@@ -14,6 +14,12 @@ Validate Archiver Events XML file
 	Log    ${output}
 	Should Contain    ${output}   archiver_Events.xml - valid
 
+Validate ATMonochromator Events XML file
+	[Tags]    smoke
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/atMonochromator/atMonochromator_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   atMonochromator_Events.xml - valid
+
 Validate CalibrationElectrometer Events XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
