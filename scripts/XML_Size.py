@@ -61,7 +61,7 @@ for subsystem in xml_common.subsystems:
 			file.write("\t\    ${size}=    Convert to Number    ${output}\n")
 			file.write("\t\    ${result}=    Evaluate    ${result}+${size}\n")
 			file.write("\tLog    ${result}\n")
-			file.write("\tShould Be True    ${result} < ${1208}\n")
+			file.write("\tShould Be True    ${result} < ${65536}\n")
 			file.write("\n")
 
 			file.write("Validate " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType.rstrip("s") + " " + topic + " Topic Columns\n")
