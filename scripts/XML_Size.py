@@ -61,7 +61,7 @@ for subsystem in xml_common.subsystems:
 			file.write("\t\    ${size}=    Convert to Number    ${output}\n")
 			file.write("\t\    ${result}=    Evaluate    ${result}+${size}\n")
 			file.write("\tLog    ${result}\n")
-			file.write("\tShould Be True    ${result} < ${65536}\n")
+			file.write("\tShould Be True    ${result} < ${1208}\n")
 			file.write("\n")
 
 			file.write("Validate " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType.rstrip("s") + " " + topic + " Topic Columns\n")
@@ -75,7 +75,7 @@ for subsystem in xml_common.subsystems:
 			file.write("\t:FOR    ${item}    IN    @{CountArray}\n")
 			file.write("\t\    ${total}=    Evaluate    ${total}+${item}\n")
 			file.write("\tLog    ${total}\n")
-			file.write("\tShould Be True    ${total} <= ${4096}\n")
+			file.write("\tShould Be True    ${total} <= ${800}\n")
 			file.write("\n")
 
 # Create Datatype:Size Dictionary
