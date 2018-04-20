@@ -37,7 +37,7 @@ Validate ATMonochromator Commands Version
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Version" -v . -n ${folder}/sal_interfaces/atMonochromator/atMonochromator_Commands.xml
 	Log    ${output}
-	${version}=    Set Variable    3.5.2\n3.5.2\n3.5.2\n3.5.2\n3.5.2\n3.5.2\n3.5.2\n3.5.2\n3.5.2\n3.5.2\n3.5.2\n3.5.2\n3.5.2\n3.5.2
+	${version}=    Set Variable    3.5.2\n3.5.2\n3.5.2\n3.5.2\n3.5.2\n3.5.2\n3.5.2\n3.5.2\n3.5.2\n3.5.2\n3.5.2\n3.5.2\n3.5.2\n3.5.2\n3.5.2
 	Should Match    ${output}    ${version}
 
 Validate ATMonochromator Events Version
@@ -85,7 +85,7 @@ Validate Camera Commands Version
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Version" -v . -n ${folder}/sal_interfaces/camera/camera_Commands.xml
 	Log    ${output}
-	${version}=    Set Variable    3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0
+	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1
 	Should Match    ${output}    ${version}
 
 Validate Camera Events Version
@@ -93,7 +93,7 @@ Validate Camera Events Version
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
 	Log    ${output}
-	${version}=    Set Variable    3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0
+	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1
 	Should Match    ${output}    ${version}
 
 Validate Camera Telemetry Version
@@ -101,7 +101,7 @@ Validate Camera Telemetry Version
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/camera/camera_Telemetry.xml
 	Log    ${output}
-	${version}=    Set Variable    3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0\n3.2.0
+	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1
 	Should Match    ${output}    ${version}
 
 Validate CatchupArchiver Commands Version
@@ -357,7 +357,7 @@ Validate Hexapod Events Version
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/hexapod/hexapod_Events.xml
 	Log    ${output}
-	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1
+	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1
 	Should Match    ${output}    ${version}
 
 Validate Hexapod Telemetry Version
@@ -365,7 +365,7 @@ Validate Hexapod Telemetry Version
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/hexapod/hexapod_Telemetry.xml
 	Log    ${output}
-	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1
+	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1
 	Should Match    ${output}    ${version}
 
 Validate M1M3 Commands Version
@@ -501,7 +501,7 @@ Validate Rotator Events Version
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/rotator/rotator_Events.xml
 	Log    ${output}
-	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1
+	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1
 	Should Match    ${output}    ${version}
 
 Validate Rotator Telemetry Version
@@ -509,7 +509,7 @@ Validate Rotator Telemetry Version
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/rotator/rotator_Telemetry.xml
 	Log    ${output}
-	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1
+	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1
 	Should Match    ${output}    ${version}
 
 Validate Scheduler Telemetry Version

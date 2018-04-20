@@ -657,8 +657,8 @@ Validate Archiver Telemetry archiver_SequencerHeartbeat Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Command atMonochromator_command_Disable Topic Byte Size
-	[Documentation]    Validate the atMonochromator_command_Disable topic is less than 65536 bytes in total.
+Validate ATMonochromator Command atMonochromator_command_disable Topic Byte Size
+	[Documentation]    Validate the atMonochromator_command_disable topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -680,8 +680,8 @@ Validate ATMonochromator Command atMonochromator_command_Disable Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Command atMonochromator_command_Disable Topic Columns
-	[Documentation]    Validate the atMonochromator_command_Disable topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMonochromator Command atMonochromator_command_disable Topic Columns
+	[Documentation]    Validate the atMonochromator_command_disable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -693,8 +693,8 @@ Validate ATMonochromator Command atMonochromator_command_Disable Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Command atMonochromator_command_Enable Topic Byte Size
-	[Documentation]    Validate the atMonochromator_command_Enable topic is less than 65536 bytes in total.
+Validate ATMonochromator Command atMonochromator_command_enable Topic Byte Size
+	[Documentation]    Validate the atMonochromator_command_enable topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -716,8 +716,8 @@ Validate ATMonochromator Command atMonochromator_command_Enable Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Command atMonochromator_command_Enable Topic Columns
-	[Documentation]    Validate the atMonochromator_command_Enable topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMonochromator Command atMonochromator_command_enable Topic Columns
+	[Documentation]    Validate the atMonochromator_command_enable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -729,8 +729,8 @@ Validate ATMonochromator Command atMonochromator_command_Enable Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Command atMonochromator_command_ExitControl Topic Byte Size
-	[Documentation]    Validate the atMonochromator_command_ExitControl topic is less than 65536 bytes in total.
+Validate ATMonochromator Command atMonochromator_command_exitControl Topic Byte Size
+	[Documentation]    Validate the atMonochromator_command_exitControl topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -752,8 +752,8 @@ Validate ATMonochromator Command atMonochromator_command_ExitControl Topic Byte 
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Command atMonochromator_command_ExitControl Topic Columns
-	[Documentation]    Validate the atMonochromator_command_ExitControl topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMonochromator Command atMonochromator_command_exitControl Topic Columns
+	[Documentation]    Validate the atMonochromator_command_exitControl topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -765,8 +765,8 @@ Validate ATMonochromator Command atMonochromator_command_ExitControl Topic Colum
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Command atMonochromator_command_StandBy Topic Byte Size
-	[Documentation]    Validate the atMonochromator_command_StandBy topic is less than 65536 bytes in total.
+Validate ATMonochromator Command atMonochromator_command_standby Topic Byte Size
+	[Documentation]    Validate the atMonochromator_command_standby topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -788,8 +788,8 @@ Validate ATMonochromator Command atMonochromator_command_StandBy Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Command atMonochromator_command_StandBy Topic Columns
-	[Documentation]    Validate the atMonochromator_command_StandBy topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMonochromator Command atMonochromator_command_standby Topic Columns
+	[Documentation]    Validate the atMonochromator_command_standby topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -801,8 +801,8 @@ Validate ATMonochromator Command atMonochromator_command_StandBy Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Command atMonochromator_command_Start Topic Byte Size
-	[Documentation]    Validate the atMonochromator_command_Start topic is less than 65536 bytes in total.
+Validate ATMonochromator Command atMonochromator_command_start Topic Byte Size
+	[Documentation]    Validate the atMonochromator_command_start topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -824,8 +824,8 @@ Validate ATMonochromator Command atMonochromator_command_Start Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Command atMonochromator_command_Start Topic Columns
-	[Documentation]    Validate the atMonochromator_command_Start topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMonochromator Command atMonochromator_command_start Topic Columns
+	[Documentation]    Validate the atMonochromator_command_start topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -837,8 +837,8 @@ Validate ATMonochromator Command atMonochromator_command_Start Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Command atMonochromator_command_EnterControl Topic Byte Size
-	[Documentation]    Validate the atMonochromator_command_EnterControl topic is less than 65536 bytes in total.
+Validate ATMonochromator Command atMonochromator_command_enterControl Topic Byte Size
+	[Documentation]    Validate the atMonochromator_command_enterControl topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -860,8 +860,8 @@ Validate ATMonochromator Command atMonochromator_command_EnterControl Topic Byte
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Command atMonochromator_command_EnterControl Topic Columns
-	[Documentation]    Validate the atMonochromator_command_EnterControl topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMonochromator Command atMonochromator_command_enterControl Topic Columns
+	[Documentation]    Validate the atMonochromator_command_enterControl topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1155,6 +1155,42 @@ Validate ATMonochromator Command atMonochromator_command_ChangeSlitWidth Topic C
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[14]/item)" -n ${folder}/sal_interfaces/atMonochromator/atMonochromator_Commands.xml
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[14]/item/Count" -v . -n ${folder}/sal_interfaces/atMonochromator/atMonochromator_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate ATMonochromator Command atMonochromator_command_updateMonochromatorSetup Topic Byte Size
+	[Documentation]    Validate the atMonochromator_command_updateMonochromatorSetup topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[15]/item)" -n ${folder}/sal_interfaces/atMonochromator/atMonochromator_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[15]/item/Count" -v . -n ${folder}/sal_interfaces/atMonochromator/atMonochromator_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[15]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atMonochromator/atMonochromator_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate ATMonochromator Command atMonochromator_command_updateMonochromatorSetup Topic Columns
+	[Documentation]    Validate the atMonochromator_command_updateMonochromatorSetup topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[15]/item)" -n ${folder}/sal_interfaces/atMonochromator/atMonochromator_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[15]/item/Count" -v . -n ${folder}/sal_interfaces/atMonochromator/atMonochromator_Commands.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -3213,8 +3249,8 @@ Validate CalibrationElectrometer Telemetry calibrationElectrometer_LoopTime_ms T
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Camera Command camera_command_configure Topic Byte Size
-	[Documentation]    Validate the camera_command_configure topic is less than 65536 bytes in total.
+Validate Camera Command camera_command_discardRows Topic Byte Size
+	[Documentation]    Validate the camera_command_discardRows topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3236,8 +3272,8 @@ Validate Camera Command camera_command_configure Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Camera Command camera_command_configure Topic Columns
-	[Documentation]    Validate the camera_command_configure topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Camera Command camera_command_discardRows Topic Columns
+	[Documentation]    Validate the camera_command_discardRows topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3249,8 +3285,8 @@ Validate Camera Command camera_command_configure Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Camera Command camera_command_initGuiders Topic Byte Size
-	[Documentation]    Validate the camera_command_initGuiders topic is less than 65536 bytes in total.
+Validate Camera Command camera_command_Enable Topic Byte Size
+	[Documentation]    Validate the camera_command_Enable topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3272,8 +3308,8 @@ Validate Camera Command camera_command_initGuiders Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Camera Command camera_command_initGuiders Topic Columns
-	[Documentation]    Validate the camera_command_initGuiders topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Camera Command camera_command_Enable Topic Columns
+	[Documentation]    Validate the camera_command_Enable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3285,8 +3321,8 @@ Validate Camera Command camera_command_initGuiders Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Camera Command camera_command_initImage Topic Byte Size
-	[Documentation]    Validate the camera_command_initImage topic is less than 65536 bytes in total.
+Validate Camera Command camera_command_SetValue Topic Byte Size
+	[Documentation]    Validate the camera_command_SetValue topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3308,8 +3344,8 @@ Validate Camera Command camera_command_initImage Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Camera Command camera_command_initImage Topic Columns
-	[Documentation]    Validate the camera_command_initImage topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Camera Command camera_command_SetValue Topic Columns
+	[Documentation]    Validate the camera_command_SetValue topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3321,8 +3357,8 @@ Validate Camera Command camera_command_initImage Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Camera Command camera_command_setFilter Topic Byte Size
-	[Documentation]    Validate the camera_command_setFilter topic is less than 65536 bytes in total.
+Validate Camera Command camera_command_startImage Topic Byte Size
+	[Documentation]    Validate the camera_command_startImage topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3344,8 +3380,8 @@ Validate Camera Command camera_command_setFilter Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Camera Command camera_command_setFilter Topic Columns
-	[Documentation]    Validate the camera_command_setFilter topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Camera Command camera_command_startImage Topic Columns
+	[Documentation]    Validate the camera_command_startImage topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3357,8 +3393,8 @@ Validate Camera Command camera_command_setFilter Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Camera Command camera_command_takeImages Topic Byte Size
-	[Documentation]    Validate the camera_command_takeImages topic is less than 65536 bytes in total.
+Validate Camera Command camera_command_disableCalibration Topic Byte Size
+	[Documentation]    Validate the camera_command_disableCalibration topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3380,8 +3416,8 @@ Validate Camera Command camera_command_takeImages Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Camera Command camera_command_takeImages Topic Columns
-	[Documentation]    Validate the camera_command_takeImages topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Camera Command camera_command_disableCalibration Topic Columns
+	[Documentation]    Validate the camera_command_disableCalibration topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3393,8 +3429,476 @@ Validate Camera Command camera_command_takeImages Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Camera Event camera_logevent_ccsConfigured Topic Byte Size
-	[Documentation]    Validate the camera_logevent_ccsConfigured topic is less than 65536 bytes in total.
+Validate Camera Command camera_command_initGuiders Topic Byte Size
+	[Documentation]    Validate the camera_command_initGuiders topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[6]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[6]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Camera Command camera_command_initGuiders Topic Columns
+	[Documentation]    Validate the camera_command_initGuiders topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[6]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Camera Command camera_command_Standby Topic Byte Size
+	[Documentation]    Validate the camera_command_Standby topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[7]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[7]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[7]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Camera Command camera_command_Standby Topic Columns
+	[Documentation]    Validate the camera_command_Standby topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[7]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[7]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Camera Command camera_command_enableCalibration Topic Byte Size
+	[Documentation]    Validate the camera_command_enableCalibration topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[8]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[8]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[8]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Camera Command camera_command_enableCalibration Topic Columns
+	[Documentation]    Validate the camera_command_enableCalibration topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[8]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[8]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Camera Command camera_command_initImage Topic Byte Size
+	[Documentation]    Validate the camera_command_initImage topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[9]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[9]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[9]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Camera Command camera_command_initImage Topic Columns
+	[Documentation]    Validate the camera_command_initImage topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[9]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[9]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Camera Command camera_command_EnterControl Topic Byte Size
+	[Documentation]    Validate the camera_command_EnterControl topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[10]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[10]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[10]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Camera Command camera_command_EnterControl Topic Columns
+	[Documentation]    Validate the camera_command_EnterControl topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[10]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[10]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Camera Command camera_command_endImage Topic Byte Size
+	[Documentation]    Validate the camera_command_endImage topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[11]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[11]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[11]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Camera Command camera_command_endImage Topic Columns
+	[Documentation]    Validate the camera_command_endImage topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[11]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[11]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Camera Command camera_command_setFilter Topic Byte Size
+	[Documentation]    Validate the camera_command_setFilter topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[12]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[12]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[12]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Camera Command camera_command_setFilter Topic Columns
+	[Documentation]    Validate the camera_command_setFilter topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[12]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[12]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Camera Command camera_command_Disable Topic Byte Size
+	[Documentation]    Validate the camera_command_Disable topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[13]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[13]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[13]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Camera Command camera_command_Disable Topic Columns
+	[Documentation]    Validate the camera_command_Disable topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[13]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[13]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Camera Command camera_command_Abort Topic Byte Size
+	[Documentation]    Validate the camera_command_Abort topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[14]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[14]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[14]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Camera Command camera_command_Abort Topic Columns
+	[Documentation]    Validate the camera_command_Abort topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[14]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[14]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Camera Command camera_command_clear Topic Byte Size
+	[Documentation]    Validate the camera_command_clear topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[15]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[15]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[15]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Camera Command camera_command_clear Topic Columns
+	[Documentation]    Validate the camera_command_clear topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[15]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[15]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Camera Command camera_command_ExitControl Topic Byte Size
+	[Documentation]    Validate the camera_command_ExitControl topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[16]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[16]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[16]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Camera Command camera_command_ExitControl Topic Columns
+	[Documentation]    Validate the camera_command_ExitControl topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[16]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[16]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Camera Command camera_command_takeImages Topic Byte Size
+	[Documentation]    Validate the camera_command_takeImages topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[17]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[17]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[17]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Camera Command camera_command_takeImages Topic Columns
+	[Documentation]    Validate the camera_command_takeImages topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[17]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[17]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Camera Command camera_command_Start Topic Byte Size
+	[Documentation]    Validate the camera_command_Start topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[18]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[18]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[18]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Camera Command camera_command_Start Topic Columns
+	[Documentation]    Validate the camera_command_Start topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[18]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[18]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Camera Event camera_logevent_offlineDetailedState Topic Byte Size
+	[Documentation]    Validate the camera_logevent_offlineDetailedState topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3416,8 +3920,8 @@ Validate Camera Event camera_logevent_ccsConfigured Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Camera Event camera_logevent_ccsConfigured Topic Columns
-	[Documentation]    Validate the camera_logevent_ccsConfigured topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Camera Event camera_logevent_offlineDetailedState Topic Columns
+	[Documentation]    Validate the camera_logevent_offlineDetailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3429,8 +3933,8 @@ Validate Camera Event camera_logevent_ccsConfigured Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Camera Event camera_logevent_endInitializeGuider Topic Byte Size
-	[Documentation]    Validate the camera_logevent_endInitializeGuider topic is less than 65536 bytes in total.
+Validate Camera Event camera_logevent_endReadout Topic Byte Size
+	[Documentation]    Validate the camera_logevent_endReadout topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3452,8 +3956,8 @@ Validate Camera Event camera_logevent_endInitializeGuider Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Camera Event camera_logevent_endInitializeGuider Topic Columns
-	[Documentation]    Validate the camera_logevent_endInitializeGuider topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Camera Event camera_logevent_endReadout Topic Columns
+	[Documentation]    Validate the camera_logevent_endReadout topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3465,8 +3969,8 @@ Validate Camera Event camera_logevent_endInitializeGuider Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Camera Event camera_logevent_endInitializeImage Topic Byte Size
-	[Documentation]    Validate the camera_logevent_endInitializeImage topic is less than 65536 bytes in total.
+Validate Camera Event camera_logevent_endTakeImage Topic Byte Size
+	[Documentation]    Validate the camera_logevent_endTakeImage topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3488,8 +3992,8 @@ Validate Camera Event camera_logevent_endInitializeImage Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Camera Event camera_logevent_endInitializeImage Topic Columns
-	[Documentation]    Validate the camera_logevent_endInitializeImage topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Camera Event camera_logevent_endTakeImage Topic Columns
+	[Documentation]    Validate the camera_logevent_endTakeImage topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3501,8 +4005,8 @@ Validate Camera Event camera_logevent_endInitializeImage Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Camera Event camera_logevent_endLoadFilter Topic Byte Size
-	[Documentation]    Validate the camera_logevent_endLoadFilter topic is less than 65536 bytes in total.
+Validate Camera Event camera_logevent_imageReadinessDetailedState Topic Byte Size
+	[Documentation]    Validate the camera_logevent_imageReadinessDetailedState topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3524,8 +4028,8 @@ Validate Camera Event camera_logevent_endLoadFilter Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Camera Event camera_logevent_endLoadFilter Topic Columns
-	[Documentation]    Validate the camera_logevent_endLoadFilter topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Camera Event camera_logevent_imageReadinessDetailedState Topic Columns
+	[Documentation]    Validate the camera_logevent_imageReadinessDetailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3537,8 +4041,8 @@ Validate Camera Event camera_logevent_endLoadFilter Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Camera Event camera_logevent_endReadout Topic Byte Size
-	[Documentation]    Validate the camera_logevent_endReadout topic is less than 65536 bytes in total.
+Validate Camera Event camera_logevent_SettingVersions Topic Byte Size
+	[Documentation]    Validate the camera_logevent_SettingVersions topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3560,8 +4064,8 @@ Validate Camera Event camera_logevent_endReadout Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Camera Event camera_logevent_endReadout Topic Columns
-	[Documentation]    Validate the camera_logevent_endReadout topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Camera Event camera_logevent_SettingVersions Topic Columns
+	[Documentation]    Validate the camera_logevent_SettingVersions topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3573,8 +4077,8 @@ Validate Camera Event camera_logevent_endReadout Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Camera Event camera_logevent_endRotateCarousel Topic Byte Size
-	[Documentation]    Validate the camera_logevent_endRotateCarousel topic is less than 65536 bytes in total.
+Validate Camera Event camera_logevent_startSetFilter Topic Byte Size
+	[Documentation]    Validate the camera_logevent_startSetFilter topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3596,8 +4100,8 @@ Validate Camera Event camera_logevent_endRotateCarousel Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Camera Event camera_logevent_endRotateCarousel Topic Columns
-	[Documentation]    Validate the camera_logevent_endRotateCarousel topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Camera Event camera_logevent_startSetFilter Topic Columns
+	[Documentation]    Validate the camera_logevent_startSetFilter topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3609,8 +4113,8 @@ Validate Camera Event camera_logevent_endRotateCarousel Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Camera Event camera_logevent_endSetFilter Topic Byte Size
-	[Documentation]    Validate the camera_logevent_endSetFilter topic is less than 65536 bytes in total.
+Validate Camera Event camera_logevent_startUnloadFilter Topic Byte Size
+	[Documentation]    Validate the camera_logevent_startUnloadFilter topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3632,8 +4136,8 @@ Validate Camera Event camera_logevent_endSetFilter Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Camera Event camera_logevent_endSetFilter Topic Columns
-	[Documentation]    Validate the camera_logevent_endSetFilter topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Camera Event camera_logevent_startUnloadFilter Topic Columns
+	[Documentation]    Validate the camera_logevent_startUnloadFilter topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3645,8 +4149,8 @@ Validate Camera Event camera_logevent_endSetFilter Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Camera Event camera_logevent_endShutterClose Topic Byte Size
-	[Documentation]    Validate the camera_logevent_endShutterClose topic is less than 65536 bytes in total.
+Validate Camera Event camera_logevent_notReadyToTakeImage Topic Byte Size
+	[Documentation]    Validate the camera_logevent_notReadyToTakeImage topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3668,8 +4172,8 @@ Validate Camera Event camera_logevent_endShutterClose Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Camera Event camera_logevent_endShutterClose Topic Columns
-	[Documentation]    Validate the camera_logevent_endShutterClose topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Camera Event camera_logevent_notReadyToTakeImage Topic Columns
+	[Documentation]    Validate the camera_logevent_notReadyToTakeImage topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3681,8 +4185,8 @@ Validate Camera Event camera_logevent_endShutterClose Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Camera Event camera_logevent_endShutterOpen Topic Byte Size
-	[Documentation]    Validate the camera_logevent_endShutterOpen topic is less than 65536 bytes in total.
+Validate Camera Event camera_logevent_startShutterClose Topic Byte Size
+	[Documentation]    Validate the camera_logevent_startShutterClose topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3704,8 +4208,8 @@ Validate Camera Event camera_logevent_endShutterOpen Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Camera Event camera_logevent_endShutterOpen Topic Columns
-	[Documentation]    Validate the camera_logevent_endShutterOpen topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Camera Event camera_logevent_startShutterClose Topic Columns
+	[Documentation]    Validate the camera_logevent_startShutterClose topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3717,8 +4221,8 @@ Validate Camera Event camera_logevent_endShutterOpen Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Camera Event camera_logevent_endTakeImage Topic Byte Size
-	[Documentation]    Validate the camera_logevent_endTakeImage topic is less than 65536 bytes in total.
+Validate Camera Event camera_logevent_AppliedSettingsMatchStart Topic Byte Size
+	[Documentation]    Validate the camera_logevent_AppliedSettingsMatchStart topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3740,8 +4244,8 @@ Validate Camera Event camera_logevent_endTakeImage Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Camera Event camera_logevent_endTakeImage Topic Columns
-	[Documentation]    Validate the camera_logevent_endTakeImage topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Camera Event camera_logevent_AppliedSettingsMatchStart Topic Columns
+	[Documentation]    Validate the camera_logevent_AppliedSettingsMatchStart topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3753,8 +4257,8 @@ Validate Camera Event camera_logevent_endTakeImage Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Camera Event camera_logevent_endUnloadFilter Topic Byte Size
-	[Documentation]    Validate the camera_logevent_endUnloadFilter topic is less than 65536 bytes in total.
+Validate Camera Event camera_logevent_ErrorCode Topic Byte Size
+	[Documentation]    Validate the camera_logevent_ErrorCode topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3776,8 +4280,8 @@ Validate Camera Event camera_logevent_endUnloadFilter Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Camera Event camera_logevent_endUnloadFilter Topic Columns
-	[Documentation]    Validate the camera_logevent_endUnloadFilter topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Camera Event camera_logevent_ErrorCode Topic Columns
+	[Documentation]    Validate the camera_logevent_ErrorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3789,8 +4293,8 @@ Validate Camera Event camera_logevent_endUnloadFilter Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Camera Event camera_logevent_notReadyToTakeImage Topic Byte Size
-	[Documentation]    Validate the camera_logevent_notReadyToTakeImage topic is less than 65536 bytes in total.
+Validate Camera Event camera_logevent_endInitializeGuider Topic Byte Size
+	[Documentation]    Validate the camera_logevent_endInitializeGuider topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3812,8 +4316,8 @@ Validate Camera Event camera_logevent_notReadyToTakeImage Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Camera Event camera_logevent_notReadyToTakeImage Topic Columns
-	[Documentation]    Validate the camera_logevent_notReadyToTakeImage topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Camera Event camera_logevent_endInitializeGuider Topic Columns
+	[Documentation]    Validate the camera_logevent_endInitializeGuider topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3825,8 +4329,8 @@ Validate Camera Event camera_logevent_notReadyToTakeImage Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Camera Event camera_logevent_prepareToTakeImage Topic Byte Size
-	[Documentation]    Validate the camera_logevent_prepareToTakeImage topic is less than 65536 bytes in total.
+Validate Camera Event camera_logevent_endShutterClose Topic Byte Size
+	[Documentation]    Validate the camera_logevent_endShutterClose topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3848,8 +4352,8 @@ Validate Camera Event camera_logevent_prepareToTakeImage Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Camera Event camera_logevent_prepareToTakeImage Topic Columns
-	[Documentation]    Validate the camera_logevent_prepareToTakeImage topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Camera Event camera_logevent_endShutterClose Topic Columns
+	[Documentation]    Validate the camera_logevent_endShutterClose topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3861,8 +4365,8 @@ Validate Camera Event camera_logevent_prepareToTakeImage Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Camera Event camera_logevent_readyToTakeImage Topic Byte Size
-	[Documentation]    Validate the camera_logevent_readyToTakeImage topic is less than 65536 bytes in total.
+Validate Camera Event camera_logevent_endOfImageTelemetry Topic Byte Size
+	[Documentation]    Validate the camera_logevent_endOfImageTelemetry topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3884,8 +4388,8 @@ Validate Camera Event camera_logevent_readyToTakeImage Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Camera Event camera_logevent_readyToTakeImage Topic Columns
-	[Documentation]    Validate the camera_logevent_readyToTakeImage topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Camera Event camera_logevent_endOfImageTelemetry Topic Columns
+	[Documentation]    Validate the camera_logevent_endOfImageTelemetry topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3897,8 +4401,8 @@ Validate Camera Event camera_logevent_readyToTakeImage Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Camera Event camera_logevent_startIntegration Topic Byte Size
-	[Documentation]    Validate the camera_logevent_startIntegration topic is less than 65536 bytes in total.
+Validate Camera Event camera_logevent_endUnloadFilter Topic Byte Size
+	[Documentation]    Validate the camera_logevent_endUnloadFilter topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3920,8 +4424,8 @@ Validate Camera Event camera_logevent_startIntegration Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Camera Event camera_logevent_startIntegration Topic Columns
-	[Documentation]    Validate the camera_logevent_startIntegration topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Camera Event camera_logevent_endUnloadFilter Topic Columns
+	[Documentation]    Validate the camera_logevent_endUnloadFilter topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3933,8 +4437,8 @@ Validate Camera Event camera_logevent_startIntegration Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Camera Event camera_logevent_startLoadFilter Topic Byte Size
-	[Documentation]    Validate the camera_logevent_startLoadFilter topic is less than 65536 bytes in total.
+Validate Camera Event camera_logevent_calibrationDetailedState Topic Byte Size
+	[Documentation]    Validate the camera_logevent_calibrationDetailedState topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3956,8 +4460,8 @@ Validate Camera Event camera_logevent_startLoadFilter Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Camera Event camera_logevent_startLoadFilter Topic Columns
-	[Documentation]    Validate the camera_logevent_startLoadFilter topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Camera Event camera_logevent_calibrationDetailedState Topic Columns
+	[Documentation]    Validate the camera_logevent_calibrationDetailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3969,8 +4473,8 @@ Validate Camera Event camera_logevent_startLoadFilter Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Camera Event camera_logevent_startReadout Topic Byte Size
-	[Documentation]    Validate the camera_logevent_startReadout topic is less than 65536 bytes in total.
+Validate Camera Event camera_logevent_endRotateCarousel Topic Byte Size
+	[Documentation]    Validate the camera_logevent_endRotateCarousel topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3992,8 +4496,8 @@ Validate Camera Event camera_logevent_startReadout Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Camera Event camera_logevent_startReadout Topic Columns
-	[Documentation]    Validate the camera_logevent_startReadout topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Camera Event camera_logevent_endRotateCarousel Topic Columns
+	[Documentation]    Validate the camera_logevent_endRotateCarousel topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4005,8 +4509,8 @@ Validate Camera Event camera_logevent_startReadout Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Camera Event camera_logevent_startRotateCarousel Topic Byte Size
-	[Documentation]    Validate the camera_logevent_startRotateCarousel topic is less than 65536 bytes in total.
+Validate Camera Event camera_logevent_startLoadFilter Topic Byte Size
+	[Documentation]    Validate the camera_logevent_startLoadFilter topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4028,8 +4532,8 @@ Validate Camera Event camera_logevent_startRotateCarousel Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Camera Event camera_logevent_startRotateCarousel Topic Columns
-	[Documentation]    Validate the camera_logevent_startRotateCarousel topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Camera Event camera_logevent_startLoadFilter Topic Columns
+	[Documentation]    Validate the camera_logevent_startLoadFilter topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4041,8 +4545,8 @@ Validate Camera Event camera_logevent_startRotateCarousel Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Camera Event camera_logevent_startSetFilter Topic Byte Size
-	[Documentation]    Validate the camera_logevent_startSetFilter topic is less than 65536 bytes in total.
+Validate Camera Event camera_logevent_filterChangerDetailedState Topic Byte Size
+	[Documentation]    Validate the camera_logevent_filterChangerDetailedState topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4064,8 +4568,8 @@ Validate Camera Event camera_logevent_startSetFilter Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Camera Event camera_logevent_startSetFilter Topic Columns
-	[Documentation]    Validate the camera_logevent_startSetFilter topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Camera Event camera_logevent_filterChangerDetailedState Topic Columns
+	[Documentation]    Validate the camera_logevent_filterChangerDetailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4077,8 +4581,8 @@ Validate Camera Event camera_logevent_startSetFilter Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Camera Event camera_logevent_startShutterClose Topic Byte Size
-	[Documentation]    Validate the camera_logevent_startShutterClose topic is less than 65536 bytes in total.
+Validate Camera Event camera_logevent_shutterDetailedState Topic Byte Size
+	[Documentation]    Validate the camera_logevent_shutterDetailedState topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4100,8 +4604,8 @@ Validate Camera Event camera_logevent_startShutterClose Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Camera Event camera_logevent_startShutterClose Topic Columns
-	[Documentation]    Validate the camera_logevent_startShutterClose topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Camera Event camera_logevent_shutterDetailedState Topic Columns
+	[Documentation]    Validate the camera_logevent_shutterDetailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4113,8 +4617,8 @@ Validate Camera Event camera_logevent_startShutterClose Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Camera Event camera_logevent_startShutterOpen Topic Byte Size
-	[Documentation]    Validate the camera_logevent_startShutterOpen topic is less than 65536 bytes in total.
+Validate Camera Event camera_logevent_readyToTakeImage Topic Byte Size
+	[Documentation]    Validate the camera_logevent_readyToTakeImage topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4136,8 +4640,8 @@ Validate Camera Event camera_logevent_startShutterOpen Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Camera Event camera_logevent_startShutterOpen Topic Columns
-	[Documentation]    Validate the camera_logevent_startShutterOpen topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Camera Event camera_logevent_readyToTakeImage Topic Columns
+	[Documentation]    Validate the camera_logevent_readyToTakeImage topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4149,8 +4653,8 @@ Validate Camera Event camera_logevent_startShutterOpen Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Camera Event camera_logevent_startUnloadFilter Topic Byte Size
-	[Documentation]    Validate the camera_logevent_startUnloadFilter topic is less than 65536 bytes in total.
+Validate Camera Event camera_logevent_ccsCommandState Topic Byte Size
+	[Documentation]    Validate the camera_logevent_ccsCommandState topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4172,8 +4676,8 @@ Validate Camera Event camera_logevent_startUnloadFilter Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Camera Event camera_logevent_startUnloadFilter Topic Columns
-	[Documentation]    Validate the camera_logevent_startUnloadFilter topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Camera Event camera_logevent_ccsCommandState Topic Columns
+	[Documentation]    Validate the camera_logevent_ccsCommandState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4185,8 +4689,512 @@ Validate Camera Event camera_logevent_startUnloadFilter Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Camera Telemetry camera_Cold Topic Byte Size
-	[Documentation]    Validate the camera_Cold topic is less than 65536 bytes in total.
+Validate Camera Event camera_logevent_prepareToTakeImage Topic Byte Size
+	[Documentation]    Validate the camera_logevent_prepareToTakeImage topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[23]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[23]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[23]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Camera Event camera_logevent_prepareToTakeImage Topic Columns
+	[Documentation]    Validate the camera_logevent_prepareToTakeImage topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[23]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[23]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Camera Event camera_logevent_ccsConfigured Topic Byte Size
+	[Documentation]    Validate the camera_logevent_ccsConfigured topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[24]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[24]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[24]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Camera Event camera_logevent_ccsConfigured Topic Columns
+	[Documentation]    Validate the camera_logevent_ccsConfigured topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[24]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[24]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Camera Event camera_logevent_endLoadFilter Topic Byte Size
+	[Documentation]    Validate the camera_logevent_endLoadFilter topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[25]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[25]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[25]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Camera Event camera_logevent_endLoadFilter Topic Columns
+	[Documentation]    Validate the camera_logevent_endLoadFilter topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[25]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[25]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Camera Event camera_logevent_endShutterOpen Topic Byte Size
+	[Documentation]    Validate the camera_logevent_endShutterOpen topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[26]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[26]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[26]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Camera Event camera_logevent_endShutterOpen Topic Columns
+	[Documentation]    Validate the camera_logevent_endShutterOpen topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[26]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[26]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Camera Event camera_logevent_startIntegration Topic Byte Size
+	[Documentation]    Validate the camera_logevent_startIntegration topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[27]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[27]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[27]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Camera Event camera_logevent_startIntegration Topic Columns
+	[Documentation]    Validate the camera_logevent_startIntegration topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[27]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[27]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Camera Event camera_logevent_SummaryState Topic Byte Size
+	[Documentation]    Validate the camera_logevent_SummaryState topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[28]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[28]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[28]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Camera Event camera_logevent_SummaryState Topic Columns
+	[Documentation]    Validate the camera_logevent_SummaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[28]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[28]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Camera Event camera_logevent_endInitializeImage Topic Byte Size
+	[Documentation]    Validate the camera_logevent_endInitializeImage topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[29]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[29]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[29]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Camera Event camera_logevent_endInitializeImage Topic Columns
+	[Documentation]    Validate the camera_logevent_endInitializeImage topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[29]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[29]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Camera Event camera_logevent_SettingsApplied Topic Byte Size
+	[Documentation]    Validate the camera_logevent_SettingsApplied topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[30]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[30]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[30]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Camera Event camera_logevent_SettingsApplied Topic Columns
+	[Documentation]    Validate the camera_logevent_SettingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[30]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[30]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Camera Event camera_logevent_endSetFilter Topic Byte Size
+	[Documentation]    Validate the camera_logevent_endSetFilter topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[31]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[31]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[31]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Camera Event camera_logevent_endSetFilter Topic Columns
+	[Documentation]    Validate the camera_logevent_endSetFilter topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[31]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[31]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Camera Event camera_logevent_startShutterOpen Topic Byte Size
+	[Documentation]    Validate the camera_logevent_startShutterOpen topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[32]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[32]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[32]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Camera Event camera_logevent_startShutterOpen Topic Columns
+	[Documentation]    Validate the camera_logevent_startShutterOpen topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[32]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[32]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Camera Event camera_logevent_raftsDetailedState Topic Byte Size
+	[Documentation]    Validate the camera_logevent_raftsDetailedState topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[33]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[33]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[33]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Camera Event camera_logevent_raftsDetailedState Topic Columns
+	[Documentation]    Validate the camera_logevent_raftsDetailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[33]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[33]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Camera Event camera_logevent_availableFilters Topic Byte Size
+	[Documentation]    Validate the camera_logevent_availableFilters topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[34]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[34]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[34]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Camera Event camera_logevent_availableFilters Topic Columns
+	[Documentation]    Validate the camera_logevent_availableFilters topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[34]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[34]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Camera Event camera_logevent_startReadout Topic Byte Size
+	[Documentation]    Validate the camera_logevent_startReadout topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[35]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[35]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[35]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Camera Event camera_logevent_startReadout Topic Columns
+	[Documentation]    Validate the camera_logevent_startReadout topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[35]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[35]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Camera Event camera_logevent_startRotateCarousel Topic Byte Size
+	[Documentation]    Validate the camera_logevent_startRotateCarousel topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[36]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[36]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[36]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Camera Event camera_logevent_startRotateCarousel Topic Columns
+	[Documentation]    Validate the camera_logevent_startRotateCarousel topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[36]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[36]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Camera Telemetry camera_Shutter Topic Byte Size
+	[Documentation]    Validate the camera_Shutter topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4208,8 +5216,8 @@ Validate Camera Telemetry camera_Cold Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Camera Telemetry camera_Cold Topic Columns
-	[Documentation]    Validate the camera_Cold topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Camera Telemetry camera_Shutter Topic Columns
+	[Documentation]    Validate the camera_Shutter topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4221,8 +5229,8 @@ Validate Camera Telemetry camera_Cold Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Camera Telemetry camera_SAS Topic Byte Size
-	[Documentation]    Validate the camera_SAS topic is less than 65536 bytes in total.
+Validate Camera Telemetry camera_Prot Topic Byte Size
+	[Documentation]    Validate the camera_Prot topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4244,8 +5252,8 @@ Validate Camera Telemetry camera_SAS Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Camera Telemetry camera_SAS Topic Columns
-	[Documentation]    Validate the camera_SAS topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Camera Telemetry camera_Prot Topic Columns
+	[Documentation]    Validate the camera_Prot topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4257,8 +5265,8 @@ Validate Camera Telemetry camera_SAS Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Camera Telemetry camera_SDS Topic Byte Size
-	[Documentation]    Validate the camera_SDS topic is less than 65536 bytes in total.
+Validate Camera Telemetry camera_Filter Topic Byte Size
+	[Documentation]    Validate the camera_Filter topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4280,8 +5288,8 @@ Validate Camera Telemetry camera_SDS Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Camera Telemetry camera_SDS Topic Columns
-	[Documentation]    Validate the camera_SDS topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Camera Telemetry camera_Filter Topic Columns
+	[Documentation]    Validate the camera_Filter topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4293,8 +5301,8 @@ Validate Camera Telemetry camera_SDS Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Camera Telemetry camera_Filter Topic Byte Size
-	[Documentation]    Validate the camera_Filter topic is less than 65536 bytes in total.
+Validate Camera Telemetry camera_Heartbeat Topic Byte Size
+	[Documentation]    Validate the camera_Heartbeat topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4316,8 +5324,8 @@ Validate Camera Telemetry camera_Filter Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Camera Telemetry camera_Filter Topic Columns
-	[Documentation]    Validate the camera_Filter topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Camera Telemetry camera_Heartbeat Topic Columns
+	[Documentation]    Validate the camera_Heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4329,8 +5337,8 @@ Validate Camera Telemetry camera_Filter Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Camera Telemetry camera_Prot Topic Byte Size
-	[Documentation]    Validate the camera_Prot topic is less than 65536 bytes in total.
+Validate Camera Telemetry camera_WAS Topic Byte Size
+	[Documentation]    Validate the camera_WAS topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4352,8 +5360,8 @@ Validate Camera Telemetry camera_Prot Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Camera Telemetry camera_Prot Topic Columns
-	[Documentation]    Validate the camera_Prot topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Camera Telemetry camera_WAS Topic Columns
+	[Documentation]    Validate the camera_WAS topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4401,8 +5409,8 @@ Validate Camera Telemetry camera_CCS Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Camera Telemetry camera_Purge Topic Byte Size
-	[Documentation]    Validate the camera_Purge topic is less than 65536 bytes in total.
+Validate Camera Telemetry camera_Cluster_Encoder Topic Byte Size
+	[Documentation]    Validate the camera_Cluster_Encoder topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4424,8 +5432,8 @@ Validate Camera Telemetry camera_Purge Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Camera Telemetry camera_Purge Topic Columns
-	[Documentation]    Validate the camera_Purge topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Camera Telemetry camera_Cluster_Encoder Topic Columns
+	[Documentation]    Validate the camera_Cluster_Encoder topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4437,8 +5445,8 @@ Validate Camera Telemetry camera_Purge Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Camera Telemetry camera_WDS Topic Byte Size
-	[Documentation]    Validate the camera_WDS topic is less than 65536 bytes in total.
+Validate Camera Telemetry camera_Cyro Topic Byte Size
+	[Documentation]    Validate the camera_Cyro topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4460,8 +5468,8 @@ Validate Camera Telemetry camera_WDS Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Camera Telemetry camera_WDS Topic Columns
-	[Documentation]    Validate the camera_WDS topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Camera Telemetry camera_Cyro Topic Columns
+	[Documentation]    Validate the camera_Cyro topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4473,8 +5481,8 @@ Validate Camera Telemetry camera_WDS Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Camera Telemetry camera_Cluster_Encoder Topic Byte Size
-	[Documentation]    Validate the camera_Cluster_Encoder topic is less than 65536 bytes in total.
+Validate Camera Telemetry camera_Purge Topic Byte Size
+	[Documentation]    Validate the camera_Purge topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4496,8 +5504,8 @@ Validate Camera Telemetry camera_Cluster_Encoder Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Camera Telemetry camera_Cluster_Encoder Topic Columns
-	[Documentation]    Validate the camera_Cluster_Encoder topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Camera Telemetry camera_Purge Topic Columns
+	[Documentation]    Validate the camera_Purge topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4509,8 +5517,8 @@ Validate Camera Telemetry camera_Cluster_Encoder Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Camera Telemetry camera_Shutter Topic Byte Size
-	[Documentation]    Validate the camera_Shutter topic is less than 65536 bytes in total.
+Validate Camera Telemetry camera_WDS Topic Byte Size
+	[Documentation]    Validate the camera_WDS topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4532,8 +5540,8 @@ Validate Camera Telemetry camera_Shutter Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Camera Telemetry camera_Shutter Topic Columns
-	[Documentation]    Validate the camera_Shutter topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Camera Telemetry camera_WDS Topic Columns
+	[Documentation]    Validate the camera_WDS topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4581,8 +5589,8 @@ Validate Camera Telemetry camera_GDS Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Camera Telemetry camera_GAS Topic Byte Size
-	[Documentation]    Validate the camera_GAS topic is less than 65536 bytes in total.
+Validate Camera Telemetry camera_SDS Topic Byte Size
+	[Documentation]    Validate the camera_SDS topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4604,8 +5612,8 @@ Validate Camera Telemetry camera_GAS Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Camera Telemetry camera_GAS Topic Columns
-	[Documentation]    Validate the camera_GAS topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Camera Telemetry camera_SDS Topic Columns
+	[Documentation]    Validate the camera_SDS topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4617,8 +5625,8 @@ Validate Camera Telemetry camera_GAS Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Camera Telemetry camera_PCMS Topic Byte Size
-	[Documentation]    Validate the camera_PCMS topic is less than 65536 bytes in total.
+Validate Camera Telemetry camera_GAS Topic Byte Size
+	[Documentation]    Validate the camera_GAS topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4640,8 +5648,8 @@ Validate Camera Telemetry camera_PCMS Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Camera Telemetry camera_PCMS Topic Columns
-	[Documentation]    Validate the camera_PCMS topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Camera Telemetry camera_GAS Topic Columns
+	[Documentation]    Validate the camera_GAS topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4653,8 +5661,8 @@ Validate Camera Telemetry camera_PCMS Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Camera Telemetry camera_Cryo Topic Byte Size
-	[Documentation]    Validate the camera_Cryo topic is less than 65536 bytes in total.
+Validate Camera Telemetry camera_PCMS Topic Byte Size
+	[Documentation]    Validate the camera_PCMS topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4676,8 +5684,8 @@ Validate Camera Telemetry camera_Cryo Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Camera Telemetry camera_Cryo Topic Columns
-	[Documentation]    Validate the camera_Cryo topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Camera Telemetry camera_PCMS Topic Columns
+	[Documentation]    Validate the camera_PCMS topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4689,8 +5697,8 @@ Validate Camera Telemetry camera_Cryo Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Camera Telemetry camera_WAS Topic Byte Size
-	[Documentation]    Validate the camera_WAS topic is less than 65536 bytes in total.
+Validate Camera Telemetry camera_SAS Topic Byte Size
+	[Documentation]    Validate the camera_SAS topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4712,13 +5720,49 @@ Validate Camera Telemetry camera_WAS Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Camera Telemetry camera_WAS Topic Columns
-	[Documentation]    Validate the camera_WAS topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Camera Telemetry camera_SAS Topic Columns
+	[Documentation]    Validate the camera_SAS topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[15]/item)" -n ${folder}/sal_interfaces/camera/camera_Telemetry.xml
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[15]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Camera Telemetry camera_Cold Topic Byte Size
+	[Documentation]    Validate the camera_Cold topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[16]/item)" -n ${folder}/sal_interfaces/camera/camera_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[16]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[16]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/camera/camera_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Camera Telemetry camera_Cold Topic Columns
+	[Documentation]    Validate the camera_Cold topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[16]/item)" -n ${folder}/sal_interfaces/camera/camera_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[16]/item/Count" -v . -n ${folder}/sal_interfaces/camera/camera_Telemetry.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -11601,8 +12645,8 @@ Validate Hexapod Event hexapod_logevent_interlock Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Hexapod Event hexapod_logevent_limit Topic Byte Size
-	[Documentation]    Validate the hexapod_logevent_limit topic is less than 65536 bytes in total.
+Validate Hexapod Event hexapod_logevent_inPosition Topic Byte Size
+	[Documentation]    Validate the hexapod_logevent_inPosition topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -11624,8 +12668,8 @@ Validate Hexapod Event hexapod_logevent_limit Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Hexapod Event hexapod_logevent_limit Topic Columns
-	[Documentation]    Validate the hexapod_logevent_limit topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Hexapod Event hexapod_logevent_inPosition Topic Columns
+	[Documentation]    Validate the hexapod_logevent_inPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -11637,8 +12681,8 @@ Validate Hexapod Event hexapod_logevent_limit Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Hexapod Event hexapod_logevent_inPosition Topic Byte Size
-	[Documentation]    Validate the hexapod_logevent_inPosition topic is less than 65536 bytes in total.
+Validate Hexapod Event hexapod_logevent_deviceError Topic Byte Size
+	[Documentation]    Validate the hexapod_logevent_deviceError topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -11660,157 +12704,13 @@ Validate Hexapod Event hexapod_logevent_inPosition Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Hexapod Event hexapod_logevent_inPosition Topic Columns
-	[Documentation]    Validate the hexapod_logevent_inPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/Count" -v . -n ${folder}/sal_interfaces/hexapod/hexapod_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate Hexapod Event hexapod_logevent_deviceError Topic Byte Size
-	[Documentation]    Validate the hexapod_logevent_deviceError topic is less than 65536 bytes in total.
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/hexapod/hexapod_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/hexapod/hexapod_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
 Validate Hexapod Event hexapod_logevent_deviceError Topic Columns
 	[Documentation]    Validate the hexapod_logevent_deviceError topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/hexapod/hexapod_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate Hexapod Event hexapod_logevent_Tracking Topic Byte Size
-	[Documentation]    Validate the hexapod_logevent_Tracking topic is less than 65536 bytes in total.
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/hexapod/hexapod_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/hexapod/hexapod_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate Hexapod Event hexapod_logevent_Tracking Topic Columns
-	[Documentation]    Validate the hexapod_logevent_Tracking topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/hexapod/hexapod_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate Hexapod Event hexapod_logevent_TrackLost Topic Byte Size
-	[Documentation]    Validate the hexapod_logevent_TrackLost topic is less than 65536 bytes in total.
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/Count" -v . -n ${folder}/sal_interfaces/hexapod/hexapod_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/hexapod/hexapod_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate Hexapod Event hexapod_logevent_TrackLost Topic Columns
-	[Documentation]    Validate the hexapod_logevent_TrackLost topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/Count" -v . -n ${folder}/sal_interfaces/hexapod/hexapod_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate Hexapod Event hexapod_logevent_TempError Topic Byte Size
-	[Documentation]    Validate the hexapod_logevent_TempError topic is less than 65536 bytes in total.
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/Count" -v . -n ${folder}/sal_interfaces/hexapod/hexapod_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/hexapod/hexapod_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate Hexapod Event hexapod_logevent_TempError Topic Columns
-	[Documentation]    Validate the hexapod_logevent_TempError topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/Count" -v . -n ${folder}/sal_interfaces/hexapod/hexapod_Events.xml
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/Count" -v . -n ${folder}/sal_interfaces/hexapod/hexapod_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -11919,114 +12819,6 @@ Validate Hexapod Telemetry hexapod_Electrical Topic Columns
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[3]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Telemetry.xml
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[3]/item/Count" -v . -n ${folder}/sal_interfaces/hexapod/hexapod_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate Hexapod Telemetry hexapod_Metrology Topic Byte Size
-	[Documentation]    Validate the hexapod_Metrology topic is less than 65536 bytes in total.
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[4]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[4]/item/Count" -v . -n ${folder}/sal_interfaces/hexapod/hexapod_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/hexapod/hexapod_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate Hexapod Telemetry hexapod_Metrology Topic Columns
-	[Documentation]    Validate the hexapod_Metrology topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[4]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[4]/item/Count" -v . -n ${folder}/sal_interfaces/hexapod/hexapod_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate Hexapod Telemetry hexapod_LimitSensors Topic Byte Size
-	[Documentation]    Validate the hexapod_LimitSensors topic is less than 65536 bytes in total.
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[5]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[5]/item/Count" -v . -n ${folder}/sal_interfaces/hexapod/hexapod_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/hexapod/hexapod_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate Hexapod Telemetry hexapod_LimitSensors Topic Columns
-	[Documentation]    Validate the hexapod_LimitSensors topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[5]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[5]/item/Count" -v . -n ${folder}/sal_interfaces/hexapod/hexapod_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate Hexapod Telemetry hexapod_TC Topic Byte Size
-	[Documentation]    Validate the hexapod_TC topic is less than 65536 bytes in total.
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[6]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[6]/item/Count" -v . -n ${folder}/sal_interfaces/hexapod/hexapod_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[6]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/hexapod/hexapod_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate Hexapod Telemetry hexapod_TC Topic Columns
-	[Documentation]    Validate the hexapod_TC topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[6]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[6]/item/Count" -v . -n ${folder}/sal_interfaces/hexapod/hexapod_Telemetry.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -19233,8 +20025,8 @@ Validate Rotator Event rotator_logevent_interlock Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Rotator Event rotator_logevent_limit Topic Byte Size
-	[Documentation]    Validate the rotator_logevent_limit topic is less than 65536 bytes in total.
+Validate Rotator Event rotator_logevent_trackLost Topic Byte Size
+	[Documentation]    Validate the rotator_logevent_trackLost topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19256,8 +20048,8 @@ Validate Rotator Event rotator_logevent_limit Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Rotator Event rotator_logevent_limit Topic Columns
-	[Documentation]    Validate the rotator_logevent_limit topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Rotator Event rotator_logevent_trackLost Topic Columns
+	[Documentation]    Validate the rotator_logevent_trackLost topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19269,8 +20061,8 @@ Validate Rotator Event rotator_logevent_limit Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Rotator Event rotator_logevent_tempError Topic Byte Size
-	[Documentation]    Validate the rotator_logevent_tempError topic is less than 65536 bytes in total.
+Validate Rotator Event rotator_logevent_tracking Topic Byte Size
+	[Documentation]    Validate the rotator_logevent_tracking topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19292,8 +20084,8 @@ Validate Rotator Event rotator_logevent_tempError Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Rotator Event rotator_logevent_tempError Topic Columns
-	[Documentation]    Validate the rotator_logevent_tempError topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Rotator Event rotator_logevent_tracking Topic Columns
+	[Documentation]    Validate the rotator_logevent_tracking topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19305,8 +20097,8 @@ Validate Rotator Event rotator_logevent_tempError Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Rotator Event rotator_logevent_trackLost Topic Byte Size
-	[Documentation]    Validate the rotator_logevent_trackLost topic is less than 65536 bytes in total.
+Validate Rotator Event rotator_logevent_deviceError Topic Byte Size
+	[Documentation]    Validate the rotator_logevent_deviceError topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19328,8 +20120,8 @@ Validate Rotator Event rotator_logevent_trackLost Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Rotator Event rotator_logevent_trackLost Topic Columns
-	[Documentation]    Validate the rotator_logevent_trackLost topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Rotator Event rotator_logevent_deviceError Topic Columns
+	[Documentation]    Validate the rotator_logevent_deviceError topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19341,8 +20133,8 @@ Validate Rotator Event rotator_logevent_trackLost Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Rotator Event rotator_logevent_tracking Topic Byte Size
-	[Documentation]    Validate the rotator_logevent_tracking topic is less than 65536 bytes in total.
+Validate Rotator Event rotator_logevent_inPosition Topic Byte Size
+	[Documentation]    Validate the rotator_logevent_inPosition topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19364,8 +20156,8 @@ Validate Rotator Event rotator_logevent_tracking Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Rotator Event rotator_logevent_tracking Topic Columns
-	[Documentation]    Validate the rotator_logevent_tracking topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Rotator Event rotator_logevent_inPosition Topic Columns
+	[Documentation]    Validate the rotator_logevent_inPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19377,80 +20169,8 @@ Validate Rotator Event rotator_logevent_tracking Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Rotator Event rotator_logevent_deviceError Topic Byte Size
-	[Documentation]    Validate the rotator_logevent_deviceError topic is less than 65536 bytes in total.
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/rotator/rotator_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/Count" -v . -n ${folder}/sal_interfaces/rotator/rotator_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/rotator/rotator_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate Rotator Event rotator_logevent_deviceError Topic Columns
-	[Documentation]    Validate the rotator_logevent_deviceError topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/rotator/rotator_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/Count" -v . -n ${folder}/sal_interfaces/rotator/rotator_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate Rotator Event rotator_logevent_inPosition Topic Byte Size
-	[Documentation]    Validate the rotator_logevent_inPosition topic is less than 65536 bytes in total.
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/rotator/rotator_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/Count" -v . -n ${folder}/sal_interfaces/rotator/rotator_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/rotator/rotator_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate Rotator Event rotator_logevent_inPosition Topic Columns
-	[Documentation]    Validate the rotator_logevent_inPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/rotator/rotator_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/Count" -v . -n ${folder}/sal_interfaces/rotator/rotator_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate Rotator Telemetry rotator_LimitSensors Topic Byte Size
-	[Documentation]    Validate the rotator_LimitSensors topic is less than 65536 bytes in total.
+Validate Rotator Telemetry rotator_Electrical Topic Byte Size
+	[Documentation]    Validate the rotator_Electrical topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19472,8 +20192,8 @@ Validate Rotator Telemetry rotator_LimitSensors Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Rotator Telemetry rotator_LimitSensors Topic Columns
-	[Documentation]    Validate the rotator_LimitSensors topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Rotator Telemetry rotator_Electrical Topic Columns
+	[Documentation]    Validate the rotator_Electrical topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19485,8 +20205,8 @@ Validate Rotator Telemetry rotator_LimitSensors Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Rotator Telemetry rotator_Position Topic Byte Size
-	[Documentation]    Validate the rotator_Position topic is less than 65536 bytes in total.
+Validate Rotator Telemetry rotator_Application Topic Byte Size
+	[Documentation]    Validate the rotator_Application topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19508,8 +20228,8 @@ Validate Rotator Telemetry rotator_Position Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Rotator Telemetry rotator_Position Topic Columns
-	[Documentation]    Validate the rotator_Position topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Rotator Telemetry rotator_Application Topic Columns
+	[Documentation]    Validate the rotator_Application topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19521,8 +20241,8 @@ Validate Rotator Telemetry rotator_Position Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Rotator Telemetry rotator_Electrical Topic Byte Size
-	[Documentation]    Validate the rotator_Electrical topic is less than 65536 bytes in total.
+Validate Rotator Telemetry rotator_Motors Topic Byte Size
+	[Documentation]    Validate the rotator_Motors topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19544,157 +20264,13 @@ Validate Rotator Telemetry rotator_Electrical Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Rotator Telemetry rotator_Electrical Topic Columns
-	[Documentation]    Validate the rotator_Electrical topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[3]/item)" -n ${folder}/sal_interfaces/rotator/rotator_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[3]/item/Count" -v . -n ${folder}/sal_interfaces/rotator/rotator_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate Rotator Telemetry rotator_TC Topic Byte Size
-	[Documentation]    Validate the rotator_TC topic is less than 65536 bytes in total.
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[4]/item)" -n ${folder}/sal_interfaces/rotator/rotator_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[4]/item/Count" -v . -n ${folder}/sal_interfaces/rotator/rotator_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/rotator/rotator_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate Rotator Telemetry rotator_TC Topic Columns
-	[Documentation]    Validate the rotator_TC topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[4]/item)" -n ${folder}/sal_interfaces/rotator/rotator_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[4]/item/Count" -v . -n ${folder}/sal_interfaces/rotator/rotator_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate Rotator Telemetry rotator_Application Topic Byte Size
-	[Documentation]    Validate the rotator_Application topic is less than 65536 bytes in total.
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[5]/item)" -n ${folder}/sal_interfaces/rotator/rotator_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[5]/item/Count" -v . -n ${folder}/sal_interfaces/rotator/rotator_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/rotator/rotator_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate Rotator Telemetry rotator_Application Topic Columns
-	[Documentation]    Validate the rotator_Application topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[5]/item)" -n ${folder}/sal_interfaces/rotator/rotator_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[5]/item/Count" -v . -n ${folder}/sal_interfaces/rotator/rotator_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate Rotator Telemetry rotator_Metrology Topic Byte Size
-	[Documentation]    Validate the rotator_Metrology topic is less than 65536 bytes in total.
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[6]/item)" -n ${folder}/sal_interfaces/rotator/rotator_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[6]/item/Count" -v . -n ${folder}/sal_interfaces/rotator/rotator_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[6]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/rotator/rotator_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate Rotator Telemetry rotator_Metrology Topic Columns
-	[Documentation]    Validate the rotator_Metrology topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[6]/item)" -n ${folder}/sal_interfaces/rotator/rotator_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[6]/item/Count" -v . -n ${folder}/sal_interfaces/rotator/rotator_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate Rotator Telemetry rotator_Motors Topic Byte Size
-	[Documentation]    Validate the rotator_Motors topic is less than 65536 bytes in total.
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[7]/item)" -n ${folder}/sal_interfaces/rotator/rotator_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[7]/item/Count" -v . -n ${folder}/sal_interfaces/rotator/rotator_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[7]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/rotator/rotator_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
 Validate Rotator Telemetry rotator_Motors Topic Columns
 	[Documentation]    Validate the rotator_Motors topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[7]/item)" -n ${folder}/sal_interfaces/rotator/rotator_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[7]/item/Count" -v . -n ${folder}/sal_interfaces/rotator/rotator_Telemetry.xml
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[3]/item)" -n ${folder}/sal_interfaces/rotator/rotator_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[3]/item/Count" -v . -n ${folder}/sal_interfaces/rotator/rotator_Telemetry.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
