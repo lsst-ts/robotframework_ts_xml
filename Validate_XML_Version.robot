@@ -32,6 +32,30 @@ Validate Archiver Telemetry Version
 	${version}=    Set Variable    3.5.1
 	Should Match    ${output}    ${version}
 
+Validate ATHeaderService Commands Version
+	[Documentation]    Validate the ATHeaderService Commands version.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Version" -v . -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Commands.xml
+	Log    ${output}
+	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1
+	Should Match    ${output}    ${version}
+
+Validate ATHeaderService Events Version
+	[Documentation]    Validate the ATHeaderService Events version.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Events.xml
+	Log    ${output}
+	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1
+	Should Match    ${output}    ${version}
+
+Validate ATHeaderService Telemetry Version
+	[Documentation]    Validate the ATHeaderService Telemetry version.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Telemetry.xml
+	Log    ${output}
+	${version}=    Set Variable    3.5.1\n3.5.1
+	Should Match    ${output}    ${version}
+
 Validate ATMonochromator Commands Version
 	[Documentation]    Validate the ATMonochromator Commands version.
 	[Tags]    smoke
@@ -126,30 +150,6 @@ Validate CatchupArchiver Telemetry Version
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Telemetry.xml
 	Log    ${output}
 	${version}=    Set Variable    3.5.1
-	Should Match    ${output}    ${version}
-
-Validate DMHeaderService Commands Version
-	[Documentation]    Validate the DMHeaderService Commands version.
-	[Tags]    smoke
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Version" -v . -n ${folder}/sal_interfaces/dmHeaderService/dmHeaderService_Commands.xml
-	Log    ${output}
-	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1
-	Should Match    ${output}    ${version}
-
-Validate DMHeaderService Events Version
-	[Documentation]    Validate the DMHeaderService Events version.
-	[Tags]    smoke
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/dmHeaderService/dmHeaderService_Events.xml
-	Log    ${output}
-	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1
-	Should Match    ${output}    ${version}
-
-Validate DMHeaderService Telemetry Version
-	[Documentation]    Validate the DMHeaderService Telemetry version.
-	[Tags]    smoke
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/dmHeaderService/dmHeaderService_Telemetry.xml
-	Log    ${output}
-	${version}=    Set Variable    3.5.1\n3.5.1
 	Should Match    ${output}    ${version}
 
 Validate Dome Commands Version
@@ -342,6 +342,30 @@ Validate EEC Telemetry Version
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/eec/eec_Telemetry.xml
 	Log    ${output}
 	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1
+	Should Match    ${output}    ${version}
+
+Validate HeaderService Commands Version
+	[Documentation]    Validate the HeaderService Commands version.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Version" -v . -n ${folder}/sal_interfaces/headerService/headerService_Commands.xml
+	Log    ${output}
+	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1
+	Should Match    ${output}    ${version}
+
+Validate HeaderService Events Version
+	[Documentation]    Validate the HeaderService Events version.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Version" -v . -n ${folder}/sal_interfaces/headerService/headerService_Events.xml
+	Log    ${output}
+	${version}=    Set Variable    3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1\n3.5.1
+	Should Match    ${output}    ${version}
+
+Validate HeaderService Telemetry Version
+	[Documentation]    Validate the HeaderService Telemetry version.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Version" -v . -n ${folder}/sal_interfaces/headerService/headerService_Telemetry.xml
+	Log    ${output}
+	${version}=    Set Variable    3.5.1\n3.5.1
 	Should Match    ${output}    ${version}
 
 Validate Hexapod Commands Version

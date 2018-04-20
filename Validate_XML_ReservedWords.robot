@@ -57,6 +57,54 @@ Validate Archiver Telemetry EFDB_Name Values Do Not Use MySQL Reserved Words
 	Log    ${output}
 	Should Not Contain MySQL Reserved Word    ${output}
 
+Validate ATHeaderService Commands EFDB_Name Values Do Not Use IDL Reserved words
+	[Documentation]    Validate the ATHeaderService Commands <EFDB_Name> tags do not contain IDL Reserved Words.
+	[Tags]    smoke
+	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Commands.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain IDL Reserved Word    ${output}
+
+Validate ATHeaderService Commands EFDB_Name Values Do Not Use MySQL Reserved Words
+	[Documentation]    Validate the ATHeaderService Commands <EFDB_Name> tags do not contain MySQL Reserved Words.
+	[Tags]    smoke
+	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Commands.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain MySQL Reserved Word    ${output}
+
+Validate ATHeaderService Events EFDB_Name Values Do Not Use IDL Reserved words
+	[Documentation]    Validate the ATHeaderService Events <EFDB_Name> tags do not contain IDL Reserved Words.
+	[Tags]    smoke
+	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Events.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain IDL Reserved Word    ${output}
+
+Validate ATHeaderService Events EFDB_Name Values Do Not Use MySQL Reserved Words
+	[Documentation]    Validate the ATHeaderService Events <EFDB_Name> tags do not contain MySQL Reserved Words.
+	[Tags]    smoke
+	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Events.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain MySQL Reserved Word    ${output}
+
+Validate ATHeaderService Telemetry EFDB_Name Values Do Not Use IDL Reserved words
+	[Documentation]    Validate the ATHeaderService Telemetry <EFDB_Name> tags do not contain IDL Reserved Words.
+	[Tags]    smoke
+	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Telemetry.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain IDL Reserved Word    ${output}
+
+Validate ATHeaderService Telemetry EFDB_Name Values Do Not Use MySQL Reserved Words
+	[Documentation]    Validate the ATHeaderService Telemetry <EFDB_Name> tags do not contain MySQL Reserved Words.
+	[Tags]    smoke
+	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Telemetry.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain MySQL Reserved Word    ${output}
+
 Validate ATMonochromator Commands EFDB_Name Values Do Not Use IDL Reserved words
 	[Documentation]    Validate the ATMonochromator Commands <EFDB_Name> tags do not contain IDL Reserved Words.
 	[Tags]    smoke
@@ -246,54 +294,6 @@ Validate CatchupArchiver Telemetry EFDB_Name Values Do Not Use MySQL Reserved Wo
 	[Tags]    smoke
 	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Telemetry.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain MySQL Reserved Word    ${output}
-
-Validate DMHeaderService Commands EFDB_Name Values Do Not Use IDL Reserved words
-	[Documentation]    Validate the DMHeaderService Commands <EFDB_Name> tags do not contain IDL Reserved Words.
-	[Tags]    smoke
-	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/dmHeaderService/dmHeaderService_Commands.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain IDL Reserved Word    ${output}
-
-Validate DMHeaderService Commands EFDB_Name Values Do Not Use MySQL Reserved Words
-	[Documentation]    Validate the DMHeaderService Commands <EFDB_Name> tags do not contain MySQL Reserved Words.
-	[Tags]    smoke
-	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/dmHeaderService/dmHeaderService_Commands.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain MySQL Reserved Word    ${output}
-
-Validate DMHeaderService Events EFDB_Name Values Do Not Use IDL Reserved words
-	[Documentation]    Validate the DMHeaderService Events <EFDB_Name> tags do not contain IDL Reserved Words.
-	[Tags]    smoke
-	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/dmHeaderService/dmHeaderService_Events.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain IDL Reserved Word    ${output}
-
-Validate DMHeaderService Events EFDB_Name Values Do Not Use MySQL Reserved Words
-	[Documentation]    Validate the DMHeaderService Events <EFDB_Name> tags do not contain MySQL Reserved Words.
-	[Tags]    smoke
-	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/dmHeaderService/dmHeaderService_Events.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain MySQL Reserved Word    ${output}
-
-Validate DMHeaderService Telemetry EFDB_Name Values Do Not Use IDL Reserved words
-	[Documentation]    Validate the DMHeaderService Telemetry <EFDB_Name> tags do not contain IDL Reserved Words.
-	[Tags]    smoke
-	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/dmHeaderService/dmHeaderService_Telemetry.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain IDL Reserved Word    ${output}
-
-Validate DMHeaderService Telemetry EFDB_Name Values Do Not Use MySQL Reserved Words
-	[Documentation]    Validate the DMHeaderService Telemetry <EFDB_Name> tags do not contain MySQL Reserved Words.
-	[Tags]    smoke
-	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/dmHeaderService/dmHeaderService_Telemetry.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain MySQL Reserved Word    ${output}
 
@@ -678,6 +678,54 @@ Validate EEC Telemetry EFDB_Name Values Do Not Use MySQL Reserved Words
 	[Tags]    smoke
 	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/eec/eec_Telemetry.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain MySQL Reserved Word    ${output}
+
+Validate HeaderService Commands EFDB_Name Values Do Not Use IDL Reserved words
+	[Documentation]    Validate the HeaderService Commands <EFDB_Name> tags do not contain IDL Reserved Words.
+	[Tags]    smoke
+	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/headerService/headerService_Commands.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain IDL Reserved Word    ${output}
+
+Validate HeaderService Commands EFDB_Name Values Do Not Use MySQL Reserved Words
+	[Documentation]    Validate the HeaderService Commands <EFDB_Name> tags do not contain MySQL Reserved Words.
+	[Tags]    smoke
+	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/headerService/headerService_Commands.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain MySQL Reserved Word    ${output}
+
+Validate HeaderService Events EFDB_Name Values Do Not Use IDL Reserved words
+	[Documentation]    Validate the HeaderService Events <EFDB_Name> tags do not contain IDL Reserved Words.
+	[Tags]    smoke
+	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/headerService/headerService_Events.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain IDL Reserved Word    ${output}
+
+Validate HeaderService Events EFDB_Name Values Do Not Use MySQL Reserved Words
+	[Documentation]    Validate the HeaderService Events <EFDB_Name> tags do not contain MySQL Reserved Words.
+	[Tags]    smoke
+	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/headerService/headerService_Events.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain MySQL Reserved Word    ${output}
+
+Validate HeaderService Telemetry EFDB_Name Values Do Not Use IDL Reserved words
+	[Documentation]    Validate the HeaderService Telemetry <EFDB_Name> tags do not contain IDL Reserved Words.
+	[Tags]    smoke
+	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/headerService/headerService_Telemetry.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain IDL Reserved Word    ${output}
+
+Validate HeaderService Telemetry EFDB_Name Values Do Not Use MySQL Reserved Words
+	[Documentation]    Validate the HeaderService Telemetry <EFDB_Name> tags do not contain MySQL Reserved Words.
+	[Tags]    smoke
+	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/headerService/headerService_Telemetry.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain MySQL Reserved Word    ${output}
 

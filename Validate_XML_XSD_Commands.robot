@@ -14,6 +14,12 @@ Validate Archiver Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   archiver_Commands.xml - valid
 
+Validate ATHeaderService Commands XML file
+	[Tags]    smoke
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/atHeaderService/atHeaderService_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   atHeaderService_Commands.xml - valid
+
 Validate ATMonochromator Commands XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/atMonochromator/atMonochromator_Commands.xml
@@ -37,12 +43,6 @@ Validate CatchupArchiver Commands XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   catchuparchiver_Commands.xml - valid
-
-Validate DMHeaderService Commands XML file
-	[Tags]    smoke
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/dmHeaderService/dmHeaderService_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   dmHeaderService_Commands.xml - valid
 
 Validate Dome Commands XML file
 	[Tags]    smoke
@@ -91,6 +91,12 @@ Validate EEC Commands XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/eec/eec_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   eec_Commands.xml - valid
+
+Validate HeaderService Commands XML file
+	[Tags]    smoke
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/headerService/headerService_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   headerService_Commands.xml - valid
 
 Validate Hexapod Commands XML file
 	[Tags]    smoke

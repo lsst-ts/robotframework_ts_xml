@@ -14,6 +14,12 @@ Validate Archiver Events XML file
 	Log    ${output}
 	Should Contain    ${output}   archiver_Events.xml - valid
 
+Validate ATHeaderService Events XML file
+	[Tags]    smoke
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/atHeaderService/atHeaderService_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   atHeaderService_Events.xml - valid
+
 Validate ATMonochromator Events XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/atMonochromator/atMonochromator_Events.xml
@@ -37,12 +43,6 @@ Validate CatchupArchiver Events XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   catchuparchiver_Events.xml - valid
-
-Validate DMHeaderService Events XML file
-	[Tags]    smoke
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/dmHeaderService/dmHeaderService_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   dmHeaderService_Events.xml - valid
 
 Validate Dome Events XML file
 	[Tags]    smoke
@@ -91,6 +91,12 @@ Validate EEC Events XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/eec/eec_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   eec_Events.xml - valid
+
+Validate HeaderService Events XML file
+	[Tags]    smoke
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/headerService/headerService_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   headerService_Events.xml - valid
 
 Validate Hexapod Events XML file
 	[Tags]    smoke
