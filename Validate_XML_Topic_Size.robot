@@ -11097,8 +11097,8 @@ Validate EEC Command eec_command_nighttimemode Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate EEC Command eec_command_Enable Topic Byte Size
-	[Documentation]    Validate the eec_command_Enable topic is less than 65536 bytes in total.
+Validate EEC Command eec_command_enable Topic Byte Size
+	[Documentation]    Validate the eec_command_enable topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -11120,8 +11120,8 @@ Validate EEC Command eec_command_Enable Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate EEC Command eec_command_Enable Topic Columns
-	[Documentation]    Validate the eec_command_Enable topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate EEC Command eec_command_enable Topic Columns
+	[Documentation]    Validate the eec_command_enable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -11133,8 +11133,8 @@ Validate EEC Command eec_command_Enable Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate EEC Command eec_command_ExitControl Topic Byte Size
-	[Documentation]    Validate the eec_command_ExitControl topic is less than 65536 bytes in total.
+Validate EEC Command eec_command_exitControl Topic Byte Size
+	[Documentation]    Validate the eec_command_exitControl topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -11156,8 +11156,8 @@ Validate EEC Command eec_command_ExitControl Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate EEC Command eec_command_ExitControl Topic Columns
-	[Documentation]    Validate the eec_command_ExitControl topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate EEC Command eec_command_exitControl Topic Columns
+	[Documentation]    Validate the eec_command_exitControl topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -11277,8 +11277,8 @@ Validate EEC Command eec_command_setlouvers Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate EEC Command eec_command_Start Topic Byte Size
-	[Documentation]    Validate the eec_command_Start topic is less than 65536 bytes in total.
+Validate EEC Command eec_command_start Topic Byte Size
+	[Documentation]    Validate the eec_command_start topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -11300,8 +11300,8 @@ Validate EEC Command eec_command_Start Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate EEC Command eec_command_Start Topic Columns
-	[Documentation]    Validate the eec_command_Start topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate EEC Command eec_command_start Topic Columns
+	[Documentation]    Validate the eec_command_start topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -11349,8 +11349,8 @@ Validate EEC Command eec_command_engineeringmode Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate EEC Command eec_command_Standby Topic Byte Size
-	[Documentation]    Validate the eec_command_Standby topic is less than 65536 bytes in total.
+Validate EEC Command eec_command_standby Topic Byte Size
+	[Documentation]    Validate the eec_command_standby topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -11372,8 +11372,8 @@ Validate EEC Command eec_command_Standby Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate EEC Command eec_command_Standby Topic Columns
-	[Documentation]    Validate the eec_command_Standby topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate EEC Command eec_command_standby Topic Columns
+	[Documentation]    Validate the eec_command_standby topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -11385,8 +11385,8 @@ Validate EEC Command eec_command_Standby Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate EEC Command eec_command_Disable Topic Byte Size
-	[Documentation]    Validate the eec_command_Disable topic is less than 65536 bytes in total.
+Validate EEC Command eec_command_disable Topic Byte Size
+	[Documentation]    Validate the eec_command_disable topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -11408,8 +11408,8 @@ Validate EEC Command eec_command_Disable Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate EEC Command eec_command_Disable Topic Columns
-	[Documentation]    Validate the eec_command_Disable topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate EEC Command eec_command_disable Topic Columns
+	[Documentation]    Validate the eec_command_disable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
