@@ -33,10 +33,10 @@ for subsystem in xml_common.subsystems:
 		# Get the message type, i.e. Telemetry, Events, Commands.
 		messageType = xml.split('/')[7].split('_')[1].split('.')[0]
 		# Get the Topics for each message type.
-		home = os.environ['HOME']
+		home = os.environ['XML_HOME']
 		salxmlpath = '/SAL' + messageType.rstrip("s") + 'Set/SAL' + messageType.rstrip("s")
 		xmlfile = 'sal_interfaces/' + subsystem + '/' + subsystem + '_' + messageType + '.xml'
-		topics = subprocess.check_output('xmlstarlet sel -t -m "/' + salxmlpath + '/EFDB_Topic" -v . -n ' + home + '/trunk/ts_xml/' + xmlfile, shell=True).split()
+		topics = subprocess.check_output('xmlstarlet sel -t -m "/' + salxmlpath + '/EFDB_Topic" -v . -n ' + home + '/' + xmlfile, shell=True).split()
 		for index, topic in enumerate(topics):
 			index += 1
 			# Create the Test Cases.
