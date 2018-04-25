@@ -7,7 +7,6 @@ Validate_XML_Definitions.robot
 Validate_XML_XSD_Telemetry.robot
 Validate_XML_XSD_Commands.robot
 Validate_XML_XSD_Events.robot
-Validate_XML_Version.robot
 Validate_XML_Count.robot
 Validate_XML_NoSpaces.robot
 Validate_XML_Topic_Size.robot
