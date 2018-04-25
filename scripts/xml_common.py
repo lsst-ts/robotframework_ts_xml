@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import re
+import os
 
 """This library defines common variables and functions used by the various XML test suite generator scripts.""" 
 
@@ -65,7 +66,7 @@ def GetSubsystemVersion( string ):
 	# that source.
 	"""Get the version of the CSC topic (command, event or telemetry)."""
 	version = ""
-	with open("/Users/rbovill/bin/XML_Versions.txt") as versionfile:
+	with open(os.environ['HOME'] + "/bin/XML_Versions.txt") as versionfile:
 		for line in versionfile:
 			if string in line:
 				line = versionfile.next()

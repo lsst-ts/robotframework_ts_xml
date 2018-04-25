@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import glob
 import re
+import os
 import xml_common
 
 # Create/Open test suite file.
@@ -24,7 +25,7 @@ file.write("\n")
 file.write("*** Test Cases ***\n")
 for subsystem in xml_common.subsystems:
 	# Get the list of XMLs for each CSC, to include Telemetry, Events and Commands.
-	xmls = glob.glob("/Users/rbovill/trunk/ts_xml/sal_interfaces/" + subsystem + "/" + subsystem + "*")
+	xmls = glob.glob(os.environ['XML_HOME'] + "/sal_interfaces/" + subsystem + "/" + subsystem + "*")
 	for xml in xmls:
 		# Get the message type, i.e. Telemetry, Events, Commands.
 		messageType = xml.split('/')[7].split('_')[1].split('.')[0]

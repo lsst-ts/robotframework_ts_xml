@@ -12,7 +12,7 @@ file = open(os.environ['HOME']+"/bin/XML_Versions.txt","w")
 
 for subsystem in xml_common.subsystems:
 	# Get the list of XMLs for each CSC, to include Telemetry, Events and Commands.
-	xmls = glob.glob("/Users/rbovill/trunk/ts_xml/sal_interfaces/" + subsystem + "/" + subsystem + "*")
+	xmls = glob.glob(os.environ['XML_HOME'] + "/trunk/ts_xml/sal_interfaces/" + subsystem + "/" + subsystem + "*")
 	for xml in xmls:
 		file.write(xml + "\n")
 		# Get the CSC from the xml filename. 

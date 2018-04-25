@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import glob
 import re
+import os
 import xml_common
 
 # Create/Open test suite file.
@@ -27,7 +28,7 @@ for topictype in ["Commands", "Events", "Telemetry"]:
 	# Determine which subsystems have the appropriate XML definition file.
 	for subsystem in xml_common.subsystems:
 		# Get the list of XMLs for each CSC, to include Telemetry, Events and Commands.
-		xmls = glob.glob("/Users/rbovill/trunk/ts_xml/sal_interfaces/" + subsystem + "/" + subsystem + "_" + topictype + "*")
+		xmls = glob.glob(os.environ['XML_HOME'] + "/sal_interfaces/" + subsystem + "/" + subsystem + "_" + topictype + "*")
 		for xml in xmls:
 			# Create the Test Cases.
 			file.write("Validate " + xml_common.CapitalizeSubsystem(subsystem) + " " + topictype + " XML file\n")
