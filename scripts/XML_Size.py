@@ -11,11 +11,13 @@ file = open("../Validate_XML_Topic_Size.robot","w")
 
 # Set XML parser application name.
 # ... XMLStarlet is invoked differently in Redhat OS systems, like Jenkins.
-if os.environ['JENKINS_HOME']:
+try:
+	os.environ['JENKINS_HOME']
 	app="xmlstarlet"
-else:
+except:
 	app="xml"
 
+print(app)
 # Create Settings header.
 file.write("*** Settings ***\n")
 file.write("Documentation    Validate the subsystem XML definition files do not contain a Topic greater than 65536 bytes in total size or that exceeds 4096 total arguments.\n")
