@@ -182,9 +182,3 @@ Validate TCSWEP Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   tcsWEP_Telemetry.xml - valid
 
-Validate VMS Telemetry XML file
-	[Tags]    smoke
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/vms/vms_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   vms_Telemetry.xml - valid
-

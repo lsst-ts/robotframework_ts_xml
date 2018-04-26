@@ -170,9 +170,3 @@ Validate TCSOFC Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   tcsOfc_Commands.xml - valid
 
-Validate VMS Commands XML file
-	[Tags]    smoke
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/vms/vms_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   vms_Commands.xml - valid
-
