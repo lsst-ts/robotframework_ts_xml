@@ -9,6 +9,13 @@ import xml_common
 # Create/Open test suite file.
 file = open("../Validate_XML_Topic_Size.robot","w")
 
+# Set XML parser application name.
+# ... XMLStarlet is invoked differently in Redhat OS systems, like Jenkins.
+if os.environ['JENKINS_HOME']:
+	app="xmlstarlet"
+else
+	app="xml"
+
 # Create Settings header.
 file.write("*** Settings ***\n")
 file.write("Documentation    Validate the subsystem XML definition files do not contain a Topic greater than 65536 bytes in total size or that exceeds 4096 total arguments.\n")
@@ -36,7 +43,7 @@ for subsystem in xml_common.subsystems:
 		home = os.environ['XML_HOME']
 		salxmlpath = '/SAL' + messageType.rstrip("s") + 'Set/SAL' + messageType.rstrip("s")
 		xmlfile = 'sal_interfaces/' + subsystem + '/' + subsystem + '_' + messageType + '.xml'
-		topics = subprocess.check_output('xml sel -t -m "/' + salxmlpath + '/EFDB_Topic" -v . -n ' + home + '/' + xmlfile, shell=True).split()
+		topics = subprocess.check_output(app + ' sel -t -m "/' + salxmlpath + '/EFDB_Topic" -v . -n ' + home + '/' + xmlfile, shell=True).split()
 		for index, topic in enumerate(topics):
 			index += 1
 			# Create the Test Cases.
