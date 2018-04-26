@@ -17,7 +17,6 @@ try:
 except:
 	app="xml"
 
-print(app)
 # Create Settings header.
 file.write("*** Settings ***\n")
 file.write("Documentation    Validate the subsystem XML definition files do not contain a Topic greater than 65536 bytes in total size or that exceeds 4096 total arguments.\n")
