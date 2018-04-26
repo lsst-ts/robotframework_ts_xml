@@ -13,7 +13,7 @@ file = open("../Validate_XML_Topic_Size.robot","w")
 # ... XMLStarlet is invoked differently in Redhat OS systems, like Jenkins.
 if os.environ['JENKINS_HOME']:
 	app="xmlstarlet"
-else
+else:
 	app="xml"
 
 # Create Settings header.
