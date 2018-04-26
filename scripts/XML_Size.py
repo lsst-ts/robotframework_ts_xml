@@ -36,7 +36,7 @@ for subsystem in xml_common.subsystems:
 		home = os.environ['XML_HOME']
 		salxmlpath = '/SAL' + messageType.rstrip("s") + 'Set/SAL' + messageType.rstrip("s")
 		xmlfile = 'sal_interfaces/' + subsystem + '/' + subsystem + '_' + messageType + '.xml'
-		topics = subprocess.check_output('xmlstarlet sel -t -m "/' + salxmlpath + '/EFDB_Topic" -v . -n ' + home + '/' + xmlfile, shell=True).split()
+		topics = subprocess.check_output('xml sel -t -m "/' + salxmlpath + '/EFDB_Topic" -v . -n ' + home + '/' + xmlfile, shell=True).split()
 		for index, topic in enumerate(topics):
 			index += 1
 			# Create the Test Cases.
