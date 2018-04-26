@@ -596,3 +596,24 @@ Validate TCSWEP Telemetry
 	Log    ${output}
 	Should Contain    ${output}   tcsWEP_Telemetry.xml - valid
 
+Validate VMS Commands
+	[Documentation]    Validate the VMS Commands XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/vms/vms_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   vms_Commands.xml - valid
+
+Validate VMS Events
+	[Documentation]    Validate the VMS Events XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/vms/vms_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   vms_Events.xml - valid
+
+Validate VMS Telemetry
+	[Documentation]    Validate the VMS Telemetry XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/vms/vms_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   vms_Telemetry.xml - valid
+
