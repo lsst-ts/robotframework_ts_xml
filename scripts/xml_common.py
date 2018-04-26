@@ -12,7 +12,7 @@ import os
 subsystems = ['archiver', 'atHeaderService', 'atMonochromator', 'calibrationElectrometer', 'camera', 'catchuparchiver',
 				'dome', 'domeADB', 'domeAPS', 'domeLouvers', 'domeLWS', 'domeMONCS', 'domeTHCS', 'eec', 
 				'headerService', 'hexapod', 'm1m3', 'm2ms', 'MTMount', 'ocs', 'promptprocessing', 'rotator', 
-				'scheduler', 'sequencer', 'summitFacility', 'tcs', 'tcsAOCS', 'tcsOfc', 'tcsWEP']    #, 'vms']
+				'scheduler', 'sequencer', 'summitFacility', 'tcs', 'tcsAOCS', 'tcsOfc', 'tcsWEP', 'vms']
 
 
 # =========
