@@ -14,6 +14,12 @@ Validate Archiver Events XML file
 	Log    ${output}
 	Should Contain    ${output}   archiver_Events.xml - valid
 
+Validate ATArchiver Events XML file
+	[Tags]    smoke
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/atArchiver/atArchiver_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   atArchiver_Events.xml - valid
+
 Validate ATHeaderService Events XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/atHeaderService/atHeaderService_Events.xml

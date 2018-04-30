@@ -29,6 +29,27 @@ Validate Archiver Telemetry
 	Log    ${output}
 	Should Contain    ${output}   archiver_Telemetry.xml - valid
 
+Validate ATArchiver Commands
+	[Documentation]    Validate the ATArchiver Commands XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/atArchiver/atArchiver_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   atArchiver_Commands.xml - valid
+
+Validate ATArchiver Events
+	[Documentation]    Validate the ATArchiver Events XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/atArchiver/atArchiver_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   atArchiver_Events.xml - valid
+
+Validate ATArchiver Telemetry
+	[Documentation]    Validate the ATArchiver Telemetry XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/atArchiver/atArchiver_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   atArchiver_Telemetry.xml - valid
+
 Validate ATHeaderService Commands
 	[Documentation]    Validate the ATHeaderService Commands XML file.
 	[Tags]    smoke
