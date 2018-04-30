@@ -9,7 +9,7 @@ import os
 # Variables
 # =========
 """Defines the array of Commandable SAL Components, or CSCs."""
-subsystems = ['archiver', 'atHeaderService', 'atMonochromator', 'calibrationElectrometer', 'camera', 'catchuparchiver',
+subsystems = ['archiver', 'atArchiver', 'atHeaderService', 'atMonochromator', 'calibrationElectrometer', 'camera', 'catchuparchiver',
 				'dome', 'domeADB', 'domeAPS', 'domeLouvers', 'domeLWS', 'domeMONCS', 'domeTHCS', 'eec', 
 				'headerService', 'hexapod', 'm1m3', 'm2ms', 'MTMount', 'ocs', 'promptprocessing', 'rotator', 
 				'scheduler', 'sequencer', 'summitFacility', 'tcs', 'tcsAOCS', 'tcsOfc', 'tcsWEP', 'vms']
@@ -23,6 +23,8 @@ def CapitalizeSubsystem( subsystem ):
 	"""Certain CSC abbreviations are capitalized in non-standard ways. This function correctly handles that capitalization."""
 	if re.match("^dome\S+", subsystem):
 		return subsystem[0].upper() + subsystem[1:]
+	elif subsystem == "atArchiver":
+		return "ATArchiver"
 	elif subsystem == "atHeaderService":
 		return "ATHeaderService"
 	elif subsystem == "atMonochromator":
