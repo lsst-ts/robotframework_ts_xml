@@ -14,25 +14,37 @@ Validate Archiver Events XML file
 	Log    ${output}
 	Should Contain    ${output}   archiver_Events.xml - valid
 
-Validate ATArchiver Events XML file
+Validate AtArchiver Events XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/atArchiver/atArchiver_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   atArchiver_Events.xml - valid
 
-Validate ATHeaderService Events XML file
+Validate AtHeaderService Events XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/atHeaderService/atHeaderService_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   atHeaderService_Events.xml - valid
 
-Validate ATMonochromator Events XML file
+Validate AtMonochromator Events XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/atMonochromator/atMonochromator_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   atMonochromator_Events.xml - valid
 
-Validate CalibrationElectrometer Events XML file
+Validate AtScheduler Events XML file
+	[Tags]    smoke
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/atScheduler/atScheduler_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   atScheduler_Events.xml - valid
+
+Validate AtCamera Events XML file
+	[Tags]    smoke
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   atcamera_Events.xml - valid
+
+Validate Calibrationelectrometer Events XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
 	Log    ${output}
@@ -97,6 +109,12 @@ Validate EEC Events XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/eec/eec_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   eec_Events.xml - valid
+
+Validate EFD Events XML file
+	[Tags]    smoke
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/efd/efd_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   efd_Events.xml - valid
 
 Validate HeaderService Events XML file
 	[Tags]    smoke
@@ -164,19 +182,13 @@ Validate TCS Events XML file
 	Log    ${output}
 	Should Contain    ${output}   tcs_Events.xml - valid
 
-Validate TCSAOCS Events XML file
-	[Tags]    smoke
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/tcsAOCS/tcsAOCS_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   tcsAOCS_Events.xml - valid
-
-Validate TCSOFC Events XML file
+Validate TcsOfc Events XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   tcsOfc_Events.xml - valid
 
-Validate TCSWEP Events XML file
+Validate TcsWEP Events XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
 	Log    ${output}

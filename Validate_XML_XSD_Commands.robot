@@ -14,25 +14,31 @@ Validate Archiver Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   archiver_Commands.xml - valid
 
-Validate ATArchiver Commands XML file
+Validate AtArchiver Commands XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/atArchiver/atArchiver_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   atArchiver_Commands.xml - valid
 
-Validate ATHeaderService Commands XML file
+Validate AtHeaderService Commands XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/atHeaderService/atHeaderService_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   atHeaderService_Commands.xml - valid
 
-Validate ATMonochromator Commands XML file
+Validate AtMonochromator Commands XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/atMonochromator/atMonochromator_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   atMonochromator_Commands.xml - valid
 
-Validate CalibrationElectrometer Commands XML file
+Validate AtCamera Commands XML file
+	[Tags]    smoke
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   atcamera_Commands.xml - valid
+
+Validate Calibrationelectrometer Commands XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Commands.xml
 	Log    ${output}
@@ -164,13 +170,7 @@ Validate TCS Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   tcs_Commands.xml - valid
 
-Validate TCSAOCS Commands XML file
-	[Tags]    smoke
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/tcsAOCS/tcsAOCS_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   tcsAOCS_Commands.xml - valid
-
-Validate TCSOFC Commands XML file
+Validate TcsOfc Commands XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/tcsOfc/tcsOfc_Commands.xml
 	Log    ${output}

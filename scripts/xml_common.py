@@ -9,10 +9,13 @@ import os
 # Variables
 # =========
 """Defines the array of Commandable SAL Components, or CSCs."""
-subsystems = ['archiver', 'atArchiver', 'atHeaderService', 'atMonochromator', 'calibrationElectrometer', 'camera', 'catchuparchiver',
-				'dome', 'domeADB', 'domeAPS', 'domeLouvers', 'domeLWS', 'domeMONCS', 'domeTHCS', 'eec', 
+subsystems = ['archiver', 'atArchiver', 'atHeaderService', 'atMonochromator', 'atScheduler', #'atWhiteLight', TSS-2609 
+				'atcamera', #'atcs', TSS-2608
+				'calibrationElectrometer', #'calibrationSpectrometer', TSS-2607
+				'camera', 'catchuparchiver',
+				'dome', 'domeADB', 'domeAPS', 'domeLouvers', 'domeLWS', 'domeMONCS', 'domeTHCS', 'eec', 'efd', 
 				'headerService', 'hexapod', 'm1m3', 'm2ms', 'MTMount', 'ocs', 'promptprocessing', 'rotator', 
-				'scheduler', 'sequencer', 'summitFacility', 'tcs', 'tcsAOCS', 'tcsOfc', 'tcsWEP', 'vms']
+				'scheduler', 'sequencer', 'summitFacility', 'tcs', 'tcsOfc', 'tcsWEP', 'vms']
 
 
 # =========
@@ -24,19 +27,29 @@ def CapitalizeSubsystem( subsystem ):
 	if re.match("^dome\S+", subsystem):
 		return subsystem[0].upper() + subsystem[1:]
 	elif subsystem == "atArchiver":
-		return "ATArchiver"
+		return "AtArchiver"
 	elif subsystem == "atHeaderService":
-		return "ATHeaderService"
+		return "AtHeaderService"
 	elif subsystem == "atMonochromator":
-		return "ATMonochromator"
+		return "AtMonochromator"
+	elif subsystem == "atcamera":
+		return "AtCamera"
+	elif subsystem == "atcs":
+		return "ATCS"
+	elif subsystem == "atScheduler":
+		return "AtScheduler"
 	elif subsystem == "catchuparchiver":
 		return "CatchupArchiver"
 	elif subsystem == "promptprocessing":
 		return "PromptProcessing"
+	elif subsystem == "efd":
+		return "EFD"
 	elif subsystem == "summitFacility":
 		return "SummitFacility"
-	elif subsystem == "calibrationElectrometer":
-		return "CalibrationElectrometer"
+	elif subsystem == "calibrationSpectrometer":
+		return "CalibrationSpectrometer"
+	elif subsystem == "catchuparchiver":
+		return "CatchupArchiver"
 	elif subsystem == "headerService":
 		return "HeaderService"
 	elif subsystem == "eec":
@@ -51,12 +64,10 @@ def CapitalizeSubsystem( subsystem ):
 		return "TCS"
 	elif subsystem == "ocs":
 		return "OCS"
-	elif subsystem == "tcsAOCS":
-		return "TCSAOCS"
 	elif subsystem == "tcsOfc":
-		return "TCSOFC"
+		return "TcsOfc"
 	elif subsystem == "tcsWEP":
-		return "TCSWEP"
+		return "TcsWEP"
 	elif subsystem == "vms":
 		return "VMS"
 	else:

@@ -657,7 +657,7 @@ Validate Archiver Telemetry archiver_SequencerHeartbeat Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATArchiver Command atArchiver_command_abort Topic Byte Size
+Validate AtArchiver Command atArchiver_command_abort Topic Byte Size
 	[Documentation]    Validate the atArchiver_command_abort topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -680,7 +680,7 @@ Validate ATArchiver Command atArchiver_command_abort Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATArchiver Command atArchiver_command_abort Topic Columns
+Validate AtArchiver Command atArchiver_command_abort Topic Columns
 	[Documentation]    Validate the atArchiver_command_abort topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -693,7 +693,7 @@ Validate ATArchiver Command atArchiver_command_abort Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATArchiver Command atArchiver_command_enable Topic Byte Size
+Validate AtArchiver Command atArchiver_command_enable Topic Byte Size
 	[Documentation]    Validate the atArchiver_command_enable topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -716,7 +716,7 @@ Validate ATArchiver Command atArchiver_command_enable Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATArchiver Command atArchiver_command_enable Topic Columns
+Validate AtArchiver Command atArchiver_command_enable Topic Columns
 	[Documentation]    Validate the atArchiver_command_enable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -729,7 +729,7 @@ Validate ATArchiver Command atArchiver_command_enable Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATArchiver Command atArchiver_command_disable Topic Byte Size
+Validate AtArchiver Command atArchiver_command_disable Topic Byte Size
 	[Documentation]    Validate the atArchiver_command_disable topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -752,7 +752,7 @@ Validate ATArchiver Command atArchiver_command_disable Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATArchiver Command atArchiver_command_disable Topic Columns
+Validate AtArchiver Command atArchiver_command_disable Topic Columns
 	[Documentation]    Validate the atArchiver_command_disable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -765,7 +765,7 @@ Validate ATArchiver Command atArchiver_command_disable Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATArchiver Command atArchiver_command_standby Topic Byte Size
+Validate AtArchiver Command atArchiver_command_standby Topic Byte Size
 	[Documentation]    Validate the atArchiver_command_standby topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -788,7 +788,7 @@ Validate ATArchiver Command atArchiver_command_standby Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATArchiver Command atArchiver_command_standby Topic Columns
+Validate AtArchiver Command atArchiver_command_standby Topic Columns
 	[Documentation]    Validate the atArchiver_command_standby topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -801,7 +801,7 @@ Validate ATArchiver Command atArchiver_command_standby Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATArchiver Command atArchiver_command_exitControl Topic Byte Size
+Validate AtArchiver Command atArchiver_command_exitControl Topic Byte Size
 	[Documentation]    Validate the atArchiver_command_exitControl topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -824,7 +824,7 @@ Validate ATArchiver Command atArchiver_command_exitControl Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATArchiver Command atArchiver_command_exitControl Topic Columns
+Validate AtArchiver Command atArchiver_command_exitControl Topic Columns
 	[Documentation]    Validate the atArchiver_command_exitControl topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -837,7 +837,7 @@ Validate ATArchiver Command atArchiver_command_exitControl Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATArchiver Command atArchiver_command_start Topic Byte Size
+Validate AtArchiver Command atArchiver_command_start Topic Byte Size
 	[Documentation]    Validate the atArchiver_command_start topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -860,7 +860,7 @@ Validate ATArchiver Command atArchiver_command_start Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATArchiver Command atArchiver_command_start Topic Columns
+Validate AtArchiver Command atArchiver_command_start Topic Columns
 	[Documentation]    Validate the atArchiver_command_start topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -873,7 +873,7 @@ Validate ATArchiver Command atArchiver_command_start Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATArchiver Command atArchiver_command_enterControl Topic Byte Size
+Validate AtArchiver Command atArchiver_command_enterControl Topic Byte Size
 	[Documentation]    Validate the atArchiver_command_enterControl topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -896,7 +896,7 @@ Validate ATArchiver Command atArchiver_command_enterControl Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATArchiver Command atArchiver_command_enterControl Topic Columns
+Validate AtArchiver Command atArchiver_command_enterControl Topic Columns
 	[Documentation]    Validate the atArchiver_command_enterControl topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -909,7 +909,7 @@ Validate ATArchiver Command atArchiver_command_enterControl Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATArchiver Command atArchiver_command_setValue Topic Byte Size
+Validate AtArchiver Command atArchiver_command_setValue Topic Byte Size
 	[Documentation]    Validate the atArchiver_command_setValue topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -932,7 +932,7 @@ Validate ATArchiver Command atArchiver_command_setValue Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATArchiver Command atArchiver_command_setValue Topic Columns
+Validate AtArchiver Command atArchiver_command_setValue Topic Columns
 	[Documentation]    Validate the atArchiver_command_setValue topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -945,7 +945,7 @@ Validate ATArchiver Command atArchiver_command_setValue Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATArchiver Event atArchiver_logevent_DetailedState Topic Byte Size
+Validate AtArchiver Event atArchiver_logevent_DetailedState Topic Byte Size
 	[Documentation]    Validate the atArchiver_logevent_DetailedState topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -968,7 +968,7 @@ Validate ATArchiver Event atArchiver_logevent_DetailedState Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATArchiver Event atArchiver_logevent_DetailedState Topic Columns
+Validate AtArchiver Event atArchiver_logevent_DetailedState Topic Columns
 	[Documentation]    Validate the atArchiver_logevent_DetailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -981,7 +981,7 @@ Validate ATArchiver Event atArchiver_logevent_DetailedState Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATArchiver Event atArchiver_logevent_archiverEntityStartup Topic Byte Size
+Validate AtArchiver Event atArchiver_logevent_archiverEntityStartup Topic Byte Size
 	[Documentation]    Validate the atArchiver_logevent_archiverEntityStartup topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -1004,7 +1004,7 @@ Validate ATArchiver Event atArchiver_logevent_archiverEntityStartup Topic Byte S
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATArchiver Event atArchiver_logevent_archiverEntityStartup Topic Columns
+Validate AtArchiver Event atArchiver_logevent_archiverEntityStartup Topic Columns
 	[Documentation]    Validate the atArchiver_logevent_archiverEntityStartup topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -1017,7 +1017,7 @@ Validate ATArchiver Event atArchiver_logevent_archiverEntityStartup Topic Column
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATArchiver Event atArchiver_logevent_SettingVersions Topic Byte Size
+Validate AtArchiver Event atArchiver_logevent_SettingVersions Topic Byte Size
 	[Documentation]    Validate the atArchiver_logevent_SettingVersions topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -1040,7 +1040,7 @@ Validate ATArchiver Event atArchiver_logevent_SettingVersions Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATArchiver Event atArchiver_logevent_SettingVersions Topic Columns
+Validate AtArchiver Event atArchiver_logevent_SettingVersions Topic Columns
 	[Documentation]    Validate the atArchiver_logevent_SettingVersions topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -1053,7 +1053,7 @@ Validate ATArchiver Event atArchiver_logevent_SettingVersions Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATArchiver Event atArchiver_logevent_archiverEntitySummaryState Topic Byte Size
+Validate AtArchiver Event atArchiver_logevent_archiverEntitySummaryState Topic Byte Size
 	[Documentation]    Validate the atArchiver_logevent_archiverEntitySummaryState topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -1076,7 +1076,7 @@ Validate ATArchiver Event atArchiver_logevent_archiverEntitySummaryState Topic B
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATArchiver Event atArchiver_logevent_archiverEntitySummaryState Topic Columns
+Validate AtArchiver Event atArchiver_logevent_archiverEntitySummaryState Topic Columns
 	[Documentation]    Validate the atArchiver_logevent_archiverEntitySummaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -1089,7 +1089,7 @@ Validate ATArchiver Event atArchiver_logevent_archiverEntitySummaryState Topic C
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATArchiver Event atArchiver_logevent_ErrorCode Topic Byte Size
+Validate AtArchiver Event atArchiver_logevent_ErrorCode Topic Byte Size
 	[Documentation]    Validate the atArchiver_logevent_ErrorCode topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -1112,7 +1112,7 @@ Validate ATArchiver Event atArchiver_logevent_ErrorCode Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATArchiver Event atArchiver_logevent_ErrorCode Topic Columns
+Validate AtArchiver Event atArchiver_logevent_ErrorCode Topic Columns
 	[Documentation]    Validate the atArchiver_logevent_ErrorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -1125,7 +1125,7 @@ Validate ATArchiver Event atArchiver_logevent_ErrorCode Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATArchiver Event atArchiver_logevent_archiverEntityShutdown Topic Byte Size
+Validate AtArchiver Event atArchiver_logevent_archiverEntityShutdown Topic Byte Size
 	[Documentation]    Validate the atArchiver_logevent_archiverEntityShutdown topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -1148,7 +1148,7 @@ Validate ATArchiver Event atArchiver_logevent_archiverEntityShutdown Topic Byte 
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATArchiver Event atArchiver_logevent_archiverEntityShutdown Topic Columns
+Validate AtArchiver Event atArchiver_logevent_archiverEntityShutdown Topic Columns
 	[Documentation]    Validate the atArchiver_logevent_archiverEntityShutdown topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -1161,7 +1161,7 @@ Validate ATArchiver Event atArchiver_logevent_archiverEntityShutdown Topic Colum
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATArchiver Event atArchiver_logevent_SummaryState Topic Byte Size
+Validate AtArchiver Event atArchiver_logevent_SummaryState Topic Byte Size
 	[Documentation]    Validate the atArchiver_logevent_SummaryState topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -1184,7 +1184,7 @@ Validate ATArchiver Event atArchiver_logevent_SummaryState Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATArchiver Event atArchiver_logevent_SummaryState Topic Columns
+Validate AtArchiver Event atArchiver_logevent_SummaryState Topic Columns
 	[Documentation]    Validate the atArchiver_logevent_SummaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -1197,7 +1197,7 @@ Validate ATArchiver Event atArchiver_logevent_SummaryState Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATArchiver Event atArchiver_logevent_AppliedSettingsMatchStart Topic Byte Size
+Validate AtArchiver Event atArchiver_logevent_AppliedSettingsMatchStart Topic Byte Size
 	[Documentation]    Validate the atArchiver_logevent_AppliedSettingsMatchStart topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -1220,7 +1220,7 @@ Validate ATArchiver Event atArchiver_logevent_AppliedSettingsMatchStart Topic By
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATArchiver Event atArchiver_logevent_AppliedSettingsMatchStart Topic Columns
+Validate AtArchiver Event atArchiver_logevent_AppliedSettingsMatchStart Topic Columns
 	[Documentation]    Validate the atArchiver_logevent_AppliedSettingsMatchStart topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -1233,7 +1233,7 @@ Validate ATArchiver Event atArchiver_logevent_AppliedSettingsMatchStart Topic Co
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATArchiver Event atArchiver_logevent_SettingsApplied Topic Byte Size
+Validate AtArchiver Event atArchiver_logevent_SettingsApplied Topic Byte Size
 	[Documentation]    Validate the atArchiver_logevent_SettingsApplied topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -1256,7 +1256,7 @@ Validate ATArchiver Event atArchiver_logevent_SettingsApplied Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATArchiver Event atArchiver_logevent_SettingsApplied Topic Columns
+Validate AtArchiver Event atArchiver_logevent_SettingsApplied Topic Columns
 	[Documentation]    Validate the atArchiver_logevent_SettingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -1269,7 +1269,7 @@ Validate ATArchiver Event atArchiver_logevent_SettingsApplied Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATArchiver Telemetry atArchiver_SequencerHeartbeat Topic Byte Size
+Validate AtArchiver Telemetry atArchiver_SequencerHeartbeat Topic Byte Size
 	[Documentation]    Validate the atArchiver_SequencerHeartbeat topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -1292,7 +1292,7 @@ Validate ATArchiver Telemetry atArchiver_SequencerHeartbeat Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATArchiver Telemetry atArchiver_SequencerHeartbeat Topic Columns
+Validate AtArchiver Telemetry atArchiver_SequencerHeartbeat Topic Columns
 	[Documentation]    Validate the atArchiver_SequencerHeartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -1305,7 +1305,7 @@ Validate ATArchiver Telemetry atArchiver_SequencerHeartbeat Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATHeaderService Command atHeaderService_command_enable Topic Byte Size
+Validate AtHeaderService Command atHeaderService_command_enable Topic Byte Size
 	[Documentation]    Validate the atHeaderService_command_enable topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -1328,7 +1328,7 @@ Validate ATHeaderService Command atHeaderService_command_enable Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATHeaderService Command atHeaderService_command_enable Topic Columns
+Validate AtHeaderService Command atHeaderService_command_enable Topic Columns
 	[Documentation]    Validate the atHeaderService_command_enable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -1341,7 +1341,7 @@ Validate ATHeaderService Command atHeaderService_command_enable Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATHeaderService Command atHeaderService_command_exitControl Topic Byte Size
+Validate AtHeaderService Command atHeaderService_command_exitControl Topic Byte Size
 	[Documentation]    Validate the atHeaderService_command_exitControl topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -1364,7 +1364,7 @@ Validate ATHeaderService Command atHeaderService_command_exitControl Topic Byte 
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATHeaderService Command atHeaderService_command_exitControl Topic Columns
+Validate AtHeaderService Command atHeaderService_command_exitControl Topic Columns
 	[Documentation]    Validate the atHeaderService_command_exitControl topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -1377,7 +1377,7 @@ Validate ATHeaderService Command atHeaderService_command_exitControl Topic Colum
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATHeaderService Command atHeaderService_command_start Topic Byte Size
+Validate AtHeaderService Command atHeaderService_command_start Topic Byte Size
 	[Documentation]    Validate the atHeaderService_command_start topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -1400,7 +1400,7 @@ Validate ATHeaderService Command atHeaderService_command_start Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATHeaderService Command atHeaderService_command_start Topic Columns
+Validate AtHeaderService Command atHeaderService_command_start Topic Columns
 	[Documentation]    Validate the atHeaderService_command_start topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -1413,7 +1413,7 @@ Validate ATHeaderService Command atHeaderService_command_start Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATHeaderService Command atHeaderService_command_standby Topic Byte Size
+Validate AtHeaderService Command atHeaderService_command_standby Topic Byte Size
 	[Documentation]    Validate the atHeaderService_command_standby topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -1436,7 +1436,7 @@ Validate ATHeaderService Command atHeaderService_command_standby Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATHeaderService Command atHeaderService_command_standby Topic Columns
+Validate AtHeaderService Command atHeaderService_command_standby Topic Columns
 	[Documentation]    Validate the atHeaderService_command_standby topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -1449,7 +1449,7 @@ Validate ATHeaderService Command atHeaderService_command_standby Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATHeaderService Command atHeaderService_command_disable Topic Byte Size
+Validate AtHeaderService Command atHeaderService_command_disable Topic Byte Size
 	[Documentation]    Validate the atHeaderService_command_disable topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -1472,7 +1472,7 @@ Validate ATHeaderService Command atHeaderService_command_disable Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATHeaderService Command atHeaderService_command_disable Topic Columns
+Validate AtHeaderService Command atHeaderService_command_disable Topic Columns
 	[Documentation]    Validate the atHeaderService_command_disable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -1485,7 +1485,7 @@ Validate ATHeaderService Command atHeaderService_command_disable Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATHeaderService Command atHeaderService_command_enterControl Topic Byte Size
+Validate AtHeaderService Command atHeaderService_command_enterControl Topic Byte Size
 	[Documentation]    Validate the atHeaderService_command_enterControl topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -1508,7 +1508,7 @@ Validate ATHeaderService Command atHeaderService_command_enterControl Topic Byte
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATHeaderService Command atHeaderService_command_enterControl Topic Columns
+Validate AtHeaderService Command atHeaderService_command_enterControl Topic Columns
 	[Documentation]    Validate the atHeaderService_command_enterControl topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -1521,7 +1521,7 @@ Validate ATHeaderService Command atHeaderService_command_enterControl Topic Colu
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATHeaderService Event atHeaderService_logevent_Heartbeat Topic Byte Size
+Validate AtHeaderService Event atHeaderService_logevent_Heartbeat Topic Byte Size
 	[Documentation]    Validate the atHeaderService_logevent_Heartbeat topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -1544,7 +1544,7 @@ Validate ATHeaderService Event atHeaderService_logevent_Heartbeat Topic Byte Siz
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATHeaderService Event atHeaderService_logevent_Heartbeat Topic Columns
+Validate AtHeaderService Event atHeaderService_logevent_Heartbeat Topic Columns
 	[Documentation]    Validate the atHeaderService_logevent_Heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -1557,7 +1557,7 @@ Validate ATHeaderService Event atHeaderService_logevent_Heartbeat Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATHeaderService Event atHeaderService_logevent_AppliedSettingsMatchStart Topic Byte Size
+Validate AtHeaderService Event atHeaderService_logevent_AppliedSettingsMatchStart Topic Byte Size
 	[Documentation]    Validate the atHeaderService_logevent_AppliedSettingsMatchStart topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -1580,7 +1580,7 @@ Validate ATHeaderService Event atHeaderService_logevent_AppliedSettingsMatchStar
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATHeaderService Event atHeaderService_logevent_AppliedSettingsMatchStart Topic Columns
+Validate AtHeaderService Event atHeaderService_logevent_AppliedSettingsMatchStart Topic Columns
 	[Documentation]    Validate the atHeaderService_logevent_AppliedSettingsMatchStart topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -1593,7 +1593,7 @@ Validate ATHeaderService Event atHeaderService_logevent_AppliedSettingsMatchStar
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATHeaderService Event atHeaderService_logevent_LoopTimeOutOfRange Topic Byte Size
+Validate AtHeaderService Event atHeaderService_logevent_LoopTimeOutOfRange Topic Byte Size
 	[Documentation]    Validate the atHeaderService_logevent_LoopTimeOutOfRange topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -1616,7 +1616,7 @@ Validate ATHeaderService Event atHeaderService_logevent_LoopTimeOutOfRange Topic
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATHeaderService Event atHeaderService_logevent_LoopTimeOutOfRange Topic Columns
+Validate AtHeaderService Event atHeaderService_logevent_LoopTimeOutOfRange Topic Columns
 	[Documentation]    Validate the atHeaderService_logevent_LoopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -1629,7 +1629,7 @@ Validate ATHeaderService Event atHeaderService_logevent_LoopTimeOutOfRange Topic
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATHeaderService Event atHeaderService_logevent_RejectedCommand Topic Byte Size
+Validate AtHeaderService Event atHeaderService_logevent_RejectedCommand Topic Byte Size
 	[Documentation]    Validate the atHeaderService_logevent_RejectedCommand topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -1652,7 +1652,7 @@ Validate ATHeaderService Event atHeaderService_logevent_RejectedCommand Topic By
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATHeaderService Event atHeaderService_logevent_RejectedCommand Topic Columns
+Validate AtHeaderService Event atHeaderService_logevent_RejectedCommand Topic Columns
 	[Documentation]    Validate the atHeaderService_logevent_RejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -1665,7 +1665,7 @@ Validate ATHeaderService Event atHeaderService_logevent_RejectedCommand Topic Co
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATHeaderService Event atHeaderService_logevent_SettingsApplied Topic Byte Size
+Validate AtHeaderService Event atHeaderService_logevent_SettingsApplied Topic Byte Size
 	[Documentation]    Validate the atHeaderService_logevent_SettingsApplied topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -1688,7 +1688,7 @@ Validate ATHeaderService Event atHeaderService_logevent_SettingsApplied Topic By
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATHeaderService Event atHeaderService_logevent_SettingsApplied Topic Columns
+Validate AtHeaderService Event atHeaderService_logevent_SettingsApplied Topic Columns
 	[Documentation]    Validate the atHeaderService_logevent_SettingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -1701,7 +1701,7 @@ Validate ATHeaderService Event atHeaderService_logevent_SettingsApplied Topic Co
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATHeaderService Event atHeaderService_logevent_DetailedState Topic Byte Size
+Validate AtHeaderService Event atHeaderService_logevent_DetailedState Topic Byte Size
 	[Documentation]    Validate the atHeaderService_logevent_DetailedState topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -1724,7 +1724,7 @@ Validate ATHeaderService Event atHeaderService_logevent_DetailedState Topic Byte
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATHeaderService Event atHeaderService_logevent_DetailedState Topic Columns
+Validate AtHeaderService Event atHeaderService_logevent_DetailedState Topic Columns
 	[Documentation]    Validate the atHeaderService_logevent_DetailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -1737,7 +1737,7 @@ Validate ATHeaderService Event atHeaderService_logevent_DetailedState Topic Colu
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATHeaderService Event atHeaderService_logevent_LargeFileObjectAvailable Topic Byte Size
+Validate AtHeaderService Event atHeaderService_logevent_LargeFileObjectAvailable Topic Byte Size
 	[Documentation]    Validate the atHeaderService_logevent_LargeFileObjectAvailable topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -1760,7 +1760,7 @@ Validate ATHeaderService Event atHeaderService_logevent_LargeFileObjectAvailable
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATHeaderService Event atHeaderService_logevent_LargeFileObjectAvailable Topic Columns
+Validate AtHeaderService Event atHeaderService_logevent_LargeFileObjectAvailable Topic Columns
 	[Documentation]    Validate the atHeaderService_logevent_LargeFileObjectAvailable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -1773,7 +1773,7 @@ Validate ATHeaderService Event atHeaderService_logevent_LargeFileObjectAvailable
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATHeaderService Event atHeaderService_logevent_SummaryState Topic Byte Size
+Validate AtHeaderService Event atHeaderService_logevent_SummaryState Topic Byte Size
 	[Documentation]    Validate the atHeaderService_logevent_SummaryState topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -1796,7 +1796,7 @@ Validate ATHeaderService Event atHeaderService_logevent_SummaryState Topic Byte 
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATHeaderService Event atHeaderService_logevent_SummaryState Topic Columns
+Validate AtHeaderService Event atHeaderService_logevent_SummaryState Topic Columns
 	[Documentation]    Validate the atHeaderService_logevent_SummaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -1809,7 +1809,7 @@ Validate ATHeaderService Event atHeaderService_logevent_SummaryState Topic Colum
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATHeaderService Event atHeaderService_logevent_ErrorCode Topic Byte Size
+Validate AtHeaderService Event atHeaderService_logevent_ErrorCode Topic Byte Size
 	[Documentation]    Validate the atHeaderService_logevent_ErrorCode topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -1832,7 +1832,7 @@ Validate ATHeaderService Event atHeaderService_logevent_ErrorCode Topic Byte Siz
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATHeaderService Event atHeaderService_logevent_ErrorCode Topic Columns
+Validate AtHeaderService Event atHeaderService_logevent_ErrorCode Topic Columns
 	[Documentation]    Validate the atHeaderService_logevent_ErrorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -1845,7 +1845,7 @@ Validate ATHeaderService Event atHeaderService_logevent_ErrorCode Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATHeaderService Event atHeaderService_logevent_SettingVersions Topic Byte Size
+Validate AtHeaderService Event atHeaderService_logevent_SettingVersions Topic Byte Size
 	[Documentation]    Validate the atHeaderService_logevent_SettingVersions topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -1868,7 +1868,7 @@ Validate ATHeaderService Event atHeaderService_logevent_SettingVersions Topic By
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATHeaderService Event atHeaderService_logevent_SettingVersions Topic Columns
+Validate AtHeaderService Event atHeaderService_logevent_SettingVersions Topic Columns
 	[Documentation]    Validate the atHeaderService_logevent_SettingVersions topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -1881,7 +1881,7 @@ Validate ATHeaderService Event atHeaderService_logevent_SettingVersions Topic Co
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATHeaderService Telemetry atHeaderService_LoopTime_ms Topic Byte Size
+Validate AtHeaderService Telemetry atHeaderService_LoopTime_ms Topic Byte Size
 	[Documentation]    Validate the atHeaderService_LoopTime_ms topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -1904,7 +1904,7 @@ Validate ATHeaderService Telemetry atHeaderService_LoopTime_ms Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATHeaderService Telemetry atHeaderService_LoopTime_ms Topic Columns
+Validate AtHeaderService Telemetry atHeaderService_LoopTime_ms Topic Columns
 	[Documentation]    Validate the atHeaderService_LoopTime_ms topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -1917,7 +1917,7 @@ Validate ATHeaderService Telemetry atHeaderService_LoopTime_ms Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATHeaderService Telemetry atHeaderService_Timestamp Topic Byte Size
+Validate AtHeaderService Telemetry atHeaderService_Timestamp Topic Byte Size
 	[Documentation]    Validate the atHeaderService_Timestamp topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -1940,7 +1940,7 @@ Validate ATHeaderService Telemetry atHeaderService_Timestamp Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATHeaderService Telemetry atHeaderService_Timestamp Topic Columns
+Validate AtHeaderService Telemetry atHeaderService_Timestamp Topic Columns
 	[Documentation]    Validate the atHeaderService_Timestamp topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -1953,7 +1953,7 @@ Validate ATHeaderService Telemetry atHeaderService_Timestamp Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Command atMonochromator_command_disable Topic Byte Size
+Validate AtMonochromator Command atMonochromator_command_disable Topic Byte Size
 	[Documentation]    Validate the atMonochromator_command_disable topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -1976,7 +1976,7 @@ Validate ATMonochromator Command atMonochromator_command_disable Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Command atMonochromator_command_disable Topic Columns
+Validate AtMonochromator Command atMonochromator_command_disable Topic Columns
 	[Documentation]    Validate the atMonochromator_command_disable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -1989,7 +1989,7 @@ Validate ATMonochromator Command atMonochromator_command_disable Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Command atMonochromator_command_enable Topic Byte Size
+Validate AtMonochromator Command atMonochromator_command_enable Topic Byte Size
 	[Documentation]    Validate the atMonochromator_command_enable topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -2012,7 +2012,7 @@ Validate ATMonochromator Command atMonochromator_command_enable Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Command atMonochromator_command_enable Topic Columns
+Validate AtMonochromator Command atMonochromator_command_enable Topic Columns
 	[Documentation]    Validate the atMonochromator_command_enable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -2025,7 +2025,7 @@ Validate ATMonochromator Command atMonochromator_command_enable Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Command atMonochromator_command_exitControl Topic Byte Size
+Validate AtMonochromator Command atMonochromator_command_exitControl Topic Byte Size
 	[Documentation]    Validate the atMonochromator_command_exitControl topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -2048,7 +2048,7 @@ Validate ATMonochromator Command atMonochromator_command_exitControl Topic Byte 
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Command atMonochromator_command_exitControl Topic Columns
+Validate AtMonochromator Command atMonochromator_command_exitControl Topic Columns
 	[Documentation]    Validate the atMonochromator_command_exitControl topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -2061,7 +2061,7 @@ Validate ATMonochromator Command atMonochromator_command_exitControl Topic Colum
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Command atMonochromator_command_standby Topic Byte Size
+Validate AtMonochromator Command atMonochromator_command_standby Topic Byte Size
 	[Documentation]    Validate the atMonochromator_command_standby topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -2084,7 +2084,7 @@ Validate ATMonochromator Command atMonochromator_command_standby Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Command atMonochromator_command_standby Topic Columns
+Validate AtMonochromator Command atMonochromator_command_standby Topic Columns
 	[Documentation]    Validate the atMonochromator_command_standby topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -2097,7 +2097,7 @@ Validate ATMonochromator Command atMonochromator_command_standby Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Command atMonochromator_command_start Topic Byte Size
+Validate AtMonochromator Command atMonochromator_command_start Topic Byte Size
 	[Documentation]    Validate the atMonochromator_command_start topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -2120,7 +2120,7 @@ Validate ATMonochromator Command atMonochromator_command_start Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Command atMonochromator_command_start Topic Columns
+Validate AtMonochromator Command atMonochromator_command_start Topic Columns
 	[Documentation]    Validate the atMonochromator_command_start topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -2133,7 +2133,7 @@ Validate ATMonochromator Command atMonochromator_command_start Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Command atMonochromator_command_enterControl Topic Byte Size
+Validate AtMonochromator Command atMonochromator_command_enterControl Topic Byte Size
 	[Documentation]    Validate the atMonochromator_command_enterControl topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -2156,7 +2156,7 @@ Validate ATMonochromator Command atMonochromator_command_enterControl Topic Byte
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Command atMonochromator_command_enterControl Topic Columns
+Validate AtMonochromator Command atMonochromator_command_enterControl Topic Columns
 	[Documentation]    Validate the atMonochromator_command_enterControl topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -2169,7 +2169,7 @@ Validate ATMonochromator Command atMonochromator_command_enterControl Topic Colu
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Command atMonochromator_command_ChangeWavelength Topic Byte Size
+Validate AtMonochromator Command atMonochromator_command_ChangeWavelength Topic Byte Size
 	[Documentation]    Validate the atMonochromator_command_ChangeWavelength topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -2192,7 +2192,7 @@ Validate ATMonochromator Command atMonochromator_command_ChangeWavelength Topic 
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Command atMonochromator_command_ChangeWavelength Topic Columns
+Validate AtMonochromator Command atMonochromator_command_ChangeWavelength Topic Columns
 	[Documentation]    Validate the atMonochromator_command_ChangeWavelength topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -2205,7 +2205,7 @@ Validate ATMonochromator Command atMonochromator_command_ChangeWavelength Topic 
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Command atMonochromator_command_CalibrateWavelength Topic Byte Size
+Validate AtMonochromator Command atMonochromator_command_CalibrateWavelength Topic Byte Size
 	[Documentation]    Validate the atMonochromator_command_CalibrateWavelength topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -2228,7 +2228,7 @@ Validate ATMonochromator Command atMonochromator_command_CalibrateWavelength Top
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Command atMonochromator_command_CalibrateWavelength Topic Columns
+Validate AtMonochromator Command atMonochromator_command_CalibrateWavelength Topic Columns
 	[Documentation]    Validate the atMonochromator_command_CalibrateWavelength topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -2241,7 +2241,7 @@ Validate ATMonochromator Command atMonochromator_command_CalibrateWavelength Top
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Command atMonochromator_command_Power Topic Byte Size
+Validate AtMonochromator Command atMonochromator_command_Power Topic Byte Size
 	[Documentation]    Validate the atMonochromator_command_Power topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -2264,7 +2264,7 @@ Validate ATMonochromator Command atMonochromator_command_Power Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Command atMonochromator_command_Power Topic Columns
+Validate AtMonochromator Command atMonochromator_command_Power Topic Columns
 	[Documentation]    Validate the atMonochromator_command_Power topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -2277,7 +2277,7 @@ Validate ATMonochromator Command atMonochromator_command_Power Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Command atMonochromator_command_SelectGrating Topic Byte Size
+Validate AtMonochromator Command atMonochromator_command_SelectGrating Topic Byte Size
 	[Documentation]    Validate the atMonochromator_command_SelectGrating topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -2300,7 +2300,7 @@ Validate ATMonochromator Command atMonochromator_command_SelectGrating Topic Byt
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Command atMonochromator_command_SelectGrating Topic Columns
+Validate AtMonochromator Command atMonochromator_command_SelectGrating Topic Columns
 	[Documentation]    Validate the atMonochromator_command_SelectGrating topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -2313,7 +2313,7 @@ Validate ATMonochromator Command atMonochromator_command_SelectGrating Topic Col
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Command atMonochromator_command_PowerWhiteLight Topic Byte Size
+Validate AtMonochromator Command atMonochromator_command_PowerWhiteLight Topic Byte Size
 	[Documentation]    Validate the atMonochromator_command_PowerWhiteLight topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -2336,7 +2336,7 @@ Validate ATMonochromator Command atMonochromator_command_PowerWhiteLight Topic B
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Command atMonochromator_command_PowerWhiteLight Topic Columns
+Validate AtMonochromator Command atMonochromator_command_PowerWhiteLight Topic Columns
 	[Documentation]    Validate the atMonochromator_command_PowerWhiteLight topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -2349,7 +2349,7 @@ Validate ATMonochromator Command atMonochromator_command_PowerWhiteLight Topic C
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Command atMonochromator_command_SetCoolingTemperature Topic Byte Size
+Validate AtMonochromator Command atMonochromator_command_SetCoolingTemperature Topic Byte Size
 	[Documentation]    Validate the atMonochromator_command_SetCoolingTemperature topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -2372,7 +2372,7 @@ Validate ATMonochromator Command atMonochromator_command_SetCoolingTemperature T
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Command atMonochromator_command_SetCoolingTemperature Topic Columns
+Validate AtMonochromator Command atMonochromator_command_SetCoolingTemperature Topic Columns
 	[Documentation]    Validate the atMonochromator_command_SetCoolingTemperature topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -2385,7 +2385,7 @@ Validate ATMonochromator Command atMonochromator_command_SetCoolingTemperature T
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Command atMonochromator_command_ChangeLightIntensity Topic Byte Size
+Validate AtMonochromator Command atMonochromator_command_ChangeLightIntensity Topic Byte Size
 	[Documentation]    Validate the atMonochromator_command_ChangeLightIntensity topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -2408,7 +2408,7 @@ Validate ATMonochromator Command atMonochromator_command_ChangeLightIntensity To
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Command atMonochromator_command_ChangeLightIntensity Topic Columns
+Validate AtMonochromator Command atMonochromator_command_ChangeLightIntensity Topic Columns
 	[Documentation]    Validate the atMonochromator_command_ChangeLightIntensity topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -2421,7 +2421,7 @@ Validate ATMonochromator Command atMonochromator_command_ChangeLightIntensity To
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Command atMonochromator_command_ChangeSlitWidth Topic Byte Size
+Validate AtMonochromator Command atMonochromator_command_ChangeSlitWidth Topic Byte Size
 	[Documentation]    Validate the atMonochromator_command_ChangeSlitWidth topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -2444,7 +2444,7 @@ Validate ATMonochromator Command atMonochromator_command_ChangeSlitWidth Topic B
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Command atMonochromator_command_ChangeSlitWidth Topic Columns
+Validate AtMonochromator Command atMonochromator_command_ChangeSlitWidth Topic Columns
 	[Documentation]    Validate the atMonochromator_command_ChangeSlitWidth topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -2457,7 +2457,7 @@ Validate ATMonochromator Command atMonochromator_command_ChangeSlitWidth Topic C
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Command atMonochromator_command_updateMonochromatorSetup Topic Byte Size
+Validate AtMonochromator Command atMonochromator_command_updateMonochromatorSetup Topic Byte Size
 	[Documentation]    Validate the atMonochromator_command_updateMonochromatorSetup topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -2480,7 +2480,7 @@ Validate ATMonochromator Command atMonochromator_command_updateMonochromatorSetu
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Command atMonochromator_command_updateMonochromatorSetup Topic Columns
+Validate AtMonochromator Command atMonochromator_command_updateMonochromatorSetup Topic Columns
 	[Documentation]    Validate the atMonochromator_command_updateMonochromatorSetup topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -2493,7 +2493,7 @@ Validate ATMonochromator Command atMonochromator_command_updateMonochromatorSetu
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Event atMonochromator_logevent_AppliedSettingsMatchStart Topic Byte Size
+Validate AtMonochromator Event atMonochromator_logevent_AppliedSettingsMatchStart Topic Byte Size
 	[Documentation]    Validate the atMonochromator_logevent_AppliedSettingsMatchStart topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -2516,7 +2516,7 @@ Validate ATMonochromator Event atMonochromator_logevent_AppliedSettingsMatchStar
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Event atMonochromator_logevent_AppliedSettingsMatchStart Topic Columns
+Validate AtMonochromator Event atMonochromator_logevent_AppliedSettingsMatchStart Topic Columns
 	[Documentation]    Validate the atMonochromator_logevent_AppliedSettingsMatchStart topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -2529,7 +2529,7 @@ Validate ATMonochromator Event atMonochromator_logevent_AppliedSettingsMatchStar
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Event atMonochromator_logevent_ErrorCode Topic Byte Size
+Validate AtMonochromator Event atMonochromator_logevent_ErrorCode Topic Byte Size
 	[Documentation]    Validate the atMonochromator_logevent_ErrorCode topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -2552,7 +2552,7 @@ Validate ATMonochromator Event atMonochromator_logevent_ErrorCode Topic Byte Siz
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Event atMonochromator_logevent_ErrorCode Topic Columns
+Validate AtMonochromator Event atMonochromator_logevent_ErrorCode Topic Columns
 	[Documentation]    Validate the atMonochromator_logevent_ErrorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -2565,7 +2565,7 @@ Validate ATMonochromator Event atMonochromator_logevent_ErrorCode Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Event atMonochromator_logevent_SettingVersions Topic Byte Size
+Validate AtMonochromator Event atMonochromator_logevent_SettingVersions Topic Byte Size
 	[Documentation]    Validate the atMonochromator_logevent_SettingVersions topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -2588,7 +2588,7 @@ Validate ATMonochromator Event atMonochromator_logevent_SettingVersions Topic By
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Event atMonochromator_logevent_SettingVersions Topic Columns
+Validate AtMonochromator Event atMonochromator_logevent_SettingVersions Topic Columns
 	[Documentation]    Validate the atMonochromator_logevent_SettingVersions topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -2601,7 +2601,7 @@ Validate ATMonochromator Event atMonochromator_logevent_SettingVersions Topic Co
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Event atMonochromator_logevent_SummaryState Topic Byte Size
+Validate AtMonochromator Event atMonochromator_logevent_SummaryState Topic Byte Size
 	[Documentation]    Validate the atMonochromator_logevent_SummaryState topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -2624,7 +2624,7 @@ Validate ATMonochromator Event atMonochromator_logevent_SummaryState Topic Byte 
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Event atMonochromator_logevent_SummaryState Topic Columns
+Validate AtMonochromator Event atMonochromator_logevent_SummaryState Topic Columns
 	[Documentation]    Validate the atMonochromator_logevent_SummaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -2637,7 +2637,7 @@ Validate ATMonochromator Event atMonochromator_logevent_SummaryState Topic Colum
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Event atMonochromator_logevent_DetailedState Topic Byte Size
+Validate AtMonochromator Event atMonochromator_logevent_DetailedState Topic Byte Size
 	[Documentation]    Validate the atMonochromator_logevent_DetailedState topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -2660,7 +2660,7 @@ Validate ATMonochromator Event atMonochromator_logevent_DetailedState Topic Byte
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Event atMonochromator_logevent_DetailedState Topic Columns
+Validate AtMonochromator Event atMonochromator_logevent_DetailedState Topic Columns
 	[Documentation]    Validate the atMonochromator_logevent_DetailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -2673,7 +2673,7 @@ Validate ATMonochromator Event atMonochromator_logevent_DetailedState Topic Colu
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Event atMonochromator_logevent_InternalCommand Topic Byte Size
+Validate AtMonochromator Event atMonochromator_logevent_InternalCommand Topic Byte Size
 	[Documentation]    Validate the atMonochromator_logevent_InternalCommand topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -2696,7 +2696,7 @@ Validate ATMonochromator Event atMonochromator_logevent_InternalCommand Topic By
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Event atMonochromator_logevent_InternalCommand Topic Columns
+Validate AtMonochromator Event atMonochromator_logevent_InternalCommand Topic Columns
 	[Documentation]    Validate the atMonochromator_logevent_InternalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -2709,7 +2709,7 @@ Validate ATMonochromator Event atMonochromator_logevent_InternalCommand Topic Co
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Event atMonochromator_logevent_Heartbeat Topic Byte Size
+Validate AtMonochromator Event atMonochromator_logevent_Heartbeat Topic Byte Size
 	[Documentation]    Validate the atMonochromator_logevent_Heartbeat topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -2732,7 +2732,7 @@ Validate ATMonochromator Event atMonochromator_logevent_Heartbeat Topic Byte Siz
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Event atMonochromator_logevent_Heartbeat Topic Columns
+Validate AtMonochromator Event atMonochromator_logevent_Heartbeat Topic Columns
 	[Documentation]    Validate the atMonochromator_logevent_Heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -2745,7 +2745,7 @@ Validate ATMonochromator Event atMonochromator_logevent_Heartbeat Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Event atMonochromator_logevent_LoopTimeOutOfRange Topic Byte Size
+Validate AtMonochromator Event atMonochromator_logevent_LoopTimeOutOfRange Topic Byte Size
 	[Documentation]    Validate the atMonochromator_logevent_LoopTimeOutOfRange topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -2768,7 +2768,7 @@ Validate ATMonochromator Event atMonochromator_logevent_LoopTimeOutOfRange Topic
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Event atMonochromator_logevent_LoopTimeOutOfRange Topic Columns
+Validate AtMonochromator Event atMonochromator_logevent_LoopTimeOutOfRange Topic Columns
 	[Documentation]    Validate the atMonochromator_logevent_LoopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -2781,7 +2781,7 @@ Validate ATMonochromator Event atMonochromator_logevent_LoopTimeOutOfRange Topic
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Event atMonochromator_logevent_RejectedCommand Topic Byte Size
+Validate AtMonochromator Event atMonochromator_logevent_RejectedCommand Topic Byte Size
 	[Documentation]    Validate the atMonochromator_logevent_RejectedCommand topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -2804,7 +2804,7 @@ Validate ATMonochromator Event atMonochromator_logevent_RejectedCommand Topic By
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Event atMonochromator_logevent_RejectedCommand Topic Columns
+Validate AtMonochromator Event atMonochromator_logevent_RejectedCommand Topic Columns
 	[Documentation]    Validate the atMonochromator_logevent_RejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -2817,7 +2817,7 @@ Validate ATMonochromator Event atMonochromator_logevent_RejectedCommand Topic Co
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Event atMonochromator_logevent_CoolingMonitoring Topic Byte Size
+Validate AtMonochromator Event atMonochromator_logevent_CoolingMonitoring Topic Byte Size
 	[Documentation]    Validate the atMonochromator_logevent_CoolingMonitoring topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -2840,7 +2840,7 @@ Validate ATMonochromator Event atMonochromator_logevent_CoolingMonitoring Topic 
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Event atMonochromator_logevent_CoolingMonitoring Topic Columns
+Validate AtMonochromator Event atMonochromator_logevent_CoolingMonitoring Topic Columns
 	[Documentation]    Validate the atMonochromator_logevent_CoolingMonitoring topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -2853,7 +2853,7 @@ Validate ATMonochromator Event atMonochromator_logevent_CoolingMonitoring Topic 
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Event atMonochromator_logevent_SettingsAppliedMonoCommunication Topic Byte Size
+Validate AtMonochromator Event atMonochromator_logevent_SettingsAppliedMonoCommunication Topic Byte Size
 	[Documentation]    Validate the atMonochromator_logevent_SettingsAppliedMonoCommunication topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -2876,7 +2876,7 @@ Validate ATMonochromator Event atMonochromator_logevent_SettingsAppliedMonoCommu
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Event atMonochromator_logevent_SettingsAppliedMonoCommunication Topic Columns
+Validate AtMonochromator Event atMonochromator_logevent_SettingsAppliedMonoCommunication Topic Columns
 	[Documentation]    Validate the atMonochromator_logevent_SettingsAppliedMonoCommunication topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -2889,7 +2889,7 @@ Validate ATMonochromator Event atMonochromator_logevent_SettingsAppliedMonoCommu
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Event atMonochromator_logevent_LightStatus Topic Byte Size
+Validate AtMonochromator Event atMonochromator_logevent_LightStatus Topic Byte Size
 	[Documentation]    Validate the atMonochromator_logevent_LightStatus topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -2912,7 +2912,7 @@ Validate ATMonochromator Event atMonochromator_logevent_LightStatus Topic Byte S
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Event atMonochromator_logevent_LightStatus Topic Columns
+Validate AtMonochromator Event atMonochromator_logevent_LightStatus Topic Columns
 	[Documentation]    Validate the atMonochromator_logevent_LightStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -2925,7 +2925,7 @@ Validate ATMonochromator Event atMonochromator_logevent_LightStatus Topic Column
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Event atMonochromator_logevent_SelectedGrating Topic Byte Size
+Validate AtMonochromator Event atMonochromator_logevent_SelectedGrating Topic Byte Size
 	[Documentation]    Validate the atMonochromator_logevent_SelectedGrating topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -2948,7 +2948,7 @@ Validate ATMonochromator Event atMonochromator_logevent_SelectedGrating Topic By
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Event atMonochromator_logevent_SelectedGrating Topic Columns
+Validate AtMonochromator Event atMonochromator_logevent_SelectedGrating Topic Columns
 	[Documentation]    Validate the atMonochromator_logevent_SelectedGrating topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -2961,7 +2961,7 @@ Validate ATMonochromator Event atMonochromator_logevent_SelectedGrating Topic Co
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Event atMonochromator_logevent_Wavelength Topic Byte Size
+Validate AtMonochromator Event atMonochromator_logevent_Wavelength Topic Byte Size
 	[Documentation]    Validate the atMonochromator_logevent_Wavelength topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -2984,7 +2984,7 @@ Validate ATMonochromator Event atMonochromator_logevent_Wavelength Topic Byte Si
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Event atMonochromator_logevent_Wavelength Topic Columns
+Validate AtMonochromator Event atMonochromator_logevent_Wavelength Topic Columns
 	[Documentation]    Validate the atMonochromator_logevent_Wavelength topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -2997,7 +2997,7 @@ Validate ATMonochromator Event atMonochromator_logevent_Wavelength Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Event atMonochromator_logevent_LightIntensity Topic Byte Size
+Validate AtMonochromator Event atMonochromator_logevent_LightIntensity Topic Byte Size
 	[Documentation]    Validate the atMonochromator_logevent_LightIntensity topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -3020,7 +3020,7 @@ Validate ATMonochromator Event atMonochromator_logevent_LightIntensity Topic Byt
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Event atMonochromator_logevent_LightIntensity Topic Columns
+Validate AtMonochromator Event atMonochromator_logevent_LightIntensity Topic Columns
 	[Documentation]    Validate the atMonochromator_logevent_LightIntensity topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -3033,7 +3033,7 @@ Validate ATMonochromator Event atMonochromator_logevent_LightIntensity Topic Col
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Event atMonochromator_logevent_SlitWidth Topic Byte Size
+Validate AtMonochromator Event atMonochromator_logevent_SlitWidth Topic Byte Size
 	[Documentation]    Validate the atMonochromator_logevent_SlitWidth topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -3056,7 +3056,7 @@ Validate ATMonochromator Event atMonochromator_logevent_SlitWidth Topic Byte Siz
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Event atMonochromator_logevent_SlitWidth Topic Columns
+Validate AtMonochromator Event atMonochromator_logevent_SlitWidth Topic Columns
 	[Documentation]    Validate the atMonochromator_logevent_SlitWidth topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -3069,7 +3069,7 @@ Validate ATMonochromator Event atMonochromator_logevent_SlitWidth Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Event atMonochromator_logevent_inPosition Topic Byte Size
+Validate AtMonochromator Event atMonochromator_logevent_inPosition Topic Byte Size
 	[Documentation]    Validate the atMonochromator_logevent_inPosition topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -3092,7 +3092,7 @@ Validate ATMonochromator Event atMonochromator_logevent_inPosition Topic Byte Si
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Event atMonochromator_logevent_inPosition Topic Columns
+Validate AtMonochromator Event atMonochromator_logevent_inPosition Topic Columns
 	[Documentation]    Validate the atMonochromator_logevent_inPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -3105,7 +3105,7 @@ Validate ATMonochromator Event atMonochromator_logevent_inPosition Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Event atMonochromator_logevent_MonochromatorConnected Topic Byte Size
+Validate AtMonochromator Event atMonochromator_logevent_MonochromatorConnected Topic Byte Size
 	[Documentation]    Validate the atMonochromator_logevent_MonochromatorConnected topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -3128,7 +3128,7 @@ Validate ATMonochromator Event atMonochromator_logevent_MonochromatorConnected T
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Event atMonochromator_logevent_MonochromatorConnected Topic Columns
+Validate AtMonochromator Event atMonochromator_logevent_MonochromatorConnected Topic Columns
 	[Documentation]    Validate the atMonochromator_logevent_MonochromatorConnected topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -3141,7 +3141,7 @@ Validate ATMonochromator Event atMonochromator_logevent_MonochromatorConnected T
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Event atMonochromator_logevent_SettingsAppliedMonoHeartbeat Topic Byte Size
+Validate AtMonochromator Event atMonochromator_logevent_SettingsAppliedMonoHeartbeat Topic Byte Size
 	[Documentation]    Validate the atMonochromator_logevent_SettingsAppliedMonoHeartbeat topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -3164,7 +3164,7 @@ Validate ATMonochromator Event atMonochromator_logevent_SettingsAppliedMonoHeart
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Event atMonochromator_logevent_SettingsAppliedMonoHeartbeat Topic Columns
+Validate AtMonochromator Event atMonochromator_logevent_SettingsAppliedMonoHeartbeat Topic Columns
 	[Documentation]    Validate the atMonochromator_logevent_SettingsAppliedMonoHeartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -3177,7 +3177,7 @@ Validate ATMonochromator Event atMonochromator_logevent_SettingsAppliedMonoHeart
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Event atMonochromator_logevent_SettingsAppliedLoop Topic Byte Size
+Validate AtMonochromator Event atMonochromator_logevent_SettingsAppliedLoop Topic Byte Size
 	[Documentation]    Validate the atMonochromator_logevent_SettingsAppliedLoop topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -3200,7 +3200,7 @@ Validate ATMonochromator Event atMonochromator_logevent_SettingsAppliedLoop Topi
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Event atMonochromator_logevent_SettingsAppliedLoop Topic Columns
+Validate AtMonochromator Event atMonochromator_logevent_SettingsAppliedLoop Topic Columns
 	[Documentation]    Validate the atMonochromator_logevent_SettingsAppliedLoop topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -3213,7 +3213,7 @@ Validate ATMonochromator Event atMonochromator_logevent_SettingsAppliedLoop Topi
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Event atMonochromator_logevent_SettingsAppliedMonochromatorRanges Topic Byte Size
+Validate AtMonochromator Event atMonochromator_logevent_SettingsAppliedMonochromatorRanges Topic Byte Size
 	[Documentation]    Validate the atMonochromator_logevent_SettingsAppliedMonochromatorRanges topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -3236,7 +3236,7 @@ Validate ATMonochromator Event atMonochromator_logevent_SettingsAppliedMonochrom
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Event atMonochromator_logevent_SettingsAppliedMonochromatorRanges Topic Columns
+Validate AtMonochromator Event atMonochromator_logevent_SettingsAppliedMonochromatorRanges Topic Columns
 	[Documentation]    Validate the atMonochromator_logevent_SettingsAppliedMonochromatorRanges topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -3249,7 +3249,7 @@ Validate ATMonochromator Event atMonochromator_logevent_SettingsAppliedMonochrom
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Telemetry atMonochromator_Timestamp Topic Byte Size
+Validate AtMonochromator Telemetry atMonochromator_Timestamp Topic Byte Size
 	[Documentation]    Validate the atMonochromator_Timestamp topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -3272,7 +3272,7 @@ Validate ATMonochromator Telemetry atMonochromator_Timestamp Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Telemetry atMonochromator_Timestamp Topic Columns
+Validate AtMonochromator Telemetry atMonochromator_Timestamp Topic Columns
 	[Documentation]    Validate the atMonochromator_Timestamp topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -3285,7 +3285,7 @@ Validate ATMonochromator Telemetry atMonochromator_Timestamp Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Telemetry atMonochromator_LoopTime_ms Topic Byte Size
+Validate AtMonochromator Telemetry atMonochromator_LoopTime_ms Topic Byte Size
 	[Documentation]    Validate the atMonochromator_LoopTime_ms topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -3308,7 +3308,7 @@ Validate ATMonochromator Telemetry atMonochromator_LoopTime_ms Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Telemetry atMonochromator_LoopTime_ms Topic Columns
+Validate AtMonochromator Telemetry atMonochromator_LoopTime_ms Topic Columns
 	[Documentation]    Validate the atMonochromator_LoopTime_ms topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -3321,7 +3321,1699 @@ Validate ATMonochromator Telemetry atMonochromator_LoopTime_ms Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CalibrationElectrometer Command calibrationElectrometer_command_Disable Topic Byte Size
+Validate AtScheduler Event atScheduler_logevent_target Topic Byte Size
+	[Documentation]    Validate the atScheduler_logevent_target topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/atScheduler/atScheduler_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[1]/item/Count" -v . -n ${folder}/sal_interfaces/atScheduler/atScheduler_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[1]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atScheduler/atScheduler_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtScheduler Event atScheduler_logevent_target Topic Columns
+	[Documentation]    Validate the atScheduler_logevent_target topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/atScheduler/atScheduler_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[1]/item/Count" -v . -n ${folder}/sal_interfaces/atScheduler/atScheduler_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtScheduler Telemetry atScheduler_Heartbeat Topic Byte Size
+	[Documentation]    Validate the atScheduler_Heartbeat topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/atScheduler/atScheduler_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/Count" -v . -n ${folder}/sal_interfaces/atScheduler/atScheduler_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atScheduler/atScheduler_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtScheduler Telemetry atScheduler_Heartbeat Topic Columns
+	[Documentation]    Validate the atScheduler_Heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/atScheduler/atScheduler_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/Count" -v . -n ${folder}/sal_interfaces/atScheduler/atScheduler_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Command atcamera_command_discardRows Topic Byte Size
+	[Documentation]    Validate the atcamera_command_discardRows topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Command atcamera_command_discardRows Topic Columns
+	[Documentation]    Validate the atcamera_command_discardRows topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Command atcamera_command_enable Topic Byte Size
+	[Documentation]    Validate the atcamera_command_enable topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[2]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Command atcamera_command_enable Topic Columns
+	[Documentation]    Validate the atcamera_command_enable topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[2]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Command atcamera_command_setValue Topic Byte Size
+	[Documentation]    Validate the atcamera_command_setValue topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[3]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[3]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Command atcamera_command_setValue Topic Columns
+	[Documentation]    Validate the atcamera_command_setValue topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[3]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Command atcamera_command_startImage Topic Byte Size
+	[Documentation]    Validate the atcamera_command_startImage topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[4]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Command atcamera_command_startImage Topic Columns
+	[Documentation]    Validate the atcamera_command_startImage topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[4]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Command atcamera_command_disableCalibration Topic Byte Size
+	[Documentation]    Validate the atcamera_command_disableCalibration topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[5]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Command atcamera_command_disableCalibration Topic Columns
+	[Documentation]    Validate the atcamera_command_disableCalibration topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[5]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Command atcamera_command_initGuiders Topic Byte Size
+	[Documentation]    Validate the atcamera_command_initGuiders topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[6]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[6]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Command atcamera_command_initGuiders Topic Columns
+	[Documentation]    Validate the atcamera_command_initGuiders topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[6]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Command atcamera_command_standby Topic Byte Size
+	[Documentation]    Validate the atcamera_command_standby topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[7]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[7]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[7]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Command atcamera_command_standby Topic Columns
+	[Documentation]    Validate the atcamera_command_standby topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[7]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[7]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Command atcamera_command_enableCalibration Topic Byte Size
+	[Documentation]    Validate the atcamera_command_enableCalibration topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[8]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[8]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[8]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Command atcamera_command_enableCalibration Topic Columns
+	[Documentation]    Validate the atcamera_command_enableCalibration topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[8]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[8]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Command atcamera_command_initImage Topic Byte Size
+	[Documentation]    Validate the atcamera_command_initImage topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[9]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[9]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[9]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Command atcamera_command_initImage Topic Columns
+	[Documentation]    Validate the atcamera_command_initImage topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[9]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[9]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Command atcamera_command_enterControl Topic Byte Size
+	[Documentation]    Validate the atcamera_command_enterControl topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[10]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[10]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[10]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Command atcamera_command_enterControl Topic Columns
+	[Documentation]    Validate the atcamera_command_enterControl topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[10]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[10]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Command atcamera_command_endImage Topic Byte Size
+	[Documentation]    Validate the atcamera_command_endImage topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[11]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[11]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[11]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Command atcamera_command_endImage Topic Columns
+	[Documentation]    Validate the atcamera_command_endImage topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[11]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[11]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Command atcamera_command_disable Topic Byte Size
+	[Documentation]    Validate the atcamera_command_disable topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[12]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[12]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[12]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Command atcamera_command_disable Topic Columns
+	[Documentation]    Validate the atcamera_command_disable topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[12]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[12]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Command atcamera_command_abort Topic Byte Size
+	[Documentation]    Validate the atcamera_command_abort topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[13]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[13]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[13]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Command atcamera_command_abort Topic Columns
+	[Documentation]    Validate the atcamera_command_abort topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[13]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[13]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Command atcamera_command_clear Topic Byte Size
+	[Documentation]    Validate the atcamera_command_clear topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[14]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[14]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[14]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Command atcamera_command_clear Topic Columns
+	[Documentation]    Validate the atcamera_command_clear topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[14]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[14]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Command atcamera_command_exitControl Topic Byte Size
+	[Documentation]    Validate the atcamera_command_exitControl topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[15]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[15]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[15]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Command atcamera_command_exitControl Topic Columns
+	[Documentation]    Validate the atcamera_command_exitControl topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[15]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[15]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Command atcamera_command_takeImages Topic Byte Size
+	[Documentation]    Validate the atcamera_command_takeImages topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[16]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[16]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[16]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Command atcamera_command_takeImages Topic Columns
+	[Documentation]    Validate the atcamera_command_takeImages topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[16]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[16]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Command atcamera_command_start Topic Byte Size
+	[Documentation]    Validate the atcamera_command_start topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[17]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[17]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[17]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Command atcamera_command_start Topic Columns
+	[Documentation]    Validate the atcamera_command_start topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[17]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[17]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Command atcamera_command_stop Topic Byte Size
+	[Documentation]    Validate the atcamera_command_stop topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[18]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[18]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[18]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Command atcamera_command_stop Topic Columns
+	[Documentation]    Validate the atcamera_command_stop topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[18]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[18]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Event atcamera_logevent_offlineDetailedState Topic Byte Size
+	[Documentation]    Validate the atcamera_logevent_offlineDetailedState topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[1]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[1]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Event atcamera_logevent_offlineDetailedState Topic Columns
+	[Documentation]    Validate the atcamera_logevent_offlineDetailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[1]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Event atcamera_logevent_endReadout Topic Byte Size
+	[Documentation]    Validate the atcamera_logevent_endReadout topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Event atcamera_logevent_endReadout Topic Columns
+	[Documentation]    Validate the atcamera_logevent_endReadout topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Event atcamera_logevent_endTakeImage Topic Byte Size
+	[Documentation]    Validate the atcamera_logevent_endTakeImage topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Event atcamera_logevent_endTakeImage Topic Columns
+	[Documentation]    Validate the atcamera_logevent_endTakeImage topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Event atcamera_logevent_imageReadinessDetailedState Topic Byte Size
+	[Documentation]    Validate the atcamera_logevent_imageReadinessDetailedState topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Event atcamera_logevent_imageReadinessDetailedState Topic Columns
+	[Documentation]    Validate the atcamera_logevent_imageReadinessDetailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Event atcamera_logevent_SettingVersions Topic Byte Size
+	[Documentation]    Validate the atcamera_logevent_SettingVersions topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Event atcamera_logevent_SettingVersions Topic Columns
+	[Documentation]    Validate the atcamera_logevent_SettingVersions topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Event atcamera_logevent_notReadyToTakeImage Topic Byte Size
+	[Documentation]    Validate the atcamera_logevent_notReadyToTakeImage topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Event atcamera_logevent_notReadyToTakeImage Topic Columns
+	[Documentation]    Validate the atcamera_logevent_notReadyToTakeImage topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Event atcamera_logevent_startShutterClose Topic Byte Size
+	[Documentation]    Validate the atcamera_logevent_startShutterClose topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Event atcamera_logevent_startShutterClose Topic Columns
+	[Documentation]    Validate the atcamera_logevent_startShutterClose topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Event atcamera_logevent_AppliedSettingsMatchStart Topic Byte Size
+	[Documentation]    Validate the atcamera_logevent_AppliedSettingsMatchStart topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Event atcamera_logevent_AppliedSettingsMatchStart Topic Columns
+	[Documentation]    Validate the atcamera_logevent_AppliedSettingsMatchStart topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Event atcamera_logevent_ErrorCode Topic Byte Size
+	[Documentation]    Validate the atcamera_logevent_ErrorCode topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Event atcamera_logevent_ErrorCode Topic Columns
+	[Documentation]    Validate the atcamera_logevent_ErrorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Event atcamera_logevent_endShutterClose Topic Byte Size
+	[Documentation]    Validate the atcamera_logevent_endShutterClose topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Event atcamera_logevent_endShutterClose Topic Columns
+	[Documentation]    Validate the atcamera_logevent_endShutterClose topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Event atcamera_logevent_endOfImageTelemetry Topic Byte Size
+	[Documentation]    Validate the atcamera_logevent_endOfImageTelemetry topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[11]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[11]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Event atcamera_logevent_endOfImageTelemetry Topic Columns
+	[Documentation]    Validate the atcamera_logevent_endOfImageTelemetry topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[11]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Event atcamera_logevent_calibrationDetailedState Topic Byte Size
+	[Documentation]    Validate the atcamera_logevent_calibrationDetailedState topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[12]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[12]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[12]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Event atcamera_logevent_calibrationDetailedState Topic Columns
+	[Documentation]    Validate the atcamera_logevent_calibrationDetailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[12]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[12]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Event atcamera_logevent_shutterDetailedState Topic Byte Size
+	[Documentation]    Validate the atcamera_logevent_shutterDetailedState topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[13]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[13]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[13]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Event atcamera_logevent_shutterDetailedState Topic Columns
+	[Documentation]    Validate the atcamera_logevent_shutterDetailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[13]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[13]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Event atcamera_logevent_readyToTakeImage Topic Byte Size
+	[Documentation]    Validate the atcamera_logevent_readyToTakeImage topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[14]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[14]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[14]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Event atcamera_logevent_readyToTakeImage Topic Columns
+	[Documentation]    Validate the atcamera_logevent_readyToTakeImage topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[14]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[14]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Event atcamera_logevent_ccsCommandState Topic Byte Size
+	[Documentation]    Validate the atcamera_logevent_ccsCommandState topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[15]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[15]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[15]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Event atcamera_logevent_ccsCommandState Topic Columns
+	[Documentation]    Validate the atcamera_logevent_ccsCommandState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[15]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[15]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Event atcamera_logevent_prepareToTakeImage Topic Byte Size
+	[Documentation]    Validate the atcamera_logevent_prepareToTakeImage topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[16]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[16]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[16]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Event atcamera_logevent_prepareToTakeImage Topic Columns
+	[Documentation]    Validate the atcamera_logevent_prepareToTakeImage topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[16]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[16]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Event atcamera_logevent_endShutterOpen Topic Byte Size
+	[Documentation]    Validate the atcamera_logevent_endShutterOpen topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[17]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[17]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[17]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Event atcamera_logevent_endShutterOpen Topic Columns
+	[Documentation]    Validate the atcamera_logevent_endShutterOpen topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[17]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[17]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Event atcamera_logevent_startIntegration Topic Byte Size
+	[Documentation]    Validate the atcamera_logevent_startIntegration topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[18]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[18]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[18]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Event atcamera_logevent_startIntegration Topic Columns
+	[Documentation]    Validate the atcamera_logevent_startIntegration topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[18]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[18]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Event atcamera_logevent_SummaryState Topic Byte Size
+	[Documentation]    Validate the atcamera_logevent_SummaryState topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[19]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[19]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[19]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Event atcamera_logevent_SummaryState Topic Columns
+	[Documentation]    Validate the atcamera_logevent_SummaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[19]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[19]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Event atcamera_logevent_SettingsApplied Topic Byte Size
+	[Documentation]    Validate the atcamera_logevent_SettingsApplied topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[20]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[20]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[20]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Event atcamera_logevent_SettingsApplied Topic Columns
+	[Documentation]    Validate the atcamera_logevent_SettingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[20]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[20]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Event atcamera_logevent_startShutterOpen Topic Byte Size
+	[Documentation]    Validate the atcamera_logevent_startShutterOpen topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[21]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[21]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[21]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Event atcamera_logevent_startShutterOpen Topic Columns
+	[Documentation]    Validate the atcamera_logevent_startShutterOpen topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[21]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[21]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Event atcamera_logevent_raftsDetailedState Topic Byte Size
+	[Documentation]    Validate the atcamera_logevent_raftsDetailedState topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[22]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[22]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[22]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Event atcamera_logevent_raftsDetailedState Topic Columns
+	[Documentation]    Validate the atcamera_logevent_raftsDetailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[22]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[22]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Event atcamera_logevent_startReadout Topic Byte Size
+	[Documentation]    Validate the atcamera_logevent_startReadout topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[23]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[23]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[23]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Event atcamera_logevent_startReadout Topic Columns
+	[Documentation]    Validate the atcamera_logevent_startReadout topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[23]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[23]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Event atcamera_logevent_shutterMotionProfile Topic Byte Size
+	[Documentation]    Validate the atcamera_logevent_shutterMotionProfile topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[24]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[24]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[24]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Event atcamera_logevent_shutterMotionProfile Topic Columns
+	[Documentation]    Validate the atcamera_logevent_shutterMotionProfile topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[24]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[24]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Event atcamera_logevent_imageReadoutParameters Topic Byte Size
+	[Documentation]    Validate the atcamera_logevent_imageReadoutParameters topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[25]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[25]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[25]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Event atcamera_logevent_imageReadoutParameters Topic Columns
+	[Documentation]    Validate the atcamera_logevent_imageReadoutParameters topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[25]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[25]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Telemetry atcamera_Heartbeat Topic Byte Size
+	[Documentation]    Validate the atcamera_Heartbeat topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Telemetry atcamera_Heartbeat Topic Columns
+	[Documentation]    Validate the atcamera_Heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtCamera Telemetry atcamera_WREB Topic Byte Size
+	[Documentation]    Validate the atcamera_WREB topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[2]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtCamera Telemetry atcamera_WREB Topic Columns
+	[Documentation]    Validate the atcamera_WREB topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[2]/item/Count" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Calibrationelectrometer Command calibrationElectrometer_command_Disable Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_Disable topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -3344,7 +5036,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_Disable
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CalibrationElectrometer Command calibrationElectrometer_command_Disable Topic Columns
+Validate Calibrationelectrometer Command calibrationElectrometer_command_Disable Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_command_Disable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -3357,7 +5049,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_Disable
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CalibrationElectrometer Command calibrationElectrometer_command_Power Topic Byte Size
+Validate Calibrationelectrometer Command calibrationElectrometer_command_Power Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_Power topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -3380,7 +5072,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_Power T
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CalibrationElectrometer Command calibrationElectrometer_command_Power Topic Columns
+Validate Calibrationelectrometer Command calibrationElectrometer_command_Power Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_command_Power topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -3393,7 +5085,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_Power T
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CalibrationElectrometer Command calibrationElectrometer_command_StartScanReachIntensity Topic Byte Size
+Validate Calibrationelectrometer Command calibrationElectrometer_command_StartScanReachIntensity Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_StartScanReachIntensity topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -3416,7 +5108,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_StartSc
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CalibrationElectrometer Command calibrationElectrometer_command_StartScanReachIntensity Topic Columns
+Validate Calibrationelectrometer Command calibrationElectrometer_command_StartScanReachIntensity Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_command_StartScanReachIntensity topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -3429,7 +5121,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_StartSc
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CalibrationElectrometer Command calibrationElectrometer_command_SetIntegrationTime Topic Byte Size
+Validate Calibrationelectrometer Command calibrationElectrometer_command_SetIntegrationTime Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_SetIntegrationTime topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -3452,7 +5144,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_SetInte
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CalibrationElectrometer Command calibrationElectrometer_command_SetIntegrationTime Topic Columns
+Validate Calibrationelectrometer Command calibrationElectrometer_command_SetIntegrationTime Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_command_SetIntegrationTime topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -3465,7 +5157,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_SetInte
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CalibrationElectrometer Command calibrationElectrometer_command_ExitControl Topic Byte Size
+Validate Calibrationelectrometer Command calibrationElectrometer_command_ExitControl Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_ExitControl topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -3488,7 +5180,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_ExitCon
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CalibrationElectrometer Command calibrationElectrometer_command_ExitControl Topic Columns
+Validate Calibrationelectrometer Command calibrationElectrometer_command_ExitControl Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_command_ExitControl topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -3501,7 +5193,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_ExitCon
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CalibrationElectrometer Command calibrationElectrometer_command_Enable Topic Byte Size
+Validate Calibrationelectrometer Command calibrationElectrometer_command_Enable Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_Enable topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -3524,7 +5216,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_Enable 
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CalibrationElectrometer Command calibrationElectrometer_command_Enable Topic Columns
+Validate Calibrationelectrometer Command calibrationElectrometer_command_Enable Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_command_Enable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -3537,7 +5229,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_Enable 
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CalibrationElectrometer Command calibrationElectrometer_command_Standby Topic Byte Size
+Validate Calibrationelectrometer Command calibrationElectrometer_command_Standby Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_Standby topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -3560,7 +5252,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_Standby
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CalibrationElectrometer Command calibrationElectrometer_command_Standby Topic Columns
+Validate Calibrationelectrometer Command calibrationElectrometer_command_Standby Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_command_Standby topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -3573,7 +5265,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_Standby
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CalibrationElectrometer Command calibrationElectrometer_command_SetDigitalFilter Topic Byte Size
+Validate Calibrationelectrometer Command calibrationElectrometer_command_SetDigitalFilter Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_SetDigitalFilter topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -3596,7 +5288,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_SetDigi
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CalibrationElectrometer Command calibrationElectrometer_command_SetDigitalFilter Topic Columns
+Validate Calibrationelectrometer Command calibrationElectrometer_command_SetDigitalFilter Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_command_SetDigitalFilter topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -3609,7 +5301,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_SetDigi
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CalibrationElectrometer Command calibrationElectrometer_command_StartScanDt Topic Byte Size
+Validate Calibrationelectrometer Command calibrationElectrometer_command_StartScanDt Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_StartScanDt topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -3632,7 +5324,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_StartSc
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CalibrationElectrometer Command calibrationElectrometer_command_StartScanDt Topic Columns
+Validate Calibrationelectrometer Command calibrationElectrometer_command_StartScanDt Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_command_StartScanDt topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -3645,7 +5337,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_StartSc
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CalibrationElectrometer Command calibrationElectrometer_command_SetMode Topic Byte Size
+Validate Calibrationelectrometer Command calibrationElectrometer_command_SetMode Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_SetMode topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -3668,7 +5360,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_SetMode
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CalibrationElectrometer Command calibrationElectrometer_command_SetMode Topic Columns
+Validate Calibrationelectrometer Command calibrationElectrometer_command_SetMode Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_command_SetMode topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -3681,7 +5373,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_SetMode
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CalibrationElectrometer Command calibrationElectrometer_command_StartScan Topic Byte Size
+Validate Calibrationelectrometer Command calibrationElectrometer_command_StartScan Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_StartScan topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -3704,7 +5396,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_StartSc
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CalibrationElectrometer Command calibrationElectrometer_command_StartScan Topic Columns
+Validate Calibrationelectrometer Command calibrationElectrometer_command_StartScan Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_command_StartScan topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -3717,7 +5409,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_StartSc
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CalibrationElectrometer Command calibrationElectrometer_command_PerformZeroCalib Topic Byte Size
+Validate Calibrationelectrometer Command calibrationElectrometer_command_PerformZeroCalib Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_PerformZeroCalib topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -3740,7 +5432,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_Perform
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CalibrationElectrometer Command calibrationElectrometer_command_PerformZeroCalib Topic Columns
+Validate Calibrationelectrometer Command calibrationElectrometer_command_PerformZeroCalib Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_command_PerformZeroCalib topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -3753,7 +5445,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_Perform
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CalibrationElectrometer Command calibrationElectrometer_command_Start Topic Byte Size
+Validate Calibrationelectrometer Command calibrationElectrometer_command_Start Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_Start topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -3776,7 +5468,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_Start T
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CalibrationElectrometer Command calibrationElectrometer_command_Start Topic Columns
+Validate Calibrationelectrometer Command calibrationElectrometer_command_Start Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_command_Start topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -3789,7 +5481,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_Start T
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CalibrationElectrometer Command calibrationElectrometer_command_SetRange Topic Byte Size
+Validate Calibrationelectrometer Command calibrationElectrometer_command_SetRange Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_SetRange topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -3812,7 +5504,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_SetRang
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CalibrationElectrometer Command calibrationElectrometer_command_SetRange Topic Columns
+Validate Calibrationelectrometer Command calibrationElectrometer_command_SetRange Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_command_SetRange topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -3825,7 +5517,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_SetRang
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CalibrationElectrometer Command calibrationElectrometer_command_StopScan Topic Byte Size
+Validate Calibrationelectrometer Command calibrationElectrometer_command_StopScan Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_StopScan topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -3848,7 +5540,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_StopSca
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CalibrationElectrometer Command calibrationElectrometer_command_StopScan Topic Columns
+Validate Calibrationelectrometer Command calibrationElectrometer_command_StopScan Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_command_StopScan topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -3861,7 +5553,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_StopSca
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CalibrationElectrometer Event calibrationElectrometer_logevent_IntegrationTime Topic Byte Size
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_IntegrationTime Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_IntegrationTime topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -3884,7 +5576,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_Integrat
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CalibrationElectrometer Event calibrationElectrometer_logevent_IntegrationTime Topic Columns
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_IntegrationTime Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_logevent_IntegrationTime topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -3897,7 +5589,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_Integrat
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CalibrationElectrometer Event calibrationElectrometer_logevent_SummaryState Topic Byte Size
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_SummaryState Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_SummaryState topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -3920,7 +5612,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_SummaryS
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CalibrationElectrometer Event calibrationElectrometer_logevent_SummaryState Topic Columns
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_SummaryState Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_logevent_SummaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -3933,7 +5625,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_SummaryS
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CalibrationElectrometer Event calibrationElectrometer_logevent_DetailedState Topic Byte Size
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_DetailedState Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_DetailedState topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -3956,7 +5648,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_Detailed
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CalibrationElectrometer Event calibrationElectrometer_logevent_DetailedState Topic Columns
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_DetailedState Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_logevent_DetailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -3969,7 +5661,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_Detailed
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CalibrationElectrometer Event calibrationElectrometer_logevent_ReadingOutOfLimit Topic Byte Size
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_ReadingOutOfLimit Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_ReadingOutOfLimit topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -3992,7 +5684,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_ReadingO
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CalibrationElectrometer Event calibrationElectrometer_logevent_ReadingOutOfLimit Topic Columns
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_ReadingOutOfLimit Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_logevent_ReadingOutOfLimit topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -4005,7 +5697,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_ReadingO
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CalibrationElectrometer Event calibrationElectrometer_logevent_SettingVersions Topic Byte Size
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_SettingVersions Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_SettingVersions topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -4028,7 +5720,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_SettingV
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CalibrationElectrometer Event calibrationElectrometer_logevent_SettingVersions Topic Columns
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_SettingVersions Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_logevent_SettingVersions topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -4041,7 +5733,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_SettingV
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CalibrationElectrometer Event calibrationElectrometer_logevent_Heartbeat Topic Byte Size
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Heartbeat Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_Heartbeat topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -4064,7 +5756,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_Heartbea
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CalibrationElectrometer Event calibrationElectrometer_logevent_Heartbeat Topic Columns
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Heartbeat Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_logevent_Heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -4077,7 +5769,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_Heartbea
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CalibrationElectrometer Event calibrationElectrometer_logevent_ErrorCode Topic Byte Size
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_ErrorCode Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_ErrorCode topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -4100,7 +5792,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_ErrorCod
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CalibrationElectrometer Event calibrationElectrometer_logevent_ErrorCode Topic Columns
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_ErrorCode Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_logevent_ErrorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -4113,7 +5805,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_ErrorCod
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CalibrationElectrometer Event calibrationElectrometer_logevent_measureRange Topic Byte Size
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_measureRange Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_measureRange topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -4136,7 +5828,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_measureR
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CalibrationElectrometer Event calibrationElectrometer_logevent_measureRange Topic Columns
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_measureRange Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_logevent_measureRange topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -4149,7 +5841,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_measureR
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CalibrationElectrometer Event calibrationElectrometer_logevent_Intensity Topic Byte Size
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Intensity Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_Intensity topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -4172,7 +5864,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_Intensit
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CalibrationElectrometer Event calibrationElectrometer_logevent_Intensity Topic Columns
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Intensity Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_logevent_Intensity topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -4185,7 +5877,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_Intensit
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CalibrationElectrometer Event calibrationElectrometer_logevent_digitalFilterChange Topic Byte Size
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_digitalFilterChange Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_digitalFilterChange topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -4208,7 +5900,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_digitalF
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CalibrationElectrometer Event calibrationElectrometer_logevent_digitalFilterChange Topic Columns
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_digitalFilterChange Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_logevent_digitalFilterChange topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -4221,7 +5913,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_digitalF
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CalibrationElectrometer Event calibrationElectrometer_logevent_AppliedSettingsMatchStart Topic Byte Size
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_AppliedSettingsMatchStart Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_AppliedSettingsMatchStart topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -4244,7 +5936,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_AppliedS
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CalibrationElectrometer Event calibrationElectrometer_logevent_AppliedSettingsMatchStart Topic Columns
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_AppliedSettingsMatchStart Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_logevent_AppliedSettingsMatchStart topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -4257,7 +5949,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_AppliedS
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CalibrationElectrometer Event calibrationElectrometer_logevent_LoopTimeOutOfRange Topic Byte Size
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_LoopTimeOutOfRange Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_LoopTimeOutOfRange topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -4280,7 +5972,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_LoopTime
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CalibrationElectrometer Event calibrationElectrometer_logevent_LoopTimeOutOfRange Topic Columns
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_LoopTimeOutOfRange Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_logevent_LoopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -4293,7 +5985,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_LoopTime
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CalibrationElectrometer Event calibrationElectrometer_logevent_SettingsApplied_ReadingSettings Topic Byte Size
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_SettingsApplied_ReadingSettings Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_SettingsApplied_ReadingSettings topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -4316,7 +6008,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_Settings
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CalibrationElectrometer Event calibrationElectrometer_logevent_SettingsApplied_ReadingSettings Topic Columns
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_SettingsApplied_ReadingSettings Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_logevent_SettingsApplied_ReadingSettings topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -4329,7 +6021,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_Settings
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CalibrationElectrometer Event calibrationElectrometer_logevent_IntensityReq Topic Byte Size
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_IntensityReq Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_IntensityReq topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -4352,7 +6044,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_Intensit
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CalibrationElectrometer Event calibrationElectrometer_logevent_IntensityReq Topic Columns
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_IntensityReq Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_logevent_IntensityReq topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -4365,7 +6057,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_Intensit
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CalibrationElectrometer Event calibrationElectrometer_logevent_RejectedCommand Topic Byte Size
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_RejectedCommand Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_RejectedCommand topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -4388,7 +6080,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_Rejected
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CalibrationElectrometer Event calibrationElectrometer_logevent_RejectedCommand Topic Columns
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_RejectedCommand Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_logevent_RejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -4401,7 +6093,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_Rejected
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CalibrationElectrometer Event calibrationElectrometer_logevent_SettingsApplied_SerialConfiguration Topic Byte Size
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_SettingsApplied_SerialConfiguration Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_SettingsApplied_SerialConfiguration topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -4424,7 +6116,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_Settings
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CalibrationElectrometer Event calibrationElectrometer_logevent_SettingsApplied_SerialConfiguration Topic Columns
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_SettingsApplied_SerialConfiguration Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_logevent_SettingsApplied_SerialConfiguration topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -4437,7 +6129,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_Settings
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CalibrationElectrometer Event calibrationElectrometer_logevent_InternalCommand Topic Byte Size
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_InternalCommand Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_InternalCommand topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -4460,7 +6152,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_Internal
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CalibrationElectrometer Event calibrationElectrometer_logevent_InternalCommand Topic Columns
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_InternalCommand Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_logevent_InternalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -4473,7 +6165,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_Internal
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CalibrationElectrometer Event calibrationElectrometer_logevent_measureType Topic Byte Size
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_measureType Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_measureType topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -4496,7 +6188,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_measureT
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CalibrationElectrometer Event calibrationElectrometer_logevent_measureType Topic Columns
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_measureType Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_logevent_measureType topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -4509,7 +6201,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_measureT
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CalibrationElectrometer Telemetry calibrationElectrometer_Timestamp Topic Byte Size
+Validate Calibrationelectrometer Telemetry calibrationElectrometer_Timestamp Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_Timestamp topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -4532,7 +6224,7 @@ Validate CalibrationElectrometer Telemetry calibrationElectrometer_Timestamp Top
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CalibrationElectrometer Telemetry calibrationElectrometer_Timestamp Topic Columns
+Validate Calibrationelectrometer Telemetry calibrationElectrometer_Timestamp Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_Timestamp topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -4545,7 +6237,7 @@ Validate CalibrationElectrometer Telemetry calibrationElectrometer_Timestamp Top
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CalibrationElectrometer Telemetry calibrationElectrometer_LoopTime_ms Topic Byte Size
+Validate Calibrationelectrometer Telemetry calibrationElectrometer_LoopTime_ms Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_LoopTime_ms topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -4568,7 +6260,7 @@ Validate CalibrationElectrometer Telemetry calibrationElectrometer_LoopTime_ms T
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CalibrationElectrometer Telemetry calibrationElectrometer_LoopTime_ms Topic Columns
+Validate Calibrationelectrometer Telemetry calibrationElectrometer_LoopTime_ms Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_LoopTime_ms topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -12747,6 +14439,78 @@ Validate EEC Telemetry eec_daysetpoint Topic Columns
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[6]/item)" -n ${folder}/sal_interfaces/eec/eec_Telemetry.xml
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[6]/item/Count" -v . -n ${folder}/sal_interfaces/eec/eec_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate EFD Event efd_logevent_LargeFileObjectAvailable Topic Byte Size
+	[Documentation]    Validate the efd_logevent_LargeFileObjectAvailable topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/efd/efd_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[1]/item/Count" -v . -n ${folder}/sal_interfaces/efd/efd_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[1]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/efd/efd_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate EFD Event efd_logevent_LargeFileObjectAvailable Topic Columns
+	[Documentation]    Validate the efd_logevent_LargeFileObjectAvailable topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/efd/efd_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[1]/item/Count" -v . -n ${folder}/sal_interfaces/efd/efd_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate EFD Telemetry efd_Summary Topic Byte Size
+	[Documentation]    Validate the efd_Summary topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/efd/efd_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/Count" -v . -n ${folder}/sal_interfaces/efd/efd_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/efd/efd_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate EFD Telemetry efd_Summary Topic Columns
+	[Documentation]    Validate the efd_Summary topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/efd/efd_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/Count" -v . -n ${folder}/sal_interfaces/efd/efd_Telemetry.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -24669,187 +26433,7 @@ Validate TCS Telemetry tcs_Timestamp Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate TCSAOCS Command tcsAOCS_command_OffsetCameraHexapod Topic Byte Size
-	[Documentation]    Validate the tcsAOCS_command_OffsetCameraHexapod topic is less than 65536 bytes in total.
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/tcsAOCS/tcsAOCS_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/Count" -v . -n ${folder}/sal_interfaces/tcsAOCS/tcsAOCS_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcsAOCS/tcsAOCS_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate TCSAOCS Command tcsAOCS_command_OffsetCameraHexapod Topic Columns
-	[Documentation]    Validate the tcsAOCS_command_OffsetCameraHexapod topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/tcsAOCS/tcsAOCS_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/Count" -v . -n ${folder}/sal_interfaces/tcsAOCS/tcsAOCS_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate TCSAOCS Command tcsAOCS_command_ApplyForces Topic Byte Size
-	[Documentation]    Validate the tcsAOCS_command_ApplyForces topic is less than 65536 bytes in total.
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/tcsAOCS/tcsAOCS_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[2]/item/Count" -v . -n ${folder}/sal_interfaces/tcsAOCS/tcsAOCS_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcsAOCS/tcsAOCS_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate TCSAOCS Command tcsAOCS_command_ApplyForces Topic Columns
-	[Documentation]    Validate the tcsAOCS_command_ApplyForces topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/tcsAOCS/tcsAOCS_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[2]/item/Count" -v . -n ${folder}/sal_interfaces/tcsAOCS/tcsAOCS_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate TCSAOCS Command tcsAOCS_command_OffsetM2Hexapod Topic Byte Size
-	[Documentation]    Validate the tcsAOCS_command_OffsetM2Hexapod topic is less than 65536 bytes in total.
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/tcsAOCS/tcsAOCS_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[3]/item/Count" -v . -n ${folder}/sal_interfaces/tcsAOCS/tcsAOCS_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[3]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcsAOCS/tcsAOCS_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate TCSAOCS Command tcsAOCS_command_OffsetM2Hexapod Topic Columns
-	[Documentation]    Validate the tcsAOCS_command_OffsetM2Hexapod topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/tcsAOCS/tcsAOCS_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[3]/item/Count" -v . -n ${folder}/sal_interfaces/tcsAOCS/tcsAOCS_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate TCSAOCS Event tcsAOCS_logevent_ErrorCode Topic Byte Size
-	[Documentation]    Validate the tcsAOCS_logevent_ErrorCode topic is less than 65536 bytes in total.
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/tcsAOCS/tcsAOCS_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[1]/item/Count" -v . -n ${folder}/sal_interfaces/tcsAOCS/tcsAOCS_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[1]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcsAOCS/tcsAOCS_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate TCSAOCS Event tcsAOCS_logevent_ErrorCode Topic Columns
-	[Documentation]    Validate the tcsAOCS_logevent_ErrorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/tcsAOCS/tcsAOCS_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[1]/item/Count" -v . -n ${folder}/sal_interfaces/tcsAOCS/tcsAOCS_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate TCSAOCS Telemetry tcsAOCS_DegreeOfFreedom Topic Byte Size
-	[Documentation]    Validate the tcsAOCS_DegreeOfFreedom topic is less than 65536 bytes in total.
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/tcsAOCS/tcsAOCS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/Count" -v . -n ${folder}/sal_interfaces/tcsAOCS/tcsAOCS_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcsAOCS/tcsAOCS_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate TCSAOCS Telemetry tcsAOCS_DegreeOfFreedom Topic Columns
-	[Documentation]    Validate the tcsAOCS_DegreeOfFreedom topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/tcsAOCS/tcsAOCS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/Count" -v . -n ${folder}/sal_interfaces/tcsAOCS/tcsAOCS_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate TCSOFC Command tcsOfc_command_OffsetCameraHexapod Topic Byte Size
+Validate TcsOfc Command tcsOfc_command_OffsetCameraHexapod Topic Byte Size
 	[Documentation]    Validate the tcsOfc_command_OffsetCameraHexapod topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -24872,7 +26456,7 @@ Validate TCSOFC Command tcsOfc_command_OffsetCameraHexapod Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate TCSOFC Command tcsOfc_command_OffsetCameraHexapod Topic Columns
+Validate TcsOfc Command tcsOfc_command_OffsetCameraHexapod Topic Columns
 	[Documentation]    Validate the tcsOfc_command_OffsetCameraHexapod topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -24885,7 +26469,7 @@ Validate TCSOFC Command tcsOfc_command_OffsetCameraHexapod Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate TCSOFC Command tcsOfc_command_ApplyForces Topic Byte Size
+Validate TcsOfc Command tcsOfc_command_ApplyForces Topic Byte Size
 	[Documentation]    Validate the tcsOfc_command_ApplyForces topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -24908,7 +26492,7 @@ Validate TCSOFC Command tcsOfc_command_ApplyForces Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate TCSOFC Command tcsOfc_command_ApplyForces Topic Columns
+Validate TcsOfc Command tcsOfc_command_ApplyForces Topic Columns
 	[Documentation]    Validate the tcsOfc_command_ApplyForces topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -24921,7 +26505,7 @@ Validate TCSOFC Command tcsOfc_command_ApplyForces Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate TCSOFC Command tcsOfc_command_OffsetM2Hexapod Topic Byte Size
+Validate TcsOfc Command tcsOfc_command_OffsetM2Hexapod Topic Byte Size
 	[Documentation]    Validate the tcsOfc_command_OffsetM2Hexapod topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -24944,7 +26528,7 @@ Validate TCSOFC Command tcsOfc_command_OffsetM2Hexapod Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate TCSOFC Command tcsOfc_command_OffsetM2Hexapod Topic Columns
+Validate TcsOfc Command tcsOfc_command_OffsetM2Hexapod Topic Columns
 	[Documentation]    Validate the tcsOfc_command_OffsetM2Hexapod topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -24957,7 +26541,7 @@ Validate TCSOFC Command tcsOfc_command_OffsetM2Hexapod Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate TCSOFC Event tcsOfc_logevent_ErrorCode Topic Byte Size
+Validate TcsOfc Event tcsOfc_logevent_ErrorCode Topic Byte Size
 	[Documentation]    Validate the tcsOfc_logevent_ErrorCode topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -24980,7 +26564,7 @@ Validate TCSOFC Event tcsOfc_logevent_ErrorCode Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate TCSOFC Event tcsOfc_logevent_ErrorCode Topic Columns
+Validate TcsOfc Event tcsOfc_logevent_ErrorCode Topic Columns
 	[Documentation]    Validate the tcsOfc_logevent_ErrorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -24993,7 +26577,7 @@ Validate TCSOFC Event tcsOfc_logevent_ErrorCode Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate TCSOFC Telemetry tcsOfc_DegreeOfFreedom Topic Byte Size
+Validate TcsOfc Telemetry tcsOfc_DegreeOfFreedom Topic Byte Size
 	[Documentation]    Validate the tcsOfc_DegreeOfFreedom topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -25016,7 +26600,7 @@ Validate TCSOFC Telemetry tcsOfc_DegreeOfFreedom Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate TCSOFC Telemetry tcsOfc_DegreeOfFreedom Topic Columns
+Validate TcsOfc Telemetry tcsOfc_DegreeOfFreedom Topic Columns
 	[Documentation]    Validate the tcsOfc_DegreeOfFreedom topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -25029,7 +26613,7 @@ Validate TCSOFC Telemetry tcsOfc_DegreeOfFreedom Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate TCSWEP Event tcsWEP_logevent_WavefrontErrorCalculated Topic Byte Size
+Validate TcsWEP Event tcsWEP_logevent_WavefrontErrorCalculated Topic Byte Size
 	[Documentation]    Validate the tcsWEP_logevent_WavefrontErrorCalculated topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -25052,7 +26636,7 @@ Validate TCSWEP Event tcsWEP_logevent_WavefrontErrorCalculated Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate TCSWEP Event tcsWEP_logevent_WavefrontErrorCalculated Topic Columns
+Validate TcsWEP Event tcsWEP_logevent_WavefrontErrorCalculated Topic Columns
 	[Documentation]    Validate the tcsWEP_logevent_WavefrontErrorCalculated topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -25065,7 +26649,7 @@ Validate TCSWEP Event tcsWEP_logevent_WavefrontErrorCalculated Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate TCSWEP Event tcsWEP_logevent_StateChanged Topic Byte Size
+Validate TcsWEP Event tcsWEP_logevent_StateChanged Topic Byte Size
 	[Documentation]    Validate the tcsWEP_logevent_StateChanged topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -25088,7 +26672,7 @@ Validate TCSWEP Event tcsWEP_logevent_StateChanged Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate TCSWEP Event tcsWEP_logevent_StateChanged Topic Columns
+Validate TcsWEP Event tcsWEP_logevent_StateChanged Topic Columns
 	[Documentation]    Validate the tcsWEP_logevent_StateChanged topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -25101,7 +26685,7 @@ Validate TCSWEP Event tcsWEP_logevent_StateChanged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate TCSWEP Event tcsWEP_logevent_ErrorCode Topic Byte Size
+Validate TcsWEP Event tcsWEP_logevent_ErrorCode Topic Byte Size
 	[Documentation]    Validate the tcsWEP_logevent_ErrorCode topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -25124,7 +26708,7 @@ Validate TCSWEP Event tcsWEP_logevent_ErrorCode Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate TCSWEP Event tcsWEP_logevent_ErrorCode Topic Columns
+Validate TcsWEP Event tcsWEP_logevent_ErrorCode Topic Columns
 	[Documentation]    Validate the tcsWEP_logevent_ErrorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -25137,7 +26721,7 @@ Validate TCSWEP Event tcsWEP_logevent_ErrorCode Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate TCSWEP Telemetry tcsWEP_WavefrontError Topic Byte Size
+Validate TcsWEP Telemetry tcsWEP_WavefrontError Topic Byte Size
 	[Documentation]    Validate the tcsWEP_WavefrontError topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -25160,7 +26744,7 @@ Validate TCSWEP Telemetry tcsWEP_WavefrontError Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate TCSWEP Telemetry tcsWEP_WavefrontError Topic Columns
+Validate TcsWEP Telemetry tcsWEP_WavefrontError Topic Columns
 	[Documentation]    Validate the tcsWEP_WavefrontError topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
