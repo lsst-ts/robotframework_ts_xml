@@ -64,7 +64,7 @@ for subsystem in xml_common.subsystems:
 file.write("*** Keywords ***\n")
 file.write("Create the Generic Array\n")
 file.write("\t[Tags]    smoke\n")
-file.write("\t@{Generics}=    Create List    start    stop    enable    disable    standby\n")
+file.write("\t@{Generics}=    Create List    start    enable    disable    standby\n")
 file.write("\tLog Many    @{Generics}\n")
 file.write("\tSet Suite Variable    @{Generics}\n")
 file.write("\n")

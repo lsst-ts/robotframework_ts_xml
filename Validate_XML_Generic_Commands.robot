@@ -360,7 +360,7 @@ Validate VMS Generic Commands
 *** Keywords ***
 Create the Generic Array
 	[Tags]    smoke
-	@{Generics}=    Create List    start    stop    enable    disable    standby
+	@{Generics}=    Create List    start    enable    disable    standby
 	Log Many    @{Generics}
 	Set Suite Variable    @{Generics}
 
