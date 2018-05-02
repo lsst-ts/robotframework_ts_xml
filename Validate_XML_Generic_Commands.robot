@@ -11,7 +11,7 @@ ${xml}    xml
 *** Test Cases ***
 Validate Archiver Generic Commands
 	[Documentation]    Validate the Archiver contains all the required generic, or State Machine, commands.
-	[Tags]    smoke
+	[Tags]    smoke    
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    archiver
 	Comment    Get the Commands for the CSC.
@@ -23,7 +23,7 @@ Validate Archiver Generic Commands
 
 Validate AtArchiver Generic Commands
 	[Documentation]    Validate the AtArchiver contains all the required generic, or State Machine, commands.
-	[Tags]    smoke
+	[Tags]    smoke    
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    atArchiver
 	Comment    Get the Commands for the CSC.
@@ -35,7 +35,7 @@ Validate AtArchiver Generic Commands
 
 Validate AtHeaderService Generic Commands
 	[Documentation]    Validate the AtHeaderService contains all the required generic, or State Machine, commands.
-	[Tags]    smoke
+	[Tags]    smoke    
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    atHeaderService
 	Comment    Get the Commands for the CSC.
@@ -47,7 +47,7 @@ Validate AtHeaderService Generic Commands
 
 Validate AtMonochromator Generic Commands
 	[Documentation]    Validate the AtMonochromator contains all the required generic, or State Machine, commands.
-	[Tags]    smoke
+	[Tags]    smoke    
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    atMonochromator
 	Comment    Get the Commands for the CSC.
@@ -59,7 +59,7 @@ Validate AtMonochromator Generic Commands
 
 Validate AtCamera Generic Commands
 	[Documentation]    Validate the AtCamera contains all the required generic, or State Machine, commands.
-	[Tags]    smoke
+	[Tags]    smoke    
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    atcamera
 	Comment    Get the Commands for the CSC.
@@ -71,7 +71,7 @@ Validate AtCamera Generic Commands
 
 Validate Calibrationelectrometer Generic Commands
 	[Documentation]    Validate the Calibrationelectrometer contains all the required generic, or State Machine, commands.
-	[Tags]    smoke
+	[Tags]    smoke    TSS-2619
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    calibrationElectrometer
 	Comment    Get the Commands for the CSC.
@@ -83,7 +83,7 @@ Validate Calibrationelectrometer Generic Commands
 
 Validate Camera Generic Commands
 	[Documentation]    Validate the Camera contains all the required generic, or State Machine, commands.
-	[Tags]    smoke
+	[Tags]    smoke    
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    camera
 	Comment    Get the Commands for the CSC.
@@ -95,7 +95,7 @@ Validate Camera Generic Commands
 
 Validate CatchupArchiver Generic Commands
 	[Documentation]    Validate the CatchupArchiver contains all the required generic, or State Machine, commands.
-	[Tags]    smoke
+	[Tags]    smoke    TSS-2620
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    catchuparchiver
 	Comment    Get the Commands for the CSC.
@@ -107,7 +107,7 @@ Validate CatchupArchiver Generic Commands
 
 Validate Dome Generic Commands
 	[Documentation]    Validate the Dome contains all the required generic, or State Machine, commands.
-	[Tags]    smoke
+	[Tags]    smoke    
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    dome
 	Comment    Get the Commands for the CSC.
@@ -119,7 +119,7 @@ Validate Dome Generic Commands
 
 Validate DomeADB Generic Commands
 	[Documentation]    Validate the DomeADB contains all the required generic, or State Machine, commands.
-	[Tags]    smoke
+	[Tags]    smoke    
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    domeADB
 	Comment    Get the Commands for the CSC.
@@ -131,7 +131,7 @@ Validate DomeADB Generic Commands
 
 Validate DomeAPS Generic Commands
 	[Documentation]    Validate the DomeAPS contains all the required generic, or State Machine, commands.
-	[Tags]    smoke
+	[Tags]    smoke    
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    domeAPS
 	Comment    Get the Commands for the CSC.
@@ -143,7 +143,7 @@ Validate DomeAPS Generic Commands
 
 Validate DomeLouvers Generic Commands
 	[Documentation]    Validate the DomeLouvers contains all the required generic, or State Machine, commands.
-	[Tags]    smoke
+	[Tags]    smoke    
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    domeLouvers
 	Comment    Get the Commands for the CSC.
@@ -155,7 +155,7 @@ Validate DomeLouvers Generic Commands
 
 Validate DomeLWS Generic Commands
 	[Documentation]    Validate the DomeLWS contains all the required generic, or State Machine, commands.
-	[Tags]    smoke
+	[Tags]    smoke    
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    domeLWS
 	Comment    Get the Commands for the CSC.
@@ -167,7 +167,7 @@ Validate DomeLWS Generic Commands
 
 Validate DomeMONCS Generic Commands
 	[Documentation]    Validate the DomeMONCS contains all the required generic, or State Machine, commands.
-	[Tags]    smoke
+	[Tags]    smoke    
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    domeMONCS
 	Comment    Get the Commands for the CSC.
@@ -179,7 +179,7 @@ Validate DomeMONCS Generic Commands
 
 Validate DomeTHCS Generic Commands
 	[Documentation]    Validate the DomeTHCS contains all the required generic, or State Machine, commands.
-	[Tags]    smoke
+	[Tags]    smoke    
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    domeTHCS
 	Comment    Get the Commands for the CSC.
@@ -191,7 +191,7 @@ Validate DomeTHCS Generic Commands
 
 Validate EEC Generic Commands
 	[Documentation]    Validate the EEC contains all the required generic, or State Machine, commands.
-	[Tags]    smoke
+	[Tags]    smoke    
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    eec
 	Comment    Get the Commands for the CSC.
@@ -203,7 +203,7 @@ Validate EEC Generic Commands
 
 Validate HeaderService Generic Commands
 	[Documentation]    Validate the HeaderService contains all the required generic, or State Machine, commands.
-	[Tags]    smoke
+	[Tags]    smoke    
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    headerService
 	Comment    Get the Commands for the CSC.
@@ -215,7 +215,7 @@ Validate HeaderService Generic Commands
 
 Validate Hexapod Generic Commands
 	[Documentation]    Validate the Hexapod contains all the required generic, or State Machine, commands.
-	[Tags]    smoke
+	[Tags]    smoke    
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    hexapod
 	Comment    Get the Commands for the CSC.
@@ -227,7 +227,7 @@ Validate Hexapod Generic Commands
 
 Validate M1M3 Generic Commands
 	[Documentation]    Validate the M1M3 contains all the required generic, or State Machine, commands.
-	[Tags]    smoke
+	[Tags]    smoke    TSS-2617
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    m1m3
 	Comment    Get the Commands for the CSC.
@@ -239,7 +239,7 @@ Validate M1M3 Generic Commands
 
 Validate M2MS Generic Commands
 	[Documentation]    Validate the M2MS contains all the required generic, or State Machine, commands.
-	[Tags]    smoke
+	[Tags]    smoke    
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    m2ms
 	Comment    Get the Commands for the CSC.
@@ -251,7 +251,7 @@ Validate M2MS Generic Commands
 
 Validate MTMount Generic Commands
 	[Documentation]    Validate the MTMount contains all the required generic, or State Machine, commands.
-	[Tags]    smoke
+	[Tags]    smoke    
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    MTMount
 	Comment    Get the Commands for the CSC.
@@ -263,7 +263,7 @@ Validate MTMount Generic Commands
 
 Validate OCS Generic Commands
 	[Documentation]    Validate the OCS contains all the required generic, or State Machine, commands.
-	[Tags]    smoke
+	[Tags]    smoke    
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    ocs
 	Comment    Get the Commands for the CSC.
@@ -275,7 +275,7 @@ Validate OCS Generic Commands
 
 Validate PromptProcessing Generic Commands
 	[Documentation]    Validate the PromptProcessing contains all the required generic, or State Machine, commands.
-	[Tags]    smoke
+	[Tags]    smoke    
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    promptprocessing
 	Comment    Get the Commands for the CSC.
@@ -287,7 +287,7 @@ Validate PromptProcessing Generic Commands
 
 Validate Rotator Generic Commands
 	[Documentation]    Validate the Rotator contains all the required generic, or State Machine, commands.
-	[Tags]    smoke
+	[Tags]    smoke    
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    rotator
 	Comment    Get the Commands for the CSC.
@@ -299,7 +299,7 @@ Validate Rotator Generic Commands
 
 Validate Sequencer Generic Commands
 	[Documentation]    Validate the Sequencer contains all the required generic, or State Machine, commands.
-	[Tags]    smoke
+	[Tags]    smoke    
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    sequencer
 	Comment    Get the Commands for the CSC.
@@ -311,7 +311,7 @@ Validate Sequencer Generic Commands
 
 Validate SummitFacility Generic Commands
 	[Documentation]    Validate the SummitFacility contains all the required generic, or State Machine, commands.
-	[Tags]    smoke
+	[Tags]    smoke    TSS-2622
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    summitFacility
 	Comment    Get the Commands for the CSC.
@@ -323,7 +323,7 @@ Validate SummitFacility Generic Commands
 
 Validate TCS Generic Commands
 	[Documentation]    Validate the TCS contains all the required generic, or State Machine, commands.
-	[Tags]    smoke
+	[Tags]    smoke    
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    tcs
 	Comment    Get the Commands for the CSC.
@@ -335,7 +335,7 @@ Validate TCS Generic Commands
 
 Validate TcsOfc Generic Commands
 	[Documentation]    Validate the TcsOfc contains all the required generic, or State Machine, commands.
-	[Tags]    smoke
+	[Tags]    smoke    
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    tcsOfc
 	Comment    Get the Commands for the CSC.
@@ -347,7 +347,7 @@ Validate TcsOfc Generic Commands
 
 Validate VMS Generic Commands
 	[Documentation]    Validate the VMS contains all the required generic, or State Machine, commands.
-	[Tags]    smoke
+	[Tags]    smoke    TSS-2618
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    vms
 	Comment    Get the Commands for the CSC.

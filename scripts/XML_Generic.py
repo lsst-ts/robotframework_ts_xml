@@ -46,10 +46,26 @@ for subsystem in xml_common.subsystems:
 		#print("Skipping " + xmlfile)
 		continue
 	
+	# Mark test cases with Jira tickets
+	if subsystem == "summitFacility":
+		skipped="TSS-2622"
+	elif subsystem == "promptProcessing":
+		skipped="TSS-2621"
+	elif subsystem == "catchuparchiver":
+		skipped="TSS-2620"
+	elif subsystem == "calibrationElectrometer":
+		skipped="TSS-2619"
+	elif subsystem == "vms":
+		skipped="TSS-2618"
+	elif subsystem == "m1m3":
+		skipped="TSS-2617"
+	else:
+		skipped=""
+
 	# Create the Test Cases.
 	file.write("Validate " + xml_common.CapitalizeSubsystem(subsystem) + " Generic Commands\n")
 	file.write("\t[Documentation]    Validate the " + xml_common.CapitalizeSubsystem(subsystem) + " contains all the required generic, or State Machine, commands.\n")
-	file.write("\t[Tags]    smoke\n")
+	file.write("\t[Tags]    smoke    " + skipped + "\n")
 	file.write("\tComment    Define CSC.\n")
 	file.write("\tSet Test Variable    ${csc}    "+ subsystem + "\n")
 	file.write("\tComment    Get the Commands for the CSC.\n")
