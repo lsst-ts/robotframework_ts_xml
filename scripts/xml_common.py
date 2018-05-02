@@ -11,8 +11,7 @@ import os
 """Defines the array of Commandable SAL Components, or CSCs."""
 subsystems = ['archiver', 'atArchiver', 'atHeaderService', 'atMonochromator', 'atScheduler', #'atWhiteLight', TSS-2609 
 				'atcamera', #'atcs', TSS-2608
-				'calibrationElectrometer', #'calibrationSpectrometer', TSS-2607
-				'camera', 'catchuparchiver',
+				'calibrationElectrometer', 'camera', 'catchuparchiver',
 				'dome', 'domeADB', 'domeAPS', 'domeLouvers', 'domeLWS', 'domeMONCS', 'domeTHCS', 'eec', 'efd', 
 				'headerService', 'hexapod', 'm1m3', 'm2ms', 'MTMount', 'ocs', 'promptprocessing', 'rotator', 
 				'scheduler', 'sequencer', 'summitFacility', 'tcs', 'tcsOfc', 'tcsWEP', 'vms']
@@ -46,8 +45,6 @@ def CapitalizeSubsystem( subsystem ):
 		return "EFD"
 	elif subsystem == "summitFacility":
 		return "SummitFacility"
-	elif subsystem == "calibrationSpectrometer":
-		return "CalibrationSpectrometer"
 	elif subsystem == "catchuparchiver":
 		return "CatchupArchiver"
 	elif subsystem == "headerService":
