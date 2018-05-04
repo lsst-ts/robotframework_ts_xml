@@ -8829,8 +8829,8 @@ Validate Camera Telemetry camera_Cold Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CatchupArchiver Command catchuparchiver_command_Start Topic Byte Size
-	[Documentation]    Validate the catchuparchiver_command_Start topic is less than 65536 bytes in total.
+Validate CatchupArchiver Command catchuparchiver_command_start Topic Byte Size
+	[Documentation]    Validate the catchuparchiver_command_start topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8852,8 +8852,8 @@ Validate CatchupArchiver Command catchuparchiver_command_Start Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CatchupArchiver Command catchuparchiver_command_Start Topic Columns
-	[Documentation]    Validate the catchuparchiver_command_Start topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate CatchupArchiver Command catchuparchiver_command_start Topic Columns
+	[Documentation]    Validate the catchuparchiver_command_start topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8865,8 +8865,8 @@ Validate CatchupArchiver Command catchuparchiver_command_Start Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CatchupArchiver Command catchuparchiver_command_Enable Topic Byte Size
-	[Documentation]    Validate the catchuparchiver_command_Enable topic is less than 65536 bytes in total.
+Validate CatchupArchiver Command catchuparchiver_command_enable Topic Byte Size
+	[Documentation]    Validate the catchuparchiver_command_enable topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8888,8 +8888,8 @@ Validate CatchupArchiver Command catchuparchiver_command_Enable Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CatchupArchiver Command catchuparchiver_command_Enable Topic Columns
-	[Documentation]    Validate the catchuparchiver_command_Enable topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate CatchupArchiver Command catchuparchiver_command_enable Topic Columns
+	[Documentation]    Validate the catchuparchiver_command_enable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8901,8 +8901,8 @@ Validate CatchupArchiver Command catchuparchiver_command_Enable Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CatchupArchiver Command catchuparchiver_command_Disable Topic Byte Size
-	[Documentation]    Validate the catchuparchiver_command_Disable topic is less than 65536 bytes in total.
+Validate CatchupArchiver Command catchuparchiver_command_disable Topic Byte Size
+	[Documentation]    Validate the catchuparchiver_command_disable topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8924,8 +8924,8 @@ Validate CatchupArchiver Command catchuparchiver_command_Disable Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CatchupArchiver Command catchuparchiver_command_Disable Topic Columns
-	[Documentation]    Validate the catchuparchiver_command_Disable topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate CatchupArchiver Command catchuparchiver_command_disable Topic Columns
+	[Documentation]    Validate the catchuparchiver_command_disable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8937,8 +8937,8 @@ Validate CatchupArchiver Command catchuparchiver_command_Disable Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CatchupArchiver Command catchuparchiver_command_Standby Topic Byte Size
-	[Documentation]    Validate the catchuparchiver_command_Standby topic is less than 65536 bytes in total.
+Validate CatchupArchiver Command catchuparchiver_command_standby Topic Byte Size
+	[Documentation]    Validate the catchuparchiver_command_standby topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8960,8 +8960,8 @@ Validate CatchupArchiver Command catchuparchiver_command_Standby Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CatchupArchiver Command catchuparchiver_command_Standby Topic Columns
-	[Documentation]    Validate the catchuparchiver_command_Standby topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate CatchupArchiver Command catchuparchiver_command_standby Topic Columns
+	[Documentation]    Validate the catchuparchiver_command_standby topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8973,8 +8973,8 @@ Validate CatchupArchiver Command catchuparchiver_command_Standby Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CatchupArchiver Command catchuparchiver_command_EnterControl Topic Byte Size
-	[Documentation]    Validate the catchuparchiver_command_EnterControl topic is less than 65536 bytes in total.
+Validate CatchupArchiver Command catchuparchiver_command_enterControl Topic Byte Size
+	[Documentation]    Validate the catchuparchiver_command_enterControl topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8996,8 +8996,8 @@ Validate CatchupArchiver Command catchuparchiver_command_EnterControl Topic Byte
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CatchupArchiver Command catchuparchiver_command_EnterControl Topic Columns
-	[Documentation]    Validate the catchuparchiver_command_EnterControl topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate CatchupArchiver Command catchuparchiver_command_enterControl Topic Columns
+	[Documentation]    Validate the catchuparchiver_command_enterControl topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -9009,8 +9009,8 @@ Validate CatchupArchiver Command catchuparchiver_command_EnterControl Topic Colu
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CatchupArchiver Command catchuparchiver_command_ExitControl Topic Byte Size
-	[Documentation]    Validate the catchuparchiver_command_ExitControl topic is less than 65536 bytes in total.
+Validate CatchupArchiver Command catchuparchiver_command_exitControl Topic Byte Size
+	[Documentation]    Validate the catchuparchiver_command_exitControl topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -9032,8 +9032,8 @@ Validate CatchupArchiver Command catchuparchiver_command_ExitControl Topic Byte 
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CatchupArchiver Command catchuparchiver_command_ExitControl Topic Columns
-	[Documentation]    Validate the catchuparchiver_command_ExitControl topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate CatchupArchiver Command catchuparchiver_command_exitControl Topic Columns
+	[Documentation]    Validate the catchuparchiver_command_exitControl topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -9045,8 +9045,8 @@ Validate CatchupArchiver Command catchuparchiver_command_ExitControl Topic Colum
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CatchupArchiver Command catchuparchiver_command_SetValue Topic Byte Size
-	[Documentation]    Validate the catchuparchiver_command_SetValue topic is less than 65536 bytes in total.
+Validate CatchupArchiver Command catchuparchiver_command_setValue Topic Byte Size
+	[Documentation]    Validate the catchuparchiver_command_setValue topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -9068,8 +9068,8 @@ Validate CatchupArchiver Command catchuparchiver_command_SetValue Topic Byte Siz
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CatchupArchiver Command catchuparchiver_command_SetValue Topic Columns
-	[Documentation]    Validate the catchuparchiver_command_SetValue topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate CatchupArchiver Command catchuparchiver_command_setValue Topic Columns
+	[Documentation]    Validate the catchuparchiver_command_setValue topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -9081,8 +9081,8 @@ Validate CatchupArchiver Command catchuparchiver_command_SetValue Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CatchupArchiver Command catchuparchiver_command_Abort Topic Byte Size
-	[Documentation]    Validate the catchuparchiver_command_Abort topic is less than 65536 bytes in total.
+Validate CatchupArchiver Command catchuparchiver_command_abort Topic Byte Size
+	[Documentation]    Validate the catchuparchiver_command_abort topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -9104,8 +9104,8 @@ Validate CatchupArchiver Command catchuparchiver_command_Abort Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CatchupArchiver Command catchuparchiver_command_Abort Topic Columns
-	[Documentation]    Validate the catchuparchiver_command_Abort topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate CatchupArchiver Command catchuparchiver_command_abort Topic Columns
+	[Documentation]    Validate the catchuparchiver_command_abort topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22149,8 +22149,8 @@ Validate OCS Telemetry ocs_SequencerHeartbeat Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate PromptProcessing Command promptprocessing_command_Start Topic Byte Size
-	[Documentation]    Validate the promptprocessing_command_Start topic is less than 65536 bytes in total.
+Validate PromptProcessing Command promptprocessing_command_start Topic Byte Size
+	[Documentation]    Validate the promptprocessing_command_start topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22172,8 +22172,8 @@ Validate PromptProcessing Command promptprocessing_command_Start Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate PromptProcessing Command promptprocessing_command_Start Topic Columns
-	[Documentation]    Validate the promptprocessing_command_Start topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate PromptProcessing Command promptprocessing_command_start Topic Columns
+	[Documentation]    Validate the promptprocessing_command_start topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22185,8 +22185,8 @@ Validate PromptProcessing Command promptprocessing_command_Start Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate PromptProcessing Command promptprocessing_command_Enable Topic Byte Size
-	[Documentation]    Validate the promptprocessing_command_Enable topic is less than 65536 bytes in total.
+Validate PromptProcessing Command promptprocessing_command_enable Topic Byte Size
+	[Documentation]    Validate the promptprocessing_command_enable topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22208,8 +22208,8 @@ Validate PromptProcessing Command promptprocessing_command_Enable Topic Byte Siz
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate PromptProcessing Command promptprocessing_command_Enable Topic Columns
-	[Documentation]    Validate the promptprocessing_command_Enable topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate PromptProcessing Command promptprocessing_command_enable Topic Columns
+	[Documentation]    Validate the promptprocessing_command_enable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22221,8 +22221,8 @@ Validate PromptProcessing Command promptprocessing_command_Enable Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate PromptProcessing Command promptprocessing_command_Disable Topic Byte Size
-	[Documentation]    Validate the promptprocessing_command_Disable topic is less than 65536 bytes in total.
+Validate PromptProcessing Command promptprocessing_command_disable Topic Byte Size
+	[Documentation]    Validate the promptprocessing_command_disable topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22244,8 +22244,8 @@ Validate PromptProcessing Command promptprocessing_command_Disable Topic Byte Si
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate PromptProcessing Command promptprocessing_command_Disable Topic Columns
-	[Documentation]    Validate the promptprocessing_command_Disable topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate PromptProcessing Command promptprocessing_command_disable Topic Columns
+	[Documentation]    Validate the promptprocessing_command_disable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22257,8 +22257,8 @@ Validate PromptProcessing Command promptprocessing_command_Disable Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate PromptProcessing Command promptprocessing_command_Standby Topic Byte Size
-	[Documentation]    Validate the promptprocessing_command_Standby topic is less than 65536 bytes in total.
+Validate PromptProcessing Command promptprocessing_command_standby Topic Byte Size
+	[Documentation]    Validate the promptprocessing_command_standby topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22280,8 +22280,8 @@ Validate PromptProcessing Command promptprocessing_command_Standby Topic Byte Si
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate PromptProcessing Command promptprocessing_command_Standby Topic Columns
-	[Documentation]    Validate the promptprocessing_command_Standby topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate PromptProcessing Command promptprocessing_command_standby Topic Columns
+	[Documentation]    Validate the promptprocessing_command_standby topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22293,8 +22293,8 @@ Validate PromptProcessing Command promptprocessing_command_Standby Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate PromptProcessing Command promptprocessing_command_EnterControl Topic Byte Size
-	[Documentation]    Validate the promptprocessing_command_EnterControl topic is less than 65536 bytes in total.
+Validate PromptProcessing Command promptprocessing_command_enterControl Topic Byte Size
+	[Documentation]    Validate the promptprocessing_command_enterControl topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22316,8 +22316,8 @@ Validate PromptProcessing Command promptprocessing_command_EnterControl Topic By
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate PromptProcessing Command promptprocessing_command_EnterControl Topic Columns
-	[Documentation]    Validate the promptprocessing_command_EnterControl topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate PromptProcessing Command promptprocessing_command_enterControl Topic Columns
+	[Documentation]    Validate the promptprocessing_command_enterControl topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22329,8 +22329,8 @@ Validate PromptProcessing Command promptprocessing_command_EnterControl Topic Co
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate PromptProcessing Command promptprocessing_command_ExitControl Topic Byte Size
-	[Documentation]    Validate the promptprocessing_command_ExitControl topic is less than 65536 bytes in total.
+Validate PromptProcessing Command promptprocessing_command_exitControl Topic Byte Size
+	[Documentation]    Validate the promptprocessing_command_exitControl topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22352,8 +22352,8 @@ Validate PromptProcessing Command promptprocessing_command_ExitControl Topic Byt
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate PromptProcessing Command promptprocessing_command_ExitControl Topic Columns
-	[Documentation]    Validate the promptprocessing_command_ExitControl topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate PromptProcessing Command promptprocessing_command_exitControl Topic Columns
+	[Documentation]    Validate the promptprocessing_command_exitControl topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22365,8 +22365,8 @@ Validate PromptProcessing Command promptprocessing_command_ExitControl Topic Col
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate PromptProcessing Command promptprocessing_command_SetValue Topic Byte Size
-	[Documentation]    Validate the promptprocessing_command_SetValue topic is less than 65536 bytes in total.
+Validate PromptProcessing Command promptprocessing_command_setValue Topic Byte Size
+	[Documentation]    Validate the promptprocessing_command_setValue topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22388,8 +22388,8 @@ Validate PromptProcessing Command promptprocessing_command_SetValue Topic Byte S
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate PromptProcessing Command promptprocessing_command_SetValue Topic Columns
-	[Documentation]    Validate the promptprocessing_command_SetValue topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate PromptProcessing Command promptprocessing_command_setValue Topic Columns
+	[Documentation]    Validate the promptprocessing_command_setValue topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22401,8 +22401,8 @@ Validate PromptProcessing Command promptprocessing_command_SetValue Topic Column
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate PromptProcessing Command promptprocessing_command_Abort Topic Byte Size
-	[Documentation]    Validate the promptprocessing_command_Abort topic is less than 65536 bytes in total.
+Validate PromptProcessing Command promptprocessing_command_abort Topic Byte Size
+	[Documentation]    Validate the promptprocessing_command_abort topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22424,8 +22424,8 @@ Validate PromptProcessing Command promptprocessing_command_Abort Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate PromptProcessing Command promptprocessing_command_Abort Topic Columns
-	[Documentation]    Validate the promptprocessing_command_Abort topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate PromptProcessing Command promptprocessing_command_abort Topic Columns
+	[Documentation]    Validate the promptprocessing_command_abort topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
