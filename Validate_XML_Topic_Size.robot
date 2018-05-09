@@ -15237,8 +15237,8 @@ Validate Hexapod Command hexapod_command_configureLimits Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Hexapod Command hexapod_command_configureElevationRawLut Topic Byte Size
-	[Documentation]    Validate the hexapod_command_configureElevationRawLut topic is less than 65536 bytes in total.
+Validate Hexapod Command hexapod_command_configureElevationRawLUT Topic Byte Size
+	[Documentation]    Validate the hexapod_command_configureElevationRawLUT topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15260,8 +15260,8 @@ Validate Hexapod Command hexapod_command_configureElevationRawLut Topic Byte Siz
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Hexapod Command hexapod_command_configureElevationRawLut Topic Columns
-	[Documentation]    Validate the hexapod_command_configureElevationRawLut topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Hexapod Command hexapod_command_configureElevationRawLUT Topic Columns
+	[Documentation]    Validate the hexapod_command_configureElevationRawLUT topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15561,8 +15561,8 @@ Validate Hexapod Command hexapod_command_test Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Hexapod Command hexapod_command_configureElevationCoeffsLut Topic Byte Size
-	[Documentation]    Validate the hexapod_command_configureElevationCoeffsLut topic is less than 65536 bytes in total.
+Validate Hexapod Command hexapod_command_configureAzimuthRawLUT Topic Byte Size
+	[Documentation]    Validate the hexapod_command_configureAzimuthRawLUT topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15584,8 +15584,8 @@ Validate Hexapod Command hexapod_command_configureElevationCoeffsLut Topic Byte 
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Hexapod Command hexapod_command_configureElevationCoeffsLut Topic Columns
-	[Documentation]    Validate the hexapod_command_configureElevationCoeffsLut topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Hexapod Command hexapod_command_configureAzimuthRawLUT Topic Columns
+	[Documentation]    Validate the hexapod_command_configureAzimuthRawLUT topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15597,8 +15597,8 @@ Validate Hexapod Command hexapod_command_configureElevationCoeffsLut Topic Colum
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Hexapod Command hexapod_command_configureAzimuthCoeffsLut Topic Byte Size
-	[Documentation]    Validate the hexapod_command_configureAzimuthCoeffsLut topic is less than 65536 bytes in total.
+Validate Hexapod Command hexapod_command_configureTemperatureRawLUT Topic Byte Size
+	[Documentation]    Validate the hexapod_command_configureTemperatureRawLUT topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15620,85 +15620,13 @@ Validate Hexapod Command hexapod_command_configureAzimuthCoeffsLut Topic Byte Si
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Hexapod Command hexapod_command_configureAzimuthCoeffsLut Topic Columns
-	[Documentation]    Validate the hexapod_command_configureAzimuthCoeffsLut topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Hexapod Command hexapod_command_configureTemperatureRawLUT Topic Columns
+	[Documentation]    Validate the hexapod_command_configureTemperatureRawLUT topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[13]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Commands.xml
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[13]/item/Count" -v . -n ${folder}/sal_interfaces/hexapod/hexapod_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate Hexapod Command hexapod_command_configureTemperatureCoeffsLut Topic Byte Size
-	[Documentation]    Validate the hexapod_command_configureTemperatureCoeffsLut topic is less than 65536 bytes in total.
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[14]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[14]/item/Count" -v . -n ${folder}/sal_interfaces/hexapod/hexapod_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[14]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/hexapod/hexapod_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate Hexapod Command hexapod_command_configureTemperatureCoeffsLut Topic Columns
-	[Documentation]    Validate the hexapod_command_configureTemperatureCoeffsLut topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[14]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[14]/item/Count" -v . -n ${folder}/sal_interfaces/hexapod/hexapod_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate Hexapod Command hexapod_command_configureAzimuthRawLut Topic Byte Size
-	[Documentation]    Validate the hexapod_command_configureAzimuthRawLut topic is less than 65536 bytes in total.
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[15]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[15]/item/Count" -v . -n ${folder}/sal_interfaces/hexapod/hexapod_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[15]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/hexapod/hexapod_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate Hexapod Command hexapod_command_configureAzimuthRawLut Topic Columns
-	[Documentation]    Validate the hexapod_command_configureAzimuthRawLut topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[15]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[15]/item/Count" -v . -n ${folder}/sal_interfaces/hexapod/hexapod_Commands.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
