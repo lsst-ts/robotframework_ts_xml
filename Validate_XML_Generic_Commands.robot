@@ -69,6 +69,18 @@ Validate AtCamera Generic Commands
 	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _command_     ${state}
 	\    Run Keyword And Continue On Failure    Should Contain    ${Commands}    ${string}
 
+Validate ATCS Generic Commands
+	[Documentation]    Validate the ATCS contains all the required generic, or State Machine, commands.
+	[Tags]    smoke    
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    atcs
+	Comment    Get the Commands for the CSC.
+	${commands}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/atcs/atcs_Commands.xml
+	@{Commands}=    Split to Lines    ${commands}
+	:FOR    ${state}    IN    @{Generics}
+	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _command_     ${state}
+	\    Run Keyword And Continue On Failure    Should Contain    ${Commands}    ${string}
+
 Validate Calibrationelectrometer Generic Commands
 	[Documentation]    Validate the Calibrationelectrometer contains all the required generic, or State Machine, commands.
 	[Tags]    smoke    TSS-2619

@@ -38,6 +38,12 @@ Validate AtCamera Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   atcamera_Commands.xml - valid
 
+Validate ATCS Commands XML file
+	[Tags]    smoke
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/atcs/atcs_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   atcs_Commands.xml - valid
+
 Validate Calibrationelectrometer Commands XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Commands.xml

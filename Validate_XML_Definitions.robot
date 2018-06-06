@@ -127,6 +127,27 @@ Validate AtCamera Telemetry
 	Log    ${output}
 	Should Contain    ${output}   atcamera_Telemetry.xml - valid
 
+Validate ATCS Commands
+	[Documentation]    Validate the ATCS Commands XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/atcs/atcs_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   atcs_Commands.xml - valid
+
+Validate ATCS Events
+	[Documentation]    Validate the ATCS Events XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/atcs/atcs_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   atcs_Events.xml - valid
+
+Validate ATCS Telemetry
+	[Documentation]    Validate the ATCS Telemetry XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/atcs/atcs_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   atcs_Telemetry.xml - valid
+
 Validate Calibrationelectrometer Commands
 	[Documentation]    Validate the Calibrationelectrometer Commands XML file.
 	[Tags]    smoke
