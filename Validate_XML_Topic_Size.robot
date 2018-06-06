@@ -6944,8 +6944,8 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Rejected
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_IntensityReq Topic Columns
-	[Documentation]    Validate the calibrationElectrometer_logevent_IntensityReq topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_RejectedCommand Topic Columns
+	[Documentation]    Validate the calibrationElectrometer_logevent_RejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6957,8 +6957,8 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Intensit
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_RejectedCommand Topic Byte Size
-	[Documentation]    Validate the calibrationElectrometer_logevent_RejectedCommand topic is less than 65536 bytes in total.
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_SettingsApplied_SerialConfiguration Topic Byte Size
+	[Documentation]    Validate the calibrationElectrometer_logevent_SettingsApplied_SerialConfiguration topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6980,8 +6980,8 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Rejected
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_RejectedCommand Topic Columns
-	[Documentation]    Validate the calibrationElectrometer_logevent_RejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_SettingsApplied_SerialConfiguration Topic Columns
+	[Documentation]    Validate the calibrationElectrometer_logevent_SettingsApplied_SerialConfiguration topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6993,8 +6993,8 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Rejected
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_SettingsApplied_SerialConfiguration Topic Byte Size
-	[Documentation]    Validate the calibrationElectrometer_logevent_SettingsApplied_SerialConfiguration topic is less than 65536 bytes in total.
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_InternalCommand Topic Byte Size
+	[Documentation]    Validate the calibrationElectrometer_logevent_InternalCommand topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7016,49 +7016,13 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Settings
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_SettingsApplied_SerialConfiguration Topic Columns
-	[Documentation]    Validate the calibrationElectrometer_logevent_SettingsApplied_SerialConfiguration topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[18]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[18]/item/Count" -v . -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_InternalCommand Topic Byte Size
-	[Documentation]    Validate the calibrationElectrometer_logevent_InternalCommand topic is less than 65536 bytes in total.
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[19]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[19]/item/Count" -v . -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[19]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
 Validate Calibrationelectrometer Event calibrationElectrometer_logevent_InternalCommand Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_logevent_InternalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[19]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[19]/item/Count" -v . -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[18]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[18]/item/Count" -v . -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
