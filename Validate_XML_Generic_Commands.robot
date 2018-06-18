@@ -357,6 +357,18 @@ Validate TcsOfc Generic Commands
 	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _command_     ${state}
 	\    Run Keyword And Continue On Failure    Should Contain    ${Commands}    ${string}
 
+Validate TcsWEP Generic Commands
+	[Documentation]    Validate the TcsWEP contains all the required generic, or State Machine, commands.
+	[Tags]    smoke    
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    tcsWEP
+	Comment    Get the Commands for the CSC.
+	${commands}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
+	@{Commands}=    Split to Lines    ${commands}
+	:FOR    ${state}    IN    @{Generics}
+	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _command_     ${state}
+	\    Run Keyword And Continue On Failure    Should Contain    ${Commands}    ${string}
+
 Validate VMS Generic Commands
 	[Documentation]    Validate the VMS contains all the required generic, or State Machine, commands.
 	[Tags]    smoke    TSS-2618
