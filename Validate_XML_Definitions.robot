@@ -106,6 +106,27 @@ Validate AtScheduler Telemetry
 	Log    ${output}
 	Should Contain    ${output}   atScheduler_Telemetry.xml - valid
 
+Validate Atwhitelight Commands
+	[Documentation]    Validate the Atwhitelight Commands XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   atWhiteLight_Commands.xml - valid
+
+Validate Atwhitelight Events
+	[Documentation]    Validate the Atwhitelight Events XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   atWhiteLight_Events.xml - valid
+
+Validate Atwhitelight Telemetry
+	[Documentation]    Validate the Atwhitelight Telemetry XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   atWhiteLight_Telemetry.xml - valid
+
 Validate AtCamera Commands
 	[Documentation]    Validate the AtCamera Commands XML file.
 	[Tags]    smoke

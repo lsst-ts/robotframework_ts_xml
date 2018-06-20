@@ -57,6 +57,18 @@ Validate AtMonochromator Generic Commands
 	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _command_     ${state}
 	\    Run Keyword And Continue On Failure    Should Contain    ${Commands}    ${string}
 
+Validate Atwhitelight Generic Commands
+	[Documentation]    Validate the Atwhitelight contains all the required generic, or State Machine, commands.
+	[Tags]    smoke    
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    atWhiteLight
+	Comment    Get the Commands for the CSC.
+	${commands}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Commands.xml
+	@{Commands}=    Split to Lines    ${commands}
+	:FOR    ${state}    IN    @{Generics}
+	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _command_     ${state}
+	\    Run Keyword And Continue On Failure    Should Contain    ${Commands}    ${string}
+
 Validate AtCamera Generic Commands
 	[Documentation]    Validate the AtCamera contains all the required generic, or State Machine, commands.
 	[Tags]    smoke    

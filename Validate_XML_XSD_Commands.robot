@@ -32,6 +32,12 @@ Validate AtMonochromator Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   atMonochromator_Commands.xml - valid
 
+Validate Atwhitelight Commands XML file
+	[Tags]    smoke
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   atWhiteLight_Commands.xml - valid
+
 Validate AtCamera Commands XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
