@@ -12,7 +12,7 @@ import os
 subsystems = ['archiver', 'atArchiver', 'atHeaderService', 'atMonochromator', 'atScheduler', 'atWhiteLight', 
 				'atcamera', 'atcs', 'calibrationElectrometer', 'camera', 'catchuparchiver', 
 				'dome', 'domeADB', 'domeAPS', 'domeLouvers', 'domeLWS', 'domeMONCS', 'domeTHCS', 'eec', 'efd', 
-				'headerService', 'hexapod', 'm1m3', 'm2ms', 'MTMount', 'ocs', 'promptprocessing', 'rotator', 
+				'headerService', 'hexapod', 'm1m3', 'm2ms', 'MTMount', 'ocs', 'PromptProcessing', 'rotator', 
 				'scheduler', 'sequencer', 'summitFacility', 'tcs', 'tcsOfc', 'tcsWEP', 'vms']
 
 
@@ -38,10 +38,10 @@ def CapitalizeSubsystem( subsystem ):
 		return "AtScheduler"
 	elif subsystem == "catchuparchiver":
 		return "CatchupArchiver"
-	elif subsystem == "promptprocessing":
-		return "PromptProcessing"
 	elif subsystem == "efd":
 		return "EFD"
+	elif subsystem == "PromptProcessing":
+		return "PromptProcessing"
 	elif subsystem == "summitFacility":
 		return "SummitFacility"
 	elif subsystem == "catchuparchiver":

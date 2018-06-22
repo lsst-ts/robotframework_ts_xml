@@ -7,7 +7,7 @@ import os
 import xml_common
 
 # Create/Open test suite file.
-file = open("../Validate_XML_Generic_Commands.robot","w")
+file = open("../Validate_XML_Generic_Topics.robot","w")
 
 # Set XML parser application name.
 # ... XMLStarlet is invoked differently in Redhat OS systems, like Jenkins.
@@ -20,7 +20,7 @@ except:
 # Create Settings header.
 file.write("*** Settings ***\n")
 file.write("Documentation    Validate the subsystem XML definition files contain all the required generic, or State Machine, commands.\n")
-file.write("Suite Setup    Run Keywords    Create the Generic Array    AND    Run Keyword If    \"${ContInt}\"==\"true\"    Set Suite Variable    ${xml}    xmlstarlet\n")
+file.write("Suite Setup    Run Keywords    Create the Generic Commands Array    AND    Create the Generic Events Array    AND    Run Keyword If    \"${ContInt}\"==\"true\"    Set Suite Variable    ${xml}    xmlstarlet\n")
 file.write("Library    OperatingSystem\n")
 file.write("Library    String\n")
 file.write("Resource    Global_Vars.robot\n")
@@ -37,13 +37,20 @@ file.write("*** Test Cases ***\n")
 for subsystem in xml_common.subsystems:
 	# Get the list of XMLs for each CSC, to include Telemetry, Events and Commands.
 	home = os.environ['XML_HOME']
-	salxmlpath = '/SALCommandSet/SALCommand'
-	xmlfile = 'sal_interfaces/' + subsystem + '/' + subsystem + '_Commands.xml'
-	if os.path.isfile(home+ "/" + xmlfile):
+	command_xml_path = '/SALCommandSet/SALCommand'
+	event_xml_path = '/SALEventSet/SALEvent'
+	command_xml_file = 'sal_interfaces/' + subsystem + '/' + subsystem + '_Commands.xml'
+	event_xml_file = 'sal_interfaces/' + subsystem + '/' + subsystem + '_Events.xml'
+	if os.path.isfile(home+ "/" + command_xml_file):
 		# Get the Topics for each message type.
-		topics = subprocess.check_output(app + ' sel -t -m "/' + salxmlpath + '/EFDB_Topic" -v . -n ' + home + '/' + xmlfile, shell=True).split()
+		topics = subprocess.check_output(app + ' sel -t -m "/' + command_xml_path + '/EFDB_Topic" -v . -n ' + home + '/' + command_xml_file, shell=True).split()
 	else:
-		#print("Skipping " + xmlfile)
+		continue
+
+	if os.path.isfile(home+ "/" + event_xml_file):
+		# Get the Topics for each message type.
+		topics = subprocess.check_output(app + ' sel -t -m "/' + event_xml_path + '/EFDB_Topic" -v . -n ' + home + '/' + event_xml_file, shell=True).split()
+	else:
 		continue
 	
 	# Mark test cases with Jira tickets
@@ -69,18 +76,39 @@ for subsystem in xml_common.subsystems:
 	file.write("\tComment    Define CSC.\n")
 	file.write("\tSet Test Variable    ${csc}    "+ subsystem + "\n")
 	file.write("\tComment    Get the Commands for the CSC.\n")
-	file.write("\t${commands}=    Run    ${xml} sel -t -m \"/" + salxmlpath + "/EFDB_Topic\" -v . -n ${folder}/" + xmlfile + "\n")
-	file.write("\t@{Commands}=    Split to Lines    ${commands}\n")
-	file.write("\t:FOR    ${state}    IN    @{Generics}\n")
+	file.write("\t${topics}=    Run    ${xml} sel -t -m \"/" + command_xml_path + "/EFDB_Topic\" -v . -n ${folder}/" + command_xml_file + "\n")
+	file.write("\t@{Commands}=    Split to Lines    ${topics}\n")
+	file.write("\t:FOR    ${state}    IN    @{GenericCommands}\n")
 	file.write("\t\    ${string}=    Catenate   SEPARATOR=    ${csc}    _command_     ${state}\n")
 	file.write("\t\    Run Keyword And Continue On Failure    Should Contain    ${Commands}    ${string}\n")
 	file.write("\n")
 
-# Create Generic Array
+	file.write("Validate " + xml_common.CapitalizeSubsystem(subsystem) + " Generic Events\n")
+	file.write("\t[Documentation]    Validate the " + xml_common.CapitalizeSubsystem(subsystem) + " contains all the required generic events.\n")
+	file.write("\t[Tags]    smoke    " + skipped + "\n")
+	file.write("\tComment    Define CSC.\n")
+	file.write("\tSet Test Variable    ${csc}    "+ subsystem + "\n")
+	file.write("\tComment    Get the Events.\n")
+	file.write("\t${topics}=    Run    ${xml} sel -t -m \"/" + event_xml_path + "/EFDB_Topic\" -v . -n ${folder}/" + event_xml_file + "\n")
+	file.write("\t@{Events}=    Split to Lines    ${topics}\n")
+	file.write("\t:FOR    ${item}    IN    @{GenericEvents}\n")
+	file.write("\t\    ${string}=    Catenate   SEPARATOR=    ${csc}    _logevent_    ${item}\n")
+	file.write("\t\    Run Keyword And Continue On Failure    Should Contain    ${Events}    ${string}\n")
+	file.write("\n")
+
+# Create Generic Commands Array
 file.write("*** Keywords ***\n")
-file.write("Create the Generic Array\n")
+file.write("Create the Generic Commands Array\n")
 file.write("\t[Tags]    smoke\n")
-file.write("\t@{Generics}=    Create List    start    enable    disable    standby\n")
-file.write("\tLog Many    @{Generics}\n")
-file.write("\tSet Suite Variable    @{Generics}\n")
+file.write("\t@{GenericCommands}=    Create List    start    enable    disable    standby\n")
+file.write("\tLog Many    @{GenericCommands}\n")
+file.write("\tSet Suite Variable    @{GenericCommands}\n")
+file.write("\n")
+
+# Create Generic Events Array
+file.write("Create the Generic Events Array\n")
+file.write("\t[Tags]    smoke\n")
+file.write("\t@{GenericEvents}=    Create List    appliedSettingsMatchStart    errorCode    settingVersions    summaryState\n")
+file.write("\tLog Many    @{GenericEvents}\n")
+file.write("\tSet Suite Variable    @{GenericEvents}\n")
 file.write("\n")
