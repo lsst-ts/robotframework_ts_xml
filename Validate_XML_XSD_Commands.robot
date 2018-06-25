@@ -152,12 +152,6 @@ Validate OCS Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   ocs_Commands.xml - valid
 
-Validate PromptProcessing Commands XML file
-	[Tags]    smoke
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/promptprocessing/promptprocessing_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   promptprocessing_Commands.xml - valid
-
 Validate Rotator Commands XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/rotator/rotator_Commands.xml
