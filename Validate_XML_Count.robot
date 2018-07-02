@@ -744,6 +744,14 @@ Validate TcsOfc Telemetry XML Counts
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
+Validate TcsWEP Commands XML Counts
+	[Documentation]    Validate the TcsWEP Commands XML count.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
 Validate TcsWEP Events XML Counts
 	[Documentation]    Validate the TcsWEP Events XML count.
 	[Tags]    smoke

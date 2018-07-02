@@ -7497,8 +7497,8 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Settings
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_IntensityReq Topic Byte Size
-	[Documentation]    Validate the calibrationElectrometer_logevent_IntensityReq topic is less than 65536 bytes in total.
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_RejectedCommand Topic Byte Size
+	[Documentation]    Validate the calibrationElectrometer_logevent_RejectedCommand topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7520,8 +7520,8 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Intensit
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_IntensityReq Topic Columns
-	[Documentation]    Validate the calibrationElectrometer_logevent_IntensityReq topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_RejectedCommand Topic Columns
+	[Documentation]    Validate the calibrationElectrometer_logevent_RejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7533,8 +7533,8 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Intensit
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_RejectedCommand Topic Byte Size
-	[Documentation]    Validate the calibrationElectrometer_logevent_RejectedCommand topic is less than 65536 bytes in total.
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_SettingsApplied_SerialConfiguration Topic Byte Size
+	[Documentation]    Validate the calibrationElectrometer_logevent_SettingsApplied_SerialConfiguration topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7556,8 +7556,8 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Rejected
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_RejectedCommand Topic Columns
-	[Documentation]    Validate the calibrationElectrometer_logevent_RejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_SettingsApplied_SerialConfiguration Topic Columns
+	[Documentation]    Validate the calibrationElectrometer_logevent_SettingsApplied_SerialConfiguration topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7569,8 +7569,8 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Rejected
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_SettingsApplied_SerialConfiguration Topic Byte Size
-	[Documentation]    Validate the calibrationElectrometer_logevent_SettingsApplied_SerialConfiguration topic is less than 65536 bytes in total.
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_InternalCommand Topic Byte Size
+	[Documentation]    Validate the calibrationElectrometer_logevent_InternalCommand topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7592,8 +7592,8 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Settings
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_SettingsApplied_SerialConfiguration Topic Columns
-	[Documentation]    Validate the calibrationElectrometer_logevent_SettingsApplied_SerialConfiguration topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_InternalCommand Topic Columns
+	[Documentation]    Validate the calibrationElectrometer_logevent_InternalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7605,8 +7605,8 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Settings
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_InternalCommand Topic Byte Size
-	[Documentation]    Validate the calibrationElectrometer_logevent_InternalCommand topic is less than 65536 bytes in total.
+Validate Calibrationelectrometer Event calibrationElectrometer_logevent_measureType Topic Byte Size
+	[Documentation]    Validate the calibrationElectrometer_logevent_measureType topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7628,49 +7628,13 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Internal
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_InternalCommand Topic Columns
-	[Documentation]    Validate the calibrationElectrometer_logevent_InternalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[18]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[18]/item/Count" -v . -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_measureType Topic Byte Size
-	[Documentation]    Validate the calibrationElectrometer_logevent_measureType topic is less than 65536 bytes in total.
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[19]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[19]/item/Count" -v . -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[19]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
 Validate Calibrationelectrometer Event calibrationElectrometer_logevent_measureType Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_logevent_measureType topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[19]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[19]/item/Count" -v . -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[18]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[18]/item/Count" -v . -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -14877,8 +14841,8 @@ Validate DomeTHCS Telemetry domeTHCS_status Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate EEC Command eec_command_operatormode Topic Byte Size
-	[Documentation]    Validate the eec_command_operatormode topic is less than 65536 bytes in total.
+Validate EEC Command EEC_command_operatoMode Topic Byte Size
+	[Documentation]    Validate the EEC_command_operatoMode topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14900,8 +14864,8 @@ Validate EEC Command eec_command_operatormode Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate EEC Command eec_command_operatormode Topic Columns
-	[Documentation]    Validate the eec_command_operatormode topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate EEC Command EEC_command_operatoMode Topic Columns
+	[Documentation]    Validate the EEC_command_operatoMode topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14913,8 +14877,8 @@ Validate EEC Command eec_command_operatormode Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate EEC Command eec_command_nighttimemode Topic Byte Size
-	[Documentation]    Validate the eec_command_nighttimemode topic is less than 65536 bytes in total.
+Validate EEC Command EEC_command_nightTimeMode Topic Byte Size
+	[Documentation]    Validate the EEC_command_nightTimeMode topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14936,8 +14900,8 @@ Validate EEC Command eec_command_nighttimemode Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate EEC Command eec_command_nighttimemode Topic Columns
-	[Documentation]    Validate the eec_command_nighttimemode topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate EEC Command EEC_command_nightTimeMode Topic Columns
+	[Documentation]    Validate the EEC_command_nightTimeMode topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14949,8 +14913,8 @@ Validate EEC Command eec_command_nighttimemode Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate EEC Command eec_command_enable Topic Byte Size
-	[Documentation]    Validate the eec_command_enable topic is less than 65536 bytes in total.
+Validate EEC Command EEC_command_enable Topic Byte Size
+	[Documentation]    Validate the EEC_command_enable topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14972,8 +14936,8 @@ Validate EEC Command eec_command_enable Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate EEC Command eec_command_enable Topic Columns
-	[Documentation]    Validate the eec_command_enable topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate EEC Command EEC_command_enable Topic Columns
+	[Documentation]    Validate the EEC_command_enable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14985,8 +14949,8 @@ Validate EEC Command eec_command_enable Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate EEC Command eec_command_exitControl Topic Byte Size
-	[Documentation]    Validate the eec_command_exitControl topic is less than 65536 bytes in total.
+Validate EEC Command EEC_command_exitControl Topic Byte Size
+	[Documentation]    Validate the EEC_command_exitControl topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15008,8 +14972,8 @@ Validate EEC Command eec_command_exitControl Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate EEC Command eec_command_exitControl Topic Columns
-	[Documentation]    Validate the eec_command_exitControl topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate EEC Command EEC_command_exitControl Topic Columns
+	[Documentation]    Validate the EEC_command_exitControl topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15021,8 +14985,8 @@ Validate EEC Command eec_command_exitControl Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate EEC Command eec_command_sethvac Topic Byte Size
-	[Documentation]    Validate the eec_command_sethvac topic is less than 65536 bytes in total.
+Validate EEC Command EEC_command_setHVAC Topic Byte Size
+	[Documentation]    Validate the EEC_command_setHVAC topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15044,8 +15008,8 @@ Validate EEC Command eec_command_sethvac Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate EEC Command eec_command_sethvac Topic Columns
-	[Documentation]    Validate the eec_command_sethvac topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate EEC Command EEC_command_setHVAC Topic Columns
+	[Documentation]    Validate the EEC_command_setHVAC topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15057,8 +15021,8 @@ Validate EEC Command eec_command_sethvac Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate EEC Command eec_command_daytimemode Topic Byte Size
-	[Documentation]    Validate the eec_command_daytimemode topic is less than 65536 bytes in total.
+Validate EEC Command EEC_command_dayTimeMode Topic Byte Size
+	[Documentation]    Validate the EEC_command_dayTimeMode topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15080,8 +15044,8 @@ Validate EEC Command eec_command_daytimemode Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate EEC Command eec_command_daytimemode Topic Columns
-	[Documentation]    Validate the eec_command_daytimemode topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate EEC Command EEC_command_dayTimeMode Topic Columns
+	[Documentation]    Validate the EEC_command_dayTimeMode topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15093,8 +15057,8 @@ Validate EEC Command eec_command_daytimemode Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate EEC Command eec_command_setlouvers Topic Byte Size
-	[Documentation]    Validate the eec_command_setlouvers topic is less than 65536 bytes in total.
+Validate EEC Command EEC_command_setLouvers Topic Byte Size
+	[Documentation]    Validate the EEC_command_setLouvers topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15116,8 +15080,8 @@ Validate EEC Command eec_command_setlouvers Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate EEC Command eec_command_setlouvers Topic Columns
-	[Documentation]    Validate the eec_command_setlouvers topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate EEC Command EEC_command_setLouvers Topic Columns
+	[Documentation]    Validate the EEC_command_setLouvers topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15129,8 +15093,8 @@ Validate EEC Command eec_command_setlouvers Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate EEC Command eec_command_start Topic Byte Size
-	[Documentation]    Validate the eec_command_start topic is less than 65536 bytes in total.
+Validate EEC Command EEC_command_start Topic Byte Size
+	[Documentation]    Validate the EEC_command_start topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15152,8 +15116,8 @@ Validate EEC Command eec_command_start Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate EEC Command eec_command_start Topic Columns
-	[Documentation]    Validate the eec_command_start topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate EEC Command EEC_command_start Topic Columns
+	[Documentation]    Validate the EEC_command_start topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15165,8 +15129,8 @@ Validate EEC Command eec_command_start Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate EEC Command eec_command_engineeringmode Topic Byte Size
-	[Documentation]    Validate the eec_command_engineeringmode topic is less than 65536 bytes in total.
+Validate EEC Command EEC_command_engineeringMode Topic Byte Size
+	[Documentation]    Validate the EEC_command_engineeringMode topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15188,8 +15152,8 @@ Validate EEC Command eec_command_engineeringmode Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate EEC Command eec_command_engineeringmode Topic Columns
-	[Documentation]    Validate the eec_command_engineeringmode topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate EEC Command EEC_command_engineeringMode Topic Columns
+	[Documentation]    Validate the EEC_command_engineeringMode topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15201,8 +15165,8 @@ Validate EEC Command eec_command_engineeringmode Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate EEC Command eec_command_standby Topic Byte Size
-	[Documentation]    Validate the eec_command_standby topic is less than 65536 bytes in total.
+Validate EEC Command EEC_command_standby Topic Byte Size
+	[Documentation]    Validate the EEC_command_standby topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15224,8 +15188,8 @@ Validate EEC Command eec_command_standby Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate EEC Command eec_command_standby Topic Columns
-	[Documentation]    Validate the eec_command_standby topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate EEC Command EEC_command_standby Topic Columns
+	[Documentation]    Validate the EEC_command_standby topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15237,8 +15201,8 @@ Validate EEC Command eec_command_standby Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate EEC Command eec_command_disable Topic Byte Size
-	[Documentation]    Validate the eec_command_disable topic is less than 65536 bytes in total.
+Validate EEC Command EEC_command_disable Topic Byte Size
+	[Documentation]    Validate the EEC_command_disable topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15260,8 +15224,8 @@ Validate EEC Command eec_command_disable Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate EEC Command eec_command_disable Topic Columns
-	[Documentation]    Validate the eec_command_disable topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate EEC Command EEC_command_disable Topic Columns
+	[Documentation]    Validate the EEC_command_disable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15273,8 +15237,8 @@ Validate EEC Command eec_command_disable Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate EEC Event eec_logevent_AppliedSettingsMatchStart Topic Byte Size
-	[Documentation]    Validate the eec_logevent_AppliedSettingsMatchStart topic is less than 65536 bytes in total.
+Validate EEC Event EEC_logevent_appliedSettingsMatchStart Topic Byte Size
+	[Documentation]    Validate the EEC_logevent_appliedSettingsMatchStart topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15296,8 +15260,8 @@ Validate EEC Event eec_logevent_AppliedSettingsMatchStart Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate EEC Event eec_logevent_AppliedSettingsMatchStart Topic Columns
-	[Documentation]    Validate the eec_logevent_AppliedSettingsMatchStart topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate EEC Event EEC_logevent_appliedSettingsMatchStart Topic Columns
+	[Documentation]    Validate the EEC_logevent_appliedSettingsMatchStart topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15309,8 +15273,8 @@ Validate EEC Event eec_logevent_AppliedSettingsMatchStart Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate EEC Event eec_logevent_nighttimefail Topic Byte Size
-	[Documentation]    Validate the eec_logevent_nighttimefail topic is less than 65536 bytes in total.
+Validate EEC Event EEC_logevent_nightTimeFail Topic Byte Size
+	[Documentation]    Validate the EEC_logevent_nightTimeFail topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15332,8 +15296,8 @@ Validate EEC Event eec_logevent_nighttimefail Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate EEC Event eec_logevent_nighttimefail Topic Columns
-	[Documentation]    Validate the eec_logevent_nighttimefail topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate EEC Event EEC_logevent_nightTimeFail Topic Columns
+	[Documentation]    Validate the EEC_logevent_nightTimeFail topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15345,8 +15309,8 @@ Validate EEC Event eec_logevent_nighttimefail Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate EEC Event eec_logevent_RejectedCommand Topic Byte Size
-	[Documentation]    Validate the eec_logevent_RejectedCommand topic is less than 65536 bytes in total.
+Validate EEC Event EEC_logevent_rejectedCommand Topic Byte Size
+	[Documentation]    Validate the EEC_logevent_rejectedCommand topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15368,8 +15332,8 @@ Validate EEC Event eec_logevent_RejectedCommand Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate EEC Event eec_logevent_RejectedCommand Topic Columns
-	[Documentation]    Validate the eec_logevent_RejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate EEC Event EEC_logevent_rejectedCommand Topic Columns
+	[Documentation]    Validate the EEC_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15381,8 +15345,8 @@ Validate EEC Event eec_logevent_RejectedCommand Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate EEC Event eec_logevent_SettingsApplied Topic Byte Size
-	[Documentation]    Validate the eec_logevent_SettingsApplied topic is less than 65536 bytes in total.
+Validate EEC Event EEC_logevent_settingsApplied Topic Byte Size
+	[Documentation]    Validate the EEC_logevent_settingsApplied topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15404,8 +15368,8 @@ Validate EEC Event eec_logevent_SettingsApplied Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate EEC Event eec_logevent_SettingsApplied Topic Columns
-	[Documentation]    Validate the eec_logevent_SettingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate EEC Event EEC_logevent_settingsApplied Topic Columns
+	[Documentation]    Validate the EEC_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15417,8 +15381,8 @@ Validate EEC Event eec_logevent_SettingsApplied Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate EEC Event eec_logevent_DetailedState Topic Byte Size
-	[Documentation]    Validate the eec_logevent_DetailedState topic is less than 65536 bytes in total.
+Validate EEC Event EEC_logevent_detailedState Topic Byte Size
+	[Documentation]    Validate the EEC_logevent_detailedState topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15440,8 +15404,8 @@ Validate EEC Event eec_logevent_DetailedState Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate EEC Event eec_logevent_DetailedState Topic Columns
-	[Documentation]    Validate the eec_logevent_DetailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate EEC Event EEC_logevent_detailedState Topic Columns
+	[Documentation]    Validate the EEC_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15453,8 +15417,8 @@ Validate EEC Event eec_logevent_DetailedState Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate EEC Event eec_logevent_daytimefail Topic Byte Size
-	[Documentation]    Validate the eec_logevent_daytimefail topic is less than 65536 bytes in total.
+Validate EEC Event EEC_logevent_dayTimeFail Topic Byte Size
+	[Documentation]    Validate the EEC_logevent_dayTimeFail topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15476,8 +15440,8 @@ Validate EEC Event eec_logevent_daytimefail Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate EEC Event eec_logevent_daytimefail Topic Columns
-	[Documentation]    Validate the eec_logevent_daytimefail topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate EEC Event EEC_logevent_dayTimeFail Topic Columns
+	[Documentation]    Validate the EEC_logevent_dayTimeFail topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15489,8 +15453,8 @@ Validate EEC Event eec_logevent_daytimefail Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate EEC Event eec_logevent_InternalCommand Topic Byte Size
-	[Documentation]    Validate the eec_logevent_InternalCommand topic is less than 65536 bytes in total.
+Validate EEC Event EEC_logevent_internalCommand Topic Byte Size
+	[Documentation]    Validate the EEC_logevent_internalCommand topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15512,8 +15476,8 @@ Validate EEC Event eec_logevent_InternalCommand Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate EEC Event eec_logevent_InternalCommand Topic Columns
-	[Documentation]    Validate the eec_logevent_InternalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate EEC Event EEC_logevent_internalCommand Topic Columns
+	[Documentation]    Validate the EEC_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15525,8 +15489,8 @@ Validate EEC Event eec_logevent_InternalCommand Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate EEC Event eec_logevent_LoopTimeOutOfRange Topic Byte Size
-	[Documentation]    Validate the eec_logevent_LoopTimeOutOfRange topic is less than 65536 bytes in total.
+Validate EEC Event EEC_logevent_loopTimeOutOfRange Topic Byte Size
+	[Documentation]    Validate the EEC_logevent_loopTimeOutOfRange topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15548,8 +15512,8 @@ Validate EEC Event eec_logevent_LoopTimeOutOfRange Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate EEC Event eec_logevent_LoopTimeOutOfRange Topic Columns
-	[Documentation]    Validate the eec_logevent_LoopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate EEC Event EEC_logevent_loopTimeOutOfRange Topic Columns
+	[Documentation]    Validate the EEC_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15561,8 +15525,8 @@ Validate EEC Event eec_logevent_LoopTimeOutOfRange Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate EEC Event eec_logevent_SummaryState Topic Byte Size
-	[Documentation]    Validate the eec_logevent_SummaryState topic is less than 65536 bytes in total.
+Validate EEC Event EEC_logevent_summaryState Topic Byte Size
+	[Documentation]    Validate the EEC_logevent_summaryState topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15584,8 +15548,8 @@ Validate EEC Event eec_logevent_SummaryState Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate EEC Event eec_logevent_SummaryState Topic Columns
-	[Documentation]    Validate the eec_logevent_SummaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate EEC Event EEC_logevent_summaryState Topic Columns
+	[Documentation]    Validate the EEC_logevent_summaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15597,8 +15561,8 @@ Validate EEC Event eec_logevent_SummaryState Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate EEC Event eec_logevent_ErrorCode Topic Byte Size
-	[Documentation]    Validate the eec_logevent_ErrorCode topic is less than 65536 bytes in total.
+Validate EEC Event EEC_logevent_errorCode Topic Byte Size
+	[Documentation]    Validate the EEC_logevent_errorCode topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15620,8 +15584,8 @@ Validate EEC Event eec_logevent_ErrorCode Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate EEC Event eec_logevent_ErrorCode Topic Columns
-	[Documentation]    Validate the eec_logevent_ErrorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate EEC Event EEC_logevent_errorCode Topic Columns
+	[Documentation]    Validate the EEC_logevent_errorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15633,8 +15597,8 @@ Validate EEC Event eec_logevent_ErrorCode Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate EEC Event eec_logevent_Heartbeat Topic Byte Size
-	[Documentation]    Validate the eec_logevent_Heartbeat topic is less than 65536 bytes in total.
+Validate EEC Event EEC_logevent_heartbeat Topic Byte Size
+	[Documentation]    Validate the EEC_logevent_heartbeat topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15656,8 +15620,8 @@ Validate EEC Event eec_logevent_Heartbeat Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate EEC Event eec_logevent_Heartbeat Topic Columns
-	[Documentation]    Validate the eec_logevent_Heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate EEC Event EEC_logevent_heartbeat Topic Columns
+	[Documentation]    Validate the EEC_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15669,8 +15633,8 @@ Validate EEC Event eec_logevent_Heartbeat Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate EEC Event eec_logevent_SettingVersions Topic Byte Size
-	[Documentation]    Validate the eec_logevent_SettingVersions topic is less than 65536 bytes in total.
+Validate EEC Event EEC_logevent_settingVersions Topic Byte Size
+	[Documentation]    Validate the EEC_logevent_settingVersions topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15692,8 +15656,8 @@ Validate EEC Event eec_logevent_SettingVersions Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate EEC Event eec_logevent_SettingVersions Topic Columns
-	[Documentation]    Validate the eec_logevent_SettingVersions topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate EEC Event EEC_logevent_settingVersions Topic Columns
+	[Documentation]    Validate the EEC_logevent_settingVersions topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15705,8 +15669,8 @@ Validate EEC Event eec_logevent_SettingVersions Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate EEC Telemetry eec_hvactelem Topic Byte Size
-	[Documentation]    Validate the eec_hvactelem topic is less than 65536 bytes in total.
+Validate EEC Telemetry EEC_hvacTelem Topic Byte Size
+	[Documentation]    Validate the EEC_hvacTelem topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15728,8 +15692,8 @@ Validate EEC Telemetry eec_hvactelem Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate EEC Telemetry eec_hvactelem Topic Columns
-	[Documentation]    Validate the eec_hvactelem topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate EEC Telemetry EEC_hvacTelem Topic Columns
+	[Documentation]    Validate the EEC_hvacTelem topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15741,8 +15705,8 @@ Validate EEC Telemetry eec_hvactelem Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate EEC Telemetry eec_Timestamp Topic Byte Size
-	[Documentation]    Validate the eec_Timestamp topic is less than 65536 bytes in total.
+Validate EEC Telemetry EEC_timestamp Topic Byte Size
+	[Documentation]    Validate the EEC_timestamp topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15764,8 +15728,8 @@ Validate EEC Telemetry eec_Timestamp Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate EEC Telemetry eec_Timestamp Topic Columns
-	[Documentation]    Validate the eec_Timestamp topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate EEC Telemetry EEC_timestamp Topic Columns
+	[Documentation]    Validate the EEC_timestamp topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15777,8 +15741,8 @@ Validate EEC Telemetry eec_Timestamp Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate EEC Telemetry eec_nightsetpoint Topic Byte Size
-	[Documentation]    Validate the eec_nightsetpoint topic is less than 65536 bytes in total.
+Validate EEC Telemetry EEC_nightSetPoint Topic Byte Size
+	[Documentation]    Validate the EEC_nightSetPoint topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15800,8 +15764,8 @@ Validate EEC Telemetry eec_nightsetpoint Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate EEC Telemetry eec_nightsetpoint Topic Columns
-	[Documentation]    Validate the eec_nightsetpoint topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate EEC Telemetry EEC_nightSetPoint Topic Columns
+	[Documentation]    Validate the EEC_nightSetPoint topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15813,8 +15777,8 @@ Validate EEC Telemetry eec_nightsetpoint Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate EEC Telemetry eec_eectelem Topic Byte Size
-	[Documentation]    Validate the eec_eectelem topic is less than 65536 bytes in total.
+Validate EEC Telemetry EEC_eecTelem Topic Byte Size
+	[Documentation]    Validate the EEC_eecTelem topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15836,8 +15800,8 @@ Validate EEC Telemetry eec_eectelem Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate EEC Telemetry eec_eectelem Topic Columns
-	[Documentation]    Validate the eec_eectelem topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate EEC Telemetry EEC_eecTelem Topic Columns
+	[Documentation]    Validate the EEC_eecTelem topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15849,8 +15813,8 @@ Validate EEC Telemetry eec_eectelem Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate EEC Telemetry eec_LoopTime_ms Topic Byte Size
-	[Documentation]    Validate the eec_LoopTime_ms topic is less than 65536 bytes in total.
+Validate EEC Telemetry EEC_loopTimeMs Topic Byte Size
+	[Documentation]    Validate the EEC_loopTimeMs topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15872,8 +15836,8 @@ Validate EEC Telemetry eec_LoopTime_ms Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate EEC Telemetry eec_LoopTime_ms Topic Columns
-	[Documentation]    Validate the eec_LoopTime_ms topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate EEC Telemetry EEC_loopTimeMs Topic Columns
+	[Documentation]    Validate the EEC_loopTimeMs topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15885,8 +15849,8 @@ Validate EEC Telemetry eec_LoopTime_ms Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate EEC Telemetry eec_daysetpoint Topic Byte Size
-	[Documentation]    Validate the eec_daysetpoint topic is less than 65536 bytes in total.
+Validate EEC Telemetry EEC_daySetPoint Topic Byte Size
+	[Documentation]    Validate the EEC_daySetPoint topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15908,8 +15872,8 @@ Validate EEC Telemetry eec_daysetpoint Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate EEC Telemetry eec_daysetpoint Topic Columns
-	[Documentation]    Validate the eec_daysetpoint topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate EEC Telemetry EEC_daySetPoint Topic Columns
+	[Documentation]    Validate the EEC_daySetPoint topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17247,6 +17211,42 @@ Validate Hexapod Event hexapod_logevent_deviceError Topic Columns
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Events.xml
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/Count" -v . -n ${folder}/sal_interfaces/hexapod/hexapod_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Hexapod Event hexapod_logevent_settingsApplied Topic Byte Size
+	[Documentation]    Validate the hexapod_logevent_settingsApplied topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/hexapod/hexapod_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/hexapod/hexapod_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Hexapod Event hexapod_logevent_settingsApplied Topic Columns
+	[Documentation]    Validate the hexapod_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/hexapod/hexapod_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -24165,6 +24165,42 @@ Validate Rotator Event rotator_logevent_inPosition Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
+Validate Rotator Event rotator_logevent_settingsApplied Topic Byte Size
+	[Documentation]    Validate the rotator_logevent_settingsApplied topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/rotator/rotator_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/Count" -v . -n ${folder}/sal_interfaces/rotator/rotator_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/rotator/rotator_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Rotator Event rotator_logevent_settingsApplied Topic Columns
+	[Documentation]    Validate the rotator_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/rotator/rotator_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/Count" -v . -n ${folder}/sal_interfaces/rotator/rotator_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
 Validate Rotator Telemetry rotator_Electrical Topic Byte Size
 	[Documentation]    Validate the rotator_Electrical topic is less than 65536 bytes in total.
 	[Tags]    smoke
@@ -27333,8 +27369,8 @@ Validate TCS Telemetry tcs_Timestamp Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate TcsOfc Command tcsOfc_command_OffsetCameraHexapod Topic Byte Size
-	[Documentation]    Validate the tcsOfc_command_OffsetCameraHexapod topic is less than 65536 bytes in total.
+Validate TcsOfc Command tcsOfc_command_disable Topic Byte Size
+	[Documentation]    Validate the tcsOfc_command_disable topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27356,8 +27392,8 @@ Validate TcsOfc Command tcsOfc_command_OffsetCameraHexapod Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate TcsOfc Command tcsOfc_command_OffsetCameraHexapod Topic Columns
-	[Documentation]    Validate the tcsOfc_command_OffsetCameraHexapod topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate TcsOfc Command tcsOfc_command_disable Topic Columns
+	[Documentation]    Validate the tcsOfc_command_disable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27369,8 +27405,8 @@ Validate TcsOfc Command tcsOfc_command_OffsetCameraHexapod Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate TcsOfc Command tcsOfc_command_ApplyForces Topic Byte Size
-	[Documentation]    Validate the tcsOfc_command_ApplyForces topic is less than 65536 bytes in total.
+Validate TcsOfc Command tcsOfc_command_enable Topic Byte Size
+	[Documentation]    Validate the tcsOfc_command_enable topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27392,8 +27428,8 @@ Validate TcsOfc Command tcsOfc_command_ApplyForces Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate TcsOfc Command tcsOfc_command_ApplyForces Topic Columns
-	[Documentation]    Validate the tcsOfc_command_ApplyForces topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate TcsOfc Command tcsOfc_command_enable Topic Columns
+	[Documentation]    Validate the tcsOfc_command_enable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27405,8 +27441,8 @@ Validate TcsOfc Command tcsOfc_command_ApplyForces Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate TcsOfc Command tcsOfc_command_OffsetM2Hexapod Topic Byte Size
-	[Documentation]    Validate the tcsOfc_command_OffsetM2Hexapod topic is less than 65536 bytes in total.
+Validate TcsOfc Command tcsOfc_command_exitControl Topic Byte Size
+	[Documentation]    Validate the tcsOfc_command_exitControl topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27428,8 +27464,8 @@ Validate TcsOfc Command tcsOfc_command_OffsetM2Hexapod Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate TcsOfc Command tcsOfc_command_OffsetM2Hexapod Topic Columns
-	[Documentation]    Validate the tcsOfc_command_OffsetM2Hexapod topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate TcsOfc Command tcsOfc_command_exitControl Topic Columns
+	[Documentation]    Validate the tcsOfc_command_exitControl topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27441,8 +27477,116 @@ Validate TcsOfc Command tcsOfc_command_OffsetM2Hexapod Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate TcsOfc Event tcsOfc_logevent_ErrorCode Topic Byte Size
-	[Documentation]    Validate the tcsOfc_logevent_ErrorCode topic is less than 65536 bytes in total.
+Validate TcsOfc Command tcsOfc_command_standby Topic Byte Size
+	[Documentation]    Validate the tcsOfc_command_standby topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[4]/item/Count" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate TcsOfc Command tcsOfc_command_standby Topic Columns
+	[Documentation]    Validate the tcsOfc_command_standby topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[4]/item/Count" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate TcsOfc Command tcsOfc_command_start Topic Byte Size
+	[Documentation]    Validate the tcsOfc_command_start topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[5]/item/Count" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate TcsOfc Command tcsOfc_command_start Topic Columns
+	[Documentation]    Validate the tcsOfc_command_start topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[5]/item/Count" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate TcsOfc Command tcsOfc_command_enterControl Topic Byte Size
+	[Documentation]    Validate the tcsOfc_command_enterControl topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[6]/item/Count" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[6]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate TcsOfc Command tcsOfc_command_enterControl Topic Columns
+	[Documentation]    Validate the tcsOfc_command_enterControl topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[6]/item/Count" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate TcsOfc Event tcsOfc_logevent_appliedSettingsMatchStart Topic Byte Size
+	[Documentation]    Validate the tcsOfc_logevent_appliedSettingsMatchStart topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27464,8 +27608,8 @@ Validate TcsOfc Event tcsOfc_logevent_ErrorCode Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate TcsOfc Event tcsOfc_logevent_ErrorCode Topic Columns
-	[Documentation]    Validate the tcsOfc_logevent_ErrorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate TcsOfc Event tcsOfc_logevent_appliedSettingsMatchStart Topic Columns
+	[Documentation]    Validate the tcsOfc_logevent_appliedSettingsMatchStart topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27477,8 +27621,332 @@ Validate TcsOfc Event tcsOfc_logevent_ErrorCode Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate TcsOfc Telemetry tcsOfc_DegreeOfFreedom Topic Byte Size
-	[Documentation]    Validate the tcsOfc_DegreeOfFreedom topic is less than 65536 bytes in total.
+Validate TcsOfc Event tcsOfc_logevent_errorCode Topic Byte Size
+	[Documentation]    Validate the tcsOfc_logevent_errorCode topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/Count" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate TcsOfc Event tcsOfc_logevent_errorCode Topic Columns
+	[Documentation]    Validate the tcsOfc_logevent_errorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/Count" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate TcsOfc Event tcsOfc_logevent_settingVersions Topic Byte Size
+	[Documentation]    Validate the tcsOfc_logevent_settingVersions topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/Count" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate TcsOfc Event tcsOfc_logevent_settingVersions Topic Columns
+	[Documentation]    Validate the tcsOfc_logevent_settingVersions topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/Count" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate TcsOfc Event tcsOfc_logevent_summaryState Topic Byte Size
+	[Documentation]    Validate the tcsOfc_logevent_summaryState topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate TcsOfc Event tcsOfc_logevent_summaryState Topic Columns
+	[Documentation]    Validate the tcsOfc_logevent_summaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate TcsOfc Event tcsOfc_logevent_detailedState Topic Byte Size
+	[Documentation]    Validate the tcsOfc_logevent_detailedState topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate TcsOfc Event tcsOfc_logevent_detailedState Topic Columns
+	[Documentation]    Validate the tcsOfc_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate TcsOfc Event tcsOfc_logevent_internalCommand Topic Byte Size
+	[Documentation]    Validate the tcsOfc_logevent_internalCommand topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/Count" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate TcsOfc Event tcsOfc_logevent_internalCommand Topic Columns
+	[Documentation]    Validate the tcsOfc_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/Count" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate TcsOfc Event tcsOfc_logevent_heartbeat Topic Byte Size
+	[Documentation]    Validate the tcsOfc_logevent_heartbeat topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/Count" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate TcsOfc Event tcsOfc_logevent_heartbeat Topic Columns
+	[Documentation]    Validate the tcsOfc_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/Count" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate TcsOfc Event tcsOfc_logevent_loopTimeOutOfRange Topic Byte Size
+	[Documentation]    Validate the tcsOfc_logevent_loopTimeOutOfRange topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/Count" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate TcsOfc Event tcsOfc_logevent_loopTimeOutOfRange Topic Columns
+	[Documentation]    Validate the tcsOfc_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/Count" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate TcsOfc Event tcsOfc_logevent_rejectedCommand Topic Byte Size
+	[Documentation]    Validate the tcsOfc_logevent_rejectedCommand topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/Count" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate TcsOfc Event tcsOfc_logevent_rejectedCommand Topic Columns
+	[Documentation]    Validate the tcsOfc_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/Count" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate TcsOfc Event tcsOfc_logevent_noEnoughZernikeTerm Topic Byte Size
+	[Documentation]    Validate the tcsOfc_logevent_noEnoughZernikeTerm topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/Count" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate TcsOfc Event tcsOfc_logevent_noEnoughZernikeTerm Topic Columns
+	[Documentation]    Validate the tcsOfc_logevent_noEnoughZernikeTerm topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/Count" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate TcsOfc Telemetry tcsOfc_timestamp Topic Byte Size
+	[Documentation]    Validate the tcsOfc_timestamp topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27500,8 +27968,8 @@ Validate TcsOfc Telemetry tcsOfc_DegreeOfFreedom Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate TcsOfc Telemetry tcsOfc_DegreeOfFreedom Topic Columns
-	[Documentation]    Validate the tcsOfc_DegreeOfFreedom topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate TcsOfc Telemetry tcsOfc_timestamp Topic Columns
+	[Documentation]    Validate the tcsOfc_timestamp topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27513,8 +27981,296 @@ Validate TcsOfc Telemetry tcsOfc_DegreeOfFreedom Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate TcsWEP Event tcsWEP_logevent_WavefrontErrorCalculated Topic Byte Size
-	[Documentation]    Validate the tcsWEP_logevent_WavefrontErrorCalculated topic is less than 65536 bytes in total.
+Validate TcsOfc Telemetry tcsOfc_loopTimeMs Topic Byte Size
+	[Documentation]    Validate the tcsOfc_loopTimeMs topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[2]/item/Count" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate TcsOfc Telemetry tcsOfc_loopTimeMs Topic Columns
+	[Documentation]    Validate the tcsOfc_loopTimeMs topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[2]/item/Count" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate TcsOfc Telemetry tcsOfc_degreeOfFreedom Topic Byte Size
+	[Documentation]    Validate the tcsOfc_degreeOfFreedom topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[3]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[3]/item/Count" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[3]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate TcsOfc Telemetry tcsOfc_degreeOfFreedom Topic Columns
+	[Documentation]    Validate the tcsOfc_degreeOfFreedom topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[3]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[3]/item/Count" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate TcsWEP Command tcsWEP_command_disable Topic Byte Size
+	[Documentation]    Validate the tcsWEP_command_disable topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate TcsWEP Command tcsWEP_command_disable Topic Columns
+	[Documentation]    Validate the tcsWEP_command_disable topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate TcsWEP Command tcsWEP_command_enable Topic Byte Size
+	[Documentation]    Validate the tcsWEP_command_enable topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[2]/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate TcsWEP Command tcsWEP_command_enable Topic Columns
+	[Documentation]    Validate the tcsWEP_command_enable topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[2]/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate TcsWEP Command tcsWEP_command_exitControl Topic Byte Size
+	[Documentation]    Validate the tcsWEP_command_exitControl topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[3]/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[3]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate TcsWEP Command tcsWEP_command_exitControl Topic Columns
+	[Documentation]    Validate the tcsWEP_command_exitControl topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[3]/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate TcsWEP Command tcsWEP_command_standby Topic Byte Size
+	[Documentation]    Validate the tcsWEP_command_standby topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[4]/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate TcsWEP Command tcsWEP_command_standby Topic Columns
+	[Documentation]    Validate the tcsWEP_command_standby topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[4]/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate TcsWEP Command tcsWEP_command_start Topic Byte Size
+	[Documentation]    Validate the tcsWEP_command_start topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[5]/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate TcsWEP Command tcsWEP_command_start Topic Columns
+	[Documentation]    Validate the tcsWEP_command_start topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[5]/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate TcsWEP Command tcsWEP_command_enterControl Topic Byte Size
+	[Documentation]    Validate the tcsWEP_command_enterControl topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[6]/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[6]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate TcsWEP Command tcsWEP_command_enterControl Topic Columns
+	[Documentation]    Validate the tcsWEP_command_enterControl topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[6]/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate TcsWEP Event tcsWEP_logevent_appliedSettingsMatchStart Topic Byte Size
+	[Documentation]    Validate the tcsWEP_logevent_appliedSettingsMatchStart topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27536,8 +28292,8 @@ Validate TcsWEP Event tcsWEP_logevent_WavefrontErrorCalculated Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate TcsWEP Event tcsWEP_logevent_WavefrontErrorCalculated Topic Columns
-	[Documentation]    Validate the tcsWEP_logevent_WavefrontErrorCalculated topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate TcsWEP Event tcsWEP_logevent_appliedSettingsMatchStart Topic Columns
+	[Documentation]    Validate the tcsWEP_logevent_appliedSettingsMatchStart topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27549,8 +28305,8 @@ Validate TcsWEP Event tcsWEP_logevent_WavefrontErrorCalculated Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate TcsWEP Event tcsWEP_logevent_StateChanged Topic Byte Size
-	[Documentation]    Validate the tcsWEP_logevent_StateChanged topic is less than 65536 bytes in total.
+Validate TcsWEP Event tcsWEP_logevent_errorCode Topic Byte Size
+	[Documentation]    Validate the tcsWEP_logevent_errorCode topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27572,8 +28328,8 @@ Validate TcsWEP Event tcsWEP_logevent_StateChanged Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate TcsWEP Event tcsWEP_logevent_StateChanged Topic Columns
-	[Documentation]    Validate the tcsWEP_logevent_StateChanged topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate TcsWEP Event tcsWEP_logevent_errorCode Topic Columns
+	[Documentation]    Validate the tcsWEP_logevent_errorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27585,8 +28341,8 @@ Validate TcsWEP Event tcsWEP_logevent_StateChanged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate TcsWEP Event tcsWEP_logevent_ErrorCode Topic Byte Size
-	[Documentation]    Validate the tcsWEP_logevent_ErrorCode topic is less than 65536 bytes in total.
+Validate TcsWEP Event tcsWEP_logevent_settingVersions Topic Byte Size
+	[Documentation]    Validate the tcsWEP_logevent_settingVersions topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27608,8 +28364,8 @@ Validate TcsWEP Event tcsWEP_logevent_ErrorCode Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate TcsWEP Event tcsWEP_logevent_ErrorCode Topic Columns
-	[Documentation]    Validate the tcsWEP_logevent_ErrorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate TcsWEP Event tcsWEP_logevent_settingVersions Topic Columns
+	[Documentation]    Validate the tcsWEP_logevent_settingVersions topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27621,8 +28377,296 @@ Validate TcsWEP Event tcsWEP_logevent_ErrorCode Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate TcsWEP Telemetry tcsWEP_WavefrontError Topic Byte Size
-	[Documentation]    Validate the tcsWEP_WavefrontError topic is less than 65536 bytes in total.
+Validate TcsWEP Event tcsWEP_logevent_summaryState Topic Byte Size
+	[Documentation]    Validate the tcsWEP_logevent_summaryState topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate TcsWEP Event tcsWEP_logevent_summaryState Topic Columns
+	[Documentation]    Validate the tcsWEP_logevent_summaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate TcsWEP Event tcsWEP_logevent_detailedState Topic Byte Size
+	[Documentation]    Validate the tcsWEP_logevent_detailedState topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate TcsWEP Event tcsWEP_logevent_detailedState Topic Columns
+	[Documentation]    Validate the tcsWEP_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate TcsWEP Event tcsWEP_logevent_internalCommand Topic Byte Size
+	[Documentation]    Validate the tcsWEP_logevent_internalCommand topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate TcsWEP Event tcsWEP_logevent_internalCommand Topic Columns
+	[Documentation]    Validate the tcsWEP_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate TcsWEP Event tcsWEP_logevent_heartbeat Topic Byte Size
+	[Documentation]    Validate the tcsWEP_logevent_heartbeat topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate TcsWEP Event tcsWEP_logevent_heartbeat Topic Columns
+	[Documentation]    Validate the tcsWEP_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate TcsWEP Event tcsWEP_logevent_loopTimeOutOfRange Topic Byte Size
+	[Documentation]    Validate the tcsWEP_logevent_loopTimeOutOfRange topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate TcsWEP Event tcsWEP_logevent_loopTimeOutOfRange Topic Columns
+	[Documentation]    Validate the tcsWEP_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate TcsWEP Event tcsWEP_logevent_rejectedCommand Topic Byte Size
+	[Documentation]    Validate the tcsWEP_logevent_rejectedCommand topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate TcsWEP Event tcsWEP_logevent_rejectedCommand Topic Columns
+	[Documentation]    Validate the tcsWEP_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate TcsWEP Event tcsWEP_logevent_wavefrontErrorCalculated Topic Byte Size
+	[Documentation]    Validate the tcsWEP_logevent_wavefrontErrorCalculated topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate TcsWEP Event tcsWEP_logevent_wavefrontErrorCalculated Topic Columns
+	[Documentation]    Validate the tcsWEP_logevent_wavefrontErrorCalculated topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate TcsWEP Event tcsWEP_logevent_noEnoughWfsNum Topic Byte Size
+	[Documentation]    Validate the tcsWEP_logevent_noEnoughWfsNum topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[11]/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[11]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate TcsWEP Event tcsWEP_logevent_noEnoughWfsNum Topic Columns
+	[Documentation]    Validate the tcsWEP_logevent_noEnoughWfsNum topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[11]/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate TcsWEP Telemetry tcsWEP_timestamp Topic Byte Size
+	[Documentation]    Validate the tcsWEP_timestamp topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27644,13 +28688,193 @@ Validate TcsWEP Telemetry tcsWEP_WavefrontError Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate TcsWEP Telemetry tcsWEP_WavefrontError Topic Columns
-	[Documentation]    Validate the tcsWEP_WavefrontError topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate TcsWEP Telemetry tcsWEP_timestamp Topic Columns
+	[Documentation]    Validate the tcsWEP_timestamp topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Telemetry.xml
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate TcsWEP Telemetry tcsWEP_loopTimeMs Topic Byte Size
+	[Documentation]    Validate the tcsWEP_loopTimeMs topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[2]/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate TcsWEP Telemetry tcsWEP_loopTimeMs Topic Columns
+	[Documentation]    Validate the tcsWEP_loopTimeMs topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[2]/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate TcsWEP Telemetry tcsWEP_wavefrontError Topic Byte Size
+	[Documentation]    Validate the tcsWEP_wavefrontError topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[3]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[3]/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[3]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate TcsWEP Telemetry tcsWEP_wavefrontError Topic Columns
+	[Documentation]    Validate the tcsWEP_wavefrontError topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[3]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[3]/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate TcsWEP Telemetry tcsWEP_comcamTargetWfsList Topic Byte Size
+	[Documentation]    Validate the tcsWEP_comcamTargetWfsList topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[4]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[4]/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate TcsWEP Telemetry tcsWEP_comcamTargetWfsList Topic Columns
+	[Documentation]    Validate the tcsWEP_comcamTargetWfsList topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[4]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[4]/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate TcsWEP Telemetry tcsWEP_famTargetWfsList Topic Byte Size
+	[Documentation]    Validate the tcsWEP_famTargetWfsList topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[5]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[5]/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate TcsWEP Telemetry tcsWEP_famTargetWfsList Topic Columns
+	[Documentation]    Validate the tcsWEP_famTargetWfsList topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[5]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[5]/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate TcsWEP Telemetry tcsWEP_normalTargetWfsList Topic Byte Size
+	[Documentation]    Validate the tcsWEP_normalTargetWfsList topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[6]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[6]/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[6]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate TcsWEP Telemetry tcsWEP_normalTargetWfsList Topic Columns
+	[Documentation]    Validate the tcsWEP_normalTargetWfsList topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[6]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[6]/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Telemetry.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
