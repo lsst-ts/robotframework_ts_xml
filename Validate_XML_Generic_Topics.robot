@@ -105,3 +105,51 @@ Validate AtMonochromator Generic Events
 	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _logevent_    ${item}
 	\    Run Keyword And Continue On Failure    Should Contain    ${Events}    ${string}
 
+Validate Atwhitelight Generic Commands
+	[Documentation]    Validate the Atwhitelight contains all the required generic, or State Machine, commands.
+	[Tags]    smoke    
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    atWhiteLight
+	Comment    Get the Commands for the CSC.
+	${topics}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Commands.xml
+	@{Commands}=    Split to Lines    ${topics}
+	:FOR    ${state}    IN    @{GenericCommands}
+	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _command_     ${state}
+	\    Run Keyword And Continue On Failure    Should Contain    ${Commands}    ${string}
+
+Validate Atwhitelight Generic Events
+	[Documentation]    Validate the Atwhitelight contains all the required generic events.
+	[Tags]    smoke    
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    atWhiteLight
+	Comment    Get the Events.
+	${topics}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Events.xml
+	@{Events}=    Split to Lines    ${topics}
+	:FOR    ${item}    IN    @{GenericEvents}
+	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _logevent_    ${item}
+	\    Run Keyword And Continue On Failure    Should Contain    ${Events}    ${string}
+
+Validate AtCamera Generic Commands
+	[Documentation]    Validate the AtCamera contains all the required generic, or State Machine, commands.
+	[Tags]    smoke    
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    atcamera
+	Comment    Get the Commands for the CSC.
+	${topics}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
+	@{Commands}=    Split to Lines    ${topics}
+	:FOR    ${state}    IN    @{GenericCommands}
+	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _command_     ${state}
+	\    Run Keyword And Continue On Failure    Should Contain    ${Commands}    ${string}
+
+Validate AtCamera Generic Events
+	[Documentation]    Validate the AtCamera contains all the required generic events.
+	[Tags]    smoke    
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    atcamera
+	Comment    Get the Events.
+	${topics}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
+	@{Events}=    Split to Lines    ${topics}
+	:FOR    ${item}    IN    @{GenericEvents}
+	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _logevent_    ${item}
+	\    Run Keyword And Continue On Failure    Should Contain    ${Events}    ${string}
+
