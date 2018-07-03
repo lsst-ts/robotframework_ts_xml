@@ -48,8 +48,8 @@ for subsystem in xml_common.subsystems:
 		for index, topic in enumerate(topics):
 			index += 1
 			# Create the Test Cases.
-			file.write("Validate " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType.rstrip("s") + " " + topic + " Topic Byte Size\n")
-			file.write("\t[Documentation]    Validate the " + topic + " topic is less than 65536 bytes in total.\n")
+			file.write("Validate " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType.rstrip("s") + " " + topic.decode("utf-8") + " Topic Byte Size\n")
+			file.write("\t[Documentation]    Validate the " + topic.decode("utf-8") + " topic is less than 65536 bytes in total.\n")
 			file.write("\t[Tags]    smoke\n")
 			file.write("\t[Setup]    Set Test Variable    ${result}    ${0}\n")
 			file.write("\tComment    Get the Count of each argument for the topic.\n")
@@ -72,8 +72,8 @@ for subsystem in xml_common.subsystems:
 			file.write("\tShould Be True    ${result} < ${65536}\n")
 			file.write("\n")
 
-			file.write("Validate " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType.rstrip("s") + " " + topic + " Topic Columns\n")
-			file.write("\t[Documentation]    Validate the " + topic + " topic has less than 4096 total arguments, each representing a column in the EFD.s\n")
+			file.write("Validate " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType.rstrip("s") + " " + topic.decode("utf-8") + " Topic Columns\n")
+			file.write("\t[Documentation]    Validate the " + topic.decode("utf-8") + " topic has less than 4096 total arguments, each representing a column in the EFD.s\n")
 			file.write("\t[Tags]    smoke\n")
 			file.write("\t[Setup]    Set Test Variable    ${total}    ${0}\n")
 			file.write("\tComment    Get the Count of each argument for the topic.\n")
