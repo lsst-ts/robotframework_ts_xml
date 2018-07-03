@@ -216,8 +216,8 @@ Validate ATCS Telemetry Attribute Names
 	: FOR    ${item}    IN    @{attributes}
 	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
 
-Validate Calibrationelectrometer Commands Attribute Names
-	[Documentation]    Validate the Calibrationelectrometer Commands attribute names conform to naming convention.
+Validate CalibrationElectrometer Commands Attribute Names
+	[Documentation]    Validate the CalibrationElectrometer Commands attribute names conform to naming convention.
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
@@ -225,8 +225,8 @@ Validate Calibrationelectrometer Commands Attribute Names
 	: FOR    ${item}    IN    @{attributes}
 	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
 
-Validate Calibrationelectrometer Events Attribute Names
-	[Documentation]    Validate the Calibrationelectrometer Events attribute names conform to naming convention.
+Validate CalibrationElectrometer Events Attribute Names
+	[Documentation]    Validate the CalibrationElectrometer Events attribute names conform to naming convention.
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
@@ -234,8 +234,8 @@ Validate Calibrationelectrometer Events Attribute Names
 	: FOR    ${item}    IN    @{attributes}
 	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
 
-Validate Calibrationelectrometer Telemetry Attribute Names
-	[Documentation]    Validate the Calibrationelectrometer Telemetry attribute names conform to naming convention.
+Validate CalibrationElectrometer Telemetry Attribute Names
+	[Documentation]    Validate the CalibrationElectrometer Telemetry attribute names conform to naming convention.
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}

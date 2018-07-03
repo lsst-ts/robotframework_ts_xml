@@ -169,22 +169,22 @@ Validate ATCS Telemetry
 	Log    ${output}
 	Should Contain    ${output}   atcs_Telemetry.xml - valid
 
-Validate Calibrationelectrometer Commands
-	[Documentation]    Validate the Calibrationelectrometer Commands XML file.
+Validate CalibrationElectrometer Commands
+	[Documentation]    Validate the CalibrationElectrometer Commands XML file.
 	[Tags]    smoke
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   calibrationElectrometer_Commands.xml - valid
 
-Validate Calibrationelectrometer Events
-	[Documentation]    Validate the Calibrationelectrometer Events XML file.
+Validate CalibrationElectrometer Events
+	[Documentation]    Validate the CalibrationElectrometer Events XML file.
 	[Tags]    smoke
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   calibrationElectrometer_Events.xml - valid
 
-Validate Calibrationelectrometer Telemetry
-	[Documentation]    Validate the Calibrationelectrometer Telemetry XML file.
+Validate CalibrationElectrometer Telemetry
+	[Documentation]    Validate the CalibrationElectrometer Telemetry XML file.
 	[Tags]    smoke
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Telemetry.xml
 	Log    ${output}

@@ -177,8 +177,8 @@ Validate ATCS Generic Events
 	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _logevent_    ${item}
 	\    Run Keyword And Continue On Failure    Should Contain    ${Events}    ${string}
 
-Validate Calibrationelectrometer Generic Commands
-	[Documentation]    Validate the Calibrationelectrometer contains all the required generic, or State Machine, commands.
+Validate CalibrationElectrometer Generic Commands
+	[Documentation]    Validate the CalibrationElectrometer contains all the required generic, or State Machine, commands.
 	[Tags]    smoke    TSS-2619
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    calibrationElectrometer
@@ -189,8 +189,8 @@ Validate Calibrationelectrometer Generic Commands
 	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _command_     ${state}
 	\    Run Keyword And Continue On Failure    Should Contain    ${Commands}    ${string}
 
-Validate Calibrationelectrometer Generic Events
-	[Documentation]    Validate the Calibrationelectrometer contains all the required generic events.
+Validate CalibrationElectrometer Generic Events
+	[Documentation]    Validate the CalibrationElectrometer contains all the required generic events.
 	[Tags]    smoke    TSS-2619
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    calibrationElectrometer
@@ -580,6 +580,30 @@ Validate OCS Generic Events
 	Set Test Variable    ${csc}    ocs
 	Comment    Get the Events.
 	${topics}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/ocs/ocs_Events.xml
+	@{Events}=    Split to Lines    ${topics}
+	:FOR    ${item}    IN    @{GenericEvents}
+	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _logevent_    ${item}
+	\    Run Keyword And Continue On Failure    Should Contain    ${Events}    ${string}
+
+Validate PromptProcessing Generic Commands
+	[Documentation]    Validate the PromptProcessing contains all the required generic, or State Machine, commands.
+	[Tags]    smoke    
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    PromptProcessing
+	Comment    Get the Commands for the CSC.
+	${topics}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	@{Commands}=    Split to Lines    ${topics}
+	:FOR    ${state}    IN    @{GenericCommands}
+	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _command_     ${state}
+	\    Run Keyword And Continue On Failure    Should Contain    ${Commands}    ${string}
+
+Validate PromptProcessing Generic Events
+	[Documentation]    Validate the PromptProcessing contains all the required generic events.
+	[Tags]    smoke    
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    PromptProcessing
+	Comment    Get the Events.
+	${topics}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
 	@{Events}=    Split to Lines    ${topics}
 	:FOR    ${item}    IN    @{GenericEvents}
 	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _logevent_    ${item}

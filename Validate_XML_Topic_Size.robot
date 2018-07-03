@@ -6453,7 +6453,7 @@ Validate ATCS Telemetry atcs_Timestamp Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_disable Topic Byte Size
+Validate CalibrationElectrometer Command calibrationElectrometer_command_disable Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_disable topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -6476,7 +6476,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_disable
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_disable Topic Columns
+Validate CalibrationElectrometer Command calibrationElectrometer_command_disable Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_command_disable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -6489,7 +6489,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_disable
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_Power Topic Byte Size
+Validate CalibrationElectrometer Command calibrationElectrometer_command_Power Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_Power topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -6512,7 +6512,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_Power T
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_Power Topic Columns
+Validate CalibrationElectrometer Command calibrationElectrometer_command_Power Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_command_Power topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -6525,7 +6525,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_Power T
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_StartScanReachIntensity Topic Byte Size
+Validate CalibrationElectrometer Command calibrationElectrometer_command_StartScanReachIntensity Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_StartScanReachIntensity topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -6548,7 +6548,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_StartSc
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_StartScanReachIntensity Topic Columns
+Validate CalibrationElectrometer Command calibrationElectrometer_command_StartScanReachIntensity Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_command_StartScanReachIntensity topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -6561,7 +6561,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_StartSc
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_SetIntegrationTime Topic Byte Size
+Validate CalibrationElectrometer Command calibrationElectrometer_command_SetIntegrationTime Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_SetIntegrationTime topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -6584,7 +6584,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_SetInte
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_SetIntegrationTime Topic Columns
+Validate CalibrationElectrometer Command calibrationElectrometer_command_SetIntegrationTime Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_command_SetIntegrationTime topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -6597,7 +6597,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_SetInte
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_exitControl Topic Byte Size
+Validate CalibrationElectrometer Command calibrationElectrometer_command_exitControl Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_exitControl topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -6620,7 +6620,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_exitCon
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_exitControl Topic Columns
+Validate CalibrationElectrometer Command calibrationElectrometer_command_exitControl Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_command_exitControl topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -6633,7 +6633,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_exitCon
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_enable Topic Byte Size
+Validate CalibrationElectrometer Command calibrationElectrometer_command_enable Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_enable topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -6656,7 +6656,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_enable 
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_enable Topic Columns
+Validate CalibrationElectrometer Command calibrationElectrometer_command_enable Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_command_enable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -6669,7 +6669,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_enable 
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_standby Topic Byte Size
+Validate CalibrationElectrometer Command calibrationElectrometer_command_standby Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_standby topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -6692,7 +6692,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_standby
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_standby Topic Columns
+Validate CalibrationElectrometer Command calibrationElectrometer_command_standby Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_command_standby topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -6705,7 +6705,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_standby
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_SetDigitalFilter Topic Byte Size
+Validate CalibrationElectrometer Command calibrationElectrometer_command_SetDigitalFilter Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_SetDigitalFilter topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -6728,7 +6728,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_SetDigi
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_SetDigitalFilter Topic Columns
+Validate CalibrationElectrometer Command calibrationElectrometer_command_SetDigitalFilter Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_command_SetDigitalFilter topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -6741,7 +6741,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_SetDigi
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_StartScanDt Topic Byte Size
+Validate CalibrationElectrometer Command calibrationElectrometer_command_StartScanDt Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_StartScanDt topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -6764,7 +6764,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_StartSc
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_StartScanDt Topic Columns
+Validate CalibrationElectrometer Command calibrationElectrometer_command_StartScanDt Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_command_StartScanDt topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -6777,7 +6777,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_StartSc
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_SetMode Topic Byte Size
+Validate CalibrationElectrometer Command calibrationElectrometer_command_SetMode Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_SetMode topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -6800,7 +6800,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_SetMode
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_SetMode Topic Columns
+Validate CalibrationElectrometer Command calibrationElectrometer_command_SetMode Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_command_SetMode topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -6813,7 +6813,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_SetMode
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_StartScan Topic Byte Size
+Validate CalibrationElectrometer Command calibrationElectrometer_command_StartScan Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_StartScan topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -6836,7 +6836,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_StartSc
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_StartScan Topic Columns
+Validate CalibrationElectrometer Command calibrationElectrometer_command_StartScan Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_command_StartScan topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -6849,7 +6849,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_StartSc
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_PerformZeroCalib Topic Byte Size
+Validate CalibrationElectrometer Command calibrationElectrometer_command_PerformZeroCalib Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_PerformZeroCalib topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -6872,7 +6872,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_Perform
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_PerformZeroCalib Topic Columns
+Validate CalibrationElectrometer Command calibrationElectrometer_command_PerformZeroCalib Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_command_PerformZeroCalib topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -6885,7 +6885,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_Perform
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_start Topic Byte Size
+Validate CalibrationElectrometer Command calibrationElectrometer_command_start Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_start topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -6908,7 +6908,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_start T
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_start Topic Columns
+Validate CalibrationElectrometer Command calibrationElectrometer_command_start Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_command_start topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -6921,7 +6921,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_start T
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_SetRange Topic Byte Size
+Validate CalibrationElectrometer Command calibrationElectrometer_command_SetRange Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_SetRange topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -6944,7 +6944,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_SetRang
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_SetRange Topic Columns
+Validate CalibrationElectrometer Command calibrationElectrometer_command_SetRange Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_command_SetRange topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -6957,7 +6957,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_SetRang
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_StopScan Topic Byte Size
+Validate CalibrationElectrometer Command calibrationElectrometer_command_StopScan Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_StopScan topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -6980,7 +6980,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_StopSca
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Command calibrationElectrometer_command_StopScan Topic Columns
+Validate CalibrationElectrometer Command calibrationElectrometer_command_StopScan Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_command_StopScan topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -6993,7 +6993,7 @@ Validate Calibrationelectrometer Command calibrationElectrometer_command_StopSca
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_LargeFileObjectAvailable Topic Byte Size
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_LargeFileObjectAvailable Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_LargeFileObjectAvailable topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -7016,7 +7016,7 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_LargeFil
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_LargeFileObjectAvailable Topic Columns
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_LargeFileObjectAvailable Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_logevent_LargeFileObjectAvailable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -7029,7 +7029,7 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_LargeFil
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_IntegrationTime Topic Byte Size
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_IntegrationTime Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_IntegrationTime topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -7052,7 +7052,7 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Integrat
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_IntegrationTime Topic Columns
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_IntegrationTime Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_logevent_IntegrationTime topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -7065,7 +7065,7 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Integrat
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_SummaryState Topic Byte Size
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_SummaryState Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_SummaryState topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -7088,7 +7088,7 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_SummaryS
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_SummaryState Topic Columns
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_SummaryState Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_logevent_SummaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -7101,7 +7101,7 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_SummaryS
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_DetailedState Topic Byte Size
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_DetailedState Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_DetailedState topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -7124,7 +7124,7 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Detailed
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_DetailedState Topic Columns
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_DetailedState Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_logevent_DetailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -7137,7 +7137,7 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Detailed
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_ReadingOutOfLimit Topic Byte Size
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_ReadingOutOfLimit Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_ReadingOutOfLimit topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -7160,7 +7160,7 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_ReadingO
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_ReadingOutOfLimit Topic Columns
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_ReadingOutOfLimit Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_logevent_ReadingOutOfLimit topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -7173,7 +7173,7 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_ReadingO
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_SettingVersions Topic Byte Size
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_SettingVersions Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_SettingVersions topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -7196,7 +7196,7 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_SettingV
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_SettingVersions Topic Columns
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_SettingVersions Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_logevent_SettingVersions topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -7209,7 +7209,7 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_SettingV
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Heartbeat Topic Byte Size
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_Heartbeat Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_Heartbeat topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -7232,7 +7232,7 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Heartbea
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Heartbeat Topic Columns
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_Heartbeat Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_logevent_Heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -7245,7 +7245,7 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Heartbea
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_ErrorCode Topic Byte Size
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_ErrorCode Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_ErrorCode topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -7268,7 +7268,7 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_ErrorCod
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_ErrorCode Topic Columns
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_ErrorCode Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_logevent_ErrorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -7281,7 +7281,7 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_ErrorCod
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_measureRange Topic Byte Size
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_measureRange Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_measureRange topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -7304,7 +7304,7 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_measureR
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_measureRange Topic Columns
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_measureRange Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_logevent_measureRange topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -7317,7 +7317,7 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_measureR
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Intensity Topic Byte Size
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_Intensity Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_Intensity topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -7340,7 +7340,7 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Intensit
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Intensity Topic Columns
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_Intensity Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_logevent_Intensity topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -7353,7 +7353,7 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Intensit
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_digitalFilterChange Topic Byte Size
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_digitalFilterChange Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_digitalFilterChange topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -7376,7 +7376,7 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_digitalF
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_digitalFilterChange Topic Columns
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_digitalFilterChange Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_logevent_digitalFilterChange topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -7389,7 +7389,7 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_digitalF
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_AppliedSettingsMatchStart Topic Byte Size
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_AppliedSettingsMatchStart Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_AppliedSettingsMatchStart topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -7412,7 +7412,7 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_AppliedS
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_AppliedSettingsMatchStart Topic Columns
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_AppliedSettingsMatchStart Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_logevent_AppliedSettingsMatchStart topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -7425,7 +7425,7 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_AppliedS
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_LoopTimeOutOfRange Topic Byte Size
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_LoopTimeOutOfRange Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_LoopTimeOutOfRange topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -7448,7 +7448,7 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_LoopTime
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_LoopTimeOutOfRange Topic Columns
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_LoopTimeOutOfRange Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_logevent_LoopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -7461,7 +7461,7 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_LoopTime
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_SettingsApplied_ReadingSettings Topic Byte Size
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_SettingsApplied_ReadingSettings Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_SettingsApplied_ReadingSettings topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -7484,7 +7484,7 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Settings
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_SettingsApplied_ReadingSettings Topic Columns
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_SettingsApplied_ReadingSettings Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_logevent_SettingsApplied_ReadingSettings topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -7497,7 +7497,7 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Settings
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_IntensityReq Topic Byte Size
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_IntensityReq Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_IntensityReq topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -7520,7 +7520,7 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Intensit
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_IntensityReq Topic Columns
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_IntensityReq Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_logevent_IntensityReq topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -7533,7 +7533,7 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Intensit
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_RejectedCommand Topic Byte Size
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_RejectedCommand Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_RejectedCommand topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -7556,7 +7556,7 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Rejected
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_RejectedCommand Topic Columns
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_RejectedCommand Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_logevent_RejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -7569,7 +7569,7 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Rejected
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_SettingsApplied_SerialConfiguration Topic Byte Size
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_SettingsApplied_SerialConfiguration Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_SettingsApplied_SerialConfiguration topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -7592,7 +7592,7 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Settings
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_SettingsApplied_SerialConfiguration Topic Columns
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_SettingsApplied_SerialConfiguration Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_logevent_SettingsApplied_SerialConfiguration topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -7605,7 +7605,7 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Settings
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_InternalCommand Topic Byte Size
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_InternalCommand Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_InternalCommand topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -7628,7 +7628,7 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Internal
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_InternalCommand Topic Columns
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_InternalCommand Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_logevent_InternalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -7641,7 +7641,7 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_Internal
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_measureType Topic Byte Size
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_measureType Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_measureType topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -7664,7 +7664,7 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_measureT
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Event calibrationElectrometer_logevent_measureType Topic Columns
+Validate CalibrationElectrometer Event calibrationElectrometer_logevent_measureType Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_logevent_measureType topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -7677,7 +7677,7 @@ Validate Calibrationelectrometer Event calibrationElectrometer_logevent_measureT
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Calibrationelectrometer Telemetry calibrationElectrometer_Timestamp Topic Byte Size
+Validate CalibrationElectrometer Telemetry calibrationElectrometer_Timestamp Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_Timestamp topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -7700,7 +7700,7 @@ Validate Calibrationelectrometer Telemetry calibrationElectrometer_Timestamp Top
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Telemetry calibrationElectrometer_Timestamp Topic Columns
+Validate CalibrationElectrometer Telemetry calibrationElectrometer_Timestamp Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_Timestamp topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
@@ -7713,7 +7713,7 @@ Validate Calibrationelectrometer Telemetry calibrationElectrometer_Timestamp Top
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Calibrationelectrometer Telemetry calibrationElectrometer_LoopTime_ms Topic Byte Size
+Validate CalibrationElectrometer Telemetry calibrationElectrometer_LoopTime_ms Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_LoopTime_ms topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
@@ -7736,7 +7736,7 @@ Validate Calibrationelectrometer Telemetry calibrationElectrometer_LoopTime_ms T
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Calibrationelectrometer Telemetry calibrationElectrometer_LoopTime_ms Topic Columns
+Validate CalibrationElectrometer Telemetry calibrationElectrometer_LoopTime_ms Topic Columns
 	[Documentation]    Validate the calibrationElectrometer_LoopTime_ms topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}

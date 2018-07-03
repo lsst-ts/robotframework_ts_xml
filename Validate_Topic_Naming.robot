@@ -216,8 +216,8 @@ Validate ATCS Telemetry Topic Names
 	: FOR    ${item}    IN    @{topics}
 	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
 
-Validate Calibrationelectrometer Commands Topic Names
-	[Documentation]    Validate the Calibrationelectrometer Commands topic names conform to naming convention.
+Validate CalibrationElectrometer Commands Topic Names
+	[Documentation]    Validate the CalibrationElectrometer Commands topic names conform to naming convention.
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
@@ -225,8 +225,8 @@ Validate Calibrationelectrometer Commands Topic Names
 	: FOR    ${item}    IN    @{topics}
 	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
 
-Validate Calibrationelectrometer Events Topic Names
-	[Documentation]    Validate the Calibrationelectrometer Events topic names conform to naming convention.
+Validate CalibrationElectrometer Events Topic Names
+	[Documentation]    Validate the CalibrationElectrometer Events topic names conform to naming convention.
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
@@ -234,8 +234,8 @@ Validate Calibrationelectrometer Events Topic Names
 	: FOR    ${item}    IN    @{topics}
 	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
 
-Validate Calibrationelectrometer Telemetry Topic Names
-	[Documentation]    Validate the Calibrationelectrometer Telemetry topic names conform to naming convention.
+Validate CalibrationElectrometer Telemetry Topic Names
+	[Documentation]    Validate the CalibrationElectrometer Telemetry topic names conform to naming convention.
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}

@@ -56,7 +56,7 @@ Validate ATCS Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   atcs_Telemetry.xml - valid
 
-Validate Calibrationelectrometer Telemetry XML file
+Validate CalibrationElectrometer Telemetry XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Telemetry.xml
 	Log    ${output}

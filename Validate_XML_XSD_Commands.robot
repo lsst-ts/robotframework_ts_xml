@@ -50,7 +50,7 @@ Validate ATCS Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   atcs_Commands.xml - valid
 
-Validate Calibrationelectrometer Commands XML file
+Validate CalibrationElectrometer Commands XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Commands.xml
 	Log    ${output}

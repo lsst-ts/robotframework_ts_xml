@@ -26,40 +26,42 @@ def CapitalizeSubsystem( subsystem ):
 		return subsystem[0].upper() + subsystem[1:]
 	elif subsystem == "atArchiver":
 		return "AtArchiver"
-	elif subsystem == "atHeaderService":
-		return "AtHeaderService"
-	elif subsystem == "atMonochromator":
-		return "AtMonochromator"
 	elif subsystem == "atcamera":
 		return "AtCamera"
 	elif subsystem == "atcs":
 		return "ATCS"
+	elif subsystem == "atHeaderService":
+		return "AtHeaderService"
+	elif subsystem == "atMonochromator":
+		return "AtMonochromator"
 	elif subsystem == "atScheduler":
 		return "AtScheduler"
+	elif subsystem == "calibrationElectrometer":
+		return "CalibrationElectrometer"
 	elif subsystem == "catchuparchiver":
 		return "CatchupArchiver"
-	elif subsystem == "efd":
-		return "EFD"
-	elif subsystem == "PromptProcessing":
-		return "PromptProcessing"
-	elif subsystem == "summitFacility":
-		return "SummitFacility"
 	elif subsystem == "catchuparchiver":
 		return "CatchupArchiver"
-	elif subsystem == "headerService":
-		return "HeaderService"
 	elif subsystem == "eec":
 		return "EEC"
+	elif subsystem == "efd":
+		return "EFD"
+	elif subsystem == "headerService":
+		return "HeaderService"
 	elif subsystem == "m1m3":
 		return "M1M3"
 	elif subsystem == "m2ms":
 		return "M2MS"
 	elif subsystem == "MTMount":
 		return subsystem
-	elif subsystem == "tcs":
-		return "TCS"
 	elif subsystem == "ocs":
 		return "OCS"
+	elif subsystem == "PromptProcessing":
+		return "PromptProcessing"
+	elif subsystem == "summitFacility":
+		return "SummitFacility"
+	elif subsystem == "tcs":
+		return "TCS"
 	elif subsystem == "tcsOfc":
 		return "TcsOfc"
 	elif subsystem == "tcsWEP":

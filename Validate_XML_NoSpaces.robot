@@ -652,85 +652,85 @@ Validate ATCS Telemetry <EFDB_Name> element
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate Calibrationelectrometer Commands <Subsystem> element
-	[Documentation]    Validate the Calibrationelectrometer Commands <Subsystem> elements do not contain embedded spaces.
+Validate CalibrationElectrometer Commands <Subsystem> element
+	[Documentation]    Validate the CalibrationElectrometer Commands <Subsystem> elements do not contain embedded spaces.
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Subsystem" -v . -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate Calibrationelectrometer Commands <EFDB_Topic> element
-	[Documentation]    Validate the Calibrationelectrometer Commands <EFDB_Topic> elements do not contain embedded spaces.
+Validate CalibrationElectrometer Commands <EFDB_Topic> element
+	[Documentation]    Validate the CalibrationElectrometer Commands <EFDB_Topic> elements do not contain embedded spaces.
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate Calibrationelectrometer Commands <Alias> element
-	[Documentation]    Validate the Calibrationelectrometer Commands <Alias> elements do not contain embedded spaces.
+Validate CalibrationElectrometer Commands <Alias> element
+	[Documentation]    Validate the CalibrationElectrometer Commands <Alias> elements do not contain embedded spaces.
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate Calibrationelectrometer Commands <EFDB_Name> element
-	[Documentation]    Validate the Calibrationelectrometer Commands <EFDB_Name> elements do not contain embedded spaces.
+Validate CalibrationElectrometer Commands <EFDB_Name> element
+	[Documentation]    Validate the CalibrationElectrometer Commands <EFDB_Name> elements do not contain embedded spaces.
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate Calibrationelectrometer Events <Subsystem> element
-	[Documentation]    Validate the Calibrationelectrometer Events <Subsystem> elements do not contain embedded spaces.
+Validate CalibrationElectrometer Events <Subsystem> element
+	[Documentation]    Validate the CalibrationElectrometer Events <Subsystem> elements do not contain embedded spaces.
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Subsystem" -v . -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate Calibrationelectrometer Events <EFDB_Topic> element
-	[Documentation]    Validate the Calibrationelectrometer Events <EFDB_Topic> elements do not contain embedded spaces.
+Validate CalibrationElectrometer Events <EFDB_Topic> element
+	[Documentation]    Validate the CalibrationElectrometer Events <EFDB_Topic> elements do not contain embedded spaces.
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate Calibrationelectrometer Events <Alias> element
-	[Documentation]    Validate the Calibrationelectrometer Events <Alias> elements do not contain embedded spaces.
+Validate CalibrationElectrometer Events <Alias> element
+	[Documentation]    Validate the CalibrationElectrometer Events <Alias> elements do not contain embedded spaces.
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate Calibrationelectrometer Events <EFDB_Name> element
-	[Documentation]    Validate the Calibrationelectrometer Events <EFDB_Name> elements do not contain embedded spaces.
+Validate CalibrationElectrometer Events <EFDB_Name> element
+	[Documentation]    Validate the CalibrationElectrometer Events <EFDB_Name> elements do not contain embedded spaces.
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate Calibrationelectrometer Telemetry <Subsystem> element
-	[Documentation]    Validate the Calibrationelectrometer Telemetry <Subsystem> elements do not contain embedded spaces.
+Validate CalibrationElectrometer Telemetry <Subsystem> element
+	[Documentation]    Validate the CalibrationElectrometer Telemetry <Subsystem> elements do not contain embedded spaces.
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Subsystem" -v . -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate Calibrationelectrometer Telemetry <EFDB_Topic> element
-	[Documentation]    Validate the Calibrationelectrometer Telemetry <EFDB_Topic> elements do not contain embedded spaces.
+Validate CalibrationElectrometer Telemetry <EFDB_Topic> element
+	[Documentation]    Validate the CalibrationElectrometer Telemetry <EFDB_Topic> elements do not contain embedded spaces.
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/EFDB_Topic" -v . -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate Calibrationelectrometer Telemetry <Alias> element
-	[Documentation]    Validate the Calibrationelectrometer Telemetry <Alias> elements do not contain embedded spaces.
+Validate CalibrationElectrometer Telemetry <Alias> element
+	[Documentation]    Validate the CalibrationElectrometer Telemetry <Alias> elements do not contain embedded spaces.
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate Calibrationelectrometer Telemetry <EFDB_Name> element
-	[Documentation]    Validate the Calibrationelectrometer Telemetry <EFDB_Name> elements do not contain embedded spaces.
+Validate CalibrationElectrometer Telemetry <EFDB_Name> element
+	[Documentation]    Validate the CalibrationElectrometer Telemetry <EFDB_Name> elements do not contain embedded spaces.
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
 	Log    ${output}
