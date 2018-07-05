@@ -652,13 +652,6 @@ Validate TcsOfc Telemetry
 	Log    ${output}
 	Should Contain    ${output}   tcsOfc_Telemetry.xml - valid
 
-Validate TcsWEP Commands
-	[Documentation]    Validate the TcsWEP Commands XML file.
-	[Tags]    smoke
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   tcsWEP_Commands.xml - valid
-
 Validate TcsWEP Events
 	[Documentation]    Validate the TcsWEP Events XML file.
 	[Tags]    smoke
