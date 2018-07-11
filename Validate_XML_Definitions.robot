@@ -64,6 +64,13 @@ Validate AtHeaderService Events
 	Log    ${output}
 	Should Contain    ${output}   atHeaderService_Events.xml - valid
 
+Validate AtHeaderService Telemetry
+	[Documentation]    Validate the AtHeaderService Telemetry XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/atHeaderService/atHeaderService_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   atHeaderService_Telemetry.xml - valid
+
 Validate AtMonochromator Commands
 	[Documentation]    Validate the AtMonochromator Commands XML file.
 	[Tags]    smoke
@@ -421,6 +428,13 @@ Validate HeaderService Events
 	Log    ${output}
 	Should Contain    ${output}   headerService_Events.xml - valid
 
+Validate HeaderService Telemetry
+	[Documentation]    Validate the HeaderService Telemetry XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/headerService/headerService_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   headerService_Telemetry.xml - valid
+
 Validate Hexapod Commands
 	[Documentation]    Validate the Hexapod Commands XML file.
 	[Tags]    smoke
@@ -637,6 +651,13 @@ Validate TcsOfc Telemetry
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/tcsOfc/tcsOfc_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   tcsOfc_Telemetry.xml - valid
+
+Validate TcsWEP Commands
+	[Documentation]    Validate the TcsWEP Commands XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   tcsWEP_Commands.xml - valid
 
 Validate TcsWEP Events
 	[Documentation]    Validate the TcsWEP Events XML file.
