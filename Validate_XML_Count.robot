@@ -72,14 +72,6 @@ Validate AtHeaderService Events XML Counts
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate AtHeaderService Telemetry XML Counts
-	[Documentation]    Validate the AtHeaderService Telemetry XML count.
-	[Tags]    smoke
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
 Validate AtMonochromator Commands XML Counts
 	[Documentation]    Validate the AtMonochromator Commands XML count.
 	[Tags]    smoke
@@ -488,14 +480,6 @@ Validate HeaderService Events XML Counts
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate HeaderService Telemetry XML Counts
-	[Documentation]    Validate the HeaderService Telemetry XML count.
-	[Tags]    smoke
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/headerService/headerService_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
 Validate Hexapod Commands XML Counts
 	[Documentation]    Validate the Hexapod Commands XML count.
 	[Tags]    smoke
@@ -740,14 +724,6 @@ Validate TcsOfc Telemetry XML Counts
 	[Documentation]    Validate the TcsOfc Telemetry XML count.
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
-Validate TcsWEP Commands XML Counts
-	[Documentation]    Validate the TcsWEP Commands XML count.
-	[Tags]    smoke
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
