@@ -12,3 +12,6 @@ Validate_XML_NoSpaces.robot
 Validate_XML_Topic_Size.robot
 Validate_XML_IDLTypes.robot
 Validate_XML_ReservedWords.robot
+Validate_XML_Generic_Topics.robot
+Validate_Attribute_Naming.robot
+Validate_Topic_Naming.robot
