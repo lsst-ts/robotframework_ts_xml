@@ -232,34 +232,6 @@ Validate AtHeaderService Events <EFDB_Name> element
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate AtHeaderService Telemetry <Subsystem> element
-	[Documentation]    Validate the AtHeaderService Telemetry <Subsystem> elements do not contain embedded spaces.
-	[Tags]    smoke
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Subsystem" -v . -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate AtHeaderService Telemetry <EFDB_Topic> element
-	[Documentation]    Validate the AtHeaderService Telemetry <EFDB_Topic> elements do not contain embedded spaces.
-	[Tags]    smoke
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/EFDB_Topic" -v . -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate AtHeaderService Telemetry <Alias> element
-	[Documentation]    Validate the AtHeaderService Telemetry <Alias> elements do not contain embedded spaces.
-	[Tags]    smoke
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate AtHeaderService Telemetry <EFDB_Name> element
-	[Documentation]    Validate the AtHeaderService Telemetry <EFDB_Name> elements do not contain embedded spaces.
-	[Tags]    smoke
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
 Validate AtMonochromator Commands <Subsystem> element
 	[Documentation]    Validate the AtMonochromator Commands <Subsystem> elements do not contain embedded spaces.
 	[Tags]    smoke
@@ -1688,34 +1660,6 @@ Validate HeaderService Events <EFDB_Name> element
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate HeaderService Telemetry <Subsystem> element
-	[Documentation]    Validate the HeaderService Telemetry <Subsystem> elements do not contain embedded spaces.
-	[Tags]    smoke
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Subsystem" -v . -n ${folder}/sal_interfaces/headerService/headerService_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate HeaderService Telemetry <EFDB_Topic> element
-	[Documentation]    Validate the HeaderService Telemetry <EFDB_Topic> elements do not contain embedded spaces.
-	[Tags]    smoke
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/EFDB_Topic" -v . -n ${folder}/sal_interfaces/headerService/headerService_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate HeaderService Telemetry <Alias> element
-	[Documentation]    Validate the HeaderService Telemetry <Alias> elements do not contain embedded spaces.
-	[Tags]    smoke
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/headerService/headerService_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate HeaderService Telemetry <EFDB_Name> element
-	[Documentation]    Validate the HeaderService Telemetry <EFDB_Name> elements do not contain embedded spaces.
-	[Tags]    smoke
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/headerService/headerService_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
 Validate Hexapod Commands <Subsystem> element
 	[Documentation]    Validate the Hexapod Commands <Subsystem> elements do not contain embedded spaces.
 	[Tags]    smoke
@@ -2581,34 +2525,6 @@ Validate TcsOfc Telemetry <EFDB_Name> element
 	[Documentation]    Validate the TcsOfc Telemetry <EFDB_Name> elements do not contain embedded spaces.
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate TcsWEP Commands <Subsystem> element
-	[Documentation]    Validate the TcsWEP Commands <Subsystem> elements do not contain embedded spaces.
-	[Tags]    smoke
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Subsystem" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate TcsWEP Commands <EFDB_Topic> element
-	[Documentation]    Validate the TcsWEP Commands <EFDB_Topic> elements do not contain embedded spaces.
-	[Tags]    smoke
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate TcsWEP Commands <Alias> element
-	[Documentation]    Validate the TcsWEP Commands <Alias> elements do not contain embedded spaces.
-	[Tags]    smoke
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate TcsWEP Commands <EFDB_Name> element
-	[Documentation]    Validate the TcsWEP Commands <EFDB_Name> elements do not contain embedded spaces.
-	[Tags]    smoke
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
