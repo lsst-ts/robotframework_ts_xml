@@ -164,6 +164,12 @@ Validate Sequencer Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   sequencer_Commands.xml - valid
 
+Validate SEDSpectrometer Commands XML file
+	[Tags]    smoke
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   sedSpectrometer_Commands.xml - valid
+
 Validate SummitFacility Commands XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/summitFacility/summitFacility_Commands.xml

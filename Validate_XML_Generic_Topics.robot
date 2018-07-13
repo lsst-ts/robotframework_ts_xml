@@ -657,6 +657,30 @@ Validate Sequencer Generic Events
 	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _logevent_    ${item}
 	\    Run Keyword And Continue On Failure    Should Contain    ${Events}    ${string}
 
+Validate SEDSpectrometer Generic Commands
+	[Documentation]    Validate the SEDSpectrometer contains all the required generic, or State Machine, commands.
+	[Tags]    smoke    
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    sedSpectrometer
+	Comment    Get the Commands for the CSC.
+	${topics}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Commands.xml
+	@{Commands}=    Split to Lines    ${topics}
+	:FOR    ${state}    IN    @{GenericCommands}
+	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _command_     ${state}
+	\    Run Keyword And Continue On Failure    Should Contain    ${Commands}    ${string}
+
+Validate SEDSpectrometer Generic Events
+	[Documentation]    Validate the SEDSpectrometer contains all the required generic events.
+	[Tags]    smoke    
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    sedSpectrometer
+	Comment    Get the Events.
+	${topics}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Events.xml
+	@{Events}=    Split to Lines    ${topics}
+	:FOR    ${item}    IN    @{GenericEvents}
+	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _logevent_    ${item}
+	\    Run Keyword And Continue On Failure    Should Contain    ${Events}    ${string}
+
 Validate SummitFacility Generic Commands
 	[Documentation]    Validate the SummitFacility contains all the required generic, or State Machine, commands.
 	[Tags]    smoke    TSS-2622

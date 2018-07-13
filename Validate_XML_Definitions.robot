@@ -575,6 +575,27 @@ Validate Sequencer Telemetry
 	Log    ${output}
 	Should Contain    ${output}   sequencer_Telemetry.xml - valid
 
+Validate SEDSpectrometer Commands
+	[Documentation]    Validate the SEDSpectrometer Commands XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   sedSpectrometer_Commands.xml - valid
+
+Validate SEDSpectrometer Events
+	[Documentation]    Validate the SEDSpectrometer Events XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   sedSpectrometer_Events.xml - valid
+
+Validate SEDSpectrometer Telemetry
+	[Documentation]    Validate the SEDSpectrometer Telemetry XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   sedSpectrometer_Telemetry.xml - valid
+
 Validate SummitFacility Commands
 	[Documentation]    Validate the SummitFacility Commands XML file.
 	[Tags]    smoke
