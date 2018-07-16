@@ -2220,6 +2220,62 @@ Validate Rotator Telemetry <EFDB_Name> element
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
+Validate Scheduler Commands <Subsystem> element
+	[Documentation]    Validate the Scheduler Commands <Subsystem> elements do not contain embedded spaces.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Subsystem" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate Scheduler Commands <EFDB_Topic> element
+	[Documentation]    Validate the Scheduler Commands <EFDB_Topic> elements do not contain embedded spaces.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate Scheduler Commands <Alias> element
+	[Documentation]    Validate the Scheduler Commands <Alias> elements do not contain embedded spaces.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate Scheduler Commands <EFDB_Name> element
+	[Documentation]    Validate the Scheduler Commands <EFDB_Name> elements do not contain embedded spaces.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate Scheduler Events <Subsystem> element
+	[Documentation]    Validate the Scheduler Events <Subsystem> elements do not contain embedded spaces.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Subsystem" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate Scheduler Events <EFDB_Topic> element
+	[Documentation]    Validate the Scheduler Events <EFDB_Topic> elements do not contain embedded spaces.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate Scheduler Events <Alias> element
+	[Documentation]    Validate the Scheduler Events <Alias> elements do not contain embedded spaces.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate Scheduler Events <EFDB_Name> element
+	[Documentation]    Validate the Scheduler Events <EFDB_Name> elements do not contain embedded spaces.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
 Validate Scheduler Telemetry <Subsystem> element
 	[Documentation]    Validate the Scheduler Telemetry <Subsystem> elements do not contain embedded spaces.
 	[Tags]    smoke

@@ -158,6 +158,12 @@ Validate Rotator Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   rotator_Commands.xml - valid
 
+Validate Scheduler Commands XML file
+	[Tags]    smoke
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   scheduler_Commands.xml - valid
+
 Validate Sequencer Commands XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/sequencer/sequencer_Commands.xml

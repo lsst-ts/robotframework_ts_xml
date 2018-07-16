@@ -170,6 +170,12 @@ Validate Rotator Events XML file
 	Log    ${output}
 	Should Contain    ${output}   rotator_Events.xml - valid
 
+Validate Scheduler Events XML file
+	[Tags]    smoke
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   scheduler_Events.xml - valid
+
 Validate Sequencer Events XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/sequencer/sequencer_Events.xml

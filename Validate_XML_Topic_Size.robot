@@ -24381,8 +24381,728 @@ Validate Rotator Telemetry rotator_Motors Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry scheduler_timeHandler Topic Byte Size
-	[Documentation]    Validate the scheduler_timeHandler topic is less than 65536 bytes in total.
+Validate Scheduler Command scheduler_command_disable Topic Byte Size
+	[Documentation]    Validate the scheduler_command_disable topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Scheduler Command scheduler_command_disable Topic Columns
+	[Documentation]    Validate the scheduler_command_disable topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Scheduler Command scheduler_command_enable Topic Byte Size
+	[Documentation]    Validate the scheduler_command_enable topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[2]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Scheduler Command scheduler_command_enable Topic Columns
+	[Documentation]    Validate the scheduler_command_enable topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[2]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Scheduler Command scheduler_command_exitControl Topic Byte Size
+	[Documentation]    Validate the scheduler_command_exitControl topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[3]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[3]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Scheduler Command scheduler_command_exitControl Topic Columns
+	[Documentation]    Validate the scheduler_command_exitControl topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[3]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Scheduler Command scheduler_command_standby Topic Byte Size
+	[Documentation]    Validate the scheduler_command_standby topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[4]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Scheduler Command scheduler_command_standby Topic Columns
+	[Documentation]    Validate the scheduler_command_standby topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[4]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Scheduler Command scheduler_command_start Topic Byte Size
+	[Documentation]    Validate the scheduler_command_start topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[5]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Scheduler Command scheduler_command_start Topic Columns
+	[Documentation]    Validate the scheduler_command_start topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[5]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Scheduler Command scheduler_command_enterControl Topic Byte Size
+	[Documentation]    Validate the scheduler_command_enterControl topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[6]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[6]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Scheduler Command scheduler_command_enterControl Topic Columns
+	[Documentation]    Validate the scheduler_command_enterControl topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[6]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Scheduler Event scheduler_logevent_appliedSettingsMatchStart Topic Byte Size
+	[Documentation]    Validate the scheduler_logevent_appliedSettingsMatchStart topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[1]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[1]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Scheduler Event scheduler_logevent_appliedSettingsMatchStart Topic Columns
+	[Documentation]    Validate the scheduler_logevent_appliedSettingsMatchStart topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[1]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Scheduler Event scheduler_logevent_errorCode Topic Byte Size
+	[Documentation]    Validate the scheduler_logevent_errorCode topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Scheduler Event scheduler_logevent_errorCode Topic Columns
+	[Documentation]    Validate the scheduler_logevent_errorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Scheduler Event scheduler_logevent_settingVersions Topic Byte Size
+	[Documentation]    Validate the scheduler_logevent_settingVersions topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Scheduler Event scheduler_logevent_settingVersions Topic Columns
+	[Documentation]    Validate the scheduler_logevent_settingVersions topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Scheduler Event scheduler_logevent_summaryState Topic Byte Size
+	[Documentation]    Validate the scheduler_logevent_summaryState topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Scheduler Event scheduler_logevent_summaryState Topic Columns
+	[Documentation]    Validate the scheduler_logevent_summaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Scheduler Event scheduler_logevent_detailedState Topic Byte Size
+	[Documentation]    Validate the scheduler_logevent_detailedState topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Scheduler Event scheduler_logevent_detailedState Topic Columns
+	[Documentation]    Validate the scheduler_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Scheduler Event scheduler_logevent_internalCommand Topic Byte Size
+	[Documentation]    Validate the scheduler_logevent_internalCommand topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Scheduler Event scheduler_logevent_internalCommand Topic Columns
+	[Documentation]    Validate the scheduler_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Scheduler Event scheduler_logevent_heartbeat Topic Byte Size
+	[Documentation]    Validate the scheduler_logevent_heartbeat topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Scheduler Event scheduler_logevent_heartbeat Topic Columns
+	[Documentation]    Validate the scheduler_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Scheduler Event scheduler_logevent_loopTimeOutOfRange Topic Byte Size
+	[Documentation]    Validate the scheduler_logevent_loopTimeOutOfRange topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Scheduler Event scheduler_logevent_loopTimeOutOfRange Topic Columns
+	[Documentation]    Validate the scheduler_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Scheduler Event scheduler_logevent_rejectedCommand Topic Byte Size
+	[Documentation]    Validate the scheduler_logevent_rejectedCommand topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Scheduler Event scheduler_logevent_rejectedCommand Topic Columns
+	[Documentation]    Validate the scheduler_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Scheduler Event scheduler_logevent_settingsApplied Topic Byte Size
+	[Documentation]    Validate the scheduler_logevent_settingsApplied topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Scheduler Event scheduler_logevent_settingsApplied Topic Columns
+	[Documentation]    Validate the scheduler_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Scheduler Event scheduler_logevent_validSettings Topic Byte Size
+	[Documentation]    Validate the scheduler_logevent_validSettings topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[11]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[11]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Scheduler Event scheduler_logevent_validSettings Topic Columns
+	[Documentation]    Validate the scheduler_logevent_validSettings topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[11]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Scheduler Event scheduler_logevent_target Topic Byte Size
+	[Documentation]    Validate the scheduler_logevent_target topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[12]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[12]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[12]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Scheduler Event scheduler_logevent_target Topic Columns
+	[Documentation]    Validate the scheduler_logevent_target topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[12]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[12]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Scheduler Event scheduler_logevent_invalidateTarget Topic Byte Size
+	[Documentation]    Validate the scheduler_logevent_invalidateTarget topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[13]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[13]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[13]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Scheduler Event scheduler_logevent_invalidateTarget Topic Columns
+	[Documentation]    Validate the scheduler_logevent_invalidateTarget topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[13]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[13]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Scheduler Event scheduler_logevent_needFilterSwap Topic Byte Size
+	[Documentation]    Validate the scheduler_logevent_needFilterSwap topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[14]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[14]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[14]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Scheduler Event scheduler_logevent_needFilterSwap Topic Columns
+	[Documentation]    Validate the scheduler_logevent_needFilterSwap topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[14]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[14]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Scheduler Telemetry scheduler_timestamp Topic Byte Size
+	[Documentation]    Validate the scheduler_timestamp topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24404,8 +25124,8 @@ Validate Scheduler Telemetry scheduler_timeHandler Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry scheduler_timeHandler Topic Columns
-	[Documentation]    Validate the scheduler_timeHandler topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Scheduler Telemetry scheduler_timestamp Topic Columns
+	[Documentation]    Validate the scheduler_timestamp topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24417,8 +25137,8 @@ Validate Scheduler Telemetry scheduler_timeHandler Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry scheduler_cloud Topic Byte Size
-	[Documentation]    Validate the scheduler_cloud topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry scheduler_loopTimeMs Topic Byte Size
+	[Documentation]    Validate the scheduler_loopTimeMs topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24440,8 +25160,8 @@ Validate Scheduler Telemetry scheduler_cloud Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry scheduler_cloud Topic Columns
-	[Documentation]    Validate the scheduler_cloud topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Scheduler Telemetry scheduler_loopTimeMs Topic Columns
+	[Documentation]    Validate the scheduler_loopTimeMs topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24453,8 +25173,8 @@ Validate Scheduler Telemetry scheduler_cloud Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry scheduler_seeing Topic Byte Size
-	[Documentation]    Validate the scheduler_seeing topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry scheduler_nightSummary Topic Byte Size
+	[Documentation]    Validate the scheduler_nightSummary topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24476,8 +25196,8 @@ Validate Scheduler Telemetry scheduler_seeing Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry scheduler_seeing Topic Columns
-	[Documentation]    Validate the scheduler_seeing topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Scheduler Telemetry scheduler_nightSummary Topic Columns
+	[Documentation]    Validate the scheduler_nightSummary topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24489,8 +25209,8 @@ Validate Scheduler Telemetry scheduler_seeing Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry scheduler_filterSwap Topic Byte Size
-	[Documentation]    Validate the scheduler_filterSwap topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry scheduler_predictedSchedule Topic Byte Size
+	[Documentation]    Validate the scheduler_predictedSchedule topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24512,8 +25232,8 @@ Validate Scheduler Telemetry scheduler_filterSwap Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry scheduler_filterSwap Topic Columns
-	[Documentation]    Validate the scheduler_filterSwap topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Scheduler Telemetry scheduler_predictedSchedule Topic Columns
+	[Documentation]    Validate the scheduler_predictedSchedule topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24525,8 +25245,8 @@ Validate Scheduler Telemetry scheduler_filterSwap Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry scheduler_schedulerConfig Topic Byte Size
-	[Documentation]    Validate the scheduler_schedulerConfig topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry scheduler_surveyTopology Topic Byte Size
+	[Documentation]    Validate the scheduler_surveyTopology topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24548,8 +25268,8 @@ Validate Scheduler Telemetry scheduler_schedulerConfig Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry scheduler_schedulerConfig Topic Columns
-	[Documentation]    Validate the scheduler_schedulerConfig topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Scheduler Telemetry scheduler_surveyTopology Topic Columns
+	[Documentation]    Validate the scheduler_surveyTopology topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24561,8 +25281,8 @@ Validate Scheduler Telemetry scheduler_schedulerConfig Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry scheduler_driverConfig Topic Byte Size
-	[Documentation]    Validate the scheduler_driverConfig topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry scheduler_schedulerConfig Topic Byte Size
+	[Documentation]    Validate the scheduler_schedulerConfig topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24584,8 +25304,8 @@ Validate Scheduler Telemetry scheduler_driverConfig Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry scheduler_driverConfig Topic Columns
-	[Documentation]    Validate the scheduler_driverConfig topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Scheduler Telemetry scheduler_schedulerConfig Topic Columns
+	[Documentation]    Validate the scheduler_schedulerConfig topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24597,8 +25317,8 @@ Validate Scheduler Telemetry scheduler_driverConfig Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry scheduler_field Topic Byte Size
-	[Documentation]    Validate the scheduler_field topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry scheduler_driverConfig Topic Byte Size
+	[Documentation]    Validate the scheduler_driverConfig topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24620,8 +25340,8 @@ Validate Scheduler Telemetry scheduler_field Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry scheduler_field Topic Columns
-	[Documentation]    Validate the scheduler_field topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Scheduler Telemetry scheduler_driverConfig Topic Columns
+	[Documentation]    Validate the scheduler_driverConfig topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25029,8 +25749,8 @@ Validate Scheduler Telemetry scheduler_observatoryState Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry scheduler_target Topic Byte Size
-	[Documentation]    Validate the scheduler_target topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry scheduler_observation Topic Byte Size
+	[Documentation]    Validate the scheduler_observation topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25052,8 +25772,8 @@ Validate Scheduler Telemetry scheduler_target Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry scheduler_target Topic Columns
-	[Documentation]    Validate the scheduler_target topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Scheduler Telemetry scheduler_observation Topic Columns
+	[Documentation]    Validate the scheduler_observation topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25065,8 +25785,8 @@ Validate Scheduler Telemetry scheduler_target Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry scheduler_observation Topic Byte Size
-	[Documentation]    Validate the scheduler_observation topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry scheduler_interestedProposal Topic Byte Size
+	[Documentation]    Validate the scheduler_interestedProposal topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25088,8 +25808,8 @@ Validate Scheduler Telemetry scheduler_observation Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry scheduler_observation Topic Columns
-	[Documentation]    Validate the scheduler_observation topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Scheduler Telemetry scheduler_interestedProposal Topic Columns
+	[Documentation]    Validate the scheduler_interestedProposal topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25101,8 +25821,8 @@ Validate Scheduler Telemetry scheduler_observation Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry scheduler_interestedProposal Topic Byte Size
-	[Documentation]    Validate the scheduler_interestedProposal topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry scheduler_timeHandler Topic Byte Size
+	[Documentation]    Validate the scheduler_timeHandler topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25124,8 +25844,8 @@ Validate Scheduler Telemetry scheduler_interestedProposal Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry scheduler_interestedProposal Topic Columns
-	[Documentation]    Validate the scheduler_interestedProposal topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Scheduler Telemetry scheduler_timeHandler Topic Columns
+	[Documentation]    Validate the scheduler_timeHandler topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25137,8 +25857,8 @@ Validate Scheduler Telemetry scheduler_interestedProposal Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry scheduler_parameters Topic Byte Size
-	[Documentation]    Validate the scheduler_parameters topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry scheduler_bulkCloud Topic Byte Size
+	[Documentation]    Validate the scheduler_bulkCloud topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25160,8 +25880,8 @@ Validate Scheduler Telemetry scheduler_parameters Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry scheduler_parameters Topic Columns
-	[Documentation]    Validate the scheduler_parameters topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Scheduler Telemetry scheduler_bulkCloud Topic Columns
+	[Documentation]    Validate the scheduler_bulkCloud topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25173,8 +25893,8 @@ Validate Scheduler Telemetry scheduler_parameters Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry scheduler_Application Topic Byte Size
-	[Documentation]    Validate the scheduler_Application topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry scheduler_cloudMap Topic Byte Size
+	[Documentation]    Validate the scheduler_cloudMap topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25196,8 +25916,8 @@ Validate Scheduler Telemetry scheduler_Application Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry scheduler_Application Topic Columns
-	[Documentation]    Validate the scheduler_Application topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Scheduler Telemetry scheduler_cloudMap Topic Columns
+	[Documentation]    Validate the scheduler_cloudMap topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25209,8 +25929,8 @@ Validate Scheduler Telemetry scheduler_Application Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry scheduler_program Topic Byte Size
-	[Documentation]    Validate the scheduler_program topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry scheduler_seeing Topic Byte Size
+	[Documentation]    Validate the scheduler_seeing topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25232,8 +25952,8 @@ Validate Scheduler Telemetry scheduler_program Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry scheduler_program Topic Columns
-	[Documentation]    Validate the scheduler_program topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Scheduler Telemetry scheduler_seeing Topic Columns
+	[Documentation]    Validate the scheduler_seeing topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25245,8 +25965,8 @@ Validate Scheduler Telemetry scheduler_program Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry scheduler_progress Topic Byte Size
-	[Documentation]    Validate the scheduler_progress topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry scheduler_wind Topic Byte Size
+	[Documentation]    Validate the scheduler_wind topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25268,8 +25988,8 @@ Validate Scheduler Telemetry scheduler_progress Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry scheduler_progress Topic Columns
-	[Documentation]    Validate the scheduler_progress topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Scheduler Telemetry scheduler_wind Topic Columns
+	[Documentation]    Validate the scheduler_wind topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25281,8 +26001,8 @@ Validate Scheduler Telemetry scheduler_progress Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry scheduler_rankingData Topic Byte Size
-	[Documentation]    Validate the scheduler_rankingData topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry scheduler_temperature Topic Byte Size
+	[Documentation]    Validate the scheduler_temperature topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25304,8 +26024,8 @@ Validate Scheduler Telemetry scheduler_rankingData Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry scheduler_rankingData Topic Columns
-	[Documentation]    Validate the scheduler_rankingData topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Scheduler Telemetry scheduler_temperature Topic Columns
+	[Documentation]    Validate the scheduler_temperature topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25317,8 +26037,8 @@ Validate Scheduler Telemetry scheduler_rankingData Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry scheduler_econstraints Topic Byte Size
-	[Documentation]    Validate the scheduler_econstraints topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry scheduler_skyBrightness Topic Byte Size
+	[Documentation]    Validate the scheduler_skyBrightness topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25340,8 +26060,8 @@ Validate Scheduler Telemetry scheduler_econstraints Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry scheduler_econstraints Topic Columns
-	[Documentation]    Validate the scheduler_econstraints topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Scheduler Telemetry scheduler_skyBrightness Topic Columns
+	[Documentation]    Validate the scheduler_skyBrightness topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25353,8 +26073,8 @@ Validate Scheduler Telemetry scheduler_econstraints Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry scheduler_iconstraints Topic Byte Size
-	[Documentation]    Validate the scheduler_iconstraints topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry scheduler_photometricQuality Topic Byte Size
+	[Documentation]    Validate the scheduler_photometricQuality topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25376,13 +26096,85 @@ Validate Scheduler Telemetry scheduler_iconstraints Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry scheduler_iconstraints Topic Columns
-	[Documentation]    Validate the scheduler_iconstraints topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Scheduler Telemetry scheduler_photometricQuality Topic Columns
+	[Documentation]    Validate the scheduler_photometricQuality topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[28]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[28]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Scheduler Telemetry scheduler_avoidanceRegions Topic Byte Size
+	[Documentation]    Validate the scheduler_avoidanceRegions topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[29]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[29]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[29]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Scheduler Telemetry scheduler_avoidanceRegions Topic Columns
+	[Documentation]    Validate the scheduler_avoidanceRegions topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[29]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[29]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Scheduler Telemetry scheduler_downtime Topic Byte Size
+	[Documentation]    Validate the scheduler_downtime topic is less than 65536 bytes in total.
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[30]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[30]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[30]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Scheduler Telemetry scheduler_downtime Topic Columns
+	[Documentation]    Validate the scheduler_downtime topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[30]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[30]/item/Count" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
