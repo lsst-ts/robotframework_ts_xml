@@ -20,7 +20,8 @@ except:
 # Create Settings header.
 file.write("*** Settings ***\n")
 file.write("Documentation    Validate the subsystem XML definition files contain all the required generic, or State Machine, commands.\n")
-file.write("Suite Setup    Run Keywords    Create the Generic Commands Array    AND    Create the Generic Events Array    AND    Run Keyword If    \"${ContInt}\"==\"true\"    Set Suite Variable    ${xml}    xmlstarlet\n")
+file.write("Suite Setup    Run Keywords    Create the Generic Commands Array    AND    Create the Generic Events Array    AND\n")
+file.write("...    Create the Enumeration Array    AND    Run Keyword If    \"${ContInt}\"==\"true\"    Set Suite Variable    ${xml}    xmlstarlet\n")
 file.write("Library    OperatingSystem\n")
 file.write("Library    String\n")
 file.write("Resource    Global_Vars.robot\n")
@@ -96,6 +97,17 @@ for subsystem in xml_common.subsystems:
 	file.write("\t\    Run Keyword And Continue On Failure    Should Contain    ${Events}    ${string}\n")
 	file.write("\n")
 
+	file.write("Validate " + xml_common.CapitalizeSubsystem(subsystem) + " Event Enumeration\n")
+	file.write("\t[Documentation]    Validate the " + xml_common.CapitalizeSubsystem(subsystem) + " defines the required enumeration.\n")
+	file.write("\t[Tags]    smoke    " + skipped + "\n")
+	file.write("\tComment    Define CSC.\n")
+	file.write("\tSet Test Variable    ${csc}    "+ subsystem + "\n")
+	file.write("\tComment    Get the Event Enumerations.\n")
+	file.write("\t${enums}=    Run    ${xml} sel -t -m \"//SALEventSet/Enumeration\" -v . -n ${folder}/" + event_xml_file + "\n")
+	file.write("\t:FOR    ${item}    IN    @{Enumerations}\n")
+	file.write("\t\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}\n")
+	file.write("\n")
+
 # Create Generic Commands Array
 file.write("*** Keywords ***\n")
 file.write("Create the Generic Commands Array\n")
@@ -111,4 +123,13 @@ file.write("\t[Tags]    smoke\n")
 file.write("\t@{GenericEvents}=    Create List    appliedSettingsMatchStart    errorCode    settingVersions    summaryState\n")
 file.write("\tLog Many    @{GenericEvents}\n")
 file.write("\tSet Suite Variable    @{GenericEvents}\n")
+file.write("\n")
+
+# Create Enumeration Array
+file.write("Create the Enumeration Array\n")
+file.write("\t[Tags]    smoke\n")
+file.write("\t@{Enumerations}=    Create List    SummaryState_DisabledState    SummaryState_EnabledState\n")
+file.write("\t...    SummaryState_FaultState    SummaryState_OfflineState    SummaryState_StandbyState\n")
+file.write("\tLog Many    @{Enumerations}\n")
+file.write("\tSet Suite Variable    @{Enumerations}\n")
 file.write("\n")
