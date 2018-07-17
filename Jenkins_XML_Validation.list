@@ -12,3 +12,6 @@ rbtxml/Validate_XML_NoSpaces.robot
 rbtxml/Validate_XML_Topic_Size.robot
 rbtxml/Validate_XML_IDLTypes.robot
 rbtxml/Validate_XML_ReservedWords.robot
+rbtxml/Validate_XML_Generic_Topics.robot
+rbtxml/Validate_Attribute_Naming.robot
+rbtxml/Validate_Topic_Naming.robot
