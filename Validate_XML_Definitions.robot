@@ -561,6 +561,20 @@ Validate Rotator Telemetry
 	Log    ${output}
 	Should Contain    ${output}   rotator_Telemetry.xml - valid
 
+Validate Scheduler Commands
+	[Documentation]    Validate the Scheduler Commands XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   scheduler_Commands.xml - valid
+
+Validate Scheduler Events
+	[Documentation]    Validate the Scheduler Events XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   scheduler_Events.xml - valid
+
 Validate Scheduler Telemetry
 	[Documentation]    Validate the Scheduler Telemetry XML file.
 	[Tags]    smoke
