@@ -826,40 +826,6 @@ Validate OCS Event Enumeration
 	:FOR    ${item}    IN    @{Enumerations}
 	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
 
-Validate PromptProcessing Generic Commands
-	[Documentation]    Validate the PromptProcessing contains all the required generic, or State Machine, commands.
-	[Tags]    smoke    
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    PromptProcessing
-	Comment    Get the Commands for the CSC.
-	${topics}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
-	@{Commands}=    Split to Lines    ${topics}
-	:FOR    ${state}    IN    @{GenericCommands}
-	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _command_     ${state}
-	\    Run Keyword And Continue On Failure    Should Contain    ${Commands}    ${string}
-
-Validate PromptProcessing Generic Events
-	[Documentation]    Validate the PromptProcessing contains all the required generic events.
-	[Tags]    smoke    
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    PromptProcessing
-	Comment    Get the Events.
-	${topics}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
-	@{Events}=    Split to Lines    ${topics}
-	:FOR    ${item}    IN    @{GenericEvents}
-	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _logevent_    ${item}
-	\    Run Keyword And Continue On Failure    Should Contain    ${Events}    ${string}
-
-Validate PromptProcessing Event Enumeration
-	[Documentation]    Validate the PromptProcessing defines the required enumeration.
-	[Tags]    smoke    
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    PromptProcessing
-	Comment    Get the Event Enumerations.
-	${enums}=    Run    ${xml} sel -t -m "//SALEventSet/Enumeration" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
-	:FOR    ${item}    IN    @{Enumerations}
-	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
-
 Validate Rotator Generic Commands
 	[Documentation]    Validate the Rotator contains all the required generic, or State Machine, commands.
 	[Tags]    smoke    
@@ -884,6 +850,16 @@ Validate Rotator Generic Events
 	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _logevent_    ${item}
 	\    Run Keyword And Continue On Failure    Should Contain    ${Events}    ${string}
 
+Validate Rotator Event Enumeration
+	[Documentation]    Validate the Rotator defines the required enumeration.
+	[Tags]    smoke    
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    rotator
+	Comment    Get the Event Enumerations.
+	${enums}=    Run    ${xml} sel -t -m "//SALEventSet/Enumeration" -v . -n ${folder}/sal_interfaces/rotator/rotator_Events.xml
+	:FOR    ${item}    IN    @{Enumerations}
+	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
+
 Validate Scheduler Generic Commands
 	[Documentation]    Validate the Scheduler contains all the required generic, or State Machine, commands.
 	[Tags]    smoke    
@@ -907,6 +883,16 @@ Validate Scheduler Generic Events
 	:FOR    ${item}    IN    @{GenericEvents}
 	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _logevent_    ${item}
 	\    Run Keyword And Continue On Failure    Should Contain    ${Events}    ${string}
+
+Validate Scheduler Event Enumeration
+	[Documentation]    Validate the Scheduler defines the required enumeration.
+	[Tags]    smoke    
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    scheduler
+	Comment    Get the Event Enumerations.
+	${enums}=    Run    ${xml} sel -t -m "//SALEventSet/Enumeration" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	:FOR    ${item}    IN    @{Enumerations}
+	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
 
 Validate Sequencer Generic Commands
 	[Documentation]    Validate the Sequencer contains all the required generic, or State Machine, commands.
@@ -1075,6 +1061,40 @@ Validate TcsOfc Event Enumeration
 	Set Test Variable    ${csc}    tcsOfc
 	Comment    Get the Event Enumerations.
 	${enums}=    Run    ${xml} sel -t -m "//SALEventSet/Enumeration" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
+	:FOR    ${item}    IN    @{Enumerations}
+	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
+
+Validate TcsWEP Generic Commands
+	[Documentation]    Validate the TcsWEP contains all the required generic, or State Machine, commands.
+	[Tags]    smoke    
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    tcsWEP
+	Comment    Get the Commands for the CSC.
+	${topics}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
+	@{Commands}=    Split to Lines    ${topics}
+	:FOR    ${state}    IN    @{GenericCommands}
+	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _command_     ${state}
+	\    Run Keyword And Continue On Failure    Should Contain    ${Commands}    ${string}
+
+Validate TcsWEP Generic Events
+	[Documentation]    Validate the TcsWEP contains all the required generic events.
+	[Tags]    smoke    
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    tcsWEP
+	Comment    Get the Events.
+	${topics}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
+	@{Events}=    Split to Lines    ${topics}
+	:FOR    ${item}    IN    @{GenericEvents}
+	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _logevent_    ${item}
+	\    Run Keyword And Continue On Failure    Should Contain    ${Events}    ${string}
+
+Validate TcsWEP Event Enumeration
+	[Documentation]    Validate the TcsWEP defines the required enumeration.
+	[Tags]    smoke    
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    tcsWEP
+	Comment    Get the Event Enumerations.
+	${enums}=    Run    ${xml} sel -t -m "//SALEventSet/Enumeration" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
 	:FOR    ${item}    IN    @{Enumerations}
 	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
 

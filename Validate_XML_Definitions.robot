@@ -99,22 +99,22 @@ Validate AtScheduler Telemetry
 	Log    ${output}
 	Should Contain    ${output}   atScheduler_Telemetry.xml - valid
 
-Validate Atwhitelight Commands
-	[Documentation]    Validate the Atwhitelight Commands XML file.
+Validate AtWhiteLight Commands
+	[Documentation]    Validate the AtWhiteLight Commands XML file.
 	[Tags]    smoke
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   atWhiteLight_Commands.xml - valid
 
-Validate Atwhitelight Events
-	[Documentation]    Validate the Atwhitelight Events XML file.
+Validate AtWhiteLight Events
+	[Documentation]    Validate the AtWhiteLight Events XML file.
 	[Tags]    smoke
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   atWhiteLight_Events.xml - valid
 
-Validate Atwhitelight Telemetry
-	[Documentation]    Validate the Atwhitelight Telemetry XML file.
+Validate AtWhiteLight Telemetry
+	[Documentation]    Validate the AtWhiteLight Telemetry XML file.
 	[Tags]    smoke
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Telemetry.xml
 	Log    ${output}
@@ -672,6 +672,13 @@ Validate TcsOfc Telemetry
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/tcsOfc/tcsOfc_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   tcsOfc_Telemetry.xml - valid
+
+Validate TcsWEP Commands
+	[Documentation]    Validate the TcsWEP Commands XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   tcsWEP_Commands.xml - valid
 
 Validate TcsWEP Events
 	[Documentation]    Validate the TcsWEP Events XML file.

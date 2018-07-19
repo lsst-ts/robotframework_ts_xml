@@ -112,24 +112,24 @@ Validate AtScheduler Telemetry XML Counts
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate Atwhitelight Commands XML Counts
-	[Documentation]    Validate the Atwhitelight Commands XML count.
+Validate AtWhiteLight Commands XML Counts
+	[Documentation]    Validate the AtWhiteLight Commands XML count.
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate Atwhitelight Events XML Counts
-	[Documentation]    Validate the Atwhitelight Events XML count.
+Validate AtWhiteLight Events XML Counts
+	[Documentation]    Validate the AtWhiteLight Events XML count.
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate Atwhitelight Telemetry XML Counts
-	[Documentation]    Validate the Atwhitelight Telemetry XML count.
+Validate AtWhiteLight Telemetry XML Counts
+	[Documentation]    Validate the AtWhiteLight Telemetry XML count.
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
@@ -764,6 +764,14 @@ Validate TcsOfc Telemetry XML Counts
 	[Documentation]    Validate the TcsOfc Telemetry XML count.
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
+Validate TcsWEP Commands XML Counts
+	[Documentation]    Validate the TcsWEP Commands XML count.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,

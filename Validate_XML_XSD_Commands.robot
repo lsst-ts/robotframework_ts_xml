@@ -32,7 +32,7 @@ Validate AtMonochromator Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   atMonochromator_Commands.xml - valid
 
-Validate Atwhitelight Commands XML file
+Validate AtWhiteLight Commands XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Commands.xml
 	Log    ${output}
@@ -193,6 +193,12 @@ Validate TcsOfc Commands XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/tcsOfc/tcsOfc_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   tcsOfc_Commands.xml - valid
+
+Validate TcsWEP Commands XML file
+	[Tags]    smoke
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   tcsWEP_Commands.xml - valid
 
 Validate VMS Commands XML file
 	[Tags]    smoke

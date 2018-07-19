@@ -126,8 +126,8 @@ Validate AtScheduler Telemetry Topic Names
 	: FOR    ${item}    IN    @{topics}
 	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
 
-Validate Atwhitelight Commands Topic Names
-	[Documentation]    Validate the Atwhitelight Commands topic names conform to naming convention.
+Validate AtWhiteLight Commands Topic Names
+	[Documentation]    Validate the AtWhiteLight Commands topic names conform to naming convention.
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
@@ -135,8 +135,8 @@ Validate Atwhitelight Commands Topic Names
 	: FOR    ${item}    IN    @{topics}
 	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
 
-Validate Atwhitelight Events Topic Names
-	[Documentation]    Validate the Atwhitelight Events topic names conform to naming convention.
+Validate AtWhiteLight Events Topic Names
+	[Documentation]    Validate the AtWhiteLight Events topic names conform to naming convention.
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
@@ -144,8 +144,8 @@ Validate Atwhitelight Events Topic Names
 	: FOR    ${item}    IN    @{topics}
 	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
 
-Validate Atwhitelight Telemetry Topic Names
-	[Documentation]    Validate the Atwhitelight Telemetry topic names conform to naming convention.
+Validate AtWhiteLight Telemetry Topic Names
+	[Documentation]    Validate the AtWhiteLight Telemetry topic names conform to naming convention.
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
@@ -859,6 +859,15 @@ Validate TcsOfc Telemetry Topic Names
 	[Documentation]    Validate the TcsOfc Telemetry topic names conform to naming convention.
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Telemetry.xml |sed -e 's/\\n/,/g'
+	Log    ${output}
+	@{topics}=    Split to Lines    ${output}
+	: FOR    ${item}    IN    @{topics}
+	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
+
+Validate TcsWEP Commands Topic Names
+	[Documentation]    Validate the TcsWEP Commands topic names conform to naming convention.
+	[Tags]    smoke
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
 	: FOR    ${item}    IN    @{topics}
