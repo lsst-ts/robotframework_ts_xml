@@ -64,13 +64,6 @@ Validate AtHeaderService Events
 	Log    ${output}
 	Should Contain    ${output}   atHeaderService_Events.xml - valid
 
-Validate AtHeaderService Telemetry
-	[Documentation]    Validate the AtHeaderService Telemetry XML file.
-	[Tags]    smoke
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/atHeaderService/atHeaderService_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   atHeaderService_Telemetry.xml - valid
-
 Validate AtMonochromator Commands
 	[Documentation]    Validate the AtMonochromator Commands XML file.
 	[Tags]    smoke
@@ -428,13 +421,6 @@ Validate HeaderService Events
 	Log    ${output}
 	Should Contain    ${output}   headerService_Events.xml - valid
 
-Validate HeaderService Telemetry
-	[Documentation]    Validate the HeaderService Telemetry XML file.
-	[Tags]    smoke
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/headerService/headerService_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   headerService_Telemetry.xml - valid
-
 Validate Hexapod Commands
 	[Documentation]    Validate the Hexapod Commands XML file.
 	[Tags]    smoke
@@ -603,6 +589,27 @@ Validate Sequencer Telemetry
 	Log    ${output}
 	Should Contain    ${output}   sequencer_Telemetry.xml - valid
 
+Validate SEDSpectrometer Commands
+	[Documentation]    Validate the SEDSpectrometer Commands XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   sedSpectrometer_Commands.xml - valid
+
+Validate SEDSpectrometer Events
+	[Documentation]    Validate the SEDSpectrometer Events XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   sedSpectrometer_Events.xml - valid
+
+Validate SEDSpectrometer Telemetry
+	[Documentation]    Validate the SEDSpectrometer Telemetry XML file.
+	[Tags]    smoke
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   sedSpectrometer_Telemetry.xml - valid
+
 Validate SummitFacility Commands
 	[Documentation]    Validate the SummitFacility Commands XML file.
 	[Tags]    smoke
@@ -665,13 +672,6 @@ Validate TcsOfc Telemetry
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/tcsOfc/tcsOfc_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   tcsOfc_Telemetry.xml - valid
-
-Validate TcsWEP Commands
-	[Documentation]    Validate the TcsWEP Commands XML file.
-	[Tags]    smoke
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   tcsWEP_Commands.xml - valid
 
 Validate TcsWEP Events
 	[Documentation]    Validate the TcsWEP Events XML file.

@@ -20,12 +20,6 @@ Validate AtArchiver Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   atArchiver_Telemetry.xml - valid
 
-Validate AtHeaderService Telemetry XML file
-	[Tags]    smoke
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/atHeaderService/atHeaderService_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   atHeaderService_Telemetry.xml - valid
-
 Validate AtMonochromator Telemetry XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/atMonochromator/atMonochromator_Telemetry.xml
@@ -128,12 +122,6 @@ Validate EFD Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   efd_Telemetry.xml - valid
 
-Validate HeaderService Telemetry XML file
-	[Tags]    smoke
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/headerService/headerService_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   headerService_Telemetry.xml - valid
-
 Validate Hexapod Telemetry XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/hexapod/hexapod_Telemetry.xml
@@ -181,6 +169,12 @@ Validate Sequencer Telemetry XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/sequencer/sequencer_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   sequencer_Telemetry.xml - valid
+
+Validate SEDSpectrometer Telemetry XML file
+	[Tags]    smoke
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   sedSpectrometer_Telemetry.xml - valid
 
 Validate SummitFacility Telemetry XML file
 	[Tags]    smoke

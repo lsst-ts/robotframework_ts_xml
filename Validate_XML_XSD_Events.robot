@@ -182,6 +182,12 @@ Validate Sequencer Events XML file
 	Log    ${output}
 	Should Contain    ${output}   sequencer_Events.xml - valid
 
+Validate SEDSpectrometer Events XML file
+	[Tags]    smoke
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   sedSpectrometer_Events.xml - valid
+
 Validate SummitFacility Events XML file
 	[Tags]    smoke
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/summitFacility/summitFacility_Events.xml

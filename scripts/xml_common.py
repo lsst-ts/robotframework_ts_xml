@@ -36,6 +36,8 @@ def CapitalizeSubsystem( subsystem ):
 		return "AtMonochromator"
 	elif subsystem == "atScheduler":
 		return "AtScheduler"
+	elif subsystem == "atWhiteLight":
+		return "AtWhiteLight"
 	elif subsystem == "calibrationElectrometer":
 		return "CalibrationElectrometer"
 	elif subsystem == "catchuparchiver":
