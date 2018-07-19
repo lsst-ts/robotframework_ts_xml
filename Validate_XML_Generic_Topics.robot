@@ -250,7 +250,7 @@ Validate ATCS Event Enumeration
 
 Validate CalibrationElectrometer Generic Commands
 	[Documentation]    Validate the CalibrationElectrometer contains all the required generic, or State Machine, commands.
-	[Tags]    smoke    TSS-2619
+	[Tags]    smoke    
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    calibrationElectrometer
 	Comment    Get the Commands for the CSC.
@@ -262,7 +262,7 @@ Validate CalibrationElectrometer Generic Commands
 
 Validate CalibrationElectrometer Generic Events
 	[Documentation]    Validate the CalibrationElectrometer contains all the required generic events.
-	[Tags]    smoke    TSS-2619
+	[Tags]    smoke    
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    calibrationElectrometer
 	Comment    Get the Events.
@@ -274,7 +274,7 @@ Validate CalibrationElectrometer Generic Events
 
 Validate CalibrationElectrometer Event Enumeration
 	[Documentation]    Validate the CalibrationElectrometer defines the required enumeration.
-	[Tags]    smoke    TSS-2619
+	[Tags]    smoke    
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    calibrationElectrometer
 	Comment    Get the Event Enumerations.
@@ -318,7 +318,7 @@ Validate Camera Event Enumeration
 
 Validate CatchupArchiver Generic Commands
 	[Documentation]    Validate the CatchupArchiver contains all the required generic, or State Machine, commands.
-	[Tags]    smoke    TSS-2620
+	[Tags]    smoke    
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    catchuparchiver
 	Comment    Get the Commands for the CSC.
@@ -330,7 +330,7 @@ Validate CatchupArchiver Generic Commands
 
 Validate CatchupArchiver Generic Events
 	[Documentation]    Validate the CatchupArchiver contains all the required generic events.
-	[Tags]    smoke    TSS-2620
+	[Tags]    smoke    
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    catchuparchiver
 	Comment    Get the Events.
@@ -342,7 +342,7 @@ Validate CatchupArchiver Generic Events
 
 Validate CatchupArchiver Event Enumeration
 	[Documentation]    Validate the CatchupArchiver defines the required enumeration.
-	[Tags]    smoke    TSS-2620
+	[Tags]    smoke    
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    catchuparchiver
 	Comment    Get the Event Enumerations.
@@ -826,6 +826,40 @@ Validate OCS Event Enumeration
 	:FOR    ${item}    IN    @{Enumerations}
 	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
 
+Validate PromptProcessing Generic Commands
+	[Documentation]    Validate the PromptProcessing contains all the required generic, or State Machine, commands.
+	[Tags]    smoke    TSS-2621
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    PromptProcessing
+	Comment    Get the Commands for the CSC.
+	${topics}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	@{Commands}=    Split to Lines    ${topics}
+	:FOR    ${state}    IN    @{GenericCommands}
+	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _command_     ${state}
+	\    Run Keyword And Continue On Failure    Should Contain    ${Commands}    ${string}
+
+Validate PromptProcessing Generic Events
+	[Documentation]    Validate the PromptProcessing contains all the required generic events.
+	[Tags]    smoke    TSS-2621
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    PromptProcessing
+	Comment    Get the Events.
+	${topics}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	@{Events}=    Split to Lines    ${topics}
+	:FOR    ${item}    IN    @{GenericEvents}
+	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _logevent_    ${item}
+	\    Run Keyword And Continue On Failure    Should Contain    ${Events}    ${string}
+
+Validate PromptProcessing Event Enumeration
+	[Documentation]    Validate the PromptProcessing defines the required enumeration.
+	[Tags]    smoke    TSS-2621
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    PromptProcessing
+	Comment    Get the Event Enumerations.
+	${enums}=    Run    ${xml} sel -t -m "//SALEventSet/Enumeration" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	:FOR    ${item}    IN    @{Enumerations}
+	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
+
 Validate Rotator Generic Commands
 	[Documentation]    Validate the Rotator contains all the required generic, or State Machine, commands.
 	[Tags]    smoke    
@@ -964,7 +998,7 @@ Validate SEDSpectrometer Event Enumeration
 
 Validate SummitFacility Generic Commands
 	[Documentation]    Validate the SummitFacility contains all the required generic, or State Machine, commands.
-	[Tags]    smoke    TSS-2622
+	[Tags]    smoke    
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    summitFacility
 	Comment    Get the Commands for the CSC.
@@ -976,7 +1010,7 @@ Validate SummitFacility Generic Commands
 
 Validate SummitFacility Generic Events
 	[Documentation]    Validate the SummitFacility contains all the required generic events.
-	[Tags]    smoke    TSS-2622
+	[Tags]    smoke    
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    summitFacility
 	Comment    Get the Events.
@@ -988,7 +1022,7 @@ Validate SummitFacility Generic Events
 
 Validate SummitFacility Event Enumeration
 	[Documentation]    Validate the SummitFacility defines the required enumeration.
-	[Tags]    smoke    TSS-2622
+	[Tags]    smoke    
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    summitFacility
 	Comment    Get the Event Enumerations.
