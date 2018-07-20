@@ -55,9 +55,7 @@ for subsystem in xml_common.subsystems:
 		continue
 	
 	# Mark test cases with Jira tickets
-	if subsystem == "PromptProcessing":
-		skipped="TSS-2621"
-	elif subsystem == "vms":
+	if subsystem == "vms":
 		skipped="TSS-2618"
 	elif subsystem == "m1m3":
 		skipped="TSS-2617"
