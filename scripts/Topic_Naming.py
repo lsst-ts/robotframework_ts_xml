@@ -33,7 +33,7 @@ for subsystem in xml_common.subsystems:
 		# Create the Test Cases.
 		file.write("Validate " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType + " Topic Names\n")
 		file.write("\t[Documentation]    Validate the " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType + " topic names conform to naming convention.\n")
-		file.write("\t[Tags]    smoke\n")
+		file.write("\t[Tags]    smoke    " + xml_common.CapitalizeSubsystem(subsystem) + "\n")
 		file.write("\t${output}=    Run    ${xml} sel -t -m \"//SAL" + messageType.rstrip('s') + "Set/SAL" + messageType.rstrip('s') + "/Alias\" -v . -n ${folder}/sal_interfaces/" + subsystem + "/" + subsystem + "_" + messageType + ".xml |sed -e 's/\\\\n/,/g'\n")
 		file.write("\tLog    ${output}\n")
 		file.write("\t@{topics}=    Split to Lines    ${output}\n")

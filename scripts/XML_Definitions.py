@@ -32,7 +32,7 @@ for subsystem in xml_common.subsystems:
 		# Create the Test Cases.
 		file.write("Validate " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType + "\n")
 		file.write("\t[Documentation]    Validate the " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType + " XML file.\n")
-		file.write("\t[Tags]    smoke\n")
+		file.write("\t[Tags]    smoke    " + xml_common.CapitalizeSubsystem(subsystem) + "\n")
 		file.write("\t${output}=    Run    ${xml} val ${folder}/sal_interfaces/" + subsystem + "/" + subsystem + "_" + messageType + ".xml\n")
 		file.write("\tLog    ${output}\n")
 		file.write("\tShould Contain    ${output}   " + subsystem + "_" + messageType + ".xml - valid\n")
