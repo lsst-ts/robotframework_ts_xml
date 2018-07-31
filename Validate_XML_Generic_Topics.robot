@@ -894,6 +894,40 @@ Validate Rotator Event Enumeration
 	:FOR    ${item}    IN    @{Enumerations}
 	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
 
+Validate Scheduler Generic Commands
+	[Documentation]    Validate the Scheduler contains all the required generic, or State Machine, commands.
+	[Tags]    smoke    Scheduler    
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    scheduler
+	Comment    Get the Commands for the CSC.
+	${topics}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml
+	@{Commands}=    Split to Lines    ${topics}
+	:FOR    ${state}    IN    @{GenericCommands}
+	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _command_     ${state}
+	\    Run Keyword And Continue On Failure    Should Contain    ${Commands}    ${string}
+
+Validate Scheduler Generic Events
+	[Documentation]    Validate the Scheduler contains all the required generic events.
+	[Tags]    smoke    Scheduler    
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    scheduler
+	Comment    Get the Events.
+	${topics}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	@{Events}=    Split to Lines    ${topics}
+	:FOR    ${item}    IN    @{GenericEvents}
+	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _logevent_    ${item}
+	\    Run Keyword And Continue On Failure    Should Contain    ${Events}    ${string}
+
+Validate Scheduler Event Enumeration
+	[Documentation]    Validate the Scheduler defines the required enumeration.
+	[Tags]    smoke    Scheduler    
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    scheduler
+	Comment    Get the Event Enumerations.
+	${enums}=    Run    ${xml} sel -t -m "//SALEventSet/Enumeration" -v . -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
+	:FOR    ${item}    IN    @{Enumerations}
+	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
+
 Validate Sequencer Generic Commands
 	[Documentation]    Validate the Sequencer contains all the required generic, or State Machine, commands.
 	[Tags]    smoke    Sequencer    
