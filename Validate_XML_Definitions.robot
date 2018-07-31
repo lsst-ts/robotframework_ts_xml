@@ -526,27 +526,6 @@ Validate OCS Telemetry
 	Log    ${output}
 	Should Contain    ${output}   ocs_Telemetry.xml - valid
 
-Validate PromptProcessing Commands
-	[Documentation]    Validate the PromptProcessing Commands XML file.
-	[Tags]    smoke    PromptProcessing
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   PromptProcessing_Commands.xml - valid
-
-Validate PromptProcessing Events
-	[Documentation]    Validate the PromptProcessing Events XML file.
-	[Tags]    smoke    PromptProcessing
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   PromptProcessing_Events.xml - valid
-
-Validate PromptProcessing Telemetry
-	[Documentation]    Validate the PromptProcessing Telemetry XML file.
-	[Tags]    smoke    PromptProcessing
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   PromptProcessing_Telemetry.xml - valid
-
 Validate Rotator Commands
 	[Documentation]    Validate the Rotator Commands XML file.
 	[Tags]    smoke    Rotator
