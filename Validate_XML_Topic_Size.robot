@@ -945,8 +945,8 @@ Validate AtArchiver Command atArchiver_command_setValue Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtArchiver Event atArchiver_logevent_detailedState Topic Byte Size
-	[Documentation]    Validate the atArchiver_logevent_detailedState topic is less than 65536 bytes in total.
+Validate AtArchiver Event atArchiver_logevent_DetailedState Topic Byte Size
+	[Documentation]    Validate the atArchiver_logevent_DetailedState topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtArchiver
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -968,8 +968,8 @@ Validate AtArchiver Event atArchiver_logevent_detailedState Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtArchiver Event atArchiver_logevent_detailedState Topic Columns
-	[Documentation]    Validate the atArchiver_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtArchiver Event atArchiver_logevent_DetailedState Topic Columns
+	[Documentation]    Validate the atArchiver_logevent_DetailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1017,8 +1017,8 @@ Validate AtArchiver Event atArchiver_logevent_archiverEntityStartup Topic Column
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtArchiver Event atArchiver_logevent_settingVersions Topic Byte Size
-	[Documentation]    Validate the atArchiver_logevent_settingVersions topic is less than 65536 bytes in total.
+Validate AtArchiver Event atArchiver_logevent_SettingVersions Topic Byte Size
+	[Documentation]    Validate the atArchiver_logevent_SettingVersions topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtArchiver
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1040,8 +1040,8 @@ Validate AtArchiver Event atArchiver_logevent_settingVersions Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtArchiver Event atArchiver_logevent_settingVersions Topic Columns
-	[Documentation]    Validate the atArchiver_logevent_settingVersions topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtArchiver Event atArchiver_logevent_SettingVersions Topic Columns
+	[Documentation]    Validate the atArchiver_logevent_SettingVersions topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1161,8 +1161,8 @@ Validate AtArchiver Event atArchiver_logevent_archiverEntityShutdown Topic Colum
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtArchiver Event atArchiver_logevent_summaryState Topic Byte Size
-	[Documentation]    Validate the atArchiver_logevent_summaryState topic is less than 65536 bytes in total.
+Validate AtArchiver Event atArchiver_logevent_SummaryState Topic Byte Size
+	[Documentation]    Validate the atArchiver_logevent_SummaryState topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtArchiver
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1184,8 +1184,8 @@ Validate AtArchiver Event atArchiver_logevent_summaryState Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtArchiver Event atArchiver_logevent_summaryState Topic Columns
-	[Documentation]    Validate the atArchiver_logevent_summaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtArchiver Event atArchiver_logevent_SummaryState Topic Columns
+	[Documentation]    Validate the atArchiver_logevent_SummaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1197,8 +1197,8 @@ Validate AtArchiver Event atArchiver_logevent_summaryState Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtArchiver Event atArchiver_logevent_appliedSettingsMatchStart Topic Byte Size
-	[Documentation]    Validate the atArchiver_logevent_appliedSettingsMatchStart topic is less than 65536 bytes in total.
+Validate AtArchiver Event atArchiver_logevent_AppliedSettingsMatchStart Topic Byte Size
+	[Documentation]    Validate the atArchiver_logevent_AppliedSettingsMatchStart topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtArchiver
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1220,8 +1220,8 @@ Validate AtArchiver Event atArchiver_logevent_appliedSettingsMatchStart Topic By
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtArchiver Event atArchiver_logevent_appliedSettingsMatchStart Topic Columns
-	[Documentation]    Validate the atArchiver_logevent_appliedSettingsMatchStart topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtArchiver Event atArchiver_logevent_AppliedSettingsMatchStart Topic Columns
+	[Documentation]    Validate the atArchiver_logevent_AppliedSettingsMatchStart topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1233,8 +1233,8 @@ Validate AtArchiver Event atArchiver_logevent_appliedSettingsMatchStart Topic Co
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtArchiver Event atArchiver_logevent_settingsApplied Topic Byte Size
-	[Documentation]    Validate the atArchiver_logevent_settingsApplied topic is less than 65536 bytes in total.
+Validate AtArchiver Event atArchiver_logevent_SettingsApplied Topic Byte Size
+	[Documentation]    Validate the atArchiver_logevent_SettingsApplied topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtArchiver
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1256,8 +1256,8 @@ Validate AtArchiver Event atArchiver_logevent_settingsApplied Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtArchiver Event atArchiver_logevent_settingsApplied Topic Columns
-	[Documentation]    Validate the atArchiver_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtArchiver Event atArchiver_logevent_SettingsApplied Topic Columns
+	[Documentation]    Validate the atArchiver_logevent_SettingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1269,8 +1269,8 @@ Validate AtArchiver Event atArchiver_logevent_settingsApplied Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtArchiver Telemetry atArchiver_sequencerHeartbeat Topic Byte Size
-	[Documentation]    Validate the atArchiver_sequencerHeartbeat topic is less than 65536 bytes in total.
+Validate AtArchiver Telemetry atArchiver_SequencerHeartbeat Topic Byte Size
+	[Documentation]    Validate the atArchiver_SequencerHeartbeat topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtArchiver
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1292,8 +1292,8 @@ Validate AtArchiver Telemetry atArchiver_sequencerHeartbeat Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtArchiver Telemetry atArchiver_sequencerHeartbeat Topic Columns
-	[Documentation]    Validate the atArchiver_sequencerHeartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtArchiver Telemetry atArchiver_SequencerHeartbeat Topic Columns
+	[Documentation]    Validate the atArchiver_SequencerHeartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1305,8 +1305,8 @@ Validate AtArchiver Telemetry atArchiver_sequencerHeartbeat Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtHeaderService Command atHeaderService_command_enable Topic Byte Size
-	[Documentation]    Validate the atHeaderService_command_enable topic is less than 65536 bytes in total.
+Validate AtHeaderService Command atHeaderService_command_disable Topic Byte Size
+	[Documentation]    Validate the atHeaderService_command_disable topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtHeaderService
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1328,8 +1328,8 @@ Validate AtHeaderService Command atHeaderService_command_enable Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtHeaderService Command atHeaderService_command_enable Topic Columns
-	[Documentation]    Validate the atHeaderService_command_enable topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtHeaderService Command atHeaderService_command_disable Topic Columns
+	[Documentation]    Validate the atHeaderService_command_disable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtHeaderService
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1341,8 +1341,8 @@ Validate AtHeaderService Command atHeaderService_command_enable Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtHeaderService Command atHeaderService_command_exitControl Topic Byte Size
-	[Documentation]    Validate the atHeaderService_command_exitControl topic is less than 65536 bytes in total.
+Validate AtHeaderService Command atHeaderService_command_enable Topic Byte Size
+	[Documentation]    Validate the atHeaderService_command_enable topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtHeaderService
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1364,8 +1364,8 @@ Validate AtHeaderService Command atHeaderService_command_exitControl Topic Byte 
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtHeaderService Command atHeaderService_command_exitControl Topic Columns
-	[Documentation]    Validate the atHeaderService_command_exitControl topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtHeaderService Command atHeaderService_command_enable Topic Columns
+	[Documentation]    Validate the atHeaderService_command_enable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtHeaderService
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1377,8 +1377,8 @@ Validate AtHeaderService Command atHeaderService_command_exitControl Topic Colum
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtHeaderService Command atHeaderService_command_start Topic Byte Size
-	[Documentation]    Validate the atHeaderService_command_start topic is less than 65536 bytes in total.
+Validate AtHeaderService Command atHeaderService_command_exitControl Topic Byte Size
+	[Documentation]    Validate the atHeaderService_command_exitControl topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtHeaderService
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1400,8 +1400,8 @@ Validate AtHeaderService Command atHeaderService_command_start Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtHeaderService Command atHeaderService_command_start Topic Columns
-	[Documentation]    Validate the atHeaderService_command_start topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtHeaderService Command atHeaderService_command_exitControl Topic Columns
+	[Documentation]    Validate the atHeaderService_command_exitControl topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtHeaderService
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1449,8 +1449,8 @@ Validate AtHeaderService Command atHeaderService_command_standby Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtHeaderService Command atHeaderService_command_disable Topic Byte Size
-	[Documentation]    Validate the atHeaderService_command_disable topic is less than 65536 bytes in total.
+Validate AtHeaderService Command atHeaderService_command_start Topic Byte Size
+	[Documentation]    Validate the atHeaderService_command_start topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtHeaderService
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1472,8 +1472,8 @@ Validate AtHeaderService Command atHeaderService_command_disable Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtHeaderService Command atHeaderService_command_disable Topic Columns
-	[Documentation]    Validate the atHeaderService_command_disable topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtHeaderService Command atHeaderService_command_start Topic Columns
+	[Documentation]    Validate the atHeaderService_command_start topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtHeaderService
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1521,8 +1521,8 @@ Validate AtHeaderService Command atHeaderService_command_enterControl Topic Colu
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtHeaderService Event atHeaderService_logevent_Heartbeat Topic Byte Size
-	[Documentation]    Validate the atHeaderService_logevent_Heartbeat topic is less than 65536 bytes in total.
+Validate AtHeaderService Event atHeaderService_logevent_appliedSettingsMatchStart Topic Byte Size
+	[Documentation]    Validate the atHeaderService_logevent_appliedSettingsMatchStart topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtHeaderService
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1544,8 +1544,8 @@ Validate AtHeaderService Event atHeaderService_logevent_Heartbeat Topic Byte Siz
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtHeaderService Event atHeaderService_logevent_Heartbeat Topic Columns
-	[Documentation]    Validate the atHeaderService_logevent_Heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtHeaderService Event atHeaderService_logevent_appliedSettingsMatchStart Topic Columns
+	[Documentation]    Validate the atHeaderService_logevent_appliedSettingsMatchStart topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtHeaderService
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1557,8 +1557,8 @@ Validate AtHeaderService Event atHeaderService_logevent_Heartbeat Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtHeaderService Event atHeaderService_logevent_AppliedSettingsMatchStart Topic Byte Size
-	[Documentation]    Validate the atHeaderService_logevent_AppliedSettingsMatchStart topic is less than 65536 bytes in total.
+Validate AtHeaderService Event atHeaderService_logevent_errorCode Topic Byte Size
+	[Documentation]    Validate the atHeaderService_logevent_errorCode topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtHeaderService
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1580,8 +1580,8 @@ Validate AtHeaderService Event atHeaderService_logevent_AppliedSettingsMatchStar
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtHeaderService Event atHeaderService_logevent_AppliedSettingsMatchStart Topic Columns
-	[Documentation]    Validate the atHeaderService_logevent_AppliedSettingsMatchStart topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtHeaderService Event atHeaderService_logevent_errorCode Topic Columns
+	[Documentation]    Validate the atHeaderService_logevent_errorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtHeaderService
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1593,8 +1593,8 @@ Validate AtHeaderService Event atHeaderService_logevent_AppliedSettingsMatchStar
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtHeaderService Event atHeaderService_logevent_LoopTimeOutOfRange Topic Byte Size
-	[Documentation]    Validate the atHeaderService_logevent_LoopTimeOutOfRange topic is less than 65536 bytes in total.
+Validate AtHeaderService Event atHeaderService_logevent_settingVersions Topic Byte Size
+	[Documentation]    Validate the atHeaderService_logevent_settingVersions topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtHeaderService
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1616,8 +1616,8 @@ Validate AtHeaderService Event atHeaderService_logevent_LoopTimeOutOfRange Topic
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtHeaderService Event atHeaderService_logevent_LoopTimeOutOfRange Topic Columns
-	[Documentation]    Validate the atHeaderService_logevent_LoopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtHeaderService Event atHeaderService_logevent_settingVersions Topic Columns
+	[Documentation]    Validate the atHeaderService_logevent_settingVersions topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtHeaderService
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1629,8 +1629,8 @@ Validate AtHeaderService Event atHeaderService_logevent_LoopTimeOutOfRange Topic
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtHeaderService Event atHeaderService_logevent_RejectedCommand Topic Byte Size
-	[Documentation]    Validate the atHeaderService_logevent_RejectedCommand topic is less than 65536 bytes in total.
+Validate AtHeaderService Event atHeaderService_logevent_summaryState Topic Byte Size
+	[Documentation]    Validate the atHeaderService_logevent_summaryState topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtHeaderService
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1652,8 +1652,8 @@ Validate AtHeaderService Event atHeaderService_logevent_RejectedCommand Topic By
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtHeaderService Event atHeaderService_logevent_RejectedCommand Topic Columns
-	[Documentation]    Validate the atHeaderService_logevent_RejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtHeaderService Event atHeaderService_logevent_summaryState Topic Columns
+	[Documentation]    Validate the atHeaderService_logevent_summaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtHeaderService
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1665,8 +1665,8 @@ Validate AtHeaderService Event atHeaderService_logevent_RejectedCommand Topic Co
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtHeaderService Event atHeaderService_logevent_SettingsApplied Topic Byte Size
-	[Documentation]    Validate the atHeaderService_logevent_SettingsApplied topic is less than 65536 bytes in total.
+Validate AtHeaderService Event atHeaderService_logevent_detailedState Topic Byte Size
+	[Documentation]    Validate the atHeaderService_logevent_detailedState topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtHeaderService
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1688,8 +1688,8 @@ Validate AtHeaderService Event atHeaderService_logevent_SettingsApplied Topic By
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtHeaderService Event atHeaderService_logevent_SettingsApplied Topic Columns
-	[Documentation]    Validate the atHeaderService_logevent_SettingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtHeaderService Event atHeaderService_logevent_detailedState Topic Columns
+	[Documentation]    Validate the atHeaderService_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtHeaderService
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1701,8 +1701,8 @@ Validate AtHeaderService Event atHeaderService_logevent_SettingsApplied Topic Co
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtHeaderService Event atHeaderService_logevent_DetailedState Topic Byte Size
-	[Documentation]    Validate the atHeaderService_logevent_DetailedState topic is less than 65536 bytes in total.
+Validate AtHeaderService Event atHeaderService_logevent_heartbeat Topic Byte Size
+	[Documentation]    Validate the atHeaderService_logevent_heartbeat topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtHeaderService
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1724,8 +1724,8 @@ Validate AtHeaderService Event atHeaderService_logevent_DetailedState Topic Byte
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtHeaderService Event atHeaderService_logevent_DetailedState Topic Columns
-	[Documentation]    Validate the atHeaderService_logevent_DetailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtHeaderService Event atHeaderService_logevent_heartbeat Topic Columns
+	[Documentation]    Validate the atHeaderService_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtHeaderService
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1737,8 +1737,8 @@ Validate AtHeaderService Event atHeaderService_logevent_DetailedState Topic Colu
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtHeaderService Event atHeaderService_logevent_LargeFileObjectAvailable Topic Byte Size
-	[Documentation]    Validate the atHeaderService_logevent_LargeFileObjectAvailable topic is less than 65536 bytes in total.
+Validate AtHeaderService Event atHeaderService_logevent_rejectedCommand Topic Byte Size
+	[Documentation]    Validate the atHeaderService_logevent_rejectedCommand topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtHeaderService
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1760,8 +1760,8 @@ Validate AtHeaderService Event atHeaderService_logevent_LargeFileObjectAvailable
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtHeaderService Event atHeaderService_logevent_LargeFileObjectAvailable Topic Columns
-	[Documentation]    Validate the atHeaderService_logevent_LargeFileObjectAvailable topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtHeaderService Event atHeaderService_logevent_rejectedCommand Topic Columns
+	[Documentation]    Validate the atHeaderService_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtHeaderService
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1773,8 +1773,8 @@ Validate AtHeaderService Event atHeaderService_logevent_LargeFileObjectAvailable
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtHeaderService Event atHeaderService_logevent_SummaryState Topic Byte Size
-	[Documentation]    Validate the atHeaderService_logevent_SummaryState topic is less than 65536 bytes in total.
+Validate AtHeaderService Event atHeaderService_logevent_largeFileObjectAvailable Topic Byte Size
+	[Documentation]    Validate the atHeaderService_logevent_largeFileObjectAvailable topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtHeaderService
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1796,85 +1796,13 @@ Validate AtHeaderService Event atHeaderService_logevent_SummaryState Topic Byte 
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtHeaderService Event atHeaderService_logevent_SummaryState Topic Columns
-	[Documentation]    Validate the atHeaderService_logevent_SummaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtHeaderService Event atHeaderService_logevent_largeFileObjectAvailable Topic Columns
+	[Documentation]    Validate the atHeaderService_logevent_largeFileObjectAvailable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtHeaderService
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Events.xml
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/Count" -v . -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate AtHeaderService Event atHeaderService_logevent_ErrorCode Topic Byte Size
-	[Documentation]    Validate the atHeaderService_logevent_ErrorCode topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtHeaderService
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/Count" -v . -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate AtHeaderService Event atHeaderService_logevent_ErrorCode Topic Columns
-	[Documentation]    Validate the atHeaderService_logevent_ErrorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    AtHeaderService
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/Count" -v . -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate AtHeaderService Event atHeaderService_logevent_SettingVersions Topic Byte Size
-	[Documentation]    Validate the atHeaderService_logevent_SettingVersions topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtHeaderService
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/Count" -v . -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate AtHeaderService Event atHeaderService_logevent_SettingVersions Topic Columns
-	[Documentation]    Validate the atHeaderService_logevent_SettingVersions topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    AtHeaderService
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/Count" -v . -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -4725,8 +4653,8 @@ Validate AtCamera Event atcamera_logevent_imageReadinessDetailedState Topic Colu
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtCamera Event atcamera_logevent_settingVersions Topic Byte Size
-	[Documentation]    Validate the atcamera_logevent_settingVersions topic is less than 65536 bytes in total.
+Validate AtCamera Event atcamera_logevent_SettingVersions Topic Byte Size
+	[Documentation]    Validate the atcamera_logevent_SettingVersions topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4748,8 +4676,8 @@ Validate AtCamera Event atcamera_logevent_settingVersions Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtCamera Event atcamera_logevent_settingVersions Topic Columns
-	[Documentation]    Validate the atcamera_logevent_settingVersions topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtCamera Event atcamera_logevent_SettingVersions Topic Columns
+	[Documentation]    Validate the atcamera_logevent_SettingVersions topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4833,8 +4761,8 @@ Validate AtCamera Event atcamera_logevent_startShutterClose Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtCamera Event atcamera_logevent_appliedSettingsMatchStart Topic Byte Size
-	[Documentation]    Validate the atcamera_logevent_appliedSettingsMatchStart topic is less than 65536 bytes in total.
+Validate AtCamera Event atcamera_logevent_AppliedSettingsMatchStart Topic Byte Size
+	[Documentation]    Validate the atcamera_logevent_AppliedSettingsMatchStart topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4856,8 +4784,8 @@ Validate AtCamera Event atcamera_logevent_appliedSettingsMatchStart Topic Byte S
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtCamera Event atcamera_logevent_appliedSettingsMatchStart Topic Columns
-	[Documentation]    Validate the atcamera_logevent_appliedSettingsMatchStart topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtCamera Event atcamera_logevent_AppliedSettingsMatchStart Topic Columns
+	[Documentation]    Validate the atcamera_logevent_AppliedSettingsMatchStart topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4869,8 +4797,8 @@ Validate AtCamera Event atcamera_logevent_appliedSettingsMatchStart Topic Column
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtCamera Event atcamera_logevent_errorCode Topic Byte Size
-	[Documentation]    Validate the atcamera_logevent_errorCode topic is less than 65536 bytes in total.
+Validate AtCamera Event atcamera_logevent_ErrorCode Topic Byte Size
+	[Documentation]    Validate the atcamera_logevent_ErrorCode topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4892,8 +4820,8 @@ Validate AtCamera Event atcamera_logevent_errorCode Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtCamera Event atcamera_logevent_errorCode Topic Columns
-	[Documentation]    Validate the atcamera_logevent_errorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtCamera Event atcamera_logevent_ErrorCode Topic Columns
+	[Documentation]    Validate the atcamera_logevent_ErrorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5229,8 +5157,8 @@ Validate AtCamera Event atcamera_logevent_startIntegration Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtCamera Event atcamera_logevent_summaryState Topic Byte Size
-	[Documentation]    Validate the atcamera_logevent_summaryState topic is less than 65536 bytes in total.
+Validate AtCamera Event atcamera_logevent_SummaryState Topic Byte Size
+	[Documentation]    Validate the atcamera_logevent_SummaryState topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5252,8 +5180,8 @@ Validate AtCamera Event atcamera_logevent_summaryState Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtCamera Event atcamera_logevent_summaryState Topic Columns
-	[Documentation]    Validate the atcamera_logevent_summaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtCamera Event atcamera_logevent_SummaryState Topic Columns
+	[Documentation]    Validate the atcamera_logevent_SummaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5265,8 +5193,8 @@ Validate AtCamera Event atcamera_logevent_summaryState Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtCamera Event atcamera_logevent_settingsApplied Topic Byte Size
-	[Documentation]    Validate the atcamera_logevent_settingsApplied topic is less than 65536 bytes in total.
+Validate AtCamera Event atcamera_logevent_SettingsApplied Topic Byte Size
+	[Documentation]    Validate the atcamera_logevent_SettingsApplied topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5288,8 +5216,8 @@ Validate AtCamera Event atcamera_logevent_settingsApplied Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtCamera Event atcamera_logevent_settingsApplied Topic Columns
-	[Documentation]    Validate the atcamera_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtCamera Event atcamera_logevent_SettingsApplied Topic Columns
+	[Documentation]    Validate the atcamera_logevent_SettingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5481,8 +5409,8 @@ Validate AtCamera Event atcamera_logevent_imageReadoutParameters Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtCamera Event atcamera_logevent_bonnShutterSettingsApplied Topic Byte Size
-	[Documentation]    Validate the atcamera_logevent_bonnShutterSettingsApplied topic is less than 65536 bytes in total.
+Validate AtCamera Event atcamera_logevent_BonnShutterSettingsApplied Topic Byte Size
+	[Documentation]    Validate the atcamera_logevent_BonnShutterSettingsApplied topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5504,8 +5432,8 @@ Validate AtCamera Event atcamera_logevent_bonnShutterSettingsApplied Topic Byte 
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtCamera Event atcamera_logevent_bonnShutterSettingsApplied Topic Columns
-	[Documentation]    Validate the atcamera_logevent_bonnShutterSettingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtCamera Event atcamera_logevent_BonnShutterSettingsApplied Topic Columns
+	[Documentation]    Validate the atcamera_logevent_BonnShutterSettingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5517,8 +5445,8 @@ Validate AtCamera Event atcamera_logevent_bonnShutterSettingsApplied Topic Colum
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtCamera Event atcamera_logevent_wrebSettingsApplied Topic Byte Size
-	[Documentation]    Validate the atcamera_logevent_wrebSettingsApplied topic is less than 65536 bytes in total.
+Validate AtCamera Event atcamera_logevent_WREBSettingsApplied Topic Byte Size
+	[Documentation]    Validate the atcamera_logevent_WREBSettingsApplied topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5540,8 +5468,8 @@ Validate AtCamera Event atcamera_logevent_wrebSettingsApplied Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtCamera Event atcamera_logevent_wrebSettingsApplied Topic Columns
-	[Documentation]    Validate the atcamera_logevent_wrebSettingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtCamera Event atcamera_logevent_WREBSettingsApplied Topic Columns
+	[Documentation]    Validate the atcamera_logevent_WREBSettingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5553,8 +5481,8 @@ Validate AtCamera Event atcamera_logevent_wrebSettingsApplied Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtCamera Telemetry atcamera_heartbeat Topic Byte Size
-	[Documentation]    Validate the atcamera_heartbeat topic is less than 65536 bytes in total.
+Validate AtCamera Telemetry atcamera_Heartbeat Topic Byte Size
+	[Documentation]    Validate the atcamera_Heartbeat topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5576,8 +5504,8 @@ Validate AtCamera Telemetry atcamera_heartbeat Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtCamera Telemetry atcamera_heartbeat Topic Columns
-	[Documentation]    Validate the atcamera_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtCamera Telemetry atcamera_Heartbeat Topic Columns
+	[Documentation]    Validate the atcamera_Heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5589,8 +5517,8 @@ Validate AtCamera Telemetry atcamera_heartbeat Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtCamera Telemetry atcamera_wreb Topic Byte Size
-	[Documentation]    Validate the atcamera_wreb topic is less than 65536 bytes in total.
+Validate AtCamera Telemetry atcamera_WREB Topic Byte Size
+	[Documentation]    Validate the atcamera_WREB topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5612,8 +5540,8 @@ Validate AtCamera Telemetry atcamera_wreb Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtCamera Telemetry atcamera_wreb Topic Columns
-	[Documentation]    Validate the atcamera_wreb topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtCamera Telemetry atcamera_WREB Topic Columns
+	[Documentation]    Validate the atcamera_WREB topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5625,8 +5553,8 @@ Validate AtCamera Telemetry atcamera_wreb Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtCamera Telemetry atcamera_bonnShutter Topic Byte Size
-	[Documentation]    Validate the atcamera_bonnShutter topic is less than 65536 bytes in total.
+Validate AtCamera Telemetry atcamera_BonnShutter Topic Byte Size
+	[Documentation]    Validate the atcamera_BonnShutter topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5648,8 +5576,8 @@ Validate AtCamera Telemetry atcamera_bonnShutter Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtCamera Telemetry atcamera_bonnShutter Topic Columns
-	[Documentation]    Validate the atcamera_bonnShutter topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtCamera Telemetry atcamera_BonnShutter Topic Columns
+	[Documentation]    Validate the atcamera_BonnShutter topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5661,8 +5589,8 @@ Validate AtCamera Telemetry atcamera_bonnShutter Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtCamera Telemetry atcamera_wrebPower Topic Byte Size
-	[Documentation]    Validate the atcamera_wrebPower topic is less than 65536 bytes in total.
+Validate AtCamera Telemetry atcamera_WREBPower Topic Byte Size
+	[Documentation]    Validate the atcamera_WREBPower topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5684,8 +5612,8 @@ Validate AtCamera Telemetry atcamera_wrebPower Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtCamera Telemetry atcamera_wrebPower Topic Columns
-	[Documentation]    Validate the atcamera_wrebPower topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtCamera Telemetry atcamera_WREBPower Topic Columns
+	[Documentation]    Validate the atcamera_WREBPower topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16065,8 +15993,8 @@ Validate EFD Telemetry efd_Summary Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate HeaderService Command headerService_command_enable Topic Byte Size
-	[Documentation]    Validate the headerService_command_enable topic is less than 65536 bytes in total.
+Validate HeaderService Command headerService_command_disable Topic Byte Size
+	[Documentation]    Validate the headerService_command_disable topic is less than 65536 bytes in total.
 	[Tags]    smoke    HeaderService
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16088,8 +16016,8 @@ Validate HeaderService Command headerService_command_enable Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate HeaderService Command headerService_command_enable Topic Columns
-	[Documentation]    Validate the headerService_command_enable topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate HeaderService Command headerService_command_disable Topic Columns
+	[Documentation]    Validate the headerService_command_disable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    HeaderService
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16101,8 +16029,8 @@ Validate HeaderService Command headerService_command_enable Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate HeaderService Command headerService_command_exitControl Topic Byte Size
-	[Documentation]    Validate the headerService_command_exitControl topic is less than 65536 bytes in total.
+Validate HeaderService Command headerService_command_enable Topic Byte Size
+	[Documentation]    Validate the headerService_command_enable topic is less than 65536 bytes in total.
 	[Tags]    smoke    HeaderService
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16124,8 +16052,8 @@ Validate HeaderService Command headerService_command_exitControl Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate HeaderService Command headerService_command_exitControl Topic Columns
-	[Documentation]    Validate the headerService_command_exitControl topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate HeaderService Command headerService_command_enable Topic Columns
+	[Documentation]    Validate the headerService_command_enable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    HeaderService
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16137,8 +16065,8 @@ Validate HeaderService Command headerService_command_exitControl Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate HeaderService Command headerService_command_start Topic Byte Size
-	[Documentation]    Validate the headerService_command_start topic is less than 65536 bytes in total.
+Validate HeaderService Command headerService_command_exitControl Topic Byte Size
+	[Documentation]    Validate the headerService_command_exitControl topic is less than 65536 bytes in total.
 	[Tags]    smoke    HeaderService
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16160,8 +16088,8 @@ Validate HeaderService Command headerService_command_start Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate HeaderService Command headerService_command_start Topic Columns
-	[Documentation]    Validate the headerService_command_start topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate HeaderService Command headerService_command_exitControl Topic Columns
+	[Documentation]    Validate the headerService_command_exitControl topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    HeaderService
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16209,8 +16137,8 @@ Validate HeaderService Command headerService_command_standby Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate HeaderService Command headerService_command_disable Topic Byte Size
-	[Documentation]    Validate the headerService_command_disable topic is less than 65536 bytes in total.
+Validate HeaderService Command headerService_command_start Topic Byte Size
+	[Documentation]    Validate the headerService_command_start topic is less than 65536 bytes in total.
 	[Tags]    smoke    HeaderService
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16232,8 +16160,8 @@ Validate HeaderService Command headerService_command_disable Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate HeaderService Command headerService_command_disable Topic Columns
-	[Documentation]    Validate the headerService_command_disable topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate HeaderService Command headerService_command_start Topic Columns
+	[Documentation]    Validate the headerService_command_start topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    HeaderService
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16281,8 +16209,8 @@ Validate HeaderService Command headerService_command_enterControl Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate HeaderService Event headerService_logevent_Heartbeat Topic Byte Size
-	[Documentation]    Validate the headerService_logevent_Heartbeat topic is less than 65536 bytes in total.
+Validate HeaderService Event headerService_logevent_appliedSettingsMatchStart Topic Byte Size
+	[Documentation]    Validate the headerService_logevent_appliedSettingsMatchStart topic is less than 65536 bytes in total.
 	[Tags]    smoke    HeaderService
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16304,8 +16232,8 @@ Validate HeaderService Event headerService_logevent_Heartbeat Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate HeaderService Event headerService_logevent_Heartbeat Topic Columns
-	[Documentation]    Validate the headerService_logevent_Heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate HeaderService Event headerService_logevent_appliedSettingsMatchStart Topic Columns
+	[Documentation]    Validate the headerService_logevent_appliedSettingsMatchStart topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    HeaderService
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16317,8 +16245,8 @@ Validate HeaderService Event headerService_logevent_Heartbeat Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate HeaderService Event headerService_logevent_AppliedSettingsMatchStart Topic Byte Size
-	[Documentation]    Validate the headerService_logevent_AppliedSettingsMatchStart topic is less than 65536 bytes in total.
+Validate HeaderService Event headerService_logevent_errorCode Topic Byte Size
+	[Documentation]    Validate the headerService_logevent_errorCode topic is less than 65536 bytes in total.
 	[Tags]    smoke    HeaderService
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16340,8 +16268,8 @@ Validate HeaderService Event headerService_logevent_AppliedSettingsMatchStart To
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate HeaderService Event headerService_logevent_AppliedSettingsMatchStart Topic Columns
-	[Documentation]    Validate the headerService_logevent_AppliedSettingsMatchStart topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate HeaderService Event headerService_logevent_errorCode Topic Columns
+	[Documentation]    Validate the headerService_logevent_errorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    HeaderService
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16353,8 +16281,8 @@ Validate HeaderService Event headerService_logevent_AppliedSettingsMatchStart To
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate HeaderService Event headerService_logevent_LoopTimeOutOfRange Topic Byte Size
-	[Documentation]    Validate the headerService_logevent_LoopTimeOutOfRange topic is less than 65536 bytes in total.
+Validate HeaderService Event headerService_logevent_settingVersions Topic Byte Size
+	[Documentation]    Validate the headerService_logevent_settingVersions topic is less than 65536 bytes in total.
 	[Tags]    smoke    HeaderService
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16376,8 +16304,8 @@ Validate HeaderService Event headerService_logevent_LoopTimeOutOfRange Topic Byt
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate HeaderService Event headerService_logevent_LoopTimeOutOfRange Topic Columns
-	[Documentation]    Validate the headerService_logevent_LoopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate HeaderService Event headerService_logevent_settingVersions Topic Columns
+	[Documentation]    Validate the headerService_logevent_settingVersions topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    HeaderService
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16389,8 +16317,8 @@ Validate HeaderService Event headerService_logevent_LoopTimeOutOfRange Topic Col
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate HeaderService Event headerService_logevent_RejectedCommand Topic Byte Size
-	[Documentation]    Validate the headerService_logevent_RejectedCommand topic is less than 65536 bytes in total.
+Validate HeaderService Event headerService_logevent_summaryState Topic Byte Size
+	[Documentation]    Validate the headerService_logevent_summaryState topic is less than 65536 bytes in total.
 	[Tags]    smoke    HeaderService
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16412,8 +16340,8 @@ Validate HeaderService Event headerService_logevent_RejectedCommand Topic Byte S
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate HeaderService Event headerService_logevent_RejectedCommand Topic Columns
-	[Documentation]    Validate the headerService_logevent_RejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate HeaderService Event headerService_logevent_summaryState Topic Columns
+	[Documentation]    Validate the headerService_logevent_summaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    HeaderService
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16425,8 +16353,8 @@ Validate HeaderService Event headerService_logevent_RejectedCommand Topic Column
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate HeaderService Event headerService_logevent_SettingsApplied Topic Byte Size
-	[Documentation]    Validate the headerService_logevent_SettingsApplied topic is less than 65536 bytes in total.
+Validate HeaderService Event headerService_logevent_detailedState Topic Byte Size
+	[Documentation]    Validate the headerService_logevent_detailedState topic is less than 65536 bytes in total.
 	[Tags]    smoke    HeaderService
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16448,8 +16376,8 @@ Validate HeaderService Event headerService_logevent_SettingsApplied Topic Byte S
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate HeaderService Event headerService_logevent_SettingsApplied Topic Columns
-	[Documentation]    Validate the headerService_logevent_SettingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate HeaderService Event headerService_logevent_detailedState Topic Columns
+	[Documentation]    Validate the headerService_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    HeaderService
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16461,8 +16389,8 @@ Validate HeaderService Event headerService_logevent_SettingsApplied Topic Column
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate HeaderService Event headerService_logevent_DetailedState Topic Byte Size
-	[Documentation]    Validate the headerService_logevent_DetailedState topic is less than 65536 bytes in total.
+Validate HeaderService Event headerService_logevent_heartbeat Topic Byte Size
+	[Documentation]    Validate the headerService_logevent_heartbeat topic is less than 65536 bytes in total.
 	[Tags]    smoke    HeaderService
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16484,8 +16412,8 @@ Validate HeaderService Event headerService_logevent_DetailedState Topic Byte Siz
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate HeaderService Event headerService_logevent_DetailedState Topic Columns
-	[Documentation]    Validate the headerService_logevent_DetailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate HeaderService Event headerService_logevent_heartbeat Topic Columns
+	[Documentation]    Validate the headerService_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    HeaderService
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16497,8 +16425,8 @@ Validate HeaderService Event headerService_logevent_DetailedState Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate HeaderService Event headerService_logevent_LargeFileObjectAvailable Topic Byte Size
-	[Documentation]    Validate the headerService_logevent_LargeFileObjectAvailable topic is less than 65536 bytes in total.
+Validate HeaderService Event headerService_logevent_rejectedCommand Topic Byte Size
+	[Documentation]    Validate the headerService_logevent_rejectedCommand topic is less than 65536 bytes in total.
 	[Tags]    smoke    HeaderService
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16520,8 +16448,8 @@ Validate HeaderService Event headerService_logevent_LargeFileObjectAvailable Top
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate HeaderService Event headerService_logevent_LargeFileObjectAvailable Topic Columns
-	[Documentation]    Validate the headerService_logevent_LargeFileObjectAvailable topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate HeaderService Event headerService_logevent_rejectedCommand Topic Columns
+	[Documentation]    Validate the headerService_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    HeaderService
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16533,8 +16461,8 @@ Validate HeaderService Event headerService_logevent_LargeFileObjectAvailable Top
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate HeaderService Event headerService_logevent_SummaryState Topic Byte Size
-	[Documentation]    Validate the headerService_logevent_SummaryState topic is less than 65536 bytes in total.
+Validate HeaderService Event headerService_logevent_largeFileObjectAvailable Topic Byte Size
+	[Documentation]    Validate the headerService_logevent_largeFileObjectAvailable topic is less than 65536 bytes in total.
 	[Tags]    smoke    HeaderService
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16556,85 +16484,13 @@ Validate HeaderService Event headerService_logevent_SummaryState Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate HeaderService Event headerService_logevent_SummaryState Topic Columns
-	[Documentation]    Validate the headerService_logevent_SummaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate HeaderService Event headerService_logevent_largeFileObjectAvailable Topic Columns
+	[Documentation]    Validate the headerService_logevent_largeFileObjectAvailable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    HeaderService
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/headerService/headerService_Events.xml
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/Count" -v . -n ${folder}/sal_interfaces/headerService/headerService_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate HeaderService Event headerService_logevent_ErrorCode Topic Byte Size
-	[Documentation]    Validate the headerService_logevent_ErrorCode topic is less than 65536 bytes in total.
-	[Tags]    smoke    HeaderService
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/headerService/headerService_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/Count" -v . -n ${folder}/sal_interfaces/headerService/headerService_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/headerService/headerService_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate HeaderService Event headerService_logevent_ErrorCode Topic Columns
-	[Documentation]    Validate the headerService_logevent_ErrorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    HeaderService
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/headerService/headerService_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/Count" -v . -n ${folder}/sal_interfaces/headerService/headerService_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate HeaderService Event headerService_logevent_SettingVersions Topic Byte Size
-	[Documentation]    Validate the headerService_logevent_SettingVersions topic is less than 65536 bytes in total.
-	[Tags]    smoke    HeaderService
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/headerService/headerService_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/Count" -v . -n ${folder}/sal_interfaces/headerService/headerService_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/headerService/headerService_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate HeaderService Event headerService_logevent_SettingVersions Topic Columns
-	[Documentation]    Validate the headerService_logevent_SettingVersions topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    HeaderService
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/headerService/headerService_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/Count" -v . -n ${folder}/sal_interfaces/headerService/headerService_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -23727,6 +23583,654 @@ Validate OCS Telemetry ocs_SequencerHeartbeat Topic Columns
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/ocs/ocs_Telemetry.xml
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/Count" -v . -n ${folder}/sal_interfaces/ocs/ocs_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate PromptProcessing Command promptProcessing_command_start Topic Byte Size
+	[Documentation]    Validate the promptProcessing_command_start topic is less than 65536 bytes in total.
+	[Tags]    smoke    PromptProcessing
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate PromptProcessing Command promptProcessing_command_start Topic Columns
+	[Documentation]    Validate the promptProcessing_command_start topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    PromptProcessing
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate PromptProcessing Command promptProcessing_command_enable Topic Byte Size
+	[Documentation]    Validate the promptProcessing_command_enable topic is less than 65536 bytes in total.
+	[Tags]    smoke    PromptProcessing
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[2]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate PromptProcessing Command promptProcessing_command_enable Topic Columns
+	[Documentation]    Validate the promptProcessing_command_enable topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    PromptProcessing
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[2]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate PromptProcessing Command promptProcessing_command_disable Topic Byte Size
+	[Documentation]    Validate the promptProcessing_command_disable topic is less than 65536 bytes in total.
+	[Tags]    smoke    PromptProcessing
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[3]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[3]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate PromptProcessing Command promptProcessing_command_disable Topic Columns
+	[Documentation]    Validate the promptProcessing_command_disable topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    PromptProcessing
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[3]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate PromptProcessing Command promptProcessing_command_standby Topic Byte Size
+	[Documentation]    Validate the promptProcessing_command_standby topic is less than 65536 bytes in total.
+	[Tags]    smoke    PromptProcessing
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[4]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate PromptProcessing Command promptProcessing_command_standby Topic Columns
+	[Documentation]    Validate the promptProcessing_command_standby topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    PromptProcessing
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[4]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate PromptProcessing Command promptProcessing_command_enterControl Topic Byte Size
+	[Documentation]    Validate the promptProcessing_command_enterControl topic is less than 65536 bytes in total.
+	[Tags]    smoke    PromptProcessing
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[5]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate PromptProcessing Command promptProcessing_command_enterControl Topic Columns
+	[Documentation]    Validate the promptProcessing_command_enterControl topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    PromptProcessing
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[5]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate PromptProcessing Command promptProcessing_command_exitControl Topic Byte Size
+	[Documentation]    Validate the promptProcessing_command_exitControl topic is less than 65536 bytes in total.
+	[Tags]    smoke    PromptProcessing
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[6]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[6]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate PromptProcessing Command promptProcessing_command_exitControl Topic Columns
+	[Documentation]    Validate the promptProcessing_command_exitControl topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    PromptProcessing
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[6]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate PromptProcessing Command promptProcessing_command_setValue Topic Byte Size
+	[Documentation]    Validate the promptProcessing_command_setValue topic is less than 65536 bytes in total.
+	[Tags]    smoke    PromptProcessing
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[7]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[7]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[7]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate PromptProcessing Command promptProcessing_command_setValue Topic Columns
+	[Documentation]    Validate the promptProcessing_command_setValue topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    PromptProcessing
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[7]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[7]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate PromptProcessing Command promptProcessing_command_abort Topic Byte Size
+	[Documentation]    Validate the promptProcessing_command_abort topic is less than 65536 bytes in total.
+	[Tags]    smoke    PromptProcessing
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[8]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[8]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[8]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate PromptProcessing Command promptProcessing_command_abort Topic Columns
+	[Documentation]    Validate the promptProcessing_command_abort topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    PromptProcessing
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[8]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[8]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate PromptProcessing Event promptProcessing_logevent_ErrorCode Topic Byte Size
+	[Documentation]    Validate the promptProcessing_logevent_ErrorCode topic is less than 65536 bytes in total.
+	[Tags]    smoke    PromptProcessing
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[1]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[1]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate PromptProcessing Event promptProcessing_logevent_ErrorCode Topic Columns
+	[Documentation]    Validate the promptProcessing_logevent_ErrorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    PromptProcessing
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[1]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate PromptProcessing Event promptProcessing_logevent_SettingVersions Topic Byte Size
+	[Documentation]    Validate the promptProcessing_logevent_SettingVersions topic is less than 65536 bytes in total.
+	[Tags]    smoke    PromptProcessing
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate PromptProcessing Event promptProcessing_logevent_SettingVersions Topic Columns
+	[Documentation]    Validate the promptProcessing_logevent_SettingVersions topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    PromptProcessing
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate PromptProcessing Event promptProcessing_logevent_AppliedSettingsMatchStart Topic Byte Size
+	[Documentation]    Validate the promptProcessing_logevent_AppliedSettingsMatchStart topic is less than 65536 bytes in total.
+	[Tags]    smoke    PromptProcessing
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate PromptProcessing Event promptProcessing_logevent_AppliedSettingsMatchStart Topic Columns
+	[Documentation]    Validate the promptProcessing_logevent_AppliedSettingsMatchStart topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    PromptProcessing
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate PromptProcessing Event promptProcessing_logevent_SettingsApplied Topic Byte Size
+	[Documentation]    Validate the promptProcessing_logevent_SettingsApplied topic is less than 65536 bytes in total.
+	[Tags]    smoke    PromptProcessing
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate PromptProcessing Event promptProcessing_logevent_SettingsApplied Topic Columns
+	[Documentation]    Validate the promptProcessing_logevent_SettingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    PromptProcessing
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate PromptProcessing Event promptProcessing_logevent_DetailedState Topic Byte Size
+	[Documentation]    Validate the promptProcessing_logevent_DetailedState topic is less than 65536 bytes in total.
+	[Tags]    smoke    PromptProcessing
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate PromptProcessing Event promptProcessing_logevent_DetailedState Topic Columns
+	[Documentation]    Validate the promptProcessing_logevent_DetailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    PromptProcessing
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate PromptProcessing Event promptProcessing_logevent_SummaryState Topic Byte Size
+	[Documentation]    Validate the promptProcessing_logevent_SummaryState topic is less than 65536 bytes in total.
+	[Tags]    smoke    PromptProcessing
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate PromptProcessing Event promptProcessing_logevent_SummaryState Topic Columns
+	[Documentation]    Validate the promptProcessing_logevent_SummaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    PromptProcessing
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate PromptProcessing Event promptProcessing_logevent_promptprocessingEntitySummaryState Topic Byte Size
+	[Documentation]    Validate the promptProcessing_logevent_promptprocessingEntitySummaryState topic is less than 65536 bytes in total.
+	[Tags]    smoke    PromptProcessing
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate PromptProcessing Event promptProcessing_logevent_promptprocessingEntitySummaryState Topic Columns
+	[Documentation]    Validate the promptProcessing_logevent_promptprocessingEntitySummaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    PromptProcessing
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate PromptProcessing Event promptProcessing_logevent_promptprocessingEntityStartup Topic Byte Size
+	[Documentation]    Validate the promptProcessing_logevent_promptprocessingEntityStartup topic is less than 65536 bytes in total.
+	[Tags]    smoke    PromptProcessing
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate PromptProcessing Event promptProcessing_logevent_promptprocessingEntityStartup Topic Columns
+	[Documentation]    Validate the promptProcessing_logevent_promptprocessingEntityStartup topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    PromptProcessing
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate PromptProcessing Event promptProcessing_logevent_promptprocessingEntityShutdown Topic Byte Size
+	[Documentation]    Validate the promptProcessing_logevent_promptprocessingEntityShutdown topic is less than 65536 bytes in total.
+	[Tags]    smoke    PromptProcessing
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate PromptProcessing Event promptProcessing_logevent_promptprocessingEntityShutdown Topic Columns
+	[Documentation]    Validate the promptProcessing_logevent_promptprocessingEntityShutdown topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    PromptProcessing
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate PromptProcessing Telemetry promptProcessing_SequencerHeartbeat Topic Byte Size
+	[Documentation]    Validate the promptProcessing_SequencerHeartbeat topic is less than 65536 bytes in total.
+	[Tags]    smoke    PromptProcessing
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate PromptProcessing Telemetry promptProcessing_SequencerHeartbeat Topic Columns
+	[Documentation]    Validate the promptProcessing_SequencerHeartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    PromptProcessing
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Telemetry.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
