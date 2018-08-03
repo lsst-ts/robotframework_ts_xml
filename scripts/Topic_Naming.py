@@ -25,6 +25,25 @@ file.write("\n")
 # Create Test Case table.
 file.write("*** Test Cases ***\n")
 for subsystem in xml_common.subsystems:
+
+	# Mark test cases with Jira tickets
+	if subsystem == "vms":
+		skipped="TSS-2618"
+	elif subsystem == "m1m3":
+		skipped="TSS-2617"
+	elif re.match("^dome\S+", subsystem):
+		skipped="skipped"
+	elif subsystem == "hexapod":
+		skipped="skipped"
+	elif subsystem == "m2ms":
+		skipped="skipped"
+	elif subsystem == "MTMount":
+		skipped="skipped"
+	elif subsystem == "rotator":
+		skipped="skipped"
+	else:
+		skipped=""
+
 	# Get the list of XMLs for each CSC, to include Telemetry, Events and Commands.
 	xmls = glob.glob(os.environ['XML_HOME'] + "/sal_interfaces/" + subsystem + "/" + subsystem + "*")
 	for xml in xmls:
@@ -33,7 +52,7 @@ for subsystem in xml_common.subsystems:
 		# Create the Test Cases.
 		file.write("Validate " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType + " Topic Names\n")
 		file.write("\t[Documentation]    Validate the " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType + " topic names conform to naming convention.\n")
-		file.write("\t[Tags]    smoke    " + xml_common.CapitalizeSubsystem(subsystem) + "\n")
+		file.write("\t[Tags]    smoke    " + xml_common.CapitalizeSubsystem(subsystem) + "    " + skipped + "\n")
 		file.write("\t${output}=    Run    ${xml} sel -t -m \"//SAL" + messageType.rstrip('s') + "Set/SAL" + messageType.rstrip('s') + "/Alias\" -v . -n ${folder}/sal_interfaces/" + subsystem + "/" + subsystem + "_" + messageType + ".xml |sed -e 's/\\\\n/,/g'\n")
 		file.write("\tLog    ${output}\n")
 		file.write("\t@{topics}=    Split to Lines    ${output}\n")
