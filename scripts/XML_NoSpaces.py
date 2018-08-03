@@ -32,7 +32,7 @@ for subsystem in xml_common.subsystems:
 		# Create the Subsystem Test Cases.
 		file.write("Validate " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType + " <Subsystem> element\n")
 		file.write("\t[Documentation]    Validate the " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType + " <Subsystem> elements do not contain embedded spaces.\n")
-		file.write("\t[Tags]    smoke\n")
+		file.write("\t[Tags]    smoke    " + xml_common.CapitalizeSubsystem(subsystem) + "\n")
 		file.write("\t${output}=    Run    ${xml} sel -t -m \"//SAL" + messageType.rstrip('s') + "Set/SAL" + messageType.rstrip('s') + "/Subsystem\" -v . -n ${folder}/sal_interfaces/" + subsystem + "/" + subsystem + "_" + messageType + ".xml |awk '{$1=$1};1' |tr '\\n' '|'\n")
 		file.write("\tLog    ${output}\n")
 		file.write("\tShould Not Contain    ${output}    ${SPACE}\n")
@@ -41,7 +41,7 @@ for subsystem in xml_common.subsystems:
 		# Create the EFDB_Topic Test Cases.
 		file.write("Validate " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType + " <EFDB_Topic> element\n")
 		file.write("\t[Documentation]    Validate the " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType + " <EFDB_Topic> elements do not contain embedded spaces.\n")
-		file.write("\t[Tags]    smoke\n")
+		file.write("\t[Tags]    smoke    " + xml_common.CapitalizeSubsystem(subsystem) + "\n")
 		file.write("\t${output}=    Run    ${xml} sel -t -m \"//SAL" + messageType.rstrip('s') + "Set/SAL" + messageType.rstrip('s') + "/EFDB_Topic\" -v . -n ${folder}/sal_interfaces/" + subsystem + "/" + subsystem + "_" + messageType + ".xml |awk '{$1=$1};1' |tr '\\n' '|'\n")
 		file.write("\tLog    ${output}\n")
 		file.write("\tShould Not Contain    ${output}    ${SPACE}\n")
@@ -50,7 +50,7 @@ for subsystem in xml_common.subsystems:
 		# Create the Alias Test Cases.
 		file.write("Validate " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType + " <Alias> element\n")
 		file.write("\t[Documentation]    Validate the " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType + " <Alias> elements do not contain embedded spaces.\n")
-		file.write("\t[Tags]    smoke\n")
+		file.write("\t[Tags]    smoke    " + xml_common.CapitalizeSubsystem(subsystem) + "\n")
 		file.write("\t${output}=    Run    ${xml} sel -t -m \"//SAL" + messageType.rstrip('s') + "Set/SAL" + messageType.rstrip('s') + "/Alias\" -v . -n ${folder}/sal_interfaces/" + subsystem + "/" + subsystem + "_" + messageType + ".xml |awk '{$1=$1};1' |tr '\\n' '|'\n")
 		file.write("\tLog    ${output}\n")
 		file.write("\tShould Not Contain    ${output}    ${SPACE}\n")
@@ -59,7 +59,7 @@ for subsystem in xml_common.subsystems:
 		# Create the EFDB_Name Test Cases.
 		file.write("Validate " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType + " <EFDB_Name> element\n")
 		file.write("\t[Documentation]    Validate the " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType + " <EFDB_Name> elements do not contain embedded spaces.\n")
-		file.write("\t[Tags]    smoke\n")
+		file.write("\t[Tags]    smoke    " + xml_common.CapitalizeSubsystem(subsystem) + "\n")
 		file.write("\t${output}=    Run    ${xml} sel -t -m \"//SAL" + messageType.rstrip('s') + "Set/SAL" + messageType.rstrip('s') + "/item/EFDB_Name\" -v . -n ${folder}/sal_interfaces/" + subsystem + "/" + subsystem + "_" + messageType + ".xml |awk '{$1=$1};1' |tr '\\n' '|'\n")
 		file.write("\tLog    ${output}\n")
 		file.write("\tShould Not Contain    ${output}    ${SPACE}\n")

@@ -32,7 +32,7 @@ for topictype in ["Commands", "Events", "Telemetry"]:
 		for xml in xmls:
 			# Create the Test Cases.
 			file.write("Validate " + xml_common.CapitalizeSubsystem(subsystem) + " " + topictype + " XML file\n")
-			file.write("\t[Tags]    smoke\n")
+			file.write("\t[Tags]    smoke    " + xml_common.CapitalizeSubsystem(subsystem) + "\n")
 			file.write("\t${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SAL" + topictype.rstrip("s") + "Set.xsd ${folder}/sal_interfaces/" + subsystem + "/" + subsystem + "_" + topictype + ".xml\n")
 			file.write("\tLog    ${output}\n")
 			file.write("\tShould Contain    ${output}   " + subsystem + "_" + topictype + ".xml - valid\n")
