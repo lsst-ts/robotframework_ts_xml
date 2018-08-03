@@ -1305,8 +1305,8 @@ Validate AtArchiver Telemetry atArchiver_SequencerHeartbeat Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtHeaderService Command atHeaderService_command_enable Topic Byte Size
-	[Documentation]    Validate the atHeaderService_command_enable topic is less than 65536 bytes in total.
+Validate AtHeaderService Command atHeaderService_command_disable Topic Byte Size
+	[Documentation]    Validate the atHeaderService_command_disable topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1328,8 +1328,8 @@ Validate AtHeaderService Command atHeaderService_command_enable Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtHeaderService Command atHeaderService_command_enable Topic Columns
-	[Documentation]    Validate the atHeaderService_command_enable topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtHeaderService Command atHeaderService_command_disable Topic Columns
+	[Documentation]    Validate the atHeaderService_command_disable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1341,8 +1341,8 @@ Validate AtHeaderService Command atHeaderService_command_enable Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtHeaderService Command atHeaderService_command_exitControl Topic Byte Size
-	[Documentation]    Validate the atHeaderService_command_exitControl topic is less than 65536 bytes in total.
+Validate AtHeaderService Command atHeaderService_command_enable Topic Byte Size
+	[Documentation]    Validate the atHeaderService_command_enable topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1364,8 +1364,8 @@ Validate AtHeaderService Command atHeaderService_command_exitControl Topic Byte 
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtHeaderService Command atHeaderService_command_exitControl Topic Columns
-	[Documentation]    Validate the atHeaderService_command_exitControl topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtHeaderService Command atHeaderService_command_enable Topic Columns
+	[Documentation]    Validate the atHeaderService_command_enable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1377,8 +1377,8 @@ Validate AtHeaderService Command atHeaderService_command_exitControl Topic Colum
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtHeaderService Command atHeaderService_command_start Topic Byte Size
-	[Documentation]    Validate the atHeaderService_command_start topic is less than 65536 bytes in total.
+Validate AtHeaderService Command atHeaderService_command_exitControl Topic Byte Size
+	[Documentation]    Validate the atHeaderService_command_exitControl topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1400,8 +1400,8 @@ Validate AtHeaderService Command atHeaderService_command_start Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtHeaderService Command atHeaderService_command_start Topic Columns
-	[Documentation]    Validate the atHeaderService_command_start topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtHeaderService Command atHeaderService_command_exitControl Topic Columns
+	[Documentation]    Validate the atHeaderService_command_exitControl topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1449,8 +1449,8 @@ Validate AtHeaderService Command atHeaderService_command_standby Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtHeaderService Command atHeaderService_command_disable Topic Byte Size
-	[Documentation]    Validate the atHeaderService_command_disable topic is less than 65536 bytes in total.
+Validate AtHeaderService Command atHeaderService_command_start Topic Byte Size
+	[Documentation]    Validate the atHeaderService_command_start topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1472,8 +1472,8 @@ Validate AtHeaderService Command atHeaderService_command_disable Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtHeaderService Command atHeaderService_command_disable Topic Columns
-	[Documentation]    Validate the atHeaderService_command_disable topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtHeaderService Command atHeaderService_command_start Topic Columns
+	[Documentation]    Validate the atHeaderService_command_start topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1521,8 +1521,8 @@ Validate AtHeaderService Command atHeaderService_command_enterControl Topic Colu
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtHeaderService Event atHeaderService_logevent_Heartbeat Topic Byte Size
-	[Documentation]    Validate the atHeaderService_logevent_Heartbeat topic is less than 65536 bytes in total.
+Validate AtHeaderService Event atHeaderService_logevent_appliedSettingsMatchStart Topic Byte Size
+	[Documentation]    Validate the atHeaderService_logevent_appliedSettingsMatchStart topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1544,8 +1544,8 @@ Validate AtHeaderService Event atHeaderService_logevent_Heartbeat Topic Byte Siz
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtHeaderService Event atHeaderService_logevent_Heartbeat Topic Columns
-	[Documentation]    Validate the atHeaderService_logevent_Heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtHeaderService Event atHeaderService_logevent_appliedSettingsMatchStart Topic Columns
+	[Documentation]    Validate the atHeaderService_logevent_appliedSettingsMatchStart topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1557,8 +1557,8 @@ Validate AtHeaderService Event atHeaderService_logevent_Heartbeat Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtHeaderService Event atHeaderService_logevent_AppliedSettingsMatchStart Topic Byte Size
-	[Documentation]    Validate the atHeaderService_logevent_AppliedSettingsMatchStart topic is less than 65536 bytes in total.
+Validate AtHeaderService Event atHeaderService_logevent_errorCode Topic Byte Size
+	[Documentation]    Validate the atHeaderService_logevent_errorCode topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1580,8 +1580,8 @@ Validate AtHeaderService Event atHeaderService_logevent_AppliedSettingsMatchStar
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtHeaderService Event atHeaderService_logevent_AppliedSettingsMatchStart Topic Columns
-	[Documentation]    Validate the atHeaderService_logevent_AppliedSettingsMatchStart topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtHeaderService Event atHeaderService_logevent_errorCode Topic Columns
+	[Documentation]    Validate the atHeaderService_logevent_errorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1593,8 +1593,8 @@ Validate AtHeaderService Event atHeaderService_logevent_AppliedSettingsMatchStar
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtHeaderService Event atHeaderService_logevent_LoopTimeOutOfRange Topic Byte Size
-	[Documentation]    Validate the atHeaderService_logevent_LoopTimeOutOfRange topic is less than 65536 bytes in total.
+Validate AtHeaderService Event atHeaderService_logevent_settingVersions Topic Byte Size
+	[Documentation]    Validate the atHeaderService_logevent_settingVersions topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1616,8 +1616,8 @@ Validate AtHeaderService Event atHeaderService_logevent_LoopTimeOutOfRange Topic
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtHeaderService Event atHeaderService_logevent_LoopTimeOutOfRange Topic Columns
-	[Documentation]    Validate the atHeaderService_logevent_LoopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtHeaderService Event atHeaderService_logevent_settingVersions Topic Columns
+	[Documentation]    Validate the atHeaderService_logevent_settingVersions topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1629,8 +1629,8 @@ Validate AtHeaderService Event atHeaderService_logevent_LoopTimeOutOfRange Topic
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtHeaderService Event atHeaderService_logevent_RejectedCommand Topic Byte Size
-	[Documentation]    Validate the atHeaderService_logevent_RejectedCommand topic is less than 65536 bytes in total.
+Validate AtHeaderService Event atHeaderService_logevent_summaryState Topic Byte Size
+	[Documentation]    Validate the atHeaderService_logevent_summaryState topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1652,8 +1652,8 @@ Validate AtHeaderService Event atHeaderService_logevent_RejectedCommand Topic By
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtHeaderService Event atHeaderService_logevent_RejectedCommand Topic Columns
-	[Documentation]    Validate the atHeaderService_logevent_RejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtHeaderService Event atHeaderService_logevent_summaryState Topic Columns
+	[Documentation]    Validate the atHeaderService_logevent_summaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1665,8 +1665,8 @@ Validate AtHeaderService Event atHeaderService_logevent_RejectedCommand Topic Co
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtHeaderService Event atHeaderService_logevent_SettingsApplied Topic Byte Size
-	[Documentation]    Validate the atHeaderService_logevent_SettingsApplied topic is less than 65536 bytes in total.
+Validate AtHeaderService Event atHeaderService_logevent_detailedState Topic Byte Size
+	[Documentation]    Validate the atHeaderService_logevent_detailedState topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1688,8 +1688,8 @@ Validate AtHeaderService Event atHeaderService_logevent_SettingsApplied Topic By
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtHeaderService Event atHeaderService_logevent_SettingsApplied Topic Columns
-	[Documentation]    Validate the atHeaderService_logevent_SettingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtHeaderService Event atHeaderService_logevent_detailedState Topic Columns
+	[Documentation]    Validate the atHeaderService_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1701,8 +1701,8 @@ Validate AtHeaderService Event atHeaderService_logevent_SettingsApplied Topic Co
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtHeaderService Event atHeaderService_logevent_DetailedState Topic Byte Size
-	[Documentation]    Validate the atHeaderService_logevent_DetailedState topic is less than 65536 bytes in total.
+Validate AtHeaderService Event atHeaderService_logevent_heartbeat Topic Byte Size
+	[Documentation]    Validate the atHeaderService_logevent_heartbeat topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1724,8 +1724,8 @@ Validate AtHeaderService Event atHeaderService_logevent_DetailedState Topic Byte
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtHeaderService Event atHeaderService_logevent_DetailedState Topic Columns
-	[Documentation]    Validate the atHeaderService_logevent_DetailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtHeaderService Event atHeaderService_logevent_heartbeat Topic Columns
+	[Documentation]    Validate the atHeaderService_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1737,8 +1737,8 @@ Validate AtHeaderService Event atHeaderService_logevent_DetailedState Topic Colu
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtHeaderService Event atHeaderService_logevent_LargeFileObjectAvailable Topic Byte Size
-	[Documentation]    Validate the atHeaderService_logevent_LargeFileObjectAvailable topic is less than 65536 bytes in total.
+Validate AtHeaderService Event atHeaderService_logevent_rejectedCommand Topic Byte Size
+	[Documentation]    Validate the atHeaderService_logevent_rejectedCommand topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1760,8 +1760,8 @@ Validate AtHeaderService Event atHeaderService_logevent_LargeFileObjectAvailable
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtHeaderService Event atHeaderService_logevent_LargeFileObjectAvailable Topic Columns
-	[Documentation]    Validate the atHeaderService_logevent_LargeFileObjectAvailable topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtHeaderService Event atHeaderService_logevent_rejectedCommand Topic Columns
+	[Documentation]    Validate the atHeaderService_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1773,8 +1773,8 @@ Validate AtHeaderService Event atHeaderService_logevent_LargeFileObjectAvailable
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtHeaderService Event atHeaderService_logevent_SummaryState Topic Byte Size
-	[Documentation]    Validate the atHeaderService_logevent_SummaryState topic is less than 65536 bytes in total.
+Validate AtHeaderService Event atHeaderService_logevent_largeFileObjectAvailable Topic Byte Size
+	[Documentation]    Validate the atHeaderService_logevent_largeFileObjectAvailable topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1796,8 +1796,8 @@ Validate AtHeaderService Event atHeaderService_logevent_SummaryState Topic Byte 
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtHeaderService Event atHeaderService_logevent_SummaryState Topic Columns
-	[Documentation]    Validate the atHeaderService_logevent_SummaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtHeaderService Event atHeaderService_logevent_largeFileObjectAvailable Topic Columns
+	[Documentation]    Validate the atHeaderService_logevent_largeFileObjectAvailable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1809,8 +1809,8 @@ Validate AtHeaderService Event atHeaderService_logevent_SummaryState Topic Colum
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtHeaderService Event atHeaderService_logevent_ErrorCode Topic Byte Size
-	[Documentation]    Validate the atHeaderService_logevent_ErrorCode topic is less than 65536 bytes in total.
+Validate AtHeaderService Event atHeaderService_logevent_settingsApplied Topic Byte Size
+	[Documentation]    Validate the atHeaderService_logevent_settingsApplied topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1832,49 +1832,13 @@ Validate AtHeaderService Event atHeaderService_logevent_ErrorCode Topic Byte Siz
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtHeaderService Event atHeaderService_logevent_ErrorCode Topic Columns
-	[Documentation]    Validate the atHeaderService_logevent_ErrorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtHeaderService Event atHeaderService_logevent_settingsApplied Topic Columns
+	[Documentation]    Validate the atHeaderService_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Events.xml
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/Count" -v . -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate AtHeaderService Event atHeaderService_logevent_SettingVersions Topic Byte Size
-	[Documentation]    Validate the atHeaderService_logevent_SettingVersions topic is less than 65536 bytes in total.
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/Count" -v . -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate AtHeaderService Event atHeaderService_logevent_SettingVersions Topic Columns
-	[Documentation]    Validate the atHeaderService_logevent_SettingVersions topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/Count" -v . -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -16065,8 +16029,8 @@ Validate EFD Telemetry efd_Summary Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate HeaderService Command headerService_command_enable Topic Byte Size
-	[Documentation]    Validate the headerService_command_enable topic is less than 65536 bytes in total.
+Validate HeaderService Command headerService_command_disable Topic Byte Size
+	[Documentation]    Validate the headerService_command_disable topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16088,8 +16052,8 @@ Validate HeaderService Command headerService_command_enable Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate HeaderService Command headerService_command_enable Topic Columns
-	[Documentation]    Validate the headerService_command_enable topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate HeaderService Command headerService_command_disable Topic Columns
+	[Documentation]    Validate the headerService_command_disable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16101,8 +16065,8 @@ Validate HeaderService Command headerService_command_enable Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate HeaderService Command headerService_command_exitControl Topic Byte Size
-	[Documentation]    Validate the headerService_command_exitControl topic is less than 65536 bytes in total.
+Validate HeaderService Command headerService_command_enable Topic Byte Size
+	[Documentation]    Validate the headerService_command_enable topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16124,8 +16088,8 @@ Validate HeaderService Command headerService_command_exitControl Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate HeaderService Command headerService_command_exitControl Topic Columns
-	[Documentation]    Validate the headerService_command_exitControl topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate HeaderService Command headerService_command_enable Topic Columns
+	[Documentation]    Validate the headerService_command_enable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16137,8 +16101,8 @@ Validate HeaderService Command headerService_command_exitControl Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate HeaderService Command headerService_command_start Topic Byte Size
-	[Documentation]    Validate the headerService_command_start topic is less than 65536 bytes in total.
+Validate HeaderService Command headerService_command_exitControl Topic Byte Size
+	[Documentation]    Validate the headerService_command_exitControl topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16160,8 +16124,8 @@ Validate HeaderService Command headerService_command_start Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate HeaderService Command headerService_command_start Topic Columns
-	[Documentation]    Validate the headerService_command_start topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate HeaderService Command headerService_command_exitControl Topic Columns
+	[Documentation]    Validate the headerService_command_exitControl topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16209,8 +16173,8 @@ Validate HeaderService Command headerService_command_standby Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate HeaderService Command headerService_command_disable Topic Byte Size
-	[Documentation]    Validate the headerService_command_disable topic is less than 65536 bytes in total.
+Validate HeaderService Command headerService_command_start Topic Byte Size
+	[Documentation]    Validate the headerService_command_start topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16232,8 +16196,8 @@ Validate HeaderService Command headerService_command_disable Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate HeaderService Command headerService_command_disable Topic Columns
-	[Documentation]    Validate the headerService_command_disable topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate HeaderService Command headerService_command_start Topic Columns
+	[Documentation]    Validate the headerService_command_start topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16281,8 +16245,8 @@ Validate HeaderService Command headerService_command_enterControl Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate HeaderService Event headerService_logevent_Heartbeat Topic Byte Size
-	[Documentation]    Validate the headerService_logevent_Heartbeat topic is less than 65536 bytes in total.
+Validate HeaderService Event headerService_logevent_appliedSettingsMatchStart Topic Byte Size
+	[Documentation]    Validate the headerService_logevent_appliedSettingsMatchStart topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16304,8 +16268,8 @@ Validate HeaderService Event headerService_logevent_Heartbeat Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate HeaderService Event headerService_logevent_Heartbeat Topic Columns
-	[Documentation]    Validate the headerService_logevent_Heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate HeaderService Event headerService_logevent_appliedSettingsMatchStart Topic Columns
+	[Documentation]    Validate the headerService_logevent_appliedSettingsMatchStart topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16317,8 +16281,8 @@ Validate HeaderService Event headerService_logevent_Heartbeat Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate HeaderService Event headerService_logevent_AppliedSettingsMatchStart Topic Byte Size
-	[Documentation]    Validate the headerService_logevent_AppliedSettingsMatchStart topic is less than 65536 bytes in total.
+Validate HeaderService Event headerService_logevent_errorCode Topic Byte Size
+	[Documentation]    Validate the headerService_logevent_errorCode topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16340,8 +16304,8 @@ Validate HeaderService Event headerService_logevent_AppliedSettingsMatchStart To
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate HeaderService Event headerService_logevent_AppliedSettingsMatchStart Topic Columns
-	[Documentation]    Validate the headerService_logevent_AppliedSettingsMatchStart topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate HeaderService Event headerService_logevent_errorCode Topic Columns
+	[Documentation]    Validate the headerService_logevent_errorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16353,8 +16317,8 @@ Validate HeaderService Event headerService_logevent_AppliedSettingsMatchStart To
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate HeaderService Event headerService_logevent_LoopTimeOutOfRange Topic Byte Size
-	[Documentation]    Validate the headerService_logevent_LoopTimeOutOfRange topic is less than 65536 bytes in total.
+Validate HeaderService Event headerService_logevent_settingVersions Topic Byte Size
+	[Documentation]    Validate the headerService_logevent_settingVersions topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16376,8 +16340,8 @@ Validate HeaderService Event headerService_logevent_LoopTimeOutOfRange Topic Byt
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate HeaderService Event headerService_logevent_LoopTimeOutOfRange Topic Columns
-	[Documentation]    Validate the headerService_logevent_LoopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate HeaderService Event headerService_logevent_settingVersions Topic Columns
+	[Documentation]    Validate the headerService_logevent_settingVersions topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16389,8 +16353,8 @@ Validate HeaderService Event headerService_logevent_LoopTimeOutOfRange Topic Col
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate HeaderService Event headerService_logevent_RejectedCommand Topic Byte Size
-	[Documentation]    Validate the headerService_logevent_RejectedCommand topic is less than 65536 bytes in total.
+Validate HeaderService Event headerService_logevent_summaryState Topic Byte Size
+	[Documentation]    Validate the headerService_logevent_summaryState topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16412,8 +16376,8 @@ Validate HeaderService Event headerService_logevent_RejectedCommand Topic Byte S
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate HeaderService Event headerService_logevent_RejectedCommand Topic Columns
-	[Documentation]    Validate the headerService_logevent_RejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate HeaderService Event headerService_logevent_summaryState Topic Columns
+	[Documentation]    Validate the headerService_logevent_summaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16425,8 +16389,8 @@ Validate HeaderService Event headerService_logevent_RejectedCommand Topic Column
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate HeaderService Event headerService_logevent_SettingsApplied Topic Byte Size
-	[Documentation]    Validate the headerService_logevent_SettingsApplied topic is less than 65536 bytes in total.
+Validate HeaderService Event headerService_logevent_detailedState Topic Byte Size
+	[Documentation]    Validate the headerService_logevent_detailedState topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16448,8 +16412,8 @@ Validate HeaderService Event headerService_logevent_SettingsApplied Topic Byte S
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate HeaderService Event headerService_logevent_SettingsApplied Topic Columns
-	[Documentation]    Validate the headerService_logevent_SettingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate HeaderService Event headerService_logevent_detailedState Topic Columns
+	[Documentation]    Validate the headerService_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16461,8 +16425,8 @@ Validate HeaderService Event headerService_logevent_SettingsApplied Topic Column
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate HeaderService Event headerService_logevent_DetailedState Topic Byte Size
-	[Documentation]    Validate the headerService_logevent_DetailedState topic is less than 65536 bytes in total.
+Validate HeaderService Event headerService_logevent_heartbeat Topic Byte Size
+	[Documentation]    Validate the headerService_logevent_heartbeat topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16484,8 +16448,8 @@ Validate HeaderService Event headerService_logevent_DetailedState Topic Byte Siz
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate HeaderService Event headerService_logevent_DetailedState Topic Columns
-	[Documentation]    Validate the headerService_logevent_DetailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate HeaderService Event headerService_logevent_heartbeat Topic Columns
+	[Documentation]    Validate the headerService_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16497,8 +16461,8 @@ Validate HeaderService Event headerService_logevent_DetailedState Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate HeaderService Event headerService_logevent_LargeFileObjectAvailable Topic Byte Size
-	[Documentation]    Validate the headerService_logevent_LargeFileObjectAvailable topic is less than 65536 bytes in total.
+Validate HeaderService Event headerService_logevent_rejectedCommand Topic Byte Size
+	[Documentation]    Validate the headerService_logevent_rejectedCommand topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16520,8 +16484,8 @@ Validate HeaderService Event headerService_logevent_LargeFileObjectAvailable Top
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate HeaderService Event headerService_logevent_LargeFileObjectAvailable Topic Columns
-	[Documentation]    Validate the headerService_logevent_LargeFileObjectAvailable topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate HeaderService Event headerService_logevent_rejectedCommand Topic Columns
+	[Documentation]    Validate the headerService_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16533,8 +16497,8 @@ Validate HeaderService Event headerService_logevent_LargeFileObjectAvailable Top
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate HeaderService Event headerService_logevent_SummaryState Topic Byte Size
-	[Documentation]    Validate the headerService_logevent_SummaryState topic is less than 65536 bytes in total.
+Validate HeaderService Event headerService_logevent_largeFileObjectAvailable Topic Byte Size
+	[Documentation]    Validate the headerService_logevent_largeFileObjectAvailable topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16556,8 +16520,8 @@ Validate HeaderService Event headerService_logevent_SummaryState Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate HeaderService Event headerService_logevent_SummaryState Topic Columns
-	[Documentation]    Validate the headerService_logevent_SummaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate HeaderService Event headerService_logevent_largeFileObjectAvailable Topic Columns
+	[Documentation]    Validate the headerService_logevent_largeFileObjectAvailable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16569,8 +16533,8 @@ Validate HeaderService Event headerService_logevent_SummaryState Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate HeaderService Event headerService_logevent_ErrorCode Topic Byte Size
-	[Documentation]    Validate the headerService_logevent_ErrorCode topic is less than 65536 bytes in total.
+Validate HeaderService Event headerService_logevent_settingsApplied Topic Byte Size
+	[Documentation]    Validate the headerService_logevent_settingsApplied topic is less than 65536 bytes in total.
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16592,49 +16556,13 @@ Validate HeaderService Event headerService_logevent_ErrorCode Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate HeaderService Event headerService_logevent_ErrorCode Topic Columns
-	[Documentation]    Validate the headerService_logevent_ErrorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate HeaderService Event headerService_logevent_settingsApplied Topic Columns
+	[Documentation]    Validate the headerService_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/headerService/headerService_Events.xml
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/Count" -v . -n ${folder}/sal_interfaces/headerService/headerService_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate HeaderService Event headerService_logevent_SettingVersions Topic Byte Size
-	[Documentation]    Validate the headerService_logevent_SettingVersions topic is less than 65536 bytes in total.
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/headerService/headerService_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/Count" -v . -n ${folder}/sal_interfaces/headerService/headerService_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/headerService/headerService_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate HeaderService Event headerService_logevent_SettingVersions Topic Columns
-	[Documentation]    Validate the headerService_logevent_SettingVersions topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/headerService/headerService_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/Count" -v . -n ${folder}/sal_interfaces/headerService/headerService_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}

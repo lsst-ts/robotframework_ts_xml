@@ -59,6 +59,16 @@ for subsystem in xml_common.subsystems:
 		skipped="TSS-2618"
 	elif subsystem == "m1m3":
 		skipped="TSS-2617"
+	elif re.match("^dome\S+", subsystem):
+		skipped="skipped"
+	elif subsystem == "hexapod":
+		skipped="skipped"
+	elif subsystem == "m2ms":
+		skipped="skipped"
+	elif subsystem == "MTMount":
+		skipped="skipped"
+	elif subsystem == "rotator":
+		skipped="skipped"
 	else:
 		skipped=""
 

@@ -386,7 +386,7 @@ Validate Dome Event Enumeration
 
 Validate DomeADB Generic Commands
 	[Documentation]    Validate the DomeADB contains all the required generic, or State Machine, commands.
-	[Tags]    smoke    
+	[Tags]    smoke    skipped
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    domeADB
 	Comment    Get the Commands for the CSC.
@@ -398,7 +398,7 @@ Validate DomeADB Generic Commands
 
 Validate DomeADB Generic Events
 	[Documentation]    Validate the DomeADB contains all the required generic events.
-	[Tags]    smoke    
+	[Tags]    smoke    skipped
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    domeADB
 	Comment    Get the Events.
@@ -410,7 +410,7 @@ Validate DomeADB Generic Events
 
 Validate DomeADB Event Enumeration
 	[Documentation]    Validate the DomeADB defines the required enumeration.
-	[Tags]    smoke    
+	[Tags]    smoke    skipped
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    domeADB
 	Comment    Get the Event Enumerations.
@@ -420,7 +420,7 @@ Validate DomeADB Event Enumeration
 
 Validate DomeAPS Generic Commands
 	[Documentation]    Validate the DomeAPS contains all the required generic, or State Machine, commands.
-	[Tags]    smoke    
+	[Tags]    smoke    skipped
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    domeAPS
 	Comment    Get the Commands for the CSC.
@@ -432,7 +432,7 @@ Validate DomeAPS Generic Commands
 
 Validate DomeAPS Generic Events
 	[Documentation]    Validate the DomeAPS contains all the required generic events.
-	[Tags]    smoke    
+	[Tags]    smoke    skipped
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    domeAPS
 	Comment    Get the Events.
@@ -444,7 +444,7 @@ Validate DomeAPS Generic Events
 
 Validate DomeAPS Event Enumeration
 	[Documentation]    Validate the DomeAPS defines the required enumeration.
-	[Tags]    smoke    
+	[Tags]    smoke    skipped
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    domeAPS
 	Comment    Get the Event Enumerations.
@@ -454,7 +454,7 @@ Validate DomeAPS Event Enumeration
 
 Validate DomeLouvers Generic Commands
 	[Documentation]    Validate the DomeLouvers contains all the required generic, or State Machine, commands.
-	[Tags]    smoke    
+	[Tags]    smoke    skipped
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    domeLouvers
 	Comment    Get the Commands for the CSC.
@@ -466,7 +466,7 @@ Validate DomeLouvers Generic Commands
 
 Validate DomeLouvers Generic Events
 	[Documentation]    Validate the DomeLouvers contains all the required generic events.
-	[Tags]    smoke    
+	[Tags]    smoke    skipped
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    domeLouvers
 	Comment    Get the Events.
@@ -478,7 +478,7 @@ Validate DomeLouvers Generic Events
 
 Validate DomeLouvers Event Enumeration
 	[Documentation]    Validate the DomeLouvers defines the required enumeration.
-	[Tags]    smoke    
+	[Tags]    smoke    skipped
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    domeLouvers
 	Comment    Get the Event Enumerations.
@@ -488,7 +488,7 @@ Validate DomeLouvers Event Enumeration
 
 Validate DomeLWS Generic Commands
 	[Documentation]    Validate the DomeLWS contains all the required generic, or State Machine, commands.
-	[Tags]    smoke    
+	[Tags]    smoke    skipped
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    domeLWS
 	Comment    Get the Commands for the CSC.
@@ -500,7 +500,7 @@ Validate DomeLWS Generic Commands
 
 Validate DomeLWS Generic Events
 	[Documentation]    Validate the DomeLWS contains all the required generic events.
-	[Tags]    smoke    
+	[Tags]    smoke    skipped
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    domeLWS
 	Comment    Get the Events.
@@ -512,7 +512,7 @@ Validate DomeLWS Generic Events
 
 Validate DomeLWS Event Enumeration
 	[Documentation]    Validate the DomeLWS defines the required enumeration.
-	[Tags]    smoke    
+	[Tags]    smoke    skipped
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    domeLWS
 	Comment    Get the Event Enumerations.
@@ -522,7 +522,7 @@ Validate DomeLWS Event Enumeration
 
 Validate DomeMONCS Generic Commands
 	[Documentation]    Validate the DomeMONCS contains all the required generic, or State Machine, commands.
-	[Tags]    smoke    
+	[Tags]    smoke    skipped
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    domeMONCS
 	Comment    Get the Commands for the CSC.
@@ -534,7 +534,7 @@ Validate DomeMONCS Generic Commands
 
 Validate DomeMONCS Generic Events
 	[Documentation]    Validate the DomeMONCS contains all the required generic events.
-	[Tags]    smoke    
+	[Tags]    smoke    skipped
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    domeMONCS
 	Comment    Get the Events.
@@ -546,7 +546,7 @@ Validate DomeMONCS Generic Events
 
 Validate DomeMONCS Event Enumeration
 	[Documentation]    Validate the DomeMONCS defines the required enumeration.
-	[Tags]    smoke    
+	[Tags]    smoke    skipped
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    domeMONCS
 	Comment    Get the Event Enumerations.
@@ -556,7 +556,7 @@ Validate DomeMONCS Event Enumeration
 
 Validate DomeTHCS Generic Commands
 	[Documentation]    Validate the DomeTHCS contains all the required generic, or State Machine, commands.
-	[Tags]    smoke    
+	[Tags]    smoke    skipped
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    domeTHCS
 	Comment    Get the Commands for the CSC.
@@ -568,7 +568,7 @@ Validate DomeTHCS Generic Commands
 
 Validate DomeTHCS Generic Events
 	[Documentation]    Validate the DomeTHCS contains all the required generic events.
-	[Tags]    smoke    
+	[Tags]    smoke    skipped
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    domeTHCS
 	Comment    Get the Events.
@@ -580,7 +580,7 @@ Validate DomeTHCS Generic Events
 
 Validate DomeTHCS Event Enumeration
 	[Documentation]    Validate the DomeTHCS defines the required enumeration.
-	[Tags]    smoke    
+	[Tags]    smoke    skipped
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    domeTHCS
 	Comment    Get the Event Enumerations.
@@ -658,7 +658,7 @@ Validate HeaderService Event Enumeration
 
 Validate Hexapod Generic Commands
 	[Documentation]    Validate the Hexapod contains all the required generic, or State Machine, commands.
-	[Tags]    smoke    
+	[Tags]    smoke    skipped
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    hexapod
 	Comment    Get the Commands for the CSC.
@@ -670,7 +670,7 @@ Validate Hexapod Generic Commands
 
 Validate Hexapod Generic Events
 	[Documentation]    Validate the Hexapod contains all the required generic events.
-	[Tags]    smoke    
+	[Tags]    smoke    skipped
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    hexapod
 	Comment    Get the Events.
@@ -682,7 +682,7 @@ Validate Hexapod Generic Events
 
 Validate Hexapod Event Enumeration
 	[Documentation]    Validate the Hexapod defines the required enumeration.
-	[Tags]    smoke    
+	[Tags]    smoke    skipped
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    hexapod
 	Comment    Get the Event Enumerations.
@@ -726,7 +726,7 @@ Validate M1M3 Event Enumeration
 
 Validate M2MS Generic Commands
 	[Documentation]    Validate the M2MS contains all the required generic, or State Machine, commands.
-	[Tags]    smoke    
+	[Tags]    smoke    skipped
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    m2ms
 	Comment    Get the Commands for the CSC.
@@ -738,7 +738,7 @@ Validate M2MS Generic Commands
 
 Validate M2MS Generic Events
 	[Documentation]    Validate the M2MS contains all the required generic events.
-	[Tags]    smoke    
+	[Tags]    smoke    skipped
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    m2ms
 	Comment    Get the Events.
@@ -750,7 +750,7 @@ Validate M2MS Generic Events
 
 Validate M2MS Event Enumeration
 	[Documentation]    Validate the M2MS defines the required enumeration.
-	[Tags]    smoke    
+	[Tags]    smoke    skipped
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    m2ms
 	Comment    Get the Event Enumerations.
@@ -760,7 +760,7 @@ Validate M2MS Event Enumeration
 
 Validate MTMount Generic Commands
 	[Documentation]    Validate the MTMount contains all the required generic, or State Machine, commands.
-	[Tags]    smoke    
+	[Tags]    smoke    skipped
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    MTMount
 	Comment    Get the Commands for the CSC.
@@ -772,7 +772,7 @@ Validate MTMount Generic Commands
 
 Validate MTMount Generic Events
 	[Documentation]    Validate the MTMount contains all the required generic events.
-	[Tags]    smoke    
+	[Tags]    smoke    skipped
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    MTMount
 	Comment    Get the Events.
@@ -784,7 +784,7 @@ Validate MTMount Generic Events
 
 Validate MTMount Event Enumeration
 	[Documentation]    Validate the MTMount defines the required enumeration.
-	[Tags]    smoke    
+	[Tags]    smoke    skipped
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    MTMount
 	Comment    Get the Event Enumerations.
@@ -862,7 +862,7 @@ Validate PromptProcessing Event Enumeration
 
 Validate Rotator Generic Commands
 	[Documentation]    Validate the Rotator contains all the required generic, or State Machine, commands.
-	[Tags]    smoke    
+	[Tags]    smoke    skipped
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    rotator
 	Comment    Get the Commands for the CSC.
@@ -874,7 +874,7 @@ Validate Rotator Generic Commands
 
 Validate Rotator Generic Events
 	[Documentation]    Validate the Rotator contains all the required generic events.
-	[Tags]    smoke    
+	[Tags]    smoke    skipped
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    rotator
 	Comment    Get the Events.
@@ -886,7 +886,7 @@ Validate Rotator Generic Events
 
 Validate Rotator Event Enumeration
 	[Documentation]    Validate the Rotator defines the required enumeration.
-	[Tags]    smoke    
+	[Tags]    smoke    skipped
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    rotator
 	Comment    Get the Event Enumerations.
