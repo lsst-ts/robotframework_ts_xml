@@ -945,8 +945,8 @@ Validate AtArchiver Command atArchiver_command_setValue Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtArchiver Event atArchiver_logevent_DetailedState Topic Byte Size
-	[Documentation]    Validate the atArchiver_logevent_DetailedState topic is less than 65536 bytes in total.
+Validate AtArchiver Event atArchiver_logevent_detailedState Topic Byte Size
+	[Documentation]    Validate the atArchiver_logevent_detailedState topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtArchiver
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -968,8 +968,8 @@ Validate AtArchiver Event atArchiver_logevent_DetailedState Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtArchiver Event atArchiver_logevent_DetailedState Topic Columns
-	[Documentation]    Validate the atArchiver_logevent_DetailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtArchiver Event atArchiver_logevent_detailedState Topic Columns
+	[Documentation]    Validate the atArchiver_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1017,8 +1017,8 @@ Validate AtArchiver Event atArchiver_logevent_archiverEntityStartup Topic Column
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtArchiver Event atArchiver_logevent_SettingVersions Topic Byte Size
-	[Documentation]    Validate the atArchiver_logevent_SettingVersions topic is less than 65536 bytes in total.
+Validate AtArchiver Event atArchiver_logevent_settingVersions Topic Byte Size
+	[Documentation]    Validate the atArchiver_logevent_settingVersions topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtArchiver
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1040,8 +1040,8 @@ Validate AtArchiver Event atArchiver_logevent_SettingVersions Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtArchiver Event atArchiver_logevent_SettingVersions Topic Columns
-	[Documentation]    Validate the atArchiver_logevent_SettingVersions topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtArchiver Event atArchiver_logevent_settingVersions Topic Columns
+	[Documentation]    Validate the atArchiver_logevent_settingVersions topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1089,8 +1089,8 @@ Validate AtArchiver Event atArchiver_logevent_archiverEntitySummaryState Topic C
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtArchiver Event atArchiver_logevent_ErrorCode Topic Byte Size
-	[Documentation]    Validate the atArchiver_logevent_ErrorCode topic is less than 65536 bytes in total.
+Validate AtArchiver Event atArchiver_logevent_errorCode Topic Byte Size
+	[Documentation]    Validate the atArchiver_logevent_errorCode topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtArchiver
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1112,8 +1112,8 @@ Validate AtArchiver Event atArchiver_logevent_ErrorCode Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtArchiver Event atArchiver_logevent_ErrorCode Topic Columns
-	[Documentation]    Validate the atArchiver_logevent_ErrorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtArchiver Event atArchiver_logevent_errorCode Topic Columns
+	[Documentation]    Validate the atArchiver_logevent_errorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1161,8 +1161,8 @@ Validate AtArchiver Event atArchiver_logevent_archiverEntityShutdown Topic Colum
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtArchiver Event atArchiver_logevent_SummaryState Topic Byte Size
-	[Documentation]    Validate the atArchiver_logevent_SummaryState topic is less than 65536 bytes in total.
+Validate AtArchiver Event atArchiver_logevent_summaryState Topic Byte Size
+	[Documentation]    Validate the atArchiver_logevent_summaryState topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtArchiver
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1184,8 +1184,8 @@ Validate AtArchiver Event atArchiver_logevent_SummaryState Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtArchiver Event atArchiver_logevent_SummaryState Topic Columns
-	[Documentation]    Validate the atArchiver_logevent_SummaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtArchiver Event atArchiver_logevent_summaryState Topic Columns
+	[Documentation]    Validate the atArchiver_logevent_summaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1197,8 +1197,8 @@ Validate AtArchiver Event atArchiver_logevent_SummaryState Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtArchiver Event atArchiver_logevent_AppliedSettingsMatchStart Topic Byte Size
-	[Documentation]    Validate the atArchiver_logevent_AppliedSettingsMatchStart topic is less than 65536 bytes in total.
+Validate AtArchiver Event atArchiver_logevent_appliedSettingsMatchStart Topic Byte Size
+	[Documentation]    Validate the atArchiver_logevent_appliedSettingsMatchStart topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtArchiver
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1220,8 +1220,8 @@ Validate AtArchiver Event atArchiver_logevent_AppliedSettingsMatchStart Topic By
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtArchiver Event atArchiver_logevent_AppliedSettingsMatchStart Topic Columns
-	[Documentation]    Validate the atArchiver_logevent_AppliedSettingsMatchStart topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtArchiver Event atArchiver_logevent_appliedSettingsMatchStart Topic Columns
+	[Documentation]    Validate the atArchiver_logevent_appliedSettingsMatchStart topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1233,8 +1233,8 @@ Validate AtArchiver Event atArchiver_logevent_AppliedSettingsMatchStart Topic Co
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtArchiver Event atArchiver_logevent_SettingsApplied Topic Byte Size
-	[Documentation]    Validate the atArchiver_logevent_SettingsApplied topic is less than 65536 bytes in total.
+Validate AtArchiver Event atArchiver_logevent_settingsApplied Topic Byte Size
+	[Documentation]    Validate the atArchiver_logevent_settingsApplied topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtArchiver
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1256,8 +1256,8 @@ Validate AtArchiver Event atArchiver_logevent_SettingsApplied Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtArchiver Event atArchiver_logevent_SettingsApplied Topic Columns
-	[Documentation]    Validate the atArchiver_logevent_SettingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtArchiver Event atArchiver_logevent_settingsApplied Topic Columns
+	[Documentation]    Validate the atArchiver_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1269,8 +1269,8 @@ Validate AtArchiver Event atArchiver_logevent_SettingsApplied Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtArchiver Telemetry atArchiver_SequencerHeartbeat Topic Byte Size
-	[Documentation]    Validate the atArchiver_SequencerHeartbeat topic is less than 65536 bytes in total.
+Validate AtArchiver Telemetry atArchiver_sequencerHeartbeat Topic Byte Size
+	[Documentation]    Validate the atArchiver_sequencerHeartbeat topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtArchiver
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1292,8 +1292,8 @@ Validate AtArchiver Telemetry atArchiver_SequencerHeartbeat Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtArchiver Telemetry atArchiver_SequencerHeartbeat Topic Columns
-	[Documentation]    Validate the atArchiver_SequencerHeartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtArchiver Telemetry atArchiver_sequencerHeartbeat Topic Columns
+	[Documentation]    Validate the atArchiver_sequencerHeartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4689,8 +4689,8 @@ Validate AtCamera Event atcamera_logevent_imageReadinessDetailedState Topic Colu
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtCamera Event atcamera_logevent_SettingVersions Topic Byte Size
-	[Documentation]    Validate the atcamera_logevent_SettingVersions topic is less than 65536 bytes in total.
+Validate AtCamera Event atcamera_logevent_settingVersions Topic Byte Size
+	[Documentation]    Validate the atcamera_logevent_settingVersions topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4712,8 +4712,8 @@ Validate AtCamera Event atcamera_logevent_SettingVersions Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtCamera Event atcamera_logevent_SettingVersions Topic Columns
-	[Documentation]    Validate the atcamera_logevent_SettingVersions topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtCamera Event atcamera_logevent_settingVersions Topic Columns
+	[Documentation]    Validate the atcamera_logevent_settingVersions topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4797,8 +4797,8 @@ Validate AtCamera Event atcamera_logevent_startShutterClose Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtCamera Event atcamera_logevent_AppliedSettingsMatchStart Topic Byte Size
-	[Documentation]    Validate the atcamera_logevent_AppliedSettingsMatchStart topic is less than 65536 bytes in total.
+Validate AtCamera Event atcamera_logevent_appliedSettingsMatchStart Topic Byte Size
+	[Documentation]    Validate the atcamera_logevent_appliedSettingsMatchStart topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4820,8 +4820,8 @@ Validate AtCamera Event atcamera_logevent_AppliedSettingsMatchStart Topic Byte S
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtCamera Event atcamera_logevent_AppliedSettingsMatchStart Topic Columns
-	[Documentation]    Validate the atcamera_logevent_AppliedSettingsMatchStart topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtCamera Event atcamera_logevent_appliedSettingsMatchStart Topic Columns
+	[Documentation]    Validate the atcamera_logevent_appliedSettingsMatchStart topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4833,8 +4833,8 @@ Validate AtCamera Event atcamera_logevent_AppliedSettingsMatchStart Topic Column
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtCamera Event atcamera_logevent_ErrorCode Topic Byte Size
-	[Documentation]    Validate the atcamera_logevent_ErrorCode topic is less than 65536 bytes in total.
+Validate AtCamera Event atcamera_logevent_errorCode Topic Byte Size
+	[Documentation]    Validate the atcamera_logevent_errorCode topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4856,8 +4856,8 @@ Validate AtCamera Event atcamera_logevent_ErrorCode Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtCamera Event atcamera_logevent_ErrorCode Topic Columns
-	[Documentation]    Validate the atcamera_logevent_ErrorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtCamera Event atcamera_logevent_errorCode Topic Columns
+	[Documentation]    Validate the atcamera_logevent_errorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5193,8 +5193,8 @@ Validate AtCamera Event atcamera_logevent_startIntegration Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtCamera Event atcamera_logevent_SummaryState Topic Byte Size
-	[Documentation]    Validate the atcamera_logevent_SummaryState topic is less than 65536 bytes in total.
+Validate AtCamera Event atcamera_logevent_summaryState Topic Byte Size
+	[Documentation]    Validate the atcamera_logevent_summaryState topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5216,8 +5216,8 @@ Validate AtCamera Event atcamera_logevent_SummaryState Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtCamera Event atcamera_logevent_SummaryState Topic Columns
-	[Documentation]    Validate the atcamera_logevent_SummaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtCamera Event atcamera_logevent_summaryState Topic Columns
+	[Documentation]    Validate the atcamera_logevent_summaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5229,8 +5229,8 @@ Validate AtCamera Event atcamera_logevent_SummaryState Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtCamera Event atcamera_logevent_SettingsApplied Topic Byte Size
-	[Documentation]    Validate the atcamera_logevent_SettingsApplied topic is less than 65536 bytes in total.
+Validate AtCamera Event atcamera_logevent_settingsApplied Topic Byte Size
+	[Documentation]    Validate the atcamera_logevent_settingsApplied topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5252,8 +5252,8 @@ Validate AtCamera Event atcamera_logevent_SettingsApplied Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtCamera Event atcamera_logevent_SettingsApplied Topic Columns
-	[Documentation]    Validate the atcamera_logevent_SettingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtCamera Event atcamera_logevent_settingsApplied Topic Columns
+	[Documentation]    Validate the atcamera_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5445,8 +5445,8 @@ Validate AtCamera Event atcamera_logevent_imageReadoutParameters Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtCamera Event atcamera_logevent_BonnShutterSettingsApplied Topic Byte Size
-	[Documentation]    Validate the atcamera_logevent_BonnShutterSettingsApplied topic is less than 65536 bytes in total.
+Validate AtCamera Event atcamera_logevent_bonnShutterSettingsApplied Topic Byte Size
+	[Documentation]    Validate the atcamera_logevent_bonnShutterSettingsApplied topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5468,8 +5468,8 @@ Validate AtCamera Event atcamera_logevent_BonnShutterSettingsApplied Topic Byte 
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtCamera Event atcamera_logevent_BonnShutterSettingsApplied Topic Columns
-	[Documentation]    Validate the atcamera_logevent_BonnShutterSettingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtCamera Event atcamera_logevent_bonnShutterSettingsApplied Topic Columns
+	[Documentation]    Validate the atcamera_logevent_bonnShutterSettingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5481,8 +5481,8 @@ Validate AtCamera Event atcamera_logevent_BonnShutterSettingsApplied Topic Colum
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtCamera Event atcamera_logevent_WREBSettingsApplied Topic Byte Size
-	[Documentation]    Validate the atcamera_logevent_WREBSettingsApplied topic is less than 65536 bytes in total.
+Validate AtCamera Event atcamera_logevent_wrebSettingsApplied Topic Byte Size
+	[Documentation]    Validate the atcamera_logevent_wrebSettingsApplied topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5504,8 +5504,8 @@ Validate AtCamera Event atcamera_logevent_WREBSettingsApplied Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtCamera Event atcamera_logevent_WREBSettingsApplied Topic Columns
-	[Documentation]    Validate the atcamera_logevent_WREBSettingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtCamera Event atcamera_logevent_wrebSettingsApplied Topic Columns
+	[Documentation]    Validate the atcamera_logevent_wrebSettingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5517,8 +5517,8 @@ Validate AtCamera Event atcamera_logevent_WREBSettingsApplied Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtCamera Telemetry atcamera_Heartbeat Topic Byte Size
-	[Documentation]    Validate the atcamera_Heartbeat topic is less than 65536 bytes in total.
+Validate AtCamera Telemetry atcamera_heartbeat Topic Byte Size
+	[Documentation]    Validate the atcamera_heartbeat topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5540,8 +5540,8 @@ Validate AtCamera Telemetry atcamera_Heartbeat Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtCamera Telemetry atcamera_Heartbeat Topic Columns
-	[Documentation]    Validate the atcamera_Heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtCamera Telemetry atcamera_heartbeat Topic Columns
+	[Documentation]    Validate the atcamera_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5553,8 +5553,8 @@ Validate AtCamera Telemetry atcamera_Heartbeat Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtCamera Telemetry atcamera_WREB Topic Byte Size
-	[Documentation]    Validate the atcamera_WREB topic is less than 65536 bytes in total.
+Validate AtCamera Telemetry atcamera_wreb Topic Byte Size
+	[Documentation]    Validate the atcamera_wreb topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5576,8 +5576,8 @@ Validate AtCamera Telemetry atcamera_WREB Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtCamera Telemetry atcamera_WREB Topic Columns
-	[Documentation]    Validate the atcamera_WREB topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtCamera Telemetry atcamera_wreb Topic Columns
+	[Documentation]    Validate the atcamera_wreb topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5589,8 +5589,8 @@ Validate AtCamera Telemetry atcamera_WREB Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtCamera Telemetry atcamera_BonnShutter Topic Byte Size
-	[Documentation]    Validate the atcamera_BonnShutter topic is less than 65536 bytes in total.
+Validate AtCamera Telemetry atcamera_bonnShutter Topic Byte Size
+	[Documentation]    Validate the atcamera_bonnShutter topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5612,8 +5612,8 @@ Validate AtCamera Telemetry atcamera_BonnShutter Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtCamera Telemetry atcamera_BonnShutter Topic Columns
-	[Documentation]    Validate the atcamera_BonnShutter topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtCamera Telemetry atcamera_bonnShutter Topic Columns
+	[Documentation]    Validate the atcamera_bonnShutter topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5625,8 +5625,8 @@ Validate AtCamera Telemetry atcamera_BonnShutter Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtCamera Telemetry atcamera_WREBPower Topic Byte Size
-	[Documentation]    Validate the atcamera_WREBPower topic is less than 65536 bytes in total.
+Validate AtCamera Telemetry atcamera_wrebPower Topic Byte Size
+	[Documentation]    Validate the atcamera_wrebPower topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5648,8 +5648,8 @@ Validate AtCamera Telemetry atcamera_WREBPower Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtCamera Telemetry atcamera_WREBPower Topic Columns
-	[Documentation]    Validate the atcamera_WREBPower topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtCamera Telemetry atcamera_wrebPower Topic Columns
+	[Documentation]    Validate the atcamera_wrebPower topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
