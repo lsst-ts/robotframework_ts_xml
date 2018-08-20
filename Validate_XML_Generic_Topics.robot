@@ -316,40 +316,6 @@ Validate Camera Event Enumeration
 	:FOR    ${item}    IN    @{Enumerations}
 	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
 
-Validate CatchupArchiver Generic Commands
-	[Documentation]    Validate the CatchupArchiver contains all the required generic, or State Machine, commands.
-	[Tags]    smoke    CatchupArchiver    
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    catchuparchiver
-	Comment    Get the Commands for the CSC.
-	${topics}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
-	@{Commands}=    Split to Lines    ${topics}
-	:FOR    ${state}    IN    @{GenericCommands}
-	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _command_     ${state}
-	\    Run Keyword And Continue On Failure    Should Contain    ${Commands}    ${string}
-
-Validate CatchupArchiver Generic Events
-	[Documentation]    Validate the CatchupArchiver contains all the required generic events.
-	[Tags]    smoke    CatchupArchiver    
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    catchuparchiver
-	Comment    Get the Events.
-	${topics}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
-	@{Events}=    Split to Lines    ${topics}
-	:FOR    ${item}    IN    @{GenericEvents}
-	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _logevent_    ${item}
-	\    Run Keyword And Continue On Failure    Should Contain    ${Events}    ${string}
-
-Validate CatchupArchiver Event Enumeration
-	[Documentation]    Validate the CatchupArchiver defines the required enumeration.
-	[Tags]    smoke    CatchupArchiver    
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    catchuparchiver
-	Comment    Get the Event Enumerations.
-	${enums}=    Run    ${xml} sel -t -m "//SALEventSet/Enumeration" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
-	:FOR    ${item}    IN    @{Enumerations}
-	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
-
 Validate Dome Generic Commands
 	[Documentation]    Validate the Dome contains all the required generic, or State Machine, commands.
 	[Tags]    smoke    Dome    
@@ -823,40 +789,6 @@ Validate OCS Event Enumeration
 	Set Test Variable    ${csc}    ocs
 	Comment    Get the Event Enumerations.
 	${enums}=    Run    ${xml} sel -t -m "//SALEventSet/Enumeration" -v . -n ${folder}/sal_interfaces/ocs/ocs_Events.xml
-	:FOR    ${item}    IN    @{Enumerations}
-	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
-
-Validate PromptProcessing Generic Commands
-	[Documentation]    Validate the PromptProcessing contains all the required generic, or State Machine, commands.
-	[Tags]    smoke    PromptProcessing    
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    PromptProcessing
-	Comment    Get the Commands for the CSC.
-	${topics}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
-	@{Commands}=    Split to Lines    ${topics}
-	:FOR    ${state}    IN    @{GenericCommands}
-	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _command_     ${state}
-	\    Run Keyword And Continue On Failure    Should Contain    ${Commands}    ${string}
-
-Validate PromptProcessing Generic Events
-	[Documentation]    Validate the PromptProcessing contains all the required generic events.
-	[Tags]    smoke    PromptProcessing    
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    PromptProcessing
-	Comment    Get the Events.
-	${topics}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
-	@{Events}=    Split to Lines    ${topics}
-	:FOR    ${item}    IN    @{GenericEvents}
-	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _logevent_    ${item}
-	\    Run Keyword And Continue On Failure    Should Contain    ${Events}    ${string}
-
-Validate PromptProcessing Event Enumeration
-	[Documentation]    Validate the PromptProcessing defines the required enumeration.
-	[Tags]    smoke    PromptProcessing    
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    PromptProcessing
-	Comment    Get the Event Enumerations.
-	${enums}=    Run    ${xml} sel -t -m "//SALEventSet/Enumeration" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
 	:FOR    ${item}    IN    @{Enumerations}
 	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
 

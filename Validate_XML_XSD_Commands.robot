@@ -62,12 +62,6 @@ Validate Camera Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   camera_Commands.xml - valid
 
-Validate CatchupArchiver Commands XML file
-	[Tags]    smoke    CatchupArchiver
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   catchuparchiver_Commands.xml - valid
-
 Validate Dome Commands XML file
 	[Tags]    smoke    Dome
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/dome/dome_Commands.xml
@@ -151,12 +145,6 @@ Validate OCS Commands XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/ocs/ocs_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   ocs_Commands.xml - valid
-
-Validate PromptProcessing Commands XML file
-	[Tags]    smoke    PromptProcessing
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   PromptProcessing_Commands.xml - valid
 
 Validate Rotator Commands XML file
 	[Tags]    smoke    Rotator

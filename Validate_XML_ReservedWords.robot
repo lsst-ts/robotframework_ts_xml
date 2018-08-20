@@ -457,54 +457,6 @@ Validate Camera Telemetry EFDB_Name Values Do Not Use MySQL Reserved Words
 	Log    ${output}
 	Should Not Contain MySQL Reserved Word    ${output}
 
-Validate CatchupArchiver Commands EFDB_Name Values Do Not Use IDL Reserved words
-	[Documentation]    Validate the CatchupArchiver Commands <EFDB_Name> tags do not contain IDL Reserved Words.
-	[Tags]    smoke    CatchupArchiver
-	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain IDL Reserved Word    ${output}
-
-Validate CatchupArchiver Commands EFDB_Name Values Do Not Use MySQL Reserved Words
-	[Documentation]    Validate the CatchupArchiver Commands <EFDB_Name> tags do not contain MySQL Reserved Words.
-	[Tags]    smoke    CatchupArchiver
-	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain MySQL Reserved Word    ${output}
-
-Validate CatchupArchiver Events EFDB_Name Values Do Not Use IDL Reserved words
-	[Documentation]    Validate the CatchupArchiver Events <EFDB_Name> tags do not contain IDL Reserved Words.
-	[Tags]    smoke    CatchupArchiver
-	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain IDL Reserved Word    ${output}
-
-Validate CatchupArchiver Events EFDB_Name Values Do Not Use MySQL Reserved Words
-	[Documentation]    Validate the CatchupArchiver Events <EFDB_Name> tags do not contain MySQL Reserved Words.
-	[Tags]    smoke    CatchupArchiver
-	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain MySQL Reserved Word    ${output}
-
-Validate CatchupArchiver Telemetry EFDB_Name Values Do Not Use IDL Reserved words
-	[Documentation]    Validate the CatchupArchiver Telemetry <EFDB_Name> tags do not contain IDL Reserved Words.
-	[Tags]    smoke    CatchupArchiver
-	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Telemetry.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain IDL Reserved Word    ${output}
-
-Validate CatchupArchiver Telemetry EFDB_Name Values Do Not Use MySQL Reserved Words
-	[Documentation]    Validate the CatchupArchiver Telemetry <EFDB_Name> tags do not contain MySQL Reserved Words.
-	[Tags]    smoke    CatchupArchiver
-	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Telemetry.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain MySQL Reserved Word    ${output}
-
 Validate Dome Commands EFDB_Name Values Do Not Use IDL Reserved words
 	[Documentation]    Validate the Dome Commands <EFDB_Name> tags do not contain IDL Reserved Words.
 	[Tags]    smoke    Dome
@@ -1190,54 +1142,6 @@ Validate OCS Telemetry EFDB_Name Values Do Not Use MySQL Reserved Words
 	[Tags]    smoke    OCS
 	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/ocs/ocs_Telemetry.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain MySQL Reserved Word    ${output}
-
-Validate PromptProcessing Commands EFDB_Name Values Do Not Use IDL Reserved words
-	[Documentation]    Validate the PromptProcessing Commands <EFDB_Name> tags do not contain IDL Reserved Words.
-	[Tags]    smoke    PromptProcessing
-	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain IDL Reserved Word    ${output}
-
-Validate PromptProcessing Commands EFDB_Name Values Do Not Use MySQL Reserved Words
-	[Documentation]    Validate the PromptProcessing Commands <EFDB_Name> tags do not contain MySQL Reserved Words.
-	[Tags]    smoke    PromptProcessing
-	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain MySQL Reserved Word    ${output}
-
-Validate PromptProcessing Events EFDB_Name Values Do Not Use IDL Reserved words
-	[Documentation]    Validate the PromptProcessing Events <EFDB_Name> tags do not contain IDL Reserved Words.
-	[Tags]    smoke    PromptProcessing
-	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain IDL Reserved Word    ${output}
-
-Validate PromptProcessing Events EFDB_Name Values Do Not Use MySQL Reserved Words
-	[Documentation]    Validate the PromptProcessing Events <EFDB_Name> tags do not contain MySQL Reserved Words.
-	[Tags]    smoke    PromptProcessing
-	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain MySQL Reserved Word    ${output}
-
-Validate PromptProcessing Telemetry EFDB_Name Values Do Not Use IDL Reserved words
-	[Documentation]    Validate the PromptProcessing Telemetry <EFDB_Name> tags do not contain IDL Reserved Words.
-	[Tags]    smoke    PromptProcessing
-	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Telemetry.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain IDL Reserved Word    ${output}
-
-Validate PromptProcessing Telemetry EFDB_Name Values Do Not Use MySQL Reserved Words
-	[Documentation]    Validate the PromptProcessing Telemetry <EFDB_Name> tags do not contain MySQL Reserved Words.
-	[Tags]    smoke    PromptProcessing
-	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Telemetry.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain MySQL Reserved Word    ${output}
 

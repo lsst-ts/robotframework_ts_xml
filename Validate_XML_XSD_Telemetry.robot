@@ -62,12 +62,6 @@ Validate Camera Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   camera_Telemetry.xml - valid
 
-Validate CatchupArchiver Telemetry XML file
-	[Tags]    smoke    CatchupArchiver
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   catchuparchiver_Telemetry.xml - valid
-
 Validate Dome Telemetry XML file
 	[Tags]    smoke    Dome
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/dome/dome_Telemetry.xml
@@ -151,12 +145,6 @@ Validate OCS Telemetry XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/ocs/ocs_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   ocs_Telemetry.xml - valid
-
-Validate PromptProcessing Telemetry XML file
-	[Tags]    smoke    PromptProcessing
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   PromptProcessing_Telemetry.xml - valid
 
 Validate Rotator Telemetry XML file
 	[Tags]    smoke    Rotator

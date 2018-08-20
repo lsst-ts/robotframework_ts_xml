@@ -68,12 +68,6 @@ Validate Camera Events XML file
 	Log    ${output}
 	Should Contain    ${output}   camera_Events.xml - valid
 
-Validate CatchupArchiver Events XML file
-	[Tags]    smoke    CatchupArchiver
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   catchuparchiver_Events.xml - valid
-
 Validate Dome Events XML file
 	[Tags]    smoke    Dome
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/dome/dome_Events.xml
@@ -163,12 +157,6 @@ Validate OCS Events XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/ocs/ocs_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   ocs_Events.xml - valid
-
-Validate PromptProcessing Events XML file
-	[Tags]    smoke    PromptProcessing
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   PromptProcessing_Events.xml - valid
 
 Validate Rotator Events XML file
 	[Tags]    smoke    Rotator

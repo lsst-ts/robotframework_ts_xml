@@ -204,27 +204,6 @@ Validate Camera Telemetry
 	Log    ${output}
 	Should Contain    ${output}   camera_Telemetry.xml - valid
 
-Validate CatchupArchiver Commands
-	[Documentation]    Validate the CatchupArchiver Commands XML file.
-	[Tags]    smoke    CatchupArchiver
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   catchuparchiver_Commands.xml - valid
-
-Validate CatchupArchiver Events
-	[Documentation]    Validate the CatchupArchiver Events XML file.
-	[Tags]    smoke    CatchupArchiver
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   catchuparchiver_Events.xml - valid
-
-Validate CatchupArchiver Telemetry
-	[Documentation]    Validate the CatchupArchiver Telemetry XML file.
-	[Tags]    smoke    CatchupArchiver
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   catchuparchiver_Telemetry.xml - valid
-
 Validate Dome Commands
 	[Documentation]    Validate the Dome Commands XML file.
 	[Tags]    smoke    Dome
@@ -525,27 +504,6 @@ Validate OCS Telemetry
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ocs/ocs_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   ocs_Telemetry.xml - valid
-
-Validate PromptProcessing Commands
-	[Documentation]    Validate the PromptProcessing Commands XML file.
-	[Tags]    smoke    PromptProcessing
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   PromptProcessing_Commands.xml - valid
-
-Validate PromptProcessing Events
-	[Documentation]    Validate the PromptProcessing Events XML file.
-	[Tags]    smoke    PromptProcessing
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   PromptProcessing_Events.xml - valid
-
-Validate PromptProcessing Telemetry
-	[Documentation]    Validate the PromptProcessing Telemetry XML file.
-	[Tags]    smoke    PromptProcessing
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   PromptProcessing_Telemetry.xml - valid
 
 Validate Rotator Commands
 	[Documentation]    Validate the Rotator Commands XML file.
