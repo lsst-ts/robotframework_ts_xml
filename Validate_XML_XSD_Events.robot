@@ -134,8 +134,8 @@ Validate Hexapod Events XML file
 	Log    ${output}
 	Should Contain    ${output}   hexapod_Events.xml - valid
 
-Validate Linearstage Events XML file
-	[Tags]    smoke    Linearstage
+Validate LinearStage Events XML file
+	[Tags]    smoke    LinearStage
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   LinearStage_Events.xml - valid

@@ -480,25 +480,25 @@ Validate Hexapod Telemetry XML Counts
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate Linearstage Commands XML Counts
-	[Documentation]    Validate the Linearstage Commands XML count.
-	[Tags]    smoke    Linearstage
+Validate LinearStage Commands XML Counts
+	[Documentation]    Validate the LinearStage Commands XML count.
+	[Tags]    smoke    LinearStage
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate Linearstage Events XML Counts
-	[Documentation]    Validate the Linearstage Events XML count.
-	[Tags]    smoke    Linearstage
+Validate LinearStage Events XML Counts
+	[Documentation]    Validate the LinearStage Events XML count.
+	[Tags]    smoke    LinearStage
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate Linearstage Telemetry XML Counts
-	[Documentation]    Validate the Linearstage Telemetry XML count.
-	[Tags]    smoke    Linearstage
+Validate LinearStage Telemetry XML Counts
+	[Documentation]    Validate the LinearStage Telemetry XML count.
+	[Tags]    smoke    LinearStage
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,

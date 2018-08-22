@@ -16389,9 +16389,9 @@ Validate Hexapod Telemetry hexapod_Electrical Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Linearstage Command LinearStage_command_start Topic Byte Size
+Validate LinearStage Command LinearStage_command_start Topic Byte Size
 	[Documentation]    Validate the LinearStage_command_start topic is less than 65536 bytes in total.
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml
@@ -16412,9 +16412,9 @@ Validate Linearstage Command LinearStage_command_start Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Linearstage Command LinearStage_command_start Topic Columns
+Validate LinearStage Command LinearStage_command_start Topic Columns
 	[Documentation]    Validate the LinearStage_command_start topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml
@@ -16425,9 +16425,9 @@ Validate Linearstage Command LinearStage_command_start Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Linearstage Command LinearStage_command_disable Topic Byte Size
+Validate LinearStage Command LinearStage_command_disable Topic Byte Size
 	[Documentation]    Validate the LinearStage_command_disable topic is less than 65536 bytes in total.
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml
@@ -16448,9 +16448,9 @@ Validate Linearstage Command LinearStage_command_disable Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Linearstage Command LinearStage_command_disable Topic Columns
+Validate LinearStage Command LinearStage_command_disable Topic Columns
 	[Documentation]    Validate the LinearStage_command_disable topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml
@@ -16461,9 +16461,9 @@ Validate Linearstage Command LinearStage_command_disable Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Linearstage Command LinearStage_command_enable Topic Byte Size
+Validate LinearStage Command LinearStage_command_enable Topic Byte Size
 	[Documentation]    Validate the LinearStage_command_enable topic is less than 65536 bytes in total.
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml
@@ -16484,9 +16484,9 @@ Validate Linearstage Command LinearStage_command_enable Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Linearstage Command LinearStage_command_enable Topic Columns
+Validate LinearStage Command LinearStage_command_enable Topic Columns
 	[Documentation]    Validate the LinearStage_command_enable topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml
@@ -16497,9 +16497,9 @@ Validate Linearstage Command LinearStage_command_enable Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Linearstage Command LinearStage_command_standby Topic Byte Size
+Validate LinearStage Command LinearStage_command_standby Topic Byte Size
 	[Documentation]    Validate the LinearStage_command_standby topic is less than 65536 bytes in total.
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml
@@ -16520,9 +16520,9 @@ Validate Linearstage Command LinearStage_command_standby Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Linearstage Command LinearStage_command_standby Topic Columns
+Validate LinearStage Command LinearStage_command_standby Topic Columns
 	[Documentation]    Validate the LinearStage_command_standby topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml
@@ -16533,9 +16533,9 @@ Validate Linearstage Command LinearStage_command_standby Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Linearstage Command LinearStage_command_exitControl Topic Byte Size
+Validate LinearStage Command LinearStage_command_exitControl Topic Byte Size
 	[Documentation]    Validate the LinearStage_command_exitControl topic is less than 65536 bytes in total.
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml
@@ -16556,9 +16556,9 @@ Validate Linearstage Command LinearStage_command_exitControl Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Linearstage Command LinearStage_command_exitControl Topic Columns
+Validate LinearStage Command LinearStage_command_exitControl Topic Columns
 	[Documentation]    Validate the LinearStage_command_exitControl topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml
@@ -16569,9 +16569,9 @@ Validate Linearstage Command LinearStage_command_exitControl Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Linearstage Command LinearStage_command_enterControl Topic Byte Size
+Validate LinearStage Command LinearStage_command_enterControl Topic Byte Size
 	[Documentation]    Validate the LinearStage_command_enterControl topic is less than 65536 bytes in total.
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml
@@ -16592,9 +16592,9 @@ Validate Linearstage Command LinearStage_command_enterControl Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Linearstage Command LinearStage_command_enterControl Topic Columns
+Validate LinearStage Command LinearStage_command_enterControl Topic Columns
 	[Documentation]    Validate the LinearStage_command_enterControl topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml
@@ -16605,9 +16605,9 @@ Validate Linearstage Command LinearStage_command_enterControl Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Linearstage Command LinearStage_command_getPosition Topic Byte Size
+Validate LinearStage Command LinearStage_command_getPosition Topic Byte Size
 	[Documentation]    Validate the LinearStage_command_getPosition topic is less than 65536 bytes in total.
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[7]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml
@@ -16628,9 +16628,9 @@ Validate Linearstage Command LinearStage_command_getPosition Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Linearstage Command LinearStage_command_getPosition Topic Columns
+Validate LinearStage Command LinearStage_command_getPosition Topic Columns
 	[Documentation]    Validate the LinearStage_command_getPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[7]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml
@@ -16641,9 +16641,9 @@ Validate Linearstage Command LinearStage_command_getPosition Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Linearstage Command LinearStage_command_moveRelative Topic Byte Size
+Validate LinearStage Command LinearStage_command_moveRelative Topic Byte Size
 	[Documentation]    Validate the LinearStage_command_moveRelative topic is less than 65536 bytes in total.
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[8]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml
@@ -16664,9 +16664,9 @@ Validate Linearstage Command LinearStage_command_moveRelative Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Linearstage Command LinearStage_command_moveRelative Topic Columns
+Validate LinearStage Command LinearStage_command_moveRelative Topic Columns
 	[Documentation]    Validate the LinearStage_command_moveRelative topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[8]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml
@@ -16677,9 +16677,9 @@ Validate Linearstage Command LinearStage_command_moveRelative Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Linearstage Command LinearStage_command_moveAbsolute Topic Byte Size
+Validate LinearStage Command LinearStage_command_moveAbsolute Topic Byte Size
 	[Documentation]    Validate the LinearStage_command_moveAbsolute topic is less than 65536 bytes in total.
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[9]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml
@@ -16700,9 +16700,9 @@ Validate Linearstage Command LinearStage_command_moveAbsolute Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Linearstage Command LinearStage_command_moveAbsolute Topic Columns
+Validate LinearStage Command LinearStage_command_moveAbsolute Topic Columns
 	[Documentation]    Validate the LinearStage_command_moveAbsolute topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[9]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml
@@ -16713,9 +16713,9 @@ Validate Linearstage Command LinearStage_command_moveAbsolute Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Linearstage Command LinearStage_command_getHome Topic Byte Size
+Validate LinearStage Command LinearStage_command_getHome Topic Byte Size
 	[Documentation]    Validate the LinearStage_command_getHome topic is less than 65536 bytes in total.
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[10]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml
@@ -16736,9 +16736,9 @@ Validate Linearstage Command LinearStage_command_getHome Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Linearstage Command LinearStage_command_getHome Topic Columns
+Validate LinearStage Command LinearStage_command_getHome Topic Columns
 	[Documentation]    Validate the LinearStage_command_getHome topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[10]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml
@@ -16749,9 +16749,9 @@ Validate Linearstage Command LinearStage_command_getHome Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Linearstage Command LinearStage_command_stop Topic Byte Size
+Validate LinearStage Command LinearStage_command_stop Topic Byte Size
 	[Documentation]    Validate the LinearStage_command_stop topic is less than 65536 bytes in total.
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[11]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml
@@ -16772,9 +16772,9 @@ Validate Linearstage Command LinearStage_command_stop Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Linearstage Command LinearStage_command_stop Topic Columns
+Validate LinearStage Command LinearStage_command_stop Topic Columns
 	[Documentation]    Validate the LinearStage_command_stop topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[11]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml
@@ -16785,9 +16785,9 @@ Validate Linearstage Command LinearStage_command_stop Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Linearstage Event LinearStage_logevent_settingVersions Topic Byte Size
+Validate LinearStage Event LinearStage_logevent_settingVersions Topic Byte Size
 	[Documentation]    Validate the LinearStage_logevent_settingVersions topic is less than 65536 bytes in total.
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
@@ -16808,9 +16808,9 @@ Validate Linearstage Event LinearStage_logevent_settingVersions Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Linearstage Event LinearStage_logevent_settingVersions Topic Columns
+Validate LinearStage Event LinearStage_logevent_settingVersions Topic Columns
 	[Documentation]    Validate the LinearStage_logevent_settingVersions topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
@@ -16821,9 +16821,9 @@ Validate Linearstage Event LinearStage_logevent_settingVersions Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Linearstage Event LinearStage_logevent_appliedSettingsMatchStart Topic Byte Size
+Validate LinearStage Event LinearStage_logevent_appliedSettingsMatchStart Topic Byte Size
 	[Documentation]    Validate the LinearStage_logevent_appliedSettingsMatchStart topic is less than 65536 bytes in total.
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
@@ -16844,9 +16844,9 @@ Validate Linearstage Event LinearStage_logevent_appliedSettingsMatchStart Topic 
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Linearstage Event LinearStage_logevent_appliedSettingsMatchStart Topic Columns
+Validate LinearStage Event LinearStage_logevent_appliedSettingsMatchStart Topic Columns
 	[Documentation]    Validate the LinearStage_logevent_appliedSettingsMatchStart topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
@@ -16857,9 +16857,9 @@ Validate Linearstage Event LinearStage_logevent_appliedSettingsMatchStart Topic 
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Linearstage Event LinearStage_logevent_errorCode Topic Byte Size
+Validate LinearStage Event LinearStage_logevent_errorCode Topic Byte Size
 	[Documentation]    Validate the LinearStage_logevent_errorCode topic is less than 65536 bytes in total.
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
@@ -16880,9 +16880,9 @@ Validate Linearstage Event LinearStage_logevent_errorCode Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Linearstage Event LinearStage_logevent_errorCode Topic Columns
+Validate LinearStage Event LinearStage_logevent_errorCode Topic Columns
 	[Documentation]    Validate the LinearStage_logevent_errorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
@@ -16893,9 +16893,9 @@ Validate Linearstage Event LinearStage_logevent_errorCode Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Linearstage Event LinearStage_logevent_detailedState Topic Byte Size
+Validate LinearStage Event LinearStage_logevent_detailedState Topic Byte Size
 	[Documentation]    Validate the LinearStage_logevent_detailedState topic is less than 65536 bytes in total.
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
@@ -16916,9 +16916,9 @@ Validate Linearstage Event LinearStage_logevent_detailedState Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Linearstage Event LinearStage_logevent_detailedState Topic Columns
+Validate LinearStage Event LinearStage_logevent_detailedState Topic Columns
 	[Documentation]    Validate the LinearStage_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
@@ -16929,9 +16929,9 @@ Validate Linearstage Event LinearStage_logevent_detailedState Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Linearstage Event LinearStage_logevent_getHome Topic Byte Size
+Validate LinearStage Event LinearStage_logevent_getHome Topic Byte Size
 	[Documentation]    Validate the LinearStage_logevent_getHome topic is less than 65536 bytes in total.
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
@@ -16952,9 +16952,9 @@ Validate Linearstage Event LinearStage_logevent_getHome Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Linearstage Event LinearStage_logevent_getHome Topic Columns
+Validate LinearStage Event LinearStage_logevent_getHome Topic Columns
 	[Documentation]    Validate the LinearStage_logevent_getHome topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
@@ -16965,9 +16965,9 @@ Validate Linearstage Event LinearStage_logevent_getHome Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Linearstage Event LinearStage_logevent_moveAbsolute Topic Byte Size
+Validate LinearStage Event LinearStage_logevent_moveAbsolute Topic Byte Size
 	[Documentation]    Validate the LinearStage_logevent_moveAbsolute topic is less than 65536 bytes in total.
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
@@ -16988,9 +16988,9 @@ Validate Linearstage Event LinearStage_logevent_moveAbsolute Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Linearstage Event LinearStage_logevent_moveAbsolute Topic Columns
+Validate LinearStage Event LinearStage_logevent_moveAbsolute Topic Columns
 	[Documentation]    Validate the LinearStage_logevent_moveAbsolute topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
@@ -17001,9 +17001,9 @@ Validate Linearstage Event LinearStage_logevent_moveAbsolute Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Linearstage Event LinearStage_logevent_moveRelative Topic Byte Size
+Validate LinearStage Event LinearStage_logevent_moveRelative Topic Byte Size
 	[Documentation]    Validate the LinearStage_logevent_moveRelative topic is less than 65536 bytes in total.
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
@@ -17024,9 +17024,9 @@ Validate Linearstage Event LinearStage_logevent_moveRelative Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Linearstage Event LinearStage_logevent_moveRelative Topic Columns
+Validate LinearStage Event LinearStage_logevent_moveRelative Topic Columns
 	[Documentation]    Validate the LinearStage_logevent_moveRelative topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
@@ -17037,9 +17037,9 @@ Validate Linearstage Event LinearStage_logevent_moveRelative Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Linearstage Event LinearStage_logevent_getPosition Topic Byte Size
+Validate LinearStage Event LinearStage_logevent_getPosition Topic Byte Size
 	[Documentation]    Validate the LinearStage_logevent_getPosition topic is less than 65536 bytes in total.
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
@@ -17060,9 +17060,9 @@ Validate Linearstage Event LinearStage_logevent_getPosition Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Linearstage Event LinearStage_logevent_getPosition Topic Columns
+Validate LinearStage Event LinearStage_logevent_getPosition Topic Columns
 	[Documentation]    Validate the LinearStage_logevent_getPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
@@ -17073,9 +17073,9 @@ Validate Linearstage Event LinearStage_logevent_getPosition Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Linearstage Event LinearStage_logevent_stop Topic Byte Size
+Validate LinearStage Event LinearStage_logevent_stop Topic Byte Size
 	[Documentation]    Validate the LinearStage_logevent_stop topic is less than 65536 bytes in total.
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
@@ -17096,9 +17096,9 @@ Validate Linearstage Event LinearStage_logevent_stop Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Linearstage Event LinearStage_logevent_stop Topic Columns
+Validate LinearStage Event LinearStage_logevent_stop Topic Columns
 	[Documentation]    Validate the LinearStage_logevent_stop topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
@@ -17109,9 +17109,9 @@ Validate Linearstage Event LinearStage_logevent_stop Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Linearstage Event LinearStage_logevent_summaryState Topic Byte Size
+Validate LinearStage Event LinearStage_logevent_summaryState Topic Byte Size
 	[Documentation]    Validate the LinearStage_logevent_summaryState topic is less than 65536 bytes in total.
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
@@ -17132,9 +17132,9 @@ Validate Linearstage Event LinearStage_logevent_summaryState Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Linearstage Event LinearStage_logevent_summaryState Topic Columns
+Validate LinearStage Event LinearStage_logevent_summaryState Topic Columns
 	[Documentation]    Validate the LinearStage_logevent_summaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
@@ -17145,9 +17145,9 @@ Validate Linearstage Event LinearStage_logevent_summaryState Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Linearstage Telemetry LinearStage_position Topic Byte Size
+Validate LinearStage Telemetry LinearStage_position Topic Byte Size
 	[Documentation]    Validate the LinearStage_position topic is less than 65536 bytes in total.
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Telemetry.xml
@@ -17168,9 +17168,9 @@ Validate Linearstage Telemetry LinearStage_position Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Linearstage Telemetry LinearStage_position Topic Columns
+Validate LinearStage Telemetry LinearStage_position Topic Columns
 	[Documentation]    Validate the LinearStage_position topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Linearstage
+	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Telemetry.xml

@@ -1660,86 +1660,86 @@ Validate Hexapod Telemetry <EFDB_Name> element
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate Linearstage Commands <Subsystem> element
-	[Documentation]    Validate the Linearstage Commands <Subsystem> elements do not contain embedded spaces.
-	[Tags]    smoke    Linearstage
+Validate LinearStage Commands <Subsystem> element
+	[Documentation]    Validate the LinearStage Commands <Subsystem> elements do not contain embedded spaces.
+	[Tags]    smoke    LinearStage
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Subsystem" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate Linearstage Commands <EFDB_Topic> element
-	[Documentation]    Validate the Linearstage Commands <EFDB_Topic> elements do not contain embedded spaces.
-	[Tags]    smoke    Linearstage
+Validate LinearStage Commands <EFDB_Topic> element
+	[Documentation]    Validate the LinearStage Commands <EFDB_Topic> elements do not contain embedded spaces.
+	[Tags]    smoke    LinearStage
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate Linearstage Commands <Alias> element
-	[Documentation]    Validate the Linearstage Commands <Alias> elements do not contain embedded spaces.
-	[Tags]    smoke    Linearstage
+Validate LinearStage Commands <Alias> element
+	[Documentation]    Validate the LinearStage Commands <Alias> elements do not contain embedded spaces.
+	[Tags]    smoke    LinearStage
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate Linearstage Commands <EFDB_Name> element
-	[Documentation]    Validate the Linearstage Commands <EFDB_Name> elements do not contain embedded spaces.
-	[Tags]    smoke    Linearstage
+Validate LinearStage Commands <EFDB_Name> element
+	[Documentation]    Validate the LinearStage Commands <EFDB_Name> elements do not contain embedded spaces.
+	[Tags]    smoke    LinearStage
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate Linearstage Events <Subsystem> element
-	[Documentation]    Validate the Linearstage Events <Subsystem> elements do not contain embedded spaces.
-	[Tags]    smoke    Linearstage
+Validate LinearStage Events <Subsystem> element
+	[Documentation]    Validate the LinearStage Events <Subsystem> elements do not contain embedded spaces.
+	[Tags]    smoke    LinearStage
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Subsystem" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate Linearstage Events <EFDB_Topic> element
-	[Documentation]    Validate the Linearstage Events <EFDB_Topic> elements do not contain embedded spaces.
-	[Tags]    smoke    Linearstage
+Validate LinearStage Events <EFDB_Topic> element
+	[Documentation]    Validate the LinearStage Events <EFDB_Topic> elements do not contain embedded spaces.
+	[Tags]    smoke    LinearStage
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate Linearstage Events <Alias> element
-	[Documentation]    Validate the Linearstage Events <Alias> elements do not contain embedded spaces.
-	[Tags]    smoke    Linearstage
+Validate LinearStage Events <Alias> element
+	[Documentation]    Validate the LinearStage Events <Alias> elements do not contain embedded spaces.
+	[Tags]    smoke    LinearStage
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate Linearstage Events <EFDB_Name> element
-	[Documentation]    Validate the Linearstage Events <EFDB_Name> elements do not contain embedded spaces.
-	[Tags]    smoke    Linearstage
+Validate LinearStage Events <EFDB_Name> element
+	[Documentation]    Validate the LinearStage Events <EFDB_Name> elements do not contain embedded spaces.
+	[Tags]    smoke    LinearStage
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate Linearstage Telemetry <Subsystem> element
-	[Documentation]    Validate the Linearstage Telemetry <Subsystem> elements do not contain embedded spaces.
-	[Tags]    smoke    Linearstage
+Validate LinearStage Telemetry <Subsystem> element
+	[Documentation]    Validate the LinearStage Telemetry <Subsystem> elements do not contain embedded spaces.
+	[Tags]    smoke    LinearStage
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Subsystem" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate Linearstage Telemetry <EFDB_Topic> element
-	[Documentation]    Validate the Linearstage Telemetry <EFDB_Topic> elements do not contain embedded spaces.
-	[Tags]    smoke    Linearstage
+Validate LinearStage Telemetry <EFDB_Topic> element
+	[Documentation]    Validate the LinearStage Telemetry <EFDB_Topic> elements do not contain embedded spaces.
+	[Tags]    smoke    LinearStage
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/EFDB_Topic" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate Linearstage Telemetry <Alias> element
-	[Documentation]    Validate the Linearstage Telemetry <Alias> elements do not contain embedded spaces.
-	[Tags]    smoke    Linearstage
+Validate LinearStage Telemetry <Alias> element
+	[Documentation]    Validate the LinearStage Telemetry <Alias> elements do not contain embedded spaces.
+	[Tags]    smoke    LinearStage
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate Linearstage Telemetry <EFDB_Name> element
-	[Documentation]    Validate the Linearstage Telemetry <EFDB_Name> elements do not contain embedded spaces.
-	[Tags]    smoke    Linearstage
+Validate LinearStage Telemetry <EFDB_Name> element
+	[Documentation]    Validate the LinearStage Telemetry <EFDB_Name> elements do not contain embedded spaces.
+	[Tags]    smoke    LinearStage
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}

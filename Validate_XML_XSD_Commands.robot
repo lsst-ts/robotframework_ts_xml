@@ -122,8 +122,8 @@ Validate Hexapod Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   hexapod_Commands.xml - valid
 
-Validate Linearstage Commands XML file
-	[Tags]    smoke    Linearstage
+Validate LinearStage Commands XML file
+	[Tags]    smoke    LinearStage
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   LinearStage_Commands.xml - valid

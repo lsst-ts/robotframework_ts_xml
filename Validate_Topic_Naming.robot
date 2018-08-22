@@ -540,27 +540,27 @@ Validate Hexapod Telemetry Topic Names
 	: FOR    ${item}    IN    @{topics}
 	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
 
-Validate Linearstage Commands Topic Names
-	[Documentation]    Validate the Linearstage Commands topic names conform to naming convention.
-	[Tags]    smoke    Linearstage    
+Validate LinearStage Commands Topic Names
+	[Documentation]    Validate the LinearStage Commands topic names conform to naming convention.
+	[Tags]    smoke    LinearStage    
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
 	: FOR    ${item}    IN    @{topics}
 	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
 
-Validate Linearstage Events Topic Names
-	[Documentation]    Validate the Linearstage Events topic names conform to naming convention.
-	[Tags]    smoke    Linearstage    
+Validate LinearStage Events Topic Names
+	[Documentation]    Validate the LinearStage Events topic names conform to naming convention.
+	[Tags]    smoke    LinearStage    
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
 	: FOR    ${item}    IN    @{topics}
 	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
 
-Validate Linearstage Telemetry Topic Names
-	[Documentation]    Validate the Linearstage Telemetry topic names conform to naming convention.
-	[Tags]    smoke    Linearstage    
+Validate LinearStage Telemetry Topic Names
+	[Documentation]    Validate the LinearStage Telemetry topic names conform to naming convention.
+	[Tags]    smoke    LinearStage    
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}

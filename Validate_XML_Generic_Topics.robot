@@ -656,9 +656,9 @@ Validate Hexapod Event Enumeration
 	:FOR    ${item}    IN    @{Enumerations}
 	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
 
-Validate Linearstage Generic Commands
-	[Documentation]    Validate the Linearstage contains all the required generic, or State Machine, commands.
-	[Tags]    smoke    Linearstage    
+Validate LinearStage Generic Commands
+	[Documentation]    Validate the LinearStage contains all the required generic, or State Machine, commands.
+	[Tags]    smoke    LinearStage    
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    LinearStage
 	Comment    Get the Commands for the CSC.
@@ -668,9 +668,9 @@ Validate Linearstage Generic Commands
 	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _command_     ${state}
 	\    Run Keyword And Continue On Failure    Should Contain    ${Commands}    ${string}
 
-Validate Linearstage Generic Events
-	[Documentation]    Validate the Linearstage contains all the required generic events.
-	[Tags]    smoke    Linearstage    
+Validate LinearStage Generic Events
+	[Documentation]    Validate the LinearStage contains all the required generic events.
+	[Tags]    smoke    LinearStage    
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    LinearStage
 	Comment    Get the Events.
@@ -680,9 +680,9 @@ Validate Linearstage Generic Events
 	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _logevent_    ${item}
 	\    Run Keyword And Continue On Failure    Should Contain    ${Events}    ${string}
 
-Validate Linearstage Event Enumeration
-	[Documentation]    Validate the Linearstage defines the required enumeration.
-	[Tags]    smoke    Linearstage    
+Validate LinearStage Event Enumeration
+	[Documentation]    Validate the LinearStage defines the required enumeration.
+	[Tags]    smoke    LinearStage    
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    LinearStage
 	Comment    Get the Event Enumerations.

@@ -421,23 +421,23 @@ Validate Hexapod Telemetry
 	Log    ${output}
 	Should Contain    ${output}   hexapod_Telemetry.xml - valid
 
-Validate Linearstage Commands
-	[Documentation]    Validate the Linearstage Commands XML file.
-	[Tags]    smoke    Linearstage
+Validate LinearStage Commands
+	[Documentation]    Validate the LinearStage Commands XML file.
+	[Tags]    smoke    LinearStage
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   LinearStage_Commands.xml - valid
 
-Validate Linearstage Events
-	[Documentation]    Validate the Linearstage Events XML file.
-	[Tags]    smoke    Linearstage
+Validate LinearStage Events
+	[Documentation]    Validate the LinearStage Events XML file.
+	[Tags]    smoke    LinearStage
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   LinearStage_Events.xml - valid
 
-Validate Linearstage Telemetry
-	[Documentation]    Validate the Linearstage Telemetry XML file.
-	[Tags]    smoke    Linearstage
+Validate LinearStage Telemetry
+	[Documentation]    Validate the LinearStage Telemetry XML file.
+	[Tags]    smoke    LinearStage
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/LinearStage/LinearStage_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   LinearStage_Telemetry.xml - valid
