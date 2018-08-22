@@ -50,6 +50,8 @@ def CapitalizeSubsystem( subsystem ):
 		return "EFD"
 	elif subsystem == "headerService":
 		return "HeaderService"
+	elif subsystem == "LinearStage":
+		return "LinearStage"
 	elif subsystem == "m1m3":
 		return "M1M3"
 	elif subsystem == "m2ms":
