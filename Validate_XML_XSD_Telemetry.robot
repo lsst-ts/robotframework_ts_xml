@@ -122,6 +122,12 @@ Validate Hexapod Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   hexapod_Telemetry.xml - valid
 
+Validate Linearstage Telemetry XML file
+	[Tags]    smoke    Linearstage
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/LinearStage/LinearStage_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   LinearStage_Telemetry.xml - valid
+
 Validate M1M3 Telemetry XML file
 	[Tags]    smoke    M1M3
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/m1m3/m1m3_Telemetry.xml
