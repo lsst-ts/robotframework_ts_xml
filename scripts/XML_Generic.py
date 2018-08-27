@@ -56,9 +56,9 @@ for subsystem in xml_common.subsystems:
 	
 	# Mark test cases with Jira tickets
 	if subsystem == "vms":
-		skipped="TSS-2618"
+		com_skipped="TSS-2618"
 	elif subsystem == "m1m3":
-		skipped="TSS-2617"
+		com_skipped="TSS-2617"
 	elif re.match("^dome\S+", subsystem):
 		skipped="skipped"
 	elif subsystem == "hexapod":
@@ -70,22 +70,34 @@ for subsystem in xml_common.subsystems:
 	elif subsystem == "rotator":
 		skipped="skipped"
 	elif subsystem == "ocs":
-		skipped="TSS-1792"
+		com_skipped="TSS-1792"
 	elif subsystem == "sequencer":
-		skipped="TSS-1793"
+		com_skipped="TSS-1793"
 	elif subsystem == "atcs":
-		skipped="TSS-2978"
+		com_skipped="TSS-2978"
 	elif subsystem == "tcs":
-		skipped="TSS-1795"
+		com_skipped="TSS-1795"
 	elif subsystem == "dome":
-		skipped="TSS-1778"
+		com_skipped="TSS-1778"
+	elif subsystem == "archiver":
+		enum_skipped == "TSS-2979"
+	elif subsystem == "atarchiver":
+		enum_skipped == "TSS-2980"
+	elif subsystem == "atcamera":
+		enum_skipped == "TSS-2981"
+	elif subsystem == "camera":
+		enum_skipped == "TSS-2982"
+	elif subsystem == "eec":
+		enum_skipped == "TSS-2983"
+	elif subsystem == "summitfacility":
+		enum_skipped == "TSS-2984"
 	else:
 		skipped=""
 
 	# Create the Test Cases.
 	file.write("Validate " + xml_common.CapitalizeSubsystem(subsystem) + " Generic Commands\n")
 	file.write("\t[Documentation]    Validate the " + xml_common.CapitalizeSubsystem(subsystem) + " contains all the required generic, or State Machine, commands.\n")
-	file.write("\t[Tags]    smoke    " + xml_common.CapitalizeSubsystem(subsystem) + "    " + skipped + "\n")
+	file.write("\t[Tags]    smoke    " + xml_common.CapitalizeSubsystem(subsystem) + "    " + com_skipped + "    " + skipped + "\n")
 	file.write("\tComment    Define CSC.\n")
 	file.write("\tSet Test Variable    ${csc}    "+ subsystem + "\n")
 	file.write("\tComment    Get the Commands for the CSC.\n")
@@ -98,7 +110,7 @@ for subsystem in xml_common.subsystems:
 
 	file.write("Validate " + xml_common.CapitalizeSubsystem(subsystem) + " Generic Events\n")
 	file.write("\t[Documentation]    Validate the " + xml_common.CapitalizeSubsystem(subsystem) + " contains all the required generic events.\n")
-	file.write("\t[Tags]    smoke    " + xml_common.CapitalizeSubsystem(subsystem) + "    " + skipped + "\n")
+	file.write("\t[Tags]    smoke    " + xml_common.CapitalizeSubsystem(subsystem) + "    " + event_skipped + "    " + skipped + "\n")
 	file.write("\tComment    Define CSC.\n")
 	file.write("\tSet Test Variable    ${csc}    "+ subsystem + "\n")
 	file.write("\tComment    Get the Events.\n")
@@ -111,7 +123,7 @@ for subsystem in xml_common.subsystems:
 
 	file.write("Validate " + xml_common.CapitalizeSubsystem(subsystem) + " Event Enumeration\n")
 	file.write("\t[Documentation]    Validate the " + xml_common.CapitalizeSubsystem(subsystem) + " defines the required enumeration.\n")
-	file.write("\t[Tags]    smoke    " + xml_common.CapitalizeSubsystem(subsystem) + "    " + skipped + "\n")
+	file.write("\t[Tags]    smoke    " + xml_common.CapitalizeSubsystem(subsystem) + "    " + enum_skipped + "    " + skipped + "\n")
 	file.write("\tComment    Define CSC.\n")
 	file.write("\tSet Test Variable    ${csc}    "+ subsystem + "\n")
 	file.write("\tComment    Get the Event Enumerations.\n")
