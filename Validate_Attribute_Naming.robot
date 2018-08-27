@@ -182,7 +182,7 @@ Validate AtCamera Telemetry Attribute Names
 
 Validate ATCS Commands Attribute Names
 	[Documentation]    Validate the ATCS Commands attribute names conform to naming convention.
-	[Tags]    smoke    ATCS    
+	[Tags]    smoke    ATCS    TSS-2978
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/atcs/atcs_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -191,7 +191,7 @@ Validate ATCS Commands Attribute Names
 
 Validate ATCS Events Attribute Names
 	[Documentation]    Validate the ATCS Events attribute names conform to naming convention.
-	[Tags]    smoke    ATCS    
+	[Tags]    smoke    ATCS    TSS-2978
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/atcs/atcs_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -200,7 +200,7 @@ Validate ATCS Events Attribute Names
 
 Validate ATCS Telemetry Attribute Names
 	[Documentation]    Validate the ATCS Telemetry attribute names conform to naming convention.
-	[Tags]    smoke    ATCS    
+	[Tags]    smoke    ATCS    TSS-2978
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/atcs/atcs_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -263,7 +263,7 @@ Validate Camera Telemetry Attribute Names
 
 Validate Dome Commands Attribute Names
 	[Documentation]    Validate the Dome Commands attribute names conform to naming convention.
-	[Tags]    smoke    Dome    
+	[Tags]    smoke    Dome    TSS-1778
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/dome/dome_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -272,7 +272,7 @@ Validate Dome Commands Attribute Names
 
 Validate Dome Events Attribute Names
 	[Documentation]    Validate the Dome Events attribute names conform to naming convention.
-	[Tags]    smoke    Dome    
+	[Tags]    smoke    Dome    TSS-1778
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/dome/dome_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -281,7 +281,7 @@ Validate Dome Events Attribute Names
 
 Validate Dome Telemetry Attribute Names
 	[Documentation]    Validate the Dome Telemetry attribute names conform to naming convention.
-	[Tags]    smoke    Dome    
+	[Tags]    smoke    Dome    TSS-1778
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/dome/dome_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
