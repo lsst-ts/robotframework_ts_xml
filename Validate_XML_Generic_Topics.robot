@@ -998,7 +998,7 @@ Validate SummitFacility Event Enumeration
 
 Validate TCS Generic Commands
 	[Documentation]    Validate the TCS contains all the required generic, or State Machine, commands.
-	[Tags]    smoke    TCS    
+	[Tags]    smoke    TCS    TSS-1795
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    tcs
 	Comment    Get the Commands for the CSC.
@@ -1010,7 +1010,7 @@ Validate TCS Generic Commands
 
 Validate TCS Generic Events
 	[Documentation]    Validate the TCS contains all the required generic events.
-	[Tags]    smoke    TCS    
+	[Tags]    smoke    TCS    TSS-1795
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    tcs
 	Comment    Get the Events.
@@ -1022,7 +1022,7 @@ Validate TCS Generic Events
 
 Validate TCS Event Enumeration
 	[Documentation]    Validate the TCS defines the required enumeration.
-	[Tags]    smoke    TCS    
+	[Tags]    smoke    TCS    TSS-1795
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    tcs
 	Comment    Get the Event Enumerations.

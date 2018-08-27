@@ -812,7 +812,7 @@ Validate SummitFacility Telemetry Attribute Names
 
 Validate TCS Commands Attribute Names
 	[Documentation]    Validate the TCS Commands attribute names conform to naming convention.
-	[Tags]    smoke    TCS    
+	[Tags]    smoke    TCS    TSS-1795
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/tcs/tcs_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -821,7 +821,7 @@ Validate TCS Commands Attribute Names
 
 Validate TCS Events Attribute Names
 	[Documentation]    Validate the TCS Events attribute names conform to naming convention.
-	[Tags]    smoke    TCS    
+	[Tags]    smoke    TCS    TSS-1795
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/tcs/tcs_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -830,7 +830,7 @@ Validate TCS Events Attribute Names
 
 Validate TCS Telemetry Attribute Names
 	[Documentation]    Validate the TCS Telemetry attribute names conform to naming convention.
-	[Tags]    smoke    TCS    
+	[Tags]    smoke    TCS    TSS-1795
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/tcs/tcs_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}

@@ -812,7 +812,7 @@ Validate SummitFacility Telemetry Topic Names
 
 Validate TCS Commands Topic Names
 	[Documentation]    Validate the TCS Commands topic names conform to naming convention.
-	[Tags]    smoke    TCS    
+	[Tags]    smoke    TCS    TSS-1795
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/tcs/tcs_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -821,7 +821,7 @@ Validate TCS Commands Topic Names
 
 Validate TCS Events Topic Names
 	[Documentation]    Validate the TCS Events topic names conform to naming convention.
-	[Tags]    smoke    TCS    
+	[Tags]    smoke    TCS    TSS-1795
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/tcs/tcs_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -830,7 +830,7 @@ Validate TCS Events Topic Names
 
 Validate TCS Telemetry Topic Names
 	[Documentation]    Validate the TCS Telemetry topic names conform to naming convention.
-	[Tags]    smoke    TCS    
+	[Tags]    smoke    TCS    TSS-1795
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/tcs/tcs_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
