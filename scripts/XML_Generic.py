@@ -73,6 +73,8 @@ for subsystem in xml_common.subsystems:
 		skipped="TSS-2978"
 	elif subsystem == "tcs":
 		skipped="TSS-1795"
+	elif subsystem == "dome":
+		skipped="TSS-1778"
 	else:
 		skipped=""
 
