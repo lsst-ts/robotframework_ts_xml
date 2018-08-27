@@ -650,7 +650,7 @@ Validate MTMount Telemetry Topic Names
 
 Validate OCS Commands Topic Names
 	[Documentation]    Validate the OCS Commands topic names conform to naming convention.
-	[Tags]    smoke    OCS    
+	[Tags]    smoke    OCS    TSS-1792
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/ocs/ocs_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -659,7 +659,7 @@ Validate OCS Commands Topic Names
 
 Validate OCS Events Topic Names
 	[Documentation]    Validate the OCS Events topic names conform to naming convention.
-	[Tags]    smoke    OCS    
+	[Tags]    smoke    OCS    TSS-1792
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/ocs/ocs_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -668,7 +668,7 @@ Validate OCS Events Topic Names
 
 Validate OCS Telemetry Topic Names
 	[Documentation]    Validate the OCS Telemetry topic names conform to naming convention.
-	[Tags]    smoke    OCS    
+	[Tags]    smoke    OCS    TSS-1792
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/ocs/ocs_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -731,7 +731,7 @@ Validate Scheduler Telemetry Topic Names
 
 Validate Sequencer Commands Topic Names
 	[Documentation]    Validate the Sequencer Commands topic names conform to naming convention.
-	[Tags]    smoke    Sequencer    
+	[Tags]    smoke    Sequencer    TSS-1793
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/sequencer/sequencer_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -740,7 +740,7 @@ Validate Sequencer Commands Topic Names
 
 Validate Sequencer Events Topic Names
 	[Documentation]    Validate the Sequencer Events topic names conform to naming convention.
-	[Tags]    smoke    Sequencer    
+	[Tags]    smoke    Sequencer    TSS-1793
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/sequencer/sequencer_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -749,7 +749,7 @@ Validate Sequencer Events Topic Names
 
 Validate Sequencer Telemetry Topic Names
 	[Documentation]    Validate the Sequencer Telemetry topic names conform to naming convention.
-	[Tags]    smoke    Sequencer    
+	[Tags]    smoke    Sequencer    TSS-1793
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/sequencer/sequencer_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}

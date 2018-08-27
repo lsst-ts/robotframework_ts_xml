@@ -650,7 +650,7 @@ Validate MTMount Telemetry Attribute Names
 
 Validate OCS Commands Attribute Names
 	[Documentation]    Validate the OCS Commands attribute names conform to naming convention.
-	[Tags]    smoke    OCS    
+	[Tags]    smoke    OCS    TSS-1792
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/ocs/ocs_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -659,7 +659,7 @@ Validate OCS Commands Attribute Names
 
 Validate OCS Events Attribute Names
 	[Documentation]    Validate the OCS Events attribute names conform to naming convention.
-	[Tags]    smoke    OCS    
+	[Tags]    smoke    OCS    TSS-1792
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/ocs/ocs_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -668,7 +668,7 @@ Validate OCS Events Attribute Names
 
 Validate OCS Telemetry Attribute Names
 	[Documentation]    Validate the OCS Telemetry attribute names conform to naming convention.
-	[Tags]    smoke    OCS    
+	[Tags]    smoke    OCS    TSS-1792
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/ocs/ocs_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -731,7 +731,7 @@ Validate Scheduler Telemetry Attribute Names
 
 Validate Sequencer Commands Attribute Names
 	[Documentation]    Validate the Sequencer Commands attribute names conform to naming convention.
-	[Tags]    smoke    Sequencer    
+	[Tags]    smoke    Sequencer    TSS-1793
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/sequencer/sequencer_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -740,7 +740,7 @@ Validate Sequencer Commands Attribute Names
 
 Validate Sequencer Events Attribute Names
 	[Documentation]    Validate the Sequencer Events attribute names conform to naming convention.
-	[Tags]    smoke    Sequencer    
+	[Tags]    smoke    Sequencer    TSS-1793
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/sequencer/sequencer_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -749,7 +749,7 @@ Validate Sequencer Events Attribute Names
 
 Validate Sequencer Telemetry Attribute Names
 	[Documentation]    Validate the Sequencer Telemetry attribute names conform to naming convention.
-	[Tags]    smoke    Sequencer    
+	[Tags]    smoke    Sequencer    TSS-1793
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/sequencer/sequencer_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
