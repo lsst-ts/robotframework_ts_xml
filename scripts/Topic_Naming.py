@@ -41,6 +41,8 @@ for subsystem in xml_common.subsystems:
 		skipped="skipped"
 	elif subsystem == "rotator":
 		skipped="skipped"
+	elif subsystem == "tcs":
+		skipped="TSS-1795"
 	else:
 		skipped=""
 
