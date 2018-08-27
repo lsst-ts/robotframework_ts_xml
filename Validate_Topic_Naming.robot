@@ -182,7 +182,7 @@ Validate AtCamera Telemetry Topic Names
 
 Validate ATCS Commands Topic Names
 	[Documentation]    Validate the ATCS Commands topic names conform to naming convention.
-	[Tags]    smoke    ATCS    
+	[Tags]    smoke    ATCS    TSS-2978
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/atcs/atcs_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -191,7 +191,7 @@ Validate ATCS Commands Topic Names
 
 Validate ATCS Events Topic Names
 	[Documentation]    Validate the ATCS Events topic names conform to naming convention.
-	[Tags]    smoke    ATCS    
+	[Tags]    smoke    ATCS    TSS-2978
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/atcs/atcs_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -200,7 +200,7 @@ Validate ATCS Events Topic Names
 
 Validate ATCS Telemetry Topic Names
 	[Documentation]    Validate the ATCS Telemetry topic names conform to naming convention.
-	[Tags]    smoke    ATCS    
+	[Tags]    smoke    ATCS    TSS-2978
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/atcs/atcs_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -263,7 +263,7 @@ Validate Camera Telemetry Topic Names
 
 Validate Dome Commands Topic Names
 	[Documentation]    Validate the Dome Commands topic names conform to naming convention.
-	[Tags]    smoke    Dome    
+	[Tags]    smoke    Dome    TSS-1778
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/dome/dome_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -272,7 +272,7 @@ Validate Dome Commands Topic Names
 
 Validate Dome Events Topic Names
 	[Documentation]    Validate the Dome Events topic names conform to naming convention.
-	[Tags]    smoke    Dome    
+	[Tags]    smoke    Dome    TSS-1778
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/dome/dome_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -281,7 +281,7 @@ Validate Dome Events Topic Names
 
 Validate Dome Telemetry Topic Names
 	[Documentation]    Validate the Dome Telemetry topic names conform to naming convention.
-	[Tags]    smoke    Dome    
+	[Tags]    smoke    Dome    TSS-1778
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/dome/dome_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}

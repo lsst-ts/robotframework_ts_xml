@@ -216,7 +216,7 @@ Validate AtCamera Event Enumeration
 
 Validate ATCS Generic Commands
 	[Documentation]    Validate the ATCS contains all the required generic, or State Machine, commands.
-	[Tags]    smoke    ATCS    
+	[Tags]    smoke    ATCS    TSS-2978
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    atcs
 	Comment    Get the Commands for the CSC.
@@ -228,7 +228,7 @@ Validate ATCS Generic Commands
 
 Validate ATCS Generic Events
 	[Documentation]    Validate the ATCS contains all the required generic events.
-	[Tags]    smoke    ATCS    
+	[Tags]    smoke    ATCS    TSS-2978
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    atcs
 	Comment    Get the Events.
@@ -240,7 +240,7 @@ Validate ATCS Generic Events
 
 Validate ATCS Event Enumeration
 	[Documentation]    Validate the ATCS defines the required enumeration.
-	[Tags]    smoke    ATCS    
+	[Tags]    smoke    ATCS    TSS-2978
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    atcs
 	Comment    Get the Event Enumerations.
@@ -318,7 +318,7 @@ Validate Camera Event Enumeration
 
 Validate Dome Generic Commands
 	[Documentation]    Validate the Dome contains all the required generic, or State Machine, commands.
-	[Tags]    smoke    Dome    
+	[Tags]    smoke    Dome    TSS-1778
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    dome
 	Comment    Get the Commands for the CSC.
@@ -330,7 +330,7 @@ Validate Dome Generic Commands
 
 Validate Dome Generic Events
 	[Documentation]    Validate the Dome contains all the required generic events.
-	[Tags]    smoke    Dome    
+	[Tags]    smoke    Dome    TSS-1778
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    dome
 	Comment    Get the Events.
@@ -342,7 +342,7 @@ Validate Dome Generic Events
 
 Validate Dome Event Enumeration
 	[Documentation]    Validate the Dome defines the required enumeration.
-	[Tags]    smoke    Dome    
+	[Tags]    smoke    Dome    TSS-1778
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    dome
 	Comment    Get the Event Enumerations.
