@@ -794,7 +794,7 @@ Validate MTMount Event Enumeration
 
 Validate OCS Generic Commands
 	[Documentation]    Validate the OCS contains all the required generic, or State Machine, commands.
-	[Tags]    smoke    OCS    
+	[Tags]    smoke    OCS    TSS-1792
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    ocs
 	Comment    Get the Commands for the CSC.
@@ -806,7 +806,7 @@ Validate OCS Generic Commands
 
 Validate OCS Generic Events
 	[Documentation]    Validate the OCS contains all the required generic events.
-	[Tags]    smoke    OCS    
+	[Tags]    smoke    OCS    TSS-1792
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    ocs
 	Comment    Get the Events.
@@ -818,7 +818,7 @@ Validate OCS Generic Events
 
 Validate OCS Event Enumeration
 	[Documentation]    Validate the OCS defines the required enumeration.
-	[Tags]    smoke    OCS    
+	[Tags]    smoke    OCS    TSS-1792
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    ocs
 	Comment    Get the Event Enumerations.
@@ -896,7 +896,7 @@ Validate Scheduler Event Enumeration
 
 Validate Sequencer Generic Commands
 	[Documentation]    Validate the Sequencer contains all the required generic, or State Machine, commands.
-	[Tags]    smoke    Sequencer    
+	[Tags]    smoke    Sequencer    TSS-1793
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    sequencer
 	Comment    Get the Commands for the CSC.
@@ -908,7 +908,7 @@ Validate Sequencer Generic Commands
 
 Validate Sequencer Generic Events
 	[Documentation]    Validate the Sequencer contains all the required generic events.
-	[Tags]    smoke    Sequencer    
+	[Tags]    smoke    Sequencer    TSS-1793
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    sequencer
 	Comment    Get the Events.
@@ -920,7 +920,7 @@ Validate Sequencer Generic Events
 
 Validate Sequencer Event Enumeration
 	[Documentation]    Validate the Sequencer defines the required enumeration.
-	[Tags]    smoke    Sequencer    
+	[Tags]    smoke    Sequencer    TSS-1793
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    sequencer
 	Comment    Get the Event Enumerations.
