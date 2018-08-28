@@ -57,9 +57,9 @@ for subsystem in xml_common.subsystems:
 	# Mark test cases with Jira tickets
 	skipped=com_skipped=event_skipped=enum_skipped=""
 	if subsystem == "vms":
-		com_skipped="    TSS-2618"
+		com_skipped=event_skipped=enum_skipped="    TSS-2618"
 	elif subsystem == "m1m3":
-		com_skipped="    TSS-2617"
+		com_skipped=event_skipped=enum_skipped="    TSS-2617"
 	elif re.match("^dome\S+", subsystem):
 		skipped="    skipped"
 	elif subsystem == "hexapod":
@@ -70,16 +70,18 @@ for subsystem in xml_common.subsystems:
 		skipped="    skipped"
 	elif subsystem == "rotator":
 		skipped="    skipped"
+	elif subsystem == "tcs":
+		com_skipped=event_skipped=enum_skipped="    TSS-1795"
 	elif subsystem == "ocs":
-		com_skipped="    TSS-1792"
+		com_skipped=event_skipped=enum_skipped="    TSS-1792"
 	elif subsystem == "sequencer":
-		com_skipped="    TSS-1793"
+		com_skipped=event_skipped=enum_skipped="    TSS-1793"
 	elif subsystem == "atcs":
-		com_skipped="    TSS-2978"
+		com_skipped=event_skipped="    TSS-2978"
 	elif subsystem == "tcs":
 		com_skipped="    TSS-1795"
 	elif subsystem == "dome":
-		com_skipped="    TSS-1778"
+		com_skipped=event_skipped=enum_skipped="    TSS-1778"
 	elif subsystem == "archiver":
 		enum_skipped="    TSS-2979"
 	elif subsystem == "atArchiver":
@@ -92,9 +94,12 @@ for subsystem in xml_common.subsystems:
 		enum_skipped="    TSS-2983"
 	elif subsystem == "summitFacility":
 		enum_skipped="    TSS-2984"
+	elif subsystem == "calibrationElectrometer":
+		event_skipped="    TSS-2997"
 	else:
 		skipped=""
 		com_skipped=""
+		event_skipped=""
 		enum_skipped=""
 
 	# Create the Test Cases.
