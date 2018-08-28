@@ -93,6 +93,8 @@ for subsystem in xml_common.subsystems:
 		enum_skipped="TSS-2984"
 	else:
 		skipped=""
+		com_skipped=""
+		enum_skipped=""
 
 	# Create the Test Cases.
 	file.write("Validate " + xml_common.CapitalizeSubsystem(subsystem) + " Generic Commands\n")
