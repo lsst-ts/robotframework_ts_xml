@@ -80,17 +80,17 @@ for subsystem in xml_common.subsystems:
 	elif subsystem == "dome":
 		com_skipped="TSS-1778"
 	elif subsystem == "archiver":
-		enum_skipped == "TSS-2979"
+		enum_skipped="TSS-2979"
 	elif subsystem == "atarchiver":
-		enum_skipped == "TSS-2980"
+		enum_skipped="TSS-2980"
 	elif subsystem == "atcamera":
-		enum_skipped == "TSS-2981"
+		enum_skipped="TSS-2981"
 	elif subsystem == "camera":
-		enum_skipped == "TSS-2982"
+		enum_skipped="TSS-2982"
 	elif subsystem == "eec":
-		enum_skipped == "TSS-2983"
+		enum_skipped="TSS-2983"
 	elif subsystem == "summitfacility":
-		enum_skipped == "TSS-2984"
+		enum_skipped="TSS-2984"
 	else:
 		skipped=""
 
