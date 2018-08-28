@@ -758,7 +758,7 @@ Validate Sequencer Telemetry Topic Names
 
 Validate SEDSpectrometer Commands Topic Names
 	[Documentation]    Validate the SEDSpectrometer Commands topic names conform to naming convention.
-	[Tags]    smoke    SEDSpectrometer    
+	[Tags]    smoke    SEDSpectrometer    TSS-2986
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -767,7 +767,7 @@ Validate SEDSpectrometer Commands Topic Names
 
 Validate SEDSpectrometer Events Topic Names
 	[Documentation]    Validate the SEDSpectrometer Events topic names conform to naming convention.
-	[Tags]    smoke    SEDSpectrometer    
+	[Tags]    smoke    SEDSpectrometer    TSS-2986
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -776,7 +776,7 @@ Validate SEDSpectrometer Events Topic Names
 
 Validate SEDSpectrometer Telemetry Topic Names
 	[Documentation]    Validate the SEDSpectrometer Telemetry topic names conform to naming convention.
-	[Tags]    smoke    SEDSpectrometer    
+	[Tags]    smoke    SEDSpectrometer    TSS-2986
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
