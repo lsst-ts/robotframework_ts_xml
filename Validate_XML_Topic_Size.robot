@@ -11,7 +11,7 @@ ${xml}    xml
 *** Test Cases ***
 Validate Archiver Command archiver_command_setValue Topic Byte Size
 	[Documentation]    Validate the archiver_command_setValue topic is less than 65536 bytes in total.
-	[Tags]    smoke    Archiver
+	[Tags]    smoke    Archiver    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/archiver/archiver_Commands.xml
@@ -47,7 +47,7 @@ Validate Archiver Command archiver_command_setValue Topic Columns
 
 Validate Archiver Command archiver_command_start Topic Byte Size
 	[Documentation]    Validate the archiver_command_start topic is less than 65536 bytes in total.
-	[Tags]    smoke    Archiver
+	[Tags]    smoke    Archiver    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/archiver/archiver_Commands.xml
@@ -83,7 +83,7 @@ Validate Archiver Command archiver_command_start Topic Columns
 
 Validate Archiver Command archiver_command_exitControl Topic Byte Size
 	[Documentation]    Validate the archiver_command_exitControl topic is less than 65536 bytes in total.
-	[Tags]    smoke    Archiver
+	[Tags]    smoke    Archiver    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/archiver/archiver_Commands.xml
@@ -119,7 +119,7 @@ Validate Archiver Command archiver_command_exitControl Topic Columns
 
 Validate Archiver Command archiver_command_abort Topic Byte Size
 	[Documentation]    Validate the archiver_command_abort topic is less than 65536 bytes in total.
-	[Tags]    smoke    Archiver
+	[Tags]    smoke    Archiver    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/archiver/archiver_Commands.xml
@@ -155,7 +155,7 @@ Validate Archiver Command archiver_command_abort Topic Columns
 
 Validate Archiver Command archiver_command_disable Topic Byte Size
 	[Documentation]    Validate the archiver_command_disable topic is less than 65536 bytes in total.
-	[Tags]    smoke    Archiver
+	[Tags]    smoke    Archiver    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/archiver/archiver_Commands.xml
@@ -191,7 +191,7 @@ Validate Archiver Command archiver_command_disable Topic Columns
 
 Validate Archiver Command archiver_command_enable Topic Byte Size
 	[Documentation]    Validate the archiver_command_enable topic is less than 65536 bytes in total.
-	[Tags]    smoke    Archiver
+	[Tags]    smoke    Archiver    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/archiver/archiver_Commands.xml
@@ -227,7 +227,7 @@ Validate Archiver Command archiver_command_enable Topic Columns
 
 Validate Archiver Command archiver_command_enterControl Topic Byte Size
 	[Documentation]    Validate the archiver_command_enterControl topic is less than 65536 bytes in total.
-	[Tags]    smoke    Archiver
+	[Tags]    smoke    Archiver    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[7]/item)" -n ${folder}/sal_interfaces/archiver/archiver_Commands.xml
@@ -263,7 +263,7 @@ Validate Archiver Command archiver_command_enterControl Topic Columns
 
 Validate Archiver Command archiver_command_standby Topic Byte Size
 	[Documentation]    Validate the archiver_command_standby topic is less than 65536 bytes in total.
-	[Tags]    smoke    Archiver
+	[Tags]    smoke    Archiver    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[8]/item)" -n ${folder}/sal_interfaces/archiver/archiver_Commands.xml
@@ -299,7 +299,7 @@ Validate Archiver Command archiver_command_standby Topic Columns
 
 Validate Archiver Event archiver_logevent_archiverEntityShutdown Topic Byte Size
 	[Documentation]    Validate the archiver_logevent_archiverEntityShutdown topic is less than 65536 bytes in total.
-	[Tags]    smoke    Archiver
+	[Tags]    smoke    Archiver    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/archiver/archiver_Events.xml
@@ -335,7 +335,7 @@ Validate Archiver Event archiver_logevent_archiverEntityShutdown Topic Columns
 
 Validate Archiver Event archiver_logevent_detailedState Topic Byte Size
 	[Documentation]    Validate the archiver_logevent_detailedState topic is less than 65536 bytes in total.
-	[Tags]    smoke    Archiver
+	[Tags]    smoke    Archiver    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/archiver/archiver_Events.xml
@@ -371,7 +371,7 @@ Validate Archiver Event archiver_logevent_detailedState Topic Columns
 
 Validate Archiver Event archiver_logevent_archiverEntityStartup Topic Byte Size
 	[Documentation]    Validate the archiver_logevent_archiverEntityStartup topic is less than 65536 bytes in total.
-	[Tags]    smoke    Archiver
+	[Tags]    smoke    Archiver    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/archiver/archiver_Events.xml
@@ -407,7 +407,7 @@ Validate Archiver Event archiver_logevent_archiverEntityStartup Topic Columns
 
 Validate Archiver Event archiver_logevent_summaryState Topic Byte Size
 	[Documentation]    Validate the archiver_logevent_summaryState topic is less than 65536 bytes in total.
-	[Tags]    smoke    Archiver
+	[Tags]    smoke    Archiver    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/archiver/archiver_Events.xml
@@ -443,7 +443,7 @@ Validate Archiver Event archiver_logevent_summaryState Topic Columns
 
 Validate Archiver Event archiver_logevent_settingsApplied Topic Byte Size
 	[Documentation]    Validate the archiver_logevent_settingsApplied topic is less than 65536 bytes in total.
-	[Tags]    smoke    Archiver
+	[Tags]    smoke    Archiver    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/archiver/archiver_Events.xml
@@ -479,7 +479,7 @@ Validate Archiver Event archiver_logevent_settingsApplied Topic Columns
 
 Validate Archiver Event archiver_logevent_settingVersions Topic Byte Size
 	[Documentation]    Validate the archiver_logevent_settingVersions topic is less than 65536 bytes in total.
-	[Tags]    smoke    Archiver
+	[Tags]    smoke    Archiver    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/archiver/archiver_Events.xml
@@ -515,7 +515,7 @@ Validate Archiver Event archiver_logevent_settingVersions Topic Columns
 
 Validate Archiver Event archiver_logevent_appliedSettingsMatchStart Topic Byte Size
 	[Documentation]    Validate the archiver_logevent_appliedSettingsMatchStart topic is less than 65536 bytes in total.
-	[Tags]    smoke    Archiver
+	[Tags]    smoke    Archiver    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/archiver/archiver_Events.xml
@@ -551,7 +551,7 @@ Validate Archiver Event archiver_logevent_appliedSettingsMatchStart Topic Column
 
 Validate Archiver Event archiver_logevent_errorCode Topic Byte Size
 	[Documentation]    Validate the archiver_logevent_errorCode topic is less than 65536 bytes in total.
-	[Tags]    smoke    Archiver
+	[Tags]    smoke    Archiver    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/archiver/archiver_Events.xml
@@ -587,7 +587,7 @@ Validate Archiver Event archiver_logevent_errorCode Topic Columns
 
 Validate Archiver Event archiver_logevent_archiverEntitySummaryState Topic Byte Size
 	[Documentation]    Validate the archiver_logevent_archiverEntitySummaryState topic is less than 65536 bytes in total.
-	[Tags]    smoke    Archiver
+	[Tags]    smoke    Archiver    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/archiver/archiver_Events.xml
@@ -623,7 +623,7 @@ Validate Archiver Event archiver_logevent_archiverEntitySummaryState Topic Colum
 
 Validate Archiver Telemetry archiver_sequencerHeartbeat Topic Byte Size
 	[Documentation]    Validate the archiver_sequencerHeartbeat topic is less than 65536 bytes in total.
-	[Tags]    smoke    Archiver
+	[Tags]    smoke    Archiver    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/archiver/archiver_Telemetry.xml
@@ -659,7 +659,7 @@ Validate Archiver Telemetry archiver_sequencerHeartbeat Topic Columns
 
 Validate AtArchiver Command atArchiver_command_abort Topic Byte Size
 	[Documentation]    Validate the atArchiver_command_abort topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtArchiver
+	[Tags]    smoke    AtArchiver    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/atArchiver/atArchiver_Commands.xml
@@ -695,7 +695,7 @@ Validate AtArchiver Command atArchiver_command_abort Topic Columns
 
 Validate AtArchiver Command atArchiver_command_enable Topic Byte Size
 	[Documentation]    Validate the atArchiver_command_enable topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtArchiver
+	[Tags]    smoke    AtArchiver    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/atArchiver/atArchiver_Commands.xml
@@ -731,7 +731,7 @@ Validate AtArchiver Command atArchiver_command_enable Topic Columns
 
 Validate AtArchiver Command atArchiver_command_disable Topic Byte Size
 	[Documentation]    Validate the atArchiver_command_disable topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtArchiver
+	[Tags]    smoke    AtArchiver    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/atArchiver/atArchiver_Commands.xml
@@ -767,7 +767,7 @@ Validate AtArchiver Command atArchiver_command_disable Topic Columns
 
 Validate AtArchiver Command atArchiver_command_standby Topic Byte Size
 	[Documentation]    Validate the atArchiver_command_standby topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtArchiver
+	[Tags]    smoke    AtArchiver    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/atArchiver/atArchiver_Commands.xml
@@ -803,7 +803,7 @@ Validate AtArchiver Command atArchiver_command_standby Topic Columns
 
 Validate AtArchiver Command atArchiver_command_exitControl Topic Byte Size
 	[Documentation]    Validate the atArchiver_command_exitControl topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtArchiver
+	[Tags]    smoke    AtArchiver    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/atArchiver/atArchiver_Commands.xml
@@ -839,7 +839,7 @@ Validate AtArchiver Command atArchiver_command_exitControl Topic Columns
 
 Validate AtArchiver Command atArchiver_command_start Topic Byte Size
 	[Documentation]    Validate the atArchiver_command_start topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtArchiver
+	[Tags]    smoke    AtArchiver    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/atArchiver/atArchiver_Commands.xml
@@ -875,7 +875,7 @@ Validate AtArchiver Command atArchiver_command_start Topic Columns
 
 Validate AtArchiver Command atArchiver_command_enterControl Topic Byte Size
 	[Documentation]    Validate the atArchiver_command_enterControl topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtArchiver
+	[Tags]    smoke    AtArchiver    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[7]/item)" -n ${folder}/sal_interfaces/atArchiver/atArchiver_Commands.xml
@@ -911,7 +911,7 @@ Validate AtArchiver Command atArchiver_command_enterControl Topic Columns
 
 Validate AtArchiver Command atArchiver_command_setValue Topic Byte Size
 	[Documentation]    Validate the atArchiver_command_setValue topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtArchiver
+	[Tags]    smoke    AtArchiver    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[8]/item)" -n ${folder}/sal_interfaces/atArchiver/atArchiver_Commands.xml
@@ -947,7 +947,7 @@ Validate AtArchiver Command atArchiver_command_setValue Topic Columns
 
 Validate AtArchiver Event atArchiver_logevent_detailedState Topic Byte Size
 	[Documentation]    Validate the atArchiver_logevent_detailedState topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtArchiver
+	[Tags]    smoke    AtArchiver    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/atArchiver/atArchiver_Events.xml
@@ -983,7 +983,7 @@ Validate AtArchiver Event atArchiver_logevent_detailedState Topic Columns
 
 Validate AtArchiver Event atArchiver_logevent_archiverEntityStartup Topic Byte Size
 	[Documentation]    Validate the atArchiver_logevent_archiverEntityStartup topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtArchiver
+	[Tags]    smoke    AtArchiver    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/atArchiver/atArchiver_Events.xml
@@ -1019,7 +1019,7 @@ Validate AtArchiver Event atArchiver_logevent_archiverEntityStartup Topic Column
 
 Validate AtArchiver Event atArchiver_logevent_settingVersions Topic Byte Size
 	[Documentation]    Validate the atArchiver_logevent_settingVersions topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtArchiver
+	[Tags]    smoke    AtArchiver    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/atArchiver/atArchiver_Events.xml
@@ -1055,7 +1055,7 @@ Validate AtArchiver Event atArchiver_logevent_settingVersions Topic Columns
 
 Validate AtArchiver Event atArchiver_logevent_archiverEntitySummaryState Topic Byte Size
 	[Documentation]    Validate the atArchiver_logevent_archiverEntitySummaryState topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtArchiver
+	[Tags]    smoke    AtArchiver    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/atArchiver/atArchiver_Events.xml
@@ -1091,7 +1091,7 @@ Validate AtArchiver Event atArchiver_logevent_archiverEntitySummaryState Topic C
 
 Validate AtArchiver Event atArchiver_logevent_errorCode Topic Byte Size
 	[Documentation]    Validate the atArchiver_logevent_errorCode topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtArchiver
+	[Tags]    smoke    AtArchiver    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/atArchiver/atArchiver_Events.xml
@@ -1127,7 +1127,7 @@ Validate AtArchiver Event atArchiver_logevent_errorCode Topic Columns
 
 Validate AtArchiver Event atArchiver_logevent_archiverEntityShutdown Topic Byte Size
 	[Documentation]    Validate the atArchiver_logevent_archiverEntityShutdown topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtArchiver
+	[Tags]    smoke    AtArchiver    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/atArchiver/atArchiver_Events.xml
@@ -1163,7 +1163,7 @@ Validate AtArchiver Event atArchiver_logevent_archiverEntityShutdown Topic Colum
 
 Validate AtArchiver Event atArchiver_logevent_summaryState Topic Byte Size
 	[Documentation]    Validate the atArchiver_logevent_summaryState topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtArchiver
+	[Tags]    smoke    AtArchiver    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/atArchiver/atArchiver_Events.xml
@@ -1199,7 +1199,7 @@ Validate AtArchiver Event atArchiver_logevent_summaryState Topic Columns
 
 Validate AtArchiver Event atArchiver_logevent_appliedSettingsMatchStart Topic Byte Size
 	[Documentation]    Validate the atArchiver_logevent_appliedSettingsMatchStart topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtArchiver
+	[Tags]    smoke    AtArchiver    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/atArchiver/atArchiver_Events.xml
@@ -1235,7 +1235,7 @@ Validate AtArchiver Event atArchiver_logevent_appliedSettingsMatchStart Topic Co
 
 Validate AtArchiver Event atArchiver_logevent_settingsApplied Topic Byte Size
 	[Documentation]    Validate the atArchiver_logevent_settingsApplied topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtArchiver
+	[Tags]    smoke    AtArchiver    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/atArchiver/atArchiver_Events.xml
@@ -1271,7 +1271,7 @@ Validate AtArchiver Event atArchiver_logevent_settingsApplied Topic Columns
 
 Validate AtArchiver Telemetry atArchiver_sequencerHeartbeat Topic Byte Size
 	[Documentation]    Validate the atArchiver_sequencerHeartbeat topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtArchiver
+	[Tags]    smoke    AtArchiver    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/atArchiver/atArchiver_Telemetry.xml
@@ -1307,7 +1307,7 @@ Validate AtArchiver Telemetry atArchiver_sequencerHeartbeat Topic Columns
 
 Validate AtHeaderService Command atHeaderService_command_disable Topic Byte Size
 	[Documentation]    Validate the atHeaderService_command_disable topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtHeaderService
+	[Tags]    smoke    AtHeaderService    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Commands.xml
@@ -1343,7 +1343,7 @@ Validate AtHeaderService Command atHeaderService_command_disable Topic Columns
 
 Validate AtHeaderService Command atHeaderService_command_enable Topic Byte Size
 	[Documentation]    Validate the atHeaderService_command_enable topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtHeaderService
+	[Tags]    smoke    AtHeaderService    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Commands.xml
@@ -1379,7 +1379,7 @@ Validate AtHeaderService Command atHeaderService_command_enable Topic Columns
 
 Validate AtHeaderService Command atHeaderService_command_exitControl Topic Byte Size
 	[Documentation]    Validate the atHeaderService_command_exitControl topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtHeaderService
+	[Tags]    smoke    AtHeaderService    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Commands.xml
@@ -1415,7 +1415,7 @@ Validate AtHeaderService Command atHeaderService_command_exitControl Topic Colum
 
 Validate AtHeaderService Command atHeaderService_command_standby Topic Byte Size
 	[Documentation]    Validate the atHeaderService_command_standby topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtHeaderService
+	[Tags]    smoke    AtHeaderService    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Commands.xml
@@ -1451,7 +1451,7 @@ Validate AtHeaderService Command atHeaderService_command_standby Topic Columns
 
 Validate AtHeaderService Command atHeaderService_command_start Topic Byte Size
 	[Documentation]    Validate the atHeaderService_command_start topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtHeaderService
+	[Tags]    smoke    AtHeaderService    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Commands.xml
@@ -1487,7 +1487,7 @@ Validate AtHeaderService Command atHeaderService_command_start Topic Columns
 
 Validate AtHeaderService Command atHeaderService_command_enterControl Topic Byte Size
 	[Documentation]    Validate the atHeaderService_command_enterControl topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtHeaderService
+	[Tags]    smoke    AtHeaderService    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Commands.xml
@@ -1523,7 +1523,7 @@ Validate AtHeaderService Command atHeaderService_command_enterControl Topic Colu
 
 Validate AtHeaderService Event atHeaderService_logevent_appliedSettingsMatchStart Topic Byte Size
 	[Documentation]    Validate the atHeaderService_logevent_appliedSettingsMatchStart topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtHeaderService
+	[Tags]    smoke    AtHeaderService    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Events.xml
@@ -1559,7 +1559,7 @@ Validate AtHeaderService Event atHeaderService_logevent_appliedSettingsMatchStar
 
 Validate AtHeaderService Event atHeaderService_logevent_errorCode Topic Byte Size
 	[Documentation]    Validate the atHeaderService_logevent_errorCode topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtHeaderService
+	[Tags]    smoke    AtHeaderService    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Events.xml
@@ -1595,7 +1595,7 @@ Validate AtHeaderService Event atHeaderService_logevent_errorCode Topic Columns
 
 Validate AtHeaderService Event atHeaderService_logevent_settingVersions Topic Byte Size
 	[Documentation]    Validate the atHeaderService_logevent_settingVersions topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtHeaderService
+	[Tags]    smoke    AtHeaderService    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Events.xml
@@ -1631,7 +1631,7 @@ Validate AtHeaderService Event atHeaderService_logevent_settingVersions Topic Co
 
 Validate AtHeaderService Event atHeaderService_logevent_summaryState Topic Byte Size
 	[Documentation]    Validate the atHeaderService_logevent_summaryState topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtHeaderService
+	[Tags]    smoke    AtHeaderService    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Events.xml
@@ -1667,7 +1667,7 @@ Validate AtHeaderService Event atHeaderService_logevent_summaryState Topic Colum
 
 Validate AtHeaderService Event atHeaderService_logevent_detailedState Topic Byte Size
 	[Documentation]    Validate the atHeaderService_logevent_detailedState topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtHeaderService
+	[Tags]    smoke    AtHeaderService    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Events.xml
@@ -1703,7 +1703,7 @@ Validate AtHeaderService Event atHeaderService_logevent_detailedState Topic Colu
 
 Validate AtHeaderService Event atHeaderService_logevent_heartbeat Topic Byte Size
 	[Documentation]    Validate the atHeaderService_logevent_heartbeat topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtHeaderService
+	[Tags]    smoke    AtHeaderService    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Events.xml
@@ -1739,7 +1739,7 @@ Validate AtHeaderService Event atHeaderService_logevent_heartbeat Topic Columns
 
 Validate AtHeaderService Event atHeaderService_logevent_rejectedCommand Topic Byte Size
 	[Documentation]    Validate the atHeaderService_logevent_rejectedCommand topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtHeaderService
+	[Tags]    smoke    AtHeaderService    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Events.xml
@@ -1775,7 +1775,7 @@ Validate AtHeaderService Event atHeaderService_logevent_rejectedCommand Topic Co
 
 Validate AtHeaderService Event atHeaderService_logevent_largeFileObjectAvailable Topic Byte Size
 	[Documentation]    Validate the atHeaderService_logevent_largeFileObjectAvailable topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtHeaderService
+	[Tags]    smoke    AtHeaderService    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Events.xml
@@ -1811,7 +1811,7 @@ Validate AtHeaderService Event atHeaderService_logevent_largeFileObjectAvailable
 
 Validate AtHeaderService Event atHeaderService_logevent_settingsApplied Topic Byte Size
 	[Documentation]    Validate the atHeaderService_logevent_settingsApplied topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtHeaderService
+	[Tags]    smoke    AtHeaderService    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Events.xml
@@ -1847,7 +1847,7 @@ Validate AtHeaderService Event atHeaderService_logevent_settingsApplied Topic Co
 
 Validate AtMonochromator Command atMonochromator_command_disable Topic Byte Size
 	[Documentation]    Validate the atMonochromator_command_disable topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtMonochromator
+	[Tags]    smoke    AtMonochromator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/atMonochromator/atMonochromator_Commands.xml
@@ -1883,7 +1883,7 @@ Validate AtMonochromator Command atMonochromator_command_disable Topic Columns
 
 Validate AtMonochromator Command atMonochromator_command_enable Topic Byte Size
 	[Documentation]    Validate the atMonochromator_command_enable topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtMonochromator
+	[Tags]    smoke    AtMonochromator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/atMonochromator/atMonochromator_Commands.xml
@@ -1919,7 +1919,7 @@ Validate AtMonochromator Command atMonochromator_command_enable Topic Columns
 
 Validate AtMonochromator Command atMonochromator_command_exitControl Topic Byte Size
 	[Documentation]    Validate the atMonochromator_command_exitControl topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtMonochromator
+	[Tags]    smoke    AtMonochromator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/atMonochromator/atMonochromator_Commands.xml
@@ -1955,7 +1955,7 @@ Validate AtMonochromator Command atMonochromator_command_exitControl Topic Colum
 
 Validate AtMonochromator Command atMonochromator_command_standby Topic Byte Size
 	[Documentation]    Validate the atMonochromator_command_standby topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtMonochromator
+	[Tags]    smoke    AtMonochromator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/atMonochromator/atMonochromator_Commands.xml
@@ -1991,7 +1991,7 @@ Validate AtMonochromator Command atMonochromator_command_standby Topic Columns
 
 Validate AtMonochromator Command atMonochromator_command_start Topic Byte Size
 	[Documentation]    Validate the atMonochromator_command_start topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtMonochromator
+	[Tags]    smoke    AtMonochromator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/atMonochromator/atMonochromator_Commands.xml
@@ -2027,7 +2027,7 @@ Validate AtMonochromator Command atMonochromator_command_start Topic Columns
 
 Validate AtMonochromator Command atMonochromator_command_changeWavelength Topic Byte Size
 	[Documentation]    Validate the atMonochromator_command_changeWavelength topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtMonochromator
+	[Tags]    smoke    AtMonochromator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/atMonochromator/atMonochromator_Commands.xml
@@ -2063,7 +2063,7 @@ Validate AtMonochromator Command atMonochromator_command_changeWavelength Topic 
 
 Validate AtMonochromator Command atMonochromator_command_calibrateWavelength Topic Byte Size
 	[Documentation]    Validate the atMonochromator_command_calibrateWavelength topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtMonochromator
+	[Tags]    smoke    AtMonochromator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[7]/item)" -n ${folder}/sal_interfaces/atMonochromator/atMonochromator_Commands.xml
@@ -2099,7 +2099,7 @@ Validate AtMonochromator Command atMonochromator_command_calibrateWavelength Top
 
 Validate AtMonochromator Command atMonochromator_command_power Topic Byte Size
 	[Documentation]    Validate the atMonochromator_command_power topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtMonochromator
+	[Tags]    smoke    AtMonochromator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[8]/item)" -n ${folder}/sal_interfaces/atMonochromator/atMonochromator_Commands.xml
@@ -2135,7 +2135,7 @@ Validate AtMonochromator Command atMonochromator_command_power Topic Columns
 
 Validate AtMonochromator Command atMonochromator_command_selectGrating Topic Byte Size
 	[Documentation]    Validate the atMonochromator_command_selectGrating topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtMonochromator
+	[Tags]    smoke    AtMonochromator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[9]/item)" -n ${folder}/sal_interfaces/atMonochromator/atMonochromator_Commands.xml
@@ -2171,7 +2171,7 @@ Validate AtMonochromator Command atMonochromator_command_selectGrating Topic Col
 
 Validate AtMonochromator Command atMonochromator_command_changeSlitWidth Topic Byte Size
 	[Documentation]    Validate the atMonochromator_command_changeSlitWidth topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtMonochromator
+	[Tags]    smoke    AtMonochromator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[10]/item)" -n ${folder}/sal_interfaces/atMonochromator/atMonochromator_Commands.xml
@@ -2207,7 +2207,7 @@ Validate AtMonochromator Command atMonochromator_command_changeSlitWidth Topic C
 
 Validate AtMonochromator Command atMonochromator_command_updateMonochromatorSetup Topic Byte Size
 	[Documentation]    Validate the atMonochromator_command_updateMonochromatorSetup topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtMonochromator
+	[Tags]    smoke    AtMonochromator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[11]/item)" -n ${folder}/sal_interfaces/atMonochromator/atMonochromator_Commands.xml
@@ -2243,7 +2243,7 @@ Validate AtMonochromator Command atMonochromator_command_updateMonochromatorSetu
 
 Validate AtMonochromator Event atMonochromator_logevent_appliedSettingsMatchStart Topic Byte Size
 	[Documentation]    Validate the atMonochromator_logevent_appliedSettingsMatchStart topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtMonochromator
+	[Tags]    smoke    AtMonochromator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/atMonochromator/atMonochromator_Events.xml
@@ -2279,7 +2279,7 @@ Validate AtMonochromator Event atMonochromator_logevent_appliedSettingsMatchStar
 
 Validate AtMonochromator Event atMonochromator_logevent_errorCode Topic Byte Size
 	[Documentation]    Validate the atMonochromator_logevent_errorCode topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtMonochromator
+	[Tags]    smoke    AtMonochromator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/atMonochromator/atMonochromator_Events.xml
@@ -2315,7 +2315,7 @@ Validate AtMonochromator Event atMonochromator_logevent_errorCode Topic Columns
 
 Validate AtMonochromator Event atMonochromator_logevent_settingVersions Topic Byte Size
 	[Documentation]    Validate the atMonochromator_logevent_settingVersions topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtMonochromator
+	[Tags]    smoke    AtMonochromator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/atMonochromator/atMonochromator_Events.xml
@@ -2351,7 +2351,7 @@ Validate AtMonochromator Event atMonochromator_logevent_settingVersions Topic Co
 
 Validate AtMonochromator Event atMonochromator_logevent_summaryState Topic Byte Size
 	[Documentation]    Validate the atMonochromator_logevent_summaryState topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtMonochromator
+	[Tags]    smoke    AtMonochromator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/atMonochromator/atMonochromator_Events.xml
@@ -2387,7 +2387,7 @@ Validate AtMonochromator Event atMonochromator_logevent_summaryState Topic Colum
 
 Validate AtMonochromator Event atMonochromator_logevent_detailedState Topic Byte Size
 	[Documentation]    Validate the atMonochromator_logevent_detailedState topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtMonochromator
+	[Tags]    smoke    AtMonochromator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/atMonochromator/atMonochromator_Events.xml
@@ -2423,7 +2423,7 @@ Validate AtMonochromator Event atMonochromator_logevent_detailedState Topic Colu
 
 Validate AtMonochromator Event atMonochromator_logevent_internalCommand Topic Byte Size
 	[Documentation]    Validate the atMonochromator_logevent_internalCommand topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtMonochromator
+	[Tags]    smoke    AtMonochromator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/atMonochromator/atMonochromator_Events.xml
@@ -2459,7 +2459,7 @@ Validate AtMonochromator Event atMonochromator_logevent_internalCommand Topic Co
 
 Validate AtMonochromator Event atMonochromator_logevent_heartbeat Topic Byte Size
 	[Documentation]    Validate the atMonochromator_logevent_heartbeat topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtMonochromator
+	[Tags]    smoke    AtMonochromator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/atMonochromator/atMonochromator_Events.xml
@@ -2495,7 +2495,7 @@ Validate AtMonochromator Event atMonochromator_logevent_heartbeat Topic Columns
 
 Validate AtMonochromator Event atMonochromator_logevent_loopTimeOutOfRange Topic Byte Size
 	[Documentation]    Validate the atMonochromator_logevent_loopTimeOutOfRange topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtMonochromator
+	[Tags]    smoke    AtMonochromator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/atMonochromator/atMonochromator_Events.xml
@@ -2531,7 +2531,7 @@ Validate AtMonochromator Event atMonochromator_logevent_loopTimeOutOfRange Topic
 
 Validate AtMonochromator Event atMonochromator_logevent_rejectedCommand Topic Byte Size
 	[Documentation]    Validate the atMonochromator_logevent_rejectedCommand topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtMonochromator
+	[Tags]    smoke    AtMonochromator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/atMonochromator/atMonochromator_Events.xml
@@ -2567,7 +2567,7 @@ Validate AtMonochromator Event atMonochromator_logevent_rejectedCommand Topic Co
 
 Validate AtMonochromator Event atMonochromator_logevent_settingsAppliedMonoCommunication Topic Byte Size
 	[Documentation]    Validate the atMonochromator_logevent_settingsAppliedMonoCommunication topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtMonochromator
+	[Tags]    smoke    AtMonochromator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/atMonochromator/atMonochromator_Events.xml
@@ -2603,7 +2603,7 @@ Validate AtMonochromator Event atMonochromator_logevent_settingsAppliedMonoCommu
 
 Validate AtMonochromator Event atMonochromator_logevent_selectedGrating Topic Byte Size
 	[Documentation]    Validate the atMonochromator_logevent_selectedGrating topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtMonochromator
+	[Tags]    smoke    AtMonochromator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/atMonochromator/atMonochromator_Events.xml
@@ -2639,7 +2639,7 @@ Validate AtMonochromator Event atMonochromator_logevent_selectedGrating Topic Co
 
 Validate AtMonochromator Event atMonochromator_logevent_wavelength Topic Byte Size
 	[Documentation]    Validate the atMonochromator_logevent_wavelength topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtMonochromator
+	[Tags]    smoke    AtMonochromator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[12]/item)" -n ${folder}/sal_interfaces/atMonochromator/atMonochromator_Events.xml
@@ -2675,7 +2675,7 @@ Validate AtMonochromator Event atMonochromator_logevent_wavelength Topic Columns
 
 Validate AtMonochromator Event atMonochromator_logevent_slitWidth Topic Byte Size
 	[Documentation]    Validate the atMonochromator_logevent_slitWidth topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtMonochromator
+	[Tags]    smoke    AtMonochromator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[13]/item)" -n ${folder}/sal_interfaces/atMonochromator/atMonochromator_Events.xml
@@ -2711,7 +2711,7 @@ Validate AtMonochromator Event atMonochromator_logevent_slitWidth Topic Columns
 
 Validate AtMonochromator Event atMonochromator_logevent_inPosition Topic Byte Size
 	[Documentation]    Validate the atMonochromator_logevent_inPosition topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtMonochromator
+	[Tags]    smoke    AtMonochromator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[14]/item)" -n ${folder}/sal_interfaces/atMonochromator/atMonochromator_Events.xml
@@ -2747,7 +2747,7 @@ Validate AtMonochromator Event atMonochromator_logevent_inPosition Topic Columns
 
 Validate AtMonochromator Event atMonochromator_logevent_monochromatorConnected Topic Byte Size
 	[Documentation]    Validate the atMonochromator_logevent_monochromatorConnected topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtMonochromator
+	[Tags]    smoke    AtMonochromator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[15]/item)" -n ${folder}/sal_interfaces/atMonochromator/atMonochromator_Events.xml
@@ -2783,7 +2783,7 @@ Validate AtMonochromator Event atMonochromator_logevent_monochromatorConnected T
 
 Validate AtMonochromator Event atMonochromator_logevent_settingsAppliedMonoHeartbeat Topic Byte Size
 	[Documentation]    Validate the atMonochromator_logevent_settingsAppliedMonoHeartbeat topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtMonochromator
+	[Tags]    smoke    AtMonochromator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[16]/item)" -n ${folder}/sal_interfaces/atMonochromator/atMonochromator_Events.xml
@@ -2819,7 +2819,7 @@ Validate AtMonochromator Event atMonochromator_logevent_settingsAppliedMonoHeart
 
 Validate AtMonochromator Event atMonochromator_logevent_settingsAppliedLoop Topic Byte Size
 	[Documentation]    Validate the atMonochromator_logevent_settingsAppliedLoop topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtMonochromator
+	[Tags]    smoke    AtMonochromator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[17]/item)" -n ${folder}/sal_interfaces/atMonochromator/atMonochromator_Events.xml
@@ -2855,7 +2855,7 @@ Validate AtMonochromator Event atMonochromator_logevent_settingsAppliedLoop Topi
 
 Validate AtMonochromator Event atMonochromator_logevent_settingsAppliedMonochromatorRanges Topic Byte Size
 	[Documentation]    Validate the atMonochromator_logevent_settingsAppliedMonochromatorRanges topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtMonochromator
+	[Tags]    smoke    AtMonochromator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[18]/item)" -n ${folder}/sal_interfaces/atMonochromator/atMonochromator_Events.xml
@@ -2891,7 +2891,7 @@ Validate AtMonochromator Event atMonochromator_logevent_settingsAppliedMonochrom
 
 Validate AtMonochromator Telemetry atMonochromator_timestamp Topic Byte Size
 	[Documentation]    Validate the atMonochromator_timestamp topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtMonochromator
+	[Tags]    smoke    AtMonochromator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/atMonochromator/atMonochromator_Telemetry.xml
@@ -2927,7 +2927,7 @@ Validate AtMonochromator Telemetry atMonochromator_timestamp Topic Columns
 
 Validate AtMonochromator Telemetry atMonochromator_loopTime Topic Byte Size
 	[Documentation]    Validate the atMonochromator_loopTime topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtMonochromator
+	[Tags]    smoke    AtMonochromator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/atMonochromator/atMonochromator_Telemetry.xml
@@ -2963,7 +2963,7 @@ Validate AtMonochromator Telemetry atMonochromator_loopTime Topic Columns
 
 Validate AtScheduler Event atScheduler_logevent_target Topic Byte Size
 	[Documentation]    Validate the atScheduler_logevent_target topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtScheduler
+	[Tags]    smoke    AtScheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/atScheduler/atScheduler_Events.xml
@@ -2999,7 +2999,7 @@ Validate AtScheduler Event atScheduler_logevent_target Topic Columns
 
 Validate AtScheduler Telemetry atScheduler_Heartbeat Topic Byte Size
 	[Documentation]    Validate the atScheduler_Heartbeat topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtScheduler
+	[Tags]    smoke    AtScheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/atScheduler/atScheduler_Telemetry.xml
@@ -3035,7 +3035,7 @@ Validate AtScheduler Telemetry atScheduler_Heartbeat Topic Columns
 
 Validate AtWhiteLight Command atWhiteLight_command_disable Topic Byte Size
 	[Documentation]    Validate the atWhiteLight_command_disable topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtWhiteLight
+	[Tags]    smoke    AtWhiteLight    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Commands.xml
@@ -3071,7 +3071,7 @@ Validate AtWhiteLight Command atWhiteLight_command_disable Topic Columns
 
 Validate AtWhiteLight Command atWhiteLight_command_enable Topic Byte Size
 	[Documentation]    Validate the atWhiteLight_command_enable topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtWhiteLight
+	[Tags]    smoke    AtWhiteLight    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Commands.xml
@@ -3107,7 +3107,7 @@ Validate AtWhiteLight Command atWhiteLight_command_enable Topic Columns
 
 Validate AtWhiteLight Command atWhiteLight_command_exitControl Topic Byte Size
 	[Documentation]    Validate the atWhiteLight_command_exitControl topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtWhiteLight
+	[Tags]    smoke    AtWhiteLight    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Commands.xml
@@ -3143,7 +3143,7 @@ Validate AtWhiteLight Command atWhiteLight_command_exitControl Topic Columns
 
 Validate AtWhiteLight Command atWhiteLight_command_standby Topic Byte Size
 	[Documentation]    Validate the atWhiteLight_command_standby topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtWhiteLight
+	[Tags]    smoke    AtWhiteLight    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Commands.xml
@@ -3179,7 +3179,7 @@ Validate AtWhiteLight Command atWhiteLight_command_standby Topic Columns
 
 Validate AtWhiteLight Command atWhiteLight_command_start Topic Byte Size
 	[Documentation]    Validate the atWhiteLight_command_start topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtWhiteLight
+	[Tags]    smoke    AtWhiteLight    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Commands.xml
@@ -3215,7 +3215,7 @@ Validate AtWhiteLight Command atWhiteLight_command_start Topic Columns
 
 Validate AtWhiteLight Command atWhiteLight_command_enterControl Topic Byte Size
 	[Documentation]    Validate the atWhiteLight_command_enterControl topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtWhiteLight
+	[Tags]    smoke    AtWhiteLight    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Commands.xml
@@ -3251,7 +3251,7 @@ Validate AtWhiteLight Command atWhiteLight_command_enterControl Topic Columns
 
 Validate AtWhiteLight Event atWhiteLight_logevent_appliedSettingsMatchStart Topic Byte Size
 	[Documentation]    Validate the atWhiteLight_logevent_appliedSettingsMatchStart topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtWhiteLight
+	[Tags]    smoke    AtWhiteLight    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Events.xml
@@ -3287,7 +3287,7 @@ Validate AtWhiteLight Event atWhiteLight_logevent_appliedSettingsMatchStart Topi
 
 Validate AtWhiteLight Event atWhiteLight_logevent_errorCode Topic Byte Size
 	[Documentation]    Validate the atWhiteLight_logevent_errorCode topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtWhiteLight
+	[Tags]    smoke    AtWhiteLight    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Events.xml
@@ -3323,7 +3323,7 @@ Validate AtWhiteLight Event atWhiteLight_logevent_errorCode Topic Columns
 
 Validate AtWhiteLight Event atWhiteLight_logevent_settingVersions Topic Byte Size
 	[Documentation]    Validate the atWhiteLight_logevent_settingVersions topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtWhiteLight
+	[Tags]    smoke    AtWhiteLight    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Events.xml
@@ -3359,7 +3359,7 @@ Validate AtWhiteLight Event atWhiteLight_logevent_settingVersions Topic Columns
 
 Validate AtWhiteLight Event atWhiteLight_logevent_summaryState Topic Byte Size
 	[Documentation]    Validate the atWhiteLight_logevent_summaryState topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtWhiteLight
+	[Tags]    smoke    AtWhiteLight    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Events.xml
@@ -3395,7 +3395,7 @@ Validate AtWhiteLight Event atWhiteLight_logevent_summaryState Topic Columns
 
 Validate AtWhiteLight Event atWhiteLight_logevent_detailedState Topic Byte Size
 	[Documentation]    Validate the atWhiteLight_logevent_detailedState topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtWhiteLight
+	[Tags]    smoke    AtWhiteLight    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Events.xml
@@ -3431,7 +3431,7 @@ Validate AtWhiteLight Event atWhiteLight_logevent_detailedState Topic Columns
 
 Validate AtWhiteLight Event atWhiteLight_logevent_internalCommand Topic Byte Size
 	[Documentation]    Validate the atWhiteLight_logevent_internalCommand topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtWhiteLight
+	[Tags]    smoke    AtWhiteLight    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Events.xml
@@ -3467,7 +3467,7 @@ Validate AtWhiteLight Event atWhiteLight_logevent_internalCommand Topic Columns
 
 Validate AtWhiteLight Event atWhiteLight_logevent_heartbeat Topic Byte Size
 	[Documentation]    Validate the atWhiteLight_logevent_heartbeat topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtWhiteLight
+	[Tags]    smoke    AtWhiteLight    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Events.xml
@@ -3503,7 +3503,7 @@ Validate AtWhiteLight Event atWhiteLight_logevent_heartbeat Topic Columns
 
 Validate AtWhiteLight Event atWhiteLight_logevent_loopTimeOutOfRange Topic Byte Size
 	[Documentation]    Validate the atWhiteLight_logevent_loopTimeOutOfRange topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtWhiteLight
+	[Tags]    smoke    AtWhiteLight    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Events.xml
@@ -3539,7 +3539,7 @@ Validate AtWhiteLight Event atWhiteLight_logevent_loopTimeOutOfRange Topic Colum
 
 Validate AtWhiteLight Event atWhiteLight_logevent_rejectedCommand Topic Byte Size
 	[Documentation]    Validate the atWhiteLight_logevent_rejectedCommand topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtWhiteLight
+	[Tags]    smoke    AtWhiteLight    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Events.xml
@@ -3575,7 +3575,7 @@ Validate AtWhiteLight Event atWhiteLight_logevent_rejectedCommand Topic Columns
 
 Validate AtWhiteLight Telemetry atWhiteLight_timestamp Topic Byte Size
 	[Documentation]    Validate the atWhiteLight_timestamp topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtWhiteLight
+	[Tags]    smoke    AtWhiteLight    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Telemetry.xml
@@ -3611,7 +3611,7 @@ Validate AtWhiteLight Telemetry atWhiteLight_timestamp Topic Columns
 
 Validate AtWhiteLight Telemetry atWhiteLight_loopTimeMs Topic Byte Size
 	[Documentation]    Validate the atWhiteLight_loopTimeMs topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtWhiteLight
+	[Tags]    smoke    AtWhiteLight    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Telemetry.xml
@@ -3647,7 +3647,7 @@ Validate AtWhiteLight Telemetry atWhiteLight_loopTimeMs Topic Columns
 
 Validate AtCamera Command atcamera_command_discardRows Topic Byte Size
 	[Documentation]    Validate the atcamera_command_discardRows topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
@@ -3683,7 +3683,7 @@ Validate AtCamera Command atcamera_command_discardRows Topic Columns
 
 Validate AtCamera Command atcamera_command_enable Topic Byte Size
 	[Documentation]    Validate the atcamera_command_enable topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
@@ -3719,7 +3719,7 @@ Validate AtCamera Command atcamera_command_enable Topic Columns
 
 Validate AtCamera Command atcamera_command_setValue Topic Byte Size
 	[Documentation]    Validate the atcamera_command_setValue topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
@@ -3755,7 +3755,7 @@ Validate AtCamera Command atcamera_command_setValue Topic Columns
 
 Validate AtCamera Command atcamera_command_startImage Topic Byte Size
 	[Documentation]    Validate the atcamera_command_startImage topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
@@ -3791,7 +3791,7 @@ Validate AtCamera Command atcamera_command_startImage Topic Columns
 
 Validate AtCamera Command atcamera_command_disableCalibration Topic Byte Size
 	[Documentation]    Validate the atcamera_command_disableCalibration topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
@@ -3827,7 +3827,7 @@ Validate AtCamera Command atcamera_command_disableCalibration Topic Columns
 
 Validate AtCamera Command atcamera_command_initGuiders Topic Byte Size
 	[Documentation]    Validate the atcamera_command_initGuiders topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
@@ -3863,7 +3863,7 @@ Validate AtCamera Command atcamera_command_initGuiders Topic Columns
 
 Validate AtCamera Command atcamera_command_standby Topic Byte Size
 	[Documentation]    Validate the atcamera_command_standby topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[7]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
@@ -3899,7 +3899,7 @@ Validate AtCamera Command atcamera_command_standby Topic Columns
 
 Validate AtCamera Command atcamera_command_enableCalibration Topic Byte Size
 	[Documentation]    Validate the atcamera_command_enableCalibration topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[8]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
@@ -3935,7 +3935,7 @@ Validate AtCamera Command atcamera_command_enableCalibration Topic Columns
 
 Validate AtCamera Command atcamera_command_initImage Topic Byte Size
 	[Documentation]    Validate the atcamera_command_initImage topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[9]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
@@ -3971,7 +3971,7 @@ Validate AtCamera Command atcamera_command_initImage Topic Columns
 
 Validate AtCamera Command atcamera_command_enterControl Topic Byte Size
 	[Documentation]    Validate the atcamera_command_enterControl topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[10]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
@@ -4007,7 +4007,7 @@ Validate AtCamera Command atcamera_command_enterControl Topic Columns
 
 Validate AtCamera Command atcamera_command_endImage Topic Byte Size
 	[Documentation]    Validate the atcamera_command_endImage topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[11]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
@@ -4043,7 +4043,7 @@ Validate AtCamera Command atcamera_command_endImage Topic Columns
 
 Validate AtCamera Command atcamera_command_disable Topic Byte Size
 	[Documentation]    Validate the atcamera_command_disable topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[12]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
@@ -4079,7 +4079,7 @@ Validate AtCamera Command atcamera_command_disable Topic Columns
 
 Validate AtCamera Command atcamera_command_abort Topic Byte Size
 	[Documentation]    Validate the atcamera_command_abort topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[13]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
@@ -4115,7 +4115,7 @@ Validate AtCamera Command atcamera_command_abort Topic Columns
 
 Validate AtCamera Command atcamera_command_clear Topic Byte Size
 	[Documentation]    Validate the atcamera_command_clear topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[14]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
@@ -4151,7 +4151,7 @@ Validate AtCamera Command atcamera_command_clear Topic Columns
 
 Validate AtCamera Command atcamera_command_exitControl Topic Byte Size
 	[Documentation]    Validate the atcamera_command_exitControl topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[15]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
@@ -4187,7 +4187,7 @@ Validate AtCamera Command atcamera_command_exitControl Topic Columns
 
 Validate AtCamera Command atcamera_command_takeImages Topic Byte Size
 	[Documentation]    Validate the atcamera_command_takeImages topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[16]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
@@ -4223,7 +4223,7 @@ Validate AtCamera Command atcamera_command_takeImages Topic Columns
 
 Validate AtCamera Command atcamera_command_start Topic Byte Size
 	[Documentation]    Validate the atcamera_command_start topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[17]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
@@ -4259,7 +4259,7 @@ Validate AtCamera Command atcamera_command_start Topic Columns
 
 Validate AtCamera Command atcamera_command_stop Topic Byte Size
 	[Documentation]    Validate the atcamera_command_stop topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[18]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
@@ -4295,7 +4295,7 @@ Validate AtCamera Command atcamera_command_stop Topic Columns
 
 Validate AtCamera Event atcamera_logevent_offlineDetailedState Topic Byte Size
 	[Documentation]    Validate the atcamera_logevent_offlineDetailedState topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
@@ -4331,7 +4331,7 @@ Validate AtCamera Event atcamera_logevent_offlineDetailedState Topic Columns
 
 Validate AtCamera Event atcamera_logevent_endReadout Topic Byte Size
 	[Documentation]    Validate the atcamera_logevent_endReadout topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
@@ -4367,7 +4367,7 @@ Validate AtCamera Event atcamera_logevent_endReadout Topic Columns
 
 Validate AtCamera Event atcamera_logevent_endTakeImage Topic Byte Size
 	[Documentation]    Validate the atcamera_logevent_endTakeImage topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
@@ -4403,7 +4403,7 @@ Validate AtCamera Event atcamera_logevent_endTakeImage Topic Columns
 
 Validate AtCamera Event atcamera_logevent_imageReadinessDetailedState Topic Byte Size
 	[Documentation]    Validate the atcamera_logevent_imageReadinessDetailedState topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
@@ -4439,7 +4439,7 @@ Validate AtCamera Event atcamera_logevent_imageReadinessDetailedState Topic Colu
 
 Validate AtCamera Event atcamera_logevent_settingVersions Topic Byte Size
 	[Documentation]    Validate the atcamera_logevent_settingVersions topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
@@ -4475,7 +4475,7 @@ Validate AtCamera Event atcamera_logevent_settingVersions Topic Columns
 
 Validate AtCamera Event atcamera_logevent_notReadyToTakeImage Topic Byte Size
 	[Documentation]    Validate the atcamera_logevent_notReadyToTakeImage topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
@@ -4511,7 +4511,7 @@ Validate AtCamera Event atcamera_logevent_notReadyToTakeImage Topic Columns
 
 Validate AtCamera Event atcamera_logevent_startShutterClose Topic Byte Size
 	[Documentation]    Validate the atcamera_logevent_startShutterClose topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
@@ -4547,7 +4547,7 @@ Validate AtCamera Event atcamera_logevent_startShutterClose Topic Columns
 
 Validate AtCamera Event atcamera_logevent_appliedSettingsMatchStart Topic Byte Size
 	[Documentation]    Validate the atcamera_logevent_appliedSettingsMatchStart topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
@@ -4583,7 +4583,7 @@ Validate AtCamera Event atcamera_logevent_appliedSettingsMatchStart Topic Column
 
 Validate AtCamera Event atcamera_logevent_errorCode Topic Byte Size
 	[Documentation]    Validate the atcamera_logevent_errorCode topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
@@ -4619,7 +4619,7 @@ Validate AtCamera Event atcamera_logevent_errorCode Topic Columns
 
 Validate AtCamera Event atcamera_logevent_endShutterClose Topic Byte Size
 	[Documentation]    Validate the atcamera_logevent_endShutterClose topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
@@ -4655,7 +4655,7 @@ Validate AtCamera Event atcamera_logevent_endShutterClose Topic Columns
 
 Validate AtCamera Event atcamera_logevent_endOfImageTelemetry Topic Byte Size
 	[Documentation]    Validate the atcamera_logevent_endOfImageTelemetry topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
@@ -4691,7 +4691,7 @@ Validate AtCamera Event atcamera_logevent_endOfImageTelemetry Topic Columns
 
 Validate AtCamera Event atcamera_logevent_calibrationDetailedState Topic Byte Size
 	[Documentation]    Validate the atcamera_logevent_calibrationDetailedState topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[12]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
@@ -4727,7 +4727,7 @@ Validate AtCamera Event atcamera_logevent_calibrationDetailedState Topic Columns
 
 Validate AtCamera Event atcamera_logevent_shutterDetailedState Topic Byte Size
 	[Documentation]    Validate the atcamera_logevent_shutterDetailedState topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[13]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
@@ -4763,7 +4763,7 @@ Validate AtCamera Event atcamera_logevent_shutterDetailedState Topic Columns
 
 Validate AtCamera Event atcamera_logevent_readyToTakeImage Topic Byte Size
 	[Documentation]    Validate the atcamera_logevent_readyToTakeImage topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[14]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
@@ -4799,7 +4799,7 @@ Validate AtCamera Event atcamera_logevent_readyToTakeImage Topic Columns
 
 Validate AtCamera Event atcamera_logevent_ccsCommandState Topic Byte Size
 	[Documentation]    Validate the atcamera_logevent_ccsCommandState topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[15]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
@@ -4835,7 +4835,7 @@ Validate AtCamera Event atcamera_logevent_ccsCommandState Topic Columns
 
 Validate AtCamera Event atcamera_logevent_prepareToTakeImage Topic Byte Size
 	[Documentation]    Validate the atcamera_logevent_prepareToTakeImage topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[16]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
@@ -4871,7 +4871,7 @@ Validate AtCamera Event atcamera_logevent_prepareToTakeImage Topic Columns
 
 Validate AtCamera Event atcamera_logevent_endShutterOpen Topic Byte Size
 	[Documentation]    Validate the atcamera_logevent_endShutterOpen topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[17]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
@@ -4907,7 +4907,7 @@ Validate AtCamera Event atcamera_logevent_endShutterOpen Topic Columns
 
 Validate AtCamera Event atcamera_logevent_startIntegration Topic Byte Size
 	[Documentation]    Validate the atcamera_logevent_startIntegration topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[18]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
@@ -4943,7 +4943,7 @@ Validate AtCamera Event atcamera_logevent_startIntegration Topic Columns
 
 Validate AtCamera Event atcamera_logevent_summaryState Topic Byte Size
 	[Documentation]    Validate the atcamera_logevent_summaryState topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[19]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
@@ -4979,7 +4979,7 @@ Validate AtCamera Event atcamera_logevent_summaryState Topic Columns
 
 Validate AtCamera Event atcamera_logevent_settingsApplied Topic Byte Size
 	[Documentation]    Validate the atcamera_logevent_settingsApplied topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[20]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
@@ -5015,7 +5015,7 @@ Validate AtCamera Event atcamera_logevent_settingsApplied Topic Columns
 
 Validate AtCamera Event atcamera_logevent_startShutterOpen Topic Byte Size
 	[Documentation]    Validate the atcamera_logevent_startShutterOpen topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[21]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
@@ -5051,7 +5051,7 @@ Validate AtCamera Event atcamera_logevent_startShutterOpen Topic Columns
 
 Validate AtCamera Event atcamera_logevent_raftsDetailedState Topic Byte Size
 	[Documentation]    Validate the atcamera_logevent_raftsDetailedState topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[22]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
@@ -5087,7 +5087,7 @@ Validate AtCamera Event atcamera_logevent_raftsDetailedState Topic Columns
 
 Validate AtCamera Event atcamera_logevent_startReadout Topic Byte Size
 	[Documentation]    Validate the atcamera_logevent_startReadout topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[23]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
@@ -5123,7 +5123,7 @@ Validate AtCamera Event atcamera_logevent_startReadout Topic Columns
 
 Validate AtCamera Event atcamera_logevent_shutterMotionProfile Topic Byte Size
 	[Documentation]    Validate the atcamera_logevent_shutterMotionProfile topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[24]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
@@ -5159,7 +5159,7 @@ Validate AtCamera Event atcamera_logevent_shutterMotionProfile Topic Columns
 
 Validate AtCamera Event atcamera_logevent_imageReadoutParameters Topic Byte Size
 	[Documentation]    Validate the atcamera_logevent_imageReadoutParameters topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[25]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
@@ -5195,7 +5195,7 @@ Validate AtCamera Event atcamera_logevent_imageReadoutParameters Topic Columns
 
 Validate AtCamera Event atcamera_logevent_bonnShutterSettingsApplied Topic Byte Size
 	[Documentation]    Validate the atcamera_logevent_bonnShutterSettingsApplied topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[26]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
@@ -5231,7 +5231,7 @@ Validate AtCamera Event atcamera_logevent_bonnShutterSettingsApplied Topic Colum
 
 Validate AtCamera Event atcamera_logevent_wrebSettingsApplied Topic Byte Size
 	[Documentation]    Validate the atcamera_logevent_wrebSettingsApplied topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[27]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Events.xml
@@ -5267,7 +5267,7 @@ Validate AtCamera Event atcamera_logevent_wrebSettingsApplied Topic Columns
 
 Validate AtCamera Telemetry atcamera_heartbeat Topic Byte Size
 	[Documentation]    Validate the atcamera_heartbeat topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Telemetry.xml
@@ -5303,7 +5303,7 @@ Validate AtCamera Telemetry atcamera_heartbeat Topic Columns
 
 Validate AtCamera Telemetry atcamera_wreb Topic Byte Size
 	[Documentation]    Validate the atcamera_wreb topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Telemetry.xml
@@ -5339,7 +5339,7 @@ Validate AtCamera Telemetry atcamera_wreb Topic Columns
 
 Validate AtCamera Telemetry atcamera_bonnShutter Topic Byte Size
 	[Documentation]    Validate the atcamera_bonnShutter topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[3]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Telemetry.xml
@@ -5375,7 +5375,7 @@ Validate AtCamera Telemetry atcamera_bonnShutter Topic Columns
 
 Validate AtCamera Telemetry atcamera_wrebPower Topic Byte Size
 	[Documentation]    Validate the atcamera_wrebPower topic is less than 65536 bytes in total.
-	[Tags]    smoke    AtCamera
+	[Tags]    smoke    AtCamera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[4]/item)" -n ${folder}/sal_interfaces/atcamera/atcamera_Telemetry.xml
@@ -5411,7 +5411,7 @@ Validate AtCamera Telemetry atcamera_wrebPower Topic Columns
 
 Validate ATCS Command atcs_command_disable Topic Byte Size
 	[Documentation]    Validate the atcs_command_disable topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATCS
+	[Tags]    smoke    ATCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/atcs/atcs_Commands.xml
@@ -5447,7 +5447,7 @@ Validate ATCS Command atcs_command_disable Topic Columns
 
 Validate ATCS Command atcs_command_enable Topic Byte Size
 	[Documentation]    Validate the atcs_command_enable topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATCS
+	[Tags]    smoke    ATCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/atcs/atcs_Commands.xml
@@ -5483,7 +5483,7 @@ Validate ATCS Command atcs_command_enable Topic Columns
 
 Validate ATCS Command atcs_command_exitControl Topic Byte Size
 	[Documentation]    Validate the atcs_command_exitControl topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATCS
+	[Tags]    smoke    ATCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/atcs/atcs_Commands.xml
@@ -5519,7 +5519,7 @@ Validate ATCS Command atcs_command_exitControl Topic Columns
 
 Validate ATCS Command atcs_command_standby Topic Byte Size
 	[Documentation]    Validate the atcs_command_standby topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATCS
+	[Tags]    smoke    ATCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/atcs/atcs_Commands.xml
@@ -5555,7 +5555,7 @@ Validate ATCS Command atcs_command_standby Topic Columns
 
 Validate ATCS Command atcs_command_start Topic Byte Size
 	[Documentation]    Validate the atcs_command_start topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATCS
+	[Tags]    smoke    ATCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/atcs/atcs_Commands.xml
@@ -5591,7 +5591,7 @@ Validate ATCS Command atcs_command_start Topic Columns
 
 Validate ATCS Command atcs_command_enterControl Topic Byte Size
 	[Documentation]    Validate the atcs_command_enterControl topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATCS
+	[Tags]    smoke    ATCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/atcs/atcs_Commands.xml
@@ -5627,7 +5627,7 @@ Validate ATCS Command atcs_command_enterControl Topic Columns
 
 Validate ATCS Command atcs_command_Target Topic Byte Size
 	[Documentation]    Validate the atcs_command_Target topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATCS
+	[Tags]    smoke    ATCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[7]/item)" -n ${folder}/sal_interfaces/atcs/atcs_Commands.xml
@@ -5663,7 +5663,7 @@ Validate ATCS Command atcs_command_Target Topic Columns
 
 Validate ATCS Command atcs_command_Offset Topic Byte Size
 	[Documentation]    Validate the atcs_command_Offset topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATCS
+	[Tags]    smoke    ATCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[8]/item)" -n ${folder}/sal_interfaces/atcs/atcs_Commands.xml
@@ -5699,7 +5699,7 @@ Validate ATCS Command atcs_command_Offset Topic Columns
 
 Validate ATCS Command atcs_command_SpectrographSetup Topic Byte Size
 	[Documentation]    Validate the atcs_command_SpectrographSetup topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATCS
+	[Tags]    smoke    ATCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[9]/item)" -n ${folder}/sal_interfaces/atcs/atcs_Commands.xml
@@ -5735,7 +5735,7 @@ Validate ATCS Command atcs_command_SpectrographSetup Topic Columns
 
 Validate ATCS Event atcs_logevent_AppliedSettingsMatchStart Topic Byte Size
 	[Documentation]    Validate the atcs_logevent_AppliedSettingsMatchStart topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATCS
+	[Tags]    smoke    ATCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/atcs/atcs_Events.xml
@@ -5771,7 +5771,7 @@ Validate ATCS Event atcs_logevent_AppliedSettingsMatchStart Topic Columns
 
 Validate ATCS Event atcs_logevent_ErrorCode Topic Byte Size
 	[Documentation]    Validate the atcs_logevent_ErrorCode topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATCS
+	[Tags]    smoke    ATCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/atcs/atcs_Events.xml
@@ -5807,7 +5807,7 @@ Validate ATCS Event atcs_logevent_ErrorCode Topic Columns
 
 Validate ATCS Event atcs_logevent_SummaryState Topic Byte Size
 	[Documentation]    Validate the atcs_logevent_SummaryState topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATCS
+	[Tags]    smoke    ATCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/atcs/atcs_Events.xml
@@ -5843,7 +5843,7 @@ Validate ATCS Event atcs_logevent_SummaryState Topic Columns
 
 Validate ATCS Event atcs_logevent_DetailedState Topic Byte Size
 	[Documentation]    Validate the atcs_logevent_DetailedState topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATCS
+	[Tags]    smoke    ATCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/atcs/atcs_Events.xml
@@ -5879,7 +5879,7 @@ Validate ATCS Event atcs_logevent_DetailedState Topic Columns
 
 Validate ATCS Event atcs_logevent_SpectrographInPosition Topic Byte Size
 	[Documentation]    Validate the atcs_logevent_SpectrographInPosition topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATCS
+	[Tags]    smoke    ATCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/atcs/atcs_Events.xml
@@ -5915,7 +5915,7 @@ Validate ATCS Event atcs_logevent_SpectrographInPosition Topic Columns
 
 Validate ATCS Event atcs_logevent_TelescopeInPosition Topic Byte Size
 	[Documentation]    Validate the atcs_logevent_TelescopeInPosition topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATCS
+	[Tags]    smoke    ATCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/atcs/atcs_Events.xml
@@ -5951,7 +5951,7 @@ Validate ATCS Event atcs_logevent_TelescopeInPosition Topic Columns
 
 Validate ATCS Event atcs_logevent_RejectedCommand Topic Byte Size
 	[Documentation]    Validate the atcs_logevent_RejectedCommand topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATCS
+	[Tags]    smoke    ATCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/atcs/atcs_Events.xml
@@ -5987,7 +5987,7 @@ Validate ATCS Event atcs_logevent_RejectedCommand Topic Columns
 
 Validate ATCS Event atcs_logevent_InternalCommand Topic Byte Size
 	[Documentation]    Validate the atcs_logevent_InternalCommand topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATCS
+	[Tags]    smoke    ATCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/atcs/atcs_Events.xml
@@ -6023,7 +6023,7 @@ Validate ATCS Event atcs_logevent_InternalCommand Topic Columns
 
 Validate ATCS Event atcs_logevent_Heartbeat Topic Byte Size
 	[Documentation]    Validate the atcs_logevent_Heartbeat topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATCS
+	[Tags]    smoke    ATCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/atcs/atcs_Events.xml
@@ -6059,7 +6059,7 @@ Validate ATCS Event atcs_logevent_Heartbeat Topic Columns
 
 Validate ATCS Event atcs_logevent_SettingVersions Topic Byte Size
 	[Documentation]    Validate the atcs_logevent_SettingVersions topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATCS
+	[Tags]    smoke    ATCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/atcs/atcs_Events.xml
@@ -6095,7 +6095,7 @@ Validate ATCS Event atcs_logevent_SettingVersions Topic Columns
 
 Validate ATCS Event atcs_logevent_LoopTimeOutOfRange Topic Byte Size
 	[Documentation]    Validate the atcs_logevent_LoopTimeOutOfRange topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATCS
+	[Tags]    smoke    ATCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/atcs/atcs_Events.xml
@@ -6131,7 +6131,7 @@ Validate ATCS Event atcs_logevent_LoopTimeOutOfRange Topic Columns
 
 Validate ATCS Event atcs_logevent_SettingsApplied_Example Topic Byte Size
 	[Documentation]    Validate the atcs_logevent_SettingsApplied_Example topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATCS
+	[Tags]    smoke    ATCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[12]/item)" -n ${folder}/sal_interfaces/atcs/atcs_Events.xml
@@ -6167,7 +6167,7 @@ Validate ATCS Event atcs_logevent_SettingsApplied_Example Topic Columns
 
 Validate ATCS Telemetry atcs_LoopTime_ms Topic Byte Size
 	[Documentation]    Validate the atcs_LoopTime_ms topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATCS
+	[Tags]    smoke    ATCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/atcs/atcs_Telemetry.xml
@@ -6203,7 +6203,7 @@ Validate ATCS Telemetry atcs_LoopTime_ms Topic Columns
 
 Validate ATCS Telemetry atcs_Timestamp Topic Byte Size
 	[Documentation]    Validate the atcs_Timestamp topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATCS
+	[Tags]    smoke    ATCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/atcs/atcs_Telemetry.xml
@@ -6239,7 +6239,7 @@ Validate ATCS Telemetry atcs_Timestamp Topic Columns
 
 Validate CalibrationElectrometer Command calibrationElectrometer_command_disable Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_disable topic is less than 65536 bytes in total.
-	[Tags]    smoke    CalibrationElectrometer
+	[Tags]    smoke    CalibrationElectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Commands.xml
@@ -6275,7 +6275,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_disable
 
 Validate CalibrationElectrometer Command calibrationElectrometer_command_enable Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_enable topic is less than 65536 bytes in total.
-	[Tags]    smoke    CalibrationElectrometer
+	[Tags]    smoke    CalibrationElectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Commands.xml
@@ -6311,7 +6311,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_enable 
 
 Validate CalibrationElectrometer Command calibrationElectrometer_command_performZeroCalib Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_performZeroCalib topic is less than 65536 bytes in total.
-	[Tags]    smoke    CalibrationElectrometer
+	[Tags]    smoke    CalibrationElectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Commands.xml
@@ -6347,7 +6347,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_perform
 
 Validate CalibrationElectrometer Command calibrationElectrometer_command_power Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_power topic is less than 65536 bytes in total.
-	[Tags]    smoke    CalibrationElectrometer
+	[Tags]    smoke    CalibrationElectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Commands.xml
@@ -6383,7 +6383,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_power T
 
 Validate CalibrationElectrometer Command calibrationElectrometer_command_setDigitalFilter Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_setDigitalFilter topic is less than 65536 bytes in total.
-	[Tags]    smoke    CalibrationElectrometer
+	[Tags]    smoke    CalibrationElectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Commands.xml
@@ -6419,7 +6419,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_setDigi
 
 Validate CalibrationElectrometer Command calibrationElectrometer_command_setIntegrationTime Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_setIntegrationTime topic is less than 65536 bytes in total.
-	[Tags]    smoke    CalibrationElectrometer
+	[Tags]    smoke    CalibrationElectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Commands.xml
@@ -6455,7 +6455,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_setInte
 
 Validate CalibrationElectrometer Command calibrationElectrometer_command_setMode Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_setMode topic is less than 65536 bytes in total.
-	[Tags]    smoke    CalibrationElectrometer
+	[Tags]    smoke    CalibrationElectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[7]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Commands.xml
@@ -6491,7 +6491,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_setMode
 
 Validate CalibrationElectrometer Command calibrationElectrometer_command_setRange Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_setRange topic is less than 65536 bytes in total.
-	[Tags]    smoke    CalibrationElectrometer
+	[Tags]    smoke    CalibrationElectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[8]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Commands.xml
@@ -6527,7 +6527,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_setRang
 
 Validate CalibrationElectrometer Command calibrationElectrometer_command_standby Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_standby topic is less than 65536 bytes in total.
-	[Tags]    smoke    CalibrationElectrometer
+	[Tags]    smoke    CalibrationElectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[9]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Commands.xml
@@ -6563,7 +6563,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_standby
 
 Validate CalibrationElectrometer Command calibrationElectrometer_command_start Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_start topic is less than 65536 bytes in total.
-	[Tags]    smoke    CalibrationElectrometer
+	[Tags]    smoke    CalibrationElectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[10]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Commands.xml
@@ -6599,7 +6599,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_start T
 
 Validate CalibrationElectrometer Command calibrationElectrometer_command_startScan Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_startScan topic is less than 65536 bytes in total.
-	[Tags]    smoke    CalibrationElectrometer
+	[Tags]    smoke    CalibrationElectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[11]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Commands.xml
@@ -6635,7 +6635,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_startSc
 
 Validate CalibrationElectrometer Command calibrationElectrometer_command_startScanDt Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_startScanDt topic is less than 65536 bytes in total.
-	[Tags]    smoke    CalibrationElectrometer
+	[Tags]    smoke    CalibrationElectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[12]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Commands.xml
@@ -6671,7 +6671,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_startSc
 
 Validate CalibrationElectrometer Command calibrationElectrometer_command_startScanReachIntensity Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_startScanReachIntensity topic is less than 65536 bytes in total.
-	[Tags]    smoke    CalibrationElectrometer
+	[Tags]    smoke    CalibrationElectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[13]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Commands.xml
@@ -6707,7 +6707,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_startSc
 
 Validate CalibrationElectrometer Command calibrationElectrometer_command_stopScan Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_stopScan topic is less than 65536 bytes in total.
-	[Tags]    smoke    CalibrationElectrometer
+	[Tags]    smoke    CalibrationElectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[14]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Commands.xml
@@ -6743,7 +6743,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_stopSca
 
 Validate CalibrationElectrometer Command calibrationElectrometer_command_exitControl Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_command_exitControl topic is less than 65536 bytes in total.
-	[Tags]    smoke    CalibrationElectrometer
+	[Tags]    smoke    CalibrationElectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[15]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Commands.xml
@@ -6779,7 +6779,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_exitCon
 
 Validate CalibrationElectrometer Event calibrationElectrometer_logevent_appliedSettingsMatchStart Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_appliedSettingsMatchStart topic is less than 65536 bytes in total.
-	[Tags]    smoke    CalibrationElectrometer
+	[Tags]    smoke    CalibrationElectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
@@ -6815,7 +6815,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_appliedS
 
 Validate CalibrationElectrometer Event calibrationElectrometer_logevent_detailedState Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_detailedState topic is less than 65536 bytes in total.
-	[Tags]    smoke    CalibrationElectrometer
+	[Tags]    smoke    CalibrationElectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
@@ -6851,7 +6851,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_detailed
 
 Validate CalibrationElectrometer Event calibrationElectrometer_logevent_digitalFilterChange Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_digitalFilterChange topic is less than 65536 bytes in total.
-	[Tags]    smoke    CalibrationElectrometer
+	[Tags]    smoke    CalibrationElectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
@@ -6887,7 +6887,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_digitalF
 
 Validate CalibrationElectrometer Event calibrationElectrometer_logevent_errorCode Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_errorCode topic is less than 65536 bytes in total.
-	[Tags]    smoke    CalibrationElectrometer
+	[Tags]    smoke    CalibrationElectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
@@ -6923,7 +6923,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_errorCod
 
 Validate CalibrationElectrometer Event calibrationElectrometer_logevent_heartbeat Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_heartbeat topic is less than 65536 bytes in total.
-	[Tags]    smoke    CalibrationElectrometer
+	[Tags]    smoke    CalibrationElectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
@@ -6959,7 +6959,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_heartbea
 
 Validate CalibrationElectrometer Event calibrationElectrometer_logevent_integrationTime Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_integrationTime topic is less than 65536 bytes in total.
-	[Tags]    smoke    CalibrationElectrometer
+	[Tags]    smoke    CalibrationElectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
@@ -6995,7 +6995,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_integrat
 
 Validate CalibrationElectrometer Event calibrationElectrometer_logevent_intensity Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_intensity topic is less than 65536 bytes in total.
-	[Tags]    smoke    CalibrationElectrometer
+	[Tags]    smoke    CalibrationElectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
@@ -7031,7 +7031,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_intensit
 
 Validate CalibrationElectrometer Event calibrationElectrometer_logevent_internalCommand Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_internalCommand topic is less than 65536 bytes in total.
-	[Tags]    smoke    CalibrationElectrometer
+	[Tags]    smoke    CalibrationElectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
@@ -7067,7 +7067,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_internal
 
 Validate CalibrationElectrometer Event calibrationElectrometer_logevent_largeFileObjectAvailable Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_largeFileObjectAvailable topic is less than 65536 bytes in total.
-	[Tags]    smoke    CalibrationElectrometer
+	[Tags]    smoke    CalibrationElectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
@@ -7103,7 +7103,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_largeFil
 
 Validate CalibrationElectrometer Event calibrationElectrometer_logevent_loopTimeOutOfRange Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_loopTimeOutOfRange topic is less than 65536 bytes in total.
-	[Tags]    smoke    CalibrationElectrometer
+	[Tags]    smoke    CalibrationElectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
@@ -7139,7 +7139,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_loopTime
 
 Validate CalibrationElectrometer Event calibrationElectrometer_logevent_measureRange Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_measureRange topic is less than 65536 bytes in total.
-	[Tags]    smoke    CalibrationElectrometer
+	[Tags]    smoke    CalibrationElectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
@@ -7175,7 +7175,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_measureR
 
 Validate CalibrationElectrometer Event calibrationElectrometer_logevent_measureType Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_measureType topic is less than 65536 bytes in total.
-	[Tags]    smoke    CalibrationElectrometer
+	[Tags]    smoke    CalibrationElectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[12]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
@@ -7211,7 +7211,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_measureT
 
 Validate CalibrationElectrometer Event calibrationElectrometer_logevent_readingOutOfLimit Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_readingOutOfLimit topic is less than 65536 bytes in total.
-	[Tags]    smoke    CalibrationElectrometer
+	[Tags]    smoke    CalibrationElectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[13]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
@@ -7247,7 +7247,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_readingO
 
 Validate CalibrationElectrometer Event calibrationElectrometer_logevent_rejectedCommand Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_rejectedCommand topic is less than 65536 bytes in total.
-	[Tags]    smoke    CalibrationElectrometer
+	[Tags]    smoke    CalibrationElectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[14]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
@@ -7283,7 +7283,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_rejected
 
 Validate CalibrationElectrometer Event calibrationElectrometer_logevent_settingsAppliedReadSets Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_settingsAppliedReadSets topic is less than 65536 bytes in total.
-	[Tags]    smoke    CalibrationElectrometer
+	[Tags]    smoke    CalibrationElectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[15]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
@@ -7319,7 +7319,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_settings
 
 Validate CalibrationElectrometer Event calibrationElectrometer_logevent_settingsAppliedSerConf Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_settingsAppliedSerConf topic is less than 65536 bytes in total.
-	[Tags]    smoke    CalibrationElectrometer
+	[Tags]    smoke    CalibrationElectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[16]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
@@ -7355,7 +7355,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_settings
 
 Validate CalibrationElectrometer Event calibrationElectrometer_logevent_settingVersions Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_settingVersions topic is less than 65536 bytes in total.
-	[Tags]    smoke    CalibrationElectrometer
+	[Tags]    smoke    CalibrationElectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[17]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
@@ -7391,7 +7391,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_settingV
 
 Validate CalibrationElectrometer Event calibrationElectrometer_logevent_summaryState Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_logevent_summaryState topic is less than 65536 bytes in total.
-	[Tags]    smoke    CalibrationElectrometer
+	[Tags]    smoke    CalibrationElectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[18]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
@@ -7427,7 +7427,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_summaryS
 
 Validate CalibrationElectrometer Telemetry calibrationElectrometer_loopTime Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_loopTime topic is less than 65536 bytes in total.
-	[Tags]    smoke    CalibrationElectrometer
+	[Tags]    smoke    CalibrationElectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Telemetry.xml
@@ -7463,7 +7463,7 @@ Validate CalibrationElectrometer Telemetry calibrationElectrometer_loopTime Topi
 
 Validate CalibrationElectrometer Telemetry calibrationElectrometer_timestamp Topic Byte Size
 	[Documentation]    Validate the calibrationElectrometer_timestamp topic is less than 65536 bytes in total.
-	[Tags]    smoke    CalibrationElectrometer
+	[Tags]    smoke    CalibrationElectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Telemetry.xml
@@ -7499,7 +7499,7 @@ Validate CalibrationElectrometer Telemetry calibrationElectrometer_timestamp Top
 
 Validate Camera Command camera_command_discardRows Topic Byte Size
 	[Documentation]    Validate the camera_command_discardRows topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
@@ -7535,7 +7535,7 @@ Validate Camera Command camera_command_discardRows Topic Columns
 
 Validate Camera Command camera_command_enable Topic Byte Size
 	[Documentation]    Validate the camera_command_enable topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
@@ -7571,7 +7571,7 @@ Validate Camera Command camera_command_enable Topic Columns
 
 Validate Camera Command camera_command_setValue Topic Byte Size
 	[Documentation]    Validate the camera_command_setValue topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
@@ -7607,7 +7607,7 @@ Validate Camera Command camera_command_setValue Topic Columns
 
 Validate Camera Command camera_command_startImage Topic Byte Size
 	[Documentation]    Validate the camera_command_startImage topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
@@ -7643,7 +7643,7 @@ Validate Camera Command camera_command_startImage Topic Columns
 
 Validate Camera Command camera_command_disableCalibration Topic Byte Size
 	[Documentation]    Validate the camera_command_disableCalibration topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
@@ -7679,7 +7679,7 @@ Validate Camera Command camera_command_disableCalibration Topic Columns
 
 Validate Camera Command camera_command_initGuiders Topic Byte Size
 	[Documentation]    Validate the camera_command_initGuiders topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
@@ -7715,7 +7715,7 @@ Validate Camera Command camera_command_initGuiders Topic Columns
 
 Validate Camera Command camera_command_standby Topic Byte Size
 	[Documentation]    Validate the camera_command_standby topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[7]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
@@ -7751,7 +7751,7 @@ Validate Camera Command camera_command_standby Topic Columns
 
 Validate Camera Command camera_command_enableCalibration Topic Byte Size
 	[Documentation]    Validate the camera_command_enableCalibration topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[8]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
@@ -7787,7 +7787,7 @@ Validate Camera Command camera_command_enableCalibration Topic Columns
 
 Validate Camera Command camera_command_initImage Topic Byte Size
 	[Documentation]    Validate the camera_command_initImage topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[9]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
@@ -7823,7 +7823,7 @@ Validate Camera Command camera_command_initImage Topic Columns
 
 Validate Camera Command camera_command_enterControl Topic Byte Size
 	[Documentation]    Validate the camera_command_enterControl topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[10]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
@@ -7859,7 +7859,7 @@ Validate Camera Command camera_command_enterControl Topic Columns
 
 Validate Camera Command camera_command_endImage Topic Byte Size
 	[Documentation]    Validate the camera_command_endImage topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[11]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
@@ -7895,7 +7895,7 @@ Validate Camera Command camera_command_endImage Topic Columns
 
 Validate Camera Command camera_command_setFilter Topic Byte Size
 	[Documentation]    Validate the camera_command_setFilter topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[12]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
@@ -7931,7 +7931,7 @@ Validate Camera Command camera_command_setFilter Topic Columns
 
 Validate Camera Command camera_command_disable Topic Byte Size
 	[Documentation]    Validate the camera_command_disable topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[13]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
@@ -7967,7 +7967,7 @@ Validate Camera Command camera_command_disable Topic Columns
 
 Validate Camera Command camera_command_abort Topic Byte Size
 	[Documentation]    Validate the camera_command_abort topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[14]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
@@ -8003,7 +8003,7 @@ Validate Camera Command camera_command_abort Topic Columns
 
 Validate Camera Command camera_command_clear Topic Byte Size
 	[Documentation]    Validate the camera_command_clear topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[15]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
@@ -8039,7 +8039,7 @@ Validate Camera Command camera_command_clear Topic Columns
 
 Validate Camera Command camera_command_exitControl Topic Byte Size
 	[Documentation]    Validate the camera_command_exitControl topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[16]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
@@ -8075,7 +8075,7 @@ Validate Camera Command camera_command_exitControl Topic Columns
 
 Validate Camera Command camera_command_takeImages Topic Byte Size
 	[Documentation]    Validate the camera_command_takeImages topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[17]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
@@ -8111,7 +8111,7 @@ Validate Camera Command camera_command_takeImages Topic Columns
 
 Validate Camera Command camera_command_start Topic Byte Size
 	[Documentation]    Validate the camera_command_start topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[18]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
@@ -8147,7 +8147,7 @@ Validate Camera Command camera_command_start Topic Columns
 
 Validate Camera Command camera_command_stop Topic Byte Size
 	[Documentation]    Validate the camera_command_stop topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[19]/item)" -n ${folder}/sal_interfaces/camera/camera_Commands.xml
@@ -8183,7 +8183,7 @@ Validate Camera Command camera_command_stop Topic Columns
 
 Validate Camera Event camera_logevent_offlineDetailedState Topic Byte Size
 	[Documentation]    Validate the camera_logevent_offlineDetailedState topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
@@ -8219,7 +8219,7 @@ Validate Camera Event camera_logevent_offlineDetailedState Topic Columns
 
 Validate Camera Event camera_logevent_endReadout Topic Byte Size
 	[Documentation]    Validate the camera_logevent_endReadout topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
@@ -8255,7 +8255,7 @@ Validate Camera Event camera_logevent_endReadout Topic Columns
 
 Validate Camera Event camera_logevent_endTakeImage Topic Byte Size
 	[Documentation]    Validate the camera_logevent_endTakeImage topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
@@ -8291,7 +8291,7 @@ Validate Camera Event camera_logevent_endTakeImage Topic Columns
 
 Validate Camera Event camera_logevent_imageReadinessDetailedState Topic Byte Size
 	[Documentation]    Validate the camera_logevent_imageReadinessDetailedState topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
@@ -8327,7 +8327,7 @@ Validate Camera Event camera_logevent_imageReadinessDetailedState Topic Columns
 
 Validate Camera Event camera_logevent_settingVersions Topic Byte Size
 	[Documentation]    Validate the camera_logevent_settingVersions topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
@@ -8363,7 +8363,7 @@ Validate Camera Event camera_logevent_settingVersions Topic Columns
 
 Validate Camera Event camera_logevent_startSetFilter Topic Byte Size
 	[Documentation]    Validate the camera_logevent_startSetFilter topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
@@ -8399,7 +8399,7 @@ Validate Camera Event camera_logevent_startSetFilter Topic Columns
 
 Validate Camera Event camera_logevent_startUnloadFilter Topic Byte Size
 	[Documentation]    Validate the camera_logevent_startUnloadFilter topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
@@ -8435,7 +8435,7 @@ Validate Camera Event camera_logevent_startUnloadFilter Topic Columns
 
 Validate Camera Event camera_logevent_notReadyToTakeImage Topic Byte Size
 	[Documentation]    Validate the camera_logevent_notReadyToTakeImage topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
@@ -8471,7 +8471,7 @@ Validate Camera Event camera_logevent_notReadyToTakeImage Topic Columns
 
 Validate Camera Event camera_logevent_startShutterClose Topic Byte Size
 	[Documentation]    Validate the camera_logevent_startShutterClose topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
@@ -8507,7 +8507,7 @@ Validate Camera Event camera_logevent_startShutterClose Topic Columns
 
 Validate Camera Event camera_logevent_appliedSettingsMatchStart Topic Byte Size
 	[Documentation]    Validate the camera_logevent_appliedSettingsMatchStart topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
@@ -8543,7 +8543,7 @@ Validate Camera Event camera_logevent_appliedSettingsMatchStart Topic Columns
 
 Validate Camera Event camera_logevent_errorCode Topic Byte Size
 	[Documentation]    Validate the camera_logevent_errorCode topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
@@ -8579,7 +8579,7 @@ Validate Camera Event camera_logevent_errorCode Topic Columns
 
 Validate Camera Event camera_logevent_endInitializeGuider Topic Byte Size
 	[Documentation]    Validate the camera_logevent_endInitializeGuider topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[12]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
@@ -8615,7 +8615,7 @@ Validate Camera Event camera_logevent_endInitializeGuider Topic Columns
 
 Validate Camera Event camera_logevent_endShutterClose Topic Byte Size
 	[Documentation]    Validate the camera_logevent_endShutterClose topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[13]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
@@ -8651,7 +8651,7 @@ Validate Camera Event camera_logevent_endShutterClose Topic Columns
 
 Validate Camera Event camera_logevent_endOfImageTelemetry Topic Byte Size
 	[Documentation]    Validate the camera_logevent_endOfImageTelemetry topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[14]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
@@ -8687,7 +8687,7 @@ Validate Camera Event camera_logevent_endOfImageTelemetry Topic Columns
 
 Validate Camera Event camera_logevent_endUnloadFilter Topic Byte Size
 	[Documentation]    Validate the camera_logevent_endUnloadFilter topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[15]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
@@ -8723,7 +8723,7 @@ Validate Camera Event camera_logevent_endUnloadFilter Topic Columns
 
 Validate Camera Event camera_logevent_calibrationDetailedState Topic Byte Size
 	[Documentation]    Validate the camera_logevent_calibrationDetailedState topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[16]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
@@ -8759,7 +8759,7 @@ Validate Camera Event camera_logevent_calibrationDetailedState Topic Columns
 
 Validate Camera Event camera_logevent_endRotateCarousel Topic Byte Size
 	[Documentation]    Validate the camera_logevent_endRotateCarousel topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[17]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
@@ -8795,7 +8795,7 @@ Validate Camera Event camera_logevent_endRotateCarousel Topic Columns
 
 Validate Camera Event camera_logevent_startLoadFilter Topic Byte Size
 	[Documentation]    Validate the camera_logevent_startLoadFilter topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[18]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
@@ -8831,7 +8831,7 @@ Validate Camera Event camera_logevent_startLoadFilter Topic Columns
 
 Validate Camera Event camera_logevent_filterChangerDetailedState Topic Byte Size
 	[Documentation]    Validate the camera_logevent_filterChangerDetailedState topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[19]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
@@ -8867,7 +8867,7 @@ Validate Camera Event camera_logevent_filterChangerDetailedState Topic Columns
 
 Validate Camera Event camera_logevent_shutterDetailedState Topic Byte Size
 	[Documentation]    Validate the camera_logevent_shutterDetailedState topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[20]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
@@ -8903,7 +8903,7 @@ Validate Camera Event camera_logevent_shutterDetailedState Topic Columns
 
 Validate Camera Event camera_logevent_readyToTakeImage Topic Byte Size
 	[Documentation]    Validate the camera_logevent_readyToTakeImage topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[21]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
@@ -8939,7 +8939,7 @@ Validate Camera Event camera_logevent_readyToTakeImage Topic Columns
 
 Validate Camera Event camera_logevent_ccsCommandState Topic Byte Size
 	[Documentation]    Validate the camera_logevent_ccsCommandState topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[22]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
@@ -8975,7 +8975,7 @@ Validate Camera Event camera_logevent_ccsCommandState Topic Columns
 
 Validate Camera Event camera_logevent_prepareToTakeImage Topic Byte Size
 	[Documentation]    Validate the camera_logevent_prepareToTakeImage topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[23]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
@@ -9011,7 +9011,7 @@ Validate Camera Event camera_logevent_prepareToTakeImage Topic Columns
 
 Validate Camera Event camera_logevent_ccsConfigured Topic Byte Size
 	[Documentation]    Validate the camera_logevent_ccsConfigured topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[24]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
@@ -9047,7 +9047,7 @@ Validate Camera Event camera_logevent_ccsConfigured Topic Columns
 
 Validate Camera Event camera_logevent_endLoadFilter Topic Byte Size
 	[Documentation]    Validate the camera_logevent_endLoadFilter topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[25]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
@@ -9083,7 +9083,7 @@ Validate Camera Event camera_logevent_endLoadFilter Topic Columns
 
 Validate Camera Event camera_logevent_endShutterOpen Topic Byte Size
 	[Documentation]    Validate the camera_logevent_endShutterOpen topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[26]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
@@ -9119,7 +9119,7 @@ Validate Camera Event camera_logevent_endShutterOpen Topic Columns
 
 Validate Camera Event camera_logevent_startIntegration Topic Byte Size
 	[Documentation]    Validate the camera_logevent_startIntegration topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[27]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
@@ -9155,7 +9155,7 @@ Validate Camera Event camera_logevent_startIntegration Topic Columns
 
 Validate Camera Event camera_logevent_summaryState Topic Byte Size
 	[Documentation]    Validate the camera_logevent_summaryState topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[28]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
@@ -9191,7 +9191,7 @@ Validate Camera Event camera_logevent_summaryState Topic Columns
 
 Validate Camera Event camera_logevent_endInitializeImage Topic Byte Size
 	[Documentation]    Validate the camera_logevent_endInitializeImage topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[29]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
@@ -9227,7 +9227,7 @@ Validate Camera Event camera_logevent_endInitializeImage Topic Columns
 
 Validate Camera Event camera_logevent_settingsApplied Topic Byte Size
 	[Documentation]    Validate the camera_logevent_settingsApplied topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[30]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
@@ -9263,7 +9263,7 @@ Validate Camera Event camera_logevent_settingsApplied Topic Columns
 
 Validate Camera Event camera_logevent_endSetFilter Topic Byte Size
 	[Documentation]    Validate the camera_logevent_endSetFilter topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[31]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
@@ -9299,7 +9299,7 @@ Validate Camera Event camera_logevent_endSetFilter Topic Columns
 
 Validate Camera Event camera_logevent_startShutterOpen Topic Byte Size
 	[Documentation]    Validate the camera_logevent_startShutterOpen topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[32]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
@@ -9335,7 +9335,7 @@ Validate Camera Event camera_logevent_startShutterOpen Topic Columns
 
 Validate Camera Event camera_logevent_raftsDetailedState Topic Byte Size
 	[Documentation]    Validate the camera_logevent_raftsDetailedState topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[33]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
@@ -9371,7 +9371,7 @@ Validate Camera Event camera_logevent_raftsDetailedState Topic Columns
 
 Validate Camera Event camera_logevent_availableFilters Topic Byte Size
 	[Documentation]    Validate the camera_logevent_availableFilters topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[34]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
@@ -9407,7 +9407,7 @@ Validate Camera Event camera_logevent_availableFilters Topic Columns
 
 Validate Camera Event camera_logevent_startReadout Topic Byte Size
 	[Documentation]    Validate the camera_logevent_startReadout topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[35]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
@@ -9443,7 +9443,7 @@ Validate Camera Event camera_logevent_startReadout Topic Columns
 
 Validate Camera Event camera_logevent_startRotateCarousel Topic Byte Size
 	[Documentation]    Validate the camera_logevent_startRotateCarousel topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[36]/item)" -n ${folder}/sal_interfaces/camera/camera_Events.xml
@@ -9479,7 +9479,7 @@ Validate Camera Event camera_logevent_startRotateCarousel Topic Columns
 
 Validate Camera Telemetry camera_shutter Topic Byte Size
 	[Documentation]    Validate the camera_shutter topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/camera/camera_Telemetry.xml
@@ -9515,7 +9515,7 @@ Validate Camera Telemetry camera_shutter Topic Columns
 
 Validate Camera Telemetry camera_prot Topic Byte Size
 	[Documentation]    Validate the camera_prot topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/camera/camera_Telemetry.xml
@@ -9551,7 +9551,7 @@ Validate Camera Telemetry camera_prot Topic Columns
 
 Validate Camera Telemetry camera_filter Topic Byte Size
 	[Documentation]    Validate the camera_filter topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[3]/item)" -n ${folder}/sal_interfaces/camera/camera_Telemetry.xml
@@ -9587,7 +9587,7 @@ Validate Camera Telemetry camera_filter Topic Columns
 
 Validate Camera Telemetry camera_heartbeat Topic Byte Size
 	[Documentation]    Validate the camera_heartbeat topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[4]/item)" -n ${folder}/sal_interfaces/camera/camera_Telemetry.xml
@@ -9623,7 +9623,7 @@ Validate Camera Telemetry camera_heartbeat Topic Columns
 
 Validate Camera Telemetry camera_was Topic Byte Size
 	[Documentation]    Validate the camera_was topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[5]/item)" -n ${folder}/sal_interfaces/camera/camera_Telemetry.xml
@@ -9659,7 +9659,7 @@ Validate Camera Telemetry camera_was Topic Columns
 
 Validate Camera Telemetry camera_ccs Topic Byte Size
 	[Documentation]    Validate the camera_ccs topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[6]/item)" -n ${folder}/sal_interfaces/camera/camera_Telemetry.xml
@@ -9695,7 +9695,7 @@ Validate Camera Telemetry camera_ccs Topic Columns
 
 Validate Camera Telemetry camera_clusterEncoder Topic Byte Size
 	[Documentation]    Validate the camera_clusterEncoder topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[7]/item)" -n ${folder}/sal_interfaces/camera/camera_Telemetry.xml
@@ -9731,7 +9731,7 @@ Validate Camera Telemetry camera_clusterEncoder Topic Columns
 
 Validate Camera Telemetry camera_cyro Topic Byte Size
 	[Documentation]    Validate the camera_cyro topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[8]/item)" -n ${folder}/sal_interfaces/camera/camera_Telemetry.xml
@@ -9767,7 +9767,7 @@ Validate Camera Telemetry camera_cyro Topic Columns
 
 Validate Camera Telemetry camera_purge Topic Byte Size
 	[Documentation]    Validate the camera_purge topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[9]/item)" -n ${folder}/sal_interfaces/camera/camera_Telemetry.xml
@@ -9803,7 +9803,7 @@ Validate Camera Telemetry camera_purge Topic Columns
 
 Validate Camera Telemetry camera_wds Topic Byte Size
 	[Documentation]    Validate the camera_wds topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[10]/item)" -n ${folder}/sal_interfaces/camera/camera_Telemetry.xml
@@ -9839,7 +9839,7 @@ Validate Camera Telemetry camera_wds Topic Columns
 
 Validate Camera Telemetry camera_gds Topic Byte Size
 	[Documentation]    Validate the camera_gds topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[11]/item)" -n ${folder}/sal_interfaces/camera/camera_Telemetry.xml
@@ -9875,7 +9875,7 @@ Validate Camera Telemetry camera_gds Topic Columns
 
 Validate Camera Telemetry camera_sds Topic Byte Size
 	[Documentation]    Validate the camera_sds topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[12]/item)" -n ${folder}/sal_interfaces/camera/camera_Telemetry.xml
@@ -9911,7 +9911,7 @@ Validate Camera Telemetry camera_sds Topic Columns
 
 Validate Camera Telemetry camera_gas Topic Byte Size
 	[Documentation]    Validate the camera_gas topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[13]/item)" -n ${folder}/sal_interfaces/camera/camera_Telemetry.xml
@@ -9947,7 +9947,7 @@ Validate Camera Telemetry camera_gas Topic Columns
 
 Validate Camera Telemetry camera_pcms Topic Byte Size
 	[Documentation]    Validate the camera_pcms topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[14]/item)" -n ${folder}/sal_interfaces/camera/camera_Telemetry.xml
@@ -9983,7 +9983,7 @@ Validate Camera Telemetry camera_pcms Topic Columns
 
 Validate Camera Telemetry camera_sas Topic Byte Size
 	[Documentation]    Validate the camera_sas topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[15]/item)" -n ${folder}/sal_interfaces/camera/camera_Telemetry.xml
@@ -10019,7 +10019,7 @@ Validate Camera Telemetry camera_sas Topic Columns
 
 Validate Camera Telemetry camera_cold Topic Byte Size
 	[Documentation]    Validate the camera_cold topic is less than 65536 bytes in total.
-	[Tags]    smoke    Camera
+	[Tags]    smoke    Camera    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[16]/item)" -n ${folder}/sal_interfaces/camera/camera_Telemetry.xml
@@ -10053,9 +10053,657 @@ Validate Camera Telemetry camera_cold Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
+Validate CatchupArchiver Command catchupArchiver_command_enterControl Topic Byte Size
+	[Documentation]    Validate the catchupArchiver_command_enterControl topic is less than 65536 bytes in total.
+	[Tags]    smoke    CatchupArchiver    
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/Count" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate CatchupArchiver Command catchupArchiver_command_enterControl Topic Columns
+	[Documentation]    Validate the catchupArchiver_command_enterControl topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    CatchupArchiver
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/Count" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate CatchupArchiver Command catchupArchiver_command_standby Topic Byte Size
+	[Documentation]    Validate the catchupArchiver_command_standby topic is less than 65536 bytes in total.
+	[Tags]    smoke    CatchupArchiver    
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[2]/item/Count" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate CatchupArchiver Command catchupArchiver_command_standby Topic Columns
+	[Documentation]    Validate the catchupArchiver_command_standby topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    CatchupArchiver
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[2]/item/Count" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate CatchupArchiver Command catchupArchiver_command_abort Topic Byte Size
+	[Documentation]    Validate the catchupArchiver_command_abort topic is less than 65536 bytes in total.
+	[Tags]    smoke    CatchupArchiver    
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[3]/item/Count" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[3]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate CatchupArchiver Command catchupArchiver_command_abort Topic Columns
+	[Documentation]    Validate the catchupArchiver_command_abort topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    CatchupArchiver
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[3]/item/Count" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate CatchupArchiver Command catchupArchiver_command_setValue Topic Byte Size
+	[Documentation]    Validate the catchupArchiver_command_setValue topic is less than 65536 bytes in total.
+	[Tags]    smoke    CatchupArchiver    
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[4]/item/Count" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate CatchupArchiver Command catchupArchiver_command_setValue Topic Columns
+	[Documentation]    Validate the catchupArchiver_command_setValue topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    CatchupArchiver
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[4]/item/Count" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate CatchupArchiver Command catchupArchiver_command_enable Topic Byte Size
+	[Documentation]    Validate the catchupArchiver_command_enable topic is less than 65536 bytes in total.
+	[Tags]    smoke    CatchupArchiver    
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[5]/item/Count" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate CatchupArchiver Command catchupArchiver_command_enable Topic Columns
+	[Documentation]    Validate the catchupArchiver_command_enable topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    CatchupArchiver
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[5]/item/Count" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate CatchupArchiver Command catchupArchiver_command_exitControl Topic Byte Size
+	[Documentation]    Validate the catchupArchiver_command_exitControl topic is less than 65536 bytes in total.
+	[Tags]    smoke    CatchupArchiver    
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[6]/item/Count" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[6]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate CatchupArchiver Command catchupArchiver_command_exitControl Topic Columns
+	[Documentation]    Validate the catchupArchiver_command_exitControl topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    CatchupArchiver
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[6]/item/Count" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate CatchupArchiver Command catchupArchiver_command_disable Topic Byte Size
+	[Documentation]    Validate the catchupArchiver_command_disable topic is less than 65536 bytes in total.
+	[Tags]    smoke    CatchupArchiver    
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[7]/item)" -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[7]/item/Count" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[7]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate CatchupArchiver Command catchupArchiver_command_disable Topic Columns
+	[Documentation]    Validate the catchupArchiver_command_disable topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    CatchupArchiver
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[7]/item)" -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[7]/item/Count" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate CatchupArchiver Command catchupArchiver_command_start Topic Byte Size
+	[Documentation]    Validate the catchupArchiver_command_start topic is less than 65536 bytes in total.
+	[Tags]    smoke    CatchupArchiver    
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[8]/item)" -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[8]/item/Count" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[8]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate CatchupArchiver Command catchupArchiver_command_start Topic Columns
+	[Documentation]    Validate the catchupArchiver_command_start topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    CatchupArchiver
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[8]/item)" -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[8]/item/Count" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate CatchupArchiver Event catchupArchiver_logevent_catchuparchiverEntityStartup Topic Byte Size
+	[Documentation]    Validate the catchupArchiver_logevent_catchuparchiverEntityStartup topic is less than 65536 bytes in total.
+	[Tags]    smoke    CatchupArchiver    
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[1]/item/Count" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[1]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate CatchupArchiver Event catchupArchiver_logevent_catchuparchiverEntityStartup Topic Columns
+	[Documentation]    Validate the catchupArchiver_logevent_catchuparchiverEntityStartup topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    CatchupArchiver
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[1]/item/Count" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate CatchupArchiver Event catchupArchiver_logevent_settingsApplied Topic Byte Size
+	[Documentation]    Validate the catchupArchiver_logevent_settingsApplied topic is less than 65536 bytes in total.
+	[Tags]    smoke    CatchupArchiver    
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/Count" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate CatchupArchiver Event catchupArchiver_logevent_settingsApplied Topic Columns
+	[Documentation]    Validate the catchupArchiver_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    CatchupArchiver
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/Count" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate CatchupArchiver Event catchupArchiver_logevent_appliedSettingsMatchStart Topic Byte Size
+	[Documentation]    Validate the catchupArchiver_logevent_appliedSettingsMatchStart topic is less than 65536 bytes in total.
+	[Tags]    smoke    CatchupArchiver    
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/Count" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate CatchupArchiver Event catchupArchiver_logevent_appliedSettingsMatchStart Topic Columns
+	[Documentation]    Validate the catchupArchiver_logevent_appliedSettingsMatchStart topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    CatchupArchiver
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/Count" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate CatchupArchiver Event catchupArchiver_logevent_settingVersions Topic Byte Size
+	[Documentation]    Validate the catchupArchiver_logevent_settingVersions topic is less than 65536 bytes in total.
+	[Tags]    smoke    CatchupArchiver    
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate CatchupArchiver Event catchupArchiver_logevent_settingVersions Topic Columns
+	[Documentation]    Validate the catchupArchiver_logevent_settingVersions topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    CatchupArchiver
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate CatchupArchiver Event catchupArchiver_logevent_detailedState Topic Byte Size
+	[Documentation]    Validate the catchupArchiver_logevent_detailedState topic is less than 65536 bytes in total.
+	[Tags]    smoke    CatchupArchiver    
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate CatchupArchiver Event catchupArchiver_logevent_detailedState Topic Columns
+	[Documentation]    Validate the catchupArchiver_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    CatchupArchiver
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate CatchupArchiver Event catchupArchiver_logevent_summaryState Topic Byte Size
+	[Documentation]    Validate the catchupArchiver_logevent_summaryState topic is less than 65536 bytes in total.
+	[Tags]    smoke    CatchupArchiver    
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/Count" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate CatchupArchiver Event catchupArchiver_logevent_summaryState Topic Columns
+	[Documentation]    Validate the catchupArchiver_logevent_summaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    CatchupArchiver
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/Count" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate CatchupArchiver Event catchupArchiver_logevent_catchuparchiverEntitySummaryState Topic Byte Size
+	[Documentation]    Validate the catchupArchiver_logevent_catchuparchiverEntitySummaryState topic is less than 65536 bytes in total.
+	[Tags]    smoke    CatchupArchiver    
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/Count" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate CatchupArchiver Event catchupArchiver_logevent_catchuparchiverEntitySummaryState Topic Columns
+	[Documentation]    Validate the catchupArchiver_logevent_catchuparchiverEntitySummaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    CatchupArchiver
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/Count" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate CatchupArchiver Event catchupArchiver_logevent_errorCode Topic Byte Size
+	[Documentation]    Validate the catchupArchiver_logevent_errorCode topic is less than 65536 bytes in total.
+	[Tags]    smoke    CatchupArchiver    
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/Count" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate CatchupArchiver Event catchupArchiver_logevent_errorCode Topic Columns
+	[Documentation]    Validate the catchupArchiver_logevent_errorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    CatchupArchiver
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/Count" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate CatchupArchiver Event catchupArchiver_logevent_catchuparchiverEntityShutdown Topic Byte Size
+	[Documentation]    Validate the catchupArchiver_logevent_catchuparchiverEntityShutdown topic is less than 65536 bytes in total.
+	[Tags]    smoke    CatchupArchiver    
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/Count" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate CatchupArchiver Event catchupArchiver_logevent_catchuparchiverEntityShutdown Topic Columns
+	[Documentation]    Validate the catchupArchiver_logevent_catchuparchiverEntityShutdown topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    CatchupArchiver
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/Count" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate CatchupArchiver Telemetry catchupArchiver_sequencerHeartbeat Topic Byte Size
+	[Documentation]    Validate the catchupArchiver_sequencerHeartbeat topic is less than 65536 bytes in total.
+	[Tags]    smoke    CatchupArchiver    
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/Count" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate CatchupArchiver Telemetry catchupArchiver_sequencerHeartbeat Topic Columns
+	[Documentation]    Validate the catchupArchiver_sequencerHeartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    CatchupArchiver
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/Count" -v . -n ${folder}/sal_interfaces/catchuparchiver/catchuparchiver_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
 Validate Dome Command dome_command_Crawl Topic Byte Size
 	[Documentation]    Validate the dome_command_Crawl topic is less than 65536 bytes in total.
-	[Tags]    smoke    Dome
+	[Tags]    smoke    Dome    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/dome/dome_Commands.xml
@@ -10091,7 +10739,7 @@ Validate Dome Command dome_command_Crawl Topic Columns
 
 Validate Dome Command dome_command_Move Topic Byte Size
 	[Documentation]    Validate the dome_command_Move topic is less than 65536 bytes in total.
-	[Tags]    smoke    Dome
+	[Tags]    smoke    Dome    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/dome/dome_Commands.xml
@@ -10127,7 +10775,7 @@ Validate Dome Command dome_command_Move Topic Columns
 
 Validate Dome Command dome_command_Park Topic Byte Size
 	[Documentation]    Validate the dome_command_Park topic is less than 65536 bytes in total.
-	[Tags]    smoke    Dome
+	[Tags]    smoke    Dome    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/dome/dome_Commands.xml
@@ -10163,7 +10811,7 @@ Validate Dome Command dome_command_Park Topic Columns
 
 Validate Dome Command dome_command_SetLouvers Topic Byte Size
 	[Documentation]    Validate the dome_command_SetLouvers topic is less than 65536 bytes in total.
-	[Tags]    smoke    Dome
+	[Tags]    smoke    Dome    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/dome/dome_Commands.xml
@@ -10199,7 +10847,7 @@ Validate Dome Command dome_command_SetLouvers Topic Columns
 
 Validate Dome Command dome_command_CloseShutter Topic Byte Size
 	[Documentation]    Validate the dome_command_CloseShutter topic is less than 65536 bytes in total.
-	[Tags]    smoke    Dome
+	[Tags]    smoke    Dome    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/dome/dome_Commands.xml
@@ -10235,7 +10883,7 @@ Validate Dome Command dome_command_CloseShutter Topic Columns
 
 Validate Dome Command dome_command_OpenShutter Topic Byte Size
 	[Documentation]    Validate the dome_command_OpenShutter topic is less than 65536 bytes in total.
-	[Tags]    smoke    Dome
+	[Tags]    smoke    Dome    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/dome/dome_Commands.xml
@@ -10271,7 +10919,7 @@ Validate Dome Command dome_command_OpenShutter Topic Columns
 
 Validate Dome Command dome_command_StopShutter Topic Byte Size
 	[Documentation]    Validate the dome_command_StopShutter topic is less than 65536 bytes in total.
-	[Tags]    smoke    Dome
+	[Tags]    smoke    Dome    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[7]/item)" -n ${folder}/sal_interfaces/dome/dome_Commands.xml
@@ -10307,7 +10955,7 @@ Validate Dome Command dome_command_StopShutter Topic Columns
 
 Validate Dome Event dome_logevent_StateChanged Topic Byte Size
 	[Documentation]    Validate the dome_logevent_StateChanged topic is less than 65536 bytes in total.
-	[Tags]    smoke    Dome
+	[Tags]    smoke    Dome    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/dome/dome_Events.xml
@@ -10343,7 +10991,7 @@ Validate Dome Event dome_logevent_StateChanged Topic Columns
 
 Validate Dome Telemetry dome_Summary Topic Byte Size
 	[Documentation]    Validate the dome_Summary topic is less than 65536 bytes in total.
-	[Tags]    smoke    Dome
+	[Tags]    smoke    Dome    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/dome/dome_Telemetry.xml
@@ -10379,7 +11027,7 @@ Validate Dome Telemetry dome_Summary Topic Columns
 
 Validate DomeADB Command domeADB_command_Crawl Topic Byte Size
 	[Documentation]    Validate the domeADB_command_Crawl topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeADB
+	[Tags]    smoke    DomeADB    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/domeADB/domeADB_Commands.xml
@@ -10415,7 +11063,7 @@ Validate DomeADB Command domeADB_command_Crawl Topic Columns
 
 Validate DomeADB Command domeADB_command_Move Topic Byte Size
 	[Documentation]    Validate the domeADB_command_Move topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeADB
+	[Tags]    smoke    DomeADB    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/domeADB/domeADB_Commands.xml
@@ -10451,7 +11099,7 @@ Validate DomeADB Command domeADB_command_Move Topic Columns
 
 Validate DomeADB Command domeADB_command_VelocityMove Topic Byte Size
 	[Documentation]    Validate the domeADB_command_VelocityMove topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeADB
+	[Tags]    smoke    DomeADB    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/domeADB/domeADB_Commands.xml
@@ -10487,7 +11135,7 @@ Validate DomeADB Command domeADB_command_VelocityMove Topic Columns
 
 Validate DomeADB Command domeADB_command_Echo Topic Byte Size
 	[Documentation]    Validate the domeADB_command_Echo topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeADB
+	[Tags]    smoke    DomeADB    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/domeADB/domeADB_Commands.xml
@@ -10523,7 +11171,7 @@ Validate DomeADB Command domeADB_command_Echo Topic Columns
 
 Validate DomeADB Event domeADB_logevent_StateChanged Topic Byte Size
 	[Documentation]    Validate the domeADB_logevent_StateChanged topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeADB
+	[Tags]    smoke    DomeADB    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/domeADB/domeADB_Events.xml
@@ -10559,7 +11207,7 @@ Validate DomeADB Event domeADB_logevent_StateChanged Topic Columns
 
 Validate DomeADB Event domeADB_logevent_DriveEnabled Topic Byte Size
 	[Documentation]    Validate the domeADB_logevent_DriveEnabled topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeADB
+	[Tags]    smoke    DomeADB    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/domeADB/domeADB_Events.xml
@@ -10595,7 +11243,7 @@ Validate DomeADB Event domeADB_logevent_DriveEnabled Topic Columns
 
 Validate DomeADB Event domeADB_logevent_DriveDisabled Topic Byte Size
 	[Documentation]    Validate the domeADB_logevent_DriveDisabled topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeADB
+	[Tags]    smoke    DomeADB    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/domeADB/domeADB_Events.xml
@@ -10631,7 +11279,7 @@ Validate DomeADB Event domeADB_logevent_DriveDisabled Topic Columns
 
 Validate DomeADB Event domeADB_logevent_DriveReady Topic Byte Size
 	[Documentation]    Validate the domeADB_logevent_DriveReady topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeADB
+	[Tags]    smoke    DomeADB    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/domeADB/domeADB_Events.xml
@@ -10667,7 +11315,7 @@ Validate DomeADB Event domeADB_logevent_DriveReady Topic Columns
 
 Validate DomeADB Event domeADB_logevent_DriveOverTemp Topic Byte Size
 	[Documentation]    Validate the domeADB_logevent_DriveOverTemp topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeADB
+	[Tags]    smoke    DomeADB    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/domeADB/domeADB_Events.xml
@@ -10703,7 +11351,7 @@ Validate DomeADB Event domeADB_logevent_DriveOverTemp Topic Columns
 
 Validate DomeADB Event domeADB_logevent_DriveFault Topic Byte Size
 	[Documentation]    Validate the domeADB_logevent_DriveFault topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeADB
+	[Tags]    smoke    DomeADB    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/domeADB/domeADB_Events.xml
@@ -10739,7 +11387,7 @@ Validate DomeADB Event domeADB_logevent_DriveFault Topic Columns
 
 Validate DomeADB Event domeADB_logevent_RotationEnabled Topic Byte Size
 	[Documentation]    Validate the domeADB_logevent_RotationEnabled topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeADB
+	[Tags]    smoke    DomeADB    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/domeADB/domeADB_Events.xml
@@ -10775,7 +11423,7 @@ Validate DomeADB Event domeADB_logevent_RotationEnabled Topic Columns
 
 Validate DomeADB Event domeADB_logevent_RotationPrevented Topic Byte Size
 	[Documentation]    Validate the domeADB_logevent_RotationPrevented topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeADB
+	[Tags]    smoke    DomeADB    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/domeADB/domeADB_Events.xml
@@ -10811,7 +11459,7 @@ Validate DomeADB Event domeADB_logevent_RotationPrevented Topic Columns
 
 Validate DomeADB Event domeADB_logevent_LockingPinEngaged Topic Byte Size
 	[Documentation]    Validate the domeADB_logevent_LockingPinEngaged topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeADB
+	[Tags]    smoke    DomeADB    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/domeADB/domeADB_Events.xml
@@ -10847,7 +11495,7 @@ Validate DomeADB Event domeADB_logevent_LockingPinEngaged Topic Columns
 
 Validate DomeADB Event domeADB_logevent_LockingPinDisengaged Topic Byte Size
 	[Documentation]    Validate the domeADB_logevent_LockingPinDisengaged topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeADB
+	[Tags]    smoke    DomeADB    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/domeADB/domeADB_Events.xml
@@ -10883,7 +11531,7 @@ Validate DomeADB Event domeADB_logevent_LockingPinDisengaged Topic Columns
 
 Validate DomeADB Event domeADB_logevent_BrakeEngaged Topic Byte Size
 	[Documentation]    Validate the domeADB_logevent_BrakeEngaged topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeADB
+	[Tags]    smoke    DomeADB    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/domeADB/domeADB_Events.xml
@@ -10919,7 +11567,7 @@ Validate DomeADB Event domeADB_logevent_BrakeEngaged Topic Columns
 
 Validate DomeADB Event domeADB_logevent_BrakeDisengaged Topic Byte Size
 	[Documentation]    Validate the domeADB_logevent_BrakeDisengaged topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeADB
+	[Tags]    smoke    DomeADB    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[12]/item)" -n ${folder}/sal_interfaces/domeADB/domeADB_Events.xml
@@ -10955,7 +11603,7 @@ Validate DomeADB Event domeADB_logevent_BrakeDisengaged Topic Columns
 
 Validate DomeADB Event domeADB_logevent_SpeedLimitReached Topic Byte Size
 	[Documentation]    Validate the domeADB_logevent_SpeedLimitReached topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeADB
+	[Tags]    smoke    DomeADB    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[13]/item)" -n ${folder}/sal_interfaces/domeADB/domeADB_Events.xml
@@ -10991,7 +11639,7 @@ Validate DomeADB Event domeADB_logevent_SpeedLimitReached Topic Columns
 
 Validate DomeADB Event domeADB_logevent_AccelerationLimitReached Topic Byte Size
 	[Documentation]    Validate the domeADB_logevent_AccelerationLimitReached topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeADB
+	[Tags]    smoke    DomeADB    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[14]/item)" -n ${folder}/sal_interfaces/domeADB/domeADB_Events.xml
@@ -11027,7 +11675,7 @@ Validate DomeADB Event domeADB_logevent_AccelerationLimitReached Topic Columns
 
 Validate DomeADB Event domeADB_logevent_SpeedLimitSubsided Topic Byte Size
 	[Documentation]    Validate the domeADB_logevent_SpeedLimitSubsided topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeADB
+	[Tags]    smoke    DomeADB    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[15]/item)" -n ${folder}/sal_interfaces/domeADB/domeADB_Events.xml
@@ -11063,7 +11711,7 @@ Validate DomeADB Event domeADB_logevent_SpeedLimitSubsided Topic Columns
 
 Validate DomeADB Event domeADB_logevent_AccelerationLimitSubsided Topic Byte Size
 	[Documentation]    Validate the domeADB_logevent_AccelerationLimitSubsided topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeADB
+	[Tags]    smoke    DomeADB    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[16]/item)" -n ${folder}/sal_interfaces/domeADB/domeADB_Events.xml
@@ -11099,7 +11747,7 @@ Validate DomeADB Event domeADB_logevent_AccelerationLimitSubsided Topic Columns
 
 Validate DomeADB Event domeADB_logevent_EchoResponse Topic Byte Size
 	[Documentation]    Validate the domeADB_logevent_EchoResponse topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeADB
+	[Tags]    smoke    DomeADB    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[17]/item)" -n ${folder}/sal_interfaces/domeADB/domeADB_Events.xml
@@ -11135,7 +11783,7 @@ Validate DomeADB Event domeADB_logevent_EchoResponse Topic Columns
 
 Validate DomeADB Event domeADB_logevent_MotionModeChanged Topic Byte Size
 	[Documentation]    Validate the domeADB_logevent_MotionModeChanged topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeADB
+	[Tags]    smoke    DomeADB    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[18]/item)" -n ${folder}/sal_interfaces/domeADB/domeADB_Events.xml
@@ -11171,7 +11819,7 @@ Validate DomeADB Event domeADB_logevent_MotionModeChanged Topic Columns
 
 Validate DomeADB Event domeADB_logevent_SubsystemError Topic Byte Size
 	[Documentation]    Validate the domeADB_logevent_SubsystemError topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeADB
+	[Tags]    smoke    DomeADB    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[19]/item)" -n ${folder}/sal_interfaces/domeADB/domeADB_Events.xml
@@ -11207,7 +11855,7 @@ Validate DomeADB Event domeADB_logevent_SubsystemError Topic Columns
 
 Validate DomeADB Telemetry domeADB_status Topic Byte Size
 	[Documentation]    Validate the domeADB_status topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeADB
+	[Tags]    smoke    DomeADB    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/domeADB/domeADB_Telemetry.xml
@@ -11243,7 +11891,7 @@ Validate DomeADB Telemetry domeADB_status Topic Columns
 
 Validate DomeAPS Command domeAPS_command_Close Topic Byte Size
 	[Documentation]    Validate the domeAPS_command_Close topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeAPS
+	[Tags]    smoke    DomeAPS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/domeAPS/domeAPS_Commands.xml
@@ -11279,7 +11927,7 @@ Validate DomeAPS Command domeAPS_command_Close Topic Columns
 
 Validate DomeAPS Command domeAPS_command_Open Topic Byte Size
 	[Documentation]    Validate the domeAPS_command_Open topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeAPS
+	[Tags]    smoke    DomeAPS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/domeAPS/domeAPS_Commands.xml
@@ -11315,7 +11963,7 @@ Validate DomeAPS Command domeAPS_command_Open Topic Columns
 
 Validate DomeAPS Command domeAPS_command_Echo Topic Byte Size
 	[Documentation]    Validate the domeAPS_command_Echo topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeAPS
+	[Tags]    smoke    DomeAPS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/domeAPS/domeAPS_Commands.xml
@@ -11351,7 +11999,7 @@ Validate DomeAPS Command domeAPS_command_Echo Topic Columns
 
 Validate DomeAPS Event domeAPS_logevent_StateChanged Topic Byte Size
 	[Documentation]    Validate the domeAPS_logevent_StateChanged topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeAPS
+	[Tags]    smoke    DomeAPS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/domeAPS/domeAPS_Events.xml
@@ -11387,7 +12035,7 @@ Validate DomeAPS Event domeAPS_logevent_StateChanged Topic Columns
 
 Validate DomeAPS Event domeAPS_logevent_DriveEnabled Topic Byte Size
 	[Documentation]    Validate the domeAPS_logevent_DriveEnabled topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeAPS
+	[Tags]    smoke    DomeAPS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/domeAPS/domeAPS_Events.xml
@@ -11423,7 +12071,7 @@ Validate DomeAPS Event domeAPS_logevent_DriveEnabled Topic Columns
 
 Validate DomeAPS Event domeAPS_logevent_DriveDisabled Topic Byte Size
 	[Documentation]    Validate the domeAPS_logevent_DriveDisabled topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeAPS
+	[Tags]    smoke    DomeAPS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/domeAPS/domeAPS_Events.xml
@@ -11459,7 +12107,7 @@ Validate DomeAPS Event domeAPS_logevent_DriveDisabled Topic Columns
 
 Validate DomeAPS Event domeAPS_logevent_DriveReady Topic Byte Size
 	[Documentation]    Validate the domeAPS_logevent_DriveReady topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeAPS
+	[Tags]    smoke    DomeAPS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/domeAPS/domeAPS_Events.xml
@@ -11495,7 +12143,7 @@ Validate DomeAPS Event domeAPS_logevent_DriveReady Topic Columns
 
 Validate DomeAPS Event domeAPS_logevent_DriveOverTemp Topic Byte Size
 	[Documentation]    Validate the domeAPS_logevent_DriveOverTemp topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeAPS
+	[Tags]    smoke    DomeAPS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/domeAPS/domeAPS_Events.xml
@@ -11531,7 +12179,7 @@ Validate DomeAPS Event domeAPS_logevent_DriveOverTemp Topic Columns
 
 Validate DomeAPS Event domeAPS_logevent_DriveFault Topic Byte Size
 	[Documentation]    Validate the domeAPS_logevent_DriveFault topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeAPS
+	[Tags]    smoke    DomeAPS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/domeAPS/domeAPS_Events.xml
@@ -11567,7 +12215,7 @@ Validate DomeAPS Event domeAPS_logevent_DriveFault Topic Columns
 
 Validate DomeAPS Event domeAPS_logevent_MovementEnabled Topic Byte Size
 	[Documentation]    Validate the domeAPS_logevent_MovementEnabled topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeAPS
+	[Tags]    smoke    DomeAPS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/domeAPS/domeAPS_Events.xml
@@ -11603,7 +12251,7 @@ Validate DomeAPS Event domeAPS_logevent_MovementEnabled Topic Columns
 
 Validate DomeAPS Event domeAPS_logevent_MovementPrevented Topic Byte Size
 	[Documentation]    Validate the domeAPS_logevent_MovementPrevented topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeAPS
+	[Tags]    smoke    DomeAPS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/domeAPS/domeAPS_Events.xml
@@ -11639,7 +12287,7 @@ Validate DomeAPS Event domeAPS_logevent_MovementPrevented Topic Columns
 
 Validate DomeAPS Event domeAPS_logevent_LockingPinEngaged Topic Byte Size
 	[Documentation]    Validate the domeAPS_logevent_LockingPinEngaged topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeAPS
+	[Tags]    smoke    DomeAPS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/domeAPS/domeAPS_Events.xml
@@ -11675,7 +12323,7 @@ Validate DomeAPS Event domeAPS_logevent_LockingPinEngaged Topic Columns
 
 Validate DomeAPS Event domeAPS_logevent_LockingPinDisengaged Topic Byte Size
 	[Documentation]    Validate the domeAPS_logevent_LockingPinDisengaged topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeAPS
+	[Tags]    smoke    DomeAPS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/domeAPS/domeAPS_Events.xml
@@ -11711,7 +12359,7 @@ Validate DomeAPS Event domeAPS_logevent_LockingPinDisengaged Topic Columns
 
 Validate DomeAPS Event domeAPS_logevent_LockingPinHomed Topic Byte Size
 	[Documentation]    Validate the domeAPS_logevent_LockingPinHomed topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeAPS
+	[Tags]    smoke    DomeAPS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/domeAPS/domeAPS_Events.xml
@@ -11747,7 +12395,7 @@ Validate DomeAPS Event domeAPS_logevent_LockingPinHomed Topic Columns
 
 Validate DomeAPS Event domeAPS_logevent_LockingPinFloating Topic Byte Size
 	[Documentation]    Validate the domeAPS_logevent_LockingPinFloating topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeAPS
+	[Tags]    smoke    DomeAPS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[12]/item)" -n ${folder}/sal_interfaces/domeAPS/domeAPS_Events.xml
@@ -11783,7 +12431,7 @@ Validate DomeAPS Event domeAPS_logevent_LockingPinFloating Topic Columns
 
 Validate DomeAPS Event domeAPS_logevent_CentralLockingPinEngaged Topic Byte Size
 	[Documentation]    Validate the domeAPS_logevent_CentralLockingPinEngaged topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeAPS
+	[Tags]    smoke    DomeAPS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[13]/item)" -n ${folder}/sal_interfaces/domeAPS/domeAPS_Events.xml
@@ -11819,7 +12467,7 @@ Validate DomeAPS Event domeAPS_logevent_CentralLockingPinEngaged Topic Columns
 
 Validate DomeAPS Event domeAPS_logevent_CentralLockingPinDisengaged Topic Byte Size
 	[Documentation]    Validate the domeAPS_logevent_CentralLockingPinDisengaged topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeAPS
+	[Tags]    smoke    DomeAPS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[14]/item)" -n ${folder}/sal_interfaces/domeAPS/domeAPS_Events.xml
@@ -11855,7 +12503,7 @@ Validate DomeAPS Event domeAPS_logevent_CentralLockingPinDisengaged Topic Column
 
 Validate DomeAPS Event domeAPS_logevent_CentralLockingPinHomed Topic Byte Size
 	[Documentation]    Validate the domeAPS_logevent_CentralLockingPinHomed topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeAPS
+	[Tags]    smoke    DomeAPS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[15]/item)" -n ${folder}/sal_interfaces/domeAPS/domeAPS_Events.xml
@@ -11891,7 +12539,7 @@ Validate DomeAPS Event domeAPS_logevent_CentralLockingPinHomed Topic Columns
 
 Validate DomeAPS Event domeAPS_logevent_CentralLockingPinFloating Topic Byte Size
 	[Documentation]    Validate the domeAPS_logevent_CentralLockingPinFloating topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeAPS
+	[Tags]    smoke    DomeAPS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[16]/item)" -n ${folder}/sal_interfaces/domeAPS/domeAPS_Events.xml
@@ -11927,7 +12575,7 @@ Validate DomeAPS Event domeAPS_logevent_CentralLockingPinFloating Topic Columns
 
 Validate DomeAPS Event domeAPS_logevent_BrakeEngaged Topic Byte Size
 	[Documentation]    Validate the domeAPS_logevent_BrakeEngaged topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeAPS
+	[Tags]    smoke    DomeAPS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[17]/item)" -n ${folder}/sal_interfaces/domeAPS/domeAPS_Events.xml
@@ -11963,7 +12611,7 @@ Validate DomeAPS Event domeAPS_logevent_BrakeEngaged Topic Columns
 
 Validate DomeAPS Event domeAPS_logevent_BrakeDisengaged Topic Byte Size
 	[Documentation]    Validate the domeAPS_logevent_BrakeDisengaged topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeAPS
+	[Tags]    smoke    DomeAPS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[18]/item)" -n ${folder}/sal_interfaces/domeAPS/domeAPS_Events.xml
@@ -11999,7 +12647,7 @@ Validate DomeAPS Event domeAPS_logevent_BrakeDisengaged Topic Columns
 
 Validate DomeAPS Event domeAPS_logevent_EchoResponse Topic Byte Size
 	[Documentation]    Validate the domeAPS_logevent_EchoResponse topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeAPS
+	[Tags]    smoke    DomeAPS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[19]/item)" -n ${folder}/sal_interfaces/domeAPS/domeAPS_Events.xml
@@ -12035,7 +12683,7 @@ Validate DomeAPS Event domeAPS_logevent_EchoResponse Topic Columns
 
 Validate DomeAPS Event domeAPS_logevent_APSSubsystemError Topic Byte Size
 	[Documentation]    Validate the domeAPS_logevent_APSSubsystemError topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeAPS
+	[Tags]    smoke    DomeAPS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[20]/item)" -n ${folder}/sal_interfaces/domeAPS/domeAPS_Events.xml
@@ -12071,7 +12719,7 @@ Validate DomeAPS Event domeAPS_logevent_APSSubsystemError Topic Columns
 
 Validate DomeAPS Telemetry domeAPS_status Topic Byte Size
 	[Documentation]    Validate the domeAPS_status topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeAPS
+	[Tags]    smoke    DomeAPS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/domeAPS/domeAPS_Telemetry.xml
@@ -12107,7 +12755,7 @@ Validate DomeAPS Telemetry domeAPS_status Topic Columns
 
 Validate DomeLouvers Command domeLouvers_command_SetPosition Topic Byte Size
 	[Documentation]    Validate the domeLouvers_command_SetPosition topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeLouvers
+	[Tags]    smoke    DomeLouvers    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/domeLouvers/domeLouvers_Commands.xml
@@ -12143,7 +12791,7 @@ Validate DomeLouvers Command domeLouvers_command_SetPosition Topic Columns
 
 Validate DomeLouvers Command domeLouvers_command_Echo Topic Byte Size
 	[Documentation]    Validate the domeLouvers_command_Echo topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeLouvers
+	[Tags]    smoke    DomeLouvers    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/domeLouvers/domeLouvers_Commands.xml
@@ -12179,7 +12827,7 @@ Validate DomeLouvers Command domeLouvers_command_Echo Topic Columns
 
 Validate DomeLouvers Event domeLouvers_logevent_StateChanged Topic Byte Size
 	[Documentation]    Validate the domeLouvers_logevent_StateChanged topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeLouvers
+	[Tags]    smoke    DomeLouvers    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/domeLouvers/domeLouvers_Events.xml
@@ -12215,7 +12863,7 @@ Validate DomeLouvers Event domeLouvers_logevent_StateChanged Topic Columns
 
 Validate DomeLouvers Event domeLouvers_logevent_DriveEnabled Topic Byte Size
 	[Documentation]    Validate the domeLouvers_logevent_DriveEnabled topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeLouvers
+	[Tags]    smoke    DomeLouvers    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/domeLouvers/domeLouvers_Events.xml
@@ -12251,7 +12899,7 @@ Validate DomeLouvers Event domeLouvers_logevent_DriveEnabled Topic Columns
 
 Validate DomeLouvers Event domeLouvers_logevent_DriveDisabled Topic Byte Size
 	[Documentation]    Validate the domeLouvers_logevent_DriveDisabled topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeLouvers
+	[Tags]    smoke    DomeLouvers    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/domeLouvers/domeLouvers_Events.xml
@@ -12287,7 +12935,7 @@ Validate DomeLouvers Event domeLouvers_logevent_DriveDisabled Topic Columns
 
 Validate DomeLouvers Event domeLouvers_logevent_DriveReady Topic Byte Size
 	[Documentation]    Validate the domeLouvers_logevent_DriveReady topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeLouvers
+	[Tags]    smoke    DomeLouvers    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/domeLouvers/domeLouvers_Events.xml
@@ -12323,7 +12971,7 @@ Validate DomeLouvers Event domeLouvers_logevent_DriveReady Topic Columns
 
 Validate DomeLouvers Event domeLouvers_logevent_DriveOverTemp Topic Byte Size
 	[Documentation]    Validate the domeLouvers_logevent_DriveOverTemp topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeLouvers
+	[Tags]    smoke    DomeLouvers    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/domeLouvers/domeLouvers_Events.xml
@@ -12359,7 +13007,7 @@ Validate DomeLouvers Event domeLouvers_logevent_DriveOverTemp Topic Columns
 
 Validate DomeLouvers Event domeLouvers_logevent_DriveFault Topic Byte Size
 	[Documentation]    Validate the domeLouvers_logevent_DriveFault topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeLouvers
+	[Tags]    smoke    DomeLouvers    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/domeLouvers/domeLouvers_Events.xml
@@ -12395,7 +13043,7 @@ Validate DomeLouvers Event domeLouvers_logevent_DriveFault Topic Columns
 
 Validate DomeLouvers Event domeLouvers_logevent_MovementEnabled Topic Byte Size
 	[Documentation]    Validate the domeLouvers_logevent_MovementEnabled topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeLouvers
+	[Tags]    smoke    DomeLouvers    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/domeLouvers/domeLouvers_Events.xml
@@ -12431,7 +13079,7 @@ Validate DomeLouvers Event domeLouvers_logevent_MovementEnabled Topic Columns
 
 Validate DomeLouvers Event domeLouvers_logevent_MovementPrevented Topic Byte Size
 	[Documentation]    Validate the domeLouvers_logevent_MovementPrevented topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeLouvers
+	[Tags]    smoke    DomeLouvers    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/domeLouvers/domeLouvers_Events.xml
@@ -12467,7 +13115,7 @@ Validate DomeLouvers Event domeLouvers_logevent_MovementPrevented Topic Columns
 
 Validate DomeLouvers Event domeLouvers_logevent_EchoResponse Topic Byte Size
 	[Documentation]    Validate the domeLouvers_logevent_EchoResponse topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeLouvers
+	[Tags]    smoke    DomeLouvers    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/domeLouvers/domeLouvers_Events.xml
@@ -12503,7 +13151,7 @@ Validate DomeLouvers Event domeLouvers_logevent_EchoResponse Topic Columns
 
 Validate DomeLouvers Event domeLouvers_logevent_SubsystemError Topic Byte Size
 	[Documentation]    Validate the domeLouvers_logevent_SubsystemError topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeLouvers
+	[Tags]    smoke    DomeLouvers    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/domeLouvers/domeLouvers_Events.xml
@@ -12539,7 +13187,7 @@ Validate DomeLouvers Event domeLouvers_logevent_SubsystemError Topic Columns
 
 Validate DomeLouvers Telemetry domeLouvers_status Topic Byte Size
 	[Documentation]    Validate the domeLouvers_status topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeLouvers
+	[Tags]    smoke    DomeLouvers    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/domeLouvers/domeLouvers_Telemetry.xml
@@ -12575,7 +13223,7 @@ Validate DomeLouvers Telemetry domeLouvers_status Topic Columns
 
 Validate DomeLWS Command domeLWS_command_CrawlLWS Topic Byte Size
 	[Documentation]    Validate the domeLWS_command_CrawlLWS topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeLWS
+	[Tags]    smoke    DomeLWS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/domeLWS/domeLWS_Commands.xml
@@ -12611,7 +13259,7 @@ Validate DomeLWS Command domeLWS_command_CrawlLWS Topic Columns
 
 Validate DomeLWS Command domeLWS_command_MoveLWS Topic Byte Size
 	[Documentation]    Validate the domeLWS_command_MoveLWS topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeLWS
+	[Tags]    smoke    DomeLWS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/domeLWS/domeLWS_Commands.xml
@@ -12647,7 +13295,7 @@ Validate DomeLWS Command domeLWS_command_MoveLWS Topic Columns
 
 Validate DomeLWS Command domeLWS_command_VelocityMoveLWS Topic Byte Size
 	[Documentation]    Validate the domeLWS_command_VelocityMoveLWS topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeLWS
+	[Tags]    smoke    DomeLWS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/domeLWS/domeLWS_Commands.xml
@@ -12683,7 +13331,7 @@ Validate DomeLWS Command domeLWS_command_VelocityMoveLWS Topic Columns
 
 Validate DomeLWS Command domeLWS_command_EchoLWS Topic Byte Size
 	[Documentation]    Validate the domeLWS_command_EchoLWS topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeLWS
+	[Tags]    smoke    DomeLWS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/domeLWS/domeLWS_Commands.xml
@@ -12719,7 +13367,7 @@ Validate DomeLWS Command domeLWS_command_EchoLWS Topic Columns
 
 Validate DomeLWS Event domeLWS_logevent_StateChanged Topic Byte Size
 	[Documentation]    Validate the domeLWS_logevent_StateChanged topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeLWS
+	[Tags]    smoke    DomeLWS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/domeLWS/domeLWS_Events.xml
@@ -12755,7 +13403,7 @@ Validate DomeLWS Event domeLWS_logevent_StateChanged Topic Columns
 
 Validate DomeLWS Event domeLWS_logevent_DriveEnabled Topic Byte Size
 	[Documentation]    Validate the domeLWS_logevent_DriveEnabled topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeLWS
+	[Tags]    smoke    DomeLWS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/domeLWS/domeLWS_Events.xml
@@ -12791,7 +13439,7 @@ Validate DomeLWS Event domeLWS_logevent_DriveEnabled Topic Columns
 
 Validate DomeLWS Event domeLWS_logevent_DriveDisabled Topic Byte Size
 	[Documentation]    Validate the domeLWS_logevent_DriveDisabled topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeLWS
+	[Tags]    smoke    DomeLWS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/domeLWS/domeLWS_Events.xml
@@ -12827,7 +13475,7 @@ Validate DomeLWS Event domeLWS_logevent_DriveDisabled Topic Columns
 
 Validate DomeLWS Event domeLWS_logevent_DriveReady Topic Byte Size
 	[Documentation]    Validate the domeLWS_logevent_DriveReady topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeLWS
+	[Tags]    smoke    DomeLWS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/domeLWS/domeLWS_Events.xml
@@ -12863,7 +13511,7 @@ Validate DomeLWS Event domeLWS_logevent_DriveReady Topic Columns
 
 Validate DomeLWS Event domeLWS_logevent_DriveOverTemp Topic Byte Size
 	[Documentation]    Validate the domeLWS_logevent_DriveOverTemp topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeLWS
+	[Tags]    smoke    DomeLWS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/domeLWS/domeLWS_Events.xml
@@ -12899,7 +13547,7 @@ Validate DomeLWS Event domeLWS_logevent_DriveOverTemp Topic Columns
 
 Validate DomeLWS Event domeLWS_logevent_DriveFault Topic Byte Size
 	[Documentation]    Validate the domeLWS_logevent_DriveFault topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeLWS
+	[Tags]    smoke    DomeLWS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/domeLWS/domeLWS_Events.xml
@@ -12935,7 +13583,7 @@ Validate DomeLWS Event domeLWS_logevent_DriveFault Topic Columns
 
 Validate DomeLWS Event domeLWS_logevent_MovementEnabled Topic Byte Size
 	[Documentation]    Validate the domeLWS_logevent_MovementEnabled topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeLWS
+	[Tags]    smoke    DomeLWS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/domeLWS/domeLWS_Events.xml
@@ -12971,7 +13619,7 @@ Validate DomeLWS Event domeLWS_logevent_MovementEnabled Topic Columns
 
 Validate DomeLWS Event domeLWS_logevent_MovementPrevented Topic Byte Size
 	[Documentation]    Validate the domeLWS_logevent_MovementPrevented topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeLWS
+	[Tags]    smoke    DomeLWS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/domeLWS/domeLWS_Events.xml
@@ -13007,7 +13655,7 @@ Validate DomeLWS Event domeLWS_logevent_MovementPrevented Topic Columns
 
 Validate DomeLWS Event domeLWS_logevent_LockingPinEngaged Topic Byte Size
 	[Documentation]    Validate the domeLWS_logevent_LockingPinEngaged topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeLWS
+	[Tags]    smoke    DomeLWS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/domeLWS/domeLWS_Events.xml
@@ -13043,7 +13691,7 @@ Validate DomeLWS Event domeLWS_logevent_LockingPinEngaged Topic Columns
 
 Validate DomeLWS Event domeLWS_logevent_LockingPinDisengaged Topic Byte Size
 	[Documentation]    Validate the domeLWS_logevent_LockingPinDisengaged topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeLWS
+	[Tags]    smoke    DomeLWS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/domeLWS/domeLWS_Events.xml
@@ -13079,7 +13727,7 @@ Validate DomeLWS Event domeLWS_logevent_LockingPinDisengaged Topic Columns
 
 Validate DomeLWS Event domeLWS_logevent_LockingPinHomed Topic Byte Size
 	[Documentation]    Validate the domeLWS_logevent_LockingPinHomed topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeLWS
+	[Tags]    smoke    DomeLWS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/domeLWS/domeLWS_Events.xml
@@ -13115,7 +13763,7 @@ Validate DomeLWS Event domeLWS_logevent_LockingPinHomed Topic Columns
 
 Validate DomeLWS Event domeLWS_logevent_LockingPinFloating Topic Byte Size
 	[Documentation]    Validate the domeLWS_logevent_LockingPinFloating topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeLWS
+	[Tags]    smoke    DomeLWS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[12]/item)" -n ${folder}/sal_interfaces/domeLWS/domeLWS_Events.xml
@@ -13151,7 +13799,7 @@ Validate DomeLWS Event domeLWS_logevent_LockingPinFloating Topic Columns
 
 Validate DomeLWS Event domeLWS_logevent_BrakeEngaged Topic Byte Size
 	[Documentation]    Validate the domeLWS_logevent_BrakeEngaged topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeLWS
+	[Tags]    smoke    DomeLWS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[13]/item)" -n ${folder}/sal_interfaces/domeLWS/domeLWS_Events.xml
@@ -13187,7 +13835,7 @@ Validate DomeLWS Event domeLWS_logevent_BrakeEngaged Topic Columns
 
 Validate DomeLWS Event domeLWS_logevent_BrakeDisengaged Topic Byte Size
 	[Documentation]    Validate the domeLWS_logevent_BrakeDisengaged topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeLWS
+	[Tags]    smoke    DomeLWS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[14]/item)" -n ${folder}/sal_interfaces/domeLWS/domeLWS_Events.xml
@@ -13223,7 +13871,7 @@ Validate DomeLWS Event domeLWS_logevent_BrakeDisengaged Topic Columns
 
 Validate DomeLWS Event domeLWS_logevent_SpeedLimitReached Topic Byte Size
 	[Documentation]    Validate the domeLWS_logevent_SpeedLimitReached topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeLWS
+	[Tags]    smoke    DomeLWS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[15]/item)" -n ${folder}/sal_interfaces/domeLWS/domeLWS_Events.xml
@@ -13259,7 +13907,7 @@ Validate DomeLWS Event domeLWS_logevent_SpeedLimitReached Topic Columns
 
 Validate DomeLWS Event domeLWS_logevent_AccelerationLimitReached Topic Byte Size
 	[Documentation]    Validate the domeLWS_logevent_AccelerationLimitReached topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeLWS
+	[Tags]    smoke    DomeLWS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[16]/item)" -n ${folder}/sal_interfaces/domeLWS/domeLWS_Events.xml
@@ -13295,7 +13943,7 @@ Validate DomeLWS Event domeLWS_logevent_AccelerationLimitReached Topic Columns
 
 Validate DomeLWS Event domeLWS_logevent_SpeedLimitSubsided Topic Byte Size
 	[Documentation]    Validate the domeLWS_logevent_SpeedLimitSubsided topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeLWS
+	[Tags]    smoke    DomeLWS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[17]/item)" -n ${folder}/sal_interfaces/domeLWS/domeLWS_Events.xml
@@ -13331,7 +13979,7 @@ Validate DomeLWS Event domeLWS_logevent_SpeedLimitSubsided Topic Columns
 
 Validate DomeLWS Event domeLWS_logevent_AccelerationLimitSubsided Topic Byte Size
 	[Documentation]    Validate the domeLWS_logevent_AccelerationLimitSubsided topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeLWS
+	[Tags]    smoke    DomeLWS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[18]/item)" -n ${folder}/sal_interfaces/domeLWS/domeLWS_Events.xml
@@ -13367,7 +14015,7 @@ Validate DomeLWS Event domeLWS_logevent_AccelerationLimitSubsided Topic Columns
 
 Validate DomeLWS Event domeLWS_logevent_EchoResponse Topic Byte Size
 	[Documentation]    Validate the domeLWS_logevent_EchoResponse topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeLWS
+	[Tags]    smoke    DomeLWS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[19]/item)" -n ${folder}/sal_interfaces/domeLWS/domeLWS_Events.xml
@@ -13403,7 +14051,7 @@ Validate DomeLWS Event domeLWS_logevent_EchoResponse Topic Columns
 
 Validate DomeLWS Event domeLWS_logevent_MotionModeChanged Topic Byte Size
 	[Documentation]    Validate the domeLWS_logevent_MotionModeChanged topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeLWS
+	[Tags]    smoke    DomeLWS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[20]/item)" -n ${folder}/sal_interfaces/domeLWS/domeLWS_Events.xml
@@ -13439,7 +14087,7 @@ Validate DomeLWS Event domeLWS_logevent_MotionModeChanged Topic Columns
 
 Validate DomeLWS Event domeLWS_logevent_SubsystemError Topic Byte Size
 	[Documentation]    Validate the domeLWS_logevent_SubsystemError topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeLWS
+	[Tags]    smoke    DomeLWS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[21]/item)" -n ${folder}/sal_interfaces/domeLWS/domeLWS_Events.xml
@@ -13475,7 +14123,7 @@ Validate DomeLWS Event domeLWS_logevent_SubsystemError Topic Columns
 
 Validate DomeLWS Telemetry domeLWS_status Topic Byte Size
 	[Documentation]    Validate the domeLWS_status topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeLWS
+	[Tags]    smoke    DomeLWS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/domeLWS/domeLWS_Telemetry.xml
@@ -13511,7 +14159,7 @@ Validate DomeLWS Telemetry domeLWS_status Topic Columns
 
 Validate DomeMONCS Command domeMONCS_command_Echo Topic Byte Size
 	[Documentation]    Validate the domeMONCS_command_Echo topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeMONCS
+	[Tags]    smoke    DomeMONCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/domeMONCS/domeMONCS_Commands.xml
@@ -13547,7 +14195,7 @@ Validate DomeMONCS Command domeMONCS_command_Echo Topic Columns
 
 Validate DomeMONCS Event domeMONCS_logevent_StateChanged Topic Byte Size
 	[Documentation]    Validate the domeMONCS_logevent_StateChanged topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeMONCS
+	[Tags]    smoke    DomeMONCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/domeMONCS/domeMONCS_Events.xml
@@ -13583,7 +14231,7 @@ Validate DomeMONCS Event domeMONCS_logevent_StateChanged Topic Columns
 
 Validate DomeMONCS Event domeMONCS_logevent_EchoResponse Topic Byte Size
 	[Documentation]    Validate the domeMONCS_logevent_EchoResponse topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeMONCS
+	[Tags]    smoke    DomeMONCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/domeMONCS/domeMONCS_Events.xml
@@ -13619,7 +14267,7 @@ Validate DomeMONCS Event domeMONCS_logevent_EchoResponse Topic Columns
 
 Validate DomeMONCS Event domeMONCS_logevent_SubsystemError Topic Byte Size
 	[Documentation]    Validate the domeMONCS_logevent_SubsystemError topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeMONCS
+	[Tags]    smoke    DomeMONCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/domeMONCS/domeMONCS_Events.xml
@@ -13655,7 +14303,7 @@ Validate DomeMONCS Event domeMONCS_logevent_SubsystemError Topic Columns
 
 Validate DomeMONCS Event domeMONCS_logevent_Interlock Topic Byte Size
 	[Documentation]    Validate the domeMONCS_logevent_Interlock topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeMONCS
+	[Tags]    smoke    DomeMONCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/domeMONCS/domeMONCS_Events.xml
@@ -13691,7 +14339,7 @@ Validate DomeMONCS Event domeMONCS_logevent_Interlock Topic Columns
 
 Validate DomeMONCS Telemetry domeMONCS_status Topic Byte Size
 	[Documentation]    Validate the domeMONCS_status topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeMONCS
+	[Tags]    smoke    DomeMONCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/domeMONCS/domeMONCS_Telemetry.xml
@@ -13727,7 +14375,7 @@ Validate DomeMONCS Telemetry domeMONCS_status Topic Columns
 
 Validate DomeTHCS Command domeTHCS_command_Echo Topic Byte Size
 	[Documentation]    Validate the domeTHCS_command_Echo topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeTHCS
+	[Tags]    smoke    DomeTHCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/domeTHCS/domeTHCS_Commands.xml
@@ -13763,7 +14411,7 @@ Validate DomeTHCS Command domeTHCS_command_Echo Topic Columns
 
 Validate DomeTHCS Event domeTHCS_logevent_StateChanged Topic Byte Size
 	[Documentation]    Validate the domeTHCS_logevent_StateChanged topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeTHCS
+	[Tags]    smoke    DomeTHCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/domeTHCS/domeTHCS_Events.xml
@@ -13799,7 +14447,7 @@ Validate DomeTHCS Event domeTHCS_logevent_StateChanged Topic Columns
 
 Validate DomeTHCS Event domeTHCS_logevent_MovementEnabled Topic Byte Size
 	[Documentation]    Validate the domeTHCS_logevent_MovementEnabled topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeTHCS
+	[Tags]    smoke    DomeTHCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/domeTHCS/domeTHCS_Events.xml
@@ -13835,7 +14483,7 @@ Validate DomeTHCS Event domeTHCS_logevent_MovementEnabled Topic Columns
 
 Validate DomeTHCS Event domeTHCS_logevent_MovementPrevented Topic Byte Size
 	[Documentation]    Validate the domeTHCS_logevent_MovementPrevented topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeTHCS
+	[Tags]    smoke    DomeTHCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/domeTHCS/domeTHCS_Events.xml
@@ -13871,7 +14519,7 @@ Validate DomeTHCS Event domeTHCS_logevent_MovementPrevented Topic Columns
 
 Validate DomeTHCS Event domeTHCS_logevent_EchoResponse Topic Byte Size
 	[Documentation]    Validate the domeTHCS_logevent_EchoResponse topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeTHCS
+	[Tags]    smoke    DomeTHCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/domeTHCS/domeTHCS_Events.xml
@@ -13907,7 +14555,7 @@ Validate DomeTHCS Event domeTHCS_logevent_EchoResponse Topic Columns
 
 Validate DomeTHCS Event domeTHCS_logevent_SubsystemError Topic Byte Size
 	[Documentation]    Validate the domeTHCS_logevent_SubsystemError topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeTHCS
+	[Tags]    smoke    DomeTHCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/domeTHCS/domeTHCS_Events.xml
@@ -13943,7 +14591,7 @@ Validate DomeTHCS Event domeTHCS_logevent_SubsystemError Topic Columns
 
 Validate DomeTHCS Telemetry domeTHCS_status Topic Byte Size
 	[Documentation]    Validate the domeTHCS_status topic is less than 65536 bytes in total.
-	[Tags]    smoke    DomeTHCS
+	[Tags]    smoke    DomeTHCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/domeTHCS/domeTHCS_Telemetry.xml
@@ -13979,7 +14627,7 @@ Validate DomeTHCS Telemetry domeTHCS_status Topic Columns
 
 Validate EEC Command eec_command_operatoMode Topic Byte Size
 	[Documentation]    Validate the eec_command_operatoMode topic is less than 65536 bytes in total.
-	[Tags]    smoke    EEC
+	[Tags]    smoke    EEC    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/eec/eec_Commands.xml
@@ -14015,7 +14663,7 @@ Validate EEC Command eec_command_operatoMode Topic Columns
 
 Validate EEC Command eec_command_nightTimeMode Topic Byte Size
 	[Documentation]    Validate the eec_command_nightTimeMode topic is less than 65536 bytes in total.
-	[Tags]    smoke    EEC
+	[Tags]    smoke    EEC    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/eec/eec_Commands.xml
@@ -14051,7 +14699,7 @@ Validate EEC Command eec_command_nightTimeMode Topic Columns
 
 Validate EEC Command eec_command_enable Topic Byte Size
 	[Documentation]    Validate the eec_command_enable topic is less than 65536 bytes in total.
-	[Tags]    smoke    EEC
+	[Tags]    smoke    EEC    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/eec/eec_Commands.xml
@@ -14087,7 +14735,7 @@ Validate EEC Command eec_command_enable Topic Columns
 
 Validate EEC Command eec_command_exitControl Topic Byte Size
 	[Documentation]    Validate the eec_command_exitControl topic is less than 65536 bytes in total.
-	[Tags]    smoke    EEC
+	[Tags]    smoke    EEC    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/eec/eec_Commands.xml
@@ -14123,7 +14771,7 @@ Validate EEC Command eec_command_exitControl Topic Columns
 
 Validate EEC Command eec_command_setHVAC Topic Byte Size
 	[Documentation]    Validate the eec_command_setHVAC topic is less than 65536 bytes in total.
-	[Tags]    smoke    EEC
+	[Tags]    smoke    EEC    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/eec/eec_Commands.xml
@@ -14159,7 +14807,7 @@ Validate EEC Command eec_command_setHVAC Topic Columns
 
 Validate EEC Command eec_command_dayTimeMode Topic Byte Size
 	[Documentation]    Validate the eec_command_dayTimeMode topic is less than 65536 bytes in total.
-	[Tags]    smoke    EEC
+	[Tags]    smoke    EEC    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/eec/eec_Commands.xml
@@ -14195,7 +14843,7 @@ Validate EEC Command eec_command_dayTimeMode Topic Columns
 
 Validate EEC Command eec_command_setLouvers Topic Byte Size
 	[Documentation]    Validate the eec_command_setLouvers topic is less than 65536 bytes in total.
-	[Tags]    smoke    EEC
+	[Tags]    smoke    EEC    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[7]/item)" -n ${folder}/sal_interfaces/eec/eec_Commands.xml
@@ -14231,7 +14879,7 @@ Validate EEC Command eec_command_setLouvers Topic Columns
 
 Validate EEC Command eec_command_start Topic Byte Size
 	[Documentation]    Validate the eec_command_start topic is less than 65536 bytes in total.
-	[Tags]    smoke    EEC
+	[Tags]    smoke    EEC    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[8]/item)" -n ${folder}/sal_interfaces/eec/eec_Commands.xml
@@ -14267,7 +14915,7 @@ Validate EEC Command eec_command_start Topic Columns
 
 Validate EEC Command eec_command_engineeringMode Topic Byte Size
 	[Documentation]    Validate the eec_command_engineeringMode topic is less than 65536 bytes in total.
-	[Tags]    smoke    EEC
+	[Tags]    smoke    EEC    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[9]/item)" -n ${folder}/sal_interfaces/eec/eec_Commands.xml
@@ -14303,7 +14951,7 @@ Validate EEC Command eec_command_engineeringMode Topic Columns
 
 Validate EEC Command eec_command_standby Topic Byte Size
 	[Documentation]    Validate the eec_command_standby topic is less than 65536 bytes in total.
-	[Tags]    smoke    EEC
+	[Tags]    smoke    EEC    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[10]/item)" -n ${folder}/sal_interfaces/eec/eec_Commands.xml
@@ -14339,7 +14987,7 @@ Validate EEC Command eec_command_standby Topic Columns
 
 Validate EEC Command eec_command_disable Topic Byte Size
 	[Documentation]    Validate the eec_command_disable topic is less than 65536 bytes in total.
-	[Tags]    smoke    EEC
+	[Tags]    smoke    EEC    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[11]/item)" -n ${folder}/sal_interfaces/eec/eec_Commands.xml
@@ -14375,7 +15023,7 @@ Validate EEC Command eec_command_disable Topic Columns
 
 Validate EEC Event eec_logevent_appliedSettingsMatchStart Topic Byte Size
 	[Documentation]    Validate the eec_logevent_appliedSettingsMatchStart topic is less than 65536 bytes in total.
-	[Tags]    smoke    EEC
+	[Tags]    smoke    EEC    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/eec/eec_Events.xml
@@ -14411,7 +15059,7 @@ Validate EEC Event eec_logevent_appliedSettingsMatchStart Topic Columns
 
 Validate EEC Event eec_logevent_nightTimeFail Topic Byte Size
 	[Documentation]    Validate the eec_logevent_nightTimeFail topic is less than 65536 bytes in total.
-	[Tags]    smoke    EEC
+	[Tags]    smoke    EEC    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/eec/eec_Events.xml
@@ -14447,7 +15095,7 @@ Validate EEC Event eec_logevent_nightTimeFail Topic Columns
 
 Validate EEC Event eec_logevent_rejectedCommand Topic Byte Size
 	[Documentation]    Validate the eec_logevent_rejectedCommand topic is less than 65536 bytes in total.
-	[Tags]    smoke    EEC
+	[Tags]    smoke    EEC    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/eec/eec_Events.xml
@@ -14483,7 +15131,7 @@ Validate EEC Event eec_logevent_rejectedCommand Topic Columns
 
 Validate EEC Event eec_logevent_settingsApplied Topic Byte Size
 	[Documentation]    Validate the eec_logevent_settingsApplied topic is less than 65536 bytes in total.
-	[Tags]    smoke    EEC
+	[Tags]    smoke    EEC    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/eec/eec_Events.xml
@@ -14519,7 +15167,7 @@ Validate EEC Event eec_logevent_settingsApplied Topic Columns
 
 Validate EEC Event eec_logevent_detailedState Topic Byte Size
 	[Documentation]    Validate the eec_logevent_detailedState topic is less than 65536 bytes in total.
-	[Tags]    smoke    EEC
+	[Tags]    smoke    EEC    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/eec/eec_Events.xml
@@ -14555,7 +15203,7 @@ Validate EEC Event eec_logevent_detailedState Topic Columns
 
 Validate EEC Event eec_logevent_dayTimeFail Topic Byte Size
 	[Documentation]    Validate the eec_logevent_dayTimeFail topic is less than 65536 bytes in total.
-	[Tags]    smoke    EEC
+	[Tags]    smoke    EEC    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/eec/eec_Events.xml
@@ -14591,7 +15239,7 @@ Validate EEC Event eec_logevent_dayTimeFail Topic Columns
 
 Validate EEC Event eec_logevent_internalCommand Topic Byte Size
 	[Documentation]    Validate the eec_logevent_internalCommand topic is less than 65536 bytes in total.
-	[Tags]    smoke    EEC
+	[Tags]    smoke    EEC    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/eec/eec_Events.xml
@@ -14627,7 +15275,7 @@ Validate EEC Event eec_logevent_internalCommand Topic Columns
 
 Validate EEC Event eec_logevent_loopTimeOutOfRange Topic Byte Size
 	[Documentation]    Validate the eec_logevent_loopTimeOutOfRange topic is less than 65536 bytes in total.
-	[Tags]    smoke    EEC
+	[Tags]    smoke    EEC    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/eec/eec_Events.xml
@@ -14663,7 +15311,7 @@ Validate EEC Event eec_logevent_loopTimeOutOfRange Topic Columns
 
 Validate EEC Event eec_logevent_summaryState Topic Byte Size
 	[Documentation]    Validate the eec_logevent_summaryState topic is less than 65536 bytes in total.
-	[Tags]    smoke    EEC
+	[Tags]    smoke    EEC    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/eec/eec_Events.xml
@@ -14699,7 +15347,7 @@ Validate EEC Event eec_logevent_summaryState Topic Columns
 
 Validate EEC Event eec_logevent_errorCode Topic Byte Size
 	[Documentation]    Validate the eec_logevent_errorCode topic is less than 65536 bytes in total.
-	[Tags]    smoke    EEC
+	[Tags]    smoke    EEC    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/eec/eec_Events.xml
@@ -14735,7 +15383,7 @@ Validate EEC Event eec_logevent_errorCode Topic Columns
 
 Validate EEC Event eec_logevent_heartbeat Topic Byte Size
 	[Documentation]    Validate the eec_logevent_heartbeat topic is less than 65536 bytes in total.
-	[Tags]    smoke    EEC
+	[Tags]    smoke    EEC    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/eec/eec_Events.xml
@@ -14771,7 +15419,7 @@ Validate EEC Event eec_logevent_heartbeat Topic Columns
 
 Validate EEC Event eec_logevent_settingVersions Topic Byte Size
 	[Documentation]    Validate the eec_logevent_settingVersions topic is less than 65536 bytes in total.
-	[Tags]    smoke    EEC
+	[Tags]    smoke    EEC    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[12]/item)" -n ${folder}/sal_interfaces/eec/eec_Events.xml
@@ -14807,7 +15455,7 @@ Validate EEC Event eec_logevent_settingVersions Topic Columns
 
 Validate EEC Telemetry eec_hvacTelem Topic Byte Size
 	[Documentation]    Validate the eec_hvacTelem topic is less than 65536 bytes in total.
-	[Tags]    smoke    EEC
+	[Tags]    smoke    EEC    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/eec/eec_Telemetry.xml
@@ -14843,7 +15491,7 @@ Validate EEC Telemetry eec_hvacTelem Topic Columns
 
 Validate EEC Telemetry eec_timestamp Topic Byte Size
 	[Documentation]    Validate the eec_timestamp topic is less than 65536 bytes in total.
-	[Tags]    smoke    EEC
+	[Tags]    smoke    EEC    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/eec/eec_Telemetry.xml
@@ -14879,7 +15527,7 @@ Validate EEC Telemetry eec_timestamp Topic Columns
 
 Validate EEC Telemetry eec_nightSetPoint Topic Byte Size
 	[Documentation]    Validate the eec_nightSetPoint topic is less than 65536 bytes in total.
-	[Tags]    smoke    EEC
+	[Tags]    smoke    EEC    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[3]/item)" -n ${folder}/sal_interfaces/eec/eec_Telemetry.xml
@@ -14915,7 +15563,7 @@ Validate EEC Telemetry eec_nightSetPoint Topic Columns
 
 Validate EEC Telemetry eec_eecTelem Topic Byte Size
 	[Documentation]    Validate the eec_eecTelem topic is less than 65536 bytes in total.
-	[Tags]    smoke    EEC
+	[Tags]    smoke    EEC    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[4]/item)" -n ${folder}/sal_interfaces/eec/eec_Telemetry.xml
@@ -14951,7 +15599,7 @@ Validate EEC Telemetry eec_eecTelem Topic Columns
 
 Validate EEC Telemetry eec_loopTimeMs Topic Byte Size
 	[Documentation]    Validate the eec_loopTimeMs topic is less than 65536 bytes in total.
-	[Tags]    smoke    EEC
+	[Tags]    smoke    EEC    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[5]/item)" -n ${folder}/sal_interfaces/eec/eec_Telemetry.xml
@@ -14987,7 +15635,7 @@ Validate EEC Telemetry eec_loopTimeMs Topic Columns
 
 Validate EEC Telemetry eec_daySetPoint Topic Byte Size
 	[Documentation]    Validate the eec_daySetPoint topic is less than 65536 bytes in total.
-	[Tags]    smoke    EEC
+	[Tags]    smoke    EEC    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[6]/item)" -n ${folder}/sal_interfaces/eec/eec_Telemetry.xml
@@ -15023,7 +15671,7 @@ Validate EEC Telemetry eec_daySetPoint Topic Columns
 
 Validate EFD Event efd_logevent_LargeFileObjectAvailable Topic Byte Size
 	[Documentation]    Validate the efd_logevent_LargeFileObjectAvailable topic is less than 65536 bytes in total.
-	[Tags]    smoke    EFD
+	[Tags]    smoke    EFD    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/efd/efd_Events.xml
@@ -15059,7 +15707,7 @@ Validate EFD Event efd_logevent_LargeFileObjectAvailable Topic Columns
 
 Validate EFD Telemetry efd_Summary Topic Byte Size
 	[Documentation]    Validate the efd_Summary topic is less than 65536 bytes in total.
-	[Tags]    smoke    EFD
+	[Tags]    smoke    EFD    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/efd/efd_Telemetry.xml
@@ -15095,7 +15743,7 @@ Validate EFD Telemetry efd_Summary Topic Columns
 
 Validate HeaderService Command headerService_command_disable Topic Byte Size
 	[Documentation]    Validate the headerService_command_disable topic is less than 65536 bytes in total.
-	[Tags]    smoke    HeaderService
+	[Tags]    smoke    HeaderService    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/headerService/headerService_Commands.xml
@@ -15131,7 +15779,7 @@ Validate HeaderService Command headerService_command_disable Topic Columns
 
 Validate HeaderService Command headerService_command_enable Topic Byte Size
 	[Documentation]    Validate the headerService_command_enable topic is less than 65536 bytes in total.
-	[Tags]    smoke    HeaderService
+	[Tags]    smoke    HeaderService    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/headerService/headerService_Commands.xml
@@ -15167,7 +15815,7 @@ Validate HeaderService Command headerService_command_enable Topic Columns
 
 Validate HeaderService Command headerService_command_exitControl Topic Byte Size
 	[Documentation]    Validate the headerService_command_exitControl topic is less than 65536 bytes in total.
-	[Tags]    smoke    HeaderService
+	[Tags]    smoke    HeaderService    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/headerService/headerService_Commands.xml
@@ -15203,7 +15851,7 @@ Validate HeaderService Command headerService_command_exitControl Topic Columns
 
 Validate HeaderService Command headerService_command_standby Topic Byte Size
 	[Documentation]    Validate the headerService_command_standby topic is less than 65536 bytes in total.
-	[Tags]    smoke    HeaderService
+	[Tags]    smoke    HeaderService    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/headerService/headerService_Commands.xml
@@ -15239,7 +15887,7 @@ Validate HeaderService Command headerService_command_standby Topic Columns
 
 Validate HeaderService Command headerService_command_start Topic Byte Size
 	[Documentation]    Validate the headerService_command_start topic is less than 65536 bytes in total.
-	[Tags]    smoke    HeaderService
+	[Tags]    smoke    HeaderService    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/headerService/headerService_Commands.xml
@@ -15275,7 +15923,7 @@ Validate HeaderService Command headerService_command_start Topic Columns
 
 Validate HeaderService Command headerService_command_enterControl Topic Byte Size
 	[Documentation]    Validate the headerService_command_enterControl topic is less than 65536 bytes in total.
-	[Tags]    smoke    HeaderService
+	[Tags]    smoke    HeaderService    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/headerService/headerService_Commands.xml
@@ -15311,7 +15959,7 @@ Validate HeaderService Command headerService_command_enterControl Topic Columns
 
 Validate HeaderService Event headerService_logevent_appliedSettingsMatchStart Topic Byte Size
 	[Documentation]    Validate the headerService_logevent_appliedSettingsMatchStart topic is less than 65536 bytes in total.
-	[Tags]    smoke    HeaderService
+	[Tags]    smoke    HeaderService    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/headerService/headerService_Events.xml
@@ -15347,7 +15995,7 @@ Validate HeaderService Event headerService_logevent_appliedSettingsMatchStart To
 
 Validate HeaderService Event headerService_logevent_errorCode Topic Byte Size
 	[Documentation]    Validate the headerService_logevent_errorCode topic is less than 65536 bytes in total.
-	[Tags]    smoke    HeaderService
+	[Tags]    smoke    HeaderService    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/headerService/headerService_Events.xml
@@ -15383,7 +16031,7 @@ Validate HeaderService Event headerService_logevent_errorCode Topic Columns
 
 Validate HeaderService Event headerService_logevent_settingVersions Topic Byte Size
 	[Documentation]    Validate the headerService_logevent_settingVersions topic is less than 65536 bytes in total.
-	[Tags]    smoke    HeaderService
+	[Tags]    smoke    HeaderService    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/headerService/headerService_Events.xml
@@ -15419,7 +16067,7 @@ Validate HeaderService Event headerService_logevent_settingVersions Topic Column
 
 Validate HeaderService Event headerService_logevent_summaryState Topic Byte Size
 	[Documentation]    Validate the headerService_logevent_summaryState topic is less than 65536 bytes in total.
-	[Tags]    smoke    HeaderService
+	[Tags]    smoke    HeaderService    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/headerService/headerService_Events.xml
@@ -15455,7 +16103,7 @@ Validate HeaderService Event headerService_logevent_summaryState Topic Columns
 
 Validate HeaderService Event headerService_logevent_detailedState Topic Byte Size
 	[Documentation]    Validate the headerService_logevent_detailedState topic is less than 65536 bytes in total.
-	[Tags]    smoke    HeaderService
+	[Tags]    smoke    HeaderService    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/headerService/headerService_Events.xml
@@ -15491,7 +16139,7 @@ Validate HeaderService Event headerService_logevent_detailedState Topic Columns
 
 Validate HeaderService Event headerService_logevent_heartbeat Topic Byte Size
 	[Documentation]    Validate the headerService_logevent_heartbeat topic is less than 65536 bytes in total.
-	[Tags]    smoke    HeaderService
+	[Tags]    smoke    HeaderService    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/headerService/headerService_Events.xml
@@ -15527,7 +16175,7 @@ Validate HeaderService Event headerService_logevent_heartbeat Topic Columns
 
 Validate HeaderService Event headerService_logevent_rejectedCommand Topic Byte Size
 	[Documentation]    Validate the headerService_logevent_rejectedCommand topic is less than 65536 bytes in total.
-	[Tags]    smoke    HeaderService
+	[Tags]    smoke    HeaderService    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/headerService/headerService_Events.xml
@@ -15563,7 +16211,7 @@ Validate HeaderService Event headerService_logevent_rejectedCommand Topic Column
 
 Validate HeaderService Event headerService_logevent_largeFileObjectAvailable Topic Byte Size
 	[Documentation]    Validate the headerService_logevent_largeFileObjectAvailable topic is less than 65536 bytes in total.
-	[Tags]    smoke    HeaderService
+	[Tags]    smoke    HeaderService    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/headerService/headerService_Events.xml
@@ -15599,7 +16247,7 @@ Validate HeaderService Event headerService_logevent_largeFileObjectAvailable Top
 
 Validate HeaderService Event headerService_logevent_settingsApplied Topic Byte Size
 	[Documentation]    Validate the headerService_logevent_settingsApplied topic is less than 65536 bytes in total.
-	[Tags]    smoke    HeaderService
+	[Tags]    smoke    HeaderService    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/headerService/headerService_Events.xml
@@ -15635,7 +16283,7 @@ Validate HeaderService Event headerService_logevent_settingsApplied Topic Column
 
 Validate Hexapod Command hexapod_command_configureAcceleration Topic Byte Size
 	[Documentation]    Validate the hexapod_command_configureAcceleration topic is less than 65536 bytes in total.
-	[Tags]    smoke    Hexapod
+	[Tags]    smoke    Hexapod    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Commands.xml
@@ -15671,7 +16319,7 @@ Validate Hexapod Command hexapod_command_configureAcceleration Topic Columns
 
 Validate Hexapod Command hexapod_command_configureLimits Topic Byte Size
 	[Documentation]    Validate the hexapod_command_configureLimits topic is less than 65536 bytes in total.
-	[Tags]    smoke    Hexapod
+	[Tags]    smoke    Hexapod    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Commands.xml
@@ -15707,7 +16355,7 @@ Validate Hexapod Command hexapod_command_configureLimits Topic Columns
 
 Validate Hexapod Command hexapod_command_configureElevationRawLUT Topic Byte Size
 	[Documentation]    Validate the hexapod_command_configureElevationRawLUT topic is less than 65536 bytes in total.
-	[Tags]    smoke    Hexapod
+	[Tags]    smoke    Hexapod    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Commands.xml
@@ -15743,7 +16391,7 @@ Validate Hexapod Command hexapod_command_configureElevationRawLUT Topic Columns
 
 Validate Hexapod Command hexapod_command_move Topic Byte Size
 	[Documentation]    Validate the hexapod_command_move topic is less than 65536 bytes in total.
-	[Tags]    smoke    Hexapod
+	[Tags]    smoke    Hexapod    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Commands.xml
@@ -15779,7 +16427,7 @@ Validate Hexapod Command hexapod_command_move Topic Columns
 
 Validate Hexapod Command hexapod_command_positionSet Topic Byte Size
 	[Documentation]    Validate the hexapod_command_positionSet topic is less than 65536 bytes in total.
-	[Tags]    smoke    Hexapod
+	[Tags]    smoke    Hexapod    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Commands.xml
@@ -15815,7 +16463,7 @@ Validate Hexapod Command hexapod_command_positionSet Topic Columns
 
 Validate Hexapod Command hexapod_command_configureVelocity Topic Byte Size
 	[Documentation]    Validate the hexapod_command_configureVelocity topic is less than 65536 bytes in total.
-	[Tags]    smoke    Hexapod
+	[Tags]    smoke    Hexapod    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Commands.xml
@@ -15851,7 +16499,7 @@ Validate Hexapod Command hexapod_command_configureVelocity Topic Columns
 
 Validate Hexapod Command hexapod_command_offset Topic Byte Size
 	[Documentation]    Validate the hexapod_command_offset topic is less than 65536 bytes in total.
-	[Tags]    smoke    Hexapod
+	[Tags]    smoke    Hexapod    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[7]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Commands.xml
@@ -15887,7 +16535,7 @@ Validate Hexapod Command hexapod_command_offset Topic Columns
 
 Validate Hexapod Command hexapod_command_pivot Topic Byte Size
 	[Documentation]    Validate the hexapod_command_pivot topic is less than 65536 bytes in total.
-	[Tags]    smoke    Hexapod
+	[Tags]    smoke    Hexapod    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[8]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Commands.xml
@@ -15923,7 +16571,7 @@ Validate Hexapod Command hexapod_command_pivot Topic Columns
 
 Validate Hexapod Command hexapod_command_clearError Topic Byte Size
 	[Documentation]    Validate the hexapod_command_clearError topic is less than 65536 bytes in total.
-	[Tags]    smoke    Hexapod
+	[Tags]    smoke    Hexapod    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[9]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Commands.xml
@@ -15959,7 +16607,7 @@ Validate Hexapod Command hexapod_command_clearError Topic Columns
 
 Validate Hexapod Command hexapod_command_test Topic Byte Size
 	[Documentation]    Validate the hexapod_command_test topic is less than 65536 bytes in total.
-	[Tags]    smoke    Hexapod
+	[Tags]    smoke    Hexapod    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[10]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Commands.xml
@@ -15995,7 +16643,7 @@ Validate Hexapod Command hexapod_command_test Topic Columns
 
 Validate Hexapod Command hexapod_command_configureAzimuthRawLUT Topic Byte Size
 	[Documentation]    Validate the hexapod_command_configureAzimuthRawLUT topic is less than 65536 bytes in total.
-	[Tags]    smoke    Hexapod
+	[Tags]    smoke    Hexapod    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[11]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Commands.xml
@@ -16031,7 +16679,7 @@ Validate Hexapod Command hexapod_command_configureAzimuthRawLUT Topic Columns
 
 Validate Hexapod Command hexapod_command_configureTemperatureRawLUT Topic Byte Size
 	[Documentation]    Validate the hexapod_command_configureTemperatureRawLUT topic is less than 65536 bytes in total.
-	[Tags]    smoke    Hexapod
+	[Tags]    smoke    Hexapod    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[12]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Commands.xml
@@ -16067,7 +16715,7 @@ Validate Hexapod Command hexapod_command_configureTemperatureRawLUT Topic Column
 
 Validate Hexapod Command hexapod_command_moveLUT Topic Byte Size
 	[Documentation]    Validate the hexapod_command_moveLUT topic is less than 65536 bytes in total.
-	[Tags]    smoke    Hexapod
+	[Tags]    smoke    Hexapod    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[13]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Commands.xml
@@ -16103,7 +16751,7 @@ Validate Hexapod Command hexapod_command_moveLUT Topic Columns
 
 Validate Hexapod Event hexapod_logevent_interlock Topic Byte Size
 	[Documentation]    Validate the hexapod_logevent_interlock topic is less than 65536 bytes in total.
-	[Tags]    smoke    Hexapod
+	[Tags]    smoke    Hexapod    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Events.xml
@@ -16139,7 +16787,7 @@ Validate Hexapod Event hexapod_logevent_interlock Topic Columns
 
 Validate Hexapod Event hexapod_logevent_inPosition Topic Byte Size
 	[Documentation]    Validate the hexapod_logevent_inPosition topic is less than 65536 bytes in total.
-	[Tags]    smoke    Hexapod
+	[Tags]    smoke    Hexapod    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Events.xml
@@ -16175,7 +16823,7 @@ Validate Hexapod Event hexapod_logevent_inPosition Topic Columns
 
 Validate Hexapod Event hexapod_logevent_deviceError Topic Byte Size
 	[Documentation]    Validate the hexapod_logevent_deviceError topic is less than 65536 bytes in total.
-	[Tags]    smoke    Hexapod
+	[Tags]    smoke    Hexapod    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Events.xml
@@ -16211,7 +16859,7 @@ Validate Hexapod Event hexapod_logevent_deviceError Topic Columns
 
 Validate Hexapod Event hexapod_logevent_settingsApplied Topic Byte Size
 	[Documentation]    Validate the hexapod_logevent_settingsApplied topic is less than 65536 bytes in total.
-	[Tags]    smoke    Hexapod
+	[Tags]    smoke    Hexapod    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Events.xml
@@ -16247,7 +16895,7 @@ Validate Hexapod Event hexapod_logevent_settingsApplied Topic Columns
 
 Validate Hexapod Event hexapod_logevent_rejectedCommand Topic Byte Size
 	[Documentation]    Validate the hexapod_logevent_rejectedCommand topic is less than 65536 bytes in total.
-	[Tags]    smoke    Hexapod
+	[Tags]    smoke    Hexapod    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Events.xml
@@ -16283,7 +16931,7 @@ Validate Hexapod Event hexapod_logevent_rejectedCommand Topic Columns
 
 Validate Hexapod Telemetry hexapod_Actuators Topic Byte Size
 	[Documentation]    Validate the hexapod_Actuators topic is less than 65536 bytes in total.
-	[Tags]    smoke    Hexapod
+	[Tags]    smoke    Hexapod    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Telemetry.xml
@@ -16319,7 +16967,7 @@ Validate Hexapod Telemetry hexapod_Actuators Topic Columns
 
 Validate Hexapod Telemetry hexapod_Application Topic Byte Size
 	[Documentation]    Validate the hexapod_Application topic is less than 65536 bytes in total.
-	[Tags]    smoke    Hexapod
+	[Tags]    smoke    Hexapod    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Telemetry.xml
@@ -16355,7 +17003,7 @@ Validate Hexapod Telemetry hexapod_Application Topic Columns
 
 Validate Hexapod Telemetry hexapod_Electrical Topic Byte Size
 	[Documentation]    Validate the hexapod_Electrical topic is less than 65536 bytes in total.
-	[Tags]    smoke    Hexapod
+	[Tags]    smoke    Hexapod    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[3]/item)" -n ${folder}/sal_interfaces/hexapod/hexapod_Telemetry.xml
@@ -16391,7 +17039,7 @@ Validate Hexapod Telemetry hexapod_Electrical Topic Columns
 
 Validate LinearStage Command LinearStage_command_start Topic Byte Size
 	[Documentation]    Validate the LinearStage_command_start topic is less than 65536 bytes in total.
-	[Tags]    smoke    LinearStage
+	[Tags]    smoke    LinearStage    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml
@@ -16427,7 +17075,7 @@ Validate LinearStage Command LinearStage_command_start Topic Columns
 
 Validate LinearStage Command LinearStage_command_disable Topic Byte Size
 	[Documentation]    Validate the LinearStage_command_disable topic is less than 65536 bytes in total.
-	[Tags]    smoke    LinearStage
+	[Tags]    smoke    LinearStage    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml
@@ -16463,7 +17111,7 @@ Validate LinearStage Command LinearStage_command_disable Topic Columns
 
 Validate LinearStage Command LinearStage_command_enable Topic Byte Size
 	[Documentation]    Validate the LinearStage_command_enable topic is less than 65536 bytes in total.
-	[Tags]    smoke    LinearStage
+	[Tags]    smoke    LinearStage    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml
@@ -16499,7 +17147,7 @@ Validate LinearStage Command LinearStage_command_enable Topic Columns
 
 Validate LinearStage Command LinearStage_command_standby Topic Byte Size
 	[Documentation]    Validate the LinearStage_command_standby topic is less than 65536 bytes in total.
-	[Tags]    smoke    LinearStage
+	[Tags]    smoke    LinearStage    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml
@@ -16535,7 +17183,7 @@ Validate LinearStage Command LinearStage_command_standby Topic Columns
 
 Validate LinearStage Command LinearStage_command_exitControl Topic Byte Size
 	[Documentation]    Validate the LinearStage_command_exitControl topic is less than 65536 bytes in total.
-	[Tags]    smoke    LinearStage
+	[Tags]    smoke    LinearStage    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml
@@ -16571,7 +17219,7 @@ Validate LinearStage Command LinearStage_command_exitControl Topic Columns
 
 Validate LinearStage Command LinearStage_command_enterControl Topic Byte Size
 	[Documentation]    Validate the LinearStage_command_enterControl topic is less than 65536 bytes in total.
-	[Tags]    smoke    LinearStage
+	[Tags]    smoke    LinearStage    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml
@@ -16607,7 +17255,7 @@ Validate LinearStage Command LinearStage_command_enterControl Topic Columns
 
 Validate LinearStage Command LinearStage_command_getPosition Topic Byte Size
 	[Documentation]    Validate the LinearStage_command_getPosition topic is less than 65536 bytes in total.
-	[Tags]    smoke    LinearStage
+	[Tags]    smoke    LinearStage    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[7]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml
@@ -16643,7 +17291,7 @@ Validate LinearStage Command LinearStage_command_getPosition Topic Columns
 
 Validate LinearStage Command LinearStage_command_moveRelative Topic Byte Size
 	[Documentation]    Validate the LinearStage_command_moveRelative topic is less than 65536 bytes in total.
-	[Tags]    smoke    LinearStage
+	[Tags]    smoke    LinearStage    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[8]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml
@@ -16679,7 +17327,7 @@ Validate LinearStage Command LinearStage_command_moveRelative Topic Columns
 
 Validate LinearStage Command LinearStage_command_moveAbsolute Topic Byte Size
 	[Documentation]    Validate the LinearStage_command_moveAbsolute topic is less than 65536 bytes in total.
-	[Tags]    smoke    LinearStage
+	[Tags]    smoke    LinearStage    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[9]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml
@@ -16715,7 +17363,7 @@ Validate LinearStage Command LinearStage_command_moveAbsolute Topic Columns
 
 Validate LinearStage Command LinearStage_command_getHome Topic Byte Size
 	[Documentation]    Validate the LinearStage_command_getHome topic is less than 65536 bytes in total.
-	[Tags]    smoke    LinearStage
+	[Tags]    smoke    LinearStage    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[10]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml
@@ -16751,7 +17399,7 @@ Validate LinearStage Command LinearStage_command_getHome Topic Columns
 
 Validate LinearStage Command LinearStage_command_stop Topic Byte Size
 	[Documentation]    Validate the LinearStage_command_stop topic is less than 65536 bytes in total.
-	[Tags]    smoke    LinearStage
+	[Tags]    smoke    LinearStage    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[11]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml
@@ -16787,7 +17435,7 @@ Validate LinearStage Command LinearStage_command_stop Topic Columns
 
 Validate LinearStage Event LinearStage_logevent_settingVersions Topic Byte Size
 	[Documentation]    Validate the LinearStage_logevent_settingVersions topic is less than 65536 bytes in total.
-	[Tags]    smoke    LinearStage
+	[Tags]    smoke    LinearStage    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
@@ -16823,7 +17471,7 @@ Validate LinearStage Event LinearStage_logevent_settingVersions Topic Columns
 
 Validate LinearStage Event LinearStage_logevent_appliedSettingsMatchStart Topic Byte Size
 	[Documentation]    Validate the LinearStage_logevent_appliedSettingsMatchStart topic is less than 65536 bytes in total.
-	[Tags]    smoke    LinearStage
+	[Tags]    smoke    LinearStage    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
@@ -16859,7 +17507,7 @@ Validate LinearStage Event LinearStage_logevent_appliedSettingsMatchStart Topic 
 
 Validate LinearStage Event LinearStage_logevent_errorCode Topic Byte Size
 	[Documentation]    Validate the LinearStage_logevent_errorCode topic is less than 65536 bytes in total.
-	[Tags]    smoke    LinearStage
+	[Tags]    smoke    LinearStage    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
@@ -16895,7 +17543,7 @@ Validate LinearStage Event LinearStage_logevent_errorCode Topic Columns
 
 Validate LinearStage Event LinearStage_logevent_detailedState Topic Byte Size
 	[Documentation]    Validate the LinearStage_logevent_detailedState topic is less than 65536 bytes in total.
-	[Tags]    smoke    LinearStage
+	[Tags]    smoke    LinearStage    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
@@ -16931,7 +17579,7 @@ Validate LinearStage Event LinearStage_logevent_detailedState Topic Columns
 
 Validate LinearStage Event LinearStage_logevent_getHome Topic Byte Size
 	[Documentation]    Validate the LinearStage_logevent_getHome topic is less than 65536 bytes in total.
-	[Tags]    smoke    LinearStage
+	[Tags]    smoke    LinearStage    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
@@ -16967,7 +17615,7 @@ Validate LinearStage Event LinearStage_logevent_getHome Topic Columns
 
 Validate LinearStage Event LinearStage_logevent_moveAbsolute Topic Byte Size
 	[Documentation]    Validate the LinearStage_logevent_moveAbsolute topic is less than 65536 bytes in total.
-	[Tags]    smoke    LinearStage
+	[Tags]    smoke    LinearStage    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
@@ -17003,7 +17651,7 @@ Validate LinearStage Event LinearStage_logevent_moveAbsolute Topic Columns
 
 Validate LinearStage Event LinearStage_logevent_moveRelative Topic Byte Size
 	[Documentation]    Validate the LinearStage_logevent_moveRelative topic is less than 65536 bytes in total.
-	[Tags]    smoke    LinearStage
+	[Tags]    smoke    LinearStage    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
@@ -17039,7 +17687,7 @@ Validate LinearStage Event LinearStage_logevent_moveRelative Topic Columns
 
 Validate LinearStage Event LinearStage_logevent_getPosition Topic Byte Size
 	[Documentation]    Validate the LinearStage_logevent_getPosition topic is less than 65536 bytes in total.
-	[Tags]    smoke    LinearStage
+	[Tags]    smoke    LinearStage    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
@@ -17075,7 +17723,7 @@ Validate LinearStage Event LinearStage_logevent_getPosition Topic Columns
 
 Validate LinearStage Event LinearStage_logevent_stop Topic Byte Size
 	[Documentation]    Validate the LinearStage_logevent_stop topic is less than 65536 bytes in total.
-	[Tags]    smoke    LinearStage
+	[Tags]    smoke    LinearStage    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
@@ -17111,7 +17759,7 @@ Validate LinearStage Event LinearStage_logevent_stop Topic Columns
 
 Validate LinearStage Event LinearStage_logevent_summaryState Topic Byte Size
 	[Documentation]    Validate the LinearStage_logevent_summaryState topic is less than 65536 bytes in total.
-	[Tags]    smoke    LinearStage
+	[Tags]    smoke    LinearStage    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
@@ -17147,7 +17795,7 @@ Validate LinearStage Event LinearStage_logevent_summaryState Topic Columns
 
 Validate LinearStage Telemetry LinearStage_position Topic Byte Size
 	[Documentation]    Validate the LinearStage_position topic is less than 65536 bytes in total.
-	[Tags]    smoke    LinearStage
+	[Tags]    smoke    LinearStage    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Telemetry.xml
@@ -17183,7 +17831,7 @@ Validate LinearStage Telemetry LinearStage_position Topic Columns
 
 Validate M1M3 Command m1m3_command_Start Topic Byte Size
 	[Documentation]    Validate the m1m3_command_Start topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -17219,7 +17867,7 @@ Validate M1M3 Command m1m3_command_Start Topic Columns
 
 Validate M1M3 Command m1m3_command_Enable Topic Byte Size
 	[Documentation]    Validate the m1m3_command_Enable topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -17255,7 +17903,7 @@ Validate M1M3 Command m1m3_command_Enable Topic Columns
 
 Validate M1M3 Command m1m3_command_RaiseM1M3 Topic Byte Size
 	[Documentation]    Validate the m1m3_command_RaiseM1M3 topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -17291,7 +17939,7 @@ Validate M1M3 Command m1m3_command_RaiseM1M3 Topic Columns
 
 Validate M1M3 Command m1m3_command_AbortRaiseM1M3 Topic Byte Size
 	[Documentation]    Validate the m1m3_command_AbortRaiseM1M3 topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -17327,7 +17975,7 @@ Validate M1M3 Command m1m3_command_AbortRaiseM1M3 Topic Columns
 
 Validate M1M3 Command m1m3_command_LowerM1M3 Topic Byte Size
 	[Documentation]    Validate the m1m3_command_LowerM1M3 topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -17363,7 +18011,7 @@ Validate M1M3 Command m1m3_command_LowerM1M3 Topic Columns
 
 Validate M1M3 Command m1m3_command_EnterEngineering Topic Byte Size
 	[Documentation]    Validate the m1m3_command_EnterEngineering topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -17399,7 +18047,7 @@ Validate M1M3 Command m1m3_command_EnterEngineering Topic Columns
 
 Validate M1M3 Command m1m3_command_ExitEngineering Topic Byte Size
 	[Documentation]    Validate the m1m3_command_ExitEngineering topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[7]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -17435,7 +18083,7 @@ Validate M1M3 Command m1m3_command_ExitEngineering Topic Columns
 
 Validate M1M3 Command m1m3_command_TurnAirOn Topic Byte Size
 	[Documentation]    Validate the m1m3_command_TurnAirOn topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[8]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -17471,7 +18119,7 @@ Validate M1M3 Command m1m3_command_TurnAirOn Topic Columns
 
 Validate M1M3 Command m1m3_command_TurnAirOff Topic Byte Size
 	[Documentation]    Validate the m1m3_command_TurnAirOff topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[9]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -17507,7 +18155,7 @@ Validate M1M3 Command m1m3_command_TurnAirOff Topic Columns
 
 Validate M1M3 Command m1m3_command_TestAir Topic Byte Size
 	[Documentation]    Validate the m1m3_command_TestAir topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[10]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -17543,7 +18191,7 @@ Validate M1M3 Command m1m3_command_TestAir Topic Columns
 
 Validate M1M3 Command m1m3_command_MoveHardpointActuators Topic Byte Size
 	[Documentation]    Validate the m1m3_command_MoveHardpointActuators topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[11]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -17579,7 +18227,7 @@ Validate M1M3 Command m1m3_command_MoveHardpointActuators Topic Columns
 
 Validate M1M3 Command m1m3_command_StopHardpointMotion Topic Byte Size
 	[Documentation]    Validate the m1m3_command_StopHardpointMotion topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[12]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -17615,7 +18263,7 @@ Validate M1M3 Command m1m3_command_StopHardpointMotion Topic Columns
 
 Validate M1M3 Command m1m3_command_TestHardpoint Topic Byte Size
 	[Documentation]    Validate the m1m3_command_TestHardpoint topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[13]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -17651,7 +18299,7 @@ Validate M1M3 Command m1m3_command_TestHardpoint Topic Columns
 
 Validate M1M3 Command m1m3_command_EnableHardpointChase Topic Byte Size
 	[Documentation]    Validate the m1m3_command_EnableHardpointChase topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[14]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -17687,7 +18335,7 @@ Validate M1M3 Command m1m3_command_EnableHardpointChase Topic Columns
 
 Validate M1M3 Command m1m3_command_DisableHardpointChase Topic Byte Size
 	[Documentation]    Validate the m1m3_command_DisableHardpointChase topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[15]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -17723,7 +18371,7 @@ Validate M1M3 Command m1m3_command_DisableHardpointChase Topic Columns
 
 Validate M1M3 Command m1m3_command_TestForceActuator Topic Byte Size
 	[Documentation]    Validate the m1m3_command_TestForceActuator topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[16]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -17759,7 +18407,7 @@ Validate M1M3 Command m1m3_command_TestForceActuator Topic Columns
 
 Validate M1M3 Command m1m3_command_ApplyOffsetForces Topic Byte Size
 	[Documentation]    Validate the m1m3_command_ApplyOffsetForces topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[17]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -17795,7 +18443,7 @@ Validate M1M3 Command m1m3_command_ApplyOffsetForces Topic Columns
 
 Validate M1M3 Command m1m3_command_Disable Topic Byte Size
 	[Documentation]    Validate the m1m3_command_Disable topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[18]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -17831,7 +18479,7 @@ Validate M1M3 Command m1m3_command_Disable Topic Columns
 
 Validate M1M3 Command m1m3_command_Standby Topic Byte Size
 	[Documentation]    Validate the m1m3_command_Standby topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[19]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -17867,7 +18515,7 @@ Validate M1M3 Command m1m3_command_Standby Topic Columns
 
 Validate M1M3 Command m1m3_command_Shutdown Topic Byte Size
 	[Documentation]    Validate the m1m3_command_Shutdown topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[20]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -17903,7 +18551,7 @@ Validate M1M3 Command m1m3_command_Shutdown Topic Columns
 
 Validate M1M3 Command m1m3_command_TranslateM1M3 Topic Byte Size
 	[Documentation]    Validate the m1m3_command_TranslateM1M3 topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[21]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -17939,7 +18587,7 @@ Validate M1M3 Command m1m3_command_TranslateM1M3 Topic Columns
 
 Validate M1M3 Command m1m3_command_ClearOffsetForces Topic Byte Size
 	[Documentation]    Validate the m1m3_command_ClearOffsetForces topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[22]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -17975,7 +18623,7 @@ Validate M1M3 Command m1m3_command_ClearOffsetForces Topic Columns
 
 Validate M1M3 Command m1m3_command_ApplyAberrationForcesByBendingModes Topic Byte Size
 	[Documentation]    Validate the m1m3_command_ApplyAberrationForcesByBendingModes topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[23]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -18011,7 +18659,7 @@ Validate M1M3 Command m1m3_command_ApplyAberrationForcesByBendingModes Topic Col
 
 Validate M1M3 Command m1m3_command_ApplyAberrationForces Topic Byte Size
 	[Documentation]    Validate the m1m3_command_ApplyAberrationForces topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[24]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -18047,7 +18695,7 @@ Validate M1M3 Command m1m3_command_ApplyAberrationForces Topic Columns
 
 Validate M1M3 Command m1m3_command_ClearAberrationForces Topic Byte Size
 	[Documentation]    Validate the m1m3_command_ClearAberrationForces topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[25]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -18083,7 +18731,7 @@ Validate M1M3 Command m1m3_command_ClearAberrationForces Topic Columns
 
 Validate M1M3 Command m1m3_command_ApplyActiveOpticForcesByBendingModes Topic Byte Size
 	[Documentation]    Validate the m1m3_command_ApplyActiveOpticForcesByBendingModes topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[26]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -18119,7 +18767,7 @@ Validate M1M3 Command m1m3_command_ApplyActiveOpticForcesByBendingModes Topic Co
 
 Validate M1M3 Command m1m3_command_ApplyActiveOpticForces Topic Byte Size
 	[Documentation]    Validate the m1m3_command_ApplyActiveOpticForces topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[27]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -18155,7 +18803,7 @@ Validate M1M3 Command m1m3_command_ApplyActiveOpticForces Topic Columns
 
 Validate M1M3 Command m1m3_command_ClearActiveOpticForces Topic Byte Size
 	[Documentation]    Validate the m1m3_command_ClearActiveOpticForces topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[28]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -18191,7 +18839,7 @@ Validate M1M3 Command m1m3_command_ClearActiveOpticForces Topic Columns
 
 Validate M1M3 Command m1m3_command_PositionM1M3 Topic Byte Size
 	[Documentation]    Validate the m1m3_command_PositionM1M3 topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[29]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -18227,7 +18875,7 @@ Validate M1M3 Command m1m3_command_PositionM1M3 Topic Columns
 
 Validate M1M3 Command m1m3_command_TurnLightsOn Topic Byte Size
 	[Documentation]    Validate the m1m3_command_TurnLightsOn topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[30]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -18263,7 +18911,7 @@ Validate M1M3 Command m1m3_command_TurnLightsOn Topic Columns
 
 Validate M1M3 Command m1m3_command_TurnLightsOff Topic Byte Size
 	[Documentation]    Validate the m1m3_command_TurnLightsOff topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[31]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -18299,7 +18947,7 @@ Validate M1M3 Command m1m3_command_TurnLightsOff Topic Columns
 
 Validate M1M3 Command m1m3_command_TurnPowerOn Topic Byte Size
 	[Documentation]    Validate the m1m3_command_TurnPowerOn topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[32]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -18335,7 +18983,7 @@ Validate M1M3 Command m1m3_command_TurnPowerOn Topic Columns
 
 Validate M1M3 Command m1m3_command_TurnPowerOff Topic Byte Size
 	[Documentation]    Validate the m1m3_command_TurnPowerOff topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[33]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -18371,7 +19019,7 @@ Validate M1M3 Command m1m3_command_TurnPowerOff Topic Columns
 
 Validate M1M3 Command m1m3_command_EnableHardpointCorrections Topic Byte Size
 	[Documentation]    Validate the m1m3_command_EnableHardpointCorrections topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[34]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -18407,7 +19055,7 @@ Validate M1M3 Command m1m3_command_EnableHardpointCorrections Topic Columns
 
 Validate M1M3 Command m1m3_command_DisableHardpointCorrections Topic Byte Size
 	[Documentation]    Validate the m1m3_command_DisableHardpointCorrections topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[35]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -18443,7 +19091,7 @@ Validate M1M3 Command m1m3_command_DisableHardpointCorrections Topic Columns
 
 Validate M1M3 Command m1m3_command_RunMirrorForceProfile Topic Byte Size
 	[Documentation]    Validate the m1m3_command_RunMirrorForceProfile topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    TSS-2989
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[36]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -18479,7 +19127,7 @@ Validate M1M3 Command m1m3_command_RunMirrorForceProfile Topic Columns
 
 Validate M1M3 Command m1m3_command_AbortProfile Topic Byte Size
 	[Documentation]    Validate the m1m3_command_AbortProfile topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[37]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -18515,7 +19163,7 @@ Validate M1M3 Command m1m3_command_AbortProfile Topic Columns
 
 Validate M1M3 Command m1m3_command_ApplyOffsetForcesByMirrorForce Topic Byte Size
 	[Documentation]    Validate the m1m3_command_ApplyOffsetForcesByMirrorForce topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[38]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -18551,7 +19199,7 @@ Validate M1M3 Command m1m3_command_ApplyOffsetForcesByMirrorForce Topic Columns
 
 Validate M1M3 Command m1m3_command_UpdatePID Topic Byte Size
 	[Documentation]    Validate the m1m3_command_UpdatePID topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[39]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -18587,7 +19235,7 @@ Validate M1M3 Command m1m3_command_UpdatePID Topic Columns
 
 Validate M1M3 Command m1m3_command_ResetPID Topic Byte Size
 	[Documentation]    Validate the m1m3_command_ResetPID topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[40]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -18623,7 +19271,7 @@ Validate M1M3 Command m1m3_command_ResetPID Topic Columns
 
 Validate M1M3 Command m1m3_command_SetThermalSetpoint Topic Byte Size
 	[Documentation]    Validate the m1m3_command_SetThermalSetpoint topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[41]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -18659,7 +19307,7 @@ Validate M1M3 Command m1m3_command_SetThermalSetpoint Topic Columns
 
 Validate M1M3 Command m1m3_command_ProgramILC Topic Byte Size
 	[Documentation]    Validate the m1m3_command_ProgramILC topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[42]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -18695,7 +19343,7 @@ Validate M1M3 Command m1m3_command_ProgramILC Topic Columns
 
 Validate M1M3 Command m1m3_command_ModbusTransmit Topic Byte Size
 	[Documentation]    Validate the m1m3_command_ModbusTransmit topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[43]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -18731,7 +19379,7 @@ Validate M1M3 Command m1m3_command_ModbusTransmit Topic Columns
 
 Validate M1M3 Event m1m3_logevent_ErrorCode Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_ErrorCode topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -18767,7 +19415,7 @@ Validate M1M3 Event m1m3_logevent_ErrorCode Topic Columns
 
 Validate M1M3 Event m1m3_logevent_SettingVersions Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_SettingVersions topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -18803,7 +19451,7 @@ Validate M1M3 Event m1m3_logevent_SettingVersions Topic Columns
 
 Validate M1M3 Event m1m3_logevent_AppliedSettingsMatchStart Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_AppliedSettingsMatchStart topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -18839,7 +19487,7 @@ Validate M1M3 Event m1m3_logevent_AppliedSettingsMatchStart Topic Columns
 
 Validate M1M3 Event m1m3_logevent_SettingsApplied Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_SettingsApplied topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -18875,7 +19523,7 @@ Validate M1M3 Event m1m3_logevent_SettingsApplied Topic Columns
 
 Validate M1M3 Event m1m3_logevent_DetailedState Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_DetailedState topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -18911,7 +19559,7 @@ Validate M1M3 Event m1m3_logevent_DetailedState Topic Columns
 
 Validate M1M3 Event m1m3_logevent_SummaryState Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_SummaryState topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -18947,7 +19595,7 @@ Validate M1M3 Event m1m3_logevent_SummaryState Topic Columns
 
 Validate M1M3 Event m1m3_logevent_HardpointActuatorInfo Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_HardpointActuatorInfo topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -18983,7 +19631,7 @@ Validate M1M3 Event m1m3_logevent_HardpointActuatorInfo Topic Columns
 
 Validate M1M3 Event m1m3_logevent_ForceActuatorInfo Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_ForceActuatorInfo topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    TSS-2990
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -19019,7 +19667,7 @@ Validate M1M3 Event m1m3_logevent_ForceActuatorInfo Topic Columns
 
 Validate M1M3 Event m1m3_logevent_ILCWarning Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_ILCWarning topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -19055,7 +19703,7 @@ Validate M1M3 Event m1m3_logevent_ILCWarning Topic Columns
 
 Validate M1M3 Event m1m3_logevent_InterlockWarning Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_InterlockWarning topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -19091,7 +19739,7 @@ Validate M1M3 Event m1m3_logevent_InterlockWarning Topic Columns
 
 Validate M1M3 Event m1m3_logevent_AirSupplyStatus Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_AirSupplyStatus topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -19127,7 +19775,7 @@ Validate M1M3 Event m1m3_logevent_AirSupplyStatus Topic Columns
 
 Validate M1M3 Event m1m3_logevent_AirSupplyWarning Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_AirSupplyWarning topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[12]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -19163,7 +19811,7 @@ Validate M1M3 Event m1m3_logevent_AirSupplyWarning Topic Columns
 
 Validate M1M3 Event m1m3_logevent_InterlockStatus Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_InterlockStatus topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[13]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -19199,7 +19847,7 @@ Validate M1M3 Event m1m3_logevent_InterlockStatus Topic Columns
 
 Validate M1M3 Event m1m3_logevent_DisplacementSensorWarning Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_DisplacementSensorWarning topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[14]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -19235,7 +19883,7 @@ Validate M1M3 Event m1m3_logevent_DisplacementSensorWarning Topic Columns
 
 Validate M1M3 Event m1m3_logevent_InclinometerSensorWarning Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_InclinometerSensorWarning topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[15]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -19271,7 +19919,7 @@ Validate M1M3 Event m1m3_logevent_InclinometerSensorWarning Topic Columns
 
 Validate M1M3 Event m1m3_logevent_AccelerometerWarning Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_AccelerometerWarning topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[16]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -19307,7 +19955,7 @@ Validate M1M3 Event m1m3_logevent_AccelerometerWarning Topic Columns
 
 Validate M1M3 Event m1m3_logevent_ForceSetpointWarning Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_ForceSetpointWarning topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    TSS-2991
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[17]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -19343,7 +19991,7 @@ Validate M1M3 Event m1m3_logevent_ForceSetpointWarning Topic Columns
 
 Validate M1M3 Event m1m3_logevent_ForceActuatorState Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_ForceActuatorState topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[18]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -19379,7 +20027,7 @@ Validate M1M3 Event m1m3_logevent_ForceActuatorState Topic Columns
 
 Validate M1M3 Event m1m3_logevent_HardpointMonitorInfo Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_HardpointMonitorInfo topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[19]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -19415,7 +20063,7 @@ Validate M1M3 Event m1m3_logevent_HardpointMonitorInfo Topic Columns
 
 Validate M1M3 Event m1m3_logevent_CellLightStatus Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_CellLightStatus topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[20]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -19451,7 +20099,7 @@ Validate M1M3 Event m1m3_logevent_CellLightStatus Topic Columns
 
 Validate M1M3 Event m1m3_logevent_CellLightWarning Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_CellLightWarning topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[21]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -19487,7 +20135,7 @@ Validate M1M3 Event m1m3_logevent_CellLightWarning Topic Columns
 
 Validate M1M3 Event m1m3_logevent_PowerStatus Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_PowerStatus topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[22]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -19523,7 +20171,7 @@ Validate M1M3 Event m1m3_logevent_PowerStatus Topic Columns
 
 Validate M1M3 Event m1m3_logevent_PowerWarning Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_PowerWarning topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[23]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -19559,7 +20207,7 @@ Validate M1M3 Event m1m3_logevent_PowerWarning Topic Columns
 
 Validate M1M3 Event m1m3_logevent_ForceActuatorForceWarning Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_ForceActuatorForceWarning topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[24]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -19595,7 +20243,7 @@ Validate M1M3 Event m1m3_logevent_ForceActuatorForceWarning Topic Columns
 
 Validate M1M3 Event m1m3_logevent_GyroWarning Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_GyroWarning topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[25]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -19631,7 +20279,7 @@ Validate M1M3 Event m1m3_logevent_GyroWarning Topic Columns
 
 Validate M1M3 Event m1m3_logevent_PowerSupplyStatus Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_PowerSupplyStatus topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[26]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -19667,7 +20315,7 @@ Validate M1M3 Event m1m3_logevent_PowerSupplyStatus Topic Columns
 
 Validate M1M3 Event m1m3_logevent_AppliedOffsetForces Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_AppliedOffsetForces topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[27]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -19703,7 +20351,7 @@ Validate M1M3 Event m1m3_logevent_AppliedOffsetForces Topic Columns
 
 Validate M1M3 Event m1m3_logevent_AppliedStaticForces Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_AppliedStaticForces topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[28]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -19739,7 +20387,7 @@ Validate M1M3 Event m1m3_logevent_AppliedStaticForces Topic Columns
 
 Validate M1M3 Event m1m3_logevent_AppliedActiveOpticForces Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_AppliedActiveOpticForces topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[29]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -19775,7 +20423,7 @@ Validate M1M3 Event m1m3_logevent_AppliedActiveOpticForces Topic Columns
 
 Validate M1M3 Event m1m3_logevent_AppliedAberrationForces Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_AppliedAberrationForces topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[30]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -19811,7 +20459,7 @@ Validate M1M3 Event m1m3_logevent_AppliedAberrationForces Topic Columns
 
 Validate M1M3 Event m1m3_logevent_AppliedAzimuthForces Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_AppliedAzimuthForces topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[31]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -19847,7 +20495,7 @@ Validate M1M3 Event m1m3_logevent_AppliedAzimuthForces Topic Columns
 
 Validate M1M3 Event m1m3_logevent_CommandRejectionWarning Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_CommandRejectionWarning topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[32]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -19883,7 +20531,7 @@ Validate M1M3 Event m1m3_logevent_CommandRejectionWarning Topic Columns
 
 Validate M1M3 Event m1m3_logevent_PIDInfo Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_PIDInfo topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[33]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -19919,7 +20567,7 @@ Validate M1M3 Event m1m3_logevent_PIDInfo Topic Columns
 
 Validate M1M3 Event m1m3_logevent_HardpointActuatorWarning Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_HardpointActuatorWarning topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[34]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -19955,7 +20603,7 @@ Validate M1M3 Event m1m3_logevent_HardpointActuatorWarning Topic Columns
 
 Validate M1M3 Event m1m3_logevent_HardpointMonitorWarning Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_HardpointMonitorWarning topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[35]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -19991,7 +20639,7 @@ Validate M1M3 Event m1m3_logevent_HardpointMonitorWarning Topic Columns
 
 Validate M1M3 Event m1m3_logevent_HardpointActuatorState Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_HardpointActuatorState topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[36]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -20027,7 +20675,7 @@ Validate M1M3 Event m1m3_logevent_HardpointActuatorState Topic Columns
 
 Validate M1M3 Event m1m3_logevent_HardpointMonitorState Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_HardpointMonitorState topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[37]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -20063,7 +20711,7 @@ Validate M1M3 Event m1m3_logevent_HardpointMonitorState Topic Columns
 
 Validate M1M3 Event m1m3_logevent_ForceActuatorWarning Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_ForceActuatorWarning topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    TSS-2992
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[38]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -20099,7 +20747,7 @@ Validate M1M3 Event m1m3_logevent_ForceActuatorWarning Topic Columns
 
 Validate M1M3 Event m1m3_logevent_RejectedStaticForces Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_RejectedStaticForces topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[39]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -20135,7 +20783,7 @@ Validate M1M3 Event m1m3_logevent_RejectedStaticForces Topic Columns
 
 Validate M1M3 Event m1m3_logevent_RejectedElevationForces Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_RejectedElevationForces topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[40]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -20171,7 +20819,7 @@ Validate M1M3 Event m1m3_logevent_RejectedElevationForces Topic Columns
 
 Validate M1M3 Event m1m3_logevent_RejectedAzimuthForces Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_RejectedAzimuthForces topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[41]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -20207,7 +20855,7 @@ Validate M1M3 Event m1m3_logevent_RejectedAzimuthForces Topic Columns
 
 Validate M1M3 Event m1m3_logevent_RejectedThermalForces Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_RejectedThermalForces topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[42]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -20243,7 +20891,7 @@ Validate M1M3 Event m1m3_logevent_RejectedThermalForces Topic Columns
 
 Validate M1M3 Event m1m3_logevent_RejectedActiveOpticForces Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_RejectedActiveOpticForces topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[43]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -20279,7 +20927,7 @@ Validate M1M3 Event m1m3_logevent_RejectedActiveOpticForces Topic Columns
 
 Validate M1M3 Event m1m3_logevent_RejectedAberrationForces Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_RejectedAberrationForces topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[44]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -20315,7 +20963,7 @@ Validate M1M3 Event m1m3_logevent_RejectedAberrationForces Topic Columns
 
 Validate M1M3 Event m1m3_logevent_RejectedBalanceForces Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_RejectedBalanceForces topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[45]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -20351,7 +20999,7 @@ Validate M1M3 Event m1m3_logevent_RejectedBalanceForces Topic Columns
 
 Validate M1M3 Event m1m3_logevent_RejectedVelocityForces Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_RejectedVelocityForces topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[46]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -20387,7 +21035,7 @@ Validate M1M3 Event m1m3_logevent_RejectedVelocityForces Topic Columns
 
 Validate M1M3 Event m1m3_logevent_RejectedAccelerationForces Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_RejectedAccelerationForces topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[47]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -20423,7 +21071,7 @@ Validate M1M3 Event m1m3_logevent_RejectedAccelerationForces Topic Columns
 
 Validate M1M3 Event m1m3_logevent_RejectedOffsetForces Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_RejectedOffsetForces topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[48]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -20459,7 +21107,7 @@ Validate M1M3 Event m1m3_logevent_RejectedOffsetForces Topic Columns
 
 Validate M1M3 Event m1m3_logevent_RejectedForces Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_RejectedForces topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[49]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -20495,7 +21143,7 @@ Validate M1M3 Event m1m3_logevent_RejectedForces Topic Columns
 
 Validate M1M3 Event m1m3_logevent_AppliedElevationForces Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_AppliedElevationForces topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[50]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -20531,7 +21179,7 @@ Validate M1M3 Event m1m3_logevent_AppliedElevationForces Topic Columns
 
 Validate M1M3 Event m1m3_logevent_AppliedAccelerationForces Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_AppliedAccelerationForces topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[51]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -20567,7 +21215,7 @@ Validate M1M3 Event m1m3_logevent_AppliedAccelerationForces Topic Columns
 
 Validate M1M3 Event m1m3_logevent_AppliedThermalForces Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_AppliedThermalForces topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[52]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -20603,7 +21251,7 @@ Validate M1M3 Event m1m3_logevent_AppliedThermalForces Topic Columns
 
 Validate M1M3 Event m1m3_logevent_AppliedVelocityForces Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_AppliedVelocityForces topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[53]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -20639,7 +21287,7 @@ Validate M1M3 Event m1m3_logevent_AppliedVelocityForces Topic Columns
 
 Validate M1M3 Event m1m3_logevent_AppliedBalanceForces Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_AppliedBalanceForces topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[54]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -20675,7 +21323,7 @@ Validate M1M3 Event m1m3_logevent_AppliedBalanceForces Topic Columns
 
 Validate M1M3 Event m1m3_logevent_AppliedForces Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_AppliedForces topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[55]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -20711,7 +21359,7 @@ Validate M1M3 Event m1m3_logevent_AppliedForces Topic Columns
 
 Validate M1M3 Event m1m3_logevent_RejectedCylinderForces Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_RejectedCylinderForces topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[56]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -20747,7 +21395,7 @@ Validate M1M3 Event m1m3_logevent_RejectedCylinderForces Topic Columns
 
 Validate M1M3 Event m1m3_logevent_AppliedCylinderForces Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_AppliedCylinderForces topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[57]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -20783,7 +21431,7 @@ Validate M1M3 Event m1m3_logevent_AppliedCylinderForces Topic Columns
 
 Validate M1M3 Event m1m3_logevent_ModbusResponse Topic Byte Size
 	[Documentation]    Validate the m1m3_logevent_ModbusResponse topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[58]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -20819,7 +21467,7 @@ Validate M1M3 Event m1m3_logevent_ModbusResponse Topic Columns
 
 Validate M1M3 Telemetry m1m3_ForceActuatorData Topic Byte Size
 	[Documentation]    Validate the m1m3_ForceActuatorData topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Telemetry.xml
@@ -20855,7 +21503,7 @@ Validate M1M3 Telemetry m1m3_ForceActuatorData Topic Columns
 
 Validate M1M3 Telemetry m1m3_InclinometerData Topic Byte Size
 	[Documentation]    Validate the m1m3_InclinometerData topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Telemetry.xml
@@ -20891,7 +21539,7 @@ Validate M1M3 Telemetry m1m3_InclinometerData Topic Columns
 
 Validate M1M3 Telemetry m1m3_OuterLoopData Topic Byte Size
 	[Documentation]    Validate the m1m3_OuterLoopData topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[3]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Telemetry.xml
@@ -20927,7 +21575,7 @@ Validate M1M3 Telemetry m1m3_OuterLoopData Topic Columns
 
 Validate M1M3 Telemetry m1m3_AccelerometerData Topic Byte Size
 	[Documentation]    Validate the m1m3_AccelerometerData topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[4]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Telemetry.xml
@@ -20963,7 +21611,7 @@ Validate M1M3 Telemetry m1m3_AccelerometerData Topic Columns
 
 Validate M1M3 Telemetry m1m3_HardpointActuatorData Topic Byte Size
 	[Documentation]    Validate the m1m3_HardpointActuatorData topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[5]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Telemetry.xml
@@ -20999,7 +21647,7 @@ Validate M1M3 Telemetry m1m3_HardpointActuatorData Topic Columns
 
 Validate M1M3 Telemetry m1m3_IMSData Topic Byte Size
 	[Documentation]    Validate the m1m3_IMSData topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[6]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Telemetry.xml
@@ -21035,7 +21683,7 @@ Validate M1M3 Telemetry m1m3_IMSData Topic Columns
 
 Validate M1M3 Telemetry m1m3_GyroData Topic Byte Size
 	[Documentation]    Validate the m1m3_GyroData topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[7]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Telemetry.xml
@@ -21071,7 +21719,7 @@ Validate M1M3 Telemetry m1m3_GyroData Topic Columns
 
 Validate M1M3 Telemetry m1m3_PowerSupplyData Topic Byte Size
 	[Documentation]    Validate the m1m3_PowerSupplyData topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[8]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Telemetry.xml
@@ -21107,7 +21755,7 @@ Validate M1M3 Telemetry m1m3_PowerSupplyData Topic Columns
 
 Validate M1M3 Telemetry m1m3_PIDData Topic Byte Size
 	[Documentation]    Validate the m1m3_PIDData topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[9]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Telemetry.xml
@@ -21143,7 +21791,7 @@ Validate M1M3 Telemetry m1m3_PIDData Topic Columns
 
 Validate M1M3 Telemetry m1m3_HardpointMonitorData Topic Byte Size
 	[Documentation]    Validate the m1m3_HardpointMonitorData topic is less than 65536 bytes in total.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[10]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Telemetry.xml
@@ -21179,7 +21827,7 @@ Validate M1M3 Telemetry m1m3_HardpointMonitorData Topic Columns
 
 Validate M2MS Command m2ms_command_ApplyBendingMode Topic Byte Size
 	[Documentation]    Validate the m2ms_command_ApplyBendingMode topic is less than 65536 bytes in total.
-	[Tags]    smoke    M2MS
+	[Tags]    smoke    M2MS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/m2ms/m2ms_Commands.xml
@@ -21215,7 +21863,7 @@ Validate M2MS Command m2ms_command_ApplyBendingMode Topic Columns
 
 Validate M2MS Command m2ms_command_ApplyForce Topic Byte Size
 	[Documentation]    Validate the m2ms_command_ApplyForce topic is less than 65536 bytes in total.
-	[Tags]    smoke    M2MS
+	[Tags]    smoke    M2MS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/m2ms/m2ms_Commands.xml
@@ -21251,7 +21899,7 @@ Validate M2MS Command m2ms_command_ApplyForce Topic Columns
 
 Validate M2MS Command m2ms_command_SetCorrectionMode Topic Byte Size
 	[Documentation]    Validate the m2ms_command_SetCorrectionMode topic is less than 65536 bytes in total.
-	[Tags]    smoke    M2MS
+	[Tags]    smoke    M2MS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/m2ms/m2ms_Commands.xml
@@ -21287,7 +21935,7 @@ Validate M2MS Command m2ms_command_SetCorrectionMode Topic Columns
 
 Validate M2MS Command m2ms_command_PositionMirror Topic Byte Size
 	[Documentation]    Validate the m2ms_command_PositionMirror topic is less than 65536 bytes in total.
-	[Tags]    smoke    M2MS
+	[Tags]    smoke    M2MS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/m2ms/m2ms_Commands.xml
@@ -21323,7 +21971,7 @@ Validate M2MS Command m2ms_command_PositionMirror Topic Columns
 
 Validate M2MS Command m2ms_command_MoveAxialActuator Topic Byte Size
 	[Documentation]    Validate the m2ms_command_MoveAxialActuator topic is less than 65536 bytes in total.
-	[Tags]    smoke    M2MS
+	[Tags]    smoke    M2MS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/m2ms/m2ms_Commands.xml
@@ -21359,7 +22007,7 @@ Validate M2MS Command m2ms_command_MoveAxialActuator Topic Columns
 
 Validate M2MS Event m2ms_logevent_M2SummaryState Topic Byte Size
 	[Documentation]    Validate the m2ms_logevent_M2SummaryState topic is less than 65536 bytes in total.
-	[Tags]    smoke    M2MS
+	[Tags]    smoke    M2MS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/m2ms/m2ms_Events.xml
@@ -21395,7 +22043,7 @@ Validate M2MS Event m2ms_logevent_M2SummaryState Topic Columns
 
 Validate M2MS Event m2ms_logevent_M2DetailedState Topic Byte Size
 	[Documentation]    Validate the m2ms_logevent_M2DetailedState topic is less than 65536 bytes in total.
-	[Tags]    smoke    M2MS
+	[Tags]    smoke    M2MS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/m2ms/m2ms_Events.xml
@@ -21431,7 +22079,7 @@ Validate M2MS Event m2ms_logevent_M2DetailedState Topic Columns
 
 Validate M2MS Event m2ms_logevent_M2FaultState Topic Byte Size
 	[Documentation]    Validate the m2ms_logevent_M2FaultState topic is less than 65536 bytes in total.
-	[Tags]    smoke    M2MS
+	[Tags]    smoke    M2MS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/m2ms/m2ms_Events.xml
@@ -21467,7 +22115,7 @@ Validate M2MS Event m2ms_logevent_M2FaultState Topic Columns
 
 Validate M2MS Event m2ms_logevent_M2AssemblyInPosition Topic Byte Size
 	[Documentation]    Validate the m2ms_logevent_M2AssemblyInPosition topic is less than 65536 bytes in total.
-	[Tags]    smoke    M2MS
+	[Tags]    smoke    M2MS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/m2ms/m2ms_Events.xml
@@ -21503,7 +22151,7 @@ Validate M2MS Event m2ms_logevent_M2AssemblyInPosition Topic Columns
 
 Validate M2MS Telemetry m2ms_MirrorPositionMeasured Topic Byte Size
 	[Documentation]    Validate the m2ms_MirrorPositionMeasured topic is less than 65536 bytes in total.
-	[Tags]    smoke    M2MS
+	[Tags]    smoke    M2MS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/m2ms/m2ms_Telemetry.xml
@@ -21539,7 +22187,7 @@ Validate M2MS Telemetry m2ms_MirrorPositionMeasured Topic Columns
 
 Validate M2MS Telemetry m2ms_AxialForcesMeasured Topic Byte Size
 	[Documentation]    Validate the m2ms_AxialForcesMeasured topic is less than 65536 bytes in total.
-	[Tags]    smoke    M2MS
+	[Tags]    smoke    M2MS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/m2ms/m2ms_Telemetry.xml
@@ -21575,7 +22223,7 @@ Validate M2MS Telemetry m2ms_AxialForcesMeasured Topic Columns
 
 Validate M2MS Telemetry m2ms_TangentForcesMeasured Topic Byte Size
 	[Documentation]    Validate the m2ms_TangentForcesMeasured topic is less than 65536 bytes in total.
-	[Tags]    smoke    M2MS
+	[Tags]    smoke    M2MS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[3]/item)" -n ${folder}/sal_interfaces/m2ms/m2ms_Telemetry.xml
@@ -21611,7 +22259,7 @@ Validate M2MS Telemetry m2ms_TangentForcesMeasured Topic Columns
 
 Validate M2MS Telemetry m2ms_ZenithAngleMeasured Topic Byte Size
 	[Documentation]    Validate the m2ms_ZenithAngleMeasured topic is less than 65536 bytes in total.
-	[Tags]    smoke    M2MS
+	[Tags]    smoke    M2MS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[4]/item)" -n ${folder}/sal_interfaces/m2ms/m2ms_Telemetry.xml
@@ -21647,7 +22295,7 @@ Validate M2MS Telemetry m2ms_ZenithAngleMeasured Topic Columns
 
 Validate M2MS Telemetry m2ms_AxialActuatorAbsolutePositionSteps Topic Byte Size
 	[Documentation]    Validate the m2ms_AxialActuatorAbsolutePositionSteps topic is less than 65536 bytes in total.
-	[Tags]    smoke    M2MS
+	[Tags]    smoke    M2MS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[5]/item)" -n ${folder}/sal_interfaces/m2ms/m2ms_Telemetry.xml
@@ -21683,7 +22331,7 @@ Validate M2MS Telemetry m2ms_AxialActuatorAbsolutePositionSteps Topic Columns
 
 Validate M2MS Telemetry m2ms_TangentActuatorAbsolutePositionSteps Topic Byte Size
 	[Documentation]    Validate the m2ms_TangentActuatorAbsolutePositionSteps topic is less than 65536 bytes in total.
-	[Tags]    smoke    M2MS
+	[Tags]    smoke    M2MS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[6]/item)" -n ${folder}/sal_interfaces/m2ms/m2ms_Telemetry.xml
@@ -21719,7 +22367,7 @@ Validate M2MS Telemetry m2ms_TangentActuatorAbsolutePositionSteps Topic Columns
 
 Validate M2MS Telemetry m2ms_AxialActuatorPositionAbsoluteEncoderPositionMeasured Topic Byte Size
 	[Documentation]    Validate the m2ms_AxialActuatorPositionAbsoluteEncoderPositionMeasured topic is less than 65536 bytes in total.
-	[Tags]    smoke    M2MS
+	[Tags]    smoke    M2MS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[7]/item)" -n ${folder}/sal_interfaces/m2ms/m2ms_Telemetry.xml
@@ -21755,7 +22403,7 @@ Validate M2MS Telemetry m2ms_AxialActuatorPositionAbsoluteEncoderPositionMeasure
 
 Validate M2MS Telemetry m2ms_TangentActuatorPositionAbsoluteEncoderPositionMeasured Topic Byte Size
 	[Documentation]    Validate the m2ms_TangentActuatorPositionAbsoluteEncoderPositionMeasured topic is less than 65536 bytes in total.
-	[Tags]    smoke    M2MS
+	[Tags]    smoke    M2MS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[8]/item)" -n ${folder}/sal_interfaces/m2ms/m2ms_Telemetry.xml
@@ -21791,7 +22439,7 @@ Validate M2MS Telemetry m2ms_TangentActuatorPositionAbsoluteEncoderPositionMeasu
 
 Validate M2MS Telemetry m2ms_PowerStatus Topic Byte Size
 	[Documentation]    Validate the m2ms_PowerStatus topic is less than 65536 bytes in total.
-	[Tags]    smoke    M2MS
+	[Tags]    smoke    M2MS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[9]/item)" -n ${folder}/sal_interfaces/m2ms/m2ms_Telemetry.xml
@@ -21827,7 +22475,7 @@ Validate M2MS Telemetry m2ms_PowerStatus Topic Columns
 
 Validate M2MS Telemetry m2ms_TemperaturesMeasured Topic Byte Size
 	[Documentation]    Validate the m2ms_TemperaturesMeasured topic is less than 65536 bytes in total.
-	[Tags]    smoke    M2MS
+	[Tags]    smoke    M2MS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[10]/item)" -n ${folder}/sal_interfaces/m2ms/m2ms_Telemetry.xml
@@ -21863,7 +22511,7 @@ Validate M2MS Telemetry m2ms_TemperaturesMeasured Topic Columns
 
 Validate M2MS Telemetry m2ms_RawDisplacement Topic Byte Size
 	[Documentation]    Validate the m2ms_RawDisplacement topic is less than 65536 bytes in total.
-	[Tags]    smoke    M2MS
+	[Tags]    smoke    M2MS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[11]/item)" -n ${folder}/sal_interfaces/m2ms/m2ms_Telemetry.xml
@@ -21899,7 +22547,7 @@ Validate M2MS Telemetry m2ms_RawDisplacement Topic Columns
 
 Validate M2MS Telemetry m2ms_StepVectorUpdate Topic Byte Size
 	[Documentation]    Validate the m2ms_StepVectorUpdate topic is less than 65536 bytes in total.
-	[Tags]    smoke    M2MS
+	[Tags]    smoke    M2MS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[12]/item)" -n ${folder}/sal_interfaces/m2ms/m2ms_Telemetry.xml
@@ -21935,7 +22583,7 @@ Validate M2MS Telemetry m2ms_StepVectorUpdate Topic Columns
 
 Validate M2MS Telemetry m2ms_TargetForces Topic Byte Size
 	[Documentation]    Validate the m2ms_TargetForces topic is less than 65536 bytes in total.
-	[Tags]    smoke    M2MS
+	[Tags]    smoke    M2MS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[13]/item)" -n ${folder}/sal_interfaces/m2ms/m2ms_Telemetry.xml
@@ -21971,7 +22619,7 @@ Validate M2MS Telemetry m2ms_TargetForces Topic Columns
 
 Validate M2MS Telemetry m2ms_SystemStatus Topic Byte Size
 	[Documentation]    Validate the m2ms_SystemStatus topic is less than 65536 bytes in total.
-	[Tags]    smoke    M2MS
+	[Tags]    smoke    M2MS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[14]/item)" -n ${folder}/sal_interfaces/m2ms/m2ms_Telemetry.xml
@@ -22007,7 +22655,7 @@ Validate M2MS Telemetry m2ms_SystemStatus Topic Columns
 
 Validate M2MS Telemetry m2ms_RawTelemetry Topic Byte Size
 	[Documentation]    Validate the m2ms_RawTelemetry topic is less than 65536 bytes in total.
-	[Tags]    smoke    M2MS
+	[Tags]    smoke    M2MS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[15]/item)" -n ${folder}/sal_interfaces/m2ms/m2ms_Telemetry.xml
@@ -22043,7 +22691,7 @@ Validate M2MS Telemetry m2ms_RawTelemetry Topic Columns
 
 Validate M2MS Telemetry m2ms_ActuatorLimitSwitches Topic Byte Size
 	[Documentation]    Validate the m2ms_ActuatorLimitSwitches topic is less than 65536 bytes in total.
-	[Tags]    smoke    M2MS
+	[Tags]    smoke    M2MS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[16]/item)" -n ${folder}/sal_interfaces/m2ms/m2ms_Telemetry.xml
@@ -22079,7 +22727,7 @@ Validate M2MS Telemetry m2ms_ActuatorLimitSwitches Topic Columns
 
 Validate MTMount Command MTMount_command_closeMirrorCover Topic Byte Size
 	[Documentation]    Validate the MTMount_command_closeMirrorCover topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTMount
+	[Tags]    smoke    MTMount    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Commands.xml
@@ -22115,7 +22763,7 @@ Validate MTMount Command MTMount_command_closeMirrorCover Topic Columns
 
 Validate MTMount Command MTMount_command_configure Topic Byte Size
 	[Documentation]    Validate the MTMount_command_configure topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTMount
+	[Tags]    smoke    MTMount    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Commands.xml
@@ -22151,7 +22799,7 @@ Validate MTMount Command MTMount_command_configure Topic Columns
 
 Validate MTMount Command MTMount_command_disableCamWrap Topic Byte Size
 	[Documentation]    Validate the MTMount_command_disableCamWrap topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTMount
+	[Tags]    smoke    MTMount    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Commands.xml
@@ -22187,7 +22835,7 @@ Validate MTMount Command MTMount_command_disableCamWrap Topic Columns
 
 Validate MTMount Command MTMount_command_enableCamWrap Topic Byte Size
 	[Documentation]    Validate the MTMount_command_enableCamWrap topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTMount
+	[Tags]    smoke    MTMount    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Commands.xml
@@ -22223,7 +22871,7 @@ Validate MTMount Command MTMount_command_enableCamWrap Topic Columns
 
 Validate MTMount Command MTMount_command_moveToTarget Topic Byte Size
 	[Documentation]    Validate the MTMount_command_moveToTarget topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTMount
+	[Tags]    smoke    MTMount    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Commands.xml
@@ -22259,7 +22907,7 @@ Validate MTMount Command MTMount_command_moveToTarget Topic Columns
 
 Validate MTMount Command MTMount_command_openMirrorCover Topic Byte Size
 	[Documentation]    Validate the MTMount_command_openMirrorCover topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTMount
+	[Tags]    smoke    MTMount    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Commands.xml
@@ -22295,7 +22943,7 @@ Validate MTMount Command MTMount_command_openMirrorCover Topic Columns
 
 Validate MTMount Command MTMount_command_trackTarget Topic Byte Size
 	[Documentation]    Validate the MTMount_command_trackTarget topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTMount
+	[Tags]    smoke    MTMount    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[7]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Commands.xml
@@ -22331,7 +22979,7 @@ Validate MTMount Command MTMount_command_trackTarget Topic Columns
 
 Validate MTMount Command MTMount_command_clearerror Topic Byte Size
 	[Documentation]    Validate the MTMount_command_clearerror topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTMount
+	[Tags]    smoke    MTMount    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[8]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Commands.xml
@@ -22367,7 +23015,7 @@ Validate MTMount Command MTMount_command_clearerror Topic Columns
 
 Validate MTMount Event MTMount_logevent_mountState Topic Byte Size
 	[Documentation]    Validate the MTMount_logevent_mountState topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTMount
+	[Tags]    smoke    MTMount    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Events.xml
@@ -22403,7 +23051,7 @@ Validate MTMount Event MTMount_logevent_mountState Topic Columns
 
 Validate MTMount Event MTMount_logevent_mountWarning Topic Byte Size
 	[Documentation]    Validate the MTMount_logevent_mountWarning topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTMount
+	[Tags]    smoke    MTMount    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Events.xml
@@ -22439,7 +23087,7 @@ Validate MTMount Event MTMount_logevent_mountWarning Topic Columns
 
 Validate MTMount Event MTMount_logevent_mountError Topic Byte Size
 	[Documentation]    Validate the MTMount_logevent_mountError topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTMount
+	[Tags]    smoke    MTMount    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Events.xml
@@ -22475,7 +23123,7 @@ Validate MTMount Event MTMount_logevent_mountError Topic Columns
 
 Validate MTMount Event MTMount_logevent_mountInPosition Topic Byte Size
 	[Documentation]    Validate the MTMount_logevent_mountInPosition topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTMount
+	[Tags]    smoke    MTMount    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Events.xml
@@ -22511,7 +23159,7 @@ Validate MTMount Event MTMount_logevent_mountInPosition Topic Columns
 
 Validate MTMount Telemetry MTMount_Az Topic Byte Size
 	[Documentation]    Validate the MTMount_Az topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTMount
+	[Tags]    smoke    MTMount    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
@@ -22547,7 +23195,7 @@ Validate MTMount Telemetry MTMount_Az Topic Columns
 
 Validate MTMount Telemetry MTMount_Alt Topic Byte Size
 	[Documentation]    Validate the MTMount_Alt topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTMount
+	[Tags]    smoke    MTMount    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
@@ -22583,7 +23231,7 @@ Validate MTMount Telemetry MTMount_Alt Topic Columns
 
 Validate MTMount Telemetry MTMount_Az_CW Topic Byte Size
 	[Documentation]    Validate the MTMount_Az_CW topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTMount
+	[Tags]    smoke    MTMount    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[3]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
@@ -22619,7 +23267,7 @@ Validate MTMount Telemetry MTMount_Az_CW Topic Columns
 
 Validate MTMount Telemetry MTMount_Az_OSS Topic Byte Size
 	[Documentation]    Validate the MTMount_Az_OSS topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTMount
+	[Tags]    smoke    MTMount    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[4]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
@@ -22655,7 +23303,7 @@ Validate MTMount Telemetry MTMount_Az_OSS Topic Columns
 
 Validate MTMount Telemetry MTMount_Alt_OSS Topic Byte Size
 	[Documentation]    Validate the MTMount_Alt_OSS topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTMount
+	[Tags]    smoke    MTMount    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[5]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
@@ -22691,7 +23339,7 @@ Validate MTMount Telemetry MTMount_Alt_OSS Topic Columns
 
 Validate MTMount Telemetry MTMount_Az_TC Topic Byte Size
 	[Documentation]    Validate the MTMount_Az_TC topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTMount
+	[Tags]    smoke    MTMount    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[6]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
@@ -22727,7 +23375,7 @@ Validate MTMount Telemetry MTMount_Az_TC Topic Columns
 
 Validate MTMount Telemetry MTMount_Alt_TC Topic Byte Size
 	[Documentation]    Validate the MTMount_Alt_TC topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTMount
+	[Tags]    smoke    MTMount    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[7]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
@@ -22763,7 +23411,7 @@ Validate MTMount Telemetry MTMount_Alt_TC Topic Columns
 
 Validate MTMount Telemetry MTMount_Bal Topic Byte Size
 	[Documentation]    Validate the MTMount_Bal topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTMount
+	[Tags]    smoke    MTMount    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[8]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
@@ -22799,7 +23447,7 @@ Validate MTMount Telemetry MTMount_Bal Topic Columns
 
 Validate MTMount Telemetry MTMount_MC Topic Byte Size
 	[Documentation]    Validate the MTMount_MC topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTMount
+	[Tags]    smoke    MTMount    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[9]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
@@ -22835,7 +23483,7 @@ Validate MTMount Telemetry MTMount_MC Topic Columns
 
 Validate MTMount Telemetry MTMount_Cam_CW Topic Byte Size
 	[Documentation]    Validate the MTMount_Cam_CW topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTMount
+	[Tags]    smoke    MTMount    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[10]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
@@ -22871,7 +23519,7 @@ Validate MTMount Telemetry MTMount_Cam_CW Topic Columns
 
 Validate MTMount Telemetry MTMount_Cab_TC Topic Byte Size
 	[Documentation]    Validate the MTMount_Cab_TC topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTMount
+	[Tags]    smoke    MTMount    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[11]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
@@ -22907,7 +23555,7 @@ Validate MTMount Telemetry MTMount_Cab_TC Topic Columns
 
 Validate MTMount Telemetry MTMount_DP_1 Topic Byte Size
 	[Documentation]    Validate the MTMount_DP_1 topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTMount
+	[Tags]    smoke    MTMount    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[12]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
@@ -22943,7 +23591,7 @@ Validate MTMount Telemetry MTMount_DP_1 Topic Columns
 
 Validate MTMount Telemetry MTMount_DP_2 Topic Byte Size
 	[Documentation]    Validate the MTMount_DP_2 topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTMount
+	[Tags]    smoke    MTMount    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[13]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
@@ -22979,7 +23627,7 @@ Validate MTMount Telemetry MTMount_DP_2 Topic Columns
 
 Validate MTMount Telemetry MTMount_MotionParameters Topic Byte Size
 	[Documentation]    Validate the MTMount_MotionParameters topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTMount
+	[Tags]    smoke    MTMount    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[14]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
@@ -23015,7 +23663,7 @@ Validate MTMount Telemetry MTMount_MotionParameters Topic Columns
 
 Validate OCS Command ocs_command_sequence Topic Byte Size
 	[Documentation]    Validate the ocs_command_sequence topic is less than 65536 bytes in total.
-	[Tags]    smoke    OCS
+	[Tags]    smoke    OCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/ocs/ocs_Commands.xml
@@ -23051,7 +23699,7 @@ Validate OCS Command ocs_command_sequence Topic Columns
 
 Validate OCS Command ocs_command_script Topic Byte Size
 	[Documentation]    Validate the ocs_command_script topic is less than 65536 bytes in total.
-	[Tags]    smoke    OCS
+	[Tags]    smoke    OCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/ocs/ocs_Commands.xml
@@ -23087,7 +23735,7 @@ Validate OCS Command ocs_command_script Topic Columns
 
 Validate OCS Event ocs_logevent_ocsEntitySummaryState Topic Byte Size
 	[Documentation]    Validate the ocs_logevent_ocsEntitySummaryState topic is less than 65536 bytes in total.
-	[Tags]    smoke    OCS
+	[Tags]    smoke    OCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/ocs/ocs_Events.xml
@@ -23123,7 +23771,7 @@ Validate OCS Event ocs_logevent_ocsEntitySummaryState Topic Columns
 
 Validate OCS Event ocs_logevent_ocsEntityStartup Topic Byte Size
 	[Documentation]    Validate the ocs_logevent_ocsEntityStartup topic is less than 65536 bytes in total.
-	[Tags]    smoke    OCS
+	[Tags]    smoke    OCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/ocs/ocs_Events.xml
@@ -23159,7 +23807,7 @@ Validate OCS Event ocs_logevent_ocsEntityStartup Topic Columns
 
 Validate OCS Event ocs_logevent_ocsEntityShutdown Topic Byte Size
 	[Documentation]    Validate the ocs_logevent_ocsEntityShutdown topic is less than 65536 bytes in total.
-	[Tags]    smoke    OCS
+	[Tags]    smoke    OCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/ocs/ocs_Events.xml
@@ -23195,7 +23843,7 @@ Validate OCS Event ocs_logevent_ocsEntityShutdown Topic Columns
 
 Validate OCS Event ocs_logevent_ocsCommandIssued Topic Byte Size
 	[Documentation]    Validate the ocs_logevent_ocsCommandIssued topic is less than 65536 bytes in total.
-	[Tags]    smoke    OCS
+	[Tags]    smoke    OCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/ocs/ocs_Events.xml
@@ -23231,7 +23879,7 @@ Validate OCS Event ocs_logevent_ocsCommandIssued Topic Columns
 
 Validate OCS Event ocs_logevent_ocsCommandStatus Topic Byte Size
 	[Documentation]    Validate the ocs_logevent_ocsCommandStatus topic is less than 65536 bytes in total.
-	[Tags]    smoke    OCS
+	[Tags]    smoke    OCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/ocs/ocs_Events.xml
@@ -23267,7 +23915,7 @@ Validate OCS Event ocs_logevent_ocsCommandStatus Topic Columns
 
 Validate OCS Event ocs_logevent_ocsCurrentScript Topic Byte Size
 	[Documentation]    Validate the ocs_logevent_ocsCurrentScript topic is less than 65536 bytes in total.
-	[Tags]    smoke    OCS
+	[Tags]    smoke    OCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/ocs/ocs_Events.xml
@@ -23303,7 +23951,7 @@ Validate OCS Event ocs_logevent_ocsCurrentScript Topic Columns
 
 Validate OCS Event ocs_logevent_ocsNextScript Topic Byte Size
 	[Documentation]    Validate the ocs_logevent_ocsNextScript topic is less than 65536 bytes in total.
-	[Tags]    smoke    OCS
+	[Tags]    smoke    OCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/ocs/ocs_Events.xml
@@ -23339,7 +23987,7 @@ Validate OCS Event ocs_logevent_ocsNextScript Topic Columns
 
 Validate OCS Event ocs_logevent_ocsScriptStart Topic Byte Size
 	[Documentation]    Validate the ocs_logevent_ocsScriptStart topic is less than 65536 bytes in total.
-	[Tags]    smoke    OCS
+	[Tags]    smoke    OCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/ocs/ocs_Events.xml
@@ -23375,7 +24023,7 @@ Validate OCS Event ocs_logevent_ocsScriptStart Topic Columns
 
 Validate OCS Event ocs_logevent_ocsScriptEnd Topic Byte Size
 	[Documentation]    Validate the ocs_logevent_ocsScriptEnd topic is less than 65536 bytes in total.
-	[Tags]    smoke    OCS
+	[Tags]    smoke    OCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/ocs/ocs_Events.xml
@@ -23411,7 +24059,7 @@ Validate OCS Event ocs_logevent_ocsScriptEnd Topic Columns
 
 Validate OCS Event ocs_logevent_ocsScriptError Topic Byte Size
 	[Documentation]    Validate the ocs_logevent_ocsScriptError topic is less than 65536 bytes in total.
-	[Tags]    smoke    OCS
+	[Tags]    smoke    OCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/ocs/ocs_Events.xml
@@ -23447,7 +24095,7 @@ Validate OCS Event ocs_logevent_ocsScriptError Topic Columns
 
 Validate OCS Event ocs_logevent_ocsScriptEntititesInUse Topic Byte Size
 	[Documentation]    Validate the ocs_logevent_ocsScriptEntititesInUse topic is less than 65536 bytes in total.
-	[Tags]    smoke    OCS
+	[Tags]    smoke    OCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/ocs/ocs_Events.xml
@@ -23483,7 +24131,7 @@ Validate OCS Event ocs_logevent_ocsScriptEntititesInUse Topic Columns
 
 Validate OCS Telemetry ocs_SequencerHeartbeat Topic Byte Size
 	[Documentation]    Validate the ocs_SequencerHeartbeat topic is less than 65536 bytes in total.
-	[Tags]    smoke    OCS
+	[Tags]    smoke    OCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/ocs/ocs_Telemetry.xml
@@ -23519,7 +24167,7 @@ Validate OCS Telemetry ocs_SequencerHeartbeat Topic Columns
 
 Validate Rotator Command rotator_command_configureAcceleration Topic Byte Size
 	[Documentation]    Validate the rotator_command_configureAcceleration topic is less than 65536 bytes in total.
-	[Tags]    smoke    Rotator
+	[Tags]    smoke    Rotator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/rotator/rotator_Commands.xml
@@ -23555,7 +24203,7 @@ Validate Rotator Command rotator_command_configureAcceleration Topic Columns
 
 Validate Rotator Command rotator_command_configureVelocity Topic Byte Size
 	[Documentation]    Validate the rotator_command_configureVelocity topic is less than 65536 bytes in total.
-	[Tags]    smoke    Rotator
+	[Tags]    smoke    Rotator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/rotator/rotator_Commands.xml
@@ -23591,7 +24239,7 @@ Validate Rotator Command rotator_command_configureVelocity Topic Columns
 
 Validate Rotator Command rotator_command_move Topic Byte Size
 	[Documentation]    Validate the rotator_command_move topic is less than 65536 bytes in total.
-	[Tags]    smoke    Rotator
+	[Tags]    smoke    Rotator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/rotator/rotator_Commands.xml
@@ -23627,7 +24275,7 @@ Validate Rotator Command rotator_command_move Topic Columns
 
 Validate Rotator Command rotator_command_track Topic Byte Size
 	[Documentation]    Validate the rotator_command_track topic is less than 65536 bytes in total.
-	[Tags]    smoke    Rotator
+	[Tags]    smoke    Rotator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/rotator/rotator_Commands.xml
@@ -23663,7 +24311,7 @@ Validate Rotator Command rotator_command_track Topic Columns
 
 Validate Rotator Command rotator_command_test Topic Byte Size
 	[Documentation]    Validate the rotator_command_test topic is less than 65536 bytes in total.
-	[Tags]    smoke    Rotator
+	[Tags]    smoke    Rotator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/rotator/rotator_Commands.xml
@@ -23699,7 +24347,7 @@ Validate Rotator Command rotator_command_test Topic Columns
 
 Validate Rotator Command rotator_command_trackStart Topic Byte Size
 	[Documentation]    Validate the rotator_command_trackStart topic is less than 65536 bytes in total.
-	[Tags]    smoke    Rotator
+	[Tags]    smoke    Rotator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/rotator/rotator_Commands.xml
@@ -23735,7 +24383,7 @@ Validate Rotator Command rotator_command_trackStart Topic Columns
 
 Validate Rotator Command rotator_command_clearError Topic Byte Size
 	[Documentation]    Validate the rotator_command_clearError topic is less than 65536 bytes in total.
-	[Tags]    smoke    Rotator
+	[Tags]    smoke    Rotator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[7]/item)" -n ${folder}/sal_interfaces/rotator/rotator_Commands.xml
@@ -23771,7 +24419,7 @@ Validate Rotator Command rotator_command_clearError Topic Columns
 
 Validate Rotator Command rotator_command_positionSet Topic Byte Size
 	[Documentation]    Validate the rotator_command_positionSet topic is less than 65536 bytes in total.
-	[Tags]    smoke    Rotator
+	[Tags]    smoke    Rotator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[8]/item)" -n ${folder}/sal_interfaces/rotator/rotator_Commands.xml
@@ -23807,7 +24455,7 @@ Validate Rotator Command rotator_command_positionSet Topic Columns
 
 Validate Rotator Command rotator_command_moveConstantVelocity Topic Byte Size
 	[Documentation]    Validate the rotator_command_moveConstantVelocity topic is less than 65536 bytes in total.
-	[Tags]    smoke    Rotator
+	[Tags]    smoke    Rotator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[9]/item)" -n ${folder}/sal_interfaces/rotator/rotator_Commands.xml
@@ -23843,7 +24491,7 @@ Validate Rotator Command rotator_command_moveConstantVelocity Topic Columns
 
 Validate Rotator Command rotator_command_velocitySet Topic Byte Size
 	[Documentation]    Validate the rotator_command_velocitySet topic is less than 65536 bytes in total.
-	[Tags]    smoke    Rotator
+	[Tags]    smoke    Rotator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[10]/item)" -n ${folder}/sal_interfaces/rotator/rotator_Commands.xml
@@ -23879,7 +24527,7 @@ Validate Rotator Command rotator_command_velocitySet Topic Columns
 
 Validate Rotator Event rotator_logevent_interlock Topic Byte Size
 	[Documentation]    Validate the rotator_logevent_interlock topic is less than 65536 bytes in total.
-	[Tags]    smoke    Rotator
+	[Tags]    smoke    Rotator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/rotator/rotator_Events.xml
@@ -23915,7 +24563,7 @@ Validate Rotator Event rotator_logevent_interlock Topic Columns
 
 Validate Rotator Event rotator_logevent_trackLost Topic Byte Size
 	[Documentation]    Validate the rotator_logevent_trackLost topic is less than 65536 bytes in total.
-	[Tags]    smoke    Rotator
+	[Tags]    smoke    Rotator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/rotator/rotator_Events.xml
@@ -23951,7 +24599,7 @@ Validate Rotator Event rotator_logevent_trackLost Topic Columns
 
 Validate Rotator Event rotator_logevent_tracking Topic Byte Size
 	[Documentation]    Validate the rotator_logevent_tracking topic is less than 65536 bytes in total.
-	[Tags]    smoke    Rotator
+	[Tags]    smoke    Rotator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/rotator/rotator_Events.xml
@@ -23987,7 +24635,7 @@ Validate Rotator Event rotator_logevent_tracking Topic Columns
 
 Validate Rotator Event rotator_logevent_deviceError Topic Byte Size
 	[Documentation]    Validate the rotator_logevent_deviceError topic is less than 65536 bytes in total.
-	[Tags]    smoke    Rotator
+	[Tags]    smoke    Rotator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/rotator/rotator_Events.xml
@@ -24023,7 +24671,7 @@ Validate Rotator Event rotator_logevent_deviceError Topic Columns
 
 Validate Rotator Event rotator_logevent_inPosition Topic Byte Size
 	[Documentation]    Validate the rotator_logevent_inPosition topic is less than 65536 bytes in total.
-	[Tags]    smoke    Rotator
+	[Tags]    smoke    Rotator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/rotator/rotator_Events.xml
@@ -24059,7 +24707,7 @@ Validate Rotator Event rotator_logevent_inPosition Topic Columns
 
 Validate Rotator Event rotator_logevent_settingsApplied Topic Byte Size
 	[Documentation]    Validate the rotator_logevent_settingsApplied topic is less than 65536 bytes in total.
-	[Tags]    smoke    Rotator
+	[Tags]    smoke    Rotator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/rotator/rotator_Events.xml
@@ -24095,7 +24743,7 @@ Validate Rotator Event rotator_logevent_settingsApplied Topic Columns
 
 Validate Rotator Event rotator_logevent_rejectedCommand Topic Byte Size
 	[Documentation]    Validate the rotator_logevent_rejectedCommand topic is less than 65536 bytes in total.
-	[Tags]    smoke    Rotator
+	[Tags]    smoke    Rotator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/rotator/rotator_Events.xml
@@ -24131,7 +24779,7 @@ Validate Rotator Event rotator_logevent_rejectedCommand Topic Columns
 
 Validate Rotator Telemetry rotator_Electrical Topic Byte Size
 	[Documentation]    Validate the rotator_Electrical topic is less than 65536 bytes in total.
-	[Tags]    smoke    Rotator
+	[Tags]    smoke    Rotator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/rotator/rotator_Telemetry.xml
@@ -24167,7 +24815,7 @@ Validate Rotator Telemetry rotator_Electrical Topic Columns
 
 Validate Rotator Telemetry rotator_Application Topic Byte Size
 	[Documentation]    Validate the rotator_Application topic is less than 65536 bytes in total.
-	[Tags]    smoke    Rotator
+	[Tags]    smoke    Rotator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/rotator/rotator_Telemetry.xml
@@ -24203,7 +24851,7 @@ Validate Rotator Telemetry rotator_Application Topic Columns
 
 Validate Rotator Telemetry rotator_Motors Topic Byte Size
 	[Documentation]    Validate the rotator_Motors topic is less than 65536 bytes in total.
-	[Tags]    smoke    Rotator
+	[Tags]    smoke    Rotator    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[3]/item)" -n ${folder}/sal_interfaces/rotator/rotator_Telemetry.xml
@@ -24239,7 +24887,7 @@ Validate Rotator Telemetry rotator_Motors Topic Columns
 
 Validate Scheduler Command scheduler_command_disable Topic Byte Size
 	[Documentation]    Validate the scheduler_command_disable topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml
@@ -24275,7 +24923,7 @@ Validate Scheduler Command scheduler_command_disable Topic Columns
 
 Validate Scheduler Command scheduler_command_enable Topic Byte Size
 	[Documentation]    Validate the scheduler_command_enable topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml
@@ -24311,7 +24959,7 @@ Validate Scheduler Command scheduler_command_enable Topic Columns
 
 Validate Scheduler Command scheduler_command_exitControl Topic Byte Size
 	[Documentation]    Validate the scheduler_command_exitControl topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml
@@ -24347,7 +24995,7 @@ Validate Scheduler Command scheduler_command_exitControl Topic Columns
 
 Validate Scheduler Command scheduler_command_standby Topic Byte Size
 	[Documentation]    Validate the scheduler_command_standby topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml
@@ -24383,7 +25031,7 @@ Validate Scheduler Command scheduler_command_standby Topic Columns
 
 Validate Scheduler Command scheduler_command_start Topic Byte Size
 	[Documentation]    Validate the scheduler_command_start topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml
@@ -24419,7 +25067,7 @@ Validate Scheduler Command scheduler_command_start Topic Columns
 
 Validate Scheduler Command scheduler_command_enterControl Topic Byte Size
 	[Documentation]    Validate the scheduler_command_enterControl topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Commands.xml
@@ -24455,7 +25103,7 @@ Validate Scheduler Command scheduler_command_enterControl Topic Columns
 
 Validate Scheduler Event scheduler_logevent_appliedSettingsMatchStart Topic Byte Size
 	[Documentation]    Validate the scheduler_logevent_appliedSettingsMatchStart topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
@@ -24491,7 +25139,7 @@ Validate Scheduler Event scheduler_logevent_appliedSettingsMatchStart Topic Colu
 
 Validate Scheduler Event scheduler_logevent_errorCode Topic Byte Size
 	[Documentation]    Validate the scheduler_logevent_errorCode topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
@@ -24527,7 +25175,7 @@ Validate Scheduler Event scheduler_logevent_errorCode Topic Columns
 
 Validate Scheduler Event scheduler_logevent_settingVersions Topic Byte Size
 	[Documentation]    Validate the scheduler_logevent_settingVersions topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
@@ -24563,7 +25211,7 @@ Validate Scheduler Event scheduler_logevent_settingVersions Topic Columns
 
 Validate Scheduler Event scheduler_logevent_summaryState Topic Byte Size
 	[Documentation]    Validate the scheduler_logevent_summaryState topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
@@ -24599,7 +25247,7 @@ Validate Scheduler Event scheduler_logevent_summaryState Topic Columns
 
 Validate Scheduler Event scheduler_logevent_detailedState Topic Byte Size
 	[Documentation]    Validate the scheduler_logevent_detailedState topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
@@ -24635,7 +25283,7 @@ Validate Scheduler Event scheduler_logevent_detailedState Topic Columns
 
 Validate Scheduler Event scheduler_logevent_internalCommand Topic Byte Size
 	[Documentation]    Validate the scheduler_logevent_internalCommand topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
@@ -24671,7 +25319,7 @@ Validate Scheduler Event scheduler_logevent_internalCommand Topic Columns
 
 Validate Scheduler Event scheduler_logevent_heartbeat Topic Byte Size
 	[Documentation]    Validate the scheduler_logevent_heartbeat topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
@@ -24707,7 +25355,7 @@ Validate Scheduler Event scheduler_logevent_heartbeat Topic Columns
 
 Validate Scheduler Event scheduler_logevent_loopTimeOutOfRange Topic Byte Size
 	[Documentation]    Validate the scheduler_logevent_loopTimeOutOfRange topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
@@ -24743,7 +25391,7 @@ Validate Scheduler Event scheduler_logevent_loopTimeOutOfRange Topic Columns
 
 Validate Scheduler Event scheduler_logevent_rejectedCommand Topic Byte Size
 	[Documentation]    Validate the scheduler_logevent_rejectedCommand topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
@@ -24779,7 +25427,7 @@ Validate Scheduler Event scheduler_logevent_rejectedCommand Topic Columns
 
 Validate Scheduler Event scheduler_logevent_settingsApplied Topic Byte Size
 	[Documentation]    Validate the scheduler_logevent_settingsApplied topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
@@ -24815,7 +25463,7 @@ Validate Scheduler Event scheduler_logevent_settingsApplied Topic Columns
 
 Validate Scheduler Event scheduler_logevent_validSettings Topic Byte Size
 	[Documentation]    Validate the scheduler_logevent_validSettings topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
@@ -24851,7 +25499,7 @@ Validate Scheduler Event scheduler_logevent_validSettings Topic Columns
 
 Validate Scheduler Event scheduler_logevent_target Topic Byte Size
 	[Documentation]    Validate the scheduler_logevent_target topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[12]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
@@ -24887,7 +25535,7 @@ Validate Scheduler Event scheduler_logevent_target Topic Columns
 
 Validate Scheduler Event scheduler_logevent_invalidateTarget Topic Byte Size
 	[Documentation]    Validate the scheduler_logevent_invalidateTarget topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[13]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
@@ -24923,7 +25571,7 @@ Validate Scheduler Event scheduler_logevent_invalidateTarget Topic Columns
 
 Validate Scheduler Event scheduler_logevent_needFilterSwap Topic Byte Size
 	[Documentation]    Validate the scheduler_logevent_needFilterSwap topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[14]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Events.xml
@@ -24959,7 +25607,7 @@ Validate Scheduler Event scheduler_logevent_needFilterSwap Topic Columns
 
 Validate Scheduler Telemetry scheduler_timestamp Topic Byte Size
 	[Documentation]    Validate the scheduler_timestamp topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
@@ -24995,7 +25643,7 @@ Validate Scheduler Telemetry scheduler_timestamp Topic Columns
 
 Validate Scheduler Telemetry scheduler_loopTimeMs Topic Byte Size
 	[Documentation]    Validate the scheduler_loopTimeMs topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
@@ -25031,7 +25679,7 @@ Validate Scheduler Telemetry scheduler_loopTimeMs Topic Columns
 
 Validate Scheduler Telemetry scheduler_nightSummary Topic Byte Size
 	[Documentation]    Validate the scheduler_nightSummary topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[3]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
@@ -25067,7 +25715,7 @@ Validate Scheduler Telemetry scheduler_nightSummary Topic Columns
 
 Validate Scheduler Telemetry scheduler_predictedSchedule Topic Byte Size
 	[Documentation]    Validate the scheduler_predictedSchedule topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[4]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
@@ -25103,7 +25751,7 @@ Validate Scheduler Telemetry scheduler_predictedSchedule Topic Columns
 
 Validate Scheduler Telemetry scheduler_surveyTopology Topic Byte Size
 	[Documentation]    Validate the scheduler_surveyTopology topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[5]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
@@ -25139,7 +25787,7 @@ Validate Scheduler Telemetry scheduler_surveyTopology Topic Columns
 
 Validate Scheduler Telemetry scheduler_schedulerConfig Topic Byte Size
 	[Documentation]    Validate the scheduler_schedulerConfig topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[6]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
@@ -25175,7 +25823,7 @@ Validate Scheduler Telemetry scheduler_schedulerConfig Topic Columns
 
 Validate Scheduler Telemetry scheduler_driverConfig Topic Byte Size
 	[Documentation]    Validate the scheduler_driverConfig topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[7]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
@@ -25211,7 +25859,7 @@ Validate Scheduler Telemetry scheduler_driverConfig Topic Columns
 
 Validate Scheduler Telemetry scheduler_obsSiteConfig Topic Byte Size
 	[Documentation]    Validate the scheduler_obsSiteConfig topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[8]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
@@ -25247,7 +25895,7 @@ Validate Scheduler Telemetry scheduler_obsSiteConfig Topic Columns
 
 Validate Scheduler Telemetry scheduler_telescopeConfig Topic Byte Size
 	[Documentation]    Validate the scheduler_telescopeConfig topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[9]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
@@ -25283,7 +25931,7 @@ Validate Scheduler Telemetry scheduler_telescopeConfig Topic Columns
 
 Validate Scheduler Telemetry scheduler_rotatorConfig Topic Byte Size
 	[Documentation]    Validate the scheduler_rotatorConfig topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[10]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
@@ -25319,7 +25967,7 @@ Validate Scheduler Telemetry scheduler_rotatorConfig Topic Columns
 
 Validate Scheduler Telemetry scheduler_domeConfig Topic Byte Size
 	[Documentation]    Validate the scheduler_domeConfig topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[11]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
@@ -25355,7 +26003,7 @@ Validate Scheduler Telemetry scheduler_domeConfig Topic Columns
 
 Validate Scheduler Telemetry scheduler_cameraConfig Topic Byte Size
 	[Documentation]    Validate the scheduler_cameraConfig topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[12]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
@@ -25391,7 +26039,7 @@ Validate Scheduler Telemetry scheduler_cameraConfig Topic Columns
 
 Validate Scheduler Telemetry scheduler_slewConfig Topic Byte Size
 	[Documentation]    Validate the scheduler_slewConfig topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[13]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
@@ -25427,7 +26075,7 @@ Validate Scheduler Telemetry scheduler_slewConfig Topic Columns
 
 Validate Scheduler Telemetry scheduler_opticsLoopCorrConfig Topic Byte Size
 	[Documentation]    Validate the scheduler_opticsLoopCorrConfig topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[14]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
@@ -25463,7 +26111,7 @@ Validate Scheduler Telemetry scheduler_opticsLoopCorrConfig Topic Columns
 
 Validate Scheduler Telemetry scheduler_parkConfig Topic Byte Size
 	[Documentation]    Validate the scheduler_parkConfig topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[15]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
@@ -25499,7 +26147,7 @@ Validate Scheduler Telemetry scheduler_parkConfig Topic Columns
 
 Validate Scheduler Telemetry scheduler_generalPropConfig Topic Byte Size
 	[Documentation]    Validate the scheduler_generalPropConfig topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[16]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
@@ -25535,7 +26183,7 @@ Validate Scheduler Telemetry scheduler_generalPropConfig Topic Columns
 
 Validate Scheduler Telemetry scheduler_sequencePropConfig Topic Byte Size
 	[Documentation]    Validate the scheduler_sequencePropConfig topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[17]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
@@ -25571,7 +26219,7 @@ Validate Scheduler Telemetry scheduler_sequencePropConfig Topic Columns
 
 Validate Scheduler Telemetry scheduler_observatoryState Topic Byte Size
 	[Documentation]    Validate the scheduler_observatoryState topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[18]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
@@ -25607,7 +26255,7 @@ Validate Scheduler Telemetry scheduler_observatoryState Topic Columns
 
 Validate Scheduler Telemetry scheduler_observation Topic Byte Size
 	[Documentation]    Validate the scheduler_observation topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[19]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
@@ -25643,7 +26291,7 @@ Validate Scheduler Telemetry scheduler_observation Topic Columns
 
 Validate Scheduler Telemetry scheduler_interestedProposal Topic Byte Size
 	[Documentation]    Validate the scheduler_interestedProposal topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[20]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
@@ -25679,7 +26327,7 @@ Validate Scheduler Telemetry scheduler_interestedProposal Topic Columns
 
 Validate Scheduler Telemetry scheduler_timeHandler Topic Byte Size
 	[Documentation]    Validate the scheduler_timeHandler topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[21]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
@@ -25715,7 +26363,7 @@ Validate Scheduler Telemetry scheduler_timeHandler Topic Columns
 
 Validate Scheduler Telemetry scheduler_bulkCloud Topic Byte Size
 	[Documentation]    Validate the scheduler_bulkCloud topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[22]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
@@ -25751,7 +26399,7 @@ Validate Scheduler Telemetry scheduler_bulkCloud Topic Columns
 
 Validate Scheduler Telemetry scheduler_cloudMap Topic Byte Size
 	[Documentation]    Validate the scheduler_cloudMap topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[23]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
@@ -25787,7 +26435,7 @@ Validate Scheduler Telemetry scheduler_cloudMap Topic Columns
 
 Validate Scheduler Telemetry scheduler_seeing Topic Byte Size
 	[Documentation]    Validate the scheduler_seeing topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[24]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
@@ -25823,7 +26471,7 @@ Validate Scheduler Telemetry scheduler_seeing Topic Columns
 
 Validate Scheduler Telemetry scheduler_wind Topic Byte Size
 	[Documentation]    Validate the scheduler_wind topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[25]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
@@ -25859,7 +26507,7 @@ Validate Scheduler Telemetry scheduler_wind Topic Columns
 
 Validate Scheduler Telemetry scheduler_temperature Topic Byte Size
 	[Documentation]    Validate the scheduler_temperature topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[26]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
@@ -25895,7 +26543,7 @@ Validate Scheduler Telemetry scheduler_temperature Topic Columns
 
 Validate Scheduler Telemetry scheduler_skyBrightness Topic Byte Size
 	[Documentation]    Validate the scheduler_skyBrightness topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[27]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
@@ -25931,7 +26579,7 @@ Validate Scheduler Telemetry scheduler_skyBrightness Topic Columns
 
 Validate Scheduler Telemetry scheduler_photometricQuality Topic Byte Size
 	[Documentation]    Validate the scheduler_photometricQuality topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[28]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
@@ -25967,7 +26615,7 @@ Validate Scheduler Telemetry scheduler_photometricQuality Topic Columns
 
 Validate Scheduler Telemetry scheduler_avoidanceRegions Topic Byte Size
 	[Documentation]    Validate the scheduler_avoidanceRegions topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[29]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
@@ -26003,7 +26651,7 @@ Validate Scheduler Telemetry scheduler_avoidanceRegions Topic Columns
 
 Validate Scheduler Telemetry scheduler_downtime Topic Byte Size
 	[Documentation]    Validate the scheduler_downtime topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
+	[Tags]    smoke    Scheduler    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[30]/item)" -n ${folder}/sal_interfaces/scheduler/scheduler_Telemetry.xml
@@ -26039,7 +26687,7 @@ Validate Scheduler Telemetry scheduler_downtime Topic Columns
 
 Validate Sequencer Command sequencer_command_sequence Topic Byte Size
 	[Documentation]    Validate the sequencer_command_sequence topic is less than 65536 bytes in total.
-	[Tags]    smoke    Sequencer
+	[Tags]    smoke    Sequencer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/sequencer/sequencer_Commands.xml
@@ -26075,7 +26723,7 @@ Validate Sequencer Command sequencer_command_sequence Topic Columns
 
 Validate Sequencer Command sequencer_command_script Topic Byte Size
 	[Documentation]    Validate the sequencer_command_script topic is less than 65536 bytes in total.
-	[Tags]    smoke    Sequencer
+	[Tags]    smoke    Sequencer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/sequencer/sequencer_Commands.xml
@@ -26111,7 +26759,7 @@ Validate Sequencer Command sequencer_command_script Topic Columns
 
 Validate Sequencer Event sequencer_logevent_sequencerEntitySummaryState Topic Byte Size
 	[Documentation]    Validate the sequencer_logevent_sequencerEntitySummaryState topic is less than 65536 bytes in total.
-	[Tags]    smoke    Sequencer
+	[Tags]    smoke    Sequencer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/sequencer/sequencer_Events.xml
@@ -26147,7 +26795,7 @@ Validate Sequencer Event sequencer_logevent_sequencerEntitySummaryState Topic Co
 
 Validate Sequencer Event sequencer_logevent_sequencerEntityStartup Topic Byte Size
 	[Documentation]    Validate the sequencer_logevent_sequencerEntityStartup topic is less than 65536 bytes in total.
-	[Tags]    smoke    Sequencer
+	[Tags]    smoke    Sequencer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/sequencer/sequencer_Events.xml
@@ -26183,7 +26831,7 @@ Validate Sequencer Event sequencer_logevent_sequencerEntityStartup Topic Columns
 
 Validate Sequencer Event sequencer_logevent_sequencerEntityShutdown Topic Byte Size
 	[Documentation]    Validate the sequencer_logevent_sequencerEntityShutdown topic is less than 65536 bytes in total.
-	[Tags]    smoke    Sequencer
+	[Tags]    smoke    Sequencer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/sequencer/sequencer_Events.xml
@@ -26219,7 +26867,7 @@ Validate Sequencer Event sequencer_logevent_sequencerEntityShutdown Topic Column
 
 Validate Sequencer Event sequencer_logevent_sequencerCommandIssued Topic Byte Size
 	[Documentation]    Validate the sequencer_logevent_sequencerCommandIssued topic is less than 65536 bytes in total.
-	[Tags]    smoke    Sequencer
+	[Tags]    smoke    Sequencer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/sequencer/sequencer_Events.xml
@@ -26255,7 +26903,7 @@ Validate Sequencer Event sequencer_logevent_sequencerCommandIssued Topic Columns
 
 Validate Sequencer Event sequencer_logevent_sequencerCommandStatus Topic Byte Size
 	[Documentation]    Validate the sequencer_logevent_sequencerCommandStatus topic is less than 65536 bytes in total.
-	[Tags]    smoke    Sequencer
+	[Tags]    smoke    Sequencer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/sequencer/sequencer_Events.xml
@@ -26291,7 +26939,7 @@ Validate Sequencer Event sequencer_logevent_sequencerCommandStatus Topic Columns
 
 Validate Sequencer Event sequencer_logevent_sequencerCurrentScript Topic Byte Size
 	[Documentation]    Validate the sequencer_logevent_sequencerCurrentScript topic is less than 65536 bytes in total.
-	[Tags]    smoke    Sequencer
+	[Tags]    smoke    Sequencer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/sequencer/sequencer_Events.xml
@@ -26327,7 +26975,7 @@ Validate Sequencer Event sequencer_logevent_sequencerCurrentScript Topic Columns
 
 Validate Sequencer Event sequencer_logevent_sequencerNextScript Topic Byte Size
 	[Documentation]    Validate the sequencer_logevent_sequencerNextScript topic is less than 65536 bytes in total.
-	[Tags]    smoke    Sequencer
+	[Tags]    smoke    Sequencer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/sequencer/sequencer_Events.xml
@@ -26363,7 +27011,7 @@ Validate Sequencer Event sequencer_logevent_sequencerNextScript Topic Columns
 
 Validate Sequencer Event sequencer_logevent_sequencerScriptStart Topic Byte Size
 	[Documentation]    Validate the sequencer_logevent_sequencerScriptStart topic is less than 65536 bytes in total.
-	[Tags]    smoke    Sequencer
+	[Tags]    smoke    Sequencer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/sequencer/sequencer_Events.xml
@@ -26399,7 +27047,7 @@ Validate Sequencer Event sequencer_logevent_sequencerScriptStart Topic Columns
 
 Validate Sequencer Event sequencer_logevent_sequencerScriptEnd Topic Byte Size
 	[Documentation]    Validate the sequencer_logevent_sequencerScriptEnd topic is less than 65536 bytes in total.
-	[Tags]    smoke    Sequencer
+	[Tags]    smoke    Sequencer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/sequencer/sequencer_Events.xml
@@ -26435,7 +27083,7 @@ Validate Sequencer Event sequencer_logevent_sequencerScriptEnd Topic Columns
 
 Validate Sequencer Event sequencer_logevent_sequencerScriptError Topic Byte Size
 	[Documentation]    Validate the sequencer_logevent_sequencerScriptError topic is less than 65536 bytes in total.
-	[Tags]    smoke    Sequencer
+	[Tags]    smoke    Sequencer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/sequencer/sequencer_Events.xml
@@ -26471,7 +27119,7 @@ Validate Sequencer Event sequencer_logevent_sequencerScriptError Topic Columns
 
 Validate Sequencer Event sequencer_logevent_sequencerScriptEntititesInUse Topic Byte Size
 	[Documentation]    Validate the sequencer_logevent_sequencerScriptEntititesInUse topic is less than 65536 bytes in total.
-	[Tags]    smoke    Sequencer
+	[Tags]    smoke    Sequencer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/sequencer/sequencer_Events.xml
@@ -26507,7 +27155,7 @@ Validate Sequencer Event sequencer_logevent_sequencerScriptEntititesInUse Topic 
 
 Validate Sequencer Telemetry sequencer_SequencerHeartbeat Topic Byte Size
 	[Documentation]    Validate the sequencer_SequencerHeartbeat topic is less than 65536 bytes in total.
-	[Tags]    smoke    Sequencer
+	[Tags]    smoke    Sequencer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/sequencer/sequencer_Telemetry.xml
@@ -26543,7 +27191,7 @@ Validate Sequencer Telemetry sequencer_SequencerHeartbeat Topic Columns
 
 Validate SEDSpectrometer Command sedSpectrometer_command_disable Topic Byte Size
 	[Documentation]    Validate the sedSpectrometer_command_disable topic is less than 65536 bytes in total.
-	[Tags]    smoke    SEDSpectrometer
+	[Tags]    smoke    SEDSpectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Commands.xml
@@ -26579,7 +27227,7 @@ Validate SEDSpectrometer Command sedSpectrometer_command_disable Topic Columns
 
 Validate SEDSpectrometer Command sedSpectrometer_command_enable Topic Byte Size
 	[Documentation]    Validate the sedSpectrometer_command_enable topic is less than 65536 bytes in total.
-	[Tags]    smoke    SEDSpectrometer
+	[Tags]    smoke    SEDSpectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Commands.xml
@@ -26615,7 +27263,7 @@ Validate SEDSpectrometer Command sedSpectrometer_command_enable Topic Columns
 
 Validate SEDSpectrometer Command sedSpectrometer_command_exitControl Topic Byte Size
 	[Documentation]    Validate the sedSpectrometer_command_exitControl topic is less than 65536 bytes in total.
-	[Tags]    smoke    SEDSpectrometer
+	[Tags]    smoke    SEDSpectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Commands.xml
@@ -26651,7 +27299,7 @@ Validate SEDSpectrometer Command sedSpectrometer_command_exitControl Topic Colum
 
 Validate SEDSpectrometer Command sedSpectrometer_command_standby Topic Byte Size
 	[Documentation]    Validate the sedSpectrometer_command_standby topic is less than 65536 bytes in total.
-	[Tags]    smoke    SEDSpectrometer
+	[Tags]    smoke    SEDSpectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Commands.xml
@@ -26687,7 +27335,7 @@ Validate SEDSpectrometer Command sedSpectrometer_command_standby Topic Columns
 
 Validate SEDSpectrometer Command sedSpectrometer_command_start Topic Byte Size
 	[Documentation]    Validate the sedSpectrometer_command_start topic is less than 65536 bytes in total.
-	[Tags]    smoke    SEDSpectrometer
+	[Tags]    smoke    SEDSpectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Commands.xml
@@ -26723,7 +27371,7 @@ Validate SEDSpectrometer Command sedSpectrometer_command_start Topic Columns
 
 Validate SEDSpectrometer Command sedSpectrometer_command_enterControl Topic Byte Size
 	[Documentation]    Validate the sedSpectrometer_command_enterControl topic is less than 65536 bytes in total.
-	[Tags]    smoke    SEDSpectrometer
+	[Tags]    smoke    SEDSpectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Commands.xml
@@ -26759,7 +27407,7 @@ Validate SEDSpectrometer Command sedSpectrometer_command_enterControl Topic Colu
 
 Validate SEDSpectrometer Command sedSpectrometer_command_SetValue Topic Byte Size
 	[Documentation]    Validate the sedSpectrometer_command_SetValue topic is less than 65536 bytes in total.
-	[Tags]    smoke    SEDSpectrometer
+	[Tags]    smoke    SEDSpectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[7]/item)" -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Commands.xml
@@ -26795,7 +27443,7 @@ Validate SEDSpectrometer Command sedSpectrometer_command_SetValue Topic Columns
 
 Validate SEDSpectrometer Command sedSpectrometer_command_captureSpectImage Topic Byte Size
 	[Documentation]    Validate the sedSpectrometer_command_captureSpectImage topic is less than 65536 bytes in total.
-	[Tags]    smoke    SEDSpectrometer
+	[Tags]    smoke    SEDSpectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[8]/item)" -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Commands.xml
@@ -26831,7 +27479,7 @@ Validate SEDSpectrometer Command sedSpectrometer_command_captureSpectImage Topic
 
 Validate SEDSpectrometer Event sedSpectrometer_logevent_appliedSettingsMatchStart Topic Byte Size
 	[Documentation]    Validate the sedSpectrometer_logevent_appliedSettingsMatchStart topic is less than 65536 bytes in total.
-	[Tags]    smoke    SEDSpectrometer
+	[Tags]    smoke    SEDSpectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Events.xml
@@ -26867,7 +27515,7 @@ Validate SEDSpectrometer Event sedSpectrometer_logevent_appliedSettingsMatchStar
 
 Validate SEDSpectrometer Event sedSpectrometer_logevent_errorCode Topic Byte Size
 	[Documentation]    Validate the sedSpectrometer_logevent_errorCode topic is less than 65536 bytes in total.
-	[Tags]    smoke    SEDSpectrometer
+	[Tags]    smoke    SEDSpectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Events.xml
@@ -26903,7 +27551,7 @@ Validate SEDSpectrometer Event sedSpectrometer_logevent_errorCode Topic Columns
 
 Validate SEDSpectrometer Event sedSpectrometer_logevent_settingVersions Topic Byte Size
 	[Documentation]    Validate the sedSpectrometer_logevent_settingVersions topic is less than 65536 bytes in total.
-	[Tags]    smoke    SEDSpectrometer
+	[Tags]    smoke    SEDSpectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Events.xml
@@ -26939,7 +27587,7 @@ Validate SEDSpectrometer Event sedSpectrometer_logevent_settingVersions Topic Co
 
 Validate SEDSpectrometer Event sedSpectrometer_logevent_summaryState Topic Byte Size
 	[Documentation]    Validate the sedSpectrometer_logevent_summaryState topic is less than 65536 bytes in total.
-	[Tags]    smoke    SEDSpectrometer
+	[Tags]    smoke    SEDSpectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Events.xml
@@ -26975,7 +27623,7 @@ Validate SEDSpectrometer Event sedSpectrometer_logevent_summaryState Topic Colum
 
 Validate SEDSpectrometer Event sedSpectrometer_logevent_detailedState Topic Byte Size
 	[Documentation]    Validate the sedSpectrometer_logevent_detailedState topic is less than 65536 bytes in total.
-	[Tags]    smoke    SEDSpectrometer
+	[Tags]    smoke    SEDSpectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Events.xml
@@ -27011,7 +27659,7 @@ Validate SEDSpectrometer Event sedSpectrometer_logevent_detailedState Topic Colu
 
 Validate SEDSpectrometer Event sedSpectrometer_logevent_largeFileObjectAvailable Topic Byte Size
 	[Documentation]    Validate the sedSpectrometer_logevent_largeFileObjectAvailable topic is less than 65536 bytes in total.
-	[Tags]    smoke    SEDSpectrometer
+	[Tags]    smoke    SEDSpectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Events.xml
@@ -27047,7 +27695,7 @@ Validate SEDSpectrometer Event sedSpectrometer_logevent_largeFileObjectAvailable
 
 Validate SEDSpectrometer Event sedSpectrometer_logevent_measuredSpectrum Topic Byte Size
 	[Documentation]    Validate the sedSpectrometer_logevent_measuredSpectrum topic is less than 65536 bytes in total.
-	[Tags]    smoke    SEDSpectrometer
+	[Tags]    smoke    SEDSpectrometer    TSS-2987
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Events.xml
@@ -27083,7 +27731,7 @@ Validate SEDSpectrometer Event sedSpectrometer_logevent_measuredSpectrum Topic C
 
 Validate SEDSpectrometer Event sedSpectrometer_logevent_timeout Topic Byte Size
 	[Documentation]    Validate the sedSpectrometer_logevent_timeout topic is less than 65536 bytes in total.
-	[Tags]    smoke    SEDSpectrometer
+	[Tags]    smoke    SEDSpectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Events.xml
@@ -27119,7 +27767,7 @@ Validate SEDSpectrometer Event sedSpectrometer_logevent_timeout Topic Columns
 
 Validate SEDSpectrometer Event sedSpectrometer_logevent_rejectedCommand Topic Byte Size
 	[Documentation]    Validate the sedSpectrometer_logevent_rejectedCommand topic is less than 65536 bytes in total.
-	[Tags]    smoke    SEDSpectrometer
+	[Tags]    smoke    SEDSpectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Events.xml
@@ -27155,7 +27803,7 @@ Validate SEDSpectrometer Event sedSpectrometer_logevent_rejectedCommand Topic Co
 
 Validate SEDSpectrometer Event sedSpectrometer_logevent_loopTimeOutOfRange Topic Byte Size
 	[Documentation]    Validate the sedSpectrometer_logevent_loopTimeOutOfRange topic is less than 65536 bytes in total.
-	[Tags]    smoke    SEDSpectrometer
+	[Tags]    smoke    SEDSpectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Events.xml
@@ -27191,7 +27839,7 @@ Validate SEDSpectrometer Event sedSpectrometer_logevent_loopTimeOutOfRange Topic
 
 Validate SEDSpectrometer Event sedSpectrometer_logevent_internalCommand Topic Byte Size
 	[Documentation]    Validate the sedSpectrometer_logevent_internalCommand topic is less than 65536 bytes in total.
-	[Tags]    smoke    SEDSpectrometer
+	[Tags]    smoke    SEDSpectrometer    TSS-2988
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Events.xml
@@ -27227,7 +27875,7 @@ Validate SEDSpectrometer Event sedSpectrometer_logevent_internalCommand Topic Co
 
 Validate SEDSpectrometer Event sedSpectrometer_logevent_heartbeat Topic Byte Size
 	[Documentation]    Validate the sedSpectrometer_logevent_heartbeat topic is less than 65536 bytes in total.
-	[Tags]    smoke    SEDSpectrometer
+	[Tags]    smoke    SEDSpectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[12]/item)" -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Events.xml
@@ -27263,7 +27911,7 @@ Validate SEDSpectrometer Event sedSpectrometer_logevent_heartbeat Topic Columns
 
 Validate SEDSpectrometer Telemetry sedSpectrometer_spectTemperature Topic Byte Size
 	[Documentation]    Validate the sedSpectrometer_spectTemperature topic is less than 65536 bytes in total.
-	[Tags]    smoke    SEDSpectrometer
+	[Tags]    smoke    SEDSpectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Telemetry.xml
@@ -27299,7 +27947,7 @@ Validate SEDSpectrometer Telemetry sedSpectrometer_spectTemperature Topic Column
 
 Validate SEDSpectrometer Telemetry sedSpectrometer_loopTime_ms Topic Byte Size
 	[Documentation]    Validate the sedSpectrometer_loopTime_ms topic is less than 65536 bytes in total.
-	[Tags]    smoke    SEDSpectrometer
+	[Tags]    smoke    SEDSpectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Telemetry.xml
@@ -27335,7 +27983,7 @@ Validate SEDSpectrometer Telemetry sedSpectrometer_loopTime_ms Topic Columns
 
 Validate SEDSpectrometer Telemetry sedSpectrometer_timestamp Topic Byte Size
 	[Documentation]    Validate the sedSpectrometer_timestamp topic is less than 65536 bytes in total.
-	[Tags]    smoke    SEDSpectrometer
+	[Tags]    smoke    SEDSpectrometer    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[3]/item)" -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Telemetry.xml
@@ -27371,7 +28019,7 @@ Validate SEDSpectrometer Telemetry sedSpectrometer_timestamp Topic Columns
 
 Validate SummitFacility Command summitFacility_command_enable Topic Byte Size
 	[Documentation]    Validate the summitFacility_command_enable topic is less than 65536 bytes in total.
-	[Tags]    smoke    SummitFacility
+	[Tags]    smoke    SummitFacility    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/summitFacility/summitFacility_Commands.xml
@@ -27407,7 +28055,7 @@ Validate SummitFacility Command summitFacility_command_enable Topic Columns
 
 Validate SummitFacility Command summitFacility_command_exitControl Topic Byte Size
 	[Documentation]    Validate the summitFacility_command_exitControl topic is less than 65536 bytes in total.
-	[Tags]    smoke    SummitFacility
+	[Tags]    smoke    SummitFacility    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/summitFacility/summitFacility_Commands.xml
@@ -27443,7 +28091,7 @@ Validate SummitFacility Command summitFacility_command_exitControl Topic Columns
 
 Validate SummitFacility Command summitFacility_command_start Topic Byte Size
 	[Documentation]    Validate the summitFacility_command_start topic is less than 65536 bytes in total.
-	[Tags]    smoke    SummitFacility
+	[Tags]    smoke    SummitFacility    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/summitFacility/summitFacility_Commands.xml
@@ -27479,7 +28127,7 @@ Validate SummitFacility Command summitFacility_command_start Topic Columns
 
 Validate SummitFacility Command summitFacility_command_enterControl Topic Byte Size
 	[Documentation]    Validate the summitFacility_command_enterControl topic is less than 65536 bytes in total.
-	[Tags]    smoke    SummitFacility
+	[Tags]    smoke    SummitFacility    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/summitFacility/summitFacility_Commands.xml
@@ -27515,7 +28163,7 @@ Validate SummitFacility Command summitFacility_command_enterControl Topic Column
 
 Validate SummitFacility Command summitFacility_command_standby Topic Byte Size
 	[Documentation]    Validate the summitFacility_command_standby topic is less than 65536 bytes in total.
-	[Tags]    smoke    SummitFacility
+	[Tags]    smoke    SummitFacility    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/summitFacility/summitFacility_Commands.xml
@@ -27551,7 +28199,7 @@ Validate SummitFacility Command summitFacility_command_standby Topic Columns
 
 Validate SummitFacility Command summitFacility_command_disable Topic Byte Size
 	[Documentation]    Validate the summitFacility_command_disable topic is less than 65536 bytes in total.
-	[Tags]    smoke    SummitFacility
+	[Tags]    smoke    SummitFacility    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/summitFacility/summitFacility_Commands.xml
@@ -27587,7 +28235,7 @@ Validate SummitFacility Command summitFacility_command_disable Topic Columns
 
 Validate SummitFacility Event summitFacility_logevent_appliedSettingsMatchStart Topic Byte Size
 	[Documentation]    Validate the summitFacility_logevent_appliedSettingsMatchStart topic is less than 65536 bytes in total.
-	[Tags]    smoke    SummitFacility
+	[Tags]    smoke    SummitFacility    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/summitFacility/summitFacility_Events.xml
@@ -27623,7 +28271,7 @@ Validate SummitFacility Event summitFacility_logevent_appliedSettingsMatchStart 
 
 Validate SummitFacility Event summitFacility_logevent_detailedState Topic Byte Size
 	[Documentation]    Validate the summitFacility_logevent_detailedState topic is less than 65536 bytes in total.
-	[Tags]    smoke    SummitFacility
+	[Tags]    smoke    SummitFacility    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/summitFacility/summitFacility_Events.xml
@@ -27659,7 +28307,7 @@ Validate SummitFacility Event summitFacility_logevent_detailedState Topic Column
 
 Validate SummitFacility Event summitFacility_logevent_summaryState Topic Byte Size
 	[Documentation]    Validate the summitFacility_logevent_summaryState topic is less than 65536 bytes in total.
-	[Tags]    smoke    SummitFacility
+	[Tags]    smoke    SummitFacility    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/summitFacility/summitFacility_Events.xml
@@ -27695,7 +28343,7 @@ Validate SummitFacility Event summitFacility_logevent_summaryState Topic Columns
 
 Validate SummitFacility Event summitFacility_logevent_errorCode Topic Byte Size
 	[Documentation]    Validate the summitFacility_logevent_errorCode topic is less than 65536 bytes in total.
-	[Tags]    smoke    SummitFacility
+	[Tags]    smoke    SummitFacility    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/summitFacility/summitFacility_Events.xml
@@ -27731,7 +28379,7 @@ Validate SummitFacility Event summitFacility_logevent_errorCode Topic Columns
 
 Validate SummitFacility Event summitFacility_logevent_settingVersions Topic Byte Size
 	[Documentation]    Validate the summitFacility_logevent_settingVersions topic is less than 65536 bytes in total.
-	[Tags]    smoke    SummitFacility
+	[Tags]    smoke    SummitFacility    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/summitFacility/summitFacility_Events.xml
@@ -27767,7 +28415,7 @@ Validate SummitFacility Event summitFacility_logevent_settingVersions Topic Colu
 
 Validate SummitFacility Telemetry summitFacility_serverStatus Topic Byte Size
 	[Documentation]    Validate the summitFacility_serverStatus topic is less than 65536 bytes in total.
-	[Tags]    smoke    SummitFacility
+	[Tags]    smoke    SummitFacility    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/summitFacility/summitFacility_Telemetry.xml
@@ -27803,7 +28451,7 @@ Validate SummitFacility Telemetry summitFacility_serverStatus Topic Columns
 
 Validate TCS Command tcs_command_wfpCalculate Topic Byte Size
 	[Documentation]    Validate the tcs_command_wfpCalculate topic is less than 65536 bytes in total.
-	[Tags]    smoke    TCS
+	[Tags]    smoke    TCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/tcs/tcs_Commands.xml
@@ -27839,7 +28487,7 @@ Validate TCS Command tcs_command_wfpCalculate Topic Columns
 
 Validate TCS Command tcs_command_wfpSimulate Topic Byte Size
 	[Documentation]    Validate the tcs_command_wfpSimulate topic is less than 65536 bytes in total.
-	[Tags]    smoke    TCS
+	[Tags]    smoke    TCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/tcs/tcs_Commands.xml
@@ -27875,7 +28523,7 @@ Validate TCS Command tcs_command_wfpSimulate Topic Columns
 
 Validate TCS Command tcs_command_filterChangeRequest Topic Byte Size
 	[Documentation]    Validate the tcs_command_filterChangeRequest topic is less than 65536 bytes in total.
-	[Tags]    smoke    TCS
+	[Tags]    smoke    TCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/tcs/tcs_Commands.xml
@@ -27911,7 +28559,7 @@ Validate TCS Command tcs_command_filterChangeRequest Topic Columns
 
 Validate TCS Command tcs_command_stopMotion Topic Byte Size
 	[Documentation]    Validate the tcs_command_stopMotion topic is less than 65536 bytes in total.
-	[Tags]    smoke    TCS
+	[Tags]    smoke    TCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/tcs/tcs_Commands.xml
@@ -27947,7 +28595,7 @@ Validate TCS Command tcs_command_stopMotion Topic Columns
 
 Validate TCS Command tcs_command_target Topic Byte Size
 	[Documentation]    Validate the tcs_command_target topic is less than 65536 bytes in total.
-	[Tags]    smoke    TCS
+	[Tags]    smoke    TCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/tcs/tcs_Commands.xml
@@ -27983,7 +28631,7 @@ Validate TCS Command tcs_command_target Topic Columns
 
 Validate TCS Event tcs_logevent_wfpDataReady Topic Byte Size
 	[Documentation]    Validate the tcs_logevent_wfpDataReady topic is less than 65536 bytes in total.
-	[Tags]    smoke    TCS
+	[Tags]    smoke    TCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/tcs/tcs_Events.xml
@@ -28019,7 +28667,7 @@ Validate TCS Event tcs_logevent_wfpDataReady Topic Columns
 
 Validate TCS Event tcs_logevent_zemaxError Topic Byte Size
 	[Documentation]    Validate the tcs_logevent_zemaxError topic is less than 65536 bytes in total.
-	[Tags]    smoke    TCS
+	[Tags]    smoke    TCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/tcs/tcs_Events.xml
@@ -28055,7 +28703,7 @@ Validate TCS Event tcs_logevent_zemaxError Topic Columns
 
 Validate TCS Event tcs_logevent_InternalCommand Topic Byte Size
 	[Documentation]    Validate the tcs_logevent_InternalCommand topic is less than 65536 bytes in total.
-	[Tags]    smoke    TCS
+	[Tags]    smoke    TCS    TSS-2993
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/tcs/tcs_Events.xml
@@ -28091,7 +28739,7 @@ Validate TCS Event tcs_logevent_InternalCommand Topic Columns
 
 Validate TCS Event tcs_logevent_DetailedState Topic Byte Size
 	[Documentation]    Validate the tcs_logevent_DetailedState topic is less than 65536 bytes in total.
-	[Tags]    smoke    TCS
+	[Tags]    smoke    TCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/tcs/tcs_Events.xml
@@ -28127,7 +28775,7 @@ Validate TCS Event tcs_logevent_DetailedState Topic Columns
 
 Validate TCS Event tcs_logevent_Heartbeat Topic Byte Size
 	[Documentation]    Validate the tcs_logevent_Heartbeat topic is less than 65536 bytes in total.
-	[Tags]    smoke    TCS
+	[Tags]    smoke    TCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/tcs/tcs_Events.xml
@@ -28163,7 +28811,7 @@ Validate TCS Event tcs_logevent_Heartbeat Topic Columns
 
 Validate TCS Event tcs_logevent_LoopTimeOutOfRange Topic Byte Size
 	[Documentation]    Validate the tcs_logevent_LoopTimeOutOfRange topic is less than 65536 bytes in total.
-	[Tags]    smoke    TCS
+	[Tags]    smoke    TCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/tcs/tcs_Events.xml
@@ -28199,7 +28847,7 @@ Validate TCS Event tcs_logevent_LoopTimeOutOfRange Topic Columns
 
 Validate TCS Event tcs_logevent_RejectedCommand Topic Byte Size
 	[Documentation]    Validate the tcs_logevent_RejectedCommand topic is less than 65536 bytes in total.
-	[Tags]    smoke    TCS
+	[Tags]    smoke    TCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/tcs/tcs_Events.xml
@@ -28235,7 +28883,7 @@ Validate TCS Event tcs_logevent_RejectedCommand Topic Columns
 
 Validate TCS Event tcs_logevent_HeartbeatIn Topic Byte Size
 	[Documentation]    Validate the tcs_logevent_HeartbeatIn topic is less than 65536 bytes in total.
-	[Tags]    smoke    TCS
+	[Tags]    smoke    TCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/tcs/tcs_Events.xml
@@ -28271,7 +28919,7 @@ Validate TCS Event tcs_logevent_HeartbeatIn Topic Columns
 
 Validate TCS Event tcs_logevent_FilterChangeInPosition Topic Byte Size
 	[Documentation]    Validate the tcs_logevent_FilterChangeInPosition topic is less than 65536 bytes in total.
-	[Tags]    smoke    TCS
+	[Tags]    smoke    TCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/tcs/tcs_Events.xml
@@ -28307,7 +28955,7 @@ Validate TCS Event tcs_logevent_FilterChangeInPosition Topic Columns
 
 Validate TCS Event tcs_logevent_TargetInPosition Topic Byte Size
 	[Documentation]    Validate the tcs_logevent_TargetInPosition topic is less than 65536 bytes in total.
-	[Tags]    smoke    TCS
+	[Tags]    smoke    TCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/tcs/tcs_Events.xml
@@ -28343,7 +28991,7 @@ Validate TCS Event tcs_logevent_TargetInPosition Topic Columns
 
 Validate TCS Event tcs_logevent_SettingsApplied Topic Byte Size
 	[Documentation]    Validate the tcs_logevent_SettingsApplied topic is less than 65536 bytes in total.
-	[Tags]    smoke    TCS
+	[Tags]    smoke    TCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/tcs/tcs_Events.xml
@@ -28379,7 +29027,7 @@ Validate TCS Event tcs_logevent_SettingsApplied Topic Columns
 
 Validate TCS Telemetry tcs_kernel_PointingModel Topic Byte Size
 	[Documentation]    Validate the tcs_kernel_PointingModel topic is less than 65536 bytes in total.
-	[Tags]    smoke    TCS
+	[Tags]    smoke    TCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/tcs/tcs_Telemetry.xml
@@ -28415,7 +29063,7 @@ Validate TCS Telemetry tcs_kernel_PointingModel Topic Columns
 
 Validate TCS Telemetry tcs_AOCS Topic Byte Size
 	[Documentation]    Validate the tcs_AOCS topic is less than 65536 bytes in total.
-	[Tags]    smoke    TCS
+	[Tags]    smoke    TCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/tcs/tcs_Telemetry.xml
@@ -28451,7 +29099,7 @@ Validate TCS Telemetry tcs_AOCS Topic Columns
 
 Validate TCS Telemetry tcs_kernel_TimeKeeper Topic Byte Size
 	[Documentation]    Validate the tcs_kernel_TimeKeeper topic is less than 65536 bytes in total.
-	[Tags]    smoke    TCS
+	[Tags]    smoke    TCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[3]/item)" -n ${folder}/sal_interfaces/tcs/tcs_Telemetry.xml
@@ -28487,7 +29135,7 @@ Validate TCS Telemetry tcs_kernel_TimeKeeper Topic Columns
 
 Validate TCS Telemetry tcs_kernel_Site Topic Byte Size
 	[Documentation]    Validate the tcs_kernel_Site topic is less than 65536 bytes in total.
-	[Tags]    smoke    TCS
+	[Tags]    smoke    TCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[4]/item)" -n ${folder}/sal_interfaces/tcs/tcs_Telemetry.xml
@@ -28523,7 +29171,7 @@ Validate TCS Telemetry tcs_kernel_Site Topic Columns
 
 Validate TCS Telemetry tcs_kernel_Target Topic Byte Size
 	[Documentation]    Validate the tcs_kernel_Target topic is less than 65536 bytes in total.
-	[Tags]    smoke    TCS
+	[Tags]    smoke    TCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[5]/item)" -n ${folder}/sal_interfaces/tcs/tcs_Telemetry.xml
@@ -28559,7 +29207,7 @@ Validate TCS Telemetry tcs_kernel_Target Topic Columns
 
 Validate TCS Telemetry tcs_kernel_PointingControl Topic Byte Size
 	[Documentation]    Validate the tcs_kernel_PointingControl topic is less than 65536 bytes in total.
-	[Tags]    smoke    TCS
+	[Tags]    smoke    TCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[6]/item)" -n ${folder}/sal_interfaces/tcs/tcs_Telemetry.xml
@@ -28595,7 +29243,7 @@ Validate TCS Telemetry tcs_kernel_PointingControl Topic Columns
 
 Validate TCS Telemetry tcs_kernel_TrackRefSys Topic Byte Size
 	[Documentation]    Validate the tcs_kernel_TrackRefSys topic is less than 65536 bytes in total.
-	[Tags]    smoke    TCS
+	[Tags]    smoke    TCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[7]/item)" -n ${folder}/sal_interfaces/tcs/tcs_Telemetry.xml
@@ -28631,7 +29279,7 @@ Validate TCS Telemetry tcs_kernel_TrackRefSys Topic Columns
 
 Validate TCS Telemetry tcs_ZEMAX Topic Byte Size
 	[Documentation]    Validate the tcs_ZEMAX topic is less than 65536 bytes in total.
-	[Tags]    smoke    TCS
+	[Tags]    smoke    TCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[8]/item)" -n ${folder}/sal_interfaces/tcs/tcs_Telemetry.xml
@@ -28667,7 +29315,7 @@ Validate TCS Telemetry tcs_ZEMAX Topic Columns
 
 Validate TCS Telemetry tcs_kernel_PointingLog Topic Byte Size
 	[Documentation]    Validate the tcs_kernel_PointingLog topic is less than 65536 bytes in total.
-	[Tags]    smoke    TCS
+	[Tags]    smoke    TCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[9]/item)" -n ${folder}/sal_interfaces/tcs/tcs_Telemetry.xml
@@ -28703,7 +29351,7 @@ Validate TCS Telemetry tcs_kernel_PointingLog Topic Columns
 
 Validate TCS Telemetry tcs_kernel_DawdleFilter Topic Byte Size
 	[Documentation]    Validate the tcs_kernel_DawdleFilter topic is less than 65536 bytes in total.
-	[Tags]    smoke    TCS
+	[Tags]    smoke    TCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[10]/item)" -n ${folder}/sal_interfaces/tcs/tcs_Telemetry.xml
@@ -28739,7 +29387,7 @@ Validate TCS Telemetry tcs_kernel_DawdleFilter Topic Columns
 
 Validate TCS Telemetry tcs_kernel_OpticsVt Topic Byte Size
 	[Documentation]    Validate the tcs_kernel_OpticsVt topic is less than 65536 bytes in total.
-	[Tags]    smoke    TCS
+	[Tags]    smoke    TCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[11]/item)" -n ${folder}/sal_interfaces/tcs/tcs_Telemetry.xml
@@ -28775,7 +29423,7 @@ Validate TCS Telemetry tcs_kernel_OpticsVt Topic Columns
 
 Validate TCS Telemetry tcs_WEP Topic Byte Size
 	[Documentation]    Validate the tcs_WEP topic is less than 65536 bytes in total.
-	[Tags]    smoke    TCS
+	[Tags]    smoke    TCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[12]/item)" -n ${folder}/sal_interfaces/tcs/tcs_Telemetry.xml
@@ -28811,7 +29459,7 @@ Validate TCS Telemetry tcs_WEP Topic Columns
 
 Validate TCS Telemetry tcs_kernel_TrackingTarget Topic Byte Size
 	[Documentation]    Validate the tcs_kernel_TrackingTarget topic is less than 65536 bytes in total.
-	[Tags]    smoke    TCS
+	[Tags]    smoke    TCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[13]/item)" -n ${folder}/sal_interfaces/tcs/tcs_Telemetry.xml
@@ -28847,7 +29495,7 @@ Validate TCS Telemetry tcs_kernel_TrackingTarget Topic Columns
 
 Validate TCS Telemetry tcs_kernel_FK5Target Topic Byte Size
 	[Documentation]    Validate the tcs_kernel_FK5Target topic is less than 65536 bytes in total.
-	[Tags]    smoke    TCS
+	[Tags]    smoke    TCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[14]/item)" -n ${folder}/sal_interfaces/tcs/tcs_Telemetry.xml
@@ -28883,7 +29531,7 @@ Validate TCS Telemetry tcs_kernel_FK5Target Topic Columns
 
 Validate TCS Telemetry tcs_LoopTime_ms Topic Byte Size
 	[Documentation]    Validate the tcs_LoopTime_ms topic is less than 65536 bytes in total.
-	[Tags]    smoke    TCS
+	[Tags]    smoke    TCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[15]/item)" -n ${folder}/sal_interfaces/tcs/tcs_Telemetry.xml
@@ -28919,7 +29567,7 @@ Validate TCS Telemetry tcs_LoopTime_ms Topic Columns
 
 Validate TCS Telemetry tcs_Timestamp Topic Byte Size
 	[Documentation]    Validate the tcs_Timestamp topic is less than 65536 bytes in total.
-	[Tags]    smoke    TCS
+	[Tags]    smoke    TCS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[16]/item)" -n ${folder}/sal_interfaces/tcs/tcs_Telemetry.xml
@@ -28955,7 +29603,7 @@ Validate TCS Telemetry tcs_Timestamp Topic Columns
 
 Validate TcsOfc Command tcsOfc_command_disable Topic Byte Size
 	[Documentation]    Validate the tcsOfc_command_disable topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsOfc
+	[Tags]    smoke    TcsOfc    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Commands.xml
@@ -28991,7 +29639,7 @@ Validate TcsOfc Command tcsOfc_command_disable Topic Columns
 
 Validate TcsOfc Command tcsOfc_command_enable Topic Byte Size
 	[Documentation]    Validate the tcsOfc_command_enable topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsOfc
+	[Tags]    smoke    TcsOfc    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Commands.xml
@@ -29027,7 +29675,7 @@ Validate TcsOfc Command tcsOfc_command_enable Topic Columns
 
 Validate TcsOfc Command tcsOfc_command_exitControl Topic Byte Size
 	[Documentation]    Validate the tcsOfc_command_exitControl topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsOfc
+	[Tags]    smoke    TcsOfc    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Commands.xml
@@ -29063,7 +29711,7 @@ Validate TcsOfc Command tcsOfc_command_exitControl Topic Columns
 
 Validate TcsOfc Command tcsOfc_command_standby Topic Byte Size
 	[Documentation]    Validate the tcsOfc_command_standby topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsOfc
+	[Tags]    smoke    TcsOfc    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Commands.xml
@@ -29099,7 +29747,7 @@ Validate TcsOfc Command tcsOfc_command_standby Topic Columns
 
 Validate TcsOfc Command tcsOfc_command_start Topic Byte Size
 	[Documentation]    Validate the tcsOfc_command_start topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsOfc
+	[Tags]    smoke    TcsOfc    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Commands.xml
@@ -29135,7 +29783,7 @@ Validate TcsOfc Command tcsOfc_command_start Topic Columns
 
 Validate TcsOfc Command tcsOfc_command_enterControl Topic Byte Size
 	[Documentation]    Validate the tcsOfc_command_enterControl topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsOfc
+	[Tags]    smoke    TcsOfc    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Commands.xml
@@ -29171,7 +29819,7 @@ Validate TcsOfc Command tcsOfc_command_enterControl Topic Columns
 
 Validate TcsOfc Command tcsOfc_command_readShwfsFile Topic Byte Size
 	[Documentation]    Validate the tcsOfc_command_readShwfsFile topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsOfc
+	[Tags]    smoke    TcsOfc    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[7]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Commands.xml
@@ -29207,7 +29855,7 @@ Validate TcsOfc Command tcsOfc_command_readShwfsFile Topic Columns
 
 Validate TcsOfc Command tcsOfc_command_readWfsFile Topic Byte Size
 	[Documentation]    Validate the tcsOfc_command_readWfsFile topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsOfc
+	[Tags]    smoke    TcsOfc    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[8]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Commands.xml
@@ -29243,7 +29891,7 @@ Validate TcsOfc Command tcsOfc_command_readWfsFile Topic Columns
 
 Validate TcsOfc Event tcsOfc_logevent_appliedSettingsMatchStart Topic Byte Size
 	[Documentation]    Validate the tcsOfc_logevent_appliedSettingsMatchStart topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsOfc
+	[Tags]    smoke    TcsOfc    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
@@ -29279,7 +29927,7 @@ Validate TcsOfc Event tcsOfc_logevent_appliedSettingsMatchStart Topic Columns
 
 Validate TcsOfc Event tcsOfc_logevent_errorCode Topic Byte Size
 	[Documentation]    Validate the tcsOfc_logevent_errorCode topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsOfc
+	[Tags]    smoke    TcsOfc    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
@@ -29315,7 +29963,7 @@ Validate TcsOfc Event tcsOfc_logevent_errorCode Topic Columns
 
 Validate TcsOfc Event tcsOfc_logevent_settingVersions Topic Byte Size
 	[Documentation]    Validate the tcsOfc_logevent_settingVersions topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsOfc
+	[Tags]    smoke    TcsOfc    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
@@ -29351,7 +29999,7 @@ Validate TcsOfc Event tcsOfc_logevent_settingVersions Topic Columns
 
 Validate TcsOfc Event tcsOfc_logevent_summaryState Topic Byte Size
 	[Documentation]    Validate the tcsOfc_logevent_summaryState topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsOfc
+	[Tags]    smoke    TcsOfc    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
@@ -29387,7 +30035,7 @@ Validate TcsOfc Event tcsOfc_logevent_summaryState Topic Columns
 
 Validate TcsOfc Event tcsOfc_logevent_detailedState Topic Byte Size
 	[Documentation]    Validate the tcsOfc_logevent_detailedState topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsOfc
+	[Tags]    smoke    TcsOfc    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
@@ -29423,7 +30071,7 @@ Validate TcsOfc Event tcsOfc_logevent_detailedState Topic Columns
 
 Validate TcsOfc Event tcsOfc_logevent_internalCommand Topic Byte Size
 	[Documentation]    Validate the tcsOfc_logevent_internalCommand topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsOfc
+	[Tags]    smoke    TcsOfc    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
@@ -29459,7 +30107,7 @@ Validate TcsOfc Event tcsOfc_logevent_internalCommand Topic Columns
 
 Validate TcsOfc Event tcsOfc_logevent_heartbeat Topic Byte Size
 	[Documentation]    Validate the tcsOfc_logevent_heartbeat topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsOfc
+	[Tags]    smoke    TcsOfc    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
@@ -29495,7 +30143,7 @@ Validate TcsOfc Event tcsOfc_logevent_heartbeat Topic Columns
 
 Validate TcsOfc Event tcsOfc_logevent_loopTimeOutOfRange Topic Byte Size
 	[Documentation]    Validate the tcsOfc_logevent_loopTimeOutOfRange topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsOfc
+	[Tags]    smoke    TcsOfc    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
@@ -29531,7 +30179,7 @@ Validate TcsOfc Event tcsOfc_logevent_loopTimeOutOfRange Topic Columns
 
 Validate TcsOfc Event tcsOfc_logevent_rejectedCommand Topic Byte Size
 	[Documentation]    Validate the tcsOfc_logevent_rejectedCommand topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsOfc
+	[Tags]    smoke    TcsOfc    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
@@ -29567,7 +30215,7 @@ Validate TcsOfc Event tcsOfc_logevent_rejectedCommand Topic Columns
 
 Validate TcsOfc Event tcsOfc_logevent_noEnoughZernikeTerm Topic Byte Size
 	[Documentation]    Validate the tcsOfc_logevent_noEnoughZernikeTerm topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsOfc
+	[Tags]    smoke    TcsOfc    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
@@ -29603,7 +30251,7 @@ Validate TcsOfc Event tcsOfc_logevent_noEnoughZernikeTerm Topic Columns
 
 Validate TcsOfc Event tcsOfc_logevent_degreeOfFreedom Topic Byte Size
 	[Documentation]    Validate the tcsOfc_logevent_degreeOfFreedom topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsOfc
+	[Tags]    smoke    TcsOfc    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
@@ -29639,7 +30287,7 @@ Validate TcsOfc Event tcsOfc_logevent_degreeOfFreedom Topic Columns
 
 Validate TcsOfc Telemetry tcsOfc_timestamp Topic Byte Size
 	[Documentation]    Validate the tcsOfc_timestamp topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsOfc
+	[Tags]    smoke    TcsOfc    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Telemetry.xml
@@ -29675,7 +30323,7 @@ Validate TcsOfc Telemetry tcsOfc_timestamp Topic Columns
 
 Validate TcsOfc Telemetry tcsOfc_loopTimeMs Topic Byte Size
 	[Documentation]    Validate the tcsOfc_loopTimeMs topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsOfc
+	[Tags]    smoke    TcsOfc    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Telemetry.xml
@@ -29711,7 +30359,7 @@ Validate TcsOfc Telemetry tcsOfc_loopTimeMs Topic Columns
 
 Validate TcsWEP Command tcsWEP_command_disable Topic Byte Size
 	[Documentation]    Validate the tcsWEP_command_disable topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsWEP
+	[Tags]    smoke    TcsWEP    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
@@ -29747,7 +30395,7 @@ Validate TcsWEP Command tcsWEP_command_disable Topic Columns
 
 Validate TcsWEP Command tcsWEP_command_enable Topic Byte Size
 	[Documentation]    Validate the tcsWEP_command_enable topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsWEP
+	[Tags]    smoke    TcsWEP    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
@@ -29783,7 +30431,7 @@ Validate TcsWEP Command tcsWEP_command_enable Topic Columns
 
 Validate TcsWEP Command tcsWEP_command_exitControl Topic Byte Size
 	[Documentation]    Validate the tcsWEP_command_exitControl topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsWEP
+	[Tags]    smoke    TcsWEP    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
@@ -29819,7 +30467,7 @@ Validate TcsWEP Command tcsWEP_command_exitControl Topic Columns
 
 Validate TcsWEP Command tcsWEP_command_standby Topic Byte Size
 	[Documentation]    Validate the tcsWEP_command_standby topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsWEP
+	[Tags]    smoke    TcsWEP    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
@@ -29855,7 +30503,7 @@ Validate TcsWEP Command tcsWEP_command_standby Topic Columns
 
 Validate TcsWEP Command tcsWEP_command_start Topic Byte Size
 	[Documentation]    Validate the tcsWEP_command_start topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsWEP
+	[Tags]    smoke    TcsWEP    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
@@ -29891,7 +30539,7 @@ Validate TcsWEP Command tcsWEP_command_start Topic Columns
 
 Validate TcsWEP Command tcsWEP_command_enterControl Topic Byte Size
 	[Documentation]    Validate the tcsWEP_command_enterControl topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsWEP
+	[Tags]    smoke    TcsWEP    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
@@ -29927,7 +30575,7 @@ Validate TcsWEP Command tcsWEP_command_enterControl Topic Columns
 
 Validate TcsWEP Event tcsWEP_logevent_appliedSettingsMatchStart Topic Byte Size
 	[Documentation]    Validate the tcsWEP_logevent_appliedSettingsMatchStart topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsWEP
+	[Tags]    smoke    TcsWEP    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
@@ -29963,7 +30611,7 @@ Validate TcsWEP Event tcsWEP_logevent_appliedSettingsMatchStart Topic Columns
 
 Validate TcsWEP Event tcsWEP_logevent_errorCode Topic Byte Size
 	[Documentation]    Validate the tcsWEP_logevent_errorCode topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsWEP
+	[Tags]    smoke    TcsWEP    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
@@ -29999,7 +30647,7 @@ Validate TcsWEP Event tcsWEP_logevent_errorCode Topic Columns
 
 Validate TcsWEP Event tcsWEP_logevent_settingVersions Topic Byte Size
 	[Documentation]    Validate the tcsWEP_logevent_settingVersions topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsWEP
+	[Tags]    smoke    TcsWEP    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
@@ -30035,7 +30683,7 @@ Validate TcsWEP Event tcsWEP_logevent_settingVersions Topic Columns
 
 Validate TcsWEP Event tcsWEP_logevent_summaryState Topic Byte Size
 	[Documentation]    Validate the tcsWEP_logevent_summaryState topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsWEP
+	[Tags]    smoke    TcsWEP    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
@@ -30071,7 +30719,7 @@ Validate TcsWEP Event tcsWEP_logevent_summaryState Topic Columns
 
 Validate TcsWEP Event tcsWEP_logevent_detailedState Topic Byte Size
 	[Documentation]    Validate the tcsWEP_logevent_detailedState topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsWEP
+	[Tags]    smoke    TcsWEP    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
@@ -30107,7 +30755,7 @@ Validate TcsWEP Event tcsWEP_logevent_detailedState Topic Columns
 
 Validate TcsWEP Event tcsWEP_logevent_internalCommand Topic Byte Size
 	[Documentation]    Validate the tcsWEP_logevent_internalCommand topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsWEP
+	[Tags]    smoke    TcsWEP    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
@@ -30143,7 +30791,7 @@ Validate TcsWEP Event tcsWEP_logevent_internalCommand Topic Columns
 
 Validate TcsWEP Event tcsWEP_logevent_heartbeat Topic Byte Size
 	[Documentation]    Validate the tcsWEP_logevent_heartbeat topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsWEP
+	[Tags]    smoke    TcsWEP    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
@@ -30179,7 +30827,7 @@ Validate TcsWEP Event tcsWEP_logevent_heartbeat Topic Columns
 
 Validate TcsWEP Event tcsWEP_logevent_loopTimeOutOfRange Topic Byte Size
 	[Documentation]    Validate the tcsWEP_logevent_loopTimeOutOfRange topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsWEP
+	[Tags]    smoke    TcsWEP    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
@@ -30215,7 +30863,7 @@ Validate TcsWEP Event tcsWEP_logevent_loopTimeOutOfRange Topic Columns
 
 Validate TcsWEP Event tcsWEP_logevent_rejectedCommand Topic Byte Size
 	[Documentation]    Validate the tcsWEP_logevent_rejectedCommand topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsWEP
+	[Tags]    smoke    TcsWEP    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
@@ -30251,7 +30899,7 @@ Validate TcsWEP Event tcsWEP_logevent_rejectedCommand Topic Columns
 
 Validate TcsWEP Event tcsWEP_logevent_noEnoughWfsNum Topic Byte Size
 	[Documentation]    Validate the tcsWEP_logevent_noEnoughWfsNum topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsWEP
+	[Tags]    smoke    TcsWEP    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
@@ -30287,7 +30935,7 @@ Validate TcsWEP Event tcsWEP_logevent_noEnoughWfsNum Topic Columns
 
 Validate TcsWEP Event tcsWEP_logevent_wavefrontError Topic Byte Size
 	[Documentation]    Validate the tcsWEP_logevent_wavefrontError topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsWEP
+	[Tags]    smoke    TcsWEP    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
@@ -30323,7 +30971,7 @@ Validate TcsWEP Event tcsWEP_logevent_wavefrontError Topic Columns
 
 Validate TcsWEP Event tcsWEP_logevent_normalTargetWfsList Topic Byte Size
 	[Documentation]    Validate the tcsWEP_logevent_normalTargetWfsList topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsWEP
+	[Tags]    smoke    TcsWEP    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[12]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
@@ -30359,7 +31007,7 @@ Validate TcsWEP Event tcsWEP_logevent_normalTargetWfsList Topic Columns
 
 Validate TcsWEP Event tcsWEP_logevent_comcamTargetWfsList Topic Byte Size
 	[Documentation]    Validate the tcsWEP_logevent_comcamTargetWfsList topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsWEP
+	[Tags]    smoke    TcsWEP    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[13]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
@@ -30395,7 +31043,7 @@ Validate TcsWEP Event tcsWEP_logevent_comcamTargetWfsList Topic Columns
 
 Validate TcsWEP Event tcsWEP_logevent_famTargetWfsList Topic Byte Size
 	[Documentation]    Validate the tcsWEP_logevent_famTargetWfsList topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsWEP
+	[Tags]    smoke    TcsWEP    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[14]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
@@ -30431,7 +31079,7 @@ Validate TcsWEP Event tcsWEP_logevent_famTargetWfsList Topic Columns
 
 Validate TcsWEP Event tcsWEP_logevent_sensorPssnList Topic Byte Size
 	[Documentation]    Validate the tcsWEP_logevent_sensorPssnList topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsWEP
+	[Tags]    smoke    TcsWEP    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[15]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
@@ -30467,7 +31115,7 @@ Validate TcsWEP Event tcsWEP_logevent_sensorPssnList Topic Columns
 
 Validate TcsWEP Event tcsWEP_logevent_simParamList Topic Byte Size
 	[Documentation]    Validate the tcsWEP_logevent_simParamList topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsWEP
+	[Tags]    smoke    TcsWEP    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[16]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
@@ -30503,7 +31151,7 @@ Validate TcsWEP Event tcsWEP_logevent_simParamList Topic Columns
 
 Validate TcsWEP Event tcsWEP_logevent_imageReady Topic Byte Size
 	[Documentation]    Validate the tcsWEP_logevent_imageReady topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsWEP
+	[Tags]    smoke    TcsWEP    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[17]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
@@ -30539,7 +31187,7 @@ Validate TcsWEP Event tcsWEP_logevent_imageReady Topic Columns
 
 Validate TcsWEP Telemetry tcsWEP_timestamp Topic Byte Size
 	[Documentation]    Validate the tcsWEP_timestamp topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsWEP
+	[Tags]    smoke    TcsWEP    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Telemetry.xml
@@ -30575,7 +31223,7 @@ Validate TcsWEP Telemetry tcsWEP_timestamp Topic Columns
 
 Validate TcsWEP Telemetry tcsWEP_loopTimeMs Topic Byte Size
 	[Documentation]    Validate the tcsWEP_loopTimeMs topic is less than 65536 bytes in total.
-	[Tags]    smoke    TcsWEP
+	[Tags]    smoke    TcsWEP    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Telemetry.xml
@@ -30611,7 +31259,7 @@ Validate TcsWEP Telemetry tcsWEP_loopTimeMs Topic Columns
 
 Validate VMS Command vms_command_Start Topic Byte Size
 	[Documentation]    Validate the vms_command_Start topic is less than 65536 bytes in total.
-	[Tags]    smoke    VMS
+	[Tags]    smoke    VMS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/vms/vms_Commands.xml
@@ -30647,7 +31295,7 @@ Validate VMS Command vms_command_Start Topic Columns
 
 Validate VMS Command vms_command_Enable Topic Byte Size
 	[Documentation]    Validate the vms_command_Enable topic is less than 65536 bytes in total.
-	[Tags]    smoke    VMS
+	[Tags]    smoke    VMS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/vms/vms_Commands.xml
@@ -30683,7 +31331,7 @@ Validate VMS Command vms_command_Enable Topic Columns
 
 Validate VMS Command vms_command_Disable Topic Byte Size
 	[Documentation]    Validate the vms_command_Disable topic is less than 65536 bytes in total.
-	[Tags]    smoke    VMS
+	[Tags]    smoke    VMS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/vms/vms_Commands.xml
@@ -30719,7 +31367,7 @@ Validate VMS Command vms_command_Disable Topic Columns
 
 Validate VMS Command vms_command_Standby Topic Byte Size
 	[Documentation]    Validate the vms_command_Standby topic is less than 65536 bytes in total.
-	[Tags]    smoke    VMS
+	[Tags]    smoke    VMS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/vms/vms_Commands.xml
@@ -30755,7 +31403,7 @@ Validate VMS Command vms_command_Standby Topic Columns
 
 Validate VMS Command vms_command_Shutdown Topic Byte Size
 	[Documentation]    Validate the vms_command_Shutdown topic is less than 65536 bytes in total.
-	[Tags]    smoke    VMS
+	[Tags]    smoke    VMS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/vms/vms_Commands.xml
@@ -30791,7 +31439,7 @@ Validate VMS Command vms_command_Shutdown Topic Columns
 
 Validate VMS Event vms_logevent_SummaryState Topic Byte Size
 	[Documentation]    Validate the vms_logevent_SummaryState topic is less than 65536 bytes in total.
-	[Tags]    smoke    VMS
+	[Tags]    smoke    VMS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/vms/vms_Events.xml
@@ -30827,7 +31475,7 @@ Validate VMS Event vms_logevent_SummaryState Topic Columns
 
 Validate VMS Event vms_logevent_ErrorCode Topic Byte Size
 	[Documentation]    Validate the vms_logevent_ErrorCode topic is less than 65536 bytes in total.
-	[Tags]    smoke    VMS
+	[Tags]    smoke    VMS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/vms/vms_Events.xml
@@ -30863,7 +31511,7 @@ Validate VMS Event vms_logevent_ErrorCode Topic Columns
 
 Validate VMS Event vms_logevent_DetailedState Topic Byte Size
 	[Documentation]    Validate the vms_logevent_DetailedState topic is less than 65536 bytes in total.
-	[Tags]    smoke    VMS
+	[Tags]    smoke    VMS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/vms/vms_Events.xml
@@ -30899,7 +31547,7 @@ Validate VMS Event vms_logevent_DetailedState Topic Columns
 
 Validate VMS Event vms_logevent_SettingVersions Topic Byte Size
 	[Documentation]    Validate the vms_logevent_SettingVersions topic is less than 65536 bytes in total.
-	[Tags]    smoke    VMS
+	[Tags]    smoke    VMS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/vms/vms_Events.xml
@@ -30935,7 +31583,7 @@ Validate VMS Event vms_logevent_SettingVersions Topic Columns
 
 Validate VMS Event vms_logevent_AppliedSettingsMatchStart Topic Byte Size
 	[Documentation]    Validate the vms_logevent_AppliedSettingsMatchStart topic is less than 65536 bytes in total.
-	[Tags]    smoke    VMS
+	[Tags]    smoke    VMS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/vms/vms_Events.xml
@@ -30971,7 +31619,7 @@ Validate VMS Event vms_logevent_AppliedSettingsMatchStart Topic Columns
 
 Validate VMS Event vms_logevent_SettingsApplied Topic Byte Size
 	[Documentation]    Validate the vms_logevent_SettingsApplied topic is less than 65536 bytes in total.
-	[Tags]    smoke    VMS
+	[Tags]    smoke    VMS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/vms/vms_Events.xml
@@ -31007,7 +31655,7 @@ Validate VMS Event vms_logevent_SettingsApplied Topic Columns
 
 Validate VMS Event vms_logevent_AcquisitionRate Topic Byte Size
 	[Documentation]    Validate the vms_logevent_AcquisitionRate topic is less than 65536 bytes in total.
-	[Tags]    smoke    VMS
+	[Tags]    smoke    VMS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/vms/vms_Events.xml
@@ -31043,7 +31691,7 @@ Validate VMS Event vms_logevent_AcquisitionRate Topic Columns
 
 Validate VMS Telemetry vms_M1M3 Topic Byte Size
 	[Documentation]    Validate the vms_M1M3 topic is less than 65536 bytes in total.
-	[Tags]    smoke    VMS
+	[Tags]    smoke    VMS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/vms/vms_Telemetry.xml
@@ -31079,7 +31727,7 @@ Validate VMS Telemetry vms_M1M3 Topic Columns
 
 Validate VMS Telemetry vms_TMA Topic Byte Size
 	[Documentation]    Validate the vms_TMA topic is less than 65536 bytes in total.
-	[Tags]    smoke    VMS
+	[Tags]    smoke    VMS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/vms/vms_Telemetry.xml
@@ -31115,7 +31763,7 @@ Validate VMS Telemetry vms_TMA Topic Columns
 
 Validate VMS Telemetry vms_M2 Topic Byte Size
 	[Documentation]    Validate the vms_M2 topic is less than 65536 bytes in total.
-	[Tags]    smoke    VMS
+	[Tags]    smoke    VMS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[3]/item)" -n ${folder}/sal_interfaces/vms/vms_Telemetry.xml
@@ -31151,7 +31799,7 @@ Validate VMS Telemetry vms_M2 Topic Columns
 
 Validate VMS Telemetry vms_CameraRotator Topic Byte Size
 	[Documentation]    Validate the vms_CameraRotator topic is less than 65536 bytes in total.
-	[Tags]    smoke    VMS
+	[Tags]    smoke    VMS    
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[4]/item)" -n ${folder}/sal_interfaces/vms/vms_Telemetry.xml

@@ -46,11 +46,30 @@ for subsystem in xml_common.subsystems:
 		xmlfile = 'sal_interfaces/' + subsystem + '/' + subsystem + '_' + messageType + '.xml'
 		topics = subprocess.check_output(app + ' sel -t -m "/' + salxmlpath + '/EFDB_Topic" -v . -n ' + home + '/' + xmlfile, shell=True).split()
 		for index, topic in enumerate(topics):
+			
+			# Mark test cases with Jira tickets
+			if subsystem == "sedSpectrometer" and topic.decode("utf-8") == "sedSpectrometer_logevent_measuredSpectrum":
+				skipped="TSS-2987"
+			elif subsystem == "sedSpectrometer" and topic.decode("utf-8") == "sedSpectrometer_logevent_internalCommand":
+				skipped="TSS-2988"
+			elif subsystem == "m1m3" and topic.decode("utf-8") == "m1m3_command_RunMirrorForceProfile":
+				skipped="TSS-2989"
+			elif subsystem == "m1m3" and topic.decode("utf-8") == "m1m3_logevent_ForceActuatorInfo":
+				skipped="TSS-2990"
+			elif subsystem == "m1m3" and topic.decode("utf-8") == "m1m3_logevent_ForceSetpointWarning":
+				skipped="TSS-2991"
+			elif subsystem == "m1m3" and topic.decode("utf-8") == "m1m3_logevent_ForceActuatorWarning":
+				skipped="TSS-2992"
+			elif subsystem == "tcs" and topic.decode("utf-8") == "tcs_logevent_InternalCommand":
+				skipped="TSS-2993"
+			else:
+				skipped=""
+
 			index += 1
 			# Create the Test Cases.
 			file.write("Validate " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType.rstrip("s") + " " + topic.decode("utf-8") + " Topic Byte Size\n")
 			file.write("\t[Documentation]    Validate the " + topic.decode("utf-8") + " topic is less than 65536 bytes in total.\n")
-			file.write("\t[Tags]    smoke    " + xml_common.CapitalizeSubsystem(subsystem) + "\n")
+			file.write("\t[Tags]    smoke    " + xml_common.CapitalizeSubsystem(subsystem) + "    " + skipped + "\n")
 			file.write("\t[Setup]    Set Test Variable    ${result}    ${0}\n")
 			file.write("\tComment    Get the Count of each argument for the topic.\n")
 			file.write("\t${itemCount}=    Run    ${xml} sel -t -v \"count(" + salxmlpath + "[" + str(index) + "]/item)\" -n ${folder}/" + xmlfile + "\n")
