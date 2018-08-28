@@ -6010,7 +6010,7 @@ Validate ATCS Event atcs_logevent_InternalCommand Topic Byte Size
 
 Validate ATCS Event atcs_logevent_InternalCommand Topic Columns
 	[Documentation]    Validate the atcs_logevent_InternalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    ATCSTSS-2994
+	[Tags]    smoke    ATCS	TSS-2994
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/atcs/atcs_Events.xml
@@ -18466,7 +18466,7 @@ Validate M1M3 Command m1m3_command_RunMirrorForceProfile Topic Byte Size
 
 Validate M1M3 Command m1m3_command_RunMirrorForceProfile Topic Columns
 	[Documentation]    Validate the m1m3_command_RunMirrorForceProfile topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    M1M3TSS-2989
+	[Tags]    smoke    M1M3	TSS-2989
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[36]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Commands.xml
@@ -19006,7 +19006,7 @@ Validate M1M3 Event m1m3_logevent_ForceActuatorInfo Topic Byte Size
 
 Validate M1M3 Event m1m3_logevent_ForceActuatorInfo Topic Columns
 	[Documentation]    Validate the m1m3_logevent_ForceActuatorInfo topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    M1M3TSS-2990
+	[Tags]    smoke    M1M3	TSS-2990
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -19330,7 +19330,7 @@ Validate M1M3 Event m1m3_logevent_ForceSetpointWarning Topic Byte Size
 
 Validate M1M3 Event m1m3_logevent_ForceSetpointWarning Topic Columns
 	[Documentation]    Validate the m1m3_logevent_ForceSetpointWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    M1M3TSS-2991
+	[Tags]    smoke    M1M3	TSS-2991
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[17]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -20086,7 +20086,7 @@ Validate M1M3 Event m1m3_logevent_ForceActuatorWarning Topic Byte Size
 
 Validate M1M3 Event m1m3_logevent_ForceActuatorWarning Topic Columns
 	[Documentation]    Validate the m1m3_logevent_ForceActuatorWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    M1M3TSS-2992
+	[Tags]    smoke    M1M3	TSS-2992
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[38]/item)" -n ${folder}/sal_interfaces/m1m3/m1m3_Events.xml
@@ -27070,7 +27070,7 @@ Validate SEDSpectrometer Event sedSpectrometer_logevent_measuredSpectrum Topic B
 
 Validate SEDSpectrometer Event sedSpectrometer_logevent_measuredSpectrum Topic Columns
 	[Documentation]    Validate the sedSpectrometer_logevent_measuredSpectrum topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    SEDSpectrometerTSS-2987
+	[Tags]    smoke    SEDSpectrometer	TSS-2987
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Events.xml
@@ -27214,7 +27214,7 @@ Validate SEDSpectrometer Event sedSpectrometer_logevent_internalCommand Topic By
 
 Validate SEDSpectrometer Event sedSpectrometer_logevent_internalCommand Topic Columns
 	[Documentation]    Validate the sedSpectrometer_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    SEDSpectrometerTSS-2988
+	[Tags]    smoke    SEDSpectrometer	TSS-2988
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Events.xml
@@ -28078,7 +28078,7 @@ Validate TCS Event tcs_logevent_InternalCommand Topic Byte Size
 
 Validate TCS Event tcs_logevent_InternalCommand Topic Columns
 	[Documentation]    Validate the tcs_logevent_InternalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    TCSTSS-2993
+	[Tags]    smoke    TCS	TSS-2561
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/tcs/tcs_Events.xml
