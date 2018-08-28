@@ -262,7 +262,7 @@ Validate CalibrationElectrometer Generic Commands
 
 Validate CalibrationElectrometer Generic Events
 	[Documentation]    Validate the CalibrationElectrometer contains all the required generic events.
-	[Tags]    smoke    CalibrationElectrometer    TSS-2997
+	[Tags]    smoke    CalibrationElectrometer
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    calibrationElectrometer
 	Comment    Get the Events.
@@ -274,7 +274,7 @@ Validate CalibrationElectrometer Generic Events
 
 Validate CalibrationElectrometer Event Enumeration
 	[Documentation]    Validate the CalibrationElectrometer defines the required enumeration.
-	[Tags]    smoke    CalibrationElectrometer
+	[Tags]    smoke    CalibrationElectrometer    TSS-2997
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    calibrationElectrometer
 	Comment    Get the Event Enumerations.
