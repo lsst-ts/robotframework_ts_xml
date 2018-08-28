@@ -95,7 +95,7 @@ for subsystem in xml_common.subsystems:
 	elif subsystem == "summitFacility":
 		enum_skipped="    TSS-2984"
 	elif subsystem == "calibrationElectrometer":
-		event_skipped="    TSS-2997"
+		enum_skipped="    TSS-2997"
 	else:
 		skipped=""
 		com_skipped=""
