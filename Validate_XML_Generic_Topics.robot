@@ -10,3 +10,5 @@ Resource    Global_Vars.robot
 ${xml}    xml
 
 *** Test Cases ***
+Validate Archiver Generic Commands
+	[Documentation]    Validate the Archiver contains all the required generic, or State Machine, commands.
