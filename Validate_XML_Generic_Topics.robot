@@ -228,7 +228,7 @@ Validate ATCS Generic Commands
 
 Validate ATCS Generic Events
 	[Documentation]    Validate the ATCS contains all the required generic events.
-	[Tags]    smoke    ATCS
+	[Tags]    smoke    ATCS    TSS-2978
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    atcs
 	Comment    Get the Events.
@@ -262,7 +262,7 @@ Validate CalibrationElectrometer Generic Commands
 
 Validate CalibrationElectrometer Generic Events
 	[Documentation]    Validate the CalibrationElectrometer contains all the required generic events.
-	[Tags]    smoke    CalibrationElectrometer
+	[Tags]    smoke    CalibrationElectrometer    TSS-2997
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    calibrationElectrometer
 	Comment    Get the Events.
@@ -330,7 +330,7 @@ Validate Dome Generic Commands
 
 Validate Dome Generic Events
 	[Documentation]    Validate the Dome contains all the required generic events.
-	[Tags]    smoke    Dome
+	[Tags]    smoke    Dome    TSS-1778
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    dome
 	Comment    Get the Events.
@@ -342,7 +342,7 @@ Validate Dome Generic Events
 
 Validate Dome Event Enumeration
 	[Documentation]    Validate the Dome defines the required enumeration.
-	[Tags]    smoke    Dome
+	[Tags]    smoke    Dome    TSS-1778
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    dome
 	Comment    Get the Event Enumerations.
@@ -704,7 +704,7 @@ Validate M1M3 Generic Commands
 
 Validate M1M3 Generic Events
 	[Documentation]    Validate the M1M3 contains all the required generic events.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    TSS-2617
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    m1m3
 	Comment    Get the Events.
@@ -716,7 +716,7 @@ Validate M1M3 Generic Events
 
 Validate M1M3 Event Enumeration
 	[Documentation]    Validate the M1M3 defines the required enumeration.
-	[Tags]    smoke    M1M3
+	[Tags]    smoke    M1M3    TSS-2617
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    m1m3
 	Comment    Get the Event Enumerations.
@@ -806,7 +806,7 @@ Validate OCS Generic Commands
 
 Validate OCS Generic Events
 	[Documentation]    Validate the OCS contains all the required generic events.
-	[Tags]    smoke    OCS
+	[Tags]    smoke    OCS    TSS-1792
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    ocs
 	Comment    Get the Events.
@@ -818,7 +818,7 @@ Validate OCS Generic Events
 
 Validate OCS Event Enumeration
 	[Documentation]    Validate the OCS defines the required enumeration.
-	[Tags]    smoke    OCS
+	[Tags]    smoke    OCS    TSS-1792
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    ocs
 	Comment    Get the Event Enumerations.
@@ -908,7 +908,7 @@ Validate Sequencer Generic Commands
 
 Validate Sequencer Generic Events
 	[Documentation]    Validate the Sequencer contains all the required generic events.
-	[Tags]    smoke    Sequencer
+	[Tags]    smoke    Sequencer    TSS-1793
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    sequencer
 	Comment    Get the Events.
@@ -920,7 +920,7 @@ Validate Sequencer Generic Events
 
 Validate Sequencer Event Enumeration
 	[Documentation]    Validate the Sequencer defines the required enumeration.
-	[Tags]    smoke    Sequencer
+	[Tags]    smoke    Sequencer    TSS-1793
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    sequencer
 	Comment    Get the Event Enumerations.
@@ -1010,7 +1010,7 @@ Validate TCS Generic Commands
 
 Validate TCS Generic Events
 	[Documentation]    Validate the TCS contains all the required generic events.
-	[Tags]    smoke    TCS
+	[Tags]    smoke    TCS    TSS-1795
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    tcs
 	Comment    Get the Events.
@@ -1022,7 +1022,7 @@ Validate TCS Generic Events
 
 Validate TCS Event Enumeration
 	[Documentation]    Validate the TCS defines the required enumeration.
-	[Tags]    smoke    TCS
+	[Tags]    smoke    TCS    TSS-1795
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    tcs
 	Comment    Get the Event Enumerations.
@@ -1112,7 +1112,7 @@ Validate VMS Generic Commands
 
 Validate VMS Generic Events
 	[Documentation]    Validate the VMS contains all the required generic events.
-	[Tags]    smoke    VMS
+	[Tags]    smoke    VMS    TSS-2618
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    vms
 	Comment    Get the Events.
@@ -1124,7 +1124,7 @@ Validate VMS Generic Events
 
 Validate VMS Event Enumeration
 	[Documentation]    Validate the VMS defines the required enumeration.
-	[Tags]    smoke    VMS
+	[Tags]    smoke    VMS    TSS-2618
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    vms
 	Comment    Get the Event Enumerations.
