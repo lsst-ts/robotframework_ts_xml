@@ -479,7 +479,7 @@ Validate EEC Telemetry Topic Names
 
 Validate EFD Events Topic Names
 	[Documentation]    Validate the EFD Events topic names conform to naming convention.
-	[Tags]    smoke    EFD    
+	[Tags]    smoke    EFD    TSS-2985
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/efd/efd_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -488,7 +488,7 @@ Validate EFD Events Topic Names
 
 Validate EFD Telemetry Topic Names
 	[Documentation]    Validate the EFD Telemetry topic names conform to naming convention.
-	[Tags]    smoke    EFD    
+	[Tags]    smoke    EFD    TSS-2985
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/efd/efd_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}

@@ -479,7 +479,7 @@ Validate EEC Telemetry Attribute Names
 
 Validate EFD Events Attribute Names
 	[Documentation]    Validate the EFD Events attribute names conform to naming convention.
-	[Tags]    smoke    EFD    
+	[Tags]    smoke    EFD    TSS-2985
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/efd/efd_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -488,7 +488,7 @@ Validate EFD Events Attribute Names
 
 Validate EFD Telemetry Attribute Names
 	[Documentation]    Validate the EFD Telemetry attribute names conform to naming convention.
-	[Tags]    smoke    EFD    
+	[Tags]    smoke    EFD    TSS-2985
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/efd/efd_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
