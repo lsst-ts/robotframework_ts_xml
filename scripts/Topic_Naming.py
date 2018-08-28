@@ -53,6 +53,8 @@ for subsystem in xml_common.subsystems:
 		skipped="TSS-1778"
 	elif subsystem == "efd":
 		skipped="TSS-2985"
+	elif subsystem == "sedSpectrometer":
+		skipped="TSS-2986"
 	else:
 		skipped=""
 
