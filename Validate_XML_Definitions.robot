@@ -610,6 +610,27 @@ Validate Sequencer Telemetry
 	Log    ${output}
 	Should Contain    ${output}   sequencer_Telemetry.xml - valid
 
+Validate Spectrograph Commands
+	[Documentation]    Validate the Spectrograph Commands XML file.
+	[Tags]    smoke    Spectrograph
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/Spectrograph/Spectrograph_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   Spectrograph_Commands.xml - valid
+
+Validate Spectrograph Events
+	[Documentation]    Validate the Spectrograph Events XML file.
+	[Tags]    smoke    Spectrograph
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/Spectrograph/Spectrograph_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   Spectrograph_Events.xml - valid
+
+Validate Spectrograph Telemetry
+	[Documentation]    Validate the Spectrograph Telemetry XML file.
+	[Tags]    smoke    Spectrograph
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/Spectrograph/Spectrograph_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   Spectrograph_Telemetry.xml - valid
+
 Validate SummitFacility Commands
 	[Documentation]    Validate the SummitFacility Commands XML file.
 	[Tags]    smoke    SummitFacility

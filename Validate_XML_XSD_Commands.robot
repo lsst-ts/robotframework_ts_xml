@@ -176,6 +176,12 @@ Validate Sequencer Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   sequencer_Commands.xml - valid
 
+Validate Spectrograph Commands XML file
+	[Tags]    smoke    Spectrograph
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/Spectrograph/Spectrograph_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   Spectrograph_Commands.xml - valid
+
 Validate SummitFacility Commands XML file
 	[Tags]    smoke    SummitFacility
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/summitFacility/summitFacility_Commands.xml
