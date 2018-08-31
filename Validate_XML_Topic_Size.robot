@@ -15021,8 +15021,8 @@ Validate EEC Telemetry eec_daySetPoint Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate EFD Event efd_logevent_LargeFileObjectAvailable Topic Byte Size
-	[Documentation]    Validate the efd_logevent_LargeFileObjectAvailable topic is less than 65536 bytes in total.
+Validate EFD Event efd_logevent_largeFileObjectAvailable Topic Byte Size
+	[Documentation]    Validate the efd_logevent_largeFileObjectAvailable topic is less than 65536 bytes in total.
 	[Tags]    smoke    EFD
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15044,8 +15044,8 @@ Validate EFD Event efd_logevent_LargeFileObjectAvailable Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate EFD Event efd_logevent_LargeFileObjectAvailable Topic Columns
-	[Documentation]    Validate the efd_logevent_LargeFileObjectAvailable topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate EFD Event efd_logevent_largeFileObjectAvailable Topic Columns
+	[Documentation]    Validate the efd_logevent_largeFileObjectAvailable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    EFD
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
