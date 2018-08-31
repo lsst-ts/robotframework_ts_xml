@@ -729,33 +729,6 @@ Validate Scheduler Telemetry Topic Names
 	: FOR    ${item}    IN    @{topics}
 	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
 
-Validate Sequencer Commands Topic Names
-	[Documentation]    Validate the Sequencer Commands topic names conform to naming convention.
-	[Tags]    smoke    Sequencer    TSS-1793
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/sequencer/sequencer_Commands.xml |sed -e 's/\\n/,/g'
-	Log    ${output}
-	@{topics}=    Split to Lines    ${output}
-	: FOR    ${item}    IN    @{topics}
-	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
-
-Validate Sequencer Events Topic Names
-	[Documentation]    Validate the Sequencer Events topic names conform to naming convention.
-	[Tags]    smoke    Sequencer    TSS-1793
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/sequencer/sequencer_Events.xml |sed -e 's/\\n/,/g'
-	Log    ${output}
-	@{topics}=    Split to Lines    ${output}
-	: FOR    ${item}    IN    @{topics}
-	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
-
-Validate Sequencer Telemetry Topic Names
-	[Documentation]    Validate the Sequencer Telemetry topic names conform to naming convention.
-	[Tags]    smoke    Sequencer    TSS-1793
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/sequencer/sequencer_Telemetry.xml |sed -e 's/\\n/,/g'
-	Log    ${output}
-	@{topics}=    Split to Lines    ${output}
-	: FOR    ${item}    IN    @{topics}
-	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
-
 Validate SEDSpectrometer Commands Topic Names
 	[Documentation]    Validate the SEDSpectrometer Commands topic names conform to naming convention.
 	[Tags]    smoke    SEDSpectrometer    TSS-2986
@@ -778,6 +751,33 @@ Validate SEDSpectrometer Telemetry Topic Names
 	[Documentation]    Validate the SEDSpectrometer Telemetry topic names conform to naming convention.
 	[Tags]    smoke    SEDSpectrometer    TSS-2986
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Telemetry.xml |sed -e 's/\\n/,/g'
+	Log    ${output}
+	@{topics}=    Split to Lines    ${output}
+	: FOR    ${item}    IN    @{topics}
+	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
+
+Validate Sequencer Commands Topic Names
+	[Documentation]    Validate the Sequencer Commands topic names conform to naming convention.
+	[Tags]    smoke    Sequencer    TSS-1793
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/sequencer/sequencer_Commands.xml |sed -e 's/\\n/,/g'
+	Log    ${output}
+	@{topics}=    Split to Lines    ${output}
+	: FOR    ${item}    IN    @{topics}
+	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
+
+Validate Sequencer Events Topic Names
+	[Documentation]    Validate the Sequencer Events topic names conform to naming convention.
+	[Tags]    smoke    Sequencer    TSS-1793
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/sequencer/sequencer_Events.xml |sed -e 's/\\n/,/g'
+	Log    ${output}
+	@{topics}=    Split to Lines    ${output}
+	: FOR    ${item}    IN    @{topics}
+	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
+
+Validate Sequencer Telemetry Topic Names
+	[Documentation]    Validate the Sequencer Telemetry topic names conform to naming convention.
+	[Tags]    smoke    Sequencer    TSS-1793
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/sequencer/sequencer_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
 	: FOR    ${item}    IN    @{topics}

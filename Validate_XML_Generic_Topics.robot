@@ -894,40 +894,6 @@ Validate Scheduler Event Enumeration
 	:FOR    ${item}    IN    @{Enumerations}
 	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
 
-Validate Sequencer Generic Commands
-	[Documentation]    Validate the Sequencer contains all the required generic, or State Machine, commands.
-	[Tags]    smoke    Sequencer    TSS-1793
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    sequencer
-	Comment    Get the Commands for the CSC.
-	${topics}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/sequencer/sequencer_Commands.xml
-	@{Commands}=    Split to Lines    ${topics}
-	:FOR    ${state}    IN    @{GenericCommands}
-	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _command_     ${state}
-	\    Run Keyword And Continue On Failure    Should Contain    ${Commands}    ${string}
-
-Validate Sequencer Generic Events
-	[Documentation]    Validate the Sequencer contains all the required generic events.
-	[Tags]    smoke    Sequencer    TSS-1793
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    sequencer
-	Comment    Get the Events.
-	${topics}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/sequencer/sequencer_Events.xml
-	@{Events}=    Split to Lines    ${topics}
-	:FOR    ${item}    IN    @{GenericEvents}
-	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _logevent_    ${item}
-	\    Run Keyword And Continue On Failure    Should Contain    ${Events}    ${string}
-
-Validate Sequencer Event Enumeration
-	[Documentation]    Validate the Sequencer defines the required enumeration.
-	[Tags]    smoke    Sequencer    TSS-1793
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    sequencer
-	Comment    Get the Event Enumerations.
-	${enums}=    Run    ${xml} sel -t -m "//SALEventSet/Enumeration" -v . -n ${folder}/sal_interfaces/sequencer/sequencer_Events.xml
-	:FOR    ${item}    IN    @{Enumerations}
-	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
-
 Validate SEDSpectrometer Generic Commands
 	[Documentation]    Validate the SEDSpectrometer contains all the required generic, or State Machine, commands.
 	[Tags]    smoke    SEDSpectrometer
@@ -959,6 +925,40 @@ Validate SEDSpectrometer Event Enumeration
 	Set Test Variable    ${csc}    sedSpectrometer
 	Comment    Get the Event Enumerations.
 	${enums}=    Run    ${xml} sel -t -m "//SALEventSet/Enumeration" -v . -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Events.xml
+	:FOR    ${item}    IN    @{Enumerations}
+	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
+
+Validate Sequencer Generic Commands
+	[Documentation]    Validate the Sequencer contains all the required generic, or State Machine, commands.
+	[Tags]    smoke    Sequencer    TSS-1793
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    sequencer
+	Comment    Get the Commands for the CSC.
+	${topics}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/sequencer/sequencer_Commands.xml
+	@{Commands}=    Split to Lines    ${topics}
+	:FOR    ${state}    IN    @{GenericCommands}
+	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _command_     ${state}
+	\    Run Keyword And Continue On Failure    Should Contain    ${Commands}    ${string}
+
+Validate Sequencer Generic Events
+	[Documentation]    Validate the Sequencer contains all the required generic events.
+	[Tags]    smoke    Sequencer    TSS-1793
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    sequencer
+	Comment    Get the Events.
+	${topics}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/sequencer/sequencer_Events.xml
+	@{Events}=    Split to Lines    ${topics}
+	:FOR    ${item}    IN    @{GenericEvents}
+	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _logevent_    ${item}
+	\    Run Keyword And Continue On Failure    Should Contain    ${Events}    ${string}
+
+Validate Sequencer Event Enumeration
+	[Documentation]    Validate the Sequencer defines the required enumeration.
+	[Tags]    smoke    Sequencer    TSS-1793
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    sequencer
+	Comment    Get the Event Enumerations.
+	${enums}=    Run    ${xml} sel -t -m "//SALEventSet/Enumeration" -v . -n ${folder}/sal_interfaces/sequencer/sequencer_Events.xml
 	:FOR    ${item}    IN    @{Enumerations}
 	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
 

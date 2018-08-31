@@ -568,27 +568,6 @@ Validate Scheduler Telemetry
 	Log    ${output}
 	Should Contain    ${output}   scheduler_Telemetry.xml - valid
 
-Validate Sequencer Commands
-	[Documentation]    Validate the Sequencer Commands XML file.
-	[Tags]    smoke    Sequencer
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/sequencer/sequencer_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   sequencer_Commands.xml - valid
-
-Validate Sequencer Events
-	[Documentation]    Validate the Sequencer Events XML file.
-	[Tags]    smoke    Sequencer
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/sequencer/sequencer_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   sequencer_Events.xml - valid
-
-Validate Sequencer Telemetry
-	[Documentation]    Validate the Sequencer Telemetry XML file.
-	[Tags]    smoke    Sequencer
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/sequencer/sequencer_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   sequencer_Telemetry.xml - valid
-
 Validate SEDSpectrometer Commands
 	[Documentation]    Validate the SEDSpectrometer Commands XML file.
 	[Tags]    smoke    SEDSpectrometer
@@ -609,6 +588,27 @@ Validate SEDSpectrometer Telemetry
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   sedSpectrometer_Telemetry.xml - valid
+
+Validate Sequencer Commands
+	[Documentation]    Validate the Sequencer Commands XML file.
+	[Tags]    smoke    Sequencer
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/sequencer/sequencer_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   sequencer_Commands.xml - valid
+
+Validate Sequencer Events
+	[Documentation]    Validate the Sequencer Events XML file.
+	[Tags]    smoke    Sequencer
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/sequencer/sequencer_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   sequencer_Events.xml - valid
+
+Validate Sequencer Telemetry
+	[Documentation]    Validate the Sequencer Telemetry XML file.
+	[Tags]    smoke    Sequencer
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/sequencer/sequencer_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   sequencer_Telemetry.xml - valid
 
 Validate SummitFacility Commands
 	[Documentation]    Validate the SummitFacility Commands XML file.
