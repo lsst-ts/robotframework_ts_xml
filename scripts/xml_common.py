@@ -13,7 +13,7 @@ subsystems = ['archiver', 'atArchiver', 'atHeaderService', 'atMonochromator', 'a
 				'atcamera', 'atcs', 'calibrationElectrometer', 'camera', 'catchupArchiver', 
 				'dome', 'domeADB', 'domeAPS', 'domeLouvers', 'domeLWS', 'domeMONCS', 'domeTHCS', 'eec', 'efd', 
 				'headerService', 'hexapod', 'LinearStage', 'm1m3', 'm2ms', 'MTMount', 'ocs', 'PromptProcessing', 'rotator', 
-				'scheduler', 'sequencer', 'sedSpectrometer', 'summitFacility', 'tcs', 'tcsOfc', 'tcsWEP', 'vms']
+				'scheduler', 'sedSpectrometer', 'sequencer', 'Spectrograph', 'summitFacility', 'tcs', 'tcsOfc', 'tcsWEP', 'vms']
 
 
 # =========
