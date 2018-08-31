@@ -648,6 +648,30 @@ Validate Scheduler Telemetry XML Counts
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
+Validate SEDSpectrometer Commands XML Counts
+	[Documentation]    Validate the SEDSpectrometer Commands XML count.
+	[Tags]    smoke    SEDSpectrometer
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
+Validate SEDSpectrometer Events XML Counts
+	[Documentation]    Validate the SEDSpectrometer Events XML count.
+	[Tags]    smoke    SEDSpectrometer
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
+Validate SEDSpectrometer Telemetry XML Counts
+	[Documentation]    Validate the SEDSpectrometer Telemetry XML count.
+	[Tags]    smoke    SEDSpectrometer
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
 Validate Sequencer Commands XML Counts
 	[Documentation]    Validate the Sequencer Commands XML count.
 	[Tags]    smoke    Sequencer
@@ -672,26 +696,26 @@ Validate Sequencer Telemetry XML Counts
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate SEDSpectrometer Commands XML Counts
-	[Documentation]    Validate the SEDSpectrometer Commands XML count.
-	[Tags]    smoke    SEDSpectrometer
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+Validate Spectrograph Commands XML Counts
+	[Documentation]    Validate the Spectrograph Commands XML count.
+	[Tags]    smoke    Spectrograph
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/Spectrograph/Spectrograph_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate SEDSpectrometer Events XML Counts
-	[Documentation]    Validate the SEDSpectrometer Events XML count.
-	[Tags]    smoke    SEDSpectrometer
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+Validate Spectrograph Events XML Counts
+	[Documentation]    Validate the Spectrograph Events XML count.
+	[Tags]    smoke    Spectrograph
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/Spectrograph/Spectrograph_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate SEDSpectrometer Telemetry XML Counts
-	[Documentation]    Validate the SEDSpectrometer Telemetry XML count.
-	[Tags]    smoke    SEDSpectrometer
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+Validate Spectrograph Telemetry XML Counts
+	[Documentation]    Validate the Spectrograph Telemetry XML count.
+	[Tags]    smoke    Spectrograph
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/Spectrograph/Spectrograph_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,

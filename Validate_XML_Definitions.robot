@@ -568,6 +568,27 @@ Validate Scheduler Telemetry
 	Log    ${output}
 	Should Contain    ${output}   scheduler_Telemetry.xml - valid
 
+Validate SEDSpectrometer Commands
+	[Documentation]    Validate the SEDSpectrometer Commands XML file.
+	[Tags]    smoke    SEDSpectrometer
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   sedSpectrometer_Commands.xml - valid
+
+Validate SEDSpectrometer Events
+	[Documentation]    Validate the SEDSpectrometer Events XML file.
+	[Tags]    smoke    SEDSpectrometer
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   sedSpectrometer_Events.xml - valid
+
+Validate SEDSpectrometer Telemetry
+	[Documentation]    Validate the SEDSpectrometer Telemetry XML file.
+	[Tags]    smoke    SEDSpectrometer
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   sedSpectrometer_Telemetry.xml - valid
+
 Validate Sequencer Commands
 	[Documentation]    Validate the Sequencer Commands XML file.
 	[Tags]    smoke    Sequencer
@@ -589,26 +610,26 @@ Validate Sequencer Telemetry
 	Log    ${output}
 	Should Contain    ${output}   sequencer_Telemetry.xml - valid
 
-Validate SEDSpectrometer Commands
-	[Documentation]    Validate the SEDSpectrometer Commands XML file.
-	[Tags]    smoke    SEDSpectrometer
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Commands.xml
+Validate Spectrograph Commands
+	[Documentation]    Validate the Spectrograph Commands XML file.
+	[Tags]    smoke    Spectrograph
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/Spectrograph/Spectrograph_Commands.xml
 	Log    ${output}
-	Should Contain    ${output}   sedSpectrometer_Commands.xml - valid
+	Should Contain    ${output}   Spectrograph_Commands.xml - valid
 
-Validate SEDSpectrometer Events
-	[Documentation]    Validate the SEDSpectrometer Events XML file.
-	[Tags]    smoke    SEDSpectrometer
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Events.xml
+Validate Spectrograph Events
+	[Documentation]    Validate the Spectrograph Events XML file.
+	[Tags]    smoke    Spectrograph
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/Spectrograph/Spectrograph_Events.xml
 	Log    ${output}
-	Should Contain    ${output}   sedSpectrometer_Events.xml - valid
+	Should Contain    ${output}   Spectrograph_Events.xml - valid
 
-Validate SEDSpectrometer Telemetry
-	[Documentation]    Validate the SEDSpectrometer Telemetry XML file.
-	[Tags]    smoke    SEDSpectrometer
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Telemetry.xml
+Validate Spectrograph Telemetry
+	[Documentation]    Validate the Spectrograph Telemetry XML file.
+	[Tags]    smoke    Spectrograph
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/Spectrograph/Spectrograph_Telemetry.xml
 	Log    ${output}
-	Should Contain    ${output}   sedSpectrometer_Telemetry.xml - valid
+	Should Contain    ${output}   Spectrograph_Telemetry.xml - valid
 
 Validate SummitFacility Commands
 	[Documentation]    Validate the SummitFacility Commands XML file.

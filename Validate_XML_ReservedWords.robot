@@ -1289,6 +1289,54 @@ Validate Scheduler Telemetry EFDB_Name Values Do Not Use MySQL Reserved Words
 	Log    ${output}
 	Should Not Contain MySQL Reserved Word    ${output}
 
+Validate SEDSpectrometer Commands EFDB_Name Values Do Not Use IDL Reserved words
+	[Documentation]    Validate the SEDSpectrometer Commands <EFDB_Name> tags do not contain IDL Reserved Words.
+	[Tags]    smoke    SEDSpectrometer
+	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Commands.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain IDL Reserved Word    ${output}
+
+Validate SEDSpectrometer Commands EFDB_Name Values Do Not Use MySQL Reserved Words
+	[Documentation]    Validate the SEDSpectrometer Commands <EFDB_Name> tags do not contain MySQL Reserved Words.
+	[Tags]    smoke    SEDSpectrometer
+	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Commands.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain MySQL Reserved Word    ${output}
+
+Validate SEDSpectrometer Events EFDB_Name Values Do Not Use IDL Reserved words
+	[Documentation]    Validate the SEDSpectrometer Events <EFDB_Name> tags do not contain IDL Reserved Words.
+	[Tags]    smoke    SEDSpectrometer
+	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Events.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain IDL Reserved Word    ${output}
+
+Validate SEDSpectrometer Events EFDB_Name Values Do Not Use MySQL Reserved Words
+	[Documentation]    Validate the SEDSpectrometer Events <EFDB_Name> tags do not contain MySQL Reserved Words.
+	[Tags]    smoke    SEDSpectrometer
+	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Events.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain MySQL Reserved Word    ${output}
+
+Validate SEDSpectrometer Telemetry EFDB_Name Values Do Not Use IDL Reserved words
+	[Documentation]    Validate the SEDSpectrometer Telemetry <EFDB_Name> tags do not contain IDL Reserved Words.
+	[Tags]    smoke    SEDSpectrometer
+	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Telemetry.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain IDL Reserved Word    ${output}
+
+Validate SEDSpectrometer Telemetry EFDB_Name Values Do Not Use MySQL Reserved Words
+	[Documentation]    Validate the SEDSpectrometer Telemetry <EFDB_Name> tags do not contain MySQL Reserved Words.
+	[Tags]    smoke    SEDSpectrometer
+	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Telemetry.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain MySQL Reserved Word    ${output}
+
 Validate Sequencer Commands EFDB_Name Values Do Not Use IDL Reserved words
 	[Documentation]    Validate the Sequencer Commands <EFDB_Name> tags do not contain IDL Reserved Words.
 	[Tags]    smoke    Sequencer
@@ -1337,51 +1385,51 @@ Validate Sequencer Telemetry EFDB_Name Values Do Not Use MySQL Reserved Words
 	Log    ${output}
 	Should Not Contain MySQL Reserved Word    ${output}
 
-Validate SEDSpectrometer Commands EFDB_Name Values Do Not Use IDL Reserved words
-	[Documentation]    Validate the SEDSpectrometer Commands <EFDB_Name> tags do not contain IDL Reserved Words.
-	[Tags]    smoke    SEDSpectrometer
+Validate Spectrograph Commands EFDB_Name Values Do Not Use IDL Reserved words
+	[Documentation]    Validate the Spectrograph Commands <EFDB_Name> tags do not contain IDL Reserved Words.
+	[Tags]    smoke    Spectrograph
 	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Commands.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/Spectrograph/Spectrograph_Commands.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain IDL Reserved Word    ${output}
 
-Validate SEDSpectrometer Commands EFDB_Name Values Do Not Use MySQL Reserved Words
-	[Documentation]    Validate the SEDSpectrometer Commands <EFDB_Name> tags do not contain MySQL Reserved Words.
-	[Tags]    smoke    SEDSpectrometer
+Validate Spectrograph Commands EFDB_Name Values Do Not Use MySQL Reserved Words
+	[Documentation]    Validate the Spectrograph Commands <EFDB_Name> tags do not contain MySQL Reserved Words.
+	[Tags]    smoke    Spectrograph
 	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Commands.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/Spectrograph/Spectrograph_Commands.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain MySQL Reserved Word    ${output}
 
-Validate SEDSpectrometer Events EFDB_Name Values Do Not Use IDL Reserved words
-	[Documentation]    Validate the SEDSpectrometer Events <EFDB_Name> tags do not contain IDL Reserved Words.
-	[Tags]    smoke    SEDSpectrometer
+Validate Spectrograph Events EFDB_Name Values Do Not Use IDL Reserved words
+	[Documentation]    Validate the Spectrograph Events <EFDB_Name> tags do not contain IDL Reserved Words.
+	[Tags]    smoke    Spectrograph
 	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Events.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/Spectrograph/Spectrograph_Events.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain IDL Reserved Word    ${output}
 
-Validate SEDSpectrometer Events EFDB_Name Values Do Not Use MySQL Reserved Words
-	[Documentation]    Validate the SEDSpectrometer Events <EFDB_Name> tags do not contain MySQL Reserved Words.
-	[Tags]    smoke    SEDSpectrometer
+Validate Spectrograph Events EFDB_Name Values Do Not Use MySQL Reserved Words
+	[Documentation]    Validate the Spectrograph Events <EFDB_Name> tags do not contain MySQL Reserved Words.
+	[Tags]    smoke    Spectrograph
 	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Events.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/Spectrograph/Spectrograph_Events.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain MySQL Reserved Word    ${output}
 
-Validate SEDSpectrometer Telemetry EFDB_Name Values Do Not Use IDL Reserved words
-	[Documentation]    Validate the SEDSpectrometer Telemetry <EFDB_Name> tags do not contain IDL Reserved Words.
-	[Tags]    smoke    SEDSpectrometer
+Validate Spectrograph Telemetry EFDB_Name Values Do Not Use IDL Reserved words
+	[Documentation]    Validate the Spectrograph Telemetry <EFDB_Name> tags do not contain IDL Reserved Words.
+	[Tags]    smoke    Spectrograph
 	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Telemetry.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/Spectrograph/Spectrograph_Telemetry.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain IDL Reserved Word    ${output}
 
-Validate SEDSpectrometer Telemetry EFDB_Name Values Do Not Use MySQL Reserved Words
-	[Documentation]    Validate the SEDSpectrometer Telemetry <EFDB_Name> tags do not contain MySQL Reserved Words.
-	[Tags]    smoke    SEDSpectrometer
+Validate Spectrograph Telemetry EFDB_Name Values Do Not Use MySQL Reserved Words
+	[Documentation]    Validate the Spectrograph Telemetry <EFDB_Name> tags do not contain MySQL Reserved Words.
+	[Tags]    smoke    Spectrograph
 	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Telemetry.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/Spectrograph/Spectrograph_Telemetry.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain MySQL Reserved Word    ${output}
 

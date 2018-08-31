@@ -729,6 +729,33 @@ Validate Scheduler Telemetry Attribute Names
 	: FOR    ${item}    IN    @{attributes}
 	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
 
+Validate SEDSpectrometer Commands Attribute Names
+	[Documentation]    Validate the SEDSpectrometer Commands attribute names conform to naming convention.
+	[Tags]    smoke    SEDSpectrometer    
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Commands.xml |sed -e 's/\\n/,/g'
+	Log    ${output}
+	@{attributes}=    Split to Lines    ${output}
+	: FOR    ${item}    IN    @{attributes}
+	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
+
+Validate SEDSpectrometer Events Attribute Names
+	[Documentation]    Validate the SEDSpectrometer Events attribute names conform to naming convention.
+	[Tags]    smoke    SEDSpectrometer    
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Events.xml |sed -e 's/\\n/,/g'
+	Log    ${output}
+	@{attributes}=    Split to Lines    ${output}
+	: FOR    ${item}    IN    @{attributes}
+	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
+
+Validate SEDSpectrometer Telemetry Attribute Names
+	[Documentation]    Validate the SEDSpectrometer Telemetry attribute names conform to naming convention.
+	[Tags]    smoke    SEDSpectrometer    
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Telemetry.xml |sed -e 's/\\n/,/g'
+	Log    ${output}
+	@{attributes}=    Split to Lines    ${output}
+	: FOR    ${item}    IN    @{attributes}
+	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
+
 Validate Sequencer Commands Attribute Names
 	[Documentation]    Validate the Sequencer Commands attribute names conform to naming convention.
 	[Tags]    smoke    Sequencer    TSS-1793
@@ -756,28 +783,28 @@ Validate Sequencer Telemetry Attribute Names
 	: FOR    ${item}    IN    @{attributes}
 	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
 
-Validate SEDSpectrometer Commands Attribute Names
-	[Documentation]    Validate the SEDSpectrometer Commands attribute names conform to naming convention.
-	[Tags]    smoke    SEDSpectrometer    
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Commands.xml |sed -e 's/\\n/,/g'
+Validate Spectrograph Commands Attribute Names
+	[Documentation]    Validate the Spectrograph Commands attribute names conform to naming convention.
+	[Tags]    smoke    Spectrograph    
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/Spectrograph/Spectrograph_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
 	: FOR    ${item}    IN    @{attributes}
 	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
 
-Validate SEDSpectrometer Events Attribute Names
-	[Documentation]    Validate the SEDSpectrometer Events attribute names conform to naming convention.
-	[Tags]    smoke    SEDSpectrometer    
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Events.xml |sed -e 's/\\n/,/g'
+Validate Spectrograph Events Attribute Names
+	[Documentation]    Validate the Spectrograph Events attribute names conform to naming convention.
+	[Tags]    smoke    Spectrograph    
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/Spectrograph/Spectrograph_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
 	: FOR    ${item}    IN    @{attributes}
 	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
 
-Validate SEDSpectrometer Telemetry Attribute Names
-	[Documentation]    Validate the SEDSpectrometer Telemetry attribute names conform to naming convention.
-	[Tags]    smoke    SEDSpectrometer    
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Telemetry.xml |sed -e 's/\\n/,/g'
+Validate Spectrograph Telemetry Attribute Names
+	[Documentation]    Validate the Spectrograph Telemetry attribute names conform to naming convention.
+	[Tags]    smoke    Spectrograph    
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/Spectrograph/Spectrograph_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
 	: FOR    ${item}    IN    @{attributes}
