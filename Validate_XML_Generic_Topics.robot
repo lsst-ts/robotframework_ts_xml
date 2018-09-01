@@ -988,7 +988,7 @@ Validate Spectrograph Generic Events
 
 Validate Spectrograph Event Enumeration
 	[Documentation]    Validate the Spectrograph defines the required enumeration.
-	[Tags]    smoke    Spectrograph
+	[Tags]    smoke    Spectrograph    TSS-3009
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    Spectrograph
 	Comment    Get the Event Enumerations.
