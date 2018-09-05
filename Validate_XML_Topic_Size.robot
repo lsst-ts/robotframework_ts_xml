@@ -3033,8 +3033,8 @@ Validate AtScheduler Telemetry atScheduler_Heartbeat Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtWhiteLight Command atWhiteLight_command_disable Topic Byte Size
-	[Documentation]    Validate the atWhiteLight_command_disable topic is less than 65536 bytes in total.
+Validate AtWhiteLight Command AtWhiteLight_command_disable Topic Byte Size
+	[Documentation]    Validate the AtWhiteLight_command_disable topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtWhiteLight
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3056,8 +3056,8 @@ Validate AtWhiteLight Command atWhiteLight_command_disable Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtWhiteLight Command atWhiteLight_command_disable Topic Columns
-	[Documentation]    Validate the atWhiteLight_command_disable topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtWhiteLight Command AtWhiteLight_command_disable Topic Columns
+	[Documentation]    Validate the AtWhiteLight_command_disable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtWhiteLight
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3069,8 +3069,8 @@ Validate AtWhiteLight Command atWhiteLight_command_disable Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtWhiteLight Command atWhiteLight_command_enable Topic Byte Size
-	[Documentation]    Validate the atWhiteLight_command_enable topic is less than 65536 bytes in total.
+Validate AtWhiteLight Command AtWhiteLight_command_enable Topic Byte Size
+	[Documentation]    Validate the AtWhiteLight_command_enable topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtWhiteLight
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3092,8 +3092,8 @@ Validate AtWhiteLight Command atWhiteLight_command_enable Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtWhiteLight Command atWhiteLight_command_enable Topic Columns
-	[Documentation]    Validate the atWhiteLight_command_enable topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtWhiteLight Command AtWhiteLight_command_enable Topic Columns
+	[Documentation]    Validate the AtWhiteLight_command_enable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtWhiteLight
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3105,8 +3105,8 @@ Validate AtWhiteLight Command atWhiteLight_command_enable Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtWhiteLight Command atWhiteLight_command_exitControl Topic Byte Size
-	[Documentation]    Validate the atWhiteLight_command_exitControl topic is less than 65536 bytes in total.
+Validate AtWhiteLight Command AtWhiteLight_command_exitControl Topic Byte Size
+	[Documentation]    Validate the AtWhiteLight_command_exitControl topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtWhiteLight
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3128,8 +3128,8 @@ Validate AtWhiteLight Command atWhiteLight_command_exitControl Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtWhiteLight Command atWhiteLight_command_exitControl Topic Columns
-	[Documentation]    Validate the atWhiteLight_command_exitControl topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtWhiteLight Command AtWhiteLight_command_exitControl Topic Columns
+	[Documentation]    Validate the AtWhiteLight_command_exitControl topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtWhiteLight
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3141,8 +3141,8 @@ Validate AtWhiteLight Command atWhiteLight_command_exitControl Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtWhiteLight Command atWhiteLight_command_standby Topic Byte Size
-	[Documentation]    Validate the atWhiteLight_command_standby topic is less than 65536 bytes in total.
+Validate AtWhiteLight Command AtWhiteLight_command_standby Topic Byte Size
+	[Documentation]    Validate the AtWhiteLight_command_standby topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtWhiteLight
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3164,8 +3164,8 @@ Validate AtWhiteLight Command atWhiteLight_command_standby Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtWhiteLight Command atWhiteLight_command_standby Topic Columns
-	[Documentation]    Validate the atWhiteLight_command_standby topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtWhiteLight Command AtWhiteLight_command_standby Topic Columns
+	[Documentation]    Validate the AtWhiteLight_command_standby topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtWhiteLight
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3177,8 +3177,8 @@ Validate AtWhiteLight Command atWhiteLight_command_standby Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtWhiteLight Command atWhiteLight_command_start Topic Byte Size
-	[Documentation]    Validate the atWhiteLight_command_start topic is less than 65536 bytes in total.
+Validate AtWhiteLight Command AtWhiteLight_command_start Topic Byte Size
+	[Documentation]    Validate the AtWhiteLight_command_start topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtWhiteLight
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3200,8 +3200,8 @@ Validate AtWhiteLight Command atWhiteLight_command_start Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtWhiteLight Command atWhiteLight_command_start Topic Columns
-	[Documentation]    Validate the atWhiteLight_command_start topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtWhiteLight Command AtWhiteLight_command_start Topic Columns
+	[Documentation]    Validate the AtWhiteLight_command_start topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtWhiteLight
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3213,8 +3213,8 @@ Validate AtWhiteLight Command atWhiteLight_command_start Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtWhiteLight Command atWhiteLight_command_enterControl Topic Byte Size
-	[Documentation]    Validate the atWhiteLight_command_enterControl topic is less than 65536 bytes in total.
+Validate AtWhiteLight Command AtWhiteLight_command_powerLightOn Topic Byte Size
+	[Documentation]    Validate the AtWhiteLight_command_powerLightOn topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtWhiteLight
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3236,8 +3236,8 @@ Validate AtWhiteLight Command atWhiteLight_command_enterControl Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtWhiteLight Command atWhiteLight_command_enterControl Topic Columns
-	[Documentation]    Validate the atWhiteLight_command_enterControl topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtWhiteLight Command AtWhiteLight_command_powerLightOn Topic Columns
+	[Documentation]    Validate the AtWhiteLight_command_powerLightOn topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtWhiteLight
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3249,8 +3249,80 @@ Validate AtWhiteLight Command atWhiteLight_command_enterControl Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtWhiteLight Event atWhiteLight_logevent_appliedSettingsMatchStart Topic Byte Size
-	[Documentation]    Validate the atWhiteLight_logevent_appliedSettingsMatchStart topic is less than 65536 bytes in total.
+Validate AtWhiteLight Command AtWhiteLight_command_powerLightOff Topic Byte Size
+	[Documentation]    Validate the AtWhiteLight_command_powerLightOff topic is less than 65536 bytes in total.
+	[Tags]    smoke    AtWhiteLight
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[7]/item)" -n ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[7]/item/Count" -v . -n ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[7]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtWhiteLight Command AtWhiteLight_command_powerLightOff Topic Columns
+	[Documentation]    Validate the AtWhiteLight_command_powerLightOff topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    AtWhiteLight
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[7]/item)" -n ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[7]/item/Count" -v . -n ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtWhiteLight Command AtWhiteLight_command_setLightPower Topic Byte Size
+	[Documentation]    Validate the AtWhiteLight_command_setLightPower topic is less than 65536 bytes in total.
+	[Tags]    smoke    AtWhiteLight
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[8]/item)" -n ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[8]/item/Count" -v . -n ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[8]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtWhiteLight Command AtWhiteLight_command_setLightPower Topic Columns
+	[Documentation]    Validate the AtWhiteLight_command_setLightPower topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    AtWhiteLight
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[8]/item)" -n ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[8]/item/Count" -v . -n ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtWhiteLight Event AtWhiteLight_logevent_appliedSettingsMatchStart Topic Byte Size
+	[Documentation]    Validate the AtWhiteLight_logevent_appliedSettingsMatchStart topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtWhiteLight
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3272,8 +3344,8 @@ Validate AtWhiteLight Event atWhiteLight_logevent_appliedSettingsMatchStart Topi
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtWhiteLight Event atWhiteLight_logevent_appliedSettingsMatchStart Topic Columns
-	[Documentation]    Validate the atWhiteLight_logevent_appliedSettingsMatchStart topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtWhiteLight Event AtWhiteLight_logevent_appliedSettingsMatchStart Topic Columns
+	[Documentation]    Validate the AtWhiteLight_logevent_appliedSettingsMatchStart topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtWhiteLight
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3285,8 +3357,8 @@ Validate AtWhiteLight Event atWhiteLight_logevent_appliedSettingsMatchStart Topi
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtWhiteLight Event atWhiteLight_logevent_errorCode Topic Byte Size
-	[Documentation]    Validate the atWhiteLight_logevent_errorCode topic is less than 65536 bytes in total.
+Validate AtWhiteLight Event AtWhiteLight_logevent_errorCode Topic Byte Size
+	[Documentation]    Validate the AtWhiteLight_logevent_errorCode topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtWhiteLight
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3308,8 +3380,8 @@ Validate AtWhiteLight Event atWhiteLight_logevent_errorCode Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtWhiteLight Event atWhiteLight_logevent_errorCode Topic Columns
-	[Documentation]    Validate the atWhiteLight_logevent_errorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtWhiteLight Event AtWhiteLight_logevent_errorCode Topic Columns
+	[Documentation]    Validate the AtWhiteLight_logevent_errorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtWhiteLight
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3321,8 +3393,8 @@ Validate AtWhiteLight Event atWhiteLight_logevent_errorCode Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtWhiteLight Event atWhiteLight_logevent_settingVersions Topic Byte Size
-	[Documentation]    Validate the atWhiteLight_logevent_settingVersions topic is less than 65536 bytes in total.
+Validate AtWhiteLight Event AtWhiteLight_logevent_settingVersions Topic Byte Size
+	[Documentation]    Validate the AtWhiteLight_logevent_settingVersions topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtWhiteLight
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3344,8 +3416,8 @@ Validate AtWhiteLight Event atWhiteLight_logevent_settingVersions Topic Byte Siz
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtWhiteLight Event atWhiteLight_logevent_settingVersions Topic Columns
-	[Documentation]    Validate the atWhiteLight_logevent_settingVersions topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtWhiteLight Event AtWhiteLight_logevent_settingVersions Topic Columns
+	[Documentation]    Validate the AtWhiteLight_logevent_settingVersions topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtWhiteLight
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3357,8 +3429,8 @@ Validate AtWhiteLight Event atWhiteLight_logevent_settingVersions Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtWhiteLight Event atWhiteLight_logevent_summaryState Topic Byte Size
-	[Documentation]    Validate the atWhiteLight_logevent_summaryState topic is less than 65536 bytes in total.
+Validate AtWhiteLight Event AtWhiteLight_logevent_summaryState Topic Byte Size
+	[Documentation]    Validate the AtWhiteLight_logevent_summaryState topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtWhiteLight
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3380,8 +3452,8 @@ Validate AtWhiteLight Event atWhiteLight_logevent_summaryState Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtWhiteLight Event atWhiteLight_logevent_summaryState Topic Columns
-	[Documentation]    Validate the atWhiteLight_logevent_summaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtWhiteLight Event AtWhiteLight_logevent_summaryState Topic Columns
+	[Documentation]    Validate the AtWhiteLight_logevent_summaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtWhiteLight
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3393,8 +3465,8 @@ Validate AtWhiteLight Event atWhiteLight_logevent_summaryState Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtWhiteLight Event atWhiteLight_logevent_detailedState Topic Byte Size
-	[Documentation]    Validate the atWhiteLight_logevent_detailedState topic is less than 65536 bytes in total.
+Validate AtWhiteLight Event AtWhiteLight_logevent_detailedState Topic Byte Size
+	[Documentation]    Validate the AtWhiteLight_logevent_detailedState topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtWhiteLight
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3416,8 +3488,8 @@ Validate AtWhiteLight Event atWhiteLight_logevent_detailedState Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtWhiteLight Event atWhiteLight_logevent_detailedState Topic Columns
-	[Documentation]    Validate the atWhiteLight_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtWhiteLight Event AtWhiteLight_logevent_detailedState Topic Columns
+	[Documentation]    Validate the AtWhiteLight_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtWhiteLight
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3429,8 +3501,8 @@ Validate AtWhiteLight Event atWhiteLight_logevent_detailedState Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtWhiteLight Event atWhiteLight_logevent_internalCommand Topic Byte Size
-	[Documentation]    Validate the atWhiteLight_logevent_internalCommand topic is less than 65536 bytes in total.
+Validate AtWhiteLight Event AtWhiteLight_logevent_internalCommand Topic Byte Size
+	[Documentation]    Validate the AtWhiteLight_logevent_internalCommand topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtWhiteLight
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3452,8 +3524,8 @@ Validate AtWhiteLight Event atWhiteLight_logevent_internalCommand Topic Byte Siz
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtWhiteLight Event atWhiteLight_logevent_internalCommand Topic Columns
-	[Documentation]    Validate the atWhiteLight_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtWhiteLight Event AtWhiteLight_logevent_internalCommand Topic Columns
+	[Documentation]    Validate the AtWhiteLight_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtWhiteLight
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3465,8 +3537,8 @@ Validate AtWhiteLight Event atWhiteLight_logevent_internalCommand Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtWhiteLight Event atWhiteLight_logevent_heartbeat Topic Byte Size
-	[Documentation]    Validate the atWhiteLight_logevent_heartbeat topic is less than 65536 bytes in total.
+Validate AtWhiteLight Event AtWhiteLight_logevent_heartbeat Topic Byte Size
+	[Documentation]    Validate the AtWhiteLight_logevent_heartbeat topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtWhiteLight
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3488,8 +3560,8 @@ Validate AtWhiteLight Event atWhiteLight_logevent_heartbeat Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtWhiteLight Event atWhiteLight_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the atWhiteLight_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtWhiteLight Event AtWhiteLight_logevent_heartbeat Topic Columns
+	[Documentation]    Validate the AtWhiteLight_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtWhiteLight
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3501,8 +3573,8 @@ Validate AtWhiteLight Event atWhiteLight_logevent_heartbeat Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtWhiteLight Event atWhiteLight_logevent_loopTimeOutOfRange Topic Byte Size
-	[Documentation]    Validate the atWhiteLight_logevent_loopTimeOutOfRange topic is less than 65536 bytes in total.
+Validate AtWhiteLight Event AtWhiteLight_logevent_loopTimeOutOfRange Topic Byte Size
+	[Documentation]    Validate the AtWhiteLight_logevent_loopTimeOutOfRange topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtWhiteLight
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3524,8 +3596,8 @@ Validate AtWhiteLight Event atWhiteLight_logevent_loopTimeOutOfRange Topic Byte 
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtWhiteLight Event atWhiteLight_logevent_loopTimeOutOfRange Topic Columns
-	[Documentation]    Validate the atWhiteLight_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtWhiteLight Event AtWhiteLight_logevent_loopTimeOutOfRange Topic Columns
+	[Documentation]    Validate the AtWhiteLight_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtWhiteLight
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3537,8 +3609,8 @@ Validate AtWhiteLight Event atWhiteLight_logevent_loopTimeOutOfRange Topic Colum
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtWhiteLight Event atWhiteLight_logevent_rejectedCommand Topic Byte Size
-	[Documentation]    Validate the atWhiteLight_logevent_rejectedCommand topic is less than 65536 bytes in total.
+Validate AtWhiteLight Event AtWhiteLight_logevent_rejectedCommand Topic Byte Size
+	[Documentation]    Validate the AtWhiteLight_logevent_rejectedCommand topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtWhiteLight
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3560,8 +3632,8 @@ Validate AtWhiteLight Event atWhiteLight_logevent_rejectedCommand Topic Byte Siz
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtWhiteLight Event atWhiteLight_logevent_rejectedCommand Topic Columns
-	[Documentation]    Validate the atWhiteLight_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtWhiteLight Event AtWhiteLight_logevent_rejectedCommand Topic Columns
+	[Documentation]    Validate the AtWhiteLight_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtWhiteLight
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3573,8 +3645,44 @@ Validate AtWhiteLight Event atWhiteLight_logevent_rejectedCommand Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtWhiteLight Telemetry atWhiteLight_timestamp Topic Byte Size
-	[Documentation]    Validate the atWhiteLight_timestamp topic is less than 65536 bytes in total.
+Validate AtWhiteLight Event AtWhiteLight_logevent_whiteLightStatus Topic Byte Size
+	[Documentation]    Validate the AtWhiteLight_logevent_whiteLightStatus topic is less than 65536 bytes in total.
+	[Tags]    smoke    AtWhiteLight
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/Count" -v . -n ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate AtWhiteLight Event AtWhiteLight_logevent_whiteLightStatus Topic Columns
+	[Documentation]    Validate the AtWhiteLight_logevent_whiteLightStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    AtWhiteLight
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/Count" -v . -n ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate AtWhiteLight Telemetry AtWhiteLight_timestamp Topic Byte Size
+	[Documentation]    Validate the AtWhiteLight_timestamp topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtWhiteLight
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3596,8 +3704,8 @@ Validate AtWhiteLight Telemetry atWhiteLight_timestamp Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtWhiteLight Telemetry atWhiteLight_timestamp Topic Columns
-	[Documentation]    Validate the atWhiteLight_timestamp topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtWhiteLight Telemetry AtWhiteLight_timestamp Topic Columns
+	[Documentation]    Validate the AtWhiteLight_timestamp topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtWhiteLight
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3609,8 +3717,8 @@ Validate AtWhiteLight Telemetry atWhiteLight_timestamp Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtWhiteLight Telemetry atWhiteLight_loopTimeMs Topic Byte Size
-	[Documentation]    Validate the atWhiteLight_loopTimeMs topic is less than 65536 bytes in total.
+Validate AtWhiteLight Telemetry AtWhiteLight_loopTime Topic Byte Size
+	[Documentation]    Validate the AtWhiteLight_loopTime topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtWhiteLight
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3632,8 +3740,8 @@ Validate AtWhiteLight Telemetry atWhiteLight_loopTimeMs Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtWhiteLight Telemetry atWhiteLight_loopTimeMs Topic Columns
-	[Documentation]    Validate the atWhiteLight_loopTimeMs topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtWhiteLight Telemetry AtWhiteLight_loopTime Topic Columns
+	[Documentation]    Validate the AtWhiteLight_loopTime topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtWhiteLight
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
