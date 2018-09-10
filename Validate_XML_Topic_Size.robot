@@ -1305,9 +1305,9 @@ Validate AtArchiver Telemetry atArchiver_sequencerHeartbeat Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Atdome Command AtDome_command_disable Topic Byte Size
+Validate AtDome Command AtDome_command_disable Topic Byte Size
 	[Documentation]    Validate the AtDome_command_disable topic is less than 65536 bytes in total.
-	[Tags]    smoke    Atdome
+	[Tags]    smoke    AtDome
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/AtDome/AtDome_Commands.xml
@@ -1328,9 +1328,9 @@ Validate Atdome Command AtDome_command_disable Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Atdome Command AtDome_command_disable Topic Columns
+Validate AtDome Command AtDome_command_disable Topic Columns
 	[Documentation]    Validate the AtDome_command_disable topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Atdome
+	[Tags]    smoke    AtDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/AtDome/AtDome_Commands.xml
@@ -1341,9 +1341,9 @@ Validate Atdome Command AtDome_command_disable Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Atdome Command AtDome_command_enable Topic Byte Size
+Validate AtDome Command AtDome_command_enable Topic Byte Size
 	[Documentation]    Validate the AtDome_command_enable topic is less than 65536 bytes in total.
-	[Tags]    smoke    Atdome
+	[Tags]    smoke    AtDome
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/AtDome/AtDome_Commands.xml
@@ -1364,9 +1364,9 @@ Validate Atdome Command AtDome_command_enable Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Atdome Command AtDome_command_enable Topic Columns
+Validate AtDome Command AtDome_command_enable Topic Columns
 	[Documentation]    Validate the AtDome_command_enable topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Atdome
+	[Tags]    smoke    AtDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/AtDome/AtDome_Commands.xml
@@ -1377,9 +1377,9 @@ Validate Atdome Command AtDome_command_enable Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Atdome Command AtDome_command_exitControl Topic Byte Size
+Validate AtDome Command AtDome_command_exitControl Topic Byte Size
 	[Documentation]    Validate the AtDome_command_exitControl topic is less than 65536 bytes in total.
-	[Tags]    smoke    Atdome
+	[Tags]    smoke    AtDome
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/AtDome/AtDome_Commands.xml
@@ -1400,9 +1400,9 @@ Validate Atdome Command AtDome_command_exitControl Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Atdome Command AtDome_command_exitControl Topic Columns
+Validate AtDome Command AtDome_command_exitControl Topic Columns
 	[Documentation]    Validate the AtDome_command_exitControl topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Atdome
+	[Tags]    smoke    AtDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/AtDome/AtDome_Commands.xml
@@ -1413,9 +1413,9 @@ Validate Atdome Command AtDome_command_exitControl Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Atdome Command AtDome_command_standby Topic Byte Size
+Validate AtDome Command AtDome_command_standby Topic Byte Size
 	[Documentation]    Validate the AtDome_command_standby topic is less than 65536 bytes in total.
-	[Tags]    smoke    Atdome
+	[Tags]    smoke    AtDome
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/AtDome/AtDome_Commands.xml
@@ -1436,9 +1436,9 @@ Validate Atdome Command AtDome_command_standby Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Atdome Command AtDome_command_standby Topic Columns
+Validate AtDome Command AtDome_command_standby Topic Columns
 	[Documentation]    Validate the AtDome_command_standby topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Atdome
+	[Tags]    smoke    AtDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/AtDome/AtDome_Commands.xml
@@ -1449,9 +1449,9 @@ Validate Atdome Command AtDome_command_standby Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Atdome Command AtDome_command_start Topic Byte Size
+Validate AtDome Command AtDome_command_start Topic Byte Size
 	[Documentation]    Validate the AtDome_command_start topic is less than 65536 bytes in total.
-	[Tags]    smoke    Atdome
+	[Tags]    smoke    AtDome
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/AtDome/AtDome_Commands.xml
@@ -1472,9 +1472,9 @@ Validate Atdome Command AtDome_command_start Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Atdome Command AtDome_command_start Topic Columns
+Validate AtDome Command AtDome_command_start Topic Columns
 	[Documentation]    Validate the AtDome_command_start topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Atdome
+	[Tags]    smoke    AtDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/AtDome/AtDome_Commands.xml
@@ -1485,9 +1485,9 @@ Validate Atdome Command AtDome_command_start Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Atdome Command AtDome_command_moveAzimuth Topic Byte Size
+Validate AtDome Command AtDome_command_moveAzimuth Topic Byte Size
 	[Documentation]    Validate the AtDome_command_moveAzimuth topic is less than 65536 bytes in total.
-	[Tags]    smoke    Atdome
+	[Tags]    smoke    AtDome
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/AtDome/AtDome_Commands.xml
@@ -1508,9 +1508,9 @@ Validate Atdome Command AtDome_command_moveAzimuth Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Atdome Command AtDome_command_moveAzimuth Topic Columns
+Validate AtDome Command AtDome_command_moveAzimuth Topic Columns
 	[Documentation]    Validate the AtDome_command_moveAzimuth topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Atdome
+	[Tags]    smoke    AtDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/AtDome/AtDome_Commands.xml
@@ -1521,9 +1521,9 @@ Validate Atdome Command AtDome_command_moveAzimuth Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Atdome Command AtDome_command_moveShutterDropoutDoor Topic Byte Size
+Validate AtDome Command AtDome_command_moveShutterDropoutDoor Topic Byte Size
 	[Documentation]    Validate the AtDome_command_moveShutterDropoutDoor topic is less than 65536 bytes in total.
-	[Tags]    smoke    Atdome
+	[Tags]    smoke    AtDome
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[7]/item)" -n ${folder}/sal_interfaces/AtDome/AtDome_Commands.xml
@@ -1544,9 +1544,9 @@ Validate Atdome Command AtDome_command_moveShutterDropoutDoor Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Atdome Command AtDome_command_moveShutterDropoutDoor Topic Columns
+Validate AtDome Command AtDome_command_moveShutterDropoutDoor Topic Columns
 	[Documentation]    Validate the AtDome_command_moveShutterDropoutDoor topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Atdome
+	[Tags]    smoke    AtDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[7]/item)" -n ${folder}/sal_interfaces/AtDome/AtDome_Commands.xml
@@ -1557,9 +1557,9 @@ Validate Atdome Command AtDome_command_moveShutterDropoutDoor Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Atdome Command AtDome_command_closeShutter Topic Byte Size
+Validate AtDome Command AtDome_command_closeShutter Topic Byte Size
 	[Documentation]    Validate the AtDome_command_closeShutter topic is less than 65536 bytes in total.
-	[Tags]    smoke    Atdome
+	[Tags]    smoke    AtDome
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[8]/item)" -n ${folder}/sal_interfaces/AtDome/AtDome_Commands.xml
@@ -1580,9 +1580,9 @@ Validate Atdome Command AtDome_command_closeShutter Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Atdome Command AtDome_command_closeShutter Topic Columns
+Validate AtDome Command AtDome_command_closeShutter Topic Columns
 	[Documentation]    Validate the AtDome_command_closeShutter topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Atdome
+	[Tags]    smoke    AtDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[8]/item)" -n ${folder}/sal_interfaces/AtDome/AtDome_Commands.xml
@@ -1593,9 +1593,9 @@ Validate Atdome Command AtDome_command_closeShutter Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Atdome Command AtDome_command_stopMotionAllAxis Topic Byte Size
+Validate AtDome Command AtDome_command_stopMotionAllAxis Topic Byte Size
 	[Documentation]    Validate the AtDome_command_stopMotionAllAxis topic is less than 65536 bytes in total.
-	[Tags]    smoke    Atdome
+	[Tags]    smoke    AtDome
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[9]/item)" -n ${folder}/sal_interfaces/AtDome/AtDome_Commands.xml
@@ -1616,9 +1616,9 @@ Validate Atdome Command AtDome_command_stopMotionAllAxis Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Atdome Command AtDome_command_stopMotionAllAxis Topic Columns
+Validate AtDome Command AtDome_command_stopMotionAllAxis Topic Columns
 	[Documentation]    Validate the AtDome_command_stopMotionAllAxis topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Atdome
+	[Tags]    smoke    AtDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[9]/item)" -n ${folder}/sal_interfaces/AtDome/AtDome_Commands.xml
@@ -1629,9 +1629,9 @@ Validate Atdome Command AtDome_command_stopMotionAllAxis Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Atdome Command AtDome_command_stopShutter Topic Byte Size
+Validate AtDome Command AtDome_command_stopShutter Topic Byte Size
 	[Documentation]    Validate the AtDome_command_stopShutter topic is less than 65536 bytes in total.
-	[Tags]    smoke    Atdome
+	[Tags]    smoke    AtDome
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[10]/item)" -n ${folder}/sal_interfaces/AtDome/AtDome_Commands.xml
@@ -1652,9 +1652,9 @@ Validate Atdome Command AtDome_command_stopShutter Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Atdome Command AtDome_command_stopShutter Topic Columns
+Validate AtDome Command AtDome_command_stopShutter Topic Columns
 	[Documentation]    Validate the AtDome_command_stopShutter topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Atdome
+	[Tags]    smoke    AtDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[10]/item)" -n ${folder}/sal_interfaces/AtDome/AtDome_Commands.xml
@@ -1665,9 +1665,9 @@ Validate Atdome Command AtDome_command_stopShutter Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Atdome Command AtDome_command_openShutter Topic Byte Size
+Validate AtDome Command AtDome_command_openShutter Topic Byte Size
 	[Documentation]    Validate the AtDome_command_openShutter topic is less than 65536 bytes in total.
-	[Tags]    smoke    Atdome
+	[Tags]    smoke    AtDome
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[11]/item)" -n ${folder}/sal_interfaces/AtDome/AtDome_Commands.xml
@@ -1688,9 +1688,9 @@ Validate Atdome Command AtDome_command_openShutter Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Atdome Command AtDome_command_openShutter Topic Columns
+Validate AtDome Command AtDome_command_openShutter Topic Columns
 	[Documentation]    Validate the AtDome_command_openShutter topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Atdome
+	[Tags]    smoke    AtDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[11]/item)" -n ${folder}/sal_interfaces/AtDome/AtDome_Commands.xml
@@ -1701,9 +1701,9 @@ Validate Atdome Command AtDome_command_openShutter Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Atdome Command AtDome_command_moveShutterMainDoor Topic Byte Size
+Validate AtDome Command AtDome_command_moveShutterMainDoor Topic Byte Size
 	[Documentation]    Validate the AtDome_command_moveShutterMainDoor topic is less than 65536 bytes in total.
-	[Tags]    smoke    Atdome
+	[Tags]    smoke    AtDome
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[12]/item)" -n ${folder}/sal_interfaces/AtDome/AtDome_Commands.xml
@@ -1724,9 +1724,9 @@ Validate Atdome Command AtDome_command_moveShutterMainDoor Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Atdome Command AtDome_command_moveShutterMainDoor Topic Columns
+Validate AtDome Command AtDome_command_moveShutterMainDoor Topic Columns
 	[Documentation]    Validate the AtDome_command_moveShutterMainDoor topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Atdome
+	[Tags]    smoke    AtDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[12]/item)" -n ${folder}/sal_interfaces/AtDome/AtDome_Commands.xml
@@ -1737,9 +1737,9 @@ Validate Atdome Command AtDome_command_moveShutterMainDoor Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Atdome Command AtDome_command_stopAzimuth Topic Byte Size
+Validate AtDome Command AtDome_command_stopAzimuth Topic Byte Size
 	[Documentation]    Validate the AtDome_command_stopAzimuth topic is less than 65536 bytes in total.
-	[Tags]    smoke    Atdome
+	[Tags]    smoke    AtDome
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[13]/item)" -n ${folder}/sal_interfaces/AtDome/AtDome_Commands.xml
@@ -1760,9 +1760,9 @@ Validate Atdome Command AtDome_command_stopAzimuth Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Atdome Command AtDome_command_stopAzimuth Topic Columns
+Validate AtDome Command AtDome_command_stopAzimuth Topic Columns
 	[Documentation]    Validate the AtDome_command_stopAzimuth topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Atdome
+	[Tags]    smoke    AtDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[13]/item)" -n ${folder}/sal_interfaces/AtDome/AtDome_Commands.xml

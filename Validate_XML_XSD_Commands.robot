@@ -20,8 +20,8 @@ Validate AtArchiver Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   atArchiver_Commands.xml - valid
 
-Validate Atdome Commands XML file
-	[Tags]    smoke    Atdome
+Validate AtDome Commands XML file
+	[Tags]    smoke    AtDome
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/AtDome/AtDome_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   AtDome_Commands.xml - valid
@@ -32,8 +32,8 @@ Validate AtHeaderService Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   atHeaderService_Commands.xml - valid
 
-Validate Atmcs Commands XML file
-	[Tags]    smoke    Atmcs
+Validate AtMCS Commands XML file
+	[Tags]    smoke    AtMCS
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/AtMCS/AtMCS_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   AtMCS_Commands.xml - valid
@@ -44,8 +44,8 @@ Validate AtMonochromator Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   atMonochromator_Commands.xml - valid
 
-Validate Atpneumatics Commands XML file
-	[Tags]    smoke    Atpneumatics
+Validate AtPneumatics Commands XML file
+	[Tags]    smoke    AtPneumatics
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/AtPneumatics/AtPneumatics_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   AtPneumatics_Commands.xml - valid
@@ -56,8 +56,8 @@ Validate AtWhiteLight Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   AtWhiteLight_Commands.xml - valid
 
-Validate Atwhitelightchiller Commands XML file
-	[Tags]    smoke    Atwhitelightchiller
+Validate AtWhiteLightChiller Commands XML file
+	[Tags]    smoke    AtWhiteLightChiller
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/AtWhiteLightChiller/AtWhiteLightChiller_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   AtWhiteLightChiller_Commands.xml - valid

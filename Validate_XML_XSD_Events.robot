@@ -20,8 +20,8 @@ Validate AtArchiver Events XML file
 	Log    ${output}
 	Should Contain    ${output}   atArchiver_Events.xml - valid
 
-Validate Atdome Events XML file
-	[Tags]    smoke    Atdome
+Validate AtDome Events XML file
+	[Tags]    smoke    AtDome
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/AtDome/AtDome_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   AtDome_Events.xml - valid
@@ -32,8 +32,8 @@ Validate AtHeaderService Events XML file
 	Log    ${output}
 	Should Contain    ${output}   atHeaderService_Events.xml - valid
 
-Validate Atmcs Events XML file
-	[Tags]    smoke    Atmcs
+Validate AtMCS Events XML file
+	[Tags]    smoke    AtMCS
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/AtMCS/AtMCS_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   AtMCS_Events.xml - valid
@@ -44,8 +44,8 @@ Validate AtMonochromator Events XML file
 	Log    ${output}
 	Should Contain    ${output}   atMonochromator_Events.xml - valid
 
-Validate Atpneumatics Events XML file
-	[Tags]    smoke    Atpneumatics
+Validate AtPneumatics Events XML file
+	[Tags]    smoke    AtPneumatics
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/AtPneumatics/AtPneumatics_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   AtPneumatics_Events.xml - valid
@@ -62,8 +62,8 @@ Validate AtWhiteLight Events XML file
 	Log    ${output}
 	Should Contain    ${output}   AtWhiteLight_Events.xml - valid
 
-Validate Atwhitelightchiller Events XML file
-	[Tags]    smoke    Atwhitelightchiller
+Validate AtWhiteLightChiller Events XML file
+	[Tags]    smoke    AtWhiteLightChiller
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/AtWhiteLightChiller/AtWhiteLightChiller_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   AtWhiteLightChiller_Events.xml - valid
