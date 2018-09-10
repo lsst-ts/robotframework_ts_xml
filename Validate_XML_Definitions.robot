@@ -50,6 +50,27 @@ Validate AtArchiver Telemetry
 	Log    ${output}
 	Should Contain    ${output}   atArchiver_Telemetry.xml - valid
 
+Validate Atdome Commands
+	[Documentation]    Validate the Atdome Commands XML file.
+	[Tags]    smoke    Atdome
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/AtDome/AtDome_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   AtDome_Commands.xml - valid
+
+Validate Atdome Events
+	[Documentation]    Validate the Atdome Events XML file.
+	[Tags]    smoke    Atdome
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/AtDome/AtDome_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   AtDome_Events.xml - valid
+
+Validate Atdome Telemetry
+	[Documentation]    Validate the Atdome Telemetry XML file.
+	[Tags]    smoke    Atdome
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/AtDome/AtDome_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   AtDome_Telemetry.xml - valid
+
 Validate AtHeaderService Commands
 	[Documentation]    Validate the AtHeaderService Commands XML file.
 	[Tags]    smoke    AtHeaderService
@@ -63,6 +84,27 @@ Validate AtHeaderService Events
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/atHeaderService/atHeaderService_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   atHeaderService_Events.xml - valid
+
+Validate Atmcs Commands
+	[Documentation]    Validate the Atmcs Commands XML file.
+	[Tags]    smoke    Atmcs
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/AtMCS/AtMCS_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   AtMCS_Commands.xml - valid
+
+Validate Atmcs Events
+	[Documentation]    Validate the Atmcs Events XML file.
+	[Tags]    smoke    Atmcs
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/AtMCS/AtMCS_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   AtMCS_Events.xml - valid
+
+Validate Atmcs Telemetry
+	[Documentation]    Validate the Atmcs Telemetry XML file.
+	[Tags]    smoke    Atmcs
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/AtMCS/AtMCS_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   AtMCS_Telemetry.xml - valid
 
 Validate AtMonochromator Commands
 	[Documentation]    Validate the AtMonochromator Commands XML file.
@@ -85,6 +127,27 @@ Validate AtMonochromator Telemetry
 	Log    ${output}
 	Should Contain    ${output}   atMonochromator_Telemetry.xml - valid
 
+Validate Atpneumatics Commands
+	[Documentation]    Validate the Atpneumatics Commands XML file.
+	[Tags]    smoke    Atpneumatics
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/AtPneumatics/AtPneumatics_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   AtPneumatics_Commands.xml - valid
+
+Validate Atpneumatics Events
+	[Documentation]    Validate the Atpneumatics Events XML file.
+	[Tags]    smoke    Atpneumatics
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/AtPneumatics/AtPneumatics_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   AtPneumatics_Events.xml - valid
+
+Validate Atpneumatics Telemetry
+	[Documentation]    Validate the Atpneumatics Telemetry XML file.
+	[Tags]    smoke    Atpneumatics
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/AtPneumatics/AtPneumatics_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   AtPneumatics_Telemetry.xml - valid
+
 Validate AtScheduler Events
 	[Documentation]    Validate the AtScheduler Events XML file.
 	[Tags]    smoke    AtScheduler
@@ -102,23 +165,44 @@ Validate AtScheduler Telemetry
 Validate AtWhiteLight Commands
 	[Documentation]    Validate the AtWhiteLight Commands XML file.
 	[Tags]    smoke    AtWhiteLight
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Commands.xml
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/AtWhiteLight/AtWhiteLight_Commands.xml
 	Log    ${output}
-	Should Contain    ${output}   atWhiteLight_Commands.xml - valid
+	Should Contain    ${output}   AtWhiteLight_Commands.xml - valid
 
 Validate AtWhiteLight Events
 	[Documentation]    Validate the AtWhiteLight Events XML file.
 	[Tags]    smoke    AtWhiteLight
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Events.xml
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/AtWhiteLight/AtWhiteLight_Events.xml
 	Log    ${output}
-	Should Contain    ${output}   atWhiteLight_Events.xml - valid
+	Should Contain    ${output}   AtWhiteLight_Events.xml - valid
 
 Validate AtWhiteLight Telemetry
 	[Documentation]    Validate the AtWhiteLight Telemetry XML file.
 	[Tags]    smoke    AtWhiteLight
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Telemetry.xml
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/AtWhiteLight/AtWhiteLight_Telemetry.xml
 	Log    ${output}
-	Should Contain    ${output}   atWhiteLight_Telemetry.xml - valid
+	Should Contain    ${output}   AtWhiteLight_Telemetry.xml - valid
+
+Validate Atwhitelightchiller Commands
+	[Documentation]    Validate the Atwhitelightchiller Commands XML file.
+	[Tags]    smoke    Atwhitelightchiller
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/AtWhiteLightChiller/AtWhiteLightChiller_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   AtWhiteLightChiller_Commands.xml - valid
+
+Validate Atwhitelightchiller Events
+	[Documentation]    Validate the Atwhitelightchiller Events XML file.
+	[Tags]    smoke    Atwhitelightchiller
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/AtWhiteLightChiller/AtWhiteLightChiller_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   AtWhiteLightChiller_Events.xml - valid
+
+Validate Atwhitelightchiller Telemetry
+	[Documentation]    Validate the Atwhitelightchiller Telemetry XML file.
+	[Tags]    smoke    Atwhitelightchiller
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/AtWhiteLightChiller/AtWhiteLightChiller_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   AtWhiteLightChiller_Telemetry.xml - valid
 
 Validate AtCamera Commands
 	[Documentation]    Validate the AtCamera Commands XML file.

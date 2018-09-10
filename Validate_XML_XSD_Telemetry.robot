@@ -20,11 +20,29 @@ Validate AtArchiver Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   atArchiver_Telemetry.xml - valid
 
+Validate Atdome Telemetry XML file
+	[Tags]    smoke    Atdome
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/AtDome/AtDome_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   AtDome_Telemetry.xml - valid
+
+Validate Atmcs Telemetry XML file
+	[Tags]    smoke    Atmcs
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/AtMCS/AtMCS_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   AtMCS_Telemetry.xml - valid
+
 Validate AtMonochromator Telemetry XML file
 	[Tags]    smoke    AtMonochromator
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/atMonochromator/atMonochromator_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   atMonochromator_Telemetry.xml - valid
+
+Validate Atpneumatics Telemetry XML file
+	[Tags]    smoke    Atpneumatics
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/AtPneumatics/AtPneumatics_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   AtPneumatics_Telemetry.xml - valid
 
 Validate AtScheduler Telemetry XML file
 	[Tags]    smoke    AtScheduler
@@ -34,9 +52,15 @@ Validate AtScheduler Telemetry XML file
 
 Validate AtWhiteLight Telemetry XML file
 	[Tags]    smoke    AtWhiteLight
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Telemetry.xml
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/AtWhiteLight/AtWhiteLight_Telemetry.xml
 	Log    ${output}
-	Should Contain    ${output}   atWhiteLight_Telemetry.xml - valid
+	Should Contain    ${output}   AtWhiteLight_Telemetry.xml - valid
+
+Validate Atwhitelightchiller Telemetry XML file
+	[Tags]    smoke    Atwhitelightchiller
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/AtWhiteLightChiller/AtWhiteLightChiller_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   AtWhiteLightChiller_Telemetry.xml - valid
 
 Validate AtCamera Telemetry XML file
 	[Tags]    smoke    AtCamera

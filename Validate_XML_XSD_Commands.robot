@@ -20,11 +20,23 @@ Validate AtArchiver Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   atArchiver_Commands.xml - valid
 
+Validate Atdome Commands XML file
+	[Tags]    smoke    Atdome
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/AtDome/AtDome_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   AtDome_Commands.xml - valid
+
 Validate AtHeaderService Commands XML file
 	[Tags]    smoke    AtHeaderService
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/atHeaderService/atHeaderService_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   atHeaderService_Commands.xml - valid
+
+Validate Atmcs Commands XML file
+	[Tags]    smoke    Atmcs
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/AtMCS/AtMCS_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   AtMCS_Commands.xml - valid
 
 Validate AtMonochromator Commands XML file
 	[Tags]    smoke    AtMonochromator
@@ -32,11 +44,23 @@ Validate AtMonochromator Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   atMonochromator_Commands.xml - valid
 
+Validate Atpneumatics Commands XML file
+	[Tags]    smoke    Atpneumatics
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/AtPneumatics/AtPneumatics_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   AtPneumatics_Commands.xml - valid
+
 Validate AtWhiteLight Commands XML file
 	[Tags]    smoke    AtWhiteLight
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/atWhiteLight/atWhiteLight_Commands.xml
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/AtWhiteLight/AtWhiteLight_Commands.xml
 	Log    ${output}
-	Should Contain    ${output}   atWhiteLight_Commands.xml - valid
+	Should Contain    ${output}   AtWhiteLight_Commands.xml - valid
+
+Validate Atwhitelightchiller Commands XML file
+	[Tags]    smoke    Atwhitelightchiller
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/AtWhiteLightChiller/AtWhiteLightChiller_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   AtWhiteLightChiller_Commands.xml - valid
 
 Validate AtCamera Commands XML file
 	[Tags]    smoke    AtCamera
