@@ -28,16 +28,24 @@ def CapitalizeSubsystem( subsystem ):
 		return "AtArchiver"
 	elif subsystem == "atcamera":
 		return "AtCamera"
+	elif subsystem == "AtDome":
+		return "AtDome"
 	elif subsystem == "atcs":
 		return "ATCS"
+	elif subsystem == "AtMCS":
+		return "AtMCS"
 	elif subsystem == "atHeaderService":
 		return "AtHeaderService"
 	elif subsystem == "atMonochromator":
 		return "AtMonochromator"
+	elif subsystem == "AtPneumatics":
+		return "AtPneumatics"
 	elif subsystem == "atScheduler":
 		return "AtScheduler"
 	elif subsystem == "AtWhiteLight":
 		return "AtWhiteLight"
+	elif subsystem == "AtWhiteLightChiller":
+		return "AtWhiteLightChiller"
 	elif subsystem == "calibrationElectrometer":
 		return "CalibrationElectrometer"
 	elif subsystem == "catchuparchiver":
