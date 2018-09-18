@@ -891,33 +891,6 @@ Validate Sequencer Telemetry Topic Names
 	: FOR    ${item}    IN    @{topics}
 	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
 
-Validate Spectrograph Commands Topic Names
-	[Documentation]    Validate the Spectrograph Commands topic names conform to naming convention.
-	[Tags]    smoke    Spectrograph    
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/Spectrograph/Spectrograph_Commands.xml |sed -e 's/\\n/,/g'
-	Log    ${output}
-	@{topics}=    Split to Lines    ${output}
-	: FOR    ${item}    IN    @{topics}
-	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
-
-Validate Spectrograph Events Topic Names
-	[Documentation]    Validate the Spectrograph Events topic names conform to naming convention.
-	[Tags]    smoke    Spectrograph    
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/Spectrograph/Spectrograph_Events.xml |sed -e 's/\\n/,/g'
-	Log    ${output}
-	@{topics}=    Split to Lines    ${output}
-	: FOR    ${item}    IN    @{topics}
-	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
-
-Validate Spectrograph Telemetry Topic Names
-	[Documentation]    Validate the Spectrograph Telemetry topic names conform to naming convention.
-	[Tags]    smoke    Spectrograph    
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/Spectrograph/Spectrograph_Telemetry.xml |sed -e 's/\\n/,/g'
-	Log    ${output}
-	@{topics}=    Split to Lines    ${output}
-	: FOR    ${item}    IN    @{topics}
-	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
-
 Validate SummitFacility Commands Topic Names
 	[Documentation]    Validate the SummitFacility Commands topic names conform to naming convention.
 	[Tags]    smoke    SummitFacility    
