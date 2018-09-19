@@ -96,8 +96,20 @@ for subsystem in xml_common.subsystems:
 		enum_skipped="    TSS-2984"
 	elif subsystem == "calibrationElectrometer":
 		enum_skipped="    TSS-2997"
-	elif subsystem == "Spectrograph":
+	elif subsystem == "AtDome":
+		enum_skipped="    TSS-3060"
+	elif subsystem == "AtDome":
+		enum_skipped="    TSS-3060"
+	elif subsystem == "AtMCS":
+		enum_skipped="    TSS-3061"
+	elif subsystem == "AtPneumatics":
+		enum_skipped="    TSS-3062"
+	elif subsystem == "AtSpectrograph":
 		enum_skipped="    TSS-3009"
+	elif subsystem == "AtWhiteLight":
+		enum_skipped="    TSS-3063"
+	elif subsystem == "AtWhiteLightChiller":
+		enum_skipped="    TSS-3064"
 	else:
 		skipped=""
 		com_skipped=""

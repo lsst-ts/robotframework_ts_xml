@@ -13,7 +13,7 @@ subsystems = ['archiver', 'atArchiver', 'AtDome', 'atHeaderService', 'AtMCS', 'a
 				'AtWhiteLightChiller', 'atcamera', 'atcs', 'calibrationElectrometer', 'camera', 'catchupArchiver', 
 				'dome', 'domeADB', 'domeAPS', 'domeLouvers', 'domeLWS', 'domeMONCS', 'domeTHCS', 'eec', 'efd', 
 				'headerService', 'hexapod', 'LinearStage', 'm1m3', 'm2ms', 'MTMount', 'ocs', 'PromptProcessing', 'rotator', 
-				'scheduler', 'sedSpectrometer', 'sequencer', 'Spectrograph', 'summitFacility', 'tcs', 'tcsOfc', 'tcsWEP', 'vms']
+				'scheduler', 'sedSpectrometer', 'sequencer', 'AtSpectrograph', 'summitFacility', 'tcs', 'tcsOfc', 'tcsWEP', 'vms']
 
 
 # =========
@@ -42,6 +42,8 @@ def CapitalizeSubsystem( subsystem ):
 		return "AtPneumatics"
 	elif subsystem == "atScheduler":
 		return "AtScheduler"
+	elif subsystem == "AtSpectrograph":
+		return "AtSpectrograph"
 	elif subsystem == "AtWhiteLight":
 		return "AtWhiteLight"
 	elif subsystem == "AtWhiteLightChiller":
