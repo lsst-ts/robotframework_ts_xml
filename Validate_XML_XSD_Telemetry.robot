@@ -200,6 +200,12 @@ Validate Sequencer Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   sequencer_Telemetry.xml - valid
 
+Validate AtSpectrograph Telemetry XML file
+	[Tags]    smoke    AtSpectrograph
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/AtSpectrograph/AtSpectrograph_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   AtSpectrograph_Telemetry.xml - valid
+
 Validate SummitFacility Telemetry XML file
 	[Tags]    smoke    SummitFacility
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/summitFacility/summitFacility_Telemetry.xml

@@ -694,6 +694,27 @@ Validate Sequencer Telemetry
 	Log    ${output}
 	Should Contain    ${output}   sequencer_Telemetry.xml - valid
 
+Validate AtSpectrograph Commands
+	[Documentation]    Validate the AtSpectrograph Commands XML file.
+	[Tags]    smoke    AtSpectrograph
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/AtSpectrograph/AtSpectrograph_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   AtSpectrograph_Commands.xml - valid
+
+Validate AtSpectrograph Events
+	[Documentation]    Validate the AtSpectrograph Events XML file.
+	[Tags]    smoke    AtSpectrograph
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/AtSpectrograph/AtSpectrograph_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   AtSpectrograph_Events.xml - valid
+
+Validate AtSpectrograph Telemetry
+	[Documentation]    Validate the AtSpectrograph Telemetry XML file.
+	[Tags]    smoke    AtSpectrograph
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/AtSpectrograph/AtSpectrograph_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   AtSpectrograph_Telemetry.xml - valid
+
 Validate SummitFacility Commands
 	[Documentation]    Validate the SummitFacility Commands XML file.
 	[Tags]    smoke    SummitFacility

@@ -2752,6 +2752,90 @@ Validate Sequencer Telemetry <EFDB_Name> element
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
+Validate AtSpectrograph Commands <Subsystem> element
+	[Documentation]    Validate the AtSpectrograph Commands <Subsystem> elements do not contain embedded spaces.
+	[Tags]    smoke    AtSpectrograph
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Subsystem" -v . -n ${folder}/sal_interfaces/AtSpectrograph/AtSpectrograph_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate AtSpectrograph Commands <EFDB_Topic> element
+	[Documentation]    Validate the AtSpectrograph Commands <EFDB_Topic> elements do not contain embedded spaces.
+	[Tags]    smoke    AtSpectrograph
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/AtSpectrograph/AtSpectrograph_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate AtSpectrograph Commands <Alias> element
+	[Documentation]    Validate the AtSpectrograph Commands <Alias> elements do not contain embedded spaces.
+	[Tags]    smoke    AtSpectrograph
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/AtSpectrograph/AtSpectrograph_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate AtSpectrograph Commands <EFDB_Name> element
+	[Documentation]    Validate the AtSpectrograph Commands <EFDB_Name> elements do not contain embedded spaces.
+	[Tags]    smoke    AtSpectrograph
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/AtSpectrograph/AtSpectrograph_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate AtSpectrograph Events <Subsystem> element
+	[Documentation]    Validate the AtSpectrograph Events <Subsystem> elements do not contain embedded spaces.
+	[Tags]    smoke    AtSpectrograph
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Subsystem" -v . -n ${folder}/sal_interfaces/AtSpectrograph/AtSpectrograph_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate AtSpectrograph Events <EFDB_Topic> element
+	[Documentation]    Validate the AtSpectrograph Events <EFDB_Topic> elements do not contain embedded spaces.
+	[Tags]    smoke    AtSpectrograph
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/AtSpectrograph/AtSpectrograph_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate AtSpectrograph Events <Alias> element
+	[Documentation]    Validate the AtSpectrograph Events <Alias> elements do not contain embedded spaces.
+	[Tags]    smoke    AtSpectrograph
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/AtSpectrograph/AtSpectrograph_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate AtSpectrograph Events <EFDB_Name> element
+	[Documentation]    Validate the AtSpectrograph Events <EFDB_Name> elements do not contain embedded spaces.
+	[Tags]    smoke    AtSpectrograph
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/AtSpectrograph/AtSpectrograph_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate AtSpectrograph Telemetry <Subsystem> element
+	[Documentation]    Validate the AtSpectrograph Telemetry <Subsystem> elements do not contain embedded spaces.
+	[Tags]    smoke    AtSpectrograph
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Subsystem" -v . -n ${folder}/sal_interfaces/AtSpectrograph/AtSpectrograph_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate AtSpectrograph Telemetry <EFDB_Topic> element
+	[Documentation]    Validate the AtSpectrograph Telemetry <EFDB_Topic> elements do not contain embedded spaces.
+	[Tags]    smoke    AtSpectrograph
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/EFDB_Topic" -v . -n ${folder}/sal_interfaces/AtSpectrograph/AtSpectrograph_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate AtSpectrograph Telemetry <Alias> element
+	[Documentation]    Validate the AtSpectrograph Telemetry <Alias> elements do not contain embedded spaces.
+	[Tags]    smoke    AtSpectrograph
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/AtSpectrograph/AtSpectrograph_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate AtSpectrograph Telemetry <EFDB_Name> element
+	[Documentation]    Validate the AtSpectrograph Telemetry <EFDB_Name> elements do not contain embedded spaces.
+	[Tags]    smoke    AtSpectrograph
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/AtSpectrograph/AtSpectrograph_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
 Validate SummitFacility Commands <Subsystem> element
 	[Documentation]    Validate the SummitFacility Commands <Subsystem> elements do not contain embedded spaces.
 	[Tags]    smoke    SummitFacility

@@ -104,7 +104,7 @@ Validate AtDome Generic Events
 
 Validate AtDome Event Enumeration
 	[Documentation]    Validate the AtDome defines the required enumeration.
-	[Tags]    smoke    AtDome
+	[Tags]    smoke    AtDome    TSS-3060
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    AtDome
 	Comment    Get the Event Enumerations.
@@ -172,7 +172,7 @@ Validate AtMCS Generic Events
 
 Validate AtMCS Event Enumeration
 	[Documentation]    Validate the AtMCS defines the required enumeration.
-	[Tags]    smoke    AtMCS
+	[Tags]    smoke    AtMCS    TSS-3061
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    AtMCS
 	Comment    Get the Event Enumerations.
@@ -240,7 +240,7 @@ Validate AtPneumatics Generic Events
 
 Validate AtPneumatics Event Enumeration
 	[Documentation]    Validate the AtPneumatics defines the required enumeration.
-	[Tags]    smoke    AtPneumatics
+	[Tags]    smoke    AtPneumatics    TSS-3062
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    AtPneumatics
 	Comment    Get the Event Enumerations.
@@ -274,7 +274,7 @@ Validate AtWhiteLight Generic Events
 
 Validate AtWhiteLight Event Enumeration
 	[Documentation]    Validate the AtWhiteLight defines the required enumeration.
-	[Tags]    smoke    AtWhiteLight
+	[Tags]    smoke    AtWhiteLight    TSS-3063
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    AtWhiteLight
 	Comment    Get the Event Enumerations.
@@ -308,7 +308,7 @@ Validate AtWhiteLightChiller Generic Events
 
 Validate AtWhiteLightChiller Event Enumeration
 	[Documentation]    Validate the AtWhiteLightChiller defines the required enumeration.
-	[Tags]    smoke    AtWhiteLightChiller
+	[Tags]    smoke    AtWhiteLightChiller    TSS-3064
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    AtWhiteLightChiller
 	Comment    Get the Event Enumerations.
@@ -1095,6 +1095,40 @@ Validate Sequencer Event Enumeration
 	Set Test Variable    ${csc}    sequencer
 	Comment    Get the Event Enumerations.
 	${enums}=    Run    ${xml} sel -t -m "//SALEventSet/Enumeration" -v . -n ${folder}/sal_interfaces/sequencer/sequencer_Events.xml
+	:FOR    ${item}    IN    @{Enumerations}
+	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
+
+Validate AtSpectrograph Generic Commands
+	[Documentation]    Validate the AtSpectrograph contains all the required generic, or State Machine, commands.
+	[Tags]    smoke    AtSpectrograph
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    AtSpectrograph
+	Comment    Get the Commands for the CSC.
+	${topics}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/AtSpectrograph/AtSpectrograph_Commands.xml
+	@{Commands}=    Split to Lines    ${topics}
+	:FOR    ${state}    IN    @{GenericCommands}
+	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _command_     ${state}
+	\    Run Keyword And Continue On Failure    Should Contain    ${Commands}    ${string}
+
+Validate AtSpectrograph Generic Events
+	[Documentation]    Validate the AtSpectrograph contains all the required generic events.
+	[Tags]    smoke    AtSpectrograph
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    AtSpectrograph
+	Comment    Get the Events.
+	${topics}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/AtSpectrograph/AtSpectrograph_Events.xml
+	@{Events}=    Split to Lines    ${topics}
+	:FOR    ${item}    IN    @{GenericEvents}
+	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _logevent_    ${item}
+	\    Run Keyword And Continue On Failure    Should Contain    ${Events}    ${string}
+
+Validate AtSpectrograph Event Enumeration
+	[Documentation]    Validate the AtSpectrograph defines the required enumeration.
+	[Tags]    smoke    AtSpectrograph    TSS-3009
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    AtSpectrograph
+	Comment    Get the Event Enumerations.
+	${enums}=    Run    ${xml} sel -t -m "//SALEventSet/Enumeration" -v . -n ${folder}/sal_interfaces/AtSpectrograph/AtSpectrograph_Events.xml
 	:FOR    ${item}    IN    @{Enumerations}
 	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
 
