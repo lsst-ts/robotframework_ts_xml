@@ -56,30 +56,6 @@ Validate AtArchiver Telemetry XML Counts
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate AtDome Commands XML Counts
-	[Documentation]    Validate the AtDome Commands XML count.
-	[Tags]    smoke    AtDome
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/AtDome/AtDome_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
-Validate AtDome Events XML Counts
-	[Documentation]    Validate the AtDome Events XML count.
-	[Tags]    smoke    AtDome
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/AtDome/AtDome_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
-Validate AtDome Telemetry XML Counts
-	[Documentation]    Validate the AtDome Telemetry XML count.
-	[Tags]    smoke    AtDome
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/AtDome/AtDome_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
 Validate AtHeaderService Commands XML Counts
 	[Documentation]    Validate the AtHeaderService Commands XML count.
 	[Tags]    smoke    AtHeaderService
@@ -92,30 +68,6 @@ Validate AtHeaderService Events XML Counts
 	[Documentation]    Validate the AtHeaderService Events XML count.
 	[Tags]    smoke    AtHeaderService
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
-Validate AtMCS Commands XML Counts
-	[Documentation]    Validate the AtMCS Commands XML count.
-	[Tags]    smoke    AtMCS
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/AtMCS/AtMCS_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
-Validate AtMCS Events XML Counts
-	[Documentation]    Validate the AtMCS Events XML count.
-	[Tags]    smoke    AtMCS
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/AtMCS/AtMCS_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
-Validate AtMCS Telemetry XML Counts
-	[Documentation]    Validate the AtMCS Telemetry XML count.
-	[Tags]    smoke    AtMCS
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/AtMCS/AtMCS_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
@@ -144,30 +96,6 @@ Validate AtMonochromator Telemetry XML Counts
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate AtPneumatics Commands XML Counts
-	[Documentation]    Validate the AtPneumatics Commands XML count.
-	[Tags]    smoke    AtPneumatics
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/AtPneumatics/AtPneumatics_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
-Validate AtPneumatics Events XML Counts
-	[Documentation]    Validate the AtPneumatics Events XML count.
-	[Tags]    smoke    AtPneumatics
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/AtPneumatics/AtPneumatics_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
-Validate AtPneumatics Telemetry XML Counts
-	[Documentation]    Validate the AtPneumatics Telemetry XML count.
-	[Tags]    smoke    AtPneumatics
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/AtPneumatics/AtPneumatics_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
 Validate AtScheduler Events XML Counts
 	[Documentation]    Validate the AtScheduler Events XML count.
 	[Tags]    smoke    AtScheduler
@@ -180,54 +108,6 @@ Validate AtScheduler Telemetry XML Counts
 	[Documentation]    Validate the AtScheduler Telemetry XML count.
 	[Tags]    smoke    AtScheduler
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/atScheduler/atScheduler_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
-Validate AtWhiteLight Commands XML Counts
-	[Documentation]    Validate the AtWhiteLight Commands XML count.
-	[Tags]    smoke    AtWhiteLight
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/AtWhiteLight/AtWhiteLight_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
-Validate AtWhiteLight Events XML Counts
-	[Documentation]    Validate the AtWhiteLight Events XML count.
-	[Tags]    smoke    AtWhiteLight
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/AtWhiteLight/AtWhiteLight_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
-Validate AtWhiteLight Telemetry XML Counts
-	[Documentation]    Validate the AtWhiteLight Telemetry XML count.
-	[Tags]    smoke    AtWhiteLight
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/AtWhiteLight/AtWhiteLight_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
-Validate AtWhiteLightChiller Commands XML Counts
-	[Documentation]    Validate the AtWhiteLightChiller Commands XML count.
-	[Tags]    smoke    AtWhiteLightChiller
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/AtWhiteLightChiller/AtWhiteLightChiller_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
-Validate AtWhiteLightChiller Events XML Counts
-	[Documentation]    Validate the AtWhiteLightChiller Events XML count.
-	[Tags]    smoke    AtWhiteLightChiller
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/AtWhiteLightChiller/AtWhiteLightChiller_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
-Validate AtWhiteLightChiller Telemetry XML Counts
-	[Documentation]    Validate the AtWhiteLightChiller Telemetry XML count.
-	[Tags]    smoke    AtWhiteLightChiller
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/AtWhiteLightChiller/AtWhiteLightChiller_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
@@ -788,30 +668,6 @@ Validate Sequencer Telemetry XML Counts
 	[Documentation]    Validate the Sequencer Telemetry XML count.
 	[Tags]    smoke    Sequencer
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/sequencer/sequencer_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
-Validate AtSpectrograph Commands XML Counts
-	[Documentation]    Validate the AtSpectrograph Commands XML count.
-	[Tags]    smoke    AtSpectrograph
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/AtSpectrograph/AtSpectrograph_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
-Validate AtSpectrograph Events XML Counts
-	[Documentation]    Validate the AtSpectrograph Events XML count.
-	[Tags]    smoke    AtSpectrograph
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/AtSpectrograph/AtSpectrograph_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
-Validate AtSpectrograph Telemetry XML Counts
-	[Documentation]    Validate the AtSpectrograph Telemetry XML count.
-	[Tags]    smoke    AtSpectrograph
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/AtSpectrograph/AtSpectrograph_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
