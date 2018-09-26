@@ -172,7 +172,7 @@ Validate AtMCS Generic Events
 
 Validate AtMCS Event Enumeration
 	[Documentation]    Validate the AtMCS defines the required enumeration.
-	[Tags]    smoke    AtMCS    TSS-3061
+	[Tags]    smoke    AtMCS
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    AtMCS
 	Comment    Get the Event Enumerations.
@@ -1158,7 +1158,7 @@ Validate SummitFacility Generic Events
 
 Validate SummitFacility Event Enumeration
 	[Documentation]    Validate the SummitFacility defines the required enumeration.
-	[Tags]    smoke    SummitFacility    TSS-2984
+	[Tags]    smoke    SummitFacility
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    summitFacility
 	Comment    Get the Event Enumerations.
