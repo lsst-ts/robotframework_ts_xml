@@ -206,12 +206,6 @@ Validate AtSpectrograph Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   AtSpectrograph_Commands.xml - valid
 
-Validate SummitFacility Commands XML file
-	[Tags]    smoke    SummitFacility
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/summitFacility/summitFacility_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   summitFacility_Commands.xml - valid
-
 Validate TCS Commands XML file
 	[Tags]    smoke    TCS
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/tcs/tcs_Commands.xml

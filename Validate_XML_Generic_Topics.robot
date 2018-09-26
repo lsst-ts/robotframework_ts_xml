@@ -172,7 +172,7 @@ Validate AtMCS Generic Events
 
 Validate AtMCS Event Enumeration
 	[Documentation]    Validate the AtMCS defines the required enumeration.
-	[Tags]    smoke    AtMCS    TSS-3061
+	[Tags]    smoke    AtMCS
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    AtMCS
 	Comment    Get the Event Enumerations.
@@ -1129,40 +1129,6 @@ Validate AtSpectrograph Event Enumeration
 	Set Test Variable    ${csc}    AtSpectrograph
 	Comment    Get the Event Enumerations.
 	${enums}=    Run    ${xml} sel -t -m "//SALEventSet/Enumeration" -v . -n ${folder}/sal_interfaces/AtSpectrograph/AtSpectrograph_Events.xml
-	:FOR    ${item}    IN    @{Enumerations}
-	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
-
-Validate SummitFacility Generic Commands
-	[Documentation]    Validate the SummitFacility contains all the required generic, or State Machine, commands.
-	[Tags]    smoke    SummitFacility
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    summitFacility
-	Comment    Get the Commands for the CSC.
-	${topics}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/summitFacility/summitFacility_Commands.xml
-	@{Commands}=    Split to Lines    ${topics}
-	:FOR    ${state}    IN    @{GenericCommands}
-	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _command_     ${state}
-	\    Run Keyword And Continue On Failure    Should Contain    ${Commands}    ${string}
-
-Validate SummitFacility Generic Events
-	[Documentation]    Validate the SummitFacility contains all the required generic events.
-	[Tags]    smoke    SummitFacility
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    summitFacility
-	Comment    Get the Events.
-	${topics}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/summitFacility/summitFacility_Events.xml
-	@{Events}=    Split to Lines    ${topics}
-	:FOR    ${item}    IN    @{GenericEvents}
-	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _logevent_    ${item}
-	\    Run Keyword And Continue On Failure    Should Contain    ${Events}    ${string}
-
-Validate SummitFacility Event Enumeration
-	[Documentation]    Validate the SummitFacility defines the required enumeration.
-	[Tags]    smoke    SummitFacility    TSS-2984
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    summitFacility
-	Comment    Get the Event Enumerations.
-	${enums}=    Run    ${xml} sel -t -m "//SALEventSet/Enumeration" -v . -n ${folder}/sal_interfaces/summitFacility/summitFacility_Events.xml
 	:FOR    ${item}    IN    @{Enumerations}
 	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
 

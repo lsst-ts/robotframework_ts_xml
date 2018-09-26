@@ -715,27 +715,6 @@ Validate AtSpectrograph Telemetry
 	Log    ${output}
 	Should Contain    ${output}   AtSpectrograph_Telemetry.xml - valid
 
-Validate SummitFacility Commands
-	[Documentation]    Validate the SummitFacility Commands XML file.
-	[Tags]    smoke    SummitFacility
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/summitFacility/summitFacility_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   summitFacility_Commands.xml - valid
-
-Validate SummitFacility Events
-	[Documentation]    Validate the SummitFacility Events XML file.
-	[Tags]    smoke    SummitFacility
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/summitFacility/summitFacility_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   summitFacility_Events.xml - valid
-
-Validate SummitFacility Telemetry
-	[Documentation]    Validate the SummitFacility Telemetry XML file.
-	[Tags]    smoke    SummitFacility
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/summitFacility/summitFacility_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   summitFacility_Telemetry.xml - valid
-
 Validate TCS Commands
 	[Documentation]    Validate the TCS Commands XML file.
 	[Tags]    smoke    TCS
