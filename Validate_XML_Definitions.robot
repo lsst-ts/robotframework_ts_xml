@@ -778,6 +778,27 @@ Validate TcsWEP Telemetry
 	Log    ${output}
 	Should Contain    ${output}   tcsWEP_Telemetry.xml - valid
 
+Validate Test Commands
+	[Documentation]    Validate the Test Commands XML file.
+	[Tags]    smoke    Test
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/Test/Test_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   Test_Commands.xml - valid
+
+Validate Test Events
+	[Documentation]    Validate the Test Events XML file.
+	[Tags]    smoke    Test
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/Test/Test_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   Test_Events.xml - valid
+
+Validate Test Telemetry
+	[Documentation]    Validate the Test Telemetry XML file.
+	[Tags]    smoke    Test
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/Test/Test_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   Test_Telemetry.xml - valid
+
 Validate VMS Commands
 	[Documentation]    Validate the VMS Commands XML file.
 	[Tags]    smoke    VMS

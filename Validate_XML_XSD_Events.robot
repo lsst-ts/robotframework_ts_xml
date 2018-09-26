@@ -236,6 +236,12 @@ Validate TcsWEP Events XML file
 	Log    ${output}
 	Should Contain    ${output}   tcsWEP_Events.xml - valid
 
+Validate Test Events XML file
+	[Tags]    smoke    Test
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/Test/Test_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   Test_Events.xml - valid
+
 Validate VMS Events XML file
 	[Tags]    smoke    VMS
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/vms/vms_Events.xml
