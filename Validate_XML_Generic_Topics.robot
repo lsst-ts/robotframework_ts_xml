@@ -172,7 +172,7 @@ Validate AtMCS Generic Events
 
 Validate AtMCS Event Enumeration
 	[Documentation]    Validate the AtMCS defines the required enumeration.
-	[Tags]    smoke    AtMCS
+	[Tags]    smoke    AtMCS    TSS-3089
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    AtMCS
 	Comment    Get the Event Enumerations.
@@ -279,40 +279,6 @@ Validate AtWhiteLight Event Enumeration
 	Set Test Variable    ${csc}    AtWhiteLight
 	Comment    Get the Event Enumerations.
 	${enums}=    Run    ${xml} sel -t -m "//SALEventSet/Enumeration" -v . -n ${folder}/sal_interfaces/AtWhiteLight/AtWhiteLight_Events.xml
-	:FOR    ${item}    IN    @{Enumerations}
-	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
-
-Validate AtWhiteLightChiller Generic Commands
-	[Documentation]    Validate the AtWhiteLightChiller contains all the required generic, or State Machine, commands.
-	[Tags]    smoke    AtWhiteLightChiller
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    AtWhiteLightChiller
-	Comment    Get the Commands for the CSC.
-	${topics}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/AtWhiteLightChiller/AtWhiteLightChiller_Commands.xml
-	@{Commands}=    Split to Lines    ${topics}
-	:FOR    ${state}    IN    @{GenericCommands}
-	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _command_     ${state}
-	\    Run Keyword And Continue On Failure    Should Contain    ${Commands}    ${string}
-
-Validate AtWhiteLightChiller Generic Events
-	[Documentation]    Validate the AtWhiteLightChiller contains all the required generic events.
-	[Tags]    smoke    AtWhiteLightChiller
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    AtWhiteLightChiller
-	Comment    Get the Events.
-	${topics}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/AtWhiteLightChiller/AtWhiteLightChiller_Events.xml
-	@{Events}=    Split to Lines    ${topics}
-	:FOR    ${item}    IN    @{GenericEvents}
-	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _logevent_    ${item}
-	\    Run Keyword And Continue On Failure    Should Contain    ${Events}    ${string}
-
-Validate AtWhiteLightChiller Event Enumeration
-	[Documentation]    Validate the AtWhiteLightChiller defines the required enumeration.
-	[Tags]    smoke    AtWhiteLightChiller    TSS-3064
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    AtWhiteLightChiller
-	Comment    Get the Event Enumerations.
-	${enums}=    Run    ${xml} sel -t -m "//SALEventSet/Enumeration" -v . -n ${folder}/sal_interfaces/AtWhiteLightChiller/AtWhiteLightChiller_Events.xml
 	:FOR    ${item}    IN    @{Enumerations}
 	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
 
