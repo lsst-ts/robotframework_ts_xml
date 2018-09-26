@@ -106,6 +106,8 @@ for subsystem in xml_common.subsystems:
 		enum_skipped="    TSS-3063"
 	elif subsystem == "AtWhiteLightChiller":
 		enum_skipped="    TSS-3064"
+	elif subsystem == "AtMCS":
+        enum_skipped="    TSS-3089"
 	else:
 		skipped=""
 		com_skipped=""
