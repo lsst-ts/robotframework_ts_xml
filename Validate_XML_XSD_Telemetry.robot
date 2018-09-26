@@ -206,12 +206,6 @@ Validate AtSpectrograph Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   AtSpectrograph_Telemetry.xml - valid
 
-Validate SummitFacility Telemetry XML file
-	[Tags]    smoke    SummitFacility
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/summitFacility/summitFacility_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   summitFacility_Telemetry.xml - valid
-
 Validate TCS Telemetry XML file
 	[Tags]    smoke    TCS
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/tcs/tcs_Telemetry.xml

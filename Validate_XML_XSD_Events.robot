@@ -218,12 +218,6 @@ Validate AtSpectrograph Events XML file
 	Log    ${output}
 	Should Contain    ${output}   AtSpectrograph_Events.xml - valid
 
-Validate SummitFacility Events XML file
-	[Tags]    smoke    SummitFacility
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/summitFacility/summitFacility_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   summitFacility_Events.xml - valid
-
 Validate TCS Events XML file
 	[Tags]    smoke    TCS
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/tcs/tcs_Events.xml
