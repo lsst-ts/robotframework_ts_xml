@@ -208,30 +208,6 @@ Validate AtWhiteLight Telemetry XML Counts
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate AtWhiteLightChiller Commands XML Counts
-	[Documentation]    Validate the AtWhiteLightChiller Commands XML count.
-	[Tags]    smoke    AtWhiteLightChiller
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/AtWhiteLightChiller/AtWhiteLightChiller_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
-Validate AtWhiteLightChiller Events XML Counts
-	[Documentation]    Validate the AtWhiteLightChiller Events XML count.
-	[Tags]    smoke    AtWhiteLightChiller
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/AtWhiteLightChiller/AtWhiteLightChiller_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
-Validate AtWhiteLightChiller Telemetry XML Counts
-	[Documentation]    Validate the AtWhiteLightChiller Telemetry XML count.
-	[Tags]    smoke    AtWhiteLightChiller
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/AtWhiteLightChiller/AtWhiteLightChiller_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
 Validate AtCamera Commands XML Counts
 	[Documentation]    Validate the AtCamera Commands XML count.
 	[Tags]    smoke    AtCamera

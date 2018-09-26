@@ -183,27 +183,6 @@ Validate AtWhiteLight Telemetry
 	Log    ${output}
 	Should Contain    ${output}   AtWhiteLight_Telemetry.xml - valid
 
-Validate AtWhiteLightChiller Commands
-	[Documentation]    Validate the AtWhiteLightChiller Commands XML file.
-	[Tags]    smoke    AtWhiteLightChiller
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/AtWhiteLightChiller/AtWhiteLightChiller_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   AtWhiteLightChiller_Commands.xml - valid
-
-Validate AtWhiteLightChiller Events
-	[Documentation]    Validate the AtWhiteLightChiller Events XML file.
-	[Tags]    smoke    AtWhiteLightChiller
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/AtWhiteLightChiller/AtWhiteLightChiller_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   AtWhiteLightChiller_Events.xml - valid
-
-Validate AtWhiteLightChiller Telemetry
-	[Documentation]    Validate the AtWhiteLightChiller Telemetry XML file.
-	[Tags]    smoke    AtWhiteLightChiller
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/AtWhiteLightChiller/AtWhiteLightChiller_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   AtWhiteLightChiller_Telemetry.xml - valid
-
 Validate AtCamera Commands
 	[Documentation]    Validate the AtCamera Commands XML file.
 	[Tags]    smoke    AtCamera

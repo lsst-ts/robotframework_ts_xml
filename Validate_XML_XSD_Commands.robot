@@ -56,12 +56,6 @@ Validate AtWhiteLight Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   AtWhiteLight_Commands.xml - valid
 
-Validate AtWhiteLightChiller Commands XML file
-	[Tags]    smoke    AtWhiteLightChiller
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/AtWhiteLightChiller/AtWhiteLightChiller_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   AtWhiteLightChiller_Commands.xml - valid
-
 Validate AtCamera Commands XML file
 	[Tags]    smoke    AtCamera
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml

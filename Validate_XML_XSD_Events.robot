@@ -62,12 +62,6 @@ Validate AtWhiteLight Events XML file
 	Log    ${output}
 	Should Contain    ${output}   AtWhiteLight_Events.xml - valid
 
-Validate AtWhiteLightChiller Events XML file
-	[Tags]    smoke    AtWhiteLightChiller
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/AtWhiteLightChiller/AtWhiteLightChiller_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   AtWhiteLightChiller_Events.xml - valid
-
 Validate AtCamera Events XML file
 	[Tags]    smoke    AtCamera
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/atcamera/atcamera_Events.xml

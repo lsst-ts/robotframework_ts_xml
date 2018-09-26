@@ -234,33 +234,6 @@ Validate AtWhiteLight Telemetry Topic Names
 	: FOR    ${item}    IN    @{topics}
 	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
 
-Validate AtWhiteLightChiller Commands Topic Names
-	[Documentation]    Validate the AtWhiteLightChiller Commands topic names conform to naming convention.
-	[Tags]    smoke    AtWhiteLightChiller    
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/AtWhiteLightChiller/AtWhiteLightChiller_Commands.xml |sed -e 's/\\n/,/g'
-	Log    ${output}
-	@{topics}=    Split to Lines    ${output}
-	: FOR    ${item}    IN    @{topics}
-	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
-
-Validate AtWhiteLightChiller Events Topic Names
-	[Documentation]    Validate the AtWhiteLightChiller Events topic names conform to naming convention.
-	[Tags]    smoke    AtWhiteLightChiller    
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/AtWhiteLightChiller/AtWhiteLightChiller_Events.xml |sed -e 's/\\n/,/g'
-	Log    ${output}
-	@{topics}=    Split to Lines    ${output}
-	: FOR    ${item}    IN    @{topics}
-	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
-
-Validate AtWhiteLightChiller Telemetry Topic Names
-	[Documentation]    Validate the AtWhiteLightChiller Telemetry topic names conform to naming convention.
-	[Tags]    smoke    AtWhiteLightChiller    
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/AtWhiteLightChiller/AtWhiteLightChiller_Telemetry.xml |sed -e 's/\\n/,/g'
-	Log    ${output}
-	@{topics}=    Split to Lines    ${output}
-	: FOR    ${item}    IN    @{topics}
-	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
-
 Validate AtCamera Commands Topic Names
 	[Documentation]    Validate the AtCamera Commands topic names conform to naming convention.
 	[Tags]    smoke    AtCamera    
