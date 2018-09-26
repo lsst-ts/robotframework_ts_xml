@@ -92,16 +92,12 @@ for subsystem in xml_common.subsystems:
 		enum_skipped="    TSS-2982"
 	elif subsystem == "eec":
 		enum_skipped="    TSS-2983"
-	elif subsystem == "summitFacility":
-		enum_skipped="    TSS-2984"
 	elif subsystem == "calibrationElectrometer":
 		enum_skipped="    TSS-2997"
 	elif subsystem == "AtDome":
 		enum_skipped="    TSS-3060"
 	elif subsystem == "AtDome":
 		enum_skipped="    TSS-3060"
-	elif subsystem == "AtMCS":
-		enum_skipped="    TSS-3061"
 	elif subsystem == "AtPneumatics":
 		enum_skipped="    TSS-3062"
 	elif subsystem == "AtSpectrograph":
