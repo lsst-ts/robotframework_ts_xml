@@ -50,6 +50,12 @@ Validate AtScheduler Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   atScheduler_Telemetry.xml - valid
 
+Validate AtThermoelectricCooler Telemetry XML file
+	[Tags]    smoke    AtThermoelectricCooler
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/AtThermoelectricCooler/AtThermoelectricCooler_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   AtThermoelectricCooler_Telemetry.xml - valid
+
 Validate AtWhiteLight Telemetry XML file
 	[Tags]    smoke    AtWhiteLight
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/AtWhiteLight/AtWhiteLight_Telemetry.xml

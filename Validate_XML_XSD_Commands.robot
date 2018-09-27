@@ -50,6 +50,12 @@ Validate AtPneumatics Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   AtPneumatics_Commands.xml - valid
 
+Validate AtThermoelectricCooler Commands XML file
+	[Tags]    smoke    AtThermoelectricCooler
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/AtThermoelectricCooler/AtThermoelectricCooler_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   AtThermoelectricCooler_Commands.xml - valid
+
 Validate AtWhiteLight Commands XML file
 	[Tags]    smoke    AtWhiteLight
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/AtWhiteLight/AtWhiteLight_Commands.xml

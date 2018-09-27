@@ -184,6 +184,30 @@ Validate AtScheduler Telemetry XML Counts
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
+Validate AtThermoelectricCooler Commands XML Counts
+	[Documentation]    Validate the AtThermoelectricCooler Commands XML count.
+	[Tags]    smoke    AtThermoelectricCooler
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/AtThermoelectricCooler/AtThermoelectricCooler_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
+Validate AtThermoelectricCooler Events XML Counts
+	[Documentation]    Validate the AtThermoelectricCooler Events XML count.
+	[Tags]    smoke    AtThermoelectricCooler
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/AtThermoelectricCooler/AtThermoelectricCooler_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
+Validate AtThermoelectricCooler Telemetry XML Counts
+	[Documentation]    Validate the AtThermoelectricCooler Telemetry XML count.
+	[Tags]    smoke    AtThermoelectricCooler
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/AtThermoelectricCooler/AtThermoelectricCooler_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
 Validate AtWhiteLight Commands XML Counts
 	[Documentation]    Validate the AtWhiteLight Commands XML count.
 	[Tags]    smoke    AtWhiteLight

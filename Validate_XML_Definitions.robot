@@ -162,6 +162,27 @@ Validate AtScheduler Telemetry
 	Log    ${output}
 	Should Contain    ${output}   atScheduler_Telemetry.xml - valid
 
+Validate AtThermoelectricCooler Commands
+	[Documentation]    Validate the AtThermoelectricCooler Commands XML file.
+	[Tags]    smoke    AtThermoelectricCooler
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/AtThermoelectricCooler/AtThermoelectricCooler_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   AtThermoelectricCooler_Commands.xml - valid
+
+Validate AtThermoelectricCooler Events
+	[Documentation]    Validate the AtThermoelectricCooler Events XML file.
+	[Tags]    smoke    AtThermoelectricCooler
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/AtThermoelectricCooler/AtThermoelectricCooler_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   AtThermoelectricCooler_Events.xml - valid
+
+Validate AtThermoelectricCooler Telemetry
+	[Documentation]    Validate the AtThermoelectricCooler Telemetry XML file.
+	[Tags]    smoke    AtThermoelectricCooler
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/AtThermoelectricCooler/AtThermoelectricCooler_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   AtThermoelectricCooler_Telemetry.xml - valid
+
 Validate AtWhiteLight Commands
 	[Documentation]    Validate the AtWhiteLight Commands XML file.
 	[Tags]    smoke    AtWhiteLight
