@@ -22,6 +22,7 @@ Validate Archiver Command archiver_command_setValue Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -58,6 +59,7 @@ Validate Archiver Command archiver_command_start Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -94,6 +96,7 @@ Validate Archiver Command archiver_command_exitControl Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -130,6 +133,7 @@ Validate Archiver Command archiver_command_abort Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -166,6 +170,7 @@ Validate Archiver Command archiver_command_disable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -202,6 +207,7 @@ Validate Archiver Command archiver_command_enable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -238,6 +244,7 @@ Validate Archiver Command archiver_command_enterControl Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -274,6 +281,7 @@ Validate Archiver Command archiver_command_standby Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -310,6 +318,7 @@ Validate Archiver Event archiver_logevent_archiverEntityShutdown Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -346,6 +355,7 @@ Validate Archiver Event archiver_logevent_detailedState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -382,6 +392,7 @@ Validate Archiver Event archiver_logevent_archiverEntityStartup Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -418,6 +429,7 @@ Validate Archiver Event archiver_logevent_summaryState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -454,6 +466,7 @@ Validate Archiver Event archiver_logevent_settingsApplied Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -490,6 +503,7 @@ Validate Archiver Event archiver_logevent_settingVersions Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -526,6 +540,7 @@ Validate Archiver Event archiver_logevent_appliedSettingsMatchStart Topic Byte S
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -562,6 +577,7 @@ Validate Archiver Event archiver_logevent_errorCode Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -598,6 +614,7 @@ Validate Archiver Event archiver_logevent_archiverEntitySummaryState Topic Byte 
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -634,6 +651,7 @@ Validate Archiver Telemetry archiver_sequencerHeartbeat Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -670,6 +688,7 @@ Validate AtArchiver Command atArchiver_command_abort Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -706,6 +725,7 @@ Validate AtArchiver Command atArchiver_command_enable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -742,6 +762,7 @@ Validate AtArchiver Command atArchiver_command_disable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -778,6 +799,7 @@ Validate AtArchiver Command atArchiver_command_standby Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -814,6 +836,7 @@ Validate AtArchiver Command atArchiver_command_exitControl Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -850,6 +873,7 @@ Validate AtArchiver Command atArchiver_command_start Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -886,6 +910,7 @@ Validate AtArchiver Command atArchiver_command_enterControl Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -922,6 +947,7 @@ Validate AtArchiver Command atArchiver_command_setValue Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -958,6 +984,7 @@ Validate AtArchiver Event atArchiver_logevent_detailedState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -994,6 +1021,7 @@ Validate AtArchiver Event atArchiver_logevent_archiverEntityStartup Topic Byte S
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -1030,6 +1058,7 @@ Validate AtArchiver Event atArchiver_logevent_settingVersions Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -1066,6 +1095,7 @@ Validate AtArchiver Event atArchiver_logevent_archiverEntitySummaryState Topic B
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -1102,6 +1132,7 @@ Validate AtArchiver Event atArchiver_logevent_errorCode Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -1138,6 +1169,7 @@ Validate AtArchiver Event atArchiver_logevent_archiverEntityShutdown Topic Byte 
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -1174,6 +1206,7 @@ Validate AtArchiver Event atArchiver_logevent_summaryState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -1210,6 +1243,7 @@ Validate AtArchiver Event atArchiver_logevent_appliedSettingsMatchStart Topic By
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -1246,6 +1280,7 @@ Validate AtArchiver Event atArchiver_logevent_settingsApplied Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -1282,6 +1317,7 @@ Validate AtArchiver Telemetry atArchiver_sequencerHeartbeat Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -1318,6 +1354,7 @@ Validate AtDome Command AtDome_command_disable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -1354,6 +1391,7 @@ Validate AtDome Command AtDome_command_enable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -1390,6 +1428,7 @@ Validate AtDome Command AtDome_command_exitControl Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -1426,6 +1465,7 @@ Validate AtDome Command AtDome_command_standby Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -1462,6 +1502,7 @@ Validate AtDome Command AtDome_command_start Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -1498,6 +1539,7 @@ Validate AtDome Command AtDome_command_moveAzimuth Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -1534,6 +1576,7 @@ Validate AtDome Command AtDome_command_moveShutterDropoutDoor Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -1570,6 +1613,7 @@ Validate AtDome Command AtDome_command_closeShutter Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -1606,6 +1650,7 @@ Validate AtDome Command AtDome_command_stopMotionAllAxis Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -1642,6 +1687,7 @@ Validate AtDome Command AtDome_command_stopShutter Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -1678,6 +1724,7 @@ Validate AtDome Command AtDome_command_openShutter Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -1714,6 +1761,7 @@ Validate AtDome Command AtDome_command_moveShutterMainDoor Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -1750,6 +1798,7 @@ Validate AtDome Command AtDome_command_stopAzimuth Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -1786,6 +1835,7 @@ Validate AtDome Event AtDome_logevent_appliedSettingsMatchStart Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -1822,6 +1872,7 @@ Validate AtDome Event AtDome_logevent_errorCode Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -1858,6 +1909,7 @@ Validate AtDome Event AtDome_logevent_settingVersions Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -1894,6 +1946,7 @@ Validate AtDome Event AtDome_logevent_summaryState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -1930,6 +1983,7 @@ Validate AtDome Event AtDome_logevent_detailedStateAzimuth Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -1966,6 +2020,7 @@ Validate AtDome Event AtDome_logevent_internalCommand Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -2002,6 +2057,7 @@ Validate AtDome Event AtDome_logevent_heartbeat Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -2038,6 +2094,7 @@ Validate AtDome Event AtDome_logevent_loopTimeOutOfRange Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -2074,6 +2131,7 @@ Validate AtDome Event AtDome_logevent_rejectedCommand Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -2110,6 +2168,7 @@ Validate AtDome Event AtDome_logevent_allAxisInPosition Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -2146,6 +2205,7 @@ Validate AtDome Event AtDome_logevent_emergencyStop Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -2182,6 +2242,7 @@ Validate AtDome Event AtDome_logevent_internalStatus Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -2218,6 +2279,7 @@ Validate AtDome Event AtDome_logevent_SCBLink Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -2254,6 +2316,7 @@ Validate AtDome Event AtDome_logevent_shutterInPosition Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -2290,6 +2353,7 @@ Validate AtDome Event AtDome_logevent_azimuthInPosition Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -2326,6 +2390,7 @@ Validate AtDome Event AtDome_logevent_azimuthMovingDirection Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -2362,6 +2427,7 @@ Validate AtDome Event AtDome_logevent_settingsApplied Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -2398,6 +2464,7 @@ Validate AtDome Event AtDome_logevent_detailedStateDropoutDoor Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -2434,6 +2501,7 @@ Validate AtDome Event AtDome_logevent_detailedStateMainDoor Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -2470,6 +2538,7 @@ Validate AtDome Telemetry AtDome_timestamp Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -2506,6 +2575,7 @@ Validate AtDome Telemetry AtDome_loopTime Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -2542,6 +2612,7 @@ Validate AtDome Telemetry AtDome_position Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -2578,6 +2649,7 @@ Validate AtHeaderService Command atHeaderService_command_disable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -2614,6 +2686,7 @@ Validate AtHeaderService Command atHeaderService_command_enable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -2650,6 +2723,7 @@ Validate AtHeaderService Command atHeaderService_command_exitControl Topic Byte 
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -2686,6 +2760,7 @@ Validate AtHeaderService Command atHeaderService_command_standby Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -2722,6 +2797,7 @@ Validate AtHeaderService Command atHeaderService_command_start Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -2758,6 +2834,7 @@ Validate AtHeaderService Command atHeaderService_command_enterControl Topic Byte
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -2794,6 +2871,7 @@ Validate AtHeaderService Event atHeaderService_logevent_appliedSettingsMatchStar
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -2830,6 +2908,7 @@ Validate AtHeaderService Event atHeaderService_logevent_errorCode Topic Byte Siz
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -2866,6 +2945,7 @@ Validate AtHeaderService Event atHeaderService_logevent_settingVersions Topic By
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -2902,6 +2982,7 @@ Validate AtHeaderService Event atHeaderService_logevent_summaryState Topic Byte 
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -2938,6 +3019,7 @@ Validate AtHeaderService Event atHeaderService_logevent_detailedState Topic Byte
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -2974,6 +3056,7 @@ Validate AtHeaderService Event atHeaderService_logevent_heartbeat Topic Byte Siz
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -3010,6 +3093,7 @@ Validate AtHeaderService Event atHeaderService_logevent_rejectedCommand Topic By
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -3046,6 +3130,7 @@ Validate AtHeaderService Event atHeaderService_logevent_largeFileObjectAvailable
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -3082,6 +3167,7 @@ Validate AtHeaderService Event atHeaderService_logevent_settingsApplied Topic By
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -3118,6 +3204,7 @@ Validate AtMCS Command AtMCS_command_enable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -3154,6 +3241,7 @@ Validate AtMCS Command AtMCS_command_exitControl Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -3190,6 +3278,7 @@ Validate AtMCS Command AtMCS_command_standby Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -3226,6 +3315,7 @@ Validate AtMCS Command AtMCS_command_start Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -3262,6 +3352,7 @@ Validate AtMCS Command AtMCS_command_startTracking Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -3298,6 +3389,7 @@ Validate AtMCS Command AtMCS_command_trackTarget Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -3334,6 +3426,7 @@ Validate AtMCS Command AtMCS_command_disable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -3370,6 +3463,7 @@ Validate AtMCS Command AtMCS_command_setInstrumentPort Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -3406,6 +3500,7 @@ Validate AtMCS Command AtMCS_command_stopTracking Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -3442,6 +3537,7 @@ Validate AtMCS Event AtMCS_logevent_appliedSettingsMatchStart Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -3478,6 +3574,7 @@ Validate AtMCS Event AtMCS_logevent_errorCode Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -3514,6 +3611,7 @@ Validate AtMCS Event AtMCS_logevent_settingVersions Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -3550,6 +3648,7 @@ Validate AtMCS Event AtMCS_logevent_summaryState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -3586,6 +3685,7 @@ Validate AtMCS Event AtMCS_logevent_detailedStateM3 Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -3622,6 +3722,7 @@ Validate AtMCS Event AtMCS_logevent_elevationInPosition Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -3658,6 +3759,7 @@ Validate AtMCS Event AtMCS_logevent_azimuthInPosition Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -3694,6 +3796,7 @@ Validate AtMCS Event AtMCS_logevent_allAxesInPosition Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -3730,6 +3833,7 @@ Validate AtMCS Event AtMCS_logevent_nasmyth1RotatorInPosition Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -3766,6 +3870,7 @@ Validate AtMCS Event AtMCS_logevent_azimuthLimitSwitchCCW Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -3802,6 +3907,7 @@ Validate AtMCS Event AtMCS_logevent_elevationLimitSwitchUpper Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -3838,6 +3944,7 @@ Validate AtMCS Event AtMCS_logevent_nasmyth1LimitSwitchCW Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -3874,6 +3981,7 @@ Validate AtMCS Event AtMCS_logevent_nasmyth2LimitSwitchCCW Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -3910,6 +4018,7 @@ Validate AtMCS Event AtMCS_logevent_azimuthBrake1 Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -3946,6 +4055,7 @@ Validate AtMCS Event AtMCS_logevent_elevationBrake Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -3982,6 +4092,7 @@ Validate AtMCS Event AtMCS_logevent_nasmyth1Brake Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -4018,6 +4129,7 @@ Validate AtMCS Event AtMCS_logevent_nasmyth2Brake Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -4054,6 +4166,7 @@ Validate AtMCS Event AtMCS_logevent_azimuthToppleBlockCCW Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -4090,6 +4203,7 @@ Validate AtMCS Event AtMCS_logevent_azimuthBrake2 Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -4126,6 +4240,7 @@ Validate AtMCS Event AtMCS_logevent_nasmyth1LimitSwitchCCW Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -4162,6 +4277,7 @@ Validate AtMCS Event AtMCS_logevent_azimuthToppleBlockCW Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -4198,6 +4314,7 @@ Validate AtMCS Event AtMCS_logevent_nasmyth2LimitSwitchCW Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -4234,6 +4351,7 @@ Validate AtMCS Event AtMCS_logevent_azimuthLimitSwitchCW Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -4270,6 +4388,7 @@ Validate AtMCS Event AtMCS_logevent_azimuthDrive1Status Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -4306,6 +4425,7 @@ Validate AtMCS Event AtMCS_logevent_azimuthDrive2Status Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -4342,6 +4462,7 @@ Validate AtMCS Event AtMCS_logevent_elevationDriveStatus Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -4378,6 +4499,7 @@ Validate AtMCS Event AtMCS_logevent_nasmyth1DriveStatus Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -4414,6 +4536,7 @@ Validate AtMCS Event AtMCS_logevent_nasmyth2DriveStatus Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -4450,6 +4573,7 @@ Validate AtMCS Event AtMCS_logevent_m3DriveStatus Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -4486,6 +4610,7 @@ Validate AtMCS Event AtMCS_logevent_nasmyth2RotatorInPosition Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -4522,6 +4647,7 @@ Validate AtMCS Event AtMCS_logevent_elevationLimitSwitchLower Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -4558,6 +4684,7 @@ Validate AtMCS Event AtMCS_logevent_detailedStateMount Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -4594,6 +4721,7 @@ Validate AtMCS Event AtMCS_logevent_m3RotatorLimitSwitchCW Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -4630,6 +4758,7 @@ Validate AtMCS Event AtMCS_logevent_m3RotatorLimitSwitchCCW Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -4666,6 +4795,7 @@ Validate AtMCS Event AtMCS_logevent_m3RotatorDetentLimitSwitch Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -4702,6 +4832,7 @@ Validate AtMCS Event AtMCS_logevent_m3InPosition Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -4738,6 +4869,7 @@ Validate AtMCS Event AtMCS_logevent_m3PortSelected Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -4774,6 +4906,7 @@ Validate AtMCS Telemetry AtMCS_mountEncoders Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -4810,6 +4943,7 @@ Validate AtMCS Telemetry AtMCS_torqueDemand Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -4846,6 +4980,7 @@ Validate AtMCS Telemetry AtMCS_measuredTorque Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -4882,6 +5017,7 @@ Validate AtMCS Telemetry AtMCS_measuredMotorVelocity Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -4918,6 +5054,7 @@ Validate AtMCS Telemetry AtMCS_mountMotorEncoders Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -4954,6 +5091,7 @@ Validate AtMonochromator Command atMonochromator_command_disable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -4990,6 +5128,7 @@ Validate AtMonochromator Command atMonochromator_command_enable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -5026,6 +5165,7 @@ Validate AtMonochromator Command atMonochromator_command_exitControl Topic Byte 
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -5062,6 +5202,7 @@ Validate AtMonochromator Command atMonochromator_command_standby Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -5098,6 +5239,7 @@ Validate AtMonochromator Command atMonochromator_command_start Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -5134,6 +5276,7 @@ Validate AtMonochromator Command atMonochromator_command_changeWavelength Topic 
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -5170,6 +5313,7 @@ Validate AtMonochromator Command atMonochromator_command_calibrateWavelength Top
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -5206,6 +5350,7 @@ Validate AtMonochromator Command atMonochromator_command_power Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -5242,6 +5387,7 @@ Validate AtMonochromator Command atMonochromator_command_selectGrating Topic Byt
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -5278,6 +5424,7 @@ Validate AtMonochromator Command atMonochromator_command_changeSlitWidth Topic B
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -5314,6 +5461,7 @@ Validate AtMonochromator Command atMonochromator_command_updateMonochromatorSetu
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -5350,6 +5498,7 @@ Validate AtMonochromator Event atMonochromator_logevent_appliedSettingsMatchStar
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -5386,6 +5535,7 @@ Validate AtMonochromator Event atMonochromator_logevent_errorCode Topic Byte Siz
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -5422,6 +5572,7 @@ Validate AtMonochromator Event atMonochromator_logevent_settingVersions Topic By
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -5458,6 +5609,7 @@ Validate AtMonochromator Event atMonochromator_logevent_summaryState Topic Byte 
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -5494,6 +5646,7 @@ Validate AtMonochromator Event atMonochromator_logevent_detailedState Topic Byte
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -5530,6 +5683,7 @@ Validate AtMonochromator Event atMonochromator_logevent_internalCommand Topic By
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -5566,6 +5720,7 @@ Validate AtMonochromator Event atMonochromator_logevent_heartbeat Topic Byte Siz
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -5602,6 +5757,7 @@ Validate AtMonochromator Event atMonochromator_logevent_loopTimeOutOfRange Topic
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -5638,6 +5794,7 @@ Validate AtMonochromator Event atMonochromator_logevent_rejectedCommand Topic By
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -5674,6 +5831,7 @@ Validate AtMonochromator Event atMonochromator_logevent_settingsAppliedMonoCommu
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -5710,6 +5868,7 @@ Validate AtMonochromator Event atMonochromator_logevent_selectedGrating Topic By
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -5746,6 +5905,7 @@ Validate AtMonochromator Event atMonochromator_logevent_wavelength Topic Byte Si
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -5782,6 +5942,7 @@ Validate AtMonochromator Event atMonochromator_logevent_slitWidth Topic Byte Siz
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -5818,6 +5979,7 @@ Validate AtMonochromator Event atMonochromator_logevent_inPosition Topic Byte Si
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -5854,6 +6016,7 @@ Validate AtMonochromator Event atMonochromator_logevent_monochromatorConnected T
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -5890,6 +6053,7 @@ Validate AtMonochromator Event atMonochromator_logevent_settingsAppliedMonoHeart
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -5926,6 +6090,7 @@ Validate AtMonochromator Event atMonochromator_logevent_settingsAppliedLoop Topi
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -5962,6 +6127,7 @@ Validate AtMonochromator Event atMonochromator_logevent_settingsAppliedMonochrom
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -5998,6 +6164,7 @@ Validate AtMonochromator Telemetry atMonochromator_timestamp Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -6034,6 +6201,7 @@ Validate AtMonochromator Telemetry atMonochromator_loopTime Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -6070,6 +6238,7 @@ Validate AtPneumatics Command AtPneumatics_command_disable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -6106,6 +6275,7 @@ Validate AtPneumatics Command AtPneumatics_command_enable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -6142,6 +6312,7 @@ Validate AtPneumatics Command AtPneumatics_command_exitControl Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -6178,6 +6349,7 @@ Validate AtPneumatics Command AtPneumatics_command_standby Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -6214,6 +6386,7 @@ Validate AtPneumatics Command AtPneumatics_command_start Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -6250,6 +6423,7 @@ Validate AtPneumatics Command AtPneumatics_command_openMasterAirSupply Topic Byt
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -6286,6 +6460,7 @@ Validate AtPneumatics Command AtPneumatics_command_m1SetPressure Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -6322,6 +6497,7 @@ Validate AtPneumatics Command AtPneumatics_command_m2SetPressure Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -6358,6 +6534,7 @@ Validate AtPneumatics Command AtPneumatics_command_openM1CellVents Topic Byte Si
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -6394,6 +6571,7 @@ Validate AtPneumatics Command AtPneumatics_command_openM1Cover Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -6430,6 +6608,7 @@ Validate AtPneumatics Command AtPneumatics_command_openInstrumentAirValve Topic 
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -6466,6 +6645,7 @@ Validate AtPneumatics Command AtPneumatics_command_closeInstrumentAirValve Topic
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -6502,6 +6682,7 @@ Validate AtPneumatics Command AtPneumatics_command_closeMasterAirSupply Topic By
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -6538,6 +6719,7 @@ Validate AtPneumatics Command AtPneumatics_command_closeM1Cover Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -6574,6 +6756,7 @@ Validate AtPneumatics Command AtPneumatics_command_m2OpenAirValve Topic Byte Siz
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -6610,6 +6793,7 @@ Validate AtPneumatics Command AtPneumatics_command_m2CloseAirValve Topic Byte Si
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -6646,6 +6830,7 @@ Validate AtPneumatics Command AtPneumatics_command_m1CloseAirValve Topic Byte Si
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -6682,6 +6867,7 @@ Validate AtPneumatics Command AtPneumatics_command_m1OpenAirValve Topic Byte Siz
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -6718,6 +6904,7 @@ Validate AtPneumatics Command AtPneumatics_command_closeM1CellVents Topic Byte S
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -6754,6 +6941,7 @@ Validate AtPneumatics Event AtPneumatics_logevent_appliedSettingsMatchStart Topi
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -6790,6 +6978,7 @@ Validate AtPneumatics Event AtPneumatics_logevent_errorCode Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -6826,6 +7015,7 @@ Validate AtPneumatics Event AtPneumatics_logevent_settingVersions Topic Byte Siz
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -6862,6 +7052,7 @@ Validate AtPneumatics Event AtPneumatics_logevent_summaryState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -6898,6 +7089,7 @@ Validate AtPneumatics Event AtPneumatics_logevent_m1CoverLimitSwitches Topic Byt
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -6934,6 +7126,7 @@ Validate AtPneumatics Event AtPneumatics_logevent_m1VentsLimitSwitches Topic Byt
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -6970,6 +7163,7 @@ Validate AtPneumatics Event AtPneumatics_logevent_powerStatus Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -7006,6 +7200,7 @@ Validate AtPneumatics Event AtPneumatics_logevent_eStopTriggered Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -7042,6 +7237,7 @@ Validate AtPneumatics Event AtPneumatics_logevent_resetEStopTriggered Topic Byte
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -7078,6 +7274,7 @@ Validate AtPneumatics Event AtPneumatics_logevent_detailedStateM1Cover Topic Byt
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -7114,6 +7311,7 @@ Validate AtPneumatics Event AtPneumatics_logevent_detailedStateM1 Topic Byte Siz
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -7150,6 +7348,7 @@ Validate AtPneumatics Event AtPneumatics_logevent_detailedStateM2 Topic Byte Siz
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -7186,6 +7385,7 @@ Validate AtPneumatics Event AtPneumatics_logevent_detailedStateInstrument Topic 
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -7222,6 +7422,7 @@ Validate AtPneumatics Event AtPneumatics_logevent_detailedStateCellVents Topic B
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -7258,6 +7459,7 @@ Validate AtPneumatics Event AtPneumatics_logevent_detailedStateMainValve Topic B
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -7294,6 +7496,7 @@ Validate AtPneumatics Event AtPneumatics_logevent_m1CoverPosition Topic Byte Siz
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -7330,6 +7533,7 @@ Validate AtPneumatics Event AtPneumatics_logevent_m1VentsPosition Topic Byte Siz
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -7366,6 +7570,7 @@ Validate AtPneumatics Telemetry AtPneumatics_m1AirPressure Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -7402,6 +7607,7 @@ Validate AtPneumatics Telemetry AtPneumatics_m2AirPressure Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -7438,6 +7644,7 @@ Validate AtPneumatics Telemetry AtPneumatics_mainAirSourcePressure Topic Byte Si
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -7474,6 +7681,7 @@ Validate AtPneumatics Telemetry AtPneumatics_loadCell Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -7510,6 +7718,7 @@ Validate AtScheduler Event atScheduler_logevent_target Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -7546,6 +7755,7 @@ Validate AtScheduler Telemetry atScheduler_Heartbeat Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -7582,6 +7792,7 @@ Validate AtWhiteLight Command AtWhiteLight_command_disable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -7618,6 +7829,7 @@ Validate AtWhiteLight Command AtWhiteLight_command_enable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -7654,6 +7866,7 @@ Validate AtWhiteLight Command AtWhiteLight_command_exitControl Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -7690,6 +7903,7 @@ Validate AtWhiteLight Command AtWhiteLight_command_standby Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -7726,6 +7940,7 @@ Validate AtWhiteLight Command AtWhiteLight_command_start Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -7762,6 +7977,7 @@ Validate AtWhiteLight Command AtWhiteLight_command_powerLightOn Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -7798,6 +8014,7 @@ Validate AtWhiteLight Command AtWhiteLight_command_powerLightOff Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -7834,6 +8051,7 @@ Validate AtWhiteLight Command AtWhiteLight_command_setLightPower Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -7870,6 +8088,7 @@ Validate AtWhiteLight Event AtWhiteLight_logevent_appliedSettingsMatchStart Topi
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -7906,6 +8125,7 @@ Validate AtWhiteLight Event AtWhiteLight_logevent_errorCode Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -7942,6 +8162,7 @@ Validate AtWhiteLight Event AtWhiteLight_logevent_settingVersions Topic Byte Siz
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -7978,6 +8199,7 @@ Validate AtWhiteLight Event AtWhiteLight_logevent_summaryState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -8014,6 +8236,7 @@ Validate AtWhiteLight Event AtWhiteLight_logevent_detailedState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -8050,6 +8273,7 @@ Validate AtWhiteLight Event AtWhiteLight_logevent_internalCommand Topic Byte Siz
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -8086,6 +8310,7 @@ Validate AtWhiteLight Event AtWhiteLight_logevent_heartbeat Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -8122,6 +8347,7 @@ Validate AtWhiteLight Event AtWhiteLight_logevent_loopTimeOutOfRange Topic Byte 
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -8158,6 +8384,7 @@ Validate AtWhiteLight Event AtWhiteLight_logevent_rejectedCommand Topic Byte Siz
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -8194,6 +8421,7 @@ Validate AtWhiteLight Event AtWhiteLight_logevent_whiteLightStatus Topic Byte Si
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -8230,6 +8458,7 @@ Validate AtWhiteLight Telemetry AtWhiteLight_timestamp Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -8266,6 +8495,7 @@ Validate AtWhiteLight Telemetry AtWhiteLight_loopTime Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -8302,6 +8532,7 @@ Validate AtCamera Command atcamera_command_discardRows Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -8338,6 +8569,7 @@ Validate AtCamera Command atcamera_command_enable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -8374,6 +8606,7 @@ Validate AtCamera Command atcamera_command_setValue Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -8410,6 +8643,7 @@ Validate AtCamera Command atcamera_command_startImage Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -8446,6 +8680,7 @@ Validate AtCamera Command atcamera_command_disableCalibration Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -8482,6 +8717,7 @@ Validate AtCamera Command atcamera_command_initGuiders Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -8518,6 +8754,7 @@ Validate AtCamera Command atcamera_command_standby Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -8554,6 +8791,7 @@ Validate AtCamera Command atcamera_command_enableCalibration Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -8590,6 +8828,7 @@ Validate AtCamera Command atcamera_command_initImage Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -8626,6 +8865,7 @@ Validate AtCamera Command atcamera_command_enterControl Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -8662,6 +8902,7 @@ Validate AtCamera Command atcamera_command_endImage Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -8698,6 +8939,7 @@ Validate AtCamera Command atcamera_command_disable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -8734,6 +8976,7 @@ Validate AtCamera Command atcamera_command_abort Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -8770,6 +9013,7 @@ Validate AtCamera Command atcamera_command_clear Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -8806,6 +9050,7 @@ Validate AtCamera Command atcamera_command_exitControl Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -8842,6 +9087,7 @@ Validate AtCamera Command atcamera_command_takeImages Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -8878,6 +9124,7 @@ Validate AtCamera Command atcamera_command_start Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -8914,6 +9161,7 @@ Validate AtCamera Command atcamera_command_stop Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -8950,6 +9198,7 @@ Validate AtCamera Event atcamera_logevent_offlineDetailedState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -8986,6 +9235,7 @@ Validate AtCamera Event atcamera_logevent_endReadout Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -9022,6 +9272,7 @@ Validate AtCamera Event atcamera_logevent_endTakeImage Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -9058,6 +9309,7 @@ Validate AtCamera Event atcamera_logevent_imageReadinessDetailedState Topic Byte
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -9094,6 +9346,7 @@ Validate AtCamera Event atcamera_logevent_settingVersions Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -9130,6 +9383,7 @@ Validate AtCamera Event atcamera_logevent_notReadyToTakeImage Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -9166,6 +9420,7 @@ Validate AtCamera Event atcamera_logevent_startShutterClose Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -9202,6 +9457,7 @@ Validate AtCamera Event atcamera_logevent_appliedSettingsMatchStart Topic Byte S
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -9238,6 +9494,7 @@ Validate AtCamera Event atcamera_logevent_errorCode Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -9274,6 +9531,7 @@ Validate AtCamera Event atcamera_logevent_endShutterClose Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -9310,6 +9568,7 @@ Validate AtCamera Event atcamera_logevent_endOfImageTelemetry Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -9346,6 +9605,7 @@ Validate AtCamera Event atcamera_logevent_calibrationDetailedState Topic Byte Si
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -9382,6 +9642,7 @@ Validate AtCamera Event atcamera_logevent_shutterDetailedState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -9418,6 +9679,7 @@ Validate AtCamera Event atcamera_logevent_readyToTakeImage Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -9454,6 +9716,7 @@ Validate AtCamera Event atcamera_logevent_ccsCommandState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -9490,6 +9753,7 @@ Validate AtCamera Event atcamera_logevent_prepareToTakeImage Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -9526,6 +9790,7 @@ Validate AtCamera Event atcamera_logevent_endShutterOpen Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -9562,6 +9827,7 @@ Validate AtCamera Event atcamera_logevent_startIntegration Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -9598,6 +9864,7 @@ Validate AtCamera Event atcamera_logevent_summaryState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -9634,6 +9901,7 @@ Validate AtCamera Event atcamera_logevent_settingsApplied Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -9670,6 +9938,7 @@ Validate AtCamera Event atcamera_logevent_startShutterOpen Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -9706,6 +9975,7 @@ Validate AtCamera Event atcamera_logevent_raftsDetailedState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -9742,6 +10012,7 @@ Validate AtCamera Event atcamera_logevent_startReadout Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -9778,6 +10049,7 @@ Validate AtCamera Event atcamera_logevent_shutterMotionProfile Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -9814,6 +10086,7 @@ Validate AtCamera Event atcamera_logevent_imageReadoutParameters Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -9850,6 +10123,7 @@ Validate AtCamera Event atcamera_logevent_bonnShutterSettingsApplied Topic Byte 
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -9886,6 +10160,7 @@ Validate AtCamera Event atcamera_logevent_wrebSettingsApplied Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -9922,6 +10197,7 @@ Validate AtCamera Telemetry atcamera_heartbeat Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -9958,6 +10234,7 @@ Validate AtCamera Telemetry atcamera_wreb Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -9994,6 +10271,7 @@ Validate AtCamera Telemetry atcamera_bonnShutter Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -10030,6 +10308,7 @@ Validate AtCamera Telemetry atcamera_wrebPower Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -10066,6 +10345,7 @@ Validate ATCS Command atcs_command_disable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -10102,6 +10382,7 @@ Validate ATCS Command atcs_command_enable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -10138,6 +10419,7 @@ Validate ATCS Command atcs_command_exitControl Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -10174,6 +10456,7 @@ Validate ATCS Command atcs_command_standby Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -10210,6 +10493,7 @@ Validate ATCS Command atcs_command_start Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -10246,6 +10530,7 @@ Validate ATCS Command atcs_command_enterControl Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -10282,6 +10567,7 @@ Validate ATCS Command atcs_command_Target Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -10318,6 +10604,7 @@ Validate ATCS Command atcs_command_Offset Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -10354,6 +10641,7 @@ Validate ATCS Command atcs_command_SpectrographSetup Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -10390,6 +10678,7 @@ Validate ATCS Event atcs_logevent_AppliedSettingsMatchStart Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -10426,6 +10715,7 @@ Validate ATCS Event atcs_logevent_ErrorCode Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -10462,6 +10752,7 @@ Validate ATCS Event atcs_logevent_SummaryState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -10498,6 +10789,7 @@ Validate ATCS Event atcs_logevent_DetailedState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -10534,6 +10826,7 @@ Validate ATCS Event atcs_logevent_SpectrographInPosition Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -10570,6 +10863,7 @@ Validate ATCS Event atcs_logevent_TelescopeInPosition Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -10606,6 +10900,7 @@ Validate ATCS Event atcs_logevent_RejectedCommand Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -10642,6 +10937,7 @@ Validate ATCS Event atcs_logevent_InternalCommand Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -10678,6 +10974,7 @@ Validate ATCS Event atcs_logevent_Heartbeat Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -10714,6 +11011,7 @@ Validate ATCS Event atcs_logevent_SettingVersions Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -10750,6 +11048,7 @@ Validate ATCS Event atcs_logevent_LoopTimeOutOfRange Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -10786,6 +11085,7 @@ Validate ATCS Event atcs_logevent_SettingsApplied_Example Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -10822,6 +11122,7 @@ Validate ATCS Telemetry atcs_LoopTime_ms Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -10858,6 +11159,7 @@ Validate ATCS Telemetry atcs_Timestamp Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -10894,6 +11196,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_disable
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -10930,6 +11233,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_enable 
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -10966,6 +11270,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_perform
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -11002,6 +11307,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_power T
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -11038,6 +11344,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_setDigi
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -11074,6 +11381,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_setInte
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -11110,6 +11418,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_setMode
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -11146,6 +11455,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_setRang
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -11182,6 +11492,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_standby
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -11218,6 +11529,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_start T
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -11254,6 +11566,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_startSc
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -11290,6 +11603,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_startSc
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -11326,6 +11640,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_startSc
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -11362,6 +11677,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_stopSca
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -11398,6 +11714,7 @@ Validate CalibrationElectrometer Command calibrationElectrometer_command_exitCon
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -11434,6 +11751,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_appliedS
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -11470,6 +11788,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_detailed
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -11506,6 +11825,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_digitalF
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -11542,6 +11862,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_errorCod
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -11578,6 +11899,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_heartbea
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -11614,6 +11936,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_integrat
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -11650,6 +11973,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_intensit
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -11686,6 +12010,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_internal
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -11722,6 +12047,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_largeFil
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -11758,6 +12084,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_loopTime
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -11794,6 +12121,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_measureR
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -11830,6 +12158,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_measureT
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -11866,6 +12195,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_readingO
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -11902,6 +12232,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_rejected
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -11938,6 +12269,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_settings
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -11974,6 +12306,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_settings
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -12010,6 +12343,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_settingV
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -12046,6 +12380,7 @@ Validate CalibrationElectrometer Event calibrationElectrometer_logevent_summaryS
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -12082,6 +12417,7 @@ Validate CalibrationElectrometer Telemetry calibrationElectrometer_loopTime Topi
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -12118,6 +12454,7 @@ Validate CalibrationElectrometer Telemetry calibrationElectrometer_timestamp Top
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -12154,6 +12491,7 @@ Validate Camera Command camera_command_discardRows Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -12190,6 +12528,7 @@ Validate Camera Command camera_command_enable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -12226,6 +12565,7 @@ Validate Camera Command camera_command_setValue Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -12262,6 +12602,7 @@ Validate Camera Command camera_command_startImage Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -12298,6 +12639,7 @@ Validate Camera Command camera_command_disableCalibration Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -12334,6 +12676,7 @@ Validate Camera Command camera_command_initGuiders Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -12370,6 +12713,7 @@ Validate Camera Command camera_command_standby Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -12406,6 +12750,7 @@ Validate Camera Command camera_command_enableCalibration Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -12442,6 +12787,7 @@ Validate Camera Command camera_command_initImage Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -12478,6 +12824,7 @@ Validate Camera Command camera_command_enterControl Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -12514,6 +12861,7 @@ Validate Camera Command camera_command_endImage Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -12550,6 +12898,7 @@ Validate Camera Command camera_command_setFilter Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -12586,6 +12935,7 @@ Validate Camera Command camera_command_disable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -12622,6 +12972,7 @@ Validate Camera Command camera_command_abort Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -12658,6 +13009,7 @@ Validate Camera Command camera_command_clear Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -12694,6 +13046,7 @@ Validate Camera Command camera_command_exitControl Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -12730,6 +13083,7 @@ Validate Camera Command camera_command_takeImages Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -12766,6 +13120,7 @@ Validate Camera Command camera_command_start Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -12802,6 +13157,7 @@ Validate Camera Command camera_command_stop Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -12838,6 +13194,7 @@ Validate Camera Event camera_logevent_offlineDetailedState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -12874,6 +13231,7 @@ Validate Camera Event camera_logevent_endReadout Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -12910,6 +13268,7 @@ Validate Camera Event camera_logevent_endTakeImage Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -12946,6 +13305,7 @@ Validate Camera Event camera_logevent_imageReadinessDetailedState Topic Byte Siz
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -12982,6 +13342,7 @@ Validate Camera Event camera_logevent_settingVersions Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -13018,6 +13379,7 @@ Validate Camera Event camera_logevent_startSetFilter Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -13054,6 +13416,7 @@ Validate Camera Event camera_logevent_startUnloadFilter Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -13090,6 +13453,7 @@ Validate Camera Event camera_logevent_notReadyToTakeImage Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -13126,6 +13490,7 @@ Validate Camera Event camera_logevent_startShutterClose Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -13162,6 +13527,7 @@ Validate Camera Event camera_logevent_appliedSettingsMatchStart Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -13198,6 +13564,7 @@ Validate Camera Event camera_logevent_errorCode Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -13234,6 +13601,7 @@ Validate Camera Event camera_logevent_endInitializeGuider Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -13270,6 +13638,7 @@ Validate Camera Event camera_logevent_endShutterClose Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -13306,6 +13675,7 @@ Validate Camera Event camera_logevent_endOfImageTelemetry Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -13342,6 +13712,7 @@ Validate Camera Event camera_logevent_endUnloadFilter Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -13378,6 +13749,7 @@ Validate Camera Event camera_logevent_calibrationDetailedState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -13414,6 +13786,7 @@ Validate Camera Event camera_logevent_endRotateCarousel Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -13450,6 +13823,7 @@ Validate Camera Event camera_logevent_startLoadFilter Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -13486,6 +13860,7 @@ Validate Camera Event camera_logevent_filterChangerDetailedState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -13522,6 +13897,7 @@ Validate Camera Event camera_logevent_shutterDetailedState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -13558,6 +13934,7 @@ Validate Camera Event camera_logevent_readyToTakeImage Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -13594,6 +13971,7 @@ Validate Camera Event camera_logevent_ccsCommandState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -13630,6 +14008,7 @@ Validate Camera Event camera_logevent_prepareToTakeImage Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -13666,6 +14045,7 @@ Validate Camera Event camera_logevent_ccsConfigured Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -13702,6 +14082,7 @@ Validate Camera Event camera_logevent_endLoadFilter Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -13738,6 +14119,7 @@ Validate Camera Event camera_logevent_endShutterOpen Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -13774,6 +14156,7 @@ Validate Camera Event camera_logevent_startIntegration Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -13810,6 +14193,7 @@ Validate Camera Event camera_logevent_summaryState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -13846,6 +14230,7 @@ Validate Camera Event camera_logevent_endInitializeImage Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -13882,6 +14267,7 @@ Validate Camera Event camera_logevent_settingsApplied Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -13918,6 +14304,7 @@ Validate Camera Event camera_logevent_endSetFilter Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -13954,6 +14341,7 @@ Validate Camera Event camera_logevent_startShutterOpen Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -13990,6 +14378,7 @@ Validate Camera Event camera_logevent_raftsDetailedState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -14026,6 +14415,7 @@ Validate Camera Event camera_logevent_availableFilters Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -14062,6 +14452,7 @@ Validate Camera Event camera_logevent_startReadout Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -14098,6 +14489,7 @@ Validate Camera Event camera_logevent_startRotateCarousel Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -14134,6 +14526,7 @@ Validate Camera Telemetry camera_shutter Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -14170,6 +14563,7 @@ Validate Camera Telemetry camera_prot Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -14206,6 +14600,7 @@ Validate Camera Telemetry camera_filter Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -14242,6 +14637,7 @@ Validate Camera Telemetry camera_heartbeat Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -14278,6 +14674,7 @@ Validate Camera Telemetry camera_was Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -14314,6 +14711,7 @@ Validate Camera Telemetry camera_ccs Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -14350,6 +14748,7 @@ Validate Camera Telemetry camera_clusterEncoder Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -14386,6 +14785,7 @@ Validate Camera Telemetry camera_cyro Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -14422,6 +14822,7 @@ Validate Camera Telemetry camera_purge Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -14458,6 +14859,7 @@ Validate Camera Telemetry camera_wds Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -14494,6 +14896,7 @@ Validate Camera Telemetry camera_gds Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -14530,6 +14933,7 @@ Validate Camera Telemetry camera_sds Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -14566,6 +14970,7 @@ Validate Camera Telemetry camera_gas Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -14602,6 +15007,7 @@ Validate Camera Telemetry camera_pcms Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -14638,6 +15044,7 @@ Validate Camera Telemetry camera_sas Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -14674,6 +15081,7 @@ Validate Camera Telemetry camera_cold Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -14710,6 +15118,7 @@ Validate Dome Command dome_command_Crawl Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -14746,6 +15155,7 @@ Validate Dome Command dome_command_Move Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -14782,6 +15192,7 @@ Validate Dome Command dome_command_Park Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -14818,6 +15229,7 @@ Validate Dome Command dome_command_SetLouvers Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -14854,6 +15266,7 @@ Validate Dome Command dome_command_CloseShutter Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -14890,6 +15303,7 @@ Validate Dome Command dome_command_OpenShutter Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -14926,6 +15340,7 @@ Validate Dome Command dome_command_StopShutter Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -14962,6 +15377,7 @@ Validate Dome Event dome_logevent_StateChanged Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -14998,6 +15414,7 @@ Validate Dome Telemetry dome_Summary Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -15034,6 +15451,7 @@ Validate DomeADB Command domeADB_command_Crawl Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -15070,6 +15488,7 @@ Validate DomeADB Command domeADB_command_Move Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -15106,6 +15525,7 @@ Validate DomeADB Command domeADB_command_VelocityMove Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -15142,6 +15562,7 @@ Validate DomeADB Command domeADB_command_Echo Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -15178,6 +15599,7 @@ Validate DomeADB Event domeADB_logevent_StateChanged Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -15214,6 +15636,7 @@ Validate DomeADB Event domeADB_logevent_DriveEnabled Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -15250,6 +15673,7 @@ Validate DomeADB Event domeADB_logevent_DriveDisabled Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -15286,6 +15710,7 @@ Validate DomeADB Event domeADB_logevent_DriveReady Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -15322,6 +15747,7 @@ Validate DomeADB Event domeADB_logevent_DriveOverTemp Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -15358,6 +15784,7 @@ Validate DomeADB Event domeADB_logevent_DriveFault Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -15394,6 +15821,7 @@ Validate DomeADB Event domeADB_logevent_RotationEnabled Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -15430,6 +15858,7 @@ Validate DomeADB Event domeADB_logevent_RotationPrevented Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -15466,6 +15895,7 @@ Validate DomeADB Event domeADB_logevent_LockingPinEngaged Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -15502,6 +15932,7 @@ Validate DomeADB Event domeADB_logevent_LockingPinDisengaged Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -15538,6 +15969,7 @@ Validate DomeADB Event domeADB_logevent_BrakeEngaged Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -15574,6 +16006,7 @@ Validate DomeADB Event domeADB_logevent_BrakeDisengaged Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -15610,6 +16043,7 @@ Validate DomeADB Event domeADB_logevent_SpeedLimitReached Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -15646,6 +16080,7 @@ Validate DomeADB Event domeADB_logevent_AccelerationLimitReached Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -15682,6 +16117,7 @@ Validate DomeADB Event domeADB_logevent_SpeedLimitSubsided Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -15718,6 +16154,7 @@ Validate DomeADB Event domeADB_logevent_AccelerationLimitSubsided Topic Byte Siz
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -15754,6 +16191,7 @@ Validate DomeADB Event domeADB_logevent_EchoResponse Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -15790,6 +16228,7 @@ Validate DomeADB Event domeADB_logevent_MotionModeChanged Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -15826,6 +16265,7 @@ Validate DomeADB Event domeADB_logevent_SubsystemError Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -15862,6 +16302,7 @@ Validate DomeADB Telemetry domeADB_status Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -15898,6 +16339,7 @@ Validate DomeAPS Command domeAPS_command_Close Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -15934,6 +16376,7 @@ Validate DomeAPS Command domeAPS_command_Open Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -15970,6 +16413,7 @@ Validate DomeAPS Command domeAPS_command_Echo Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -16006,6 +16450,7 @@ Validate DomeAPS Event domeAPS_logevent_StateChanged Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -16042,6 +16487,7 @@ Validate DomeAPS Event domeAPS_logevent_DriveEnabled Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -16078,6 +16524,7 @@ Validate DomeAPS Event domeAPS_logevent_DriveDisabled Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -16114,6 +16561,7 @@ Validate DomeAPS Event domeAPS_logevent_DriveReady Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -16150,6 +16598,7 @@ Validate DomeAPS Event domeAPS_logevent_DriveOverTemp Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -16186,6 +16635,7 @@ Validate DomeAPS Event domeAPS_logevent_DriveFault Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -16222,6 +16672,7 @@ Validate DomeAPS Event domeAPS_logevent_MovementEnabled Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -16258,6 +16709,7 @@ Validate DomeAPS Event domeAPS_logevent_MovementPrevented Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -16294,6 +16746,7 @@ Validate DomeAPS Event domeAPS_logevent_LockingPinEngaged Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -16330,6 +16783,7 @@ Validate DomeAPS Event domeAPS_logevent_LockingPinDisengaged Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -16366,6 +16820,7 @@ Validate DomeAPS Event domeAPS_logevent_LockingPinHomed Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -16402,6 +16857,7 @@ Validate DomeAPS Event domeAPS_logevent_LockingPinFloating Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -16438,6 +16894,7 @@ Validate DomeAPS Event domeAPS_logevent_CentralLockingPinEngaged Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -16474,6 +16931,7 @@ Validate DomeAPS Event domeAPS_logevent_CentralLockingPinDisengaged Topic Byte S
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -16510,6 +16968,7 @@ Validate DomeAPS Event domeAPS_logevent_CentralLockingPinHomed Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -16546,6 +17005,7 @@ Validate DomeAPS Event domeAPS_logevent_CentralLockingPinFloating Topic Byte Siz
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -16582,6 +17042,7 @@ Validate DomeAPS Event domeAPS_logevent_BrakeEngaged Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -16618,6 +17079,7 @@ Validate DomeAPS Event domeAPS_logevent_BrakeDisengaged Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -16654,6 +17116,7 @@ Validate DomeAPS Event domeAPS_logevent_EchoResponse Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -16690,6 +17153,7 @@ Validate DomeAPS Event domeAPS_logevent_APSSubsystemError Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -16726,6 +17190,7 @@ Validate DomeAPS Telemetry domeAPS_status Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -16762,6 +17227,7 @@ Validate DomeLouvers Command domeLouvers_command_SetPosition Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -16798,6 +17264,7 @@ Validate DomeLouvers Command domeLouvers_command_Echo Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -16834,6 +17301,7 @@ Validate DomeLouvers Event domeLouvers_logevent_StateChanged Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -16870,6 +17338,7 @@ Validate DomeLouvers Event domeLouvers_logevent_DriveEnabled Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -16906,6 +17375,7 @@ Validate DomeLouvers Event domeLouvers_logevent_DriveDisabled Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -16942,6 +17412,7 @@ Validate DomeLouvers Event domeLouvers_logevent_DriveReady Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -16978,6 +17449,7 @@ Validate DomeLouvers Event domeLouvers_logevent_DriveOverTemp Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -17014,6 +17486,7 @@ Validate DomeLouvers Event domeLouvers_logevent_DriveFault Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -17050,6 +17523,7 @@ Validate DomeLouvers Event domeLouvers_logevent_MovementEnabled Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -17086,6 +17560,7 @@ Validate DomeLouvers Event domeLouvers_logevent_MovementPrevented Topic Byte Siz
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -17122,6 +17597,7 @@ Validate DomeLouvers Event domeLouvers_logevent_EchoResponse Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -17158,6 +17634,7 @@ Validate DomeLouvers Event domeLouvers_logevent_SubsystemError Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -17194,6 +17671,7 @@ Validate DomeLouvers Telemetry domeLouvers_status Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -17230,6 +17708,7 @@ Validate DomeLWS Command domeLWS_command_CrawlLWS Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -17266,6 +17745,7 @@ Validate DomeLWS Command domeLWS_command_MoveLWS Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -17302,6 +17782,7 @@ Validate DomeLWS Command domeLWS_command_VelocityMoveLWS Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -17338,6 +17819,7 @@ Validate DomeLWS Command domeLWS_command_EchoLWS Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -17374,6 +17856,7 @@ Validate DomeLWS Event domeLWS_logevent_StateChanged Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -17410,6 +17893,7 @@ Validate DomeLWS Event domeLWS_logevent_DriveEnabled Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -17446,6 +17930,7 @@ Validate DomeLWS Event domeLWS_logevent_DriveDisabled Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -17482,6 +17967,7 @@ Validate DomeLWS Event domeLWS_logevent_DriveReady Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -17518,6 +18004,7 @@ Validate DomeLWS Event domeLWS_logevent_DriveOverTemp Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -17554,6 +18041,7 @@ Validate DomeLWS Event domeLWS_logevent_DriveFault Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -17590,6 +18078,7 @@ Validate DomeLWS Event domeLWS_logevent_MovementEnabled Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -17626,6 +18115,7 @@ Validate DomeLWS Event domeLWS_logevent_MovementPrevented Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -17662,6 +18152,7 @@ Validate DomeLWS Event domeLWS_logevent_LockingPinEngaged Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -17698,6 +18189,7 @@ Validate DomeLWS Event domeLWS_logevent_LockingPinDisengaged Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -17734,6 +18226,7 @@ Validate DomeLWS Event domeLWS_logevent_LockingPinHomed Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -17770,6 +18263,7 @@ Validate DomeLWS Event domeLWS_logevent_LockingPinFloating Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -17806,6 +18300,7 @@ Validate DomeLWS Event domeLWS_logevent_BrakeEngaged Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -17842,6 +18337,7 @@ Validate DomeLWS Event domeLWS_logevent_BrakeDisengaged Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -17878,6 +18374,7 @@ Validate DomeLWS Event domeLWS_logevent_SpeedLimitReached Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -17914,6 +18411,7 @@ Validate DomeLWS Event domeLWS_logevent_AccelerationLimitReached Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -17950,6 +18448,7 @@ Validate DomeLWS Event domeLWS_logevent_SpeedLimitSubsided Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -17986,6 +18485,7 @@ Validate DomeLWS Event domeLWS_logevent_AccelerationLimitSubsided Topic Byte Siz
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -18022,6 +18522,7 @@ Validate DomeLWS Event domeLWS_logevent_EchoResponse Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -18058,6 +18559,7 @@ Validate DomeLWS Event domeLWS_logevent_MotionModeChanged Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -18094,6 +18596,7 @@ Validate DomeLWS Event domeLWS_logevent_SubsystemError Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -18130,6 +18633,7 @@ Validate DomeLWS Telemetry domeLWS_status Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -18166,6 +18670,7 @@ Validate DomeMONCS Command domeMONCS_command_Echo Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -18202,6 +18707,7 @@ Validate DomeMONCS Event domeMONCS_logevent_StateChanged Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -18238,6 +18744,7 @@ Validate DomeMONCS Event domeMONCS_logevent_EchoResponse Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -18274,6 +18781,7 @@ Validate DomeMONCS Event domeMONCS_logevent_SubsystemError Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -18310,6 +18818,7 @@ Validate DomeMONCS Event domeMONCS_logevent_Interlock Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -18346,6 +18855,7 @@ Validate DomeMONCS Telemetry domeMONCS_status Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -18382,6 +18892,7 @@ Validate DomeTHCS Command domeTHCS_command_Echo Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -18418,6 +18929,7 @@ Validate DomeTHCS Event domeTHCS_logevent_StateChanged Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -18454,6 +18966,7 @@ Validate DomeTHCS Event domeTHCS_logevent_MovementEnabled Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -18490,6 +19003,7 @@ Validate DomeTHCS Event domeTHCS_logevent_MovementPrevented Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -18526,6 +19040,7 @@ Validate DomeTHCS Event domeTHCS_logevent_EchoResponse Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -18562,6 +19077,7 @@ Validate DomeTHCS Event domeTHCS_logevent_SubsystemError Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -18598,6 +19114,7 @@ Validate DomeTHCS Telemetry domeTHCS_status Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -18634,6 +19151,7 @@ Validate EEC Command eec_command_operatoMode Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -18670,6 +19188,7 @@ Validate EEC Command eec_command_nightTimeMode Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -18706,6 +19225,7 @@ Validate EEC Command eec_command_enable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -18742,6 +19262,7 @@ Validate EEC Command eec_command_exitControl Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -18778,6 +19299,7 @@ Validate EEC Command eec_command_setHVAC Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -18814,6 +19336,7 @@ Validate EEC Command eec_command_dayTimeMode Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -18850,6 +19373,7 @@ Validate EEC Command eec_command_setLouvers Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -18886,6 +19410,7 @@ Validate EEC Command eec_command_start Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -18922,6 +19447,7 @@ Validate EEC Command eec_command_engineeringMode Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -18958,6 +19484,7 @@ Validate EEC Command eec_command_standby Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -18994,6 +19521,7 @@ Validate EEC Command eec_command_disable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -19030,6 +19558,7 @@ Validate EEC Event eec_logevent_appliedSettingsMatchStart Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -19066,6 +19595,7 @@ Validate EEC Event eec_logevent_nightTimeFail Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -19102,6 +19632,7 @@ Validate EEC Event eec_logevent_rejectedCommand Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -19138,6 +19669,7 @@ Validate EEC Event eec_logevent_settingsApplied Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -19174,6 +19706,7 @@ Validate EEC Event eec_logevent_detailedState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -19210,6 +19743,7 @@ Validate EEC Event eec_logevent_dayTimeFail Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -19246,6 +19780,7 @@ Validate EEC Event eec_logevent_internalCommand Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -19282,6 +19817,7 @@ Validate EEC Event eec_logevent_loopTimeOutOfRange Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -19318,6 +19854,7 @@ Validate EEC Event eec_logevent_summaryState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -19354,6 +19891,7 @@ Validate EEC Event eec_logevent_errorCode Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -19390,6 +19928,7 @@ Validate EEC Event eec_logevent_heartbeat Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -19426,6 +19965,7 @@ Validate EEC Event eec_logevent_settingVersions Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -19462,6 +20002,7 @@ Validate EEC Telemetry eec_hvacTelem Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -19498,6 +20039,7 @@ Validate EEC Telemetry eec_timestamp Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -19534,6 +20076,7 @@ Validate EEC Telemetry eec_nightSetPoint Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -19570,6 +20113,7 @@ Validate EEC Telemetry eec_eecTelem Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -19606,6 +20150,7 @@ Validate EEC Telemetry eec_loopTimeMs Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -19642,6 +20187,7 @@ Validate EEC Telemetry eec_daySetPoint Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -19678,6 +20224,7 @@ Validate EFD Event efd_logevent_largeFileObjectAvailable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -19714,6 +20261,7 @@ Validate EFD Telemetry efd_Summary Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -19750,6 +20298,7 @@ Validate HeaderService Command headerService_command_disable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -19786,6 +20335,7 @@ Validate HeaderService Command headerService_command_enable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -19822,6 +20372,7 @@ Validate HeaderService Command headerService_command_exitControl Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -19858,6 +20409,7 @@ Validate HeaderService Command headerService_command_standby Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -19894,6 +20446,7 @@ Validate HeaderService Command headerService_command_start Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -19930,6 +20483,7 @@ Validate HeaderService Command headerService_command_enterControl Topic Byte Siz
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -19966,6 +20520,7 @@ Validate HeaderService Event headerService_logevent_appliedSettingsMatchStart To
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -20002,6 +20557,7 @@ Validate HeaderService Event headerService_logevent_errorCode Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -20038,6 +20594,7 @@ Validate HeaderService Event headerService_logevent_settingVersions Topic Byte S
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -20074,6 +20631,7 @@ Validate HeaderService Event headerService_logevent_summaryState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -20110,6 +20668,7 @@ Validate HeaderService Event headerService_logevent_detailedState Topic Byte Siz
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -20146,6 +20705,7 @@ Validate HeaderService Event headerService_logevent_heartbeat Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -20182,6 +20742,7 @@ Validate HeaderService Event headerService_logevent_rejectedCommand Topic Byte S
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -20218,6 +20779,7 @@ Validate HeaderService Event headerService_logevent_largeFileObjectAvailable Top
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -20254,6 +20816,7 @@ Validate HeaderService Event headerService_logevent_settingsApplied Topic Byte S
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -20290,6 +20853,7 @@ Validate Hexapod Command hexapod_command_configureAcceleration Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -20326,6 +20890,7 @@ Validate Hexapod Command hexapod_command_configureLimits Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -20362,6 +20927,7 @@ Validate Hexapod Command hexapod_command_configureElevationRawLUT Topic Byte Siz
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -20398,6 +20964,7 @@ Validate Hexapod Command hexapod_command_move Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -20434,6 +21001,7 @@ Validate Hexapod Command hexapod_command_positionSet Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -20470,6 +21038,7 @@ Validate Hexapod Command hexapod_command_configureVelocity Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -20506,6 +21075,7 @@ Validate Hexapod Command hexapod_command_offset Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -20542,6 +21112,7 @@ Validate Hexapod Command hexapod_command_pivot Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -20578,6 +21149,7 @@ Validate Hexapod Command hexapod_command_clearError Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -20614,6 +21186,7 @@ Validate Hexapod Command hexapod_command_test Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -20650,6 +21223,7 @@ Validate Hexapod Command hexapod_command_configureAzimuthRawLUT Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -20686,6 +21260,7 @@ Validate Hexapod Command hexapod_command_configureTemperatureRawLUT Topic Byte S
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -20722,6 +21297,7 @@ Validate Hexapod Command hexapod_command_moveLUT Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -20758,6 +21334,7 @@ Validate Hexapod Event hexapod_logevent_interlock Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -20794,6 +21371,7 @@ Validate Hexapod Event hexapod_logevent_inPosition Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -20830,6 +21408,7 @@ Validate Hexapod Event hexapod_logevent_deviceError Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -20866,6 +21445,7 @@ Validate Hexapod Event hexapod_logevent_settingsApplied Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -20902,6 +21482,7 @@ Validate Hexapod Event hexapod_logevent_rejectedCommand Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -20938,6 +21519,7 @@ Validate Hexapod Event hexapod_logevent_commandableByDDS Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -20974,6 +21556,7 @@ Validate Hexapod Telemetry hexapod_Actuators Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -21010,6 +21593,7 @@ Validate Hexapod Telemetry hexapod_Application Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -21046,6 +21630,7 @@ Validate Hexapod Telemetry hexapod_Electrical Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -21082,6 +21667,7 @@ Validate LinearStage Command LinearStage_command_start Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -21118,6 +21704,7 @@ Validate LinearStage Command LinearStage_command_disable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -21154,6 +21741,7 @@ Validate LinearStage Command LinearStage_command_enable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -21190,6 +21778,7 @@ Validate LinearStage Command LinearStage_command_standby Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -21226,6 +21815,7 @@ Validate LinearStage Command LinearStage_command_exitControl Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -21262,6 +21852,7 @@ Validate LinearStage Command LinearStage_command_enterControl Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -21298,6 +21889,7 @@ Validate LinearStage Command LinearStage_command_getPosition Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -21334,6 +21926,7 @@ Validate LinearStage Command LinearStage_command_moveRelative Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -21370,6 +21963,7 @@ Validate LinearStage Command LinearStage_command_moveAbsolute Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -21406,6 +22000,7 @@ Validate LinearStage Command LinearStage_command_getHome Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -21442,6 +22037,7 @@ Validate LinearStage Command LinearStage_command_stop Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -21478,6 +22074,7 @@ Validate LinearStage Event LinearStage_logevent_settingVersions Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -21514,6 +22111,7 @@ Validate LinearStage Event LinearStage_logevent_appliedSettingsMatchStart Topic 
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -21550,6 +22148,7 @@ Validate LinearStage Event LinearStage_logevent_errorCode Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -21586,6 +22185,7 @@ Validate LinearStage Event LinearStage_logevent_detailedState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -21622,6 +22222,7 @@ Validate LinearStage Event LinearStage_logevent_getHome Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -21658,6 +22259,7 @@ Validate LinearStage Event LinearStage_logevent_moveAbsolute Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -21694,6 +22296,7 @@ Validate LinearStage Event LinearStage_logevent_moveRelative Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -21730,6 +22333,7 @@ Validate LinearStage Event LinearStage_logevent_getPosition Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -21766,6 +22370,7 @@ Validate LinearStage Event LinearStage_logevent_stop Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -21802,6 +22407,7 @@ Validate LinearStage Event LinearStage_logevent_summaryState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -21838,6 +22444,7 @@ Validate LinearStage Telemetry LinearStage_position Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -21874,6 +22481,7 @@ Validate M1M3 Command m1m3_command_Start Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -21910,6 +22518,7 @@ Validate M1M3 Command m1m3_command_Enable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -21946,6 +22555,7 @@ Validate M1M3 Command m1m3_command_RaiseM1M3 Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -21982,6 +22592,7 @@ Validate M1M3 Command m1m3_command_AbortRaiseM1M3 Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -22018,6 +22629,7 @@ Validate M1M3 Command m1m3_command_LowerM1M3 Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -22054,6 +22666,7 @@ Validate M1M3 Command m1m3_command_EnterEngineering Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -22090,6 +22703,7 @@ Validate M1M3 Command m1m3_command_ExitEngineering Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -22126,6 +22740,7 @@ Validate M1M3 Command m1m3_command_TurnAirOn Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -22162,6 +22777,7 @@ Validate M1M3 Command m1m3_command_TurnAirOff Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -22198,6 +22814,7 @@ Validate M1M3 Command m1m3_command_TestAir Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -22234,6 +22851,7 @@ Validate M1M3 Command m1m3_command_MoveHardpointActuators Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -22270,6 +22888,7 @@ Validate M1M3 Command m1m3_command_StopHardpointMotion Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -22306,6 +22925,7 @@ Validate M1M3 Command m1m3_command_TestHardpoint Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -22342,6 +22962,7 @@ Validate M1M3 Command m1m3_command_EnableHardpointChase Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -22378,6 +22999,7 @@ Validate M1M3 Command m1m3_command_DisableHardpointChase Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -22414,6 +23036,7 @@ Validate M1M3 Command m1m3_command_TestForceActuator Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -22450,6 +23073,7 @@ Validate M1M3 Command m1m3_command_ApplyOffsetForces Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -22486,6 +23110,7 @@ Validate M1M3 Command m1m3_command_Disable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -22522,6 +23147,7 @@ Validate M1M3 Command m1m3_command_Standby Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -22558,6 +23184,7 @@ Validate M1M3 Command m1m3_command_Shutdown Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -22594,6 +23221,7 @@ Validate M1M3 Command m1m3_command_TranslateM1M3 Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -22630,6 +23258,7 @@ Validate M1M3 Command m1m3_command_ClearOffsetForces Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -22666,6 +23295,7 @@ Validate M1M3 Command m1m3_command_ApplyAberrationForcesByBendingModes Topic Byt
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -22702,6 +23332,7 @@ Validate M1M3 Command m1m3_command_ApplyAberrationForces Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -22738,6 +23369,7 @@ Validate M1M3 Command m1m3_command_ClearAberrationForces Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -22774,6 +23406,7 @@ Validate M1M3 Command m1m3_command_ApplyActiveOpticForcesByBendingModes Topic By
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -22810,6 +23443,7 @@ Validate M1M3 Command m1m3_command_ApplyActiveOpticForces Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -22846,6 +23480,7 @@ Validate M1M3 Command m1m3_command_ClearActiveOpticForces Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -22882,6 +23517,7 @@ Validate M1M3 Command m1m3_command_PositionM1M3 Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -22918,6 +23554,7 @@ Validate M1M3 Command m1m3_command_TurnLightsOn Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -22954,6 +23591,7 @@ Validate M1M3 Command m1m3_command_TurnLightsOff Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -22990,6 +23628,7 @@ Validate M1M3 Command m1m3_command_TurnPowerOn Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -23026,6 +23665,7 @@ Validate M1M3 Command m1m3_command_TurnPowerOff Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -23062,6 +23702,7 @@ Validate M1M3 Command m1m3_command_EnableHardpointCorrections Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -23098,6 +23739,7 @@ Validate M1M3 Command m1m3_command_DisableHardpointCorrections Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -23134,6 +23776,7 @@ Validate M1M3 Command m1m3_command_RunMirrorForceProfile Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -23170,6 +23813,7 @@ Validate M1M3 Command m1m3_command_AbortProfile Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -23206,6 +23850,7 @@ Validate M1M3 Command m1m3_command_ApplyOffsetForcesByMirrorForce Topic Byte Siz
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -23242,6 +23887,7 @@ Validate M1M3 Command m1m3_command_UpdatePID Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -23278,6 +23924,7 @@ Validate M1M3 Command m1m3_command_ResetPID Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -23314,6 +23961,7 @@ Validate M1M3 Command m1m3_command_SetThermalSetpoint Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -23350,6 +23998,7 @@ Validate M1M3 Command m1m3_command_ProgramILC Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -23386,6 +24035,7 @@ Validate M1M3 Command m1m3_command_ModbusTransmit Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -23422,6 +24072,7 @@ Validate M1M3 Event m1m3_logevent_ErrorCode Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -23458,6 +24109,7 @@ Validate M1M3 Event m1m3_logevent_SettingVersions Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -23494,6 +24146,7 @@ Validate M1M3 Event m1m3_logevent_AppliedSettingsMatchStart Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -23530,6 +24183,7 @@ Validate M1M3 Event m1m3_logevent_SettingsApplied Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -23566,6 +24220,7 @@ Validate M1M3 Event m1m3_logevent_DetailedState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -23602,6 +24257,7 @@ Validate M1M3 Event m1m3_logevent_SummaryState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -23638,6 +24294,7 @@ Validate M1M3 Event m1m3_logevent_HardpointActuatorInfo Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -23674,6 +24331,7 @@ Validate M1M3 Event m1m3_logevent_ForceActuatorInfo Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -23710,6 +24368,7 @@ Validate M1M3 Event m1m3_logevent_ILCWarning Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -23746,6 +24405,7 @@ Validate M1M3 Event m1m3_logevent_InterlockWarning Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -23782,6 +24442,7 @@ Validate M1M3 Event m1m3_logevent_AirSupplyStatus Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -23818,6 +24479,7 @@ Validate M1M3 Event m1m3_logevent_AirSupplyWarning Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -23854,6 +24516,7 @@ Validate M1M3 Event m1m3_logevent_InterlockStatus Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -23890,6 +24553,7 @@ Validate M1M3 Event m1m3_logevent_DisplacementSensorWarning Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -23926,6 +24590,7 @@ Validate M1M3 Event m1m3_logevent_InclinometerSensorWarning Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -23962,6 +24627,7 @@ Validate M1M3 Event m1m3_logevent_AccelerometerWarning Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -23998,6 +24664,7 @@ Validate M1M3 Event m1m3_logevent_ForceSetpointWarning Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -24034,6 +24701,7 @@ Validate M1M3 Event m1m3_logevent_ForceActuatorState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -24070,6 +24738,7 @@ Validate M1M3 Event m1m3_logevent_HardpointMonitorInfo Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -24106,6 +24775,7 @@ Validate M1M3 Event m1m3_logevent_CellLightStatus Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -24142,6 +24812,7 @@ Validate M1M3 Event m1m3_logevent_CellLightWarning Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -24178,6 +24849,7 @@ Validate M1M3 Event m1m3_logevent_PowerStatus Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -24214,6 +24886,7 @@ Validate M1M3 Event m1m3_logevent_PowerWarning Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -24250,6 +24923,7 @@ Validate M1M3 Event m1m3_logevent_ForceActuatorForceWarning Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -24286,6 +24960,7 @@ Validate M1M3 Event m1m3_logevent_GyroWarning Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -24322,6 +24997,7 @@ Validate M1M3 Event m1m3_logevent_PowerSupplyStatus Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -24358,6 +25034,7 @@ Validate M1M3 Event m1m3_logevent_AppliedOffsetForces Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -24394,6 +25071,7 @@ Validate M1M3 Event m1m3_logevent_AppliedStaticForces Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -24430,6 +25108,7 @@ Validate M1M3 Event m1m3_logevent_AppliedActiveOpticForces Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -24466,6 +25145,7 @@ Validate M1M3 Event m1m3_logevent_AppliedAberrationForces Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -24502,6 +25182,7 @@ Validate M1M3 Event m1m3_logevent_AppliedAzimuthForces Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -24538,6 +25219,7 @@ Validate M1M3 Event m1m3_logevent_CommandRejectionWarning Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -24574,6 +25256,7 @@ Validate M1M3 Event m1m3_logevent_PIDInfo Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -24610,6 +25293,7 @@ Validate M1M3 Event m1m3_logevent_HardpointActuatorWarning Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -24646,6 +25330,7 @@ Validate M1M3 Event m1m3_logevent_HardpointMonitorWarning Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -24682,6 +25367,7 @@ Validate M1M3 Event m1m3_logevent_HardpointActuatorState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -24718,6 +25404,7 @@ Validate M1M3 Event m1m3_logevent_HardpointMonitorState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -24754,6 +25441,7 @@ Validate M1M3 Event m1m3_logevent_ForceActuatorWarning Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -24790,6 +25478,7 @@ Validate M1M3 Event m1m3_logevent_RejectedStaticForces Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -24826,6 +25515,7 @@ Validate M1M3 Event m1m3_logevent_RejectedElevationForces Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -24862,6 +25552,7 @@ Validate M1M3 Event m1m3_logevent_RejectedAzimuthForces Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -24898,6 +25589,7 @@ Validate M1M3 Event m1m3_logevent_RejectedThermalForces Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -24934,6 +25626,7 @@ Validate M1M3 Event m1m3_logevent_RejectedActiveOpticForces Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -24970,6 +25663,7 @@ Validate M1M3 Event m1m3_logevent_RejectedAberrationForces Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -25006,6 +25700,7 @@ Validate M1M3 Event m1m3_logevent_RejectedBalanceForces Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -25042,6 +25737,7 @@ Validate M1M3 Event m1m3_logevent_RejectedVelocityForces Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -25078,6 +25774,7 @@ Validate M1M3 Event m1m3_logevent_RejectedAccelerationForces Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -25114,6 +25811,7 @@ Validate M1M3 Event m1m3_logevent_RejectedOffsetForces Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -25150,6 +25848,7 @@ Validate M1M3 Event m1m3_logevent_RejectedForces Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -25186,6 +25885,7 @@ Validate M1M3 Event m1m3_logevent_AppliedElevationForces Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -25222,6 +25922,7 @@ Validate M1M3 Event m1m3_logevent_AppliedAccelerationForces Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -25258,6 +25959,7 @@ Validate M1M3 Event m1m3_logevent_AppliedThermalForces Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -25294,6 +25996,7 @@ Validate M1M3 Event m1m3_logevent_AppliedVelocityForces Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -25330,6 +26033,7 @@ Validate M1M3 Event m1m3_logevent_AppliedBalanceForces Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -25366,6 +26070,7 @@ Validate M1M3 Event m1m3_logevent_AppliedForces Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -25402,6 +26107,7 @@ Validate M1M3 Event m1m3_logevent_RejectedCylinderForces Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -25438,6 +26144,7 @@ Validate M1M3 Event m1m3_logevent_AppliedCylinderForces Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -25474,6 +26181,7 @@ Validate M1M3 Event m1m3_logevent_ModbusResponse Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -25510,6 +26218,7 @@ Validate M1M3 Telemetry m1m3_ForceActuatorData Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -25546,6 +26255,7 @@ Validate M1M3 Telemetry m1m3_InclinometerData Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -25582,6 +26292,7 @@ Validate M1M3 Telemetry m1m3_OuterLoopData Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -25618,6 +26329,7 @@ Validate M1M3 Telemetry m1m3_AccelerometerData Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -25654,6 +26366,7 @@ Validate M1M3 Telemetry m1m3_HardpointActuatorData Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -25690,6 +26403,7 @@ Validate M1M3 Telemetry m1m3_IMSData Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -25726,6 +26440,7 @@ Validate M1M3 Telemetry m1m3_GyroData Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -25762,6 +26477,7 @@ Validate M1M3 Telemetry m1m3_PowerSupplyData Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -25798,6 +26514,7 @@ Validate M1M3 Telemetry m1m3_PIDData Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -25834,6 +26551,7 @@ Validate M1M3 Telemetry m1m3_HardpointMonitorData Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -25870,6 +26588,7 @@ Validate M2MS Command m2ms_command_ApplyBendingMode Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -25906,6 +26625,7 @@ Validate M2MS Command m2ms_command_ApplyForce Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -25942,6 +26662,7 @@ Validate M2MS Command m2ms_command_SetCorrectionMode Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -25978,6 +26699,7 @@ Validate M2MS Command m2ms_command_PositionMirror Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -26014,6 +26736,7 @@ Validate M2MS Command m2ms_command_MoveAxialActuator Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -26050,6 +26773,7 @@ Validate M2MS Event m2ms_logevent_M2SummaryState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -26086,6 +26810,7 @@ Validate M2MS Event m2ms_logevent_M2DetailedState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -26122,6 +26847,7 @@ Validate M2MS Event m2ms_logevent_M2FaultState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -26158,6 +26884,7 @@ Validate M2MS Event m2ms_logevent_M2AssemblyInPosition Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -26194,6 +26921,7 @@ Validate M2MS Telemetry m2ms_MirrorPositionMeasured Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -26230,6 +26958,7 @@ Validate M2MS Telemetry m2ms_AxialForcesMeasured Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -26266,6 +26995,7 @@ Validate M2MS Telemetry m2ms_TangentForcesMeasured Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -26302,6 +27032,7 @@ Validate M2MS Telemetry m2ms_ZenithAngleMeasured Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -26338,6 +27069,7 @@ Validate M2MS Telemetry m2ms_AxialActuatorAbsolutePositionSteps Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -26374,6 +27106,7 @@ Validate M2MS Telemetry m2ms_TangentActuatorAbsolutePositionSteps Topic Byte Siz
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -26410,6 +27143,7 @@ Validate M2MS Telemetry m2ms_AxialActuatorPositionAbsoluteEncoderPositionMeasure
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -26446,6 +27180,7 @@ Validate M2MS Telemetry m2ms_TangentActuatorPositionAbsoluteEncoderPositionMeasu
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -26482,6 +27217,7 @@ Validate M2MS Telemetry m2ms_PowerStatus Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -26518,6 +27254,7 @@ Validate M2MS Telemetry m2ms_TemperaturesMeasured Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -26554,6 +27291,7 @@ Validate M2MS Telemetry m2ms_RawDisplacement Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -26590,6 +27328,7 @@ Validate M2MS Telemetry m2ms_StepVectorUpdate Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -26626,6 +27365,7 @@ Validate M2MS Telemetry m2ms_TargetForces Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -26662,6 +27402,7 @@ Validate M2MS Telemetry m2ms_SystemStatus Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -26698,6 +27439,7 @@ Validate M2MS Telemetry m2ms_RawTelemetry Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -26734,6 +27476,7 @@ Validate M2MS Telemetry m2ms_ActuatorLimitSwitches Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -26770,6 +27513,7 @@ Validate MTMount Command MTMount_command_closeMirrorCover Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -26806,6 +27550,7 @@ Validate MTMount Command MTMount_command_configure Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -26842,6 +27587,7 @@ Validate MTMount Command MTMount_command_disableCamWrap Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -26878,6 +27624,7 @@ Validate MTMount Command MTMount_command_enableCamWrap Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -26914,6 +27661,7 @@ Validate MTMount Command MTMount_command_moveToTarget Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -26950,6 +27698,7 @@ Validate MTMount Command MTMount_command_openMirrorCover Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -26986,6 +27735,7 @@ Validate MTMount Command MTMount_command_trackTarget Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -27022,6 +27772,7 @@ Validate MTMount Command MTMount_command_clearerror Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -27058,6 +27809,7 @@ Validate MTMount Event MTMount_logevent_mountState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -27094,6 +27846,7 @@ Validate MTMount Event MTMount_logevent_mountWarning Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -27130,6 +27883,7 @@ Validate MTMount Event MTMount_logevent_mountError Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -27166,6 +27920,7 @@ Validate MTMount Event MTMount_logevent_mountInPosition Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -27202,6 +27957,7 @@ Validate MTMount Telemetry MTMount_Az Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -27238,6 +27994,7 @@ Validate MTMount Telemetry MTMount_Alt Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -27274,6 +28031,7 @@ Validate MTMount Telemetry MTMount_Az_CW Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -27310,6 +28068,7 @@ Validate MTMount Telemetry MTMount_Az_OSS Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -27346,6 +28105,7 @@ Validate MTMount Telemetry MTMount_Alt_OSS Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -27382,6 +28142,7 @@ Validate MTMount Telemetry MTMount_Az_TC Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -27418,6 +28179,7 @@ Validate MTMount Telemetry MTMount_Alt_TC Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -27454,6 +28216,7 @@ Validate MTMount Telemetry MTMount_Bal Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -27490,6 +28253,7 @@ Validate MTMount Telemetry MTMount_MC Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -27526,6 +28290,7 @@ Validate MTMount Telemetry MTMount_Cam_CW Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -27562,6 +28327,7 @@ Validate MTMount Telemetry MTMount_Cab_TC Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -27598,6 +28364,7 @@ Validate MTMount Telemetry MTMount_DP_1 Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -27634,6 +28401,7 @@ Validate MTMount Telemetry MTMount_DP_2 Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -27670,6 +28438,7 @@ Validate MTMount Telemetry MTMount_MotionParameters Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -27706,6 +28475,7 @@ Validate OCS Command ocs_command_sequence Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -27742,6 +28512,7 @@ Validate OCS Command ocs_command_script Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -27778,6 +28549,7 @@ Validate OCS Event ocs_logevent_ocsEntitySummaryState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -27814,6 +28586,7 @@ Validate OCS Event ocs_logevent_ocsEntityStartup Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -27850,6 +28623,7 @@ Validate OCS Event ocs_logevent_ocsEntityShutdown Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -27886,6 +28660,7 @@ Validate OCS Event ocs_logevent_ocsCommandIssued Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -27922,6 +28697,7 @@ Validate OCS Event ocs_logevent_ocsCommandStatus Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -27958,6 +28734,7 @@ Validate OCS Event ocs_logevent_ocsCurrentScript Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -27994,6 +28771,7 @@ Validate OCS Event ocs_logevent_ocsNextScript Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -28030,6 +28808,7 @@ Validate OCS Event ocs_logevent_ocsScriptStart Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -28066,6 +28845,7 @@ Validate OCS Event ocs_logevent_ocsScriptEnd Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -28102,6 +28882,7 @@ Validate OCS Event ocs_logevent_ocsScriptError Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -28138,6 +28919,7 @@ Validate OCS Event ocs_logevent_ocsScriptEntititesInUse Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -28174,6 +28956,7 @@ Validate OCS Telemetry ocs_SequencerHeartbeat Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -28197,6 +28980,43 @@ Validate OCS Telemetry ocs_SequencerHeartbeat Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
+Validate PromptProcessing Telemetry promptProcessing_SequencerHeartbeat Topic Byte Size
+	[Documentation]    Validate the promptProcessing_SequencerHeartbeat topic is less than 65536 bytes in total.
+	[Tags]    smoke    PromptProcessing
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate PromptProcessing Telemetry promptProcessing_SequencerHeartbeat Topic Columns
+	[Documentation]    Validate the promptProcessing_SequencerHeartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    PromptProcessing
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
 Validate Rotator Command rotator_command_configureAcceleration Topic Byte Size
 	[Documentation]    Validate the rotator_command_configureAcceleration topic is less than 65536 bytes in total.
 	[Tags]    smoke    Rotator
@@ -28210,6 +29030,7 @@ Validate Rotator Command rotator_command_configureAcceleration Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -28246,6 +29067,7 @@ Validate Rotator Command rotator_command_configureVelocity Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -28282,6 +29104,7 @@ Validate Rotator Command rotator_command_move Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -28318,6 +29141,7 @@ Validate Rotator Command rotator_command_track Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -28354,6 +29178,7 @@ Validate Rotator Command rotator_command_test Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -28390,6 +29215,7 @@ Validate Rotator Command rotator_command_trackStart Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -28426,6 +29252,7 @@ Validate Rotator Command rotator_command_clearError Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -28462,6 +29289,7 @@ Validate Rotator Command rotator_command_positionSet Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -28498,6 +29326,7 @@ Validate Rotator Command rotator_command_moveConstantVelocity Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -28534,6 +29363,7 @@ Validate Rotator Command rotator_command_velocitySet Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -28570,6 +29400,7 @@ Validate Rotator Event rotator_logevent_interlock Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -28606,6 +29437,7 @@ Validate Rotator Event rotator_logevent_trackLost Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -28642,6 +29474,7 @@ Validate Rotator Event rotator_logevent_tracking Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -28678,6 +29511,7 @@ Validate Rotator Event rotator_logevent_deviceError Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -28714,6 +29548,7 @@ Validate Rotator Event rotator_logevent_inPosition Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -28750,6 +29585,7 @@ Validate Rotator Event rotator_logevent_settingsApplied Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -28786,6 +29622,7 @@ Validate Rotator Event rotator_logevent_rejectedCommand Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -28822,6 +29659,7 @@ Validate Rotator Event rotator_logevent_commandableByDDS Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -28858,6 +29696,7 @@ Validate Rotator Telemetry rotator_Electrical Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -28894,6 +29733,7 @@ Validate Rotator Telemetry rotator_Application Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -28930,6 +29770,7 @@ Validate Rotator Telemetry rotator_Motors Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -28966,6 +29807,7 @@ Validate Scheduler Command scheduler_command_disable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -29002,6 +29844,7 @@ Validate Scheduler Command scheduler_command_enable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -29038,6 +29881,7 @@ Validate Scheduler Command scheduler_command_exitControl Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -29074,6 +29918,7 @@ Validate Scheduler Command scheduler_command_standby Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -29110,6 +29955,7 @@ Validate Scheduler Command scheduler_command_start Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -29146,6 +29992,7 @@ Validate Scheduler Command scheduler_command_enterControl Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -29182,6 +30029,7 @@ Validate Scheduler Event scheduler_logevent_appliedSettingsMatchStart Topic Byte
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -29218,6 +30066,7 @@ Validate Scheduler Event scheduler_logevent_errorCode Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -29254,6 +30103,7 @@ Validate Scheduler Event scheduler_logevent_settingVersions Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -29290,6 +30140,7 @@ Validate Scheduler Event scheduler_logevent_summaryState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -29326,6 +30177,7 @@ Validate Scheduler Event scheduler_logevent_detailedState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -29362,6 +30214,7 @@ Validate Scheduler Event scheduler_logevent_internalCommand Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -29398,6 +30251,7 @@ Validate Scheduler Event scheduler_logevent_heartbeat Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -29434,6 +30288,7 @@ Validate Scheduler Event scheduler_logevent_loopTimeOutOfRange Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -29470,6 +30325,7 @@ Validate Scheduler Event scheduler_logevent_rejectedCommand Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -29506,6 +30362,7 @@ Validate Scheduler Event scheduler_logevent_settingsApplied Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -29542,6 +30399,7 @@ Validate Scheduler Event scheduler_logevent_validSettings Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -29578,6 +30436,7 @@ Validate Scheduler Event scheduler_logevent_target Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -29614,6 +30473,7 @@ Validate Scheduler Event scheduler_logevent_invalidateTarget Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -29650,6 +30510,7 @@ Validate Scheduler Event scheduler_logevent_needFilterSwap Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -29686,6 +30547,7 @@ Validate Scheduler Telemetry scheduler_timestamp Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -29722,6 +30584,7 @@ Validate Scheduler Telemetry scheduler_loopTimeMs Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -29758,6 +30621,7 @@ Validate Scheduler Telemetry scheduler_nightSummary Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -29794,6 +30658,7 @@ Validate Scheduler Telemetry scheduler_predictedSchedule Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -29830,6 +30695,7 @@ Validate Scheduler Telemetry scheduler_surveyTopology Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -29866,6 +30732,7 @@ Validate Scheduler Telemetry scheduler_schedulerConfig Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -29902,6 +30769,7 @@ Validate Scheduler Telemetry scheduler_driverConfig Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -29938,6 +30806,7 @@ Validate Scheduler Telemetry scheduler_obsSiteConfig Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -29974,6 +30843,7 @@ Validate Scheduler Telemetry scheduler_telescopeConfig Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -30010,6 +30880,7 @@ Validate Scheduler Telemetry scheduler_rotatorConfig Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -30046,6 +30917,7 @@ Validate Scheduler Telemetry scheduler_domeConfig Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -30082,6 +30954,7 @@ Validate Scheduler Telemetry scheduler_cameraConfig Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -30118,6 +30991,7 @@ Validate Scheduler Telemetry scheduler_slewConfig Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -30154,6 +31028,7 @@ Validate Scheduler Telemetry scheduler_opticsLoopCorrConfig Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -30190,6 +31065,7 @@ Validate Scheduler Telemetry scheduler_parkConfig Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -30226,6 +31102,7 @@ Validate Scheduler Telemetry scheduler_generalPropConfig Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -30262,6 +31139,7 @@ Validate Scheduler Telemetry scheduler_sequencePropConfig Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -30298,6 +31176,7 @@ Validate Scheduler Telemetry scheduler_observatoryState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -30334,6 +31213,7 @@ Validate Scheduler Telemetry scheduler_observation Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -30370,6 +31250,7 @@ Validate Scheduler Telemetry scheduler_interestedProposal Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -30406,6 +31287,7 @@ Validate Scheduler Telemetry scheduler_timeHandler Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -30442,6 +31324,7 @@ Validate Scheduler Telemetry scheduler_bulkCloud Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -30478,6 +31361,7 @@ Validate Scheduler Telemetry scheduler_cloudMap Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -30514,6 +31398,7 @@ Validate Scheduler Telemetry scheduler_seeing Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -30550,6 +31435,7 @@ Validate Scheduler Telemetry scheduler_wind Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -30586,6 +31472,7 @@ Validate Scheduler Telemetry scheduler_temperature Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -30622,6 +31509,7 @@ Validate Scheduler Telemetry scheduler_skyBrightness Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -30658,6 +31546,7 @@ Validate Scheduler Telemetry scheduler_photometricQuality Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -30694,6 +31583,7 @@ Validate Scheduler Telemetry scheduler_avoidanceRegions Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -30730,6 +31620,7 @@ Validate Scheduler Telemetry scheduler_downtime Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -30766,6 +31657,7 @@ Validate SEDSpectrometer Command sedSpectrometer_command_disable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -30802,6 +31694,7 @@ Validate SEDSpectrometer Command sedSpectrometer_command_enable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -30838,6 +31731,7 @@ Validate SEDSpectrometer Command sedSpectrometer_command_exitControl Topic Byte 
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -30874,6 +31768,7 @@ Validate SEDSpectrometer Command sedSpectrometer_command_standby Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -30910,6 +31805,7 @@ Validate SEDSpectrometer Command sedSpectrometer_command_start Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -30946,6 +31842,7 @@ Validate SEDSpectrometer Command sedSpectrometer_command_enterControl Topic Byte
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -30982,6 +31879,7 @@ Validate SEDSpectrometer Command sedSpectrometer_command_SetValue Topic Byte Siz
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -31018,6 +31916,7 @@ Validate SEDSpectrometer Command sedSpectrometer_command_captureSpectImage Topic
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -31054,6 +31953,7 @@ Validate SEDSpectrometer Event sedSpectrometer_logevent_appliedSettingsMatchStar
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -31090,6 +31990,7 @@ Validate SEDSpectrometer Event sedSpectrometer_logevent_errorCode Topic Byte Siz
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -31126,6 +32027,7 @@ Validate SEDSpectrometer Event sedSpectrometer_logevent_settingVersions Topic By
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -31162,6 +32064,7 @@ Validate SEDSpectrometer Event sedSpectrometer_logevent_summaryState Topic Byte 
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -31198,6 +32101,7 @@ Validate SEDSpectrometer Event sedSpectrometer_logevent_detailedState Topic Byte
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -31234,6 +32138,7 @@ Validate SEDSpectrometer Event sedSpectrometer_logevent_largeFileObjectAvailable
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -31270,6 +32175,7 @@ Validate SEDSpectrometer Event sedSpectrometer_logevent_measuredSpectrum Topic B
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -31306,6 +32212,7 @@ Validate SEDSpectrometer Event sedSpectrometer_logevent_timeout Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -31342,6 +32249,7 @@ Validate SEDSpectrometer Event sedSpectrometer_logevent_rejectedCommand Topic By
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -31378,6 +32286,7 @@ Validate SEDSpectrometer Event sedSpectrometer_logevent_loopTimeOutOfRange Topic
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -31414,6 +32323,7 @@ Validate SEDSpectrometer Event sedSpectrometer_logevent_internalCommand Topic By
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -31450,6 +32360,7 @@ Validate SEDSpectrometer Event sedSpectrometer_logevent_heartbeat Topic Byte Siz
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -31486,6 +32397,7 @@ Validate SEDSpectrometer Telemetry sedSpectrometer_spectTemperature Topic Byte S
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -31522,6 +32434,7 @@ Validate SEDSpectrometer Telemetry sedSpectrometer_loopTime_ms Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -31558,6 +32471,7 @@ Validate SEDSpectrometer Telemetry sedSpectrometer_timestamp Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -31594,6 +32508,7 @@ Validate Sequencer Command sequencer_command_sequence Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -31630,6 +32545,7 @@ Validate Sequencer Command sequencer_command_script Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -31666,6 +32582,7 @@ Validate Sequencer Event sequencer_logevent_sequencerEntitySummaryState Topic By
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -31702,6 +32619,7 @@ Validate Sequencer Event sequencer_logevent_sequencerEntityStartup Topic Byte Si
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -31738,6 +32656,7 @@ Validate Sequencer Event sequencer_logevent_sequencerEntityShutdown Topic Byte S
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -31774,6 +32693,7 @@ Validate Sequencer Event sequencer_logevent_sequencerCommandIssued Topic Byte Si
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -31810,6 +32730,7 @@ Validate Sequencer Event sequencer_logevent_sequencerCommandStatus Topic Byte Si
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -31846,6 +32767,7 @@ Validate Sequencer Event sequencer_logevent_sequencerCurrentScript Topic Byte Si
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -31882,6 +32804,7 @@ Validate Sequencer Event sequencer_logevent_sequencerNextScript Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -31918,6 +32841,7 @@ Validate Sequencer Event sequencer_logevent_sequencerScriptStart Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -31954,6 +32878,7 @@ Validate Sequencer Event sequencer_logevent_sequencerScriptEnd Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -31990,6 +32915,7 @@ Validate Sequencer Event sequencer_logevent_sequencerScriptError Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -32026,6 +32952,7 @@ Validate Sequencer Event sequencer_logevent_sequencerScriptEntititesInUse Topic 
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -32062,6 +32989,7 @@ Validate Sequencer Telemetry sequencer_SequencerHeartbeat Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -32098,6 +33026,7 @@ Validate AtSpectrograph Command AtSpectrograph_command_disable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -32134,6 +33063,7 @@ Validate AtSpectrograph Command AtSpectrograph_command_enable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -32170,6 +33100,7 @@ Validate AtSpectrograph Command AtSpectrograph_command_exitControl Topic Byte Si
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -32206,6 +33137,7 @@ Validate AtSpectrograph Command AtSpectrograph_command_standby Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -32242,6 +33174,7 @@ Validate AtSpectrograph Command AtSpectrograph_command_abort Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -32278,6 +33211,7 @@ Validate AtSpectrograph Command AtSpectrograph_command_changeFilter Topic Byte S
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -32314,6 +33248,7 @@ Validate AtSpectrograph Command AtSpectrograph_command_changeDisperser Topic Byt
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -32350,6 +33285,7 @@ Validate AtSpectrograph Command AtSpectrograph_command_moveLinearStage Topic Byt
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -32386,6 +33322,7 @@ Validate AtSpectrograph Command AtSpectrograph_command_start Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -32422,6 +33359,7 @@ Validate AtSpectrograph Command AtSpectrograph_command_homeLinearStage Topic Byt
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -32458,6 +33396,7 @@ Validate AtSpectrograph Command AtSpectrograph_command_stopAllAxis Topic Byte Si
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -32494,6 +33433,7 @@ Validate AtSpectrograph Event AtSpectrograph_logevent_appliedSettingsMatchStart 
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -32530,6 +33470,7 @@ Validate AtSpectrograph Event AtSpectrograph_logevent_errorCode Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -32566,6 +33507,7 @@ Validate AtSpectrograph Event AtSpectrograph_logevent_settingVersions Topic Byte
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -32602,6 +33544,7 @@ Validate AtSpectrograph Event AtSpectrograph_logevent_summaryState Topic Byte Si
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -32638,6 +33581,7 @@ Validate AtSpectrograph Event AtSpectrograph_logevent_detailedState Topic Byte S
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -32674,6 +33618,7 @@ Validate AtSpectrograph Event AtSpectrograph_logevent_heartbeat Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -32710,6 +33655,7 @@ Validate AtSpectrograph Event AtSpectrograph_logevent_internalCommand Topic Byte
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -32746,6 +33692,7 @@ Validate AtSpectrograph Event AtSpectrograph_logevent_loopTimeOutOfRange Topic B
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -32782,6 +33729,7 @@ Validate AtSpectrograph Event AtSpectrograph_logevent_rejectedCommand Topic Byte
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -32818,6 +33766,7 @@ Validate AtSpectrograph Event AtSpectrograph_logevent_timeout Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -32854,6 +33803,7 @@ Validate AtSpectrograph Event AtSpectrograph_logevent_filterInPosition Topic Byt
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -32890,6 +33840,7 @@ Validate AtSpectrograph Event AtSpectrograph_logevent_reportedFilterPosition Top
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -32926,6 +33877,7 @@ Validate AtSpectrograph Event AtSpectrograph_logevent_reportedDisperserPosition 
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -32962,6 +33914,7 @@ Validate AtSpectrograph Event AtSpectrograph_logevent_disperserInPosition Topic 
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -32998,6 +33951,7 @@ Validate AtSpectrograph Event AtSpectrograph_logevent_linearStageInPosition Topi
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -33034,6 +33988,7 @@ Validate AtSpectrograph Event AtSpectrograph_logevent_fwState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -33070,6 +34025,7 @@ Validate AtSpectrograph Event AtSpectrograph_logevent_gwState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -33106,6 +34062,7 @@ Validate AtSpectrograph Telemetry AtSpectrograph_timestamp Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -33142,6 +34099,7 @@ Validate AtSpectrograph Telemetry AtSpectrograph_loopTime Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -33178,6 +34136,7 @@ Validate TCS Command tcs_command_wfpCalculate Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -33214,6 +34173,7 @@ Validate TCS Command tcs_command_wfpSimulate Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -33250,6 +34210,7 @@ Validate TCS Command tcs_command_filterChangeRequest Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -33286,6 +34247,7 @@ Validate TCS Command tcs_command_stopMotion Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -33322,6 +34284,7 @@ Validate TCS Command tcs_command_target Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -33358,6 +34321,7 @@ Validate TCS Event tcs_logevent_wfpDataReady Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -33394,6 +34358,7 @@ Validate TCS Event tcs_logevent_zemaxError Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -33430,6 +34395,7 @@ Validate TCS Event tcs_logevent_InternalCommand Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -33466,6 +34432,7 @@ Validate TCS Event tcs_logevent_DetailedState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -33502,6 +34469,7 @@ Validate TCS Event tcs_logevent_Heartbeat Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -33538,6 +34506,7 @@ Validate TCS Event tcs_logevent_LoopTimeOutOfRange Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -33574,6 +34543,7 @@ Validate TCS Event tcs_logevent_RejectedCommand Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -33610,6 +34580,7 @@ Validate TCS Event tcs_logevent_HeartbeatIn Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -33646,6 +34617,7 @@ Validate TCS Event tcs_logevent_FilterChangeInPosition Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -33682,6 +34654,7 @@ Validate TCS Event tcs_logevent_TargetInPosition Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -33718,6 +34691,7 @@ Validate TCS Event tcs_logevent_SettingsApplied Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -33754,6 +34728,7 @@ Validate TCS Telemetry tcs_kernel_PointingModel Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -33790,6 +34765,7 @@ Validate TCS Telemetry tcs_AOCS Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -33826,6 +34802,7 @@ Validate TCS Telemetry tcs_kernel_TimeKeeper Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -33862,6 +34839,7 @@ Validate TCS Telemetry tcs_kernel_Site Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -33898,6 +34876,7 @@ Validate TCS Telemetry tcs_kernel_Target Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -33934,6 +34913,7 @@ Validate TCS Telemetry tcs_kernel_PointingControl Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -33970,6 +34950,7 @@ Validate TCS Telemetry tcs_kernel_TrackRefSys Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -34006,6 +34987,7 @@ Validate TCS Telemetry tcs_ZEMAX Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -34042,6 +35024,7 @@ Validate TCS Telemetry tcs_kernel_PointingLog Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -34078,6 +35061,7 @@ Validate TCS Telemetry tcs_kernel_DawdleFilter Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -34114,6 +35098,7 @@ Validate TCS Telemetry tcs_kernel_OpticsVt Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -34150,6 +35135,7 @@ Validate TCS Telemetry tcs_WEP Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -34186,6 +35172,7 @@ Validate TCS Telemetry tcs_kernel_TrackingTarget Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -34222,6 +35209,7 @@ Validate TCS Telemetry tcs_kernel_FK5Target Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -34258,6 +35246,7 @@ Validate TCS Telemetry tcs_LoopTime_ms Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -34294,6 +35283,7 @@ Validate TCS Telemetry tcs_Timestamp Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -34330,6 +35320,7 @@ Validate TcsOfc Command tcsOfc_command_disable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -34366,6 +35357,7 @@ Validate TcsOfc Command tcsOfc_command_enable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -34402,6 +35394,7 @@ Validate TcsOfc Command tcsOfc_command_exitControl Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -34438,6 +35431,7 @@ Validate TcsOfc Command tcsOfc_command_standby Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -34474,6 +35468,7 @@ Validate TcsOfc Command tcsOfc_command_start Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -34510,6 +35505,7 @@ Validate TcsOfc Command tcsOfc_command_enterControl Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -34546,6 +35542,7 @@ Validate TcsOfc Command tcsOfc_command_readShwfsFile Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -34582,6 +35579,7 @@ Validate TcsOfc Command tcsOfc_command_readWfsFile Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -34618,6 +35616,7 @@ Validate TcsOfc Event tcsOfc_logevent_appliedSettingsMatchStart Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -34654,6 +35653,7 @@ Validate TcsOfc Event tcsOfc_logevent_errorCode Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -34690,6 +35690,7 @@ Validate TcsOfc Event tcsOfc_logevent_settingVersions Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -34726,6 +35727,7 @@ Validate TcsOfc Event tcsOfc_logevent_summaryState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -34762,6 +35764,7 @@ Validate TcsOfc Event tcsOfc_logevent_detailedState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -34798,6 +35801,7 @@ Validate TcsOfc Event tcsOfc_logevent_internalCommand Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -34834,6 +35838,7 @@ Validate TcsOfc Event tcsOfc_logevent_heartbeat Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -34870,6 +35875,7 @@ Validate TcsOfc Event tcsOfc_logevent_loopTimeOutOfRange Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -34906,6 +35912,7 @@ Validate TcsOfc Event tcsOfc_logevent_rejectedCommand Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -34942,6 +35949,7 @@ Validate TcsOfc Event tcsOfc_logevent_noEnoughZernikeTerm Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -34978,6 +35986,7 @@ Validate TcsOfc Event tcsOfc_logevent_degreeOfFreedom Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -35014,6 +36023,7 @@ Validate TcsOfc Telemetry tcsOfc_timestamp Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -35050,6 +36060,7 @@ Validate TcsOfc Telemetry tcsOfc_loopTimeMs Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -35086,6 +36097,7 @@ Validate TcsWEP Command tcsWEP_command_disable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -35122,6 +36134,7 @@ Validate TcsWEP Command tcsWEP_command_enable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -35158,6 +36171,7 @@ Validate TcsWEP Command tcsWEP_command_exitControl Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -35194,6 +36208,7 @@ Validate TcsWEP Command tcsWEP_command_standby Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -35230,6 +36245,7 @@ Validate TcsWEP Command tcsWEP_command_start Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -35266,6 +36282,7 @@ Validate TcsWEP Command tcsWEP_command_enterControl Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -35302,6 +36319,7 @@ Validate TcsWEP Event tcsWEP_logevent_appliedSettingsMatchStart Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -35338,6 +36356,7 @@ Validate TcsWEP Event tcsWEP_logevent_errorCode Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -35374,6 +36393,7 @@ Validate TcsWEP Event tcsWEP_logevent_settingVersions Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -35410,6 +36430,7 @@ Validate TcsWEP Event tcsWEP_logevent_summaryState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -35446,6 +36467,7 @@ Validate TcsWEP Event tcsWEP_logevent_detailedState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -35482,6 +36504,7 @@ Validate TcsWEP Event tcsWEP_logevent_internalCommand Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -35518,6 +36541,7 @@ Validate TcsWEP Event tcsWEP_logevent_heartbeat Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -35554,6 +36578,7 @@ Validate TcsWEP Event tcsWEP_logevent_loopTimeOutOfRange Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -35590,6 +36615,7 @@ Validate TcsWEP Event tcsWEP_logevent_rejectedCommand Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -35626,6 +36652,7 @@ Validate TcsWEP Event tcsWEP_logevent_noEnoughWfsNum Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -35662,6 +36689,7 @@ Validate TcsWEP Event tcsWEP_logevent_wavefrontError Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -35698,6 +36726,7 @@ Validate TcsWEP Event tcsWEP_logevent_normalTargetWfsList Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -35734,6 +36763,7 @@ Validate TcsWEP Event tcsWEP_logevent_comcamTargetWfsList Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -35770,6 +36800,7 @@ Validate TcsWEP Event tcsWEP_logevent_famTargetWfsList Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -35806,6 +36837,7 @@ Validate TcsWEP Event tcsWEP_logevent_sensorPssnList Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -35842,6 +36874,7 @@ Validate TcsWEP Event tcsWEP_logevent_simParamList Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -35878,6 +36911,7 @@ Validate TcsWEP Event tcsWEP_logevent_imageReady Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -35914,6 +36948,7 @@ Validate TcsWEP Telemetry tcsWEP_timestamp Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -35950,6 +36985,7 @@ Validate TcsWEP Telemetry tcsWEP_loopTimeMs Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -35986,6 +37022,7 @@ Validate Test Command Test_command_standby Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -36022,6 +37059,7 @@ Validate Test Command Test_command_start Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -36058,6 +37096,7 @@ Validate Test Command Test_command_enable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -36094,6 +37133,7 @@ Validate Test Command Test_command_enterControl Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -36130,6 +37170,7 @@ Validate Test Command Test_command_exitControl Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -36166,6 +37207,7 @@ Validate Test Command Test_command_disable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -36202,6 +37244,7 @@ Validate Test Command Test_command_setScalars Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -36238,6 +37281,7 @@ Validate Test Command Test_command_setArrays Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -36274,6 +37318,7 @@ Validate Test Event Test_logevent_appliedSettingsMatchStart Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -36310,6 +37355,7 @@ Validate Test Event Test_logevent_errorCode Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -36346,6 +37392,7 @@ Validate Test Event Test_logevent_settingVersions Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -36382,6 +37429,7 @@ Validate Test Event Test_logevent_summaryState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -36418,6 +37466,7 @@ Validate Test Event Test_logevent_scalars Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -36454,6 +37503,7 @@ Validate Test Event Test_logevent_arrays Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -36490,6 +37540,7 @@ Validate Test Telemetry Test_scalars Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -36526,6 +37577,7 @@ Validate Test Telemetry Test_arrays Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -36562,6 +37614,7 @@ Validate VMS Command vms_command_Start Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -36598,6 +37651,7 @@ Validate VMS Command vms_command_Enable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -36634,6 +37688,7 @@ Validate VMS Command vms_command_Disable Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -36670,6 +37725,7 @@ Validate VMS Command vms_command_Standby Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -36706,6 +37762,7 @@ Validate VMS Command vms_command_Shutdown Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -36742,6 +37799,7 @@ Validate VMS Event vms_logevent_SummaryState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -36778,6 +37836,7 @@ Validate VMS Event vms_logevent_ErrorCode Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -36814,6 +37873,7 @@ Validate VMS Event vms_logevent_DetailedState Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -36850,6 +37910,7 @@ Validate VMS Event vms_logevent_SettingVersions Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -36886,6 +37947,7 @@ Validate VMS Event vms_logevent_AppliedSettingsMatchStart Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -36922,6 +37984,7 @@ Validate VMS Event vms_logevent_SettingsApplied Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -36958,6 +38021,7 @@ Validate VMS Event vms_logevent_AcquisitionRate Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -36994,6 +38058,7 @@ Validate VMS Telemetry vms_M1M3 Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -37030,6 +38095,7 @@ Validate VMS Telemetry vms_TMA Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -37066,6 +38132,7 @@ Validate VMS Telemetry vms_M2 Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -37102,6 +38169,7 @@ Validate VMS Telemetry vms_CameraRotator Topic Byte Size
 	@{TypeArray}=    Split to Lines    ${output}
 	:FOR    ${index}    IN RANGE    ${itemCount}
 	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
@@ -37128,7 +38196,7 @@ Validate VMS Telemetry vms_CameraRotator Topic Columns
 *** Keywords ***
 Create the DataType:Size Dictionary
 	[Tags]    smoke
-	&{dict}=    Create Dictionary    boolean=2    byte=1    char=1    double=8    float=4    int=4    long=4    llong=8    octet=1    short=2    string=1    ushort=2    ulong=4
+	&{dict}=    Create Dictionary    boolean=2    byte=1    char=1    double=8    float=4    int=4    long=4    llong=8    octet=1    short=2    string=1    uint=4    ushort=2    ulong=4
 	Log Many    &{dict}
 	Set Suite Variable    &{dict}
 
