@@ -8482,8 +8482,8 @@ Validate AtThermoelectricCooler Event AtThermoelectricCooler_logevent_hardwareWa
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate AtThermoelectricCooler Event AtThermoelectricCooler_logevent_temperatureReached Topic Byte Size
-	[Documentation]    Validate the AtThermoelectricCooler_logevent_temperatureReached topic is less than 65536 bytes in total.
+Validate AtThermoelectricCooler Event AtThermoelectricCooler_logevent_insideTemperatureRange Topic Byte Size
+	[Documentation]    Validate the AtThermoelectricCooler_logevent_insideTemperatureRange topic is less than 65536 bytes in total.
 	[Tags]    smoke    AtThermoelectricCooler
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8506,8 +8506,8 @@ Validate AtThermoelectricCooler Event AtThermoelectricCooler_logevent_temperatur
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate AtThermoelectricCooler Event AtThermoelectricCooler_logevent_temperatureReached Topic Columns
-	[Documentation]    Validate the AtThermoelectricCooler_logevent_temperatureReached topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate AtThermoelectricCooler Event AtThermoelectricCooler_logevent_insideTemperatureRange Topic Columns
+	[Documentation]    Validate the AtThermoelectricCooler_logevent_insideTemperatureRange topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    AtThermoelectricCooler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
