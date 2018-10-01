@@ -20,12 +20,6 @@ Validate AtArchiver Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   atArchiver_Telemetry.xml - valid
 
-Validate AtDome Telemetry XML file
-	[Tags]    smoke    AtDome
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/AtDome/AtDome_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   AtDome_Telemetry.xml - valid
-
 Validate AtMCS Telemetry XML file
 	[Tags]    smoke    AtMCS
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/AtMCS/AtMCS_Telemetry.xml
