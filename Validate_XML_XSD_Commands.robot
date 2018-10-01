@@ -20,12 +20,6 @@ Validate AtArchiver Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   atArchiver_Commands.xml - valid
 
-Validate AtDome Commands XML file
-	[Tags]    smoke    AtDome
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/AtDome/AtDome_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   AtDome_Commands.xml - valid
-
 Validate AtHeaderService Commands XML file
 	[Tags]    smoke    AtHeaderService
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/atHeaderService/atHeaderService_Commands.xml
