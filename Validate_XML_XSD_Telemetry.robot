@@ -51,7 +51,7 @@ Validate AtThermoelectricCooler Telemetry XML file
 	Should Contain    ${output}   AtThermoelectricCooler_Telemetry.xml - valid
 
 Validate AtWhiteLight Telemetry XML file
-	[Tags]    smoke    AtWhiteLight
+	[Tags]    smoke    AtWhiteLight    TSS-3066
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/AtWhiteLight/AtWhiteLight_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   AtWhiteLight_Telemetry.xml - valid
@@ -169,6 +169,12 @@ Validate OCS Telemetry XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/ocs/ocs_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   ocs_Telemetry.xml - valid
+
+Validate PromptProcessing Telemetry XML file
+	[Tags]    smoke    PromptProcessing    TSS-2633
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   PromptProcessing_Telemetry.xml - valid
 
 Validate Rotator Telemetry XML file
 	[Tags]    smoke    Rotator
