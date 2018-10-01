@@ -170,12 +170,6 @@ Validate OCS Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   ocs_Telemetry.xml - valid
 
-Validate PromptProcessing Telemetry XML file
-	[Tags]    smoke    PromptProcessing    TSS-2633
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   PromptProcessing_Telemetry.xml - valid
-
 Validate Rotator Telemetry XML file
 	[Tags]    smoke    Rotator
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/rotator/rotator_Telemetry.xml
