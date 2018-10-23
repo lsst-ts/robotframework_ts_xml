@@ -36676,8 +36676,8 @@ Validate ScriptLoader Command ScriptLoader_command_load Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ScriptLoader Command ScriptLoader_command_list_available Topic Byte Size
-	[Documentation]    Validate the ScriptLoader_command_list_available topic is less than 65536 bytes in total.
+Validate ScriptLoader Command ScriptLoader_command_listAvailable Topic Byte Size
+	[Documentation]    Validate the ScriptLoader_command_listAvailable topic is less than 65536 bytes in total.
 	[Tags]    smoke    ScriptLoader
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -36700,8 +36700,8 @@ Validate ScriptLoader Command ScriptLoader_command_list_available Topic Byte Siz
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ScriptLoader Command ScriptLoader_command_list_available Topic Columns
-	[Documentation]    Validate the ScriptLoader_command_list_available topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ScriptLoader Command ScriptLoader_command_listAvailable Topic Columns
+	[Documentation]    Validate the ScriptLoader_command_listAvailable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ScriptLoader
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -36713,8 +36713,8 @@ Validate ScriptLoader Command ScriptLoader_command_list_available Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ScriptLoader Command ScriptLoader_command_list_loaded Topic Byte Size
-	[Documentation]    Validate the ScriptLoader_command_list_loaded topic is less than 65536 bytes in total.
+Validate ScriptLoader Command ScriptLoader_command_listLoaded Topic Byte Size
+	[Documentation]    Validate the ScriptLoader_command_listLoaded topic is less than 65536 bytes in total.
 	[Tags]    smoke    ScriptLoader
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -36737,8 +36737,8 @@ Validate ScriptLoader Command ScriptLoader_command_list_loaded Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ScriptLoader Command ScriptLoader_command_list_loaded Topic Columns
-	[Documentation]    Validate the ScriptLoader_command_list_loaded topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ScriptLoader Command ScriptLoader_command_listLoaded Topic Columns
+	[Documentation]    Validate the ScriptLoader_command_listLoaded topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ScriptLoader
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -36972,8 +36972,8 @@ Validate ScriptLoader Event ScriptLoader_logevent_summaryState Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ScriptLoader Event ScriptLoader_logevent_available_scripts Topic Byte Size
-	[Documentation]    Validate the ScriptLoader_logevent_available_scripts topic is less than 65536 bytes in total.
+Validate ScriptLoader Event ScriptLoader_logevent_availableScripts Topic Byte Size
+	[Documentation]    Validate the ScriptLoader_logevent_availableScripts topic is less than 65536 bytes in total.
 	[Tags]    smoke    ScriptLoader
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -36996,8 +36996,8 @@ Validate ScriptLoader Event ScriptLoader_logevent_available_scripts Topic Byte S
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ScriptLoader Event ScriptLoader_logevent_available_scripts Topic Columns
-	[Documentation]    Validate the ScriptLoader_logevent_available_scripts topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ScriptLoader Event ScriptLoader_logevent_availableScripts Topic Columns
+	[Documentation]    Validate the ScriptLoader_logevent_availableScripts topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ScriptLoader
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -37009,8 +37009,8 @@ Validate ScriptLoader Event ScriptLoader_logevent_available_scripts Topic Column
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ScriptLoader Event ScriptLoader_logevent_script_info Topic Byte Size
-	[Documentation]    Validate the ScriptLoader_logevent_script_info topic is less than 65536 bytes in total.
+Validate ScriptLoader Event ScriptLoader_logevent_scriptInfo Topic Byte Size
+	[Documentation]    Validate the ScriptLoader_logevent_scriptInfo topic is less than 65536 bytes in total.
 	[Tags]    smoke    ScriptLoader
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -37033,8 +37033,8 @@ Validate ScriptLoader Event ScriptLoader_logevent_script_info Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ScriptLoader Event ScriptLoader_logevent_script_info Topic Columns
-	[Documentation]    Validate the ScriptLoader_logevent_script_info topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ScriptLoader Event ScriptLoader_logevent_scriptInfo Topic Columns
+	[Documentation]    Validate the ScriptLoader_logevent_scriptInfo topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ScriptLoader
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
