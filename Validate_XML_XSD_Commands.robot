@@ -56,12 +56,6 @@ Validate AtWhiteLight Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   AtWhiteLight_Commands.xml - valid
 
-Validate AtWhiteLightChiller Commands XML file
-	[Tags]    smoke    AtWhiteLightChiller
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/AtWhiteLightChiller/AtWhiteLightChiller_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   AtWhiteLightChiller_Commands.xml - valid
-
 Validate AtCamera Commands XML file
 	[Tags]    smoke    AtCamera
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/atcamera/atcamera_Commands.xml
@@ -74,17 +68,17 @@ Validate ATCS Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   atcs_Commands.xml - valid
 
-Validate CalibrationElectrometer Commands XML file
-	[Tags]    smoke    CalibrationElectrometer
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   calibrationElectrometer_Commands.xml - valid
-
 Validate Camera Commands XML file
 	[Tags]    smoke    Camera
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/camera/camera_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   camera_Commands.xml - valid
+
+Validate Cbp Commands XML file
+	[Tags]    smoke    Cbp
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/CBP/CBP_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   CBP_Commands.xml - valid
 
 Validate Dome Commands XML file
 	[Tags]    smoke    Dome
@@ -146,6 +140,12 @@ Validate Hexapod Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   hexapod_Commands.xml - valid
 
+Validate Laser Commands XML file
+	[Tags]    smoke    Laser
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/Laser/Laser_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   Laser_Commands.xml - valid
+
 Validate LinearStage Commands XML file
 	[Tags]    smoke    LinearStage
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml
@@ -163,6 +163,12 @@ Validate M2MS Commands XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/m2ms/m2ms_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   m2ms_Commands.xml - valid
+
+Validate MtAtElectrometer Commands XML file
+	[Tags]    smoke    MtAtElectrometer
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/MtAtElectrometer/MtAtElectrometer_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   MtAtElectrometer_Commands.xml - valid
 
 Validate MTMount Commands XML file
 	[Tags]    smoke    MTMount
@@ -188,6 +194,12 @@ Validate Scheduler Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   scheduler_Commands.xml - valid
 
+Validate ScriptLoader Commands XML file
+	[Tags]    smoke    ScriptLoader
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/ScriptLoader/ScriptLoader_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   ScriptLoader_Commands.xml - valid
+
 Validate SEDSpectrometer Commands XML file
 	[Tags]    smoke    SEDSpectrometer
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Commands.xml
@@ -199,18 +211,6 @@ Validate Sequencer Commands XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/sequencer/sequencer_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   sequencer_Commands.xml - valid
-
-Validate AtSpectrograph Commands XML file
-	[Tags]    smoke    AtSpectrograph
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/AtSpectrograph/AtSpectrograph_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   AtSpectrograph_Commands.xml - valid
-
-Validate SummitFacility Commands XML file
-	[Tags]    smoke    SummitFacility
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/summitFacility/summitFacility_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   summitFacility_Commands.xml - valid
 
 Validate TCS Commands XML file
 	[Tags]    smoke    TCS
@@ -229,6 +229,12 @@ Validate TcsWEP Commands XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   tcsWEP_Commands.xml - valid
+
+Validate Test Commands XML file
+	[Tags]    smoke    Test
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/Test/Test_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   Test_Commands.xml - valid
 
 Validate VMS Commands XML file
 	[Tags]    smoke    VMS

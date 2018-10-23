@@ -183,27 +183,6 @@ Validate AtWhiteLight Telemetry
 	Log    ${output}
 	Should Contain    ${output}   AtWhiteLight_Telemetry.xml - valid
 
-Validate AtWhiteLightChiller Commands
-	[Documentation]    Validate the AtWhiteLightChiller Commands XML file.
-	[Tags]    smoke    AtWhiteLightChiller
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/AtWhiteLightChiller/AtWhiteLightChiller_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   AtWhiteLightChiller_Commands.xml - valid
-
-Validate AtWhiteLightChiller Events
-	[Documentation]    Validate the AtWhiteLightChiller Events XML file.
-	[Tags]    smoke    AtWhiteLightChiller
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/AtWhiteLightChiller/AtWhiteLightChiller_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   AtWhiteLightChiller_Events.xml - valid
-
-Validate AtWhiteLightChiller Telemetry
-	[Documentation]    Validate the AtWhiteLightChiller Telemetry XML file.
-	[Tags]    smoke    AtWhiteLightChiller
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/AtWhiteLightChiller/AtWhiteLightChiller_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   AtWhiteLightChiller_Telemetry.xml - valid
-
 Validate AtCamera Commands
 	[Documentation]    Validate the AtCamera Commands XML file.
 	[Tags]    smoke    AtCamera
@@ -246,27 +225,6 @@ Validate ATCS Telemetry
 	Log    ${output}
 	Should Contain    ${output}   atcs_Telemetry.xml - valid
 
-Validate CalibrationElectrometer Commands
-	[Documentation]    Validate the CalibrationElectrometer Commands XML file.
-	[Tags]    smoke    CalibrationElectrometer
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   calibrationElectrometer_Commands.xml - valid
-
-Validate CalibrationElectrometer Events
-	[Documentation]    Validate the CalibrationElectrometer Events XML file.
-	[Tags]    smoke    CalibrationElectrometer
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   calibrationElectrometer_Events.xml - valid
-
-Validate CalibrationElectrometer Telemetry
-	[Documentation]    Validate the CalibrationElectrometer Telemetry XML file.
-	[Tags]    smoke    CalibrationElectrometer
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   calibrationElectrometer_Telemetry.xml - valid
-
 Validate Camera Commands
 	[Documentation]    Validate the Camera Commands XML file.
 	[Tags]    smoke    Camera
@@ -287,6 +245,27 @@ Validate Camera Telemetry
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/camera/camera_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   camera_Telemetry.xml - valid
+
+Validate Cbp Commands
+	[Documentation]    Validate the Cbp Commands XML file.
+	[Tags]    smoke    Cbp
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/CBP/CBP_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   CBP_Commands.xml - valid
+
+Validate Cbp Events
+	[Documentation]    Validate the Cbp Events XML file.
+	[Tags]    smoke    Cbp
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/CBP/CBP_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   CBP_Events.xml - valid
+
+Validate Cbp Telemetry
+	[Documentation]    Validate the Cbp Telemetry XML file.
+	[Tags]    smoke    Cbp
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/CBP/CBP_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   CBP_Telemetry.xml - valid
 
 Validate Dome Commands
 	[Documentation]    Validate the Dome Commands XML file.
@@ -505,6 +484,27 @@ Validate Hexapod Telemetry
 	Log    ${output}
 	Should Contain    ${output}   hexapod_Telemetry.xml - valid
 
+Validate Laser Commands
+	[Documentation]    Validate the Laser Commands XML file.
+	[Tags]    smoke    Laser
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/Laser/Laser_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   Laser_Commands.xml - valid
+
+Validate Laser Events
+	[Documentation]    Validate the Laser Events XML file.
+	[Tags]    smoke    Laser
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/Laser/Laser_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   Laser_Events.xml - valid
+
+Validate Laser Telemetry
+	[Documentation]    Validate the Laser Telemetry XML file.
+	[Tags]    smoke    Laser
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/Laser/Laser_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   Laser_Telemetry.xml - valid
+
 Validate LinearStage Commands
 	[Documentation]    Validate the LinearStage Commands XML file.
 	[Tags]    smoke    LinearStage
@@ -567,6 +567,27 @@ Validate M2MS Telemetry
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/m2ms/m2ms_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   m2ms_Telemetry.xml - valid
+
+Validate MtAtElectrometer Commands
+	[Documentation]    Validate the MtAtElectrometer Commands XML file.
+	[Tags]    smoke    MtAtElectrometer
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MtAtElectrometer/MtAtElectrometer_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   MtAtElectrometer_Commands.xml - valid
+
+Validate MtAtElectrometer Events
+	[Documentation]    Validate the MtAtElectrometer Events XML file.
+	[Tags]    smoke    MtAtElectrometer
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MtAtElectrometer/MtAtElectrometer_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   MtAtElectrometer_Events.xml - valid
+
+Validate MtAtElectrometer Telemetry
+	[Documentation]    Validate the MtAtElectrometer Telemetry XML file.
+	[Tags]    smoke    MtAtElectrometer
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MtAtElectrometer/MtAtElectrometer_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   MtAtElectrometer_Telemetry.xml - valid
 
 Validate MTMount Commands
 	[Documentation]    Validate the MTMount Commands XML file.
@@ -652,6 +673,20 @@ Validate Scheduler Telemetry
 	Log    ${output}
 	Should Contain    ${output}   scheduler_Telemetry.xml - valid
 
+Validate ScriptLoader Commands
+	[Documentation]    Validate the ScriptLoader Commands XML file.
+	[Tags]    smoke    ScriptLoader
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ScriptLoader/ScriptLoader_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   ScriptLoader_Commands.xml - valid
+
+Validate ScriptLoader Events
+	[Documentation]    Validate the ScriptLoader Events XML file.
+	[Tags]    smoke    ScriptLoader
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ScriptLoader/ScriptLoader_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   ScriptLoader_Events.xml - valid
+
 Validate SEDSpectrometer Commands
 	[Documentation]    Validate the SEDSpectrometer Commands XML file.
 	[Tags]    smoke    SEDSpectrometer
@@ -693,48 +728,6 @@ Validate Sequencer Telemetry
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/sequencer/sequencer_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   sequencer_Telemetry.xml - valid
-
-Validate AtSpectrograph Commands
-	[Documentation]    Validate the AtSpectrograph Commands XML file.
-	[Tags]    smoke    AtSpectrograph
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/AtSpectrograph/AtSpectrograph_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   AtSpectrograph_Commands.xml - valid
-
-Validate AtSpectrograph Events
-	[Documentation]    Validate the AtSpectrograph Events XML file.
-	[Tags]    smoke    AtSpectrograph
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/AtSpectrograph/AtSpectrograph_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   AtSpectrograph_Events.xml - valid
-
-Validate AtSpectrograph Telemetry
-	[Documentation]    Validate the AtSpectrograph Telemetry XML file.
-	[Tags]    smoke    AtSpectrograph
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/AtSpectrograph/AtSpectrograph_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   AtSpectrograph_Telemetry.xml - valid
-
-Validate SummitFacility Commands
-	[Documentation]    Validate the SummitFacility Commands XML file.
-	[Tags]    smoke    SummitFacility
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/summitFacility/summitFacility_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   summitFacility_Commands.xml - valid
-
-Validate SummitFacility Events
-	[Documentation]    Validate the SummitFacility Events XML file.
-	[Tags]    smoke    SummitFacility
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/summitFacility/summitFacility_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   summitFacility_Events.xml - valid
-
-Validate SummitFacility Telemetry
-	[Documentation]    Validate the SummitFacility Telemetry XML file.
-	[Tags]    smoke    SummitFacility
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/summitFacility/summitFacility_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   summitFacility_Telemetry.xml - valid
 
 Validate TCS Commands
 	[Documentation]    Validate the TCS Commands XML file.
@@ -798,6 +791,27 @@ Validate TcsWEP Telemetry
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/tcsWEP/tcsWEP_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   tcsWEP_Telemetry.xml - valid
+
+Validate Test Commands
+	[Documentation]    Validate the Test Commands XML file.
+	[Tags]    smoke    Test
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/Test/Test_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   Test_Commands.xml - valid
+
+Validate Test Events
+	[Documentation]    Validate the Test Events XML file.
+	[Tags]    smoke    Test
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/Test/Test_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   Test_Events.xml - valid
+
+Validate Test Telemetry
+	[Documentation]    Validate the Test Telemetry XML file.
+	[Tags]    smoke    Test
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/Test/Test_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   Test_Telemetry.xml - valid
 
 Validate VMS Commands
 	[Documentation]    Validate the VMS Commands XML file.

@@ -56,12 +56,6 @@ Validate AtWhiteLight Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   AtWhiteLight_Telemetry.xml - valid
 
-Validate AtWhiteLightChiller Telemetry XML file
-	[Tags]    smoke    AtWhiteLightChiller
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/AtWhiteLightChiller/AtWhiteLightChiller_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   AtWhiteLightChiller_Telemetry.xml - valid
-
 Validate AtCamera Telemetry XML file
 	[Tags]    smoke    AtCamera
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/atcamera/atcamera_Telemetry.xml
@@ -74,17 +68,17 @@ Validate ATCS Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   atcs_Telemetry.xml - valid
 
-Validate CalibrationElectrometer Telemetry XML file
-	[Tags]    smoke    CalibrationElectrometer
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   calibrationElectrometer_Telemetry.xml - valid
-
 Validate Camera Telemetry XML file
 	[Tags]    smoke    Camera
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/camera/camera_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   camera_Telemetry.xml - valid
+
+Validate Cbp Telemetry XML file
+	[Tags]    smoke    Cbp
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/CBP/CBP_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   CBP_Telemetry.xml - valid
 
 Validate Dome Telemetry XML file
 	[Tags]    smoke    Dome
@@ -146,6 +140,12 @@ Validate Hexapod Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   hexapod_Telemetry.xml - valid
 
+Validate Laser Telemetry XML file
+	[Tags]    smoke    Laser
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/Laser/Laser_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   Laser_Telemetry.xml - valid
+
 Validate LinearStage Telemetry XML file
 	[Tags]    smoke    LinearStage
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/LinearStage/LinearStage_Telemetry.xml
@@ -163,6 +163,12 @@ Validate M2MS Telemetry XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/m2ms/m2ms_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   m2ms_Telemetry.xml - valid
+
+Validate MtAtElectrometer Telemetry XML file
+	[Tags]    smoke    MtAtElectrometer
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/MtAtElectrometer/MtAtElectrometer_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   MtAtElectrometer_Telemetry.xml - valid
 
 Validate MTMount Telemetry XML file
 	[Tags]    smoke    MTMount
@@ -200,18 +206,6 @@ Validate Sequencer Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   sequencer_Telemetry.xml - valid
 
-Validate AtSpectrograph Telemetry XML file
-	[Tags]    smoke    AtSpectrograph
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/AtSpectrograph/AtSpectrograph_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   AtSpectrograph_Telemetry.xml - valid
-
-Validate SummitFacility Telemetry XML file
-	[Tags]    smoke    SummitFacility
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/summitFacility/summitFacility_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   summitFacility_Telemetry.xml - valid
-
 Validate TCS Telemetry XML file
 	[Tags]    smoke    TCS
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/tcs/tcs_Telemetry.xml
@@ -229,6 +223,12 @@ Validate TcsWEP Telemetry XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/tcsWEP/tcsWEP_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   tcsWEP_Telemetry.xml - valid
+
+Validate Test Telemetry XML file
+	[Tags]    smoke    Test
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/Test/Test_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   Test_Telemetry.xml - valid
 
 Validate VMS Telemetry XML file
 	[Tags]    smoke    VMS
