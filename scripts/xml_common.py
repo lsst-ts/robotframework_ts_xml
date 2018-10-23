@@ -72,6 +72,8 @@ def CapitalizeSubsystem( subsystem ):
 		return "OCS"
 	elif subsystem == "PromptProcessing":
 		return "PromptProcessing"
+	elif subsystem == "ScriptLoader":
+		return "ScriptLoader"
 	elif subsystem == "sedSpectrometer":
 		return "SEDSpectrometer"
 	elif subsystem == "summitFacility":
