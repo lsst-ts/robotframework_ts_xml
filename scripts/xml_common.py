@@ -10,9 +10,9 @@ import os
 # =========
 """Defines the array of Commandable SAL Components, or CSCs."""
 subsystems = ['archiver', 'atArchiver', 'AtDome', 'atHeaderService', 'AtMCS', 'atMonochromator', 'AtPneumatics', 'atScheduler', 'AtWhiteLight', 
-				'AtWhiteLightChiller', 'atcamera', 'atcs', 'calibrationElectrometer', 'camera', 'catchupArchiver', 'CBP',
+				'AtWhiteLightChiller', 'atcamera', 'atcs', 'camera', 'catchupArchiver', 'CBP',
 				'dome', 'domeADB', 'domeAPS', 'domeLouvers', 'domeLWS', 'domeMONCS', 'domeTHCS', 'eec', 'efd', 
-				'headerService', 'hexapod', 'Laser', 'LinearStage', 'm1m3', 'm2ms', 'MTMount', 'ocs', 'PromptProcessing', 'rotator', 
+				'headerService', 'hexapod', 'Laser', 'LinearStage', 'm1m3', 'm2ms', 'MtAtElectrometer', 'MTMount', 'ocs', 'PromptProcessing', 'rotator', 
 				'scheduler', 'ScriptLoader', 'sedSpectrometer', 'sequencer', 'Spectrograph', 'summitFacility', 'tcs', 'tcsOfc', 'tcsWEP', 'Test', 'vms']
 
 
@@ -48,8 +48,6 @@ def CapitalizeSubsystem( subsystem ):
 		return "AtWhiteLight"
 	elif subsystem == "AtWhiteLightChiller":
 		return "AtWhiteLightChiller"
-	elif subsystem == "calibrationElectrometer":
-		return "CalibrationElectrometer"
 	elif subsystem == "catchuparchiver":
 		return "CatchupArchiver"
 	elif subsystem == "catchuparchiver":
@@ -66,6 +64,8 @@ def CapitalizeSubsystem( subsystem ):
 		return "M1M3"
 	elif subsystem == "m2ms":
 		return "M2MS"
+	elif subsystem == "MtAtElectrometer":
+		return "MtAtElectrometer"
 	elif subsystem == "MTMount":
 		return subsystem
 	elif subsystem == "ocs":
