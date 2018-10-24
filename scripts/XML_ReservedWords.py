@@ -34,18 +34,19 @@ for subsystem in xml_common.subsystems:
 
 		# Mark test cases with Jira tickets
 		if subsystem == "Test" and messageType == "Telemetry":
-			skipped="    TSS-3223"
+			mysql_skipped="    TSS-3223"
 		elif subsystem == "Test" and messageType == "Events":
-			skipped="    TSS-322"
+			mysql_skipped="    TSS-3223"
 		elif subsystem == "Test" and messageType == "Commands":
-			skipped="    TSS-322"
+			mysql_skipped="    TSS-3223"
 		else:
-			skipped=""
+			mysql_skipped=""
+			idl_skipped=""
 
         # Create the EFDB_Name Test Cases to verify IDL Reserved words.
 		file.write("Validate " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType + " EFDB_Name Values Do Not Use IDL Reserved words\n")
 		file.write("\t[Documentation]    Validate the " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType + " <EFDB_Name> tags do not contain IDL Reserved Words.\n")
-		file.write("\t[Tags]    smoke    " + xml_common.CapitalizeSubsystem(subsystem) + skipped + "\n")
+		file.write("\t[Tags]    smoke    " + xml_common.CapitalizeSubsystem(subsystem) + idl_skipped + "\n")
 		file.write("\tComment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.\n")
 		file.write("\t${output}=    Run    ${xml} sel -t -m \"//SAL" + messageType.rstrip('s') + "Set/SAL" + messageType.rstrip('s') + "/item/EFDB_Name\" -v . -n ${folder}/sal_interfaces/" + subsystem + "/" + subsystem + "_" + messageType + ".xml |awk '{$1=$1};1' |uniq |tr '\\n' '|'\n")
 		file.write("\tLog    ${output}\n")
@@ -54,7 +55,7 @@ for subsystem in xml_common.subsystems:
 		# Create the EFDB_Name Test Cases to verify MySQL Reserved words.
 		file.write("Validate " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType + " EFDB_Name Values Do Not Use MySQL Reserved Words\n")
 		file.write("\t[Documentation]    Validate the " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType + " <EFDB_Name> tags do not contain MySQL Reserved Words.\n")
-		file.write("\t[Tags]    smoke    " + xml_common.CapitalizeSubsystem(subsystem) + "\n")
+		file.write("\t[Tags]    smoke    " + xml_common.CapitalizeSubsystem(subsystem) + mysql_skipped + "\n")
 		file.write("\tComment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.\n")
 		file.write("\t${output}=    Run    ${xml} sel -t -m \"//SAL" + messageType.rstrip('s') + "Set/SAL" + messageType.rstrip('s') + "/item/EFDB_Name\" -v . -n ${folder}/sal_interfaces/" + subsystem + "/" + subsystem + "_" + messageType + ".xml |awk '{$1=$1};1' |uniq |tr '\\n' '|'\n")
 		file.write("\tLog    ${output}\n")
