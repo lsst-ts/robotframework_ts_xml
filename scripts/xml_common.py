@@ -48,9 +48,7 @@ def CapitalizeSubsystem( subsystem ):
 		return "AtWhiteLight"
 	elif subsystem == "AtWhiteLightChiller":
 		return "AtWhiteLightChiller"
-	elif subsystem == "catchuparchiver":
-		return "CatchupArchiver"
-	elif subsystem == "catchuparchiver":
+	elif subsystem == "catchupArchiver":
 		return "CatchupArchiver"
 	elif subsystem == "eec":
 		return "EEC"

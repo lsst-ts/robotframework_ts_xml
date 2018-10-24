@@ -29,10 +29,19 @@ for topictype in ["Commands", "Events", "Telemetry"]:
 	for subsystem in xml_common.subsystems:
 		# Get the list of XMLs for each CSC, to include Telemetry, Events and Commands.
 		xmls = glob.glob(os.environ['XML_HOME'] + "/sal_interfaces/" + subsystem + "/" + subsystem + "_" + topictype + "*")
+
+		# Mark test cases with Jira tickets
+		if subsystem == "AtWhiteLight" and topictype == "Telemetry":
+			skipped="    TSS-3066"
+		elif subsystem == "Test" and topictype == "Telemetry":
+			skipped="    TSS-3224"
+		else:
+			skipped=""
+
 		for xml in xmls:
 			# Create the Test Cases.
 			file.write("Validate " + xml_common.CapitalizeSubsystem(subsystem) + " " + topictype + " XML file\n")
-			file.write("\t[Tags]    smoke    " + xml_common.CapitalizeSubsystem(subsystem) + "\n")
+			file.write("\t[Tags]    smoke    " + xml_common.CapitalizeSubsystem(subsystem) + skipped  + "\n")
 			file.write("\t${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SAL" + topictype.rstrip("s") + "Set.xsd ${folder}/sal_interfaces/" + subsystem + "/" + subsystem + "_" + topictype + ".xml\n")
 			file.write("\tLog    ${output}\n")
 			file.write("\tShould Contain    ${output}   " + subsystem + "_" + topictype + ".xml - valid\n")

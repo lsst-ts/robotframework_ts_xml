@@ -51,7 +51,7 @@ Validate AtScheduler Telemetry XML file
 	Should Contain    ${output}   atScheduler_Telemetry.xml - valid
 
 Validate AtWhiteLight Telemetry XML file
-	[Tags]    smoke    AtWhiteLight
+	[Tags]    smoke    AtWhiteLight    TSS-3066
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/AtWhiteLight/AtWhiteLight_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   AtWhiteLight_Telemetry.xml - valid
@@ -225,7 +225,7 @@ Validate TcsWEP Telemetry XML file
 	Should Contain    ${output}   tcsWEP_Telemetry.xml - valid
 
 Validate Test Telemetry XML file
-	[Tags]    smoke    Test
+	[Tags]    smoke    Test    TSS-3224
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/Test/Test_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   Test_Telemetry.xml - valid
