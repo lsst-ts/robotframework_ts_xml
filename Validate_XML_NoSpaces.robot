@@ -2668,62 +2668,6 @@ Validate Scheduler Telemetry <EFDB_Name> element
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate ScriptLoader Commands <Subsystem> element
-	[Documentation]    Validate the ScriptLoader Commands <Subsystem> elements do not contain embedded spaces.
-	[Tags]    smoke    ScriptLoader
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Subsystem" -v . -n ${folder}/sal_interfaces/ScriptLoader/ScriptLoader_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate ScriptLoader Commands <EFDB_Topic> element
-	[Documentation]    Validate the ScriptLoader Commands <EFDB_Topic> elements do not contain embedded spaces.
-	[Tags]    smoke    ScriptLoader
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/ScriptLoader/ScriptLoader_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate ScriptLoader Commands <Alias> element
-	[Documentation]    Validate the ScriptLoader Commands <Alias> elements do not contain embedded spaces.
-	[Tags]    smoke    ScriptLoader
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/ScriptLoader/ScriptLoader_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate ScriptLoader Commands <EFDB_Name> element
-	[Documentation]    Validate the ScriptLoader Commands <EFDB_Name> elements do not contain embedded spaces.
-	[Tags]    smoke    ScriptLoader
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/ScriptLoader/ScriptLoader_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate ScriptLoader Events <Subsystem> element
-	[Documentation]    Validate the ScriptLoader Events <Subsystem> elements do not contain embedded spaces.
-	[Tags]    smoke    ScriptLoader
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Subsystem" -v . -n ${folder}/sal_interfaces/ScriptLoader/ScriptLoader_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate ScriptLoader Events <EFDB_Topic> element
-	[Documentation]    Validate the ScriptLoader Events <EFDB_Topic> elements do not contain embedded spaces.
-	[Tags]    smoke    ScriptLoader
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/ScriptLoader/ScriptLoader_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate ScriptLoader Events <Alias> element
-	[Documentation]    Validate the ScriptLoader Events <Alias> elements do not contain embedded spaces.
-	[Tags]    smoke    ScriptLoader
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/ScriptLoader/ScriptLoader_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate ScriptLoader Events <EFDB_Name> element
-	[Documentation]    Validate the ScriptLoader Events <EFDB_Name> elements do not contain embedded spaces.
-	[Tags]    smoke    ScriptLoader
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/ScriptLoader/ScriptLoader_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
 Validate SEDSpectrometer Commands <Subsystem> element
 	[Documentation]    Validate the SEDSpectrometer Commands <Subsystem> elements do not contain embedded spaces.
 	[Tags]    smoke    SEDSpectrometer

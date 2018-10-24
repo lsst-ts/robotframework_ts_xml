@@ -673,20 +673,6 @@ Validate Scheduler Telemetry
 	Log    ${output}
 	Should Contain    ${output}   scheduler_Telemetry.xml - valid
 
-Validate ScriptLoader Commands
-	[Documentation]    Validate the ScriptLoader Commands XML file.
-	[Tags]    smoke    ScriptLoader
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ScriptLoader/ScriptLoader_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   ScriptLoader_Commands.xml - valid
-
-Validate ScriptLoader Events
-	[Documentation]    Validate the ScriptLoader Events XML file.
-	[Tags]    smoke    ScriptLoader
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ScriptLoader/ScriptLoader_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   ScriptLoader_Events.xml - valid
-
 Validate SEDSpectrometer Commands
 	[Documentation]    Validate the SEDSpectrometer Commands XML file.
 	[Tags]    smoke    SEDSpectrometer

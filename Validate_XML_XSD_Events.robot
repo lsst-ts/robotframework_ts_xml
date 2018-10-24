@@ -206,12 +206,6 @@ Validate Scheduler Events XML file
 	Log    ${output}
 	Should Contain    ${output}   scheduler_Events.xml - valid
 
-Validate ScriptLoader Events XML file
-	[Tags]    smoke    ScriptLoader
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/ScriptLoader/ScriptLoader_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   ScriptLoader_Events.xml - valid
-
 Validate SEDSpectrometer Events XML file
 	[Tags]    smoke    SEDSpectrometer
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Events.xml

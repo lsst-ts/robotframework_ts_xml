@@ -194,12 +194,6 @@ Validate Scheduler Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   scheduler_Commands.xml - valid
 
-Validate ScriptLoader Commands XML file
-	[Tags]    smoke    ScriptLoader
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/ScriptLoader/ScriptLoader_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   ScriptLoader_Commands.xml - valid
-
 Validate SEDSpectrometer Commands XML file
 	[Tags]    smoke    SEDSpectrometer
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Commands.xml

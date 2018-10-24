@@ -768,22 +768,6 @@ Validate Scheduler Telemetry XML Counts
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate ScriptLoader Commands XML Counts
-	[Documentation]    Validate the ScriptLoader Commands XML count.
-	[Tags]    smoke    ScriptLoader
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/ScriptLoader/ScriptLoader_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
-Validate ScriptLoader Events XML Counts
-	[Documentation]    Validate the ScriptLoader Events XML count.
-	[Tags]    smoke    ScriptLoader
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/ScriptLoader/ScriptLoader_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
 Validate SEDSpectrometer Commands XML Counts
 	[Documentation]    Validate the SEDSpectrometer Commands XML count.
 	[Tags]    smoke    SEDSpectrometer
