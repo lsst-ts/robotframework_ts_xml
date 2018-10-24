@@ -14402,6 +14402,43 @@ Validate Cbp Command CBP_command_changeMask Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
+Validate Cbp Command CBP_command_setFocus Topic Byte Size
+	[Documentation]    Validate the CBP_command_setFocus topic is less than 65536 bytes in total.
+	[Tags]    smoke    Cbp
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[11]/item)" -n ${folder}/sal_interfaces/CBP/CBP_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[11]/item/Count" -v . -n ${folder}/sal_interfaces/CBP/CBP_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[11]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/CBP/CBP_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Cbp Command CBP_command_setFocus Topic Columns
+	[Documentation]    Validate the CBP_command_setFocus topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    Cbp
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[11]/item)" -n ${folder}/sal_interfaces/CBP/CBP_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[11]/item/Count" -v . -n ${folder}/sal_interfaces/CBP/CBP_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
 Validate Cbp Event CBP_logevent_settingVersions Topic Byte Size
 	[Documentation]    Validate the CBP_logevent_settingVersions topic is less than 65536 bytes in total.
 	[Tags]    smoke    Cbp
@@ -14618,6 +14655,154 @@ Validate Cbp Telemetry CBP_status Topic Columns
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/CBP/CBP_Telemetry.xml
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/Count" -v . -n ${folder}/sal_interfaces/CBP/CBP_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Cbp Telemetry CBP_mask Topic Byte Size
+	[Documentation]    Validate the CBP_mask topic is less than 65536 bytes in total.
+	[Tags]    smoke    Cbp
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/CBP/CBP_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[2]/item/Count" -v . -n ${folder}/sal_interfaces/CBP/CBP_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/CBP/CBP_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Cbp Telemetry CBP_mask Topic Columns
+	[Documentation]    Validate the CBP_mask topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    Cbp
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/CBP/CBP_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[2]/item/Count" -v . -n ${folder}/sal_interfaces/CBP/CBP_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Cbp Telemetry CBP_azimuth Topic Byte Size
+	[Documentation]    Validate the CBP_azimuth topic is less than 65536 bytes in total.
+	[Tags]    smoke    Cbp
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[3]/item)" -n ${folder}/sal_interfaces/CBP/CBP_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[3]/item/Count" -v . -n ${folder}/sal_interfaces/CBP/CBP_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[3]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/CBP/CBP_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Cbp Telemetry CBP_azimuth Topic Columns
+	[Documentation]    Validate the CBP_azimuth topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    Cbp
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[3]/item)" -n ${folder}/sal_interfaces/CBP/CBP_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[3]/item/Count" -v . -n ${folder}/sal_interfaces/CBP/CBP_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Cbp Telemetry CBP_altitude Topic Byte Size
+	[Documentation]    Validate the CBP_altitude topic is less than 65536 bytes in total.
+	[Tags]    smoke    Cbp
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[4]/item)" -n ${folder}/sal_interfaces/CBP/CBP_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[4]/item/Count" -v . -n ${folder}/sal_interfaces/CBP/CBP_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/CBP/CBP_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Cbp Telemetry CBP_altitude Topic Columns
+	[Documentation]    Validate the CBP_altitude topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    Cbp
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[4]/item)" -n ${folder}/sal_interfaces/CBP/CBP_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[4]/item/Count" -v . -n ${folder}/sal_interfaces/CBP/CBP_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Cbp Telemetry CBP_focus Topic Byte Size
+	[Documentation]    Validate the CBP_focus topic is less than 65536 bytes in total.
+	[Tags]    smoke    Cbp
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[5]/item)" -n ${folder}/sal_interfaces/CBP/CBP_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[5]/item/Count" -v . -n ${folder}/sal_interfaces/CBP/CBP_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/CBP/CBP_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Cbp Telemetry CBP_focus Topic Columns
+	[Documentation]    Validate the CBP_focus topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    Cbp
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[5]/item)" -n ${folder}/sal_interfaces/CBP/CBP_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[5]/item/Count" -v . -n ${folder}/sal_interfaces/CBP/CBP_Telemetry.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -36491,8 +36676,8 @@ Validate ScriptLoader Command ScriptLoader_command_load Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ScriptLoader Command ScriptLoader_command_list_available Topic Byte Size
-	[Documentation]    Validate the ScriptLoader_command_list_available topic is less than 65536 bytes in total.
+Validate ScriptLoader Command ScriptLoader_command_listAvailable Topic Byte Size
+	[Documentation]    Validate the ScriptLoader_command_listAvailable topic is less than 65536 bytes in total.
 	[Tags]    smoke    ScriptLoader
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -36515,8 +36700,8 @@ Validate ScriptLoader Command ScriptLoader_command_list_available Topic Byte Siz
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ScriptLoader Command ScriptLoader_command_list_available Topic Columns
-	[Documentation]    Validate the ScriptLoader_command_list_available topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ScriptLoader Command ScriptLoader_command_listAvailable Topic Columns
+	[Documentation]    Validate the ScriptLoader_command_listAvailable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ScriptLoader
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -36528,8 +36713,8 @@ Validate ScriptLoader Command ScriptLoader_command_list_available Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ScriptLoader Command ScriptLoader_command_list_loaded Topic Byte Size
-	[Documentation]    Validate the ScriptLoader_command_list_loaded topic is less than 65536 bytes in total.
+Validate ScriptLoader Command ScriptLoader_command_listLoaded Topic Byte Size
+	[Documentation]    Validate the ScriptLoader_command_listLoaded topic is less than 65536 bytes in total.
 	[Tags]    smoke    ScriptLoader
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -36552,8 +36737,8 @@ Validate ScriptLoader Command ScriptLoader_command_list_loaded Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ScriptLoader Command ScriptLoader_command_list_loaded Topic Columns
-	[Documentation]    Validate the ScriptLoader_command_list_loaded topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ScriptLoader Command ScriptLoader_command_listLoaded Topic Columns
+	[Documentation]    Validate the ScriptLoader_command_listLoaded topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ScriptLoader
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -36787,8 +36972,8 @@ Validate ScriptLoader Event ScriptLoader_logevent_summaryState Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ScriptLoader Event ScriptLoader_logevent_available_scripts Topic Byte Size
-	[Documentation]    Validate the ScriptLoader_logevent_available_scripts topic is less than 65536 bytes in total.
+Validate ScriptLoader Event ScriptLoader_logevent_availableScripts Topic Byte Size
+	[Documentation]    Validate the ScriptLoader_logevent_availableScripts topic is less than 65536 bytes in total.
 	[Tags]    smoke    ScriptLoader
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -36811,8 +36996,8 @@ Validate ScriptLoader Event ScriptLoader_logevent_available_scripts Topic Byte S
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ScriptLoader Event ScriptLoader_logevent_available_scripts Topic Columns
-	[Documentation]    Validate the ScriptLoader_logevent_available_scripts topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ScriptLoader Event ScriptLoader_logevent_availableScripts Topic Columns
+	[Documentation]    Validate the ScriptLoader_logevent_availableScripts topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ScriptLoader
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -36824,8 +37009,8 @@ Validate ScriptLoader Event ScriptLoader_logevent_available_scripts Topic Column
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ScriptLoader Event ScriptLoader_logevent_script_info Topic Byte Size
-	[Documentation]    Validate the ScriptLoader_logevent_script_info topic is less than 65536 bytes in total.
+Validate ScriptLoader Event ScriptLoader_logevent_scriptInfo Topic Byte Size
+	[Documentation]    Validate the ScriptLoader_logevent_scriptInfo topic is less than 65536 bytes in total.
 	[Tags]    smoke    ScriptLoader
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -36848,8 +37033,8 @@ Validate ScriptLoader Event ScriptLoader_logevent_script_info Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ScriptLoader Event ScriptLoader_logevent_script_info Topic Columns
-	[Documentation]    Validate the ScriptLoader_logevent_script_info topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ScriptLoader Event ScriptLoader_logevent_scriptInfo Topic Columns
+	[Documentation]    Validate the ScriptLoader_logevent_scriptInfo topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ScriptLoader
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
