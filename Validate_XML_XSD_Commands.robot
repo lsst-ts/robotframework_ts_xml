@@ -140,12 +140,6 @@ Validate Hexapod Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   hexapod_Commands.xml - valid
 
-Validate Laser Commands XML file
-	[Tags]    smoke    Laser
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/Laser/Laser_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   Laser_Commands.xml - valid
-
 Validate LinearStage Commands XML file
 	[Tags]    smoke    LinearStage
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml

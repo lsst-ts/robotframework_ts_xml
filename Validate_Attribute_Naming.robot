@@ -621,33 +621,6 @@ Validate Hexapod Telemetry Attribute Names
 	: FOR    ${item}    IN    @{attributes}
 	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
 
-Validate Laser Commands Attribute Names
-	[Documentation]    Validate the Laser Commands attribute names conform to naming convention.
-	[Tags]    smoke    Laser    
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/Laser/Laser_Commands.xml |sed -e 's/\\n/,/g'
-	Log    ${output}
-	@{attributes}=    Split to Lines    ${output}
-	: FOR    ${item}    IN    @{attributes}
-	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
-
-Validate Laser Events Attribute Names
-	[Documentation]    Validate the Laser Events attribute names conform to naming convention.
-	[Tags]    smoke    Laser    
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/Laser/Laser_Events.xml |sed -e 's/\\n/,/g'
-	Log    ${output}
-	@{attributes}=    Split to Lines    ${output}
-	: FOR    ${item}    IN    @{attributes}
-	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
-
-Validate Laser Telemetry Attribute Names
-	[Documentation]    Validate the Laser Telemetry attribute names conform to naming convention.
-	[Tags]    smoke    Laser    
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/Laser/Laser_Telemetry.xml |sed -e 's/\\n/,/g'
-	Log    ${output}
-	@{attributes}=    Split to Lines    ${output}
-	: FOR    ${item}    IN    @{attributes}
-	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
-
 Validate LinearStage Commands Attribute Names
 	[Documentation]    Validate the LinearStage Commands attribute names conform to naming convention.
 	[Tags]    smoke    LinearStage    

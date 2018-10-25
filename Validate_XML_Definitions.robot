@@ -484,27 +484,6 @@ Validate Hexapod Telemetry
 	Log    ${output}
 	Should Contain    ${output}   hexapod_Telemetry.xml - valid
 
-Validate Laser Commands
-	[Documentation]    Validate the Laser Commands XML file.
-	[Tags]    smoke    Laser
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/Laser/Laser_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   Laser_Commands.xml - valid
-
-Validate Laser Events
-	[Documentation]    Validate the Laser Events XML file.
-	[Tags]    smoke    Laser
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/Laser/Laser_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   Laser_Events.xml - valid
-
-Validate Laser Telemetry
-	[Documentation]    Validate the Laser Telemetry XML file.
-	[Tags]    smoke    Laser
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/Laser/Laser_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   Laser_Telemetry.xml - valid
-
 Validate LinearStage Commands
 	[Documentation]    Validate the LinearStage Commands XML file.
 	[Tags]    smoke    LinearStage

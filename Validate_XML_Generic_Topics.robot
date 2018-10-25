@@ -758,40 +758,6 @@ Validate Hexapod Event Enumeration
 	:FOR    ${item}    IN    @{Enumerations}
 	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
 
-Validate Laser Generic Commands
-	[Documentation]    Validate the Laser contains all the required generic, or State Machine, commands.
-	[Tags]    smoke    Laser
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    Laser
-	Comment    Get the Commands for the CSC.
-	${topics}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/Laser/Laser_Commands.xml
-	@{Commands}=    Split to Lines    ${topics}
-	:FOR    ${state}    IN    @{GenericCommands}
-	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _command_     ${state}
-	\    Run Keyword And Continue On Failure    Should Contain    ${Commands}    ${string}
-
-Validate Laser Generic Events
-	[Documentation]    Validate the Laser contains all the required generic events.
-	[Tags]    smoke    Laser
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    Laser
-	Comment    Get the Events.
-	${topics}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/Laser/Laser_Events.xml
-	@{Events}=    Split to Lines    ${topics}
-	:FOR    ${item}    IN    @{GenericEvents}
-	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _logevent_    ${item}
-	\    Run Keyword And Continue On Failure    Should Contain    ${Events}    ${string}
-
-Validate Laser Event Enumeration
-	[Documentation]    Validate the Laser defines the required enumeration.
-	[Tags]    smoke    Laser
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    Laser
-	Comment    Get the Event Enumerations.
-	${enums}=    Run    ${xml} sel -t -m "//SALEventSet/Enumeration" -v . -n ${folder}/sal_interfaces/Laser/Laser_Events.xml
-	:FOR    ${item}    IN    @{Enumerations}
-	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
-
 Validate LinearStage Generic Commands
 	[Documentation]    Validate the LinearStage contains all the required generic, or State Machine, commands.
 	[Tags]    smoke    LinearStage
