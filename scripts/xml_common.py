@@ -9,9 +9,8 @@ import os
 # Variables
 # =========
 """Defines the array of Commandable SAL Components, or CSCs."""
-# AtDome - TSS-3055
-subsystems = ['archiver', 'atArchiver', 'atHeaderService', 'AtMCS', 'atMonochromator', 'AtPneumatics', 'atScheduler', 
-				'AtThermoelectricCooler', 'AtWhiteLight', 'atcamera', 'atcs', 'calibrationElectrometer', 'camera', 'catchupArchiver', 
+subsystems = ['archiver', 'atArchiver', 'AtDome', 'atHeaderService', 'AtMCS', 'atMonochromator', 'AtPneumatics', 'atScheduler', 'AtWhiteLight', 
+				'AtWhiteLightChiller', 'atcamera', 'atcs', 'camera', 'catchupArchiver', 'CBP',
 				'dome', 'domeADB', 'domeAPS', 'domeLouvers', 'domeLWS', 'domeMONCS', 'domeTHCS', 'eec', 'efd', 
 				'headerService', 'hexapod', 'Laser', 'LinearStage', 'm1m3', 'm2ms', 'MTMount', 'ocs', 'PromptProcessing', 'rotator', 
 				'scheduler', 'sedSpectrometer', 'sequencer', 'AtSpectrograph', 'SummitFacility', 'tcs', 'tcsOfc', 'tcsWEP', 'Test', 'vms']
@@ -47,10 +46,8 @@ def CapitalizeSubsystem( subsystem ):
 		return "AtSpectrograph"
 	elif subsystem == "AtWhiteLight":
 		return "AtWhiteLight"
-	elif subsystem == "AtThermoelectricCooler":
-		return "AtThermoelectricCooler"
-	elif subsystem == "calibrationElectrometer":
-		return "CalibrationElectrometer"
+	elif subsystem == "AtWhiteLightChiller":
+		return "AtWhiteLightChiller"
 	elif subsystem == "catchuparchiver":
 		return "CatchupArchiver"
 	elif subsystem == "catchuparchiver":

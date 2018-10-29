@@ -20,6 +20,12 @@ Validate AtArchiver Events XML file
 	Log    ${output}
 	Should Contain    ${output}   atArchiver_Events.xml - valid
 
+Validate AtDome Events XML file
+	[Tags]    smoke    AtDome
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/AtDome/AtDome_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   AtDome_Events.xml - valid
+
 Validate AtHeaderService Events XML file
 	[Tags]    smoke    AtHeaderService
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/atHeaderService/atHeaderService_Events.xml
@@ -50,12 +56,6 @@ Validate AtScheduler Events XML file
 	Log    ${output}
 	Should Contain    ${output}   atScheduler_Events.xml - valid
 
-Validate AtThermoelectricCooler Events XML file
-	[Tags]    smoke    AtThermoelectricCooler
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/AtThermoelectricCooler/AtThermoelectricCooler_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   AtThermoelectricCooler_Events.xml - valid
-
 Validate AtWhiteLight Events XML file
 	[Tags]    smoke    AtWhiteLight
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/AtWhiteLight/AtWhiteLight_Events.xml
@@ -74,17 +74,17 @@ Validate ATCS Events XML file
 	Log    ${output}
 	Should Contain    ${output}   atcs_Events.xml - valid
 
-Validate CalibrationElectrometer Events XML file
-	[Tags]    smoke    CalibrationElectrometer
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/calibrationElectrometer/calibrationElectrometer_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   calibrationElectrometer_Events.xml - valid
-
 Validate Camera Events XML file
 	[Tags]    smoke    Camera
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/camera/camera_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   camera_Events.xml - valid
+
+Validate Cbp Events XML file
+	[Tags]    smoke    Cbp
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/CBP/CBP_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   CBP_Events.xml - valid
 
 Validate Dome Events XML file
 	[Tags]    smoke    Dome
