@@ -10,40 +10,6 @@ Resource    Global_Vars.robot
 ${xml}    xml
 
 *** Test Cases ***
-Validate Archiver Generic Commands
-	[Documentation]    Validate the Archiver contains all the required generic, or State Machine, commands.
-	[Tags]    smoke    Archiver
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    archiver
-	Comment    Get the Commands for the CSC.
-	${topics}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/archiver/archiver_Commands.xml
-	@{Commands}=    Split to Lines    ${topics}
-	:FOR    ${state}    IN    @{GenericCommands}
-	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _command_     ${state}
-	\    Run Keyword And Continue On Failure    Should Contain    ${Commands}    ${string}
-
-Validate Archiver Generic Events
-	[Documentation]    Validate the Archiver contains all the required generic events.
-	[Tags]    smoke    Archiver
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    archiver
-	Comment    Get the Events.
-	${topics}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/archiver/archiver_Events.xml
-	@{Events}=    Split to Lines    ${topics}
-	:FOR    ${item}    IN    @{GenericEvents}
-	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _logevent_    ${item}
-	\    Run Keyword And Continue On Failure    Should Contain    ${Events}    ${string}
-
-Validate Archiver Event Enumeration
-	[Documentation]    Validate the Archiver defines the required enumeration.
-	[Tags]    smoke    Archiver    TSS-2979
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    archiver
-	Comment    Get the Event Enumerations.
-	${enums}=    Run    ${xml} sel -t -m "//SALEventSet/Enumeration" -v . -n ${folder}/sal_interfaces/archiver/archiver_Events.xml
-	:FOR    ${item}    IN    @{Enumerations}
-	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
-
 Validate AtArchiver Generic Commands
 	[Documentation]    Validate the AtArchiver contains all the required generic, or State Machine, commands.
 	[Tags]    smoke    AtArchiver
@@ -112,37 +78,37 @@ Validate AtDome Event Enumeration
 	:FOR    ${item}    IN    @{Enumerations}
 	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
 
-Validate AtHeaderService Generic Commands
-	[Documentation]    Validate the AtHeaderService contains all the required generic, or State Machine, commands.
-	[Tags]    smoke    AtHeaderService
+Validate ATHeaderService Generic Commands
+	[Documentation]    Validate the ATHeaderService contains all the required generic, or State Machine, commands.
+	[Tags]    smoke    ATHeaderService
 	Comment    Define CSC.
-	Set Test Variable    ${csc}    atHeaderService
+	Set Test Variable    ${csc}    ATHeaderService
 	Comment    Get the Commands for the CSC.
-	${topics}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Commands.xml
+	${topics}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/ATHeaderService/ATHeaderService_Commands.xml
 	@{Commands}=    Split to Lines    ${topics}
 	:FOR    ${state}    IN    @{GenericCommands}
 	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _command_     ${state}
 	\    Run Keyword And Continue On Failure    Should Contain    ${Commands}    ${string}
 
-Validate AtHeaderService Generic Events
-	[Documentation]    Validate the AtHeaderService contains all the required generic events.
-	[Tags]    smoke    AtHeaderService
+Validate ATHeaderService Generic Events
+	[Documentation]    Validate the ATHeaderService contains all the required generic events.
+	[Tags]    smoke    ATHeaderService
 	Comment    Define CSC.
-	Set Test Variable    ${csc}    atHeaderService
+	Set Test Variable    ${csc}    ATHeaderService
 	Comment    Get the Events.
-	${topics}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Events.xml
+	${topics}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/ATHeaderService/ATHeaderService_Events.xml
 	@{Events}=    Split to Lines    ${topics}
 	:FOR    ${item}    IN    @{GenericEvents}
 	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _logevent_    ${item}
 	\    Run Keyword And Continue On Failure    Should Contain    ${Events}    ${string}
 
-Validate AtHeaderService Event Enumeration
-	[Documentation]    Validate the AtHeaderService defines the required enumeration.
-	[Tags]    smoke    AtHeaderService
+Validate ATHeaderService Event Enumeration
+	[Documentation]    Validate the ATHeaderService defines the required enumeration.
+	[Tags]    smoke    ATHeaderService
 	Comment    Define CSC.
-	Set Test Variable    ${csc}    atHeaderService
+	Set Test Variable    ${csc}    ATHeaderService
 	Comment    Get the Event Enumerations.
-	${enums}=    Run    ${xml} sel -t -m "//SALEventSet/Enumeration" -v . -n ${folder}/sal_interfaces/atHeaderService/atHeaderService_Events.xml
+	${enums}=    Run    ${xml} sel -t -m "//SALEventSet/Enumeration" -v . -n ${folder}/sal_interfaces/ATHeaderService/ATHeaderService_Events.xml
 	:FOR    ${item}    IN    @{Enumerations}
 	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
 
@@ -248,40 +214,6 @@ Validate AtPneumatics Event Enumeration
 	:FOR    ${item}    IN    @{Enumerations}
 	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
 
-Validate AtThermoelectricCooler Generic Commands
-	[Documentation]    Validate the AtThermoelectricCooler contains all the required generic, or State Machine, commands.
-	[Tags]    smoke    AtThermoelectricCooler
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    AtThermoelectricCooler
-	Comment    Get the Commands for the CSC.
-	${topics}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/AtThermoelectricCooler/AtThermoelectricCooler_Commands.xml
-	@{Commands}=    Split to Lines    ${topics}
-	:FOR    ${state}    IN    @{GenericCommands}
-	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _command_     ${state}
-	\    Run Keyword And Continue On Failure    Should Contain    ${Commands}    ${string}
-
-Validate AtThermoelectricCooler Generic Events
-	[Documentation]    Validate the AtThermoelectricCooler contains all the required generic events.
-	[Tags]    smoke    AtThermoelectricCooler
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    AtThermoelectricCooler
-	Comment    Get the Events.
-	${topics}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/AtThermoelectricCooler/AtThermoelectricCooler_Events.xml
-	@{Events}=    Split to Lines    ${topics}
-	:FOR    ${item}    IN    @{GenericEvents}
-	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _logevent_    ${item}
-	\    Run Keyword And Continue On Failure    Should Contain    ${Events}    ${string}
-
-Validate AtThermoelectricCooler Event Enumeration
-	[Documentation]    Validate the AtThermoelectricCooler defines the required enumeration.
-	[Tags]    smoke    AtThermoelectricCooler
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    AtThermoelectricCooler
-	Comment    Get the Event Enumerations.
-	${enums}=    Run    ${xml} sel -t -m "//SALEventSet/Enumeration" -v . -n ${folder}/sal_interfaces/AtThermoelectricCooler/AtThermoelectricCooler_Events.xml
-	:FOR    ${item}    IN    @{Enumerations}
-	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
-
 Validate AtWhiteLight Generic Commands
 	[Documentation]    Validate the AtWhiteLight contains all the required generic, or State Machine, commands.
 	[Tags]    smoke    AtWhiteLight
@@ -350,71 +282,37 @@ Validate AtCamera Event Enumeration
 	:FOR    ${item}    IN    @{Enumerations}
 	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
 
-Validate ATCS Generic Commands
-	[Documentation]    Validate the ATCS contains all the required generic, or State Machine, commands.
-	[Tags]    smoke    ATCS    TSS-2978
+Validate Catchuparchiver Generic Commands
+	[Documentation]    Validate the Catchuparchiver contains all the required generic, or State Machine, commands.
+	[Tags]    smoke    Catchuparchiver
 	Comment    Define CSC.
-	Set Test Variable    ${csc}    atcs
+	Set Test Variable    ${csc}    CatchupArchiver
 	Comment    Get the Commands for the CSC.
-	${topics}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/atcs/atcs_Commands.xml
+	${topics}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Commands.xml
 	@{Commands}=    Split to Lines    ${topics}
 	:FOR    ${state}    IN    @{GenericCommands}
 	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _command_     ${state}
 	\    Run Keyword And Continue On Failure    Should Contain    ${Commands}    ${string}
 
-Validate ATCS Generic Events
-	[Documentation]    Validate the ATCS contains all the required generic events.
-	[Tags]    smoke    ATCS    TSS-2978
+Validate Catchuparchiver Generic Events
+	[Documentation]    Validate the Catchuparchiver contains all the required generic events.
+	[Tags]    smoke    Catchuparchiver
 	Comment    Define CSC.
-	Set Test Variable    ${csc}    atcs
+	Set Test Variable    ${csc}    CatchupArchiver
 	Comment    Get the Events.
-	${topics}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/atcs/atcs_Events.xml
+	${topics}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Events.xml
 	@{Events}=    Split to Lines    ${topics}
 	:FOR    ${item}    IN    @{GenericEvents}
 	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _logevent_    ${item}
 	\    Run Keyword And Continue On Failure    Should Contain    ${Events}    ${string}
 
-Validate ATCS Event Enumeration
-	[Documentation]    Validate the ATCS defines the required enumeration.
-	[Tags]    smoke    ATCS
+Validate Catchuparchiver Event Enumeration
+	[Documentation]    Validate the Catchuparchiver defines the required enumeration.
+	[Tags]    smoke    Catchuparchiver
 	Comment    Define CSC.
-	Set Test Variable    ${csc}    atcs
+	Set Test Variable    ${csc}    CatchupArchiver
 	Comment    Get the Event Enumerations.
-	${enums}=    Run    ${xml} sel -t -m "//SALEventSet/Enumeration" -v . -n ${folder}/sal_interfaces/atcs/atcs_Events.xml
-	:FOR    ${item}    IN    @{Enumerations}
-	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
-
-Validate Camera Generic Commands
-	[Documentation]    Validate the Camera contains all the required generic, or State Machine, commands.
-	[Tags]    smoke    Camera
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    camera
-	Comment    Get the Commands for the CSC.
-	${topics}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/camera/camera_Commands.xml
-	@{Commands}=    Split to Lines    ${topics}
-	:FOR    ${state}    IN    @{GenericCommands}
-	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _command_     ${state}
-	\    Run Keyword And Continue On Failure    Should Contain    ${Commands}    ${string}
-
-Validate Camera Generic Events
-	[Documentation]    Validate the Camera contains all the required generic events.
-	[Tags]    smoke    Camera
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    camera
-	Comment    Get the Events.
-	${topics}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
-	@{Events}=    Split to Lines    ${topics}
-	:FOR    ${item}    IN    @{GenericEvents}
-	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _logevent_    ${item}
-	\    Run Keyword And Continue On Failure    Should Contain    ${Events}    ${string}
-
-Validate Camera Event Enumeration
-	[Documentation]    Validate the Camera defines the required enumeration.
-	[Tags]    smoke    Camera    TSS-2982
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    camera
-	Comment    Get the Event Enumerations.
-	${enums}=    Run    ${xml} sel -t -m "//SALEventSet/Enumeration" -v . -n ${folder}/sal_interfaces/camera/camera_Events.xml
+	${enums}=    Run    ${xml} sel -t -m "//SALEventSet/Enumeration" -v . -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Events.xml
 	:FOR    ${item}    IN    @{Enumerations}
 	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
 
@@ -690,40 +588,6 @@ Validate EEC Event Enumeration
 	:FOR    ${item}    IN    @{Enumerations}
 	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
 
-Validate HeaderService Generic Commands
-	[Documentation]    Validate the HeaderService contains all the required generic, or State Machine, commands.
-	[Tags]    smoke    HeaderService
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    headerService
-	Comment    Get the Commands for the CSC.
-	${topics}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/headerService/headerService_Commands.xml
-	@{Commands}=    Split to Lines    ${topics}
-	:FOR    ${state}    IN    @{GenericCommands}
-	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _command_     ${state}
-	\    Run Keyword And Continue On Failure    Should Contain    ${Commands}    ${string}
-
-Validate HeaderService Generic Events
-	[Documentation]    Validate the HeaderService contains all the required generic events.
-	[Tags]    smoke    HeaderService
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    headerService
-	Comment    Get the Events.
-	${topics}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/headerService/headerService_Events.xml
-	@{Events}=    Split to Lines    ${topics}
-	:FOR    ${item}    IN    @{GenericEvents}
-	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _logevent_    ${item}
-	\    Run Keyword And Continue On Failure    Should Contain    ${Events}    ${string}
-
-Validate HeaderService Event Enumeration
-	[Documentation]    Validate the HeaderService defines the required enumeration.
-	[Tags]    smoke    HeaderService
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    headerService
-	Comment    Get the Event Enumerations.
-	${enums}=    Run    ${xml} sel -t -m "//SALEventSet/Enumeration" -v . -n ${folder}/sal_interfaces/headerService/headerService_Events.xml
-	:FOR    ${item}    IN    @{Enumerations}
-	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
-
 Validate Hexapod Generic Commands
 	[Documentation]    Validate the Hexapod contains all the required generic, or State Machine, commands.
 	[Tags]    smoke    Hexapod    skipped
@@ -928,6 +792,40 @@ Validate OCS Event Enumeration
 	:FOR    ${item}    IN    @{Enumerations}
 	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
 
+Validate PromptProcessing Generic Commands
+	[Documentation]    Validate the PromptProcessing contains all the required generic, or State Machine, commands.
+	[Tags]    smoke    PromptProcessing
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    PromptProcessing
+	Comment    Get the Commands for the CSC.
+	${topics}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
+	@{Commands}=    Split to Lines    ${topics}
+	:FOR    ${state}    IN    @{GenericCommands}
+	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _command_     ${state}
+	\    Run Keyword And Continue On Failure    Should Contain    ${Commands}    ${string}
+
+Validate PromptProcessing Generic Events
+	[Documentation]    Validate the PromptProcessing contains all the required generic events.
+	[Tags]    smoke    PromptProcessing
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    PromptProcessing
+	Comment    Get the Events.
+	${topics}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	@{Events}=    Split to Lines    ${topics}
+	:FOR    ${item}    IN    @{GenericEvents}
+	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _logevent_    ${item}
+	\    Run Keyword And Continue On Failure    Should Contain    ${Events}    ${string}
+
+Validate PromptProcessing Event Enumeration
+	[Documentation]    Validate the PromptProcessing defines the required enumeration.
+	[Tags]    smoke    PromptProcessing
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    PromptProcessing
+	Comment    Get the Event Enumerations.
+	${enums}=    Run    ${xml} sel -t -m "//SALEventSet/Enumeration" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	:FOR    ${item}    IN    @{Enumerations}
+	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
+
 Validate Rotator Generic Commands
 	[Documentation]    Validate the Rotator contains all the required generic, or State Machine, commands.
 	[Tags]    smoke    Rotator    skipped
@@ -996,40 +894,6 @@ Validate Scheduler Event Enumeration
 	:FOR    ${item}    IN    @{Enumerations}
 	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
 
-Validate SEDSpectrometer Generic Commands
-	[Documentation]    Validate the SEDSpectrometer contains all the required generic, or State Machine, commands.
-	[Tags]    smoke    SEDSpectrometer
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    sedSpectrometer
-	Comment    Get the Commands for the CSC.
-	${topics}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Commands.xml
-	@{Commands}=    Split to Lines    ${topics}
-	:FOR    ${state}    IN    @{GenericCommands}
-	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _command_     ${state}
-	\    Run Keyword And Continue On Failure    Should Contain    ${Commands}    ${string}
-
-Validate SEDSpectrometer Generic Events
-	[Documentation]    Validate the SEDSpectrometer contains all the required generic events.
-	[Tags]    smoke    SEDSpectrometer
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    sedSpectrometer
-	Comment    Get the Events.
-	${topics}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Events.xml
-	@{Events}=    Split to Lines    ${topics}
-	:FOR    ${item}    IN    @{GenericEvents}
-	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _logevent_    ${item}
-	\    Run Keyword And Continue On Failure    Should Contain    ${Events}    ${string}
-
-Validate SEDSpectrometer Event Enumeration
-	[Documentation]    Validate the SEDSpectrometer defines the required enumeration.
-	[Tags]    smoke    SEDSpectrometer
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    sedSpectrometer
-	Comment    Get the Event Enumerations.
-	${enums}=    Run    ${xml} sel -t -m "//SALEventSet/Enumeration" -v . -n ${folder}/sal_interfaces/sedSpectrometer/sedSpectrometer_Events.xml
-	:FOR    ${item}    IN    @{Enumerations}
-	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
-
 Validate Sequencer Generic Commands
 	[Documentation]    Validate the Sequencer contains all the required generic, or State Machine, commands.
 	[Tags]    smoke    Sequencer    TSS-1793
@@ -1064,6 +928,74 @@ Validate Sequencer Event Enumeration
 	:FOR    ${item}    IN    @{Enumerations}
 	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
 
+Validate AtSpectrograph Generic Commands
+	[Documentation]    Validate the AtSpectrograph contains all the required generic, or State Machine, commands.
+	[Tags]    smoke    AtSpectrograph
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    AtSpectrograph
+	Comment    Get the Commands for the CSC.
+	${topics}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/AtSpectrograph/AtSpectrograph_Commands.xml
+	@{Commands}=    Split to Lines    ${topics}
+	:FOR    ${state}    IN    @{GenericCommands}
+	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _command_     ${state}
+	\    Run Keyword And Continue On Failure    Should Contain    ${Commands}    ${string}
+
+Validate AtSpectrograph Generic Events
+	[Documentation]    Validate the AtSpectrograph contains all the required generic events.
+	[Tags]    smoke    AtSpectrograph
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    AtSpectrograph
+	Comment    Get the Events.
+	${topics}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/AtSpectrograph/AtSpectrograph_Events.xml
+	@{Events}=    Split to Lines    ${topics}
+	:FOR    ${item}    IN    @{GenericEvents}
+	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _logevent_    ${item}
+	\    Run Keyword And Continue On Failure    Should Contain    ${Events}    ${string}
+
+Validate AtSpectrograph Event Enumeration
+	[Documentation]    Validate the AtSpectrograph defines the required enumeration.
+	[Tags]    smoke    AtSpectrograph    TSS-3009
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    AtSpectrograph
+	Comment    Get the Event Enumerations.
+	${enums}=    Run    ${xml} sel -t -m "//SALEventSet/Enumeration" -v . -n ${folder}/sal_interfaces/AtSpectrograph/AtSpectrograph_Events.xml
+	:FOR    ${item}    IN    @{Enumerations}
+	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
+
+Validate SummitFacility Generic Commands
+	[Documentation]    Validate the SummitFacility contains all the required generic, or State Machine, commands.
+	[Tags]    smoke    SummitFacility
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    SummitFacility
+	Comment    Get the Commands for the CSC.
+	${topics}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Commands.xml
+	@{Commands}=    Split to Lines    ${topics}
+	:FOR    ${state}    IN    @{GenericCommands}
+	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _command_     ${state}
+	\    Run Keyword And Continue On Failure    Should Contain    ${Commands}    ${string}
+
+Validate SummitFacility Generic Events
+	[Documentation]    Validate the SummitFacility contains all the required generic events.
+	[Tags]    smoke    SummitFacility
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    SummitFacility
+	Comment    Get the Events.
+	${topics}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Events.xml
+	@{Events}=    Split to Lines    ${topics}
+	:FOR    ${item}    IN    @{GenericEvents}
+	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _logevent_    ${item}
+	\    Run Keyword And Continue On Failure    Should Contain    ${Events}    ${string}
+
+Validate SummitFacility Event Enumeration
+	[Documentation]    Validate the SummitFacility defines the required enumeration.
+	[Tags]    smoke    SummitFacility
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    SummitFacility
+	Comment    Get the Event Enumerations.
+	${enums}=    Run    ${xml} sel -t -m "//SALEventSet/Enumeration" -v . -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Events.xml
+	:FOR    ${item}    IN    @{Enumerations}
+	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
+
 Validate TCS Generic Commands
 	[Documentation]    Validate the TCS contains all the required generic, or State Machine, commands.
 	[Tags]    smoke    TCS    TSS-1795
@@ -1095,74 +1027,6 @@ Validate TCS Event Enumeration
 	Set Test Variable    ${csc}    tcs
 	Comment    Get the Event Enumerations.
 	${enums}=    Run    ${xml} sel -t -m "//SALEventSet/Enumeration" -v . -n ${folder}/sal_interfaces/tcs/tcs_Events.xml
-	:FOR    ${item}    IN    @{Enumerations}
-	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
-
-Validate TcsOfc Generic Commands
-	[Documentation]    Validate the TcsOfc contains all the required generic, or State Machine, commands.
-	[Tags]    smoke    TcsOfc
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    tcsOfc
-	Comment    Get the Commands for the CSC.
-	${topics}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Commands.xml
-	@{Commands}=    Split to Lines    ${topics}
-	:FOR    ${state}    IN    @{GenericCommands}
-	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _command_     ${state}
-	\    Run Keyword And Continue On Failure    Should Contain    ${Commands}    ${string}
-
-Validate TcsOfc Generic Events
-	[Documentation]    Validate the TcsOfc contains all the required generic events.
-	[Tags]    smoke    TcsOfc
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    tcsOfc
-	Comment    Get the Events.
-	${topics}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
-	@{Events}=    Split to Lines    ${topics}
-	:FOR    ${item}    IN    @{GenericEvents}
-	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _logevent_    ${item}
-	\    Run Keyword And Continue On Failure    Should Contain    ${Events}    ${string}
-
-Validate TcsOfc Event Enumeration
-	[Documentation]    Validate the TcsOfc defines the required enumeration.
-	[Tags]    smoke    TcsOfc
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    tcsOfc
-	Comment    Get the Event Enumerations.
-	${enums}=    Run    ${xml} sel -t -m "//SALEventSet/Enumeration" -v . -n ${folder}/sal_interfaces/tcsOfc/tcsOfc_Events.xml
-	:FOR    ${item}    IN    @{Enumerations}
-	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
-
-Validate TcsWEP Generic Commands
-	[Documentation]    Validate the TcsWEP contains all the required generic, or State Machine, commands.
-	[Tags]    smoke    TcsWEP
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    tcsWEP
-	Comment    Get the Commands for the CSC.
-	${topics}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Commands.xml
-	@{Commands}=    Split to Lines    ${topics}
-	:FOR    ${state}    IN    @{GenericCommands}
-	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _command_     ${state}
-	\    Run Keyword And Continue On Failure    Should Contain    ${Commands}    ${string}
-
-Validate TcsWEP Generic Events
-	[Documentation]    Validate the TcsWEP contains all the required generic events.
-	[Tags]    smoke    TcsWEP
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    tcsWEP
-	Comment    Get the Events.
-	${topics}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
-	@{Events}=    Split to Lines    ${topics}
-	:FOR    ${item}    IN    @{GenericEvents}
-	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _logevent_    ${item}
-	\    Run Keyword And Continue On Failure    Should Contain    ${Events}    ${string}
-
-Validate TcsWEP Event Enumeration
-	[Documentation]    Validate the TcsWEP defines the required enumeration.
-	[Tags]    smoke    TcsWEP
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    tcsWEP
-	Comment    Get the Event Enumerations.
-	${enums}=    Run    ${xml} sel -t -m "//SALEventSet/Enumeration" -v . -n ${folder}/sal_interfaces/tcsWEP/tcsWEP_Events.xml
 	:FOR    ${item}    IN    @{Enumerations}
 	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
 

@@ -44,13 +44,19 @@ for subsystem in xml_common.subsystems:
 	event_xml_file = 'sal_interfaces/' + subsystem + '/' + subsystem + '_Events.xml'
 	if os.path.isfile(home+ "/" + command_xml_file):
 		# Get the Topics for each message type.
-		topics = subprocess.check_output(app + ' sel -t -m "/' + command_xml_path + '/EFDB_Topic" -v . -n ' + home + '/' + command_xml_file, shell=True).split()
+		try:
+			topics = subprocess.check_output(app + ' sel -t -m "/' + command_xml_path + '/EFDB_Topic" -v . -n ' + home + '/' + command_xml_file, shell=True).split()
+		except:
+			print("\tERROR: " + subsystem + "_Commands.xml" + " is not valid XML.")
 	else:
 		continue
 
 	if os.path.isfile(home+ "/" + event_xml_file):
 		# Get the Topics for each message type.
-		topics = subprocess.check_output(app + ' sel -t -m "/' + event_xml_path + '/EFDB_Topic" -v . -n ' + home + '/' + event_xml_file, shell=True).split()
+		try:
+			topics = subprocess.check_output(app + ' sel -t -m "/' + event_xml_path + '/EFDB_Topic" -v . -n ' + home + '/' + event_xml_file, shell=True).split()
+		except:
+			print("\tERROR: " + subsystem + "_Eventss.xml" + " is not valid XML.")
 	else:
 		continue
 	

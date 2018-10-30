@@ -34,8 +34,6 @@ for topictype in ["Commands", "Events", "Telemetry"]:
 		skipped=com_skipped=event_skipped=enum_skipped=""
 		if (subsystem == "AtWhiteLight" and topictype == "Telemetry"):
 			telem_skipped="    TSS-3066"
-		elif subsystem == "PromptProcessing":
-			skipped="    TSS-2633" 
 		else:
 			skipped=""
 			com_skipped=""
