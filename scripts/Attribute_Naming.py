@@ -27,31 +27,31 @@ file.write("*** Test Cases ***\n")
 for subsystem in xml_common.subsystems:
 
 	# Mark test cases with Jira tickets
-	if subsystem == "vms":
+	if subsystem == "VMS":
 		skipped="TSS-2618"
-	elif subsystem == "m1m3":
+	elif subsystem == "MTM1M3":
 		skipped="TSS-2617"
-	elif re.match("^dome\S+", subsystem):
+	elif re.match("^Dome\S+", subsystem):
 		skipped="skipped"
-	elif subsystem == "hexapod":
+	elif subsystem == "Hexapod":
 		skipped="skipped"
-	elif subsystem == "m2ms":
+	elif subsystem == "M2MS":
 		skipped="skipped"
 	elif subsystem == "MTMount":
 		skipped="skipped"
-	elif subsystem == "ocs":
+	elif subsystem == "OCS":
 		skipped="TSS-1792"
-	elif subsystem == "sequencer":
+	elif subsystem == "Sequencer":
 		skipped="TSS-1793"
-	elif subsystem == "rotator":
+	elif subsystem == "Rotator":
 		skipped="skipped"
-	elif subsystem == "atcs":
+	elif subsystem == "ATTCS":
 		skipped="TSS-2978"
-	elif subsystem == "tcs":
+	elif subsystem == "TCS":
 		skipped="TSS-1795"
-	elif subsystem == "dome":
+	elif subsystem == "Dome":
 		skipped="TSS-1778"
-	elif subsystem == "efd":
+	elif subsystem == "EFD":
 		skipped="TSS-2985"
 	else:
 		skipped=""

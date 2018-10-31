@@ -32,8 +32,9 @@ for topictype in ["Commands", "Events", "Telemetry"]:
 
 		# Mark test cases with Jira tickets
 		skipped=com_skipped=event_skipped=enum_skipped=""
-		if (subsystem == "AtWhiteLight" and topictype == "Telemetry"):
+		if (subsystem == "ATWhiteLight" and topictype == "Telemetry"):
 			telem_skipped="    TSS-3066"
+			skipped=com_skipped=event_skipped=""
 		else:
 			skipped=""
 			com_skipped=""
