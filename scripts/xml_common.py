@@ -49,7 +49,7 @@ def CapitalizeSubsystem( subsystem ):
 		return "ATWhiteLight"
 	elif subsystem == "ATThermoelectricCooler":
 		return "ATThermoelectricCooler"
-	elif subsystem == "Catchuparchiver":
+	elif subsystem == "CatchupArchiver":
 		return "CatchupArchiver"
 	elif subsystem == "EEC":
 		return "EEC"
