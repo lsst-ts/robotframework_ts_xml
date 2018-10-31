@@ -248,14 +248,6 @@ Validate CBP Commands XML Counts
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate CBP Events XML Counts
-	[Documentation]    Validate the CBP Events XML count.
-	[Tags]    smoke    CBP
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/CBP/CBP_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
 Validate CBP Telemetry XML Counts
 	[Documentation]    Validate the CBP Telemetry XML count.
 	[Tags]    smoke    CBP

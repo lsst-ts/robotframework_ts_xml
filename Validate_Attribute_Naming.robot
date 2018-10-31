@@ -218,7 +218,7 @@ Validate ATSpectrograph Telemetry Attribute Names
 
 Validate ATTCS Commands Attribute Names
 	[Documentation]    Validate the ATTCS Commands attribute names conform to naming convention.
-	[Tags]    smoke    ATTCS    
+	[Tags]    smoke    ATTCS    TSS-2978
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/ATTCS/ATTCS_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -227,7 +227,7 @@ Validate ATTCS Commands Attribute Names
 
 Validate ATTCS Events Attribute Names
 	[Documentation]    Validate the ATTCS Events attribute names conform to naming convention.
-	[Tags]    smoke    ATTCS    
+	[Tags]    smoke    ATTCS    TSS-2978
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/ATTCS/ATTCS_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -236,7 +236,7 @@ Validate ATTCS Events Attribute Names
 
 Validate ATTCS Telemetry Attribute Names
 	[Documentation]    Validate the ATTCS Telemetry attribute names conform to naming convention.
-	[Tags]    smoke    ATTCS    
+	[Tags]    smoke    ATTCS    TSS-2978
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/ATTCS/ATTCS_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -279,15 +279,6 @@ Validate CBP Commands Attribute Names
 	: FOR    ${item}    IN    @{attributes}
 	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
 
-Validate CBP Events Attribute Names
-	[Documentation]    Validate the CBP Events attribute names conform to naming convention.
-	[Tags]    smoke    CBP    
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/CBP/CBP_Events.xml |sed -e 's/\\n/,/g'
-	Log    ${output}
-	@{attributes}=    Split to Lines    ${output}
-	: FOR    ${item}    IN    @{attributes}
-	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
-
 Validate CBP Telemetry Attribute Names
 	[Documentation]    Validate the CBP Telemetry attribute names conform to naming convention.
 	[Tags]    smoke    CBP    
@@ -299,7 +290,7 @@ Validate CBP Telemetry Attribute Names
 
 Validate Dome Commands Attribute Names
 	[Documentation]    Validate the Dome Commands attribute names conform to naming convention.
-	[Tags]    smoke    Dome    
+	[Tags]    smoke    Dome    TSS-1778
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/Dome/Dome_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -308,7 +299,7 @@ Validate Dome Commands Attribute Names
 
 Validate Dome Events Attribute Names
 	[Documentation]    Validate the Dome Events attribute names conform to naming convention.
-	[Tags]    smoke    Dome    
+	[Tags]    smoke    Dome    TSS-1778
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/Dome/Dome_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -317,7 +308,7 @@ Validate Dome Events Attribute Names
 
 Validate Dome Telemetry Attribute Names
 	[Documentation]    Validate the Dome Telemetry attribute names conform to naming convention.
-	[Tags]    smoke    Dome    
+	[Tags]    smoke    Dome    TSS-1778
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/Dome/Dome_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -326,7 +317,7 @@ Validate Dome Telemetry Attribute Names
 
 Validate Domeadb Commands Attribute Names
 	[Documentation]    Validate the Domeadb Commands attribute names conform to naming convention.
-	[Tags]    smoke    Domeadb    
+	[Tags]    smoke    Domeadb    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/DomeADB/DomeADB_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -335,7 +326,7 @@ Validate Domeadb Commands Attribute Names
 
 Validate Domeadb Events Attribute Names
 	[Documentation]    Validate the Domeadb Events attribute names conform to naming convention.
-	[Tags]    smoke    Domeadb    
+	[Tags]    smoke    Domeadb    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -344,7 +335,7 @@ Validate Domeadb Events Attribute Names
 
 Validate Domeadb Telemetry Attribute Names
 	[Documentation]    Validate the Domeadb Telemetry attribute names conform to naming convention.
-	[Tags]    smoke    Domeadb    
+	[Tags]    smoke    Domeadb    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/DomeADB/DomeADB_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -353,7 +344,7 @@ Validate Domeadb Telemetry Attribute Names
 
 Validate Domeaps Commands Attribute Names
 	[Documentation]    Validate the Domeaps Commands attribute names conform to naming convention.
-	[Tags]    smoke    Domeaps    
+	[Tags]    smoke    Domeaps    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -362,7 +353,7 @@ Validate Domeaps Commands Attribute Names
 
 Validate Domeaps Events Attribute Names
 	[Documentation]    Validate the Domeaps Events attribute names conform to naming convention.
-	[Tags]    smoke    Domeaps    
+	[Tags]    smoke    Domeaps    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -371,7 +362,7 @@ Validate Domeaps Events Attribute Names
 
 Validate Domeaps Telemetry Attribute Names
 	[Documentation]    Validate the Domeaps Telemetry attribute names conform to naming convention.
-	[Tags]    smoke    Domeaps    
+	[Tags]    smoke    Domeaps    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -380,7 +371,7 @@ Validate Domeaps Telemetry Attribute Names
 
 Validate Domelouvers Commands Attribute Names
 	[Documentation]    Validate the Domelouvers Commands attribute names conform to naming convention.
-	[Tags]    smoke    Domelouvers    
+	[Tags]    smoke    Domelouvers    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -389,7 +380,7 @@ Validate Domelouvers Commands Attribute Names
 
 Validate Domelouvers Events Attribute Names
 	[Documentation]    Validate the Domelouvers Events attribute names conform to naming convention.
-	[Tags]    smoke    Domelouvers    
+	[Tags]    smoke    Domelouvers    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -398,7 +389,7 @@ Validate Domelouvers Events Attribute Names
 
 Validate Domelouvers Telemetry Attribute Names
 	[Documentation]    Validate the Domelouvers Telemetry attribute names conform to naming convention.
-	[Tags]    smoke    Domelouvers    
+	[Tags]    smoke    Domelouvers    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -407,7 +398,7 @@ Validate Domelouvers Telemetry Attribute Names
 
 Validate Domelws Commands Attribute Names
 	[Documentation]    Validate the Domelws Commands attribute names conform to naming convention.
-	[Tags]    smoke    Domelws    
+	[Tags]    smoke    Domelws    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -416,7 +407,7 @@ Validate Domelws Commands Attribute Names
 
 Validate Domelws Events Attribute Names
 	[Documentation]    Validate the Domelws Events attribute names conform to naming convention.
-	[Tags]    smoke    Domelws    
+	[Tags]    smoke    Domelws    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -425,7 +416,7 @@ Validate Domelws Events Attribute Names
 
 Validate Domelws Telemetry Attribute Names
 	[Documentation]    Validate the Domelws Telemetry attribute names conform to naming convention.
-	[Tags]    smoke    Domelws    
+	[Tags]    smoke    Domelws    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -434,7 +425,7 @@ Validate Domelws Telemetry Attribute Names
 
 Validate Domemoncs Commands Attribute Names
 	[Documentation]    Validate the Domemoncs Commands attribute names conform to naming convention.
-	[Tags]    smoke    Domemoncs    
+	[Tags]    smoke    Domemoncs    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -443,7 +434,7 @@ Validate Domemoncs Commands Attribute Names
 
 Validate Domemoncs Events Attribute Names
 	[Documentation]    Validate the Domemoncs Events attribute names conform to naming convention.
-	[Tags]    smoke    Domemoncs    
+	[Tags]    smoke    Domemoncs    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -452,7 +443,7 @@ Validate Domemoncs Events Attribute Names
 
 Validate Domemoncs Telemetry Attribute Names
 	[Documentation]    Validate the Domemoncs Telemetry attribute names conform to naming convention.
-	[Tags]    smoke    Domemoncs    
+	[Tags]    smoke    Domemoncs    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -461,7 +452,7 @@ Validate Domemoncs Telemetry Attribute Names
 
 Validate Domethcs Commands Attribute Names
 	[Documentation]    Validate the Domethcs Commands attribute names conform to naming convention.
-	[Tags]    smoke    Domethcs    
+	[Tags]    smoke    Domethcs    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -470,7 +461,7 @@ Validate Domethcs Commands Attribute Names
 
 Validate Domethcs Events Attribute Names
 	[Documentation]    Validate the Domethcs Events attribute names conform to naming convention.
-	[Tags]    smoke    Domethcs    
+	[Tags]    smoke    Domethcs    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -479,7 +470,7 @@ Validate Domethcs Events Attribute Names
 
 Validate Domethcs Telemetry Attribute Names
 	[Documentation]    Validate the Domethcs Telemetry attribute names conform to naming convention.
-	[Tags]    smoke    Domethcs    
+	[Tags]    smoke    Domethcs    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -533,7 +524,7 @@ Validate Electrometer Events Attribute Names
 
 Validate Hexapod Commands Attribute Names
 	[Documentation]    Validate the Hexapod Commands attribute names conform to naming convention.
-	[Tags]    smoke    Hexapod    
+	[Tags]    smoke    Hexapod    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/Hexapod/Hexapod_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -542,7 +533,7 @@ Validate Hexapod Commands Attribute Names
 
 Validate Hexapod Events Attribute Names
 	[Documentation]    Validate the Hexapod Events attribute names conform to naming convention.
-	[Tags]    smoke    Hexapod    
+	[Tags]    smoke    Hexapod    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/Hexapod/Hexapod_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -551,7 +542,7 @@ Validate Hexapod Events Attribute Names
 
 Validate Hexapod Telemetry Attribute Names
 	[Documentation]    Validate the Hexapod Telemetry attribute names conform to naming convention.
-	[Tags]    smoke    Hexapod    
+	[Tags]    smoke    Hexapod    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/Hexapod/Hexapod_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -659,7 +650,7 @@ Validate MTHeaderService Events Attribute Names
 
 Validate MTM1M3 Commands Attribute Names
 	[Documentation]    Validate the MTM1M3 Commands attribute names conform to naming convention.
-	[Tags]    smoke    MTM1M3    
+	[Tags]    smoke    MTM1M3    TSS-2617
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -668,7 +659,7 @@ Validate MTM1M3 Commands Attribute Names
 
 Validate MTM1M3 Events Attribute Names
 	[Documentation]    Validate the MTM1M3 Events attribute names conform to naming convention.
-	[Tags]    smoke    MTM1M3    
+	[Tags]    smoke    MTM1M3    TSS-2617
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -677,7 +668,7 @@ Validate MTM1M3 Events Attribute Names
 
 Validate MTM1M3 Telemetry Attribute Names
 	[Documentation]    Validate the MTM1M3 Telemetry attribute names conform to naming convention.
-	[Tags]    smoke    MTM1M3    
+	[Tags]    smoke    MTM1M3    TSS-2617
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -758,7 +749,7 @@ Validate MTWEP Telemetry Attribute Names
 
 Validate OCS Commands Attribute Names
 	[Documentation]    Validate the OCS Commands attribute names conform to naming convention.
-	[Tags]    smoke    OCS    
+	[Tags]    smoke    OCS    TSS-1792
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/OCS/OCS_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -767,7 +758,7 @@ Validate OCS Commands Attribute Names
 
 Validate OCS Events Attribute Names
 	[Documentation]    Validate the OCS Events attribute names conform to naming convention.
-	[Tags]    smoke    OCS    
+	[Tags]    smoke    OCS    TSS-1792
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/OCS/OCS_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -776,7 +767,7 @@ Validate OCS Events Attribute Names
 
 Validate OCS Telemetry Attribute Names
 	[Documentation]    Validate the OCS Telemetry attribute names conform to naming convention.
-	[Tags]    smoke    OCS    
+	[Tags]    smoke    OCS    TSS-1792
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/OCS/OCS_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -812,7 +803,7 @@ Validate PromptProcessing Telemetry Attribute Names
 
 Validate Rotator Commands Attribute Names
 	[Documentation]    Validate the Rotator Commands attribute names conform to naming convention.
-	[Tags]    smoke    Rotator    
+	[Tags]    smoke    Rotator    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/Rotator/Rotator_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -821,7 +812,7 @@ Validate Rotator Commands Attribute Names
 
 Validate Rotator Events Attribute Names
 	[Documentation]    Validate the Rotator Events attribute names conform to naming convention.
-	[Tags]    smoke    Rotator    
+	[Tags]    smoke    Rotator    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/Rotator/Rotator_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -830,7 +821,7 @@ Validate Rotator Events Attribute Names
 
 Validate Rotator Telemetry Attribute Names
 	[Documentation]    Validate the Rotator Telemetry attribute names conform to naming convention.
-	[Tags]    smoke    Rotator    
+	[Tags]    smoke    Rotator    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/Rotator/Rotator_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -857,7 +848,7 @@ Validate Scheduler Telemetry Attribute Names
 
 Validate Sequencer Commands Attribute Names
 	[Documentation]    Validate the Sequencer Commands attribute names conform to naming convention.
-	[Tags]    smoke    Sequencer    
+	[Tags]    smoke    Sequencer    TSS-1793
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/Sequencer/Sequencer_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -866,7 +857,7 @@ Validate Sequencer Commands Attribute Names
 
 Validate Sequencer Events Attribute Names
 	[Documentation]    Validate the Sequencer Events attribute names conform to naming convention.
-	[Tags]    smoke    Sequencer    
+	[Tags]    smoke    Sequencer    TSS-1793
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/Sequencer/Sequencer_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -875,7 +866,7 @@ Validate Sequencer Events Attribute Names
 
 Validate Sequencer Telemetry Attribute Names
 	[Documentation]    Validate the Sequencer Telemetry attribute names conform to naming convention.
-	[Tags]    smoke    Sequencer    
+	[Tags]    smoke    Sequencer    TSS-1793
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/Sequencer/Sequencer_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -911,7 +902,7 @@ Validate SummitFacility Telemetry Attribute Names
 
 Validate TCS Commands Attribute Names
 	[Documentation]    Validate the TCS Commands attribute names conform to naming convention.
-	[Tags]    smoke    TCS    
+	[Tags]    smoke    TCS    TSS-1795
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/TCS/TCS_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -920,7 +911,7 @@ Validate TCS Commands Attribute Names
 
 Validate TCS Events Attribute Names
 	[Documentation]    Validate the TCS Events attribute names conform to naming convention.
-	[Tags]    smoke    TCS    
+	[Tags]    smoke    TCS    TSS-1795
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/TCS/TCS_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -929,7 +920,7 @@ Validate TCS Events Attribute Names
 
 Validate TCS Telemetry Attribute Names
 	[Documentation]    Validate the TCS Telemetry attribute names conform to naming convention.
-	[Tags]    smoke    TCS    
+	[Tags]    smoke    TCS    TSS-1795
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/TCS/TCS_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -992,7 +983,7 @@ Validate TunableLaser Telemetry Attribute Names
 
 Validate VMS Commands Attribute Names
 	[Documentation]    Validate the VMS Commands attribute names conform to naming convention.
-	[Tags]    smoke    VMS    
+	[Tags]    smoke    VMS    TSS-2618
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/VMS/VMS_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -1001,7 +992,7 @@ Validate VMS Commands Attribute Names
 
 Validate VMS Events Attribute Names
 	[Documentation]    Validate the VMS Events attribute names conform to naming convention.
-	[Tags]    smoke    VMS    
+	[Tags]    smoke    VMS    TSS-2618
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/VMS/VMS_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -1010,7 +1001,7 @@ Validate VMS Events Attribute Names
 
 Validate VMS Telemetry Attribute Names
 	[Documentation]    Validate the VMS Telemetry attribute names conform to naming convention.
-	[Tags]    smoke    VMS    
+	[Tags]    smoke    VMS    TSS-2618
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/VMS/VMS_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}

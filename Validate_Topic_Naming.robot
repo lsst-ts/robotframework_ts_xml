@@ -218,7 +218,7 @@ Validate ATSpectrograph Telemetry Topic Names
 
 Validate ATTCS Commands Topic Names
 	[Documentation]    Validate the ATTCS Commands topic names conform to naming convention.
-	[Tags]    smoke    ATTCS    
+	[Tags]    smoke    ATTCS    TSS-2978
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/ATTCS/ATTCS_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -227,7 +227,7 @@ Validate ATTCS Commands Topic Names
 
 Validate ATTCS Events Topic Names
 	[Documentation]    Validate the ATTCS Events topic names conform to naming convention.
-	[Tags]    smoke    ATTCS    
+	[Tags]    smoke    ATTCS    TSS-2978
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/ATTCS/ATTCS_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -236,7 +236,7 @@ Validate ATTCS Events Topic Names
 
 Validate ATTCS Telemetry Topic Names
 	[Documentation]    Validate the ATTCS Telemetry topic names conform to naming convention.
-	[Tags]    smoke    ATTCS    
+	[Tags]    smoke    ATTCS    TSS-2978
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/ATTCS/ATTCS_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -279,15 +279,6 @@ Validate CBP Commands Topic Names
 	: FOR    ${item}    IN    @{topics}
 	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
 
-Validate CBP Events Topic Names
-	[Documentation]    Validate the CBP Events topic names conform to naming convention.
-	[Tags]    smoke    CBP    
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/CBP/CBP_Events.xml |sed -e 's/\\n/,/g'
-	Log    ${output}
-	@{topics}=    Split to Lines    ${output}
-	: FOR    ${item}    IN    @{topics}
-	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
-
 Validate CBP Telemetry Topic Names
 	[Documentation]    Validate the CBP Telemetry topic names conform to naming convention.
 	[Tags]    smoke    CBP    
@@ -299,7 +290,7 @@ Validate CBP Telemetry Topic Names
 
 Validate Dome Commands Topic Names
 	[Documentation]    Validate the Dome Commands topic names conform to naming convention.
-	[Tags]    smoke    Dome    
+	[Tags]    smoke    Dome    TSS-1778
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/Dome/Dome_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -308,7 +299,7 @@ Validate Dome Commands Topic Names
 
 Validate Dome Events Topic Names
 	[Documentation]    Validate the Dome Events topic names conform to naming convention.
-	[Tags]    smoke    Dome    
+	[Tags]    smoke    Dome    TSS-1778
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/Dome/Dome_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -317,7 +308,7 @@ Validate Dome Events Topic Names
 
 Validate Dome Telemetry Topic Names
 	[Documentation]    Validate the Dome Telemetry topic names conform to naming convention.
-	[Tags]    smoke    Dome    
+	[Tags]    smoke    Dome    TSS-1778
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/Dome/Dome_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -326,7 +317,7 @@ Validate Dome Telemetry Topic Names
 
 Validate Domeadb Commands Topic Names
 	[Documentation]    Validate the Domeadb Commands topic names conform to naming convention.
-	[Tags]    smoke    Domeadb    
+	[Tags]    smoke    Domeadb    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/DomeADB/DomeADB_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -335,7 +326,7 @@ Validate Domeadb Commands Topic Names
 
 Validate Domeadb Events Topic Names
 	[Documentation]    Validate the Domeadb Events topic names conform to naming convention.
-	[Tags]    smoke    Domeadb    
+	[Tags]    smoke    Domeadb    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -344,7 +335,7 @@ Validate Domeadb Events Topic Names
 
 Validate Domeadb Telemetry Topic Names
 	[Documentation]    Validate the Domeadb Telemetry topic names conform to naming convention.
-	[Tags]    smoke    Domeadb    
+	[Tags]    smoke    Domeadb    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/DomeADB/DomeADB_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -353,7 +344,7 @@ Validate Domeadb Telemetry Topic Names
 
 Validate Domeaps Commands Topic Names
 	[Documentation]    Validate the Domeaps Commands topic names conform to naming convention.
-	[Tags]    smoke    Domeaps    
+	[Tags]    smoke    Domeaps    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -362,7 +353,7 @@ Validate Domeaps Commands Topic Names
 
 Validate Domeaps Events Topic Names
 	[Documentation]    Validate the Domeaps Events topic names conform to naming convention.
-	[Tags]    smoke    Domeaps    
+	[Tags]    smoke    Domeaps    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -371,7 +362,7 @@ Validate Domeaps Events Topic Names
 
 Validate Domeaps Telemetry Topic Names
 	[Documentation]    Validate the Domeaps Telemetry topic names conform to naming convention.
-	[Tags]    smoke    Domeaps    
+	[Tags]    smoke    Domeaps    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -380,7 +371,7 @@ Validate Domeaps Telemetry Topic Names
 
 Validate Domelouvers Commands Topic Names
 	[Documentation]    Validate the Domelouvers Commands topic names conform to naming convention.
-	[Tags]    smoke    Domelouvers    
+	[Tags]    smoke    Domelouvers    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -389,7 +380,7 @@ Validate Domelouvers Commands Topic Names
 
 Validate Domelouvers Events Topic Names
 	[Documentation]    Validate the Domelouvers Events topic names conform to naming convention.
-	[Tags]    smoke    Domelouvers    
+	[Tags]    smoke    Domelouvers    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -398,7 +389,7 @@ Validate Domelouvers Events Topic Names
 
 Validate Domelouvers Telemetry Topic Names
 	[Documentation]    Validate the Domelouvers Telemetry topic names conform to naming convention.
-	[Tags]    smoke    Domelouvers    
+	[Tags]    smoke    Domelouvers    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -407,7 +398,7 @@ Validate Domelouvers Telemetry Topic Names
 
 Validate Domelws Commands Topic Names
 	[Documentation]    Validate the Domelws Commands topic names conform to naming convention.
-	[Tags]    smoke    Domelws    
+	[Tags]    smoke    Domelws    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -416,7 +407,7 @@ Validate Domelws Commands Topic Names
 
 Validate Domelws Events Topic Names
 	[Documentation]    Validate the Domelws Events topic names conform to naming convention.
-	[Tags]    smoke    Domelws    
+	[Tags]    smoke    Domelws    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -425,7 +416,7 @@ Validate Domelws Events Topic Names
 
 Validate Domelws Telemetry Topic Names
 	[Documentation]    Validate the Domelws Telemetry topic names conform to naming convention.
-	[Tags]    smoke    Domelws    
+	[Tags]    smoke    Domelws    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -434,7 +425,7 @@ Validate Domelws Telemetry Topic Names
 
 Validate Domemoncs Commands Topic Names
 	[Documentation]    Validate the Domemoncs Commands topic names conform to naming convention.
-	[Tags]    smoke    Domemoncs    
+	[Tags]    smoke    Domemoncs    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -443,7 +434,7 @@ Validate Domemoncs Commands Topic Names
 
 Validate Domemoncs Events Topic Names
 	[Documentation]    Validate the Domemoncs Events topic names conform to naming convention.
-	[Tags]    smoke    Domemoncs    
+	[Tags]    smoke    Domemoncs    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -452,7 +443,7 @@ Validate Domemoncs Events Topic Names
 
 Validate Domemoncs Telemetry Topic Names
 	[Documentation]    Validate the Domemoncs Telemetry topic names conform to naming convention.
-	[Tags]    smoke    Domemoncs    
+	[Tags]    smoke    Domemoncs    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -461,7 +452,7 @@ Validate Domemoncs Telemetry Topic Names
 
 Validate Domethcs Commands Topic Names
 	[Documentation]    Validate the Domethcs Commands topic names conform to naming convention.
-	[Tags]    smoke    Domethcs    
+	[Tags]    smoke    Domethcs    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -470,7 +461,7 @@ Validate Domethcs Commands Topic Names
 
 Validate Domethcs Events Topic Names
 	[Documentation]    Validate the Domethcs Events topic names conform to naming convention.
-	[Tags]    smoke    Domethcs    
+	[Tags]    smoke    Domethcs    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -479,7 +470,7 @@ Validate Domethcs Events Topic Names
 
 Validate Domethcs Telemetry Topic Names
 	[Documentation]    Validate the Domethcs Telemetry topic names conform to naming convention.
-	[Tags]    smoke    Domethcs    
+	[Tags]    smoke    Domethcs    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -533,7 +524,7 @@ Validate Electrometer Events Topic Names
 
 Validate Hexapod Commands Topic Names
 	[Documentation]    Validate the Hexapod Commands topic names conform to naming convention.
-	[Tags]    smoke    Hexapod    
+	[Tags]    smoke    Hexapod    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/Hexapod/Hexapod_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -542,7 +533,7 @@ Validate Hexapod Commands Topic Names
 
 Validate Hexapod Events Topic Names
 	[Documentation]    Validate the Hexapod Events topic names conform to naming convention.
-	[Tags]    smoke    Hexapod    
+	[Tags]    smoke    Hexapod    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/Hexapod/Hexapod_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -551,7 +542,7 @@ Validate Hexapod Events Topic Names
 
 Validate Hexapod Telemetry Topic Names
 	[Documentation]    Validate the Hexapod Telemetry topic names conform to naming convention.
-	[Tags]    smoke    Hexapod    
+	[Tags]    smoke    Hexapod    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/Hexapod/Hexapod_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -659,7 +650,7 @@ Validate MTHeaderService Events Topic Names
 
 Validate MTM1M3 Commands Topic Names
 	[Documentation]    Validate the MTM1M3 Commands topic names conform to naming convention.
-	[Tags]    smoke    MTM1M3    
+	[Tags]    smoke    MTM1M3    TSS-2617
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -668,7 +659,7 @@ Validate MTM1M3 Commands Topic Names
 
 Validate MTM1M3 Events Topic Names
 	[Documentation]    Validate the MTM1M3 Events topic names conform to naming convention.
-	[Tags]    smoke    MTM1M3    
+	[Tags]    smoke    MTM1M3    TSS-2617
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -677,7 +668,7 @@ Validate MTM1M3 Events Topic Names
 
 Validate MTM1M3 Telemetry Topic Names
 	[Documentation]    Validate the MTM1M3 Telemetry topic names conform to naming convention.
-	[Tags]    smoke    MTM1M3    
+	[Tags]    smoke    MTM1M3    TSS-2617
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -758,7 +749,7 @@ Validate MTWEP Telemetry Topic Names
 
 Validate OCS Commands Topic Names
 	[Documentation]    Validate the OCS Commands topic names conform to naming convention.
-	[Tags]    smoke    OCS    
+	[Tags]    smoke    OCS    TSS-1792
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/OCS/OCS_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -767,7 +758,7 @@ Validate OCS Commands Topic Names
 
 Validate OCS Events Topic Names
 	[Documentation]    Validate the OCS Events topic names conform to naming convention.
-	[Tags]    smoke    OCS    
+	[Tags]    smoke    OCS    TSS-1792
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/OCS/OCS_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -776,7 +767,7 @@ Validate OCS Events Topic Names
 
 Validate OCS Telemetry Topic Names
 	[Documentation]    Validate the OCS Telemetry topic names conform to naming convention.
-	[Tags]    smoke    OCS    
+	[Tags]    smoke    OCS    TSS-1792
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/OCS/OCS_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -812,7 +803,7 @@ Validate PromptProcessing Telemetry Topic Names
 
 Validate Rotator Commands Topic Names
 	[Documentation]    Validate the Rotator Commands topic names conform to naming convention.
-	[Tags]    smoke    Rotator    
+	[Tags]    smoke    Rotator    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/Rotator/Rotator_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -821,7 +812,7 @@ Validate Rotator Commands Topic Names
 
 Validate Rotator Events Topic Names
 	[Documentation]    Validate the Rotator Events topic names conform to naming convention.
-	[Tags]    smoke    Rotator    
+	[Tags]    smoke    Rotator    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/Rotator/Rotator_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -830,7 +821,7 @@ Validate Rotator Events Topic Names
 
 Validate Rotator Telemetry Topic Names
 	[Documentation]    Validate the Rotator Telemetry topic names conform to naming convention.
-	[Tags]    smoke    Rotator    
+	[Tags]    smoke    Rotator    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/Rotator/Rotator_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -857,7 +848,7 @@ Validate Scheduler Telemetry Topic Names
 
 Validate Sequencer Commands Topic Names
 	[Documentation]    Validate the Sequencer Commands topic names conform to naming convention.
-	[Tags]    smoke    Sequencer    
+	[Tags]    smoke    Sequencer    TSS-1793
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/Sequencer/Sequencer_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -866,7 +857,7 @@ Validate Sequencer Commands Topic Names
 
 Validate Sequencer Events Topic Names
 	[Documentation]    Validate the Sequencer Events topic names conform to naming convention.
-	[Tags]    smoke    Sequencer    
+	[Tags]    smoke    Sequencer    TSS-1793
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/Sequencer/Sequencer_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -875,7 +866,7 @@ Validate Sequencer Events Topic Names
 
 Validate Sequencer Telemetry Topic Names
 	[Documentation]    Validate the Sequencer Telemetry topic names conform to naming convention.
-	[Tags]    smoke    Sequencer    
+	[Tags]    smoke    Sequencer    TSS-1793
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/Sequencer/Sequencer_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -911,7 +902,7 @@ Validate SummitFacility Telemetry Topic Names
 
 Validate TCS Commands Topic Names
 	[Documentation]    Validate the TCS Commands topic names conform to naming convention.
-	[Tags]    smoke    TCS    
+	[Tags]    smoke    TCS    TSS-1795
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/TCS/TCS_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -920,7 +911,7 @@ Validate TCS Commands Topic Names
 
 Validate TCS Events Topic Names
 	[Documentation]    Validate the TCS Events topic names conform to naming convention.
-	[Tags]    smoke    TCS    
+	[Tags]    smoke    TCS    TSS-1795
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/TCS/TCS_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -929,7 +920,7 @@ Validate TCS Events Topic Names
 
 Validate TCS Telemetry Topic Names
 	[Documentation]    Validate the TCS Telemetry topic names conform to naming convention.
-	[Tags]    smoke    TCS    
+	[Tags]    smoke    TCS    TSS-1795
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/TCS/TCS_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -992,7 +983,7 @@ Validate TunableLaser Telemetry Topic Names
 
 Validate VMS Commands Topic Names
 	[Documentation]    Validate the VMS Commands topic names conform to naming convention.
-	[Tags]    smoke    VMS    
+	[Tags]    smoke    VMS    TSS-2618
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/VMS/VMS_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -1001,7 +992,7 @@ Validate VMS Commands Topic Names
 
 Validate VMS Events Topic Names
 	[Documentation]    Validate the VMS Events topic names conform to naming convention.
-	[Tags]    smoke    VMS    
+	[Tags]    smoke    VMS    TSS-2618
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/VMS/VMS_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -1010,7 +1001,7 @@ Validate VMS Events Topic Names
 
 Validate VMS Telemetry Topic Names
 	[Documentation]    Validate the VMS Telemetry topic names conform to naming convention.
-	[Tags]    smoke    VMS    
+	[Tags]    smoke    VMS    TSS-2618
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/VMS/VMS_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}

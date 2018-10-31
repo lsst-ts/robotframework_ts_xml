@@ -218,13 +218,6 @@ Validate CBP Commands
 	Log    ${output}
 	Should Contain    ${output}   CBP_Commands.xml - valid
 
-Validate CBP Events
-	[Documentation]    Validate the CBP Events XML file.
-	[Tags]    smoke    CBP
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/CBP/CBP_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   CBP_Events.xml - valid
-
 Validate CBP Telemetry
 	[Documentation]    Validate the CBP Telemetry XML file.
 	[Tags]    smoke    CBP

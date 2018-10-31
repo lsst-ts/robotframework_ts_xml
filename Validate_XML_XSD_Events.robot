@@ -68,12 +68,6 @@ Validate Catchuparchiver Events XML file
 	Log    ${output}
 	Should Contain    ${output}   CatchupArchiver_Events.xml - valid
 
-Validate CBP Events XML file
-	[Tags]    smoke    CBP
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/CBP/CBP_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   CBP_Events.xml - valid
-
 Validate Dome Events XML file
 	[Tags]    smoke    Dome
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/Dome/Dome_Events.xml
