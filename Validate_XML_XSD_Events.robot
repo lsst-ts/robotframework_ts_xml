@@ -62,8 +62,8 @@ Validate ATTCS Events XML file
 	Log    ${output}
 	Should Contain    ${output}   ATTCS_Events.xml - valid
 
-Validate Catchuparchiver Events XML file
-	[Tags]    smoke    Catchuparchiver
+Validate CatchupArchiver Events XML file
+	[Tags]    smoke    CatchupArchiver
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   CatchupArchiver_Events.xml - valid
@@ -134,8 +134,8 @@ Validate LinearStage Events XML file
 	Log    ${output}
 	Should Contain    ${output}   LinearStage_Events.xml - valid
 
-Validate Mtarchiver Events XML file
-	[Tags]    smoke    Mtarchiver
+Validate MTArchiver Events XML file
+	[Tags]    smoke    MTArchiver
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/MTArchiver/MTArchiver_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   MTArchiver_Events.xml - valid

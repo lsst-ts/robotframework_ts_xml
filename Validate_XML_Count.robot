@@ -80,14 +80,6 @@ Validate AtDome Telemetry XML Counts
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate ATHeaderService Commands XML Counts
-	[Documentation]    Validate the ATHeaderService Commands XML count.
-	[Tags]    smoke    ATHeaderService
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/ATHeaderService/ATHeaderService_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
 Validate ATHeaderService Events XML Counts
 	[Documentation]    Validate the ATHeaderService Events XML count.
 	[Tags]    smoke    ATHeaderService
@@ -216,25 +208,17 @@ Validate ATTCS Telemetry XML Counts
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate Catchuparchiver Commands XML Counts
-	[Documentation]    Validate the Catchuparchiver Commands XML count.
-	[Tags]    smoke    Catchuparchiver
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
-Validate Catchuparchiver Events XML Counts
-	[Documentation]    Validate the Catchuparchiver Events XML count.
-	[Tags]    smoke    Catchuparchiver
+Validate CatchupArchiver Events XML Counts
+	[Documentation]    Validate the CatchupArchiver Events XML count.
+	[Tags]    smoke    CatchupArchiver
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate Catchuparchiver Telemetry XML Counts
-	[Documentation]    Validate the Catchuparchiver Telemetry XML count.
-	[Tags]    smoke    Catchuparchiver
+Validate CatchupArchiver Telemetry XML Counts
+	[Documentation]    Validate the CatchupArchiver Telemetry XML count.
+	[Tags]    smoke    CatchupArchiver
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
@@ -512,25 +496,17 @@ Validate LinearStage Telemetry XML Counts
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate Mtarchiver Commands XML Counts
-	[Documentation]    Validate the Mtarchiver Commands XML count.
-	[Tags]    smoke    Mtarchiver
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/MTArchiver/MTArchiver_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
-Validate Mtarchiver Events XML Counts
-	[Documentation]    Validate the Mtarchiver Events XML count.
-	[Tags]    smoke    Mtarchiver
+Validate MTArchiver Events XML Counts
+	[Documentation]    Validate the MTArchiver Events XML count.
+	[Tags]    smoke    MTArchiver
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/MTArchiver/MTArchiver_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate Mtarchiver Telemetry XML Counts
-	[Documentation]    Validate the Mtarchiver Telemetry XML count.
-	[Tags]    smoke    Mtarchiver
+Validate MTArchiver Telemetry XML Counts
+	[Documentation]    Validate the MTArchiver Telemetry XML count.
+	[Tags]    smoke    MTArchiver
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/MTArchiver/MTArchiver_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
@@ -556,14 +532,6 @@ Validate Mtcamera Telemetry XML Counts
 	[Documentation]    Validate the Mtcamera Telemetry XML count.
 	[Tags]    smoke    Mtcamera
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
-Validate MTHeaderService Commands XML Counts
-	[Documentation]    Validate the MTHeaderService Commands XML count.
-	[Tags]    smoke    MTHeaderService
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
@@ -688,14 +656,6 @@ Validate OCS Telemetry XML Counts
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate PromptProcessing Commands XML Counts
-	[Documentation]    Validate the PromptProcessing Commands XML count.
-	[Tags]    smoke    PromptProcessing
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
 Validate PromptProcessing Events XML Counts
 	[Documentation]    Validate the PromptProcessing Events XML count.
 	[Tags]    smoke    PromptProcessing
@@ -772,14 +732,6 @@ Validate Sequencer Telemetry XML Counts
 	[Documentation]    Validate the Sequencer Telemetry XML count.
 	[Tags]    smoke    Sequencer
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/Sequencer/Sequencer_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
-Validate SummitFacility Commands XML Counts
-	[Documentation]    Validate the SummitFacility Commands XML count.
-	[Tags]    smoke    SummitFacility
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,

@@ -71,13 +71,6 @@ Validate AtDome Telemetry
 	Log    ${output}
 	Should Contain    ${output}   AtDome_Telemetry.xml - valid
 
-Validate ATHeaderService Commands
-	[Documentation]    Validate the ATHeaderService Commands XML file.
-	[Tags]    smoke    ATHeaderService
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ATHeaderService/ATHeaderService_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   ATHeaderService_Commands.xml - valid
-
 Validate ATHeaderService Events
 	[Documentation]    Validate the ATHeaderService Events XML file.
 	[Tags]    smoke    ATHeaderService
@@ -190,23 +183,16 @@ Validate ATTCS Telemetry
 	Log    ${output}
 	Should Contain    ${output}   ATTCS_Telemetry.xml - valid
 
-Validate Catchuparchiver Commands
-	[Documentation]    Validate the Catchuparchiver Commands XML file.
-	[Tags]    smoke    Catchuparchiver
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   CatchupArchiver_Commands.xml - valid
-
-Validate Catchuparchiver Events
-	[Documentation]    Validate the Catchuparchiver Events XML file.
-	[Tags]    smoke    Catchuparchiver
+Validate CatchupArchiver Events
+	[Documentation]    Validate the CatchupArchiver Events XML file.
+	[Tags]    smoke    CatchupArchiver
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   CatchupArchiver_Events.xml - valid
 
-Validate Catchuparchiver Telemetry
-	[Documentation]    Validate the Catchuparchiver Telemetry XML file.
-	[Tags]    smoke    Catchuparchiver
+Validate CatchupArchiver Telemetry
+	[Documentation]    Validate the CatchupArchiver Telemetry XML file.
+	[Tags]    smoke    CatchupArchiver
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   CatchupArchiver_Telemetry.xml - valid
@@ -449,23 +435,16 @@ Validate LinearStage Telemetry
 	Log    ${output}
 	Should Contain    ${output}   LinearStage_Telemetry.xml - valid
 
-Validate Mtarchiver Commands
-	[Documentation]    Validate the Mtarchiver Commands XML file.
-	[Tags]    smoke    Mtarchiver
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTArchiver/MTArchiver_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   MTArchiver_Commands.xml - valid
-
-Validate Mtarchiver Events
-	[Documentation]    Validate the Mtarchiver Events XML file.
-	[Tags]    smoke    Mtarchiver
+Validate MTArchiver Events
+	[Documentation]    Validate the MTArchiver Events XML file.
+	[Tags]    smoke    MTArchiver
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTArchiver/MTArchiver_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   MTArchiver_Events.xml - valid
 
-Validate Mtarchiver Telemetry
-	[Documentation]    Validate the Mtarchiver Telemetry XML file.
-	[Tags]    smoke    Mtarchiver
+Validate MTArchiver Telemetry
+	[Documentation]    Validate the MTArchiver Telemetry XML file.
+	[Tags]    smoke    MTArchiver
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTArchiver/MTArchiver_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   MTArchiver_Telemetry.xml - valid
@@ -490,13 +469,6 @@ Validate Mtcamera Telemetry
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   MTCamera_Telemetry.xml - valid
-
-Validate MTHeaderService Commands
-	[Documentation]    Validate the MTHeaderService Commands XML file.
-	[Tags]    smoke    MTHeaderService
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   MTHeaderService_Commands.xml - valid
 
 Validate MTHeaderService Events
 	[Documentation]    Validate the MTHeaderService Events XML file.
@@ -603,13 +575,6 @@ Validate OCS Telemetry
 	Log    ${output}
 	Should Contain    ${output}   OCS_Telemetry.xml - valid
 
-Validate PromptProcessing Commands
-	[Documentation]    Validate the PromptProcessing Commands XML file.
-	[Tags]    smoke    PromptProcessing
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   PromptProcessing_Commands.xml - valid
-
 Validate PromptProcessing Events
 	[Documentation]    Validate the PromptProcessing Events XML file.
 	[Tags]    smoke    PromptProcessing
@@ -679,13 +644,6 @@ Validate Sequencer Telemetry
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/Sequencer/Sequencer_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   Sequencer_Telemetry.xml - valid
-
-Validate SummitFacility Commands
-	[Documentation]    Validate the SummitFacility Commands XML file.
-	[Tags]    smoke    SummitFacility
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/SummitFacility/SummitFacility_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   SummitFacility_Commands.xml - valid
 
 Validate SummitFacility Events
 	[Documentation]    Validate the SummitFacility Events XML file.

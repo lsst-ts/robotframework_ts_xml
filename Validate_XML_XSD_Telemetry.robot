@@ -56,8 +56,8 @@ Validate ATTCS Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   ATTCS_Telemetry.xml - valid
 
-Validate Catchuparchiver Telemetry XML file
-	[Tags]    smoke    Catchuparchiver
+Validate CatchupArchiver Telemetry XML file
+	[Tags]    smoke    CatchupArchiver
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   CatchupArchiver_Telemetry.xml - valid
@@ -128,8 +128,8 @@ Validate LinearStage Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   LinearStage_Telemetry.xml - valid
 
-Validate Mtarchiver Telemetry XML file
-	[Tags]    smoke    Mtarchiver
+Validate MTArchiver Telemetry XML file
+	[Tags]    smoke    MTArchiver
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/MTArchiver/MTArchiver_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   MTArchiver_Telemetry.xml - valid

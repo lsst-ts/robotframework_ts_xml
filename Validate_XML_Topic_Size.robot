@@ -2932,117 +2932,6 @@ Validate AtDome Telemetry ATDome_position Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATHeaderService Command ATDome_timestamp Topic Byte Size
-	[Documentation]    Validate the ATDome_timestamp topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATHeaderService
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/ATHeaderService/ATHeaderService_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/Count" -v . -n ${folder}/sal_interfaces/ATHeaderService/ATHeaderService_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATHeaderService/ATHeaderService_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate ATHeaderService Command ATDome_timestamp Topic Columns
-	[Documentation]    Validate the ATDome_timestamp topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    ATHeaderService
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/ATHeaderService/ATHeaderService_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/Count" -v . -n ${folder}/sal_interfaces/ATHeaderService/ATHeaderService_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate ATHeaderService Command ATDome_loopTime Topic Byte Size
-	[Documentation]    Validate the ATDome_loopTime topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATHeaderService
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/ATHeaderService/ATHeaderService_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[2]/item/Count" -v . -n ${folder}/sal_interfaces/ATHeaderService/ATHeaderService_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATHeaderService/ATHeaderService_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate ATHeaderService Command ATDome_loopTime Topic Columns
-	[Documentation]    Validate the ATDome_loopTime topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    ATHeaderService
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/ATHeaderService/ATHeaderService_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[2]/item/Count" -v . -n ${folder}/sal_interfaces/ATHeaderService/ATHeaderService_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate ATHeaderService Command ATDome_position Topic Byte Size
-	[Documentation]    Validate the ATDome_position topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATHeaderService
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/ATHeaderService/ATHeaderService_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[3]/item/Count" -v . -n ${folder}/sal_interfaces/ATHeaderService/ATHeaderService_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[3]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATHeaderService/ATHeaderService_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate ATHeaderService Command ATDome_position Topic Columns
-	[Documentation]    Validate the ATDome_position topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    ATHeaderService
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/ATHeaderService/ATHeaderService_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[3]/item/Count" -v . -n ${folder}/sal_interfaces/ATHeaderService/ATHeaderService_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
 Validate ATHeaderService Event ATHeaderService_logevent_heartbeat Topic Byte Size
 	[Documentation]    Validate the ATHeaderService_logevent_heartbeat topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATHeaderService
@@ -7890,83 +7779,9 @@ Validate ATTCS Telemetry ATTCS_Timestamp Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Catchuparchiver Command ATTCS_LoopTime_ms Topic Byte Size
-	[Documentation]    Validate the ATTCS_LoopTime_ms topic is less than 65536 bytes in total.
-	[Tags]    smoke    Catchuparchiver
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/Count" -v . -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate Catchuparchiver Command ATTCS_LoopTime_ms Topic Columns
-	[Documentation]    Validate the ATTCS_LoopTime_ms topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Catchuparchiver
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/Count" -v . -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate Catchuparchiver Command ATTCS_Timestamp Topic Byte Size
-	[Documentation]    Validate the ATTCS_Timestamp topic is less than 65536 bytes in total.
-	[Tags]    smoke    Catchuparchiver
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[2]/item/Count" -v . -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate Catchuparchiver Command ATTCS_Timestamp Topic Columns
-	[Documentation]    Validate the ATTCS_Timestamp topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Catchuparchiver
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[2]/item/Count" -v . -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate Catchuparchiver Event CatchupArchiver_logevent_catchuparchiverEntityStartup Topic Byte Size
+Validate CatchupArchiver Event CatchupArchiver_logevent_catchuparchiverEntityStartup Topic Byte Size
 	[Documentation]    Validate the CatchupArchiver_logevent_catchuparchiverEntityStartup topic is less than 65536 bytes in total.
-	[Tags]    smoke    Catchuparchiver
+	[Tags]    smoke    CatchupArchiver
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Events.xml
@@ -7988,9 +7803,9 @@ Validate Catchuparchiver Event CatchupArchiver_logevent_catchuparchiverEntitySta
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Catchuparchiver Event CatchupArchiver_logevent_catchuparchiverEntityStartup Topic Columns
+Validate CatchupArchiver Event CatchupArchiver_logevent_catchuparchiverEntityStartup Topic Columns
 	[Documentation]    Validate the CatchupArchiver_logevent_catchuparchiverEntityStartup topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Catchuparchiver
+	[Tags]    smoke    CatchupArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Events.xml
@@ -8001,9 +7816,9 @@ Validate Catchuparchiver Event CatchupArchiver_logevent_catchuparchiverEntitySta
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Catchuparchiver Event CatchupArchiver_logevent_settingsApplied Topic Byte Size
+Validate CatchupArchiver Event CatchupArchiver_logevent_settingsApplied Topic Byte Size
 	[Documentation]    Validate the CatchupArchiver_logevent_settingsApplied topic is less than 65536 bytes in total.
-	[Tags]    smoke    Catchuparchiver
+	[Tags]    smoke    CatchupArchiver
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Events.xml
@@ -8025,9 +7840,9 @@ Validate Catchuparchiver Event CatchupArchiver_logevent_settingsApplied Topic By
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Catchuparchiver Event CatchupArchiver_logevent_settingsApplied Topic Columns
+Validate CatchupArchiver Event CatchupArchiver_logevent_settingsApplied Topic Columns
 	[Documentation]    Validate the CatchupArchiver_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Catchuparchiver
+	[Tags]    smoke    CatchupArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Events.xml
@@ -8038,9 +7853,9 @@ Validate Catchuparchiver Event CatchupArchiver_logevent_settingsApplied Topic Co
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Catchuparchiver Event CatchupArchiver_logevent_summaryState Topic Byte Size
+Validate CatchupArchiver Event CatchupArchiver_logevent_summaryState Topic Byte Size
 	[Documentation]    Validate the CatchupArchiver_logevent_summaryState topic is less than 65536 bytes in total.
-	[Tags]    smoke    Catchuparchiver
+	[Tags]    smoke    CatchupArchiver
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Events.xml
@@ -8062,9 +7877,9 @@ Validate Catchuparchiver Event CatchupArchiver_logevent_summaryState Topic Byte 
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Catchuparchiver Event CatchupArchiver_logevent_summaryState Topic Columns
+Validate CatchupArchiver Event CatchupArchiver_logevent_summaryState Topic Columns
 	[Documentation]    Validate the CatchupArchiver_logevent_summaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Catchuparchiver
+	[Tags]    smoke    CatchupArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Events.xml
@@ -8075,9 +7890,9 @@ Validate Catchuparchiver Event CatchupArchiver_logevent_summaryState Topic Colum
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Catchuparchiver Event CatchupArchiver_logevent_catchuparchiverEntitySummaryState Topic Byte Size
+Validate CatchupArchiver Event CatchupArchiver_logevent_catchuparchiverEntitySummaryState Topic Byte Size
 	[Documentation]    Validate the CatchupArchiver_logevent_catchuparchiverEntitySummaryState topic is less than 65536 bytes in total.
-	[Tags]    smoke    Catchuparchiver
+	[Tags]    smoke    CatchupArchiver
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Events.xml
@@ -8099,9 +7914,9 @@ Validate Catchuparchiver Event CatchupArchiver_logevent_catchuparchiverEntitySum
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Catchuparchiver Event CatchupArchiver_logevent_catchuparchiverEntitySummaryState Topic Columns
+Validate CatchupArchiver Event CatchupArchiver_logevent_catchuparchiverEntitySummaryState Topic Columns
 	[Documentation]    Validate the CatchupArchiver_logevent_catchuparchiverEntitySummaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Catchuparchiver
+	[Tags]    smoke    CatchupArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Events.xml
@@ -8112,9 +7927,9 @@ Validate Catchuparchiver Event CatchupArchiver_logevent_catchuparchiverEntitySum
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Catchuparchiver Event CatchupArchiver_logevent_catchuparchiverEntityShutdown Topic Byte Size
+Validate CatchupArchiver Event CatchupArchiver_logevent_catchuparchiverEntityShutdown Topic Byte Size
 	[Documentation]    Validate the CatchupArchiver_logevent_catchuparchiverEntityShutdown topic is less than 65536 bytes in total.
-	[Tags]    smoke    Catchuparchiver
+	[Tags]    smoke    CatchupArchiver
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Events.xml
@@ -8136,9 +7951,9 @@ Validate Catchuparchiver Event CatchupArchiver_logevent_catchuparchiverEntityShu
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Catchuparchiver Event CatchupArchiver_logevent_catchuparchiverEntityShutdown Topic Columns
+Validate CatchupArchiver Event CatchupArchiver_logevent_catchuparchiverEntityShutdown Topic Columns
 	[Documentation]    Validate the CatchupArchiver_logevent_catchuparchiverEntityShutdown topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Catchuparchiver
+	[Tags]    smoke    CatchupArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Events.xml
@@ -8149,9 +7964,9 @@ Validate Catchuparchiver Event CatchupArchiver_logevent_catchuparchiverEntityShu
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Catchuparchiver Telemetry CatchupArchiver_sequencerHeartbeat Topic Byte Size
+Validate CatchupArchiver Telemetry CatchupArchiver_sequencerHeartbeat Topic Byte Size
 	[Documentation]    Validate the CatchupArchiver_sequencerHeartbeat topic is less than 65536 bytes in total.
-	[Tags]    smoke    Catchuparchiver
+	[Tags]    smoke    CatchupArchiver
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Telemetry.xml
@@ -8173,9 +7988,9 @@ Validate Catchuparchiver Telemetry CatchupArchiver_sequencerHeartbeat Topic Byte
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Catchuparchiver Telemetry CatchupArchiver_sequencerHeartbeat Topic Columns
+Validate CatchupArchiver Telemetry CatchupArchiver_sequencerHeartbeat Topic Columns
 	[Documentation]    Validate the CatchupArchiver_sequencerHeartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Catchuparchiver
+	[Tags]    smoke    CatchupArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Telemetry.xml
@@ -15179,46 +14994,9 @@ Validate LinearStage Telemetry LinearStage_position Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtarchiver Command LinearStage_position Topic Byte Size
-	[Documentation]    Validate the LinearStage_position topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtarchiver
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/MTArchiver/MTArchiver_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/Count" -v . -n ${folder}/sal_interfaces/MTArchiver/MTArchiver_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTArchiver/MTArchiver_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate Mtarchiver Command LinearStage_position Topic Columns
-	[Documentation]    Validate the LinearStage_position topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtarchiver
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/MTArchiver/MTArchiver_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/Count" -v . -n ${folder}/sal_interfaces/MTArchiver/MTArchiver_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate Mtarchiver Event MTArchiver_logevent_MTArchiverEntityShutdown Topic Byte Size
+Validate MTArchiver Event MTArchiver_logevent_MTArchiverEntityShutdown Topic Byte Size
 	[Documentation]    Validate the MTArchiver_logevent_MTArchiverEntityShutdown topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtarchiver
+	[Tags]    smoke    MTArchiver
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/MTArchiver/MTArchiver_Events.xml
@@ -15240,9 +15018,9 @@ Validate Mtarchiver Event MTArchiver_logevent_MTArchiverEntityShutdown Topic Byt
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtarchiver Event MTArchiver_logevent_MTArchiverEntityShutdown Topic Columns
+Validate MTArchiver Event MTArchiver_logevent_MTArchiverEntityShutdown Topic Columns
 	[Documentation]    Validate the MTArchiver_logevent_MTArchiverEntityShutdown topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtarchiver
+	[Tags]    smoke    MTArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/MTArchiver/MTArchiver_Events.xml
@@ -15253,9 +15031,9 @@ Validate Mtarchiver Event MTArchiver_logevent_MTArchiverEntityShutdown Topic Col
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtarchiver Event MTArchiver_logevent_MTArchiverEntityStartup Topic Byte Size
+Validate MTArchiver Event MTArchiver_logevent_MTArchiverEntityStartup Topic Byte Size
 	[Documentation]    Validate the MTArchiver_logevent_MTArchiverEntityStartup topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtarchiver
+	[Tags]    smoke    MTArchiver
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/MTArchiver/MTArchiver_Events.xml
@@ -15277,9 +15055,9 @@ Validate Mtarchiver Event MTArchiver_logevent_MTArchiverEntityStartup Topic Byte
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtarchiver Event MTArchiver_logevent_MTArchiverEntityStartup Topic Columns
+Validate MTArchiver Event MTArchiver_logevent_MTArchiverEntityStartup Topic Columns
 	[Documentation]    Validate the MTArchiver_logevent_MTArchiverEntityStartup topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtarchiver
+	[Tags]    smoke    MTArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/MTArchiver/MTArchiver_Events.xml
@@ -15290,9 +15068,9 @@ Validate Mtarchiver Event MTArchiver_logevent_MTArchiverEntityStartup Topic Colu
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtarchiver Event MTArchiver_logevent_settingsApplied Topic Byte Size
+Validate MTArchiver Event MTArchiver_logevent_settingsApplied Topic Byte Size
 	[Documentation]    Validate the MTArchiver_logevent_settingsApplied topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtarchiver
+	[Tags]    smoke    MTArchiver
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/MTArchiver/MTArchiver_Events.xml
@@ -15314,9 +15092,9 @@ Validate Mtarchiver Event MTArchiver_logevent_settingsApplied Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtarchiver Event MTArchiver_logevent_settingsApplied Topic Columns
+Validate MTArchiver Event MTArchiver_logevent_settingsApplied Topic Columns
 	[Documentation]    Validate the MTArchiver_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtarchiver
+	[Tags]    smoke    MTArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/MTArchiver/MTArchiver_Events.xml
@@ -15327,9 +15105,9 @@ Validate Mtarchiver Event MTArchiver_logevent_settingsApplied Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtarchiver Event MTArchiver_logevent_MTArchiverEntitySummaryState Topic Byte Size
+Validate MTArchiver Event MTArchiver_logevent_MTArchiverEntitySummaryState Topic Byte Size
 	[Documentation]    Validate the MTArchiver_logevent_MTArchiverEntitySummaryState topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtarchiver
+	[Tags]    smoke    MTArchiver
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/MTArchiver/MTArchiver_Events.xml
@@ -15351,9 +15129,9 @@ Validate Mtarchiver Event MTArchiver_logevent_MTArchiverEntitySummaryState Topic
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtarchiver Event MTArchiver_logevent_MTArchiverEntitySummaryState Topic Columns
+Validate MTArchiver Event MTArchiver_logevent_MTArchiverEntitySummaryState Topic Columns
 	[Documentation]    Validate the MTArchiver_logevent_MTArchiverEntitySummaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtarchiver
+	[Tags]    smoke    MTArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/MTArchiver/MTArchiver_Events.xml
@@ -15364,9 +15142,9 @@ Validate Mtarchiver Event MTArchiver_logevent_MTArchiverEntitySummaryState Topic
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtarchiver Telemetry MTArchiver_sequencerHeartbeat Topic Byte Size
+Validate MTArchiver Telemetry MTArchiver_sequencerHeartbeat Topic Byte Size
 	[Documentation]    Validate the MTArchiver_sequencerHeartbeat topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtarchiver
+	[Tags]    smoke    MTArchiver
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/MTArchiver/MTArchiver_Telemetry.xml
@@ -15388,9 +15166,9 @@ Validate Mtarchiver Telemetry MTArchiver_sequencerHeartbeat Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtarchiver Telemetry MTArchiver_sequencerHeartbeat Topic Columns
+Validate MTArchiver Telemetry MTArchiver_sequencerHeartbeat Topic Columns
 	[Documentation]    Validate the MTArchiver_sequencerHeartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtarchiver
+	[Tags]    smoke    MTArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/MTArchiver/MTArchiver_Telemetry.xml
@@ -17547,598 +17325,6 @@ Validate Mtcamera Telemetry MTCamera_cold Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTHeaderService Command MTCamera_shutter Topic Byte Size
-	[Documentation]    Validate the MTCamera_shutter topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTHeaderService
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/Count" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTHeaderService Command MTCamera_shutter Topic Columns
-	[Documentation]    Validate the MTCamera_shutter topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    MTHeaderService
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/Count" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTHeaderService Command MTCamera_prot Topic Byte Size
-	[Documentation]    Validate the MTCamera_prot topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTHeaderService
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[2]/item/Count" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTHeaderService Command MTCamera_prot Topic Columns
-	[Documentation]    Validate the MTCamera_prot topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    MTHeaderService
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[2]/item/Count" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTHeaderService Command MTCamera_filter Topic Byte Size
-	[Documentation]    Validate the MTCamera_filter topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTHeaderService
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[3]/item/Count" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[3]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTHeaderService Command MTCamera_filter Topic Columns
-	[Documentation]    Validate the MTCamera_filter topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    MTHeaderService
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[3]/item/Count" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTHeaderService Command MTCamera_heartbeat Topic Byte Size
-	[Documentation]    Validate the MTCamera_heartbeat topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTHeaderService
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[4]/item/Count" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTHeaderService Command MTCamera_heartbeat Topic Columns
-	[Documentation]    Validate the MTCamera_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    MTHeaderService
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[4]/item/Count" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTHeaderService Command MTCamera_was Topic Byte Size
-	[Documentation]    Validate the MTCamera_was topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTHeaderService
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[5]/item/Count" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTHeaderService Command MTCamera_was Topic Columns
-	[Documentation]    Validate the MTCamera_was topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    MTHeaderService
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[5]/item/Count" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTHeaderService Command MTCamera_ccs Topic Byte Size
-	[Documentation]    Validate the MTCamera_ccs topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTHeaderService
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[6]/item/Count" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[6]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTHeaderService Command MTCamera_ccs Topic Columns
-	[Documentation]    Validate the MTCamera_ccs topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    MTHeaderService
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[6]/item/Count" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTHeaderService Command MTCamera_clusterEncoder Topic Byte Size
-	[Documentation]    Validate the MTCamera_clusterEncoder topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTHeaderService
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[7]/item)" -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[7]/item/Count" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[7]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTHeaderService Command MTCamera_clusterEncoder Topic Columns
-	[Documentation]    Validate the MTCamera_clusterEncoder topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    MTHeaderService
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[7]/item)" -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[7]/item/Count" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTHeaderService Command MTCamera_cyro Topic Byte Size
-	[Documentation]    Validate the MTCamera_cyro topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTHeaderService
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[8]/item)" -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[8]/item/Count" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[8]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTHeaderService Command MTCamera_cyro Topic Columns
-	[Documentation]    Validate the MTCamera_cyro topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    MTHeaderService
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[8]/item)" -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[8]/item/Count" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTHeaderService Command MTCamera_purge Topic Byte Size
-	[Documentation]    Validate the MTCamera_purge topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTHeaderService
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[9]/item)" -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[9]/item/Count" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[9]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTHeaderService Command MTCamera_purge Topic Columns
-	[Documentation]    Validate the MTCamera_purge topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    MTHeaderService
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[9]/item)" -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[9]/item/Count" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTHeaderService Command MTCamera_wds Topic Byte Size
-	[Documentation]    Validate the MTCamera_wds topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTHeaderService
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[10]/item)" -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[10]/item/Count" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[10]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTHeaderService Command MTCamera_wds Topic Columns
-	[Documentation]    Validate the MTCamera_wds topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    MTHeaderService
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[10]/item)" -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[10]/item/Count" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTHeaderService Command MTCamera_gds Topic Byte Size
-	[Documentation]    Validate the MTCamera_gds topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTHeaderService
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[11]/item)" -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[11]/item/Count" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[11]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTHeaderService Command MTCamera_gds Topic Columns
-	[Documentation]    Validate the MTCamera_gds topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    MTHeaderService
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[11]/item)" -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[11]/item/Count" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTHeaderService Command MTCamera_sds Topic Byte Size
-	[Documentation]    Validate the MTCamera_sds topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTHeaderService
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[12]/item)" -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[12]/item/Count" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[12]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTHeaderService Command MTCamera_sds Topic Columns
-	[Documentation]    Validate the MTCamera_sds topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    MTHeaderService
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[12]/item)" -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[12]/item/Count" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTHeaderService Command MTCamera_gas Topic Byte Size
-	[Documentation]    Validate the MTCamera_gas topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTHeaderService
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[13]/item)" -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[13]/item/Count" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[13]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTHeaderService Command MTCamera_gas Topic Columns
-	[Documentation]    Validate the MTCamera_gas topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    MTHeaderService
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[13]/item)" -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[13]/item/Count" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTHeaderService Command MTCamera_pcms Topic Byte Size
-	[Documentation]    Validate the MTCamera_pcms topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTHeaderService
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[14]/item)" -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[14]/item/Count" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[14]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTHeaderService Command MTCamera_pcms Topic Columns
-	[Documentation]    Validate the MTCamera_pcms topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    MTHeaderService
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[14]/item)" -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[14]/item/Count" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTHeaderService Command MTCamera_sas Topic Byte Size
-	[Documentation]    Validate the MTCamera_sas topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTHeaderService
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[15]/item)" -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[15]/item/Count" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[15]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTHeaderService Command MTCamera_sas Topic Columns
-	[Documentation]    Validate the MTCamera_sas topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    MTHeaderService
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[15]/item)" -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[15]/item/Count" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTHeaderService Command MTCamera_cold Topic Byte Size
-	[Documentation]    Validate the MTCamera_cold topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTHeaderService
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[16]/item)" -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[16]/item/Count" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[16]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTHeaderService Command MTCamera_cold Topic Columns
-	[Documentation]    Validate the MTCamera_cold topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    MTHeaderService
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[16]/item)" -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[16]/item/Count" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
 Validate MTHeaderService Event MTHeaderService_logevent_heartbeat Topic Byte Size
 	[Documentation]    Validate the MTHeaderService_logevent_heartbeat topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTHeaderService
@@ -19164,7 +18350,7 @@ Validate MTM1M3 Command MTM1M3_command_runMirrorForceProfile Topic Byte Size
 
 Validate MTM1M3 Command MTM1M3_command_runMirrorForceProfile Topic Columns
 	[Documentation]    Validate the MTM1M3_command_runMirrorForceProfile topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    MTM1M3
+	[Tags]    smoke    MTM1M3	TSS-2989
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[24]/item)" -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Commands.xml
@@ -20459,7 +19645,7 @@ Validate MTM1M3 Event MTM1M3_logevent_forceActuatorInfo Topic Byte Size
 
 Validate MTM1M3 Event MTM1M3_logevent_forceActuatorInfo Topic Columns
 	[Documentation]    Validate the MTM1M3_logevent_forceActuatorInfo topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    MTM1M3
+	[Tags]    smoke    MTM1M3	TSS-2990
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[21]/item)" -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Events.xml
@@ -20533,7 +19719,7 @@ Validate MTM1M3 Event MTM1M3_logevent_forceActuatorWarning Topic Byte Size
 
 Validate MTM1M3 Event MTM1M3_logevent_forceActuatorWarning Topic Columns
 	[Documentation]    Validate the MTM1M3_logevent_forceActuatorWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    MTM1M3
+	[Tags]    smoke    MTM1M3	TSS-2992
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[23]/item)" -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Events.xml
@@ -20570,7 +19756,7 @@ Validate MTM1M3 Event MTM1M3_logevent_forceSetpointWarning Topic Byte Size
 
 Validate MTM1M3 Event MTM1M3_logevent_forceSetpointWarning Topic Columns
 	[Documentation]    Validate the MTM1M3_logevent_forceSetpointWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    MTM1M3
+	[Tags]    smoke    MTM1M3	TSS-2991
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[24]/item)" -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Events.xml
@@ -24392,43 +23578,6 @@ Validate OCS Telemetry OCS_SequencerHeartbeat Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate PromptProcessing Command OCS_SequencerHeartbeat Topic Byte Size
-	[Documentation]    Validate the OCS_SequencerHeartbeat topic is less than 65536 bytes in total.
-	[Tags]    smoke    PromptProcessing
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PromptProcessing Command OCS_SequencerHeartbeat Topic Columns
-	[Documentation]    Validate the OCS_SequencerHeartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    PromptProcessing
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
 Validate PromptProcessing Event PromptProceessing_logevent_ErrorCode Topic Byte Size
 	[Documentation]    Validate the PromptProceessing_logevent_ErrorCode topic is less than 65536 bytes in total.
 	[Tags]    smoke    PromptProcessing
@@ -27346,43 +26495,6 @@ Validate Sequencer Telemetry Sequencer_SequencerHeartbeat Topic Columns
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/Sequencer/Sequencer_Telemetry.xml
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/Count" -v . -n ${folder}/sal_interfaces/Sequencer/Sequencer_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate SummitFacility Command Sequencer_SequencerHeartbeat Topic Byte Size
-	[Documentation]    Validate the Sequencer_SequencerHeartbeat topic is less than 65536 bytes in total.
-	[Tags]    smoke    SummitFacility
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/Count" -v . -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate SummitFacility Command Sequencer_SequencerHeartbeat Topic Columns
-	[Documentation]    Validate the Sequencer_SequencerHeartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    SummitFacility
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/Count" -v . -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Commands.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}

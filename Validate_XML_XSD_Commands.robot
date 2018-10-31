@@ -26,12 +26,6 @@ Validate AtDome Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   AtDome_Commands.xml - valid
 
-Validate ATHeaderService Commands XML file
-	[Tags]    smoke    ATHeaderService
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/ATHeaderService/ATHeaderService_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   ATHeaderService_Commands.xml - valid
-
 Validate ATMCS Commands XML file
 	[Tags]    smoke    ATMCS
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/ATMCS/ATMCS_Commands.xml
@@ -61,12 +55,6 @@ Validate ATTCS Commands XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/ATTCS/ATTCS_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   ATTCS_Commands.xml - valid
-
-Validate Catchuparchiver Commands XML file
-	[Tags]    smoke    Catchuparchiver
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   CatchupArchiver_Commands.xml - valid
 
 Validate CBP Commands XML file
 	[Tags]    smoke    CBP
@@ -140,23 +128,11 @@ Validate LinearStage Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   LinearStage_Commands.xml - valid
 
-Validate Mtarchiver Commands XML file
-	[Tags]    smoke    Mtarchiver
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/MTArchiver/MTArchiver_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   MTArchiver_Commands.xml - valid
-
 Validate Mtcamera Commands XML file
 	[Tags]    smoke    Mtcamera
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/MTCamera/MTCamera_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   MTCamera_Commands.xml - valid
-
-Validate MTHeaderService Commands XML file
-	[Tags]    smoke    MTHeaderService
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   MTHeaderService_Commands.xml - valid
 
 Validate MTM1M3 Commands XML file
 	[Tags]    smoke    MTM1M3
@@ -182,12 +158,6 @@ Validate OCS Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   OCS_Commands.xml - valid
 
-Validate PromptProcessing Commands XML file
-	[Tags]    smoke    PromptProcessing
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   PromptProcessing_Commands.xml - valid
-
 Validate Rotator Commands XML file
 	[Tags]    smoke    Rotator
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/Rotator/Rotator_Commands.xml
@@ -199,12 +169,6 @@ Validate Sequencer Commands XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/Sequencer/Sequencer_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   Sequencer_Commands.xml - valid
-
-Validate SummitFacility Commands XML file
-	[Tags]    smoke    SummitFacility
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/SummitFacility/SummitFacility_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   SummitFacility_Commands.xml - valid
 
 Validate TCS Commands XML file
 	[Tags]    smoke    TCS
