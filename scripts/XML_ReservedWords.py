@@ -33,12 +33,8 @@ for subsystem in xml_common.subsystems:
 		messageType = xml.split('/')[7].split('_')[1].split('.')[0]
 
 		# Mark test cases with Jira tickets
-		if subsystem == "Test" and messageType == "Telemetry":
-			mysql_skipped="    TSS-3223"
-		elif subsystem == "Test" and messageType == "Events":
-			mysql_skipped="    TSS-3223"
-		elif subsystem == "Test" and messageType == "Commands":
-			mysql_skipped="    TSS-3223"
+		if subsystem == "test" and messageType == "test":
+			mysql_skipped=""
 		else:
 			mysql_skipped=""
 			idl_skipped=""
