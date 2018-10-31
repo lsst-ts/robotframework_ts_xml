@@ -848,34 +848,6 @@ Validate CBP Commands <EFDB_Name> element
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate CBP Events <Subsystem> element
-	[Documentation]    Validate the CBP Events <Subsystem> elements do not contain embedded spaces.
-	[Tags]    smoke    CBP
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Subsystem" -v . -n ${folder}/sal_interfaces/CBP/CBP_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate CBP Events <EFDB_Topic> element
-	[Documentation]    Validate the CBP Events <EFDB_Topic> elements do not contain embedded spaces.
-	[Tags]    smoke    CBP
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/CBP/CBP_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate CBP Events <Alias> element
-	[Documentation]    Validate the CBP Events <Alias> elements do not contain embedded spaces.
-	[Tags]    smoke    CBP
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/CBP/CBP_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate CBP Events <EFDB_Name> element
-	[Documentation]    Validate the CBP Events <EFDB_Name> elements do not contain embedded spaces.
-	[Tags]    smoke    CBP
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/CBP/CBP_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
 Validate CBP Telemetry <Subsystem> element
 	[Documentation]    Validate the CBP Telemetry <Subsystem> elements do not contain embedded spaces.
 	[Tags]    smoke    CBP
