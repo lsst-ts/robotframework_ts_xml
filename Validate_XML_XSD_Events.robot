@@ -14,17 +14,41 @@ Validate AtDome Events XML file
 	Log    ${output}
 	Should Contain    ${output}   AtDome_Events.xml - valid
 
-Validate Cbp Events XML file
-	[Tags]    smoke    Cbp
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/CBP/CBP_Events.xml
+Validate ATHeaderService Events XML file
+	[Tags]    smoke    ATHeaderService
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/ATHeaderService/ATHeaderService_Events.xml
 	Log    ${output}
-	Should Contain    ${output}   CBP_Events.xml - valid
+	Should Contain    ${output}   ATHeaderService_Events.xml - valid
+
+Validate AtWhiteLight Events XML file
+	[Tags]    smoke    AtWhiteLight
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/AtWhiteLight/AtWhiteLight_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   AtWhiteLight_Events.xml - valid
+
+Validate Catchuparchiver Events XML file
+	[Tags]    smoke    Catchuparchiver
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   CatchupArchiver_Events.xml - valid
+
+Validate EFD Events XML file
+	[Tags]    smoke    EFD
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/efd/efd_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   efd_Events.xml - valid
 
 Validate LinearStage Events XML file
 	[Tags]    smoke    LinearStage
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   LinearStage_Events.xml - valid
+
+Validate M2MS Events XML file
+	[Tags]    smoke    M2MS
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/m2ms/m2ms_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   m2ms_Events.xml - valid
 
 Validate MTMount Events XML file
 	[Tags]    smoke    MTMount
@@ -37,6 +61,12 @@ Validate PromptProcessing Events XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   PromptProcessing_Events.xml - valid
+
+Validate SummitFacility Events XML file
+	[Tags]    smoke    SummitFacility
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/SummitFacility/SummitFacility_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   SummitFacility_Events.xml - valid
 
 Validate Test Events XML file
 	[Tags]    smoke    Test

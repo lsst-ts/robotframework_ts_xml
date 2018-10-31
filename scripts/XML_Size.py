@@ -44,7 +44,10 @@ for subsystem in xml_common.subsystems:
 		home = os.environ['XML_HOME']
 		salxmlpath = '/SAL' + messageType.rstrip("s") + 'Set/SAL' + messageType.rstrip("s")
 		xmlfile = 'sal_interfaces/' + subsystem + '/' + subsystem + '_' + messageType + '.xml'
-		topics = subprocess.check_output(app + ' sel -t -m "/' + salxmlpath + '/EFDB_Topic" -v . -n ' + home + '/' + xmlfile, shell=True).split()
+		try:
+			topics = subprocess.check_output(app + ' sel -t -m "/' + salxmlpath + '/EFDB_Topic" -v . -n ' + home + '/' + xmlfile, shell=True).split()
+		except:
+			print("\tERROR: " + subsystem + '_' + messageType + ".xml" + " is not valid XML.")
 		for index, topic in enumerate(topics):
 			
 			# Mark test cases with Jira tickets

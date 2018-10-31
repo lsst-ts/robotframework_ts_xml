@@ -3,6 +3,7 @@
 --name ValidateXML
 
 # List of test suites
+Validate_CSC_List.robot
 Validate_XML_Definitions.robot
 Validate_XML_XSD_Telemetry.robot
 Validate_XML_XSD_Commands.robot

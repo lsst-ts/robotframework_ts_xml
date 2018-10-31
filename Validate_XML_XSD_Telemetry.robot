@@ -14,17 +14,35 @@ Validate AtDome Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   AtDome_Telemetry.xml - valid
 
-Validate Cbp Telemetry XML file
-	[Tags]    smoke    Cbp
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/CBP/CBP_Telemetry.xml
+Validate AtWhiteLight Telemetry XML file
+	[Tags]    smoke    AtWhiteLight    TSS-3066
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/AtWhiteLight/AtWhiteLight_Telemetry.xml
 	Log    ${output}
-	Should Contain    ${output}   CBP_Telemetry.xml - valid
+	Should Contain    ${output}   AtWhiteLight_Telemetry.xml - valid
+
+Validate Catchuparchiver Telemetry XML file
+	[Tags]    smoke    Catchuparchiver
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   CatchupArchiver_Telemetry.xml - valid
+
+Validate EFD Telemetry XML file
+	[Tags]    smoke    EFD
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/efd/efd_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   efd_Telemetry.xml - valid
 
 Validate LinearStage Telemetry XML file
 	[Tags]    smoke    LinearStage
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/LinearStage/LinearStage_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   LinearStage_Telemetry.xml - valid
+
+Validate M2MS Telemetry XML file
+	[Tags]    smoke    M2MS
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/m2ms/m2ms_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   m2ms_Telemetry.xml - valid
 
 Validate MTMount Telemetry XML file
 	[Tags]    smoke    MTMount
@@ -37,6 +55,12 @@ Validate PromptProcessing Telemetry XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   PromptProcessing_Telemetry.xml - valid
+
+Validate SummitFacility Telemetry XML file
+	[Tags]    smoke    SummitFacility
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/SummitFacility/SummitFacility_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   SummitFacility_Telemetry.xml - valid
 
 Validate Test Telemetry XML file
 	[Tags]    smoke    Test    TSS-3224

@@ -9,11 +9,11 @@ import os
 # Variables
 # =========
 """Defines the array of Commandable SAL Components, or CSCs."""
-subsystems = ['archiver', 'atArchiver', 'AtDome', 'atHeaderService', 'AtMCS', 'atMonochromator', 'AtPneumatics', 'atScheduler', 'AtWhiteLight', 
-				'AtWhiteLightChiller', 'atcamera', 'atcs', 'camera', 'catchupArchiver', 'CBP',
+subsystems = ['archiver', 'atArchiver', 'AtDome', 'ATHeaderService', 'AtMCS', 'atMonochromator', 'AtPneumatics', 'atScheduler', 'AtWhiteLight', 
+				'AtWhiteLightChiller', 'atcamera', 'atcs', 'camera', 'CatchupArchiver',
 				'dome', 'domeADB', 'domeAPS', 'domeLouvers', 'domeLWS', 'domeMONCS', 'domeTHCS', 'eec', 'efd', 
-				'headerService', 'hexapod', 'Laser', 'LinearStage', 'm1m3', 'm2ms', 'MtAtElectrometer', 'MTMount', 'ocs', 'PromptProcessing', 'rotator', 
-				'scheduler', 'sedSpectrometer', 'sequencer', 'Spectrograph', 'summitFacility', 'tcs', 'tcsOfc', 'tcsWEP', 'Test', 'vms']
+				'headerService', 'hexapod', 'Laser', 'LinearStage', 'm1m3', 'm2ms', 'MTMount', 'ocs', 'PromptProcessing', 'rotator', 
+				'scheduler', 'sedSpectrometer', 'sequencer', 'AtSpectrograph', 'SummitFacility', 'tcs', 'tcsOfc', 'tcsWEP', 'Test', 'vms']
 
 
 # =========
@@ -34,8 +34,8 @@ def CapitalizeSubsystem( subsystem ):
 		return "ATCS"
 	elif subsystem == "AtMCS":
 		return "AtMCS"
-	elif subsystem == "atHeaderService":
-		return "AtHeaderService"
+	elif subsystem == "ATHeaderService":
+		return "ATHeaderService"
 	elif subsystem == "atMonochromator":
 		return "AtMonochromator"
 	elif subsystem == "AtPneumatics":
@@ -48,7 +48,7 @@ def CapitalizeSubsystem( subsystem ):
 		return "AtWhiteLight"
 	elif subsystem == "AtWhiteLightChiller":
 		return "AtWhiteLightChiller"
-	elif subsystem == "catchupArchiver":
+	elif subsystem == "Catchuparchiver":
 		return "CatchupArchiver"
 	elif subsystem == "eec":
 		return "EEC"
@@ -62,8 +62,6 @@ def CapitalizeSubsystem( subsystem ):
 		return "M1M3"
 	elif subsystem == "m2ms":
 		return "M2MS"
-	elif subsystem == "MtAtElectrometer":
-		return "MtAtElectrometer"
 	elif subsystem == "MTMount":
 		return subsystem
 	elif subsystem == "ocs":
@@ -72,7 +70,7 @@ def CapitalizeSubsystem( subsystem ):
 		return "PromptProcessing"
 	elif subsystem == "sedSpectrometer":
 		return "SEDSpectrometer"
-	elif subsystem == "summitFacility":
+	elif subsystem == "SummitFacility":
 		return "SummitFacility"
 	elif subsystem == "tcs":
 		return "TCS"
