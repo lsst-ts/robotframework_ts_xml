@@ -56,13 +56,13 @@ for subsystem in xml_common.subsystems:
 				col_skipped="	TSS-2987"
 			elif subsystem == "FiberSpectrometer" and topic.decode("utf-8") == "Fiberpectrometer_logevent_internalCommand":
 				col_skipped="	TSS-2988"
-			elif subsystem == "MTM1M3" and topic.decode("utf-8") == "MTM1M3_command_RunMirrorForceProfile":
+			elif subsystem == "MTM1M3" and topic.decode("utf-8") == "MTM1M3_command_runMirrorForceProfile":
 				col_skipped="	TSS-2989"
-			elif subsystem == "MTM1M3" and topic.decode("utf-8") == "MTM1M3_logevent_ForceActuatorInfo":
+			elif subsystem == "MTM1M3" and topic.decode("utf-8") == "MTM1M3_logevent_forceActuatorInfo":
 				col_skipped="	TSS-2990"
-			elif subsystem == "MTM1M3" and topic.decode("utf-8") == "MTM1M3_logevent_ForceSetpointWarning":
+			elif subsystem == "MTM1M3" and topic.decode("utf-8") == "MTM1M3_logevent_forceSetpointWarning":
 				col_skipped="	TSS-2991"
-			elif subsystem == "MTM1M3" and topic.decode("utf-8") == "MTM1M3_logevent_ForceActuatorWarning":
+			elif subsystem == "MTM1M3" and topic.decode("utf-8") == "MTM1M3_logevent_forceActuatorWarning":
 				col_skipped="	TSS-2992"
 			elif subsystem == "ATTCS" and topic.decode("utf-8") == "ATTCS_logevent_InternalCommand":
 				col_skipped="	TSS-2994"
