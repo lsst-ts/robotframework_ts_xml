@@ -32,42 +32,22 @@ Validate AtDome Telemetry XML Counts
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-<<<<<<< HEAD
-Validate Cbp Commands XML Counts
-	[Documentation]    Validate the Cbp Commands XML count.
-	[Tags]    smoke    Cbp
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/CBP/CBP_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-=======
 Validate ATHeaderService Commands XML Counts
 	[Documentation]    Validate the ATHeaderService Commands XML count.
 	[Tags]    smoke    ATHeaderService
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/ATHeaderService/ATHeaderService_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
->>>>>>> develop
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-<<<<<<< HEAD
-Validate Cbp Events XML Counts
-	[Documentation]    Validate the Cbp Events XML count.
-	[Tags]    smoke    Cbp
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/CBP/CBP_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-=======
 Validate ATHeaderService Events XML Counts
 	[Documentation]    Validate the ATHeaderService Events XML count.
 	[Tags]    smoke    ATHeaderService
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/ATHeaderService/ATHeaderService_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
->>>>>>> develop
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-<<<<<<< HEAD
-Validate Cbp Telemetry XML Counts
-	[Documentation]    Validate the Cbp Telemetry XML count.
-	[Tags]    smoke    Cbp
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/CBP/CBP_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-=======
 Validate AtWhiteLight Commands XML Counts
 	[Documentation]    Validate the AtWhiteLight Commands XML count.
 	[Tags]    smoke    AtWhiteLight
@@ -128,7 +108,6 @@ Validate EFD Telemetry XML Counts
 	[Documentation]    Validate the EFD Telemetry XML count.
 	[Tags]    smoke    EFD
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/efd/efd_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
->>>>>>> develop
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
@@ -157,8 +136,6 @@ Validate LinearStage Telemetry XML Counts
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-<<<<<<< HEAD
-=======
 Validate M2MS Commands XML Counts
 	[Documentation]    Validate the M2MS Commands XML count.
 	[Tags]    smoke    M2MS
@@ -183,7 +160,6 @@ Validate M2MS Telemetry XML Counts
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
->>>>>>> develop
 Validate MTMount Commands XML Counts
 	[Documentation]    Validate the MTMount Commands XML count.
 	[Tags]    smoke    MTMount
@@ -228,8 +204,6 @@ Validate PromptProcessing Telemetry XML Counts
 	[Documentation]    Validate the PromptProcessing Telemetry XML count.
 	[Tags]    smoke    PromptProcessing
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-<<<<<<< HEAD
-=======
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
@@ -254,7 +228,6 @@ Validate SummitFacility Telemetry XML Counts
 	[Documentation]    Validate the SummitFacility Telemetry XML count.
 	[Tags]    smoke    SummitFacility
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
->>>>>>> develop
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,

@@ -11,7 +11,7 @@ ${xml}    xml
 *** Test Cases ***
 Validate AtDome Commands Topic Names
 	[Documentation]    Validate the AtDome Commands topic names conform to naming convention.
-	[Tags]    smoke    AtDome    TSS-3059
+	[Tags]    smoke    AtDome    
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/AtDome/AtDome_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -20,7 +20,7 @@ Validate AtDome Commands Topic Names
 
 Validate AtDome Events Topic Names
 	[Documentation]    Validate the AtDome Events topic names conform to naming convention.
-	[Tags]    smoke    AtDome    TSS-3059
+	[Tags]    smoke    AtDome    
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/AtDome/AtDome_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -29,7 +29,7 @@ Validate AtDome Events Topic Names
 
 Validate AtDome Telemetry Topic Names
 	[Documentation]    Validate the AtDome Telemetry topic names conform to naming convention.
-	[Tags]    smoke    AtDome    TSS-3059
+	[Tags]    smoke    AtDome    
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/AtDome/AtDome_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
