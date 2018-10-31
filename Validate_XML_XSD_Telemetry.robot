@@ -207,7 +207,7 @@ Validate TCS Telemetry XML file
 	Should Contain    ${output}   TCS_Telemetry.xml - valid
 
 Validate Test Telemetry XML file
-	[Tags]    smoke    Test
+	[Tags]    smoke    Test    TSS-3224
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/Test/Test_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   Test_Telemetry.xml - valid

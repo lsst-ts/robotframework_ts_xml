@@ -35,6 +35,9 @@ for topictype in ["Commands", "Events", "Telemetry"]:
 		if (subsystem == "ATWhiteLight" and topictype == "Telemetry"):
 			telem_skipped="    TSS-3066"
 			skipped=com_skipped=event_skipped=""
+		elif (subsystem == "Test" and topictype == "Telemetry"):
+			telem_skipped="    TSS-3224"
+			skipped=com_skipped=event_skipped=""
 		else:
 			skipped=""
 			com_skipped=""
