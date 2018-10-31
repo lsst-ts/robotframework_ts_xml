@@ -20,12 +20,6 @@ Validate ATHeaderService Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   ATHeaderService_Commands.xml - valid
 
-Validate AtWhiteLight Commands XML file
-	[Tags]    smoke    AtWhiteLight
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/AtWhiteLight/AtWhiteLight_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   AtWhiteLight_Commands.xml - valid
-
 Validate Catchuparchiver Commands XML file
 	[Tags]    smoke    Catchuparchiver
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Commands.xml
@@ -37,12 +31,6 @@ Validate LinearStage Commands XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   LinearStage_Commands.xml - valid
-
-Validate M2MS Commands XML file
-	[Tags]    smoke    M2MS
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/m2ms/m2ms_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   m2ms_Commands.xml - valid
 
 Validate MTMount Commands XML file
 	[Tags]    smoke    MTMount

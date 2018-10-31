@@ -20,35 +20,17 @@ Validate ATHeaderService Events XML file
 	Log    ${output}
 	Should Contain    ${output}   ATHeaderService_Events.xml - valid
 
-Validate AtWhiteLight Events XML file
-	[Tags]    smoke    AtWhiteLight
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/AtWhiteLight/AtWhiteLight_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   AtWhiteLight_Events.xml - valid
-
 Validate Catchuparchiver Events XML file
 	[Tags]    smoke    Catchuparchiver
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   CatchupArchiver_Events.xml - valid
 
-Validate EFD Events XML file
-	[Tags]    smoke    EFD
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/efd/efd_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   efd_Events.xml - valid
-
 Validate LinearStage Events XML file
 	[Tags]    smoke    LinearStage
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   LinearStage_Events.xml - valid
-
-Validate M2MS Events XML file
-	[Tags]    smoke    M2MS
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/m2ms/m2ms_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   m2ms_Events.xml - valid
 
 Validate MTMount Events XML file
 	[Tags]    smoke    MTMount

@@ -14,35 +14,17 @@ Validate AtDome Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   AtDome_Telemetry.xml - valid
 
-Validate AtWhiteLight Telemetry XML file
-	[Tags]    smoke    AtWhiteLight    TSS-3066
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/AtWhiteLight/AtWhiteLight_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   AtWhiteLight_Telemetry.xml - valid
-
 Validate Catchuparchiver Telemetry XML file
 	[Tags]    smoke    Catchuparchiver
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   CatchupArchiver_Telemetry.xml - valid
 
-Validate EFD Telemetry XML file
-	[Tags]    smoke    EFD
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/efd/efd_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   efd_Telemetry.xml - valid
-
 Validate LinearStage Telemetry XML file
 	[Tags]    smoke    LinearStage
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/LinearStage/LinearStage_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   LinearStage_Telemetry.xml - valid
-
-Validate M2MS Telemetry XML file
-	[Tags]    smoke    M2MS
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/m2ms/m2ms_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   m2ms_Telemetry.xml - valid
 
 Validate MTMount Telemetry XML file
 	[Tags]    smoke    MTMount
