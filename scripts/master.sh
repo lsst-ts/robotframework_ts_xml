@@ -1,5 +1,5 @@
-echo "Generating Generic topics tests..."; python XML_Generic.py; 
-echo "Count field tests..."; python XML_Count.py; 
+#echo "Generating Generic topics tests..."; python XML_Generic.py; 
+echo "Generating Count field tests..."; python XML_Count.py; 
 echo "Definition tests..."; python XML_Definitions.py; 
 echo "No Spaces tests..."; python XML_NoSpaces.py; 
 echo "Topic Size tests..."; python XML_Size.py; 
