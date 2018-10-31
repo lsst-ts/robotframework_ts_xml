@@ -316,40 +316,6 @@ Validate ATTCS Event Enumeration
 	:FOR    ${item}    IN    @{Enumerations}
 	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
 
-Validate ATWhiteLight Generic Commands
-	[Documentation]    Validate the ATWhiteLight contains all the required generic, or State Machine, commands.
-	[Tags]    smoke    ATWhiteLight
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    ATWhiteLight
-	Comment    Get the Commands for the CSC.
-	${topics}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Commands.xml
-	@{Commands}=    Split to Lines    ${topics}
-	:FOR    ${state}    IN    @{GenericCommands}
-	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _command_     ${state}
-	\    Run Keyword And Continue On Failure    Should Contain    ${Commands}    ${string}
-
-Validate ATWhiteLight Generic Events
-	[Documentation]    Validate the ATWhiteLight contains all the required generic events.
-	[Tags]    smoke    ATWhiteLight
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    ATWhiteLight
-	Comment    Get the Events.
-	${topics}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Events.xml
-	@{Events}=    Split to Lines    ${topics}
-	:FOR    ${item}    IN    @{GenericEvents}
-	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _logevent_    ${item}
-	\    Run Keyword And Continue On Failure    Should Contain    ${Events}    ${string}
-
-Validate ATWhiteLight Event Enumeration
-	[Documentation]    Validate the ATWhiteLight defines the required enumeration.
-	[Tags]    smoke    ATWhiteLight
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    ATWhiteLight
-	Comment    Get the Event Enumerations.
-	${enums}=    Run    ${xml} sel -t -m "//SALEventSet/Enumeration" -v . -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Events.xml
-	:FOR    ${item}    IN    @{Enumerations}
-	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
-
 Validate Catchuparchiver Generic Commands
 	[Documentation]    Validate the Catchuparchiver contains all the required generic, or State Machine, commands.
 	[Tags]    smoke    Catchuparchiver
@@ -925,40 +891,6 @@ Validate MTM1M3 Event Enumeration
 	Set Test Variable    ${csc}    MTM1M3
 	Comment    Get the Event Enumerations.
 	${enums}=    Run    ${xml} sel -t -m "//SALEventSet/Enumeration" -v . -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Events.xml
-	:FOR    ${item}    IN    @{Enumerations}
-	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
-
-Validate M2MS Generic Commands
-	[Documentation]    Validate the M2MS contains all the required generic, or State Machine, commands.
-	[Tags]    smoke    M2MS
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    M2MS
-	Comment    Get the Commands for the CSC.
-	${topics}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/M2MS/M2MS_Commands.xml
-	@{Commands}=    Split to Lines    ${topics}
-	:FOR    ${state}    IN    @{GenericCommands}
-	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _command_     ${state}
-	\    Run Keyword And Continue On Failure    Should Contain    ${Commands}    ${string}
-
-Validate M2MS Generic Events
-	[Documentation]    Validate the M2MS contains all the required generic events.
-	[Tags]    smoke    M2MS
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    M2MS
-	Comment    Get the Events.
-	${topics}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/M2MS/M2MS_Events.xml
-	@{Events}=    Split to Lines    ${topics}
-	:FOR    ${item}    IN    @{GenericEvents}
-	\    ${string}=    Catenate   SEPARATOR=    ${csc}    _logevent_    ${item}
-	\    Run Keyword And Continue On Failure    Should Contain    ${Events}    ${string}
-
-Validate M2MS Event Enumeration
-	[Documentation]    Validate the M2MS defines the required enumeration.
-	[Tags]    smoke    M2MS
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    M2MS
-	Comment    Get the Event Enumerations.
-	${enums}=    Run    ${xml} sel -t -m "//SALEventSet/Enumeration" -v . -n ${folder}/sal_interfaces/M2MS/M2MS_Events.xml
 	:FOR    ${item}    IN    @{Enumerations}
 	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
 
