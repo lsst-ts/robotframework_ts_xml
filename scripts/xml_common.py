@@ -9,11 +9,14 @@ import os
 # Variables
 # =========
 """Defines the array of Commandable SAL Components, or CSCs."""
-subsystems = ['archiver', 'atArchiver', 'AtDome', 'ATHeaderService', 'AtMCS', 'atMonochromator', 'AtPneumatics', 'atScheduler', 'AtWhiteLight', 
-				'AtWhiteLightChiller', 'atcamera', 'atcs', 'camera', 'CatchupArchiver',
-				'dome', 'domeADB', 'domeAPS', 'domeLouvers', 'domeLWS', 'domeMONCS', 'domeTHCS', 'eec', 'efd', 
-				'headerService', 'hexapod', 'Laser', 'LinearStage', 'm1m3', 'm2ms', 'MTMount', 'ocs', 'PromptProcessing', 'rotator', 
-				'scheduler', 'sedSpectrometer', 'sequencer', 'AtSpectrograph', 'SummitFacility', 'tcs', 'tcsOfc', 'tcsWEP', 'Test', 'vms']
+# ATThermoelectricCooler
+subsystems = [ 'ATArchiver', 'ATCamera', 'AtDome', 'ATHeaderService', 'ATMCS', 'ATMonochromator', 'ATPneumatics', 
+				'ATSpectrograph', 'ATTCS', 'ATWhiteLight', 
+				'CatchupArchiver', 'CBP', 'Dome', 'DomeADB', 'DomeAPS', 'DomeLouvers', 'DomeLWS', 'DomeMONCS', 'DomeTHCS', 
+				'EEC', 'EFD', 'Electrometer', 'Hexapod', 'Laser', 'LinearStage', 
+				'MTArchiver', 'MTCamera', 'MTHeaderService', 'MTM1M3', 'M2MS', 'MTMount', 'MTOFC', 'MTWEP', 
+				'OCS', 'PromptProcessing', 'Rotator', 'Scheduler', 'Sequencer', 'SummitFacility', 'TCS', 
+				'Test', 'TunableLaser', 'VMS']
 
 
 # =========
@@ -24,61 +27,63 @@ def CapitalizeSubsystem( subsystem ):
 	"""Certain CSC abbreviations are capitalized in non-standard ways. This function correctly handles that capitalization."""
 	if re.match("^dome\S+", subsystem):
 		return subsystem[0].upper() + subsystem[1:]
-	elif subsystem == "atArchiver":
-		return "AtArchiver"
-	elif subsystem == "atcamera":
-		return "AtCamera"
+	elif subsystem == "ATArchiver":
+		return "ATArchiver"
+	elif subsystem == "ATCamera":
+		return "ATCamera"
 	elif subsystem == "AtDome":
 		return "AtDome"
-	elif subsystem == "atcs":
-		return "ATCS"
-	elif subsystem == "AtMCS":
-		return "AtMCS"
+	elif subsystem == "ATTCS":
+		return "ATTCS"
+	elif subsystem == "ATMCS":
+		return "ATMCS"
 	elif subsystem == "ATHeaderService":
 		return "ATHeaderService"
-	elif subsystem == "atMonochromator":
-		return "AtMonochromator"
-	elif subsystem == "AtPneumatics":
-		return "AtPneumatics"
-	elif subsystem == "atScheduler":
-		return "AtScheduler"
-	elif subsystem == "AtSpectrograph":
-		return "AtSpectrograph"
-	elif subsystem == "AtWhiteLight":
-		return "AtWhiteLight"
-	elif subsystem == "AtWhiteLightChiller":
-		return "AtWhiteLightChiller"
+	elif subsystem == "ATMonochromator":
+		return "ATMonochromator"
+	elif subsystem == "ATPneumatics":
+		return "ATPneumatics"
+	elif subsystem == "ATSpectrograph":
+		return "ATSpectrograph"
+	elif subsystem == "ATWhiteLight":
+		return "ATWhiteLight"
+	elif subsystem == "ATThermoelectricCooler":
+		return "ATThermoelectricCooler"
 	elif subsystem == "Catchuparchiver":
 		return "CatchupArchiver"
-	elif subsystem == "eec":
+	elif subsystem == "EEC":
 		return "EEC"
-	elif subsystem == "efd":
+	elif subsystem == "EFD":
 		return "EFD"
-	elif subsystem == "headerService":
-		return "HeaderService"
+	elif subsystem == "MTHeaderService":
+		return "MTHeaderService"
 	elif subsystem == "LinearStage":
 		return "LinearStage"
-	elif subsystem == "m1m3":
-		return "M1M3"
-	elif subsystem == "m2ms":
+	elif subsystem == "MTM1M3":
+		return "MTM1M3"
+	elif subsystem == "M2MS":
 		return "M2MS"
 	elif subsystem == "MTMount":
 		return subsystem
-	elif subsystem == "ocs":
+	elif subsystem == "OCS":
 		return "OCS"
 	elif subsystem == "PromptProcessing":
 		return "PromptProcessing"
-	elif subsystem == "sedSpectrometer":
-		return "SEDSpectrometer"
+	elif subsystem == "FiberSpectrometer":
+		return "FiberSpectrometer"
 	elif subsystem == "SummitFacility":
 		return "SummitFacility"
-	elif subsystem == "tcs":
+	elif subsystem == "TCS":
 		return "TCS"
-	elif subsystem == "tcsOfc":
-		return "TcsOfc"
-	elif subsystem == "tcsWEP":
-		return "TcsWEP"
-	elif subsystem == "vms":
+	elif subsystem == "MTOFC":
+		return "MTOFC"
+	elif subsystem == "MTWEP":
+		return "MTWEP"
+	elif subsystem == "TunableLaser":
+		return "TunableLaser"
+	elif subsystem == "CBP":
+		return "CBP"
+	elif subsystem == "VMS":
 		return "VMS"
 	else:
 		return subsystem.capitalize()
