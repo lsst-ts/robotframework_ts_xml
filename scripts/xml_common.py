@@ -55,6 +55,8 @@ def CapitalizeSubsystem( subsystem ):
 		return "EEC"
 	elif subsystem == "EFD":
 		return "EFD"
+	elif subsystem == "MTArchiver":
+		return "MTArchiver"
 	elif subsystem == "MTHeaderService":
 		return "MTHeaderService"
 	elif subsystem == "LinearStage":
