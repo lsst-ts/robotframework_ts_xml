@@ -560,7 +560,7 @@ Validate LinearStage Telemetry Topic Names
 
 Validate MTArchiver Events Topic Names
 	[Documentation]    Validate the MTArchiver Events topic names conform to naming convention.
-	[Tags]    smoke    MTArchiver    
+	[Tags]    smoke    MTArchiver    TSS-3281
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/MTArchiver/MTArchiver_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -569,7 +569,7 @@ Validate MTArchiver Events Topic Names
 
 Validate MTArchiver Telemetry Topic Names
 	[Documentation]    Validate the MTArchiver Telemetry topic names conform to naming convention.
-	[Tags]    smoke    MTArchiver    
+	[Tags]    smoke    MTArchiver    TSS-3281
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/MTArchiver/MTArchiver_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -740,7 +740,7 @@ Validate OCS Telemetry Topic Names
 
 Validate PromptProcessing Events Topic Names
 	[Documentation]    Validate the PromptProcessing Events topic names conform to naming convention.
-	[Tags]    smoke    PromptProcessing    
+	[Tags]    smoke    PromptProcessing    TSS-3280
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -749,7 +749,7 @@ Validate PromptProcessing Events Topic Names
 
 Validate PromptProcessing Telemetry Topic Names
 	[Documentation]    Validate the PromptProcessing Telemetry topic names conform to naming convention.
-	[Tags]    smoke    PromptProcessing    
+	[Tags]    smoke    PromptProcessing    TSS-3280
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
