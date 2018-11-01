@@ -152,12 +152,6 @@ Validate MTM1M3 Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   MTM1M3_Telemetry.xml - valid
 
-Validate M2MS Telemetry XML file
-	[Tags]    smoke    M2MS
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/M2MS/M2MS_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   M2MS_Telemetry.xml - valid
-
 Validate MTMount Telemetry XML file
 	[Tags]    smoke    MTMount
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml

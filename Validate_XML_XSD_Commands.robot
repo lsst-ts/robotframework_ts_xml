@@ -146,12 +146,6 @@ Validate MTM1M3 Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   MTM1M3_Commands.xml - valid
 
-Validate M2MS Commands XML file
-	[Tags]    smoke    M2MS
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/M2MS/M2MS_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   M2MS_Commands.xml - valid
-
 Validate MTMount Commands XML file
 	[Tags]    smoke    MTMount
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/MTMount/MTMount_Commands.xml
