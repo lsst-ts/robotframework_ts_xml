@@ -183,6 +183,27 @@ Validate ATTCS Telemetry
 	Log    ${output}
 	Should Contain    ${output}   ATTCS_Telemetry.xml - valid
 
+Validate ATWhiteLight Commands
+	[Documentation]    Validate the ATWhiteLight Commands XML file.
+	[Tags]    smoke    ATWhiteLight
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   ATWhiteLight_Commands.xml - valid
+
+Validate ATWhiteLight Events
+	[Documentation]    Validate the ATWhiteLight Events XML file.
+	[Tags]    smoke    ATWhiteLight
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   ATWhiteLight_Events.xml - valid
+
+Validate ATWhiteLight Telemetry
+	[Documentation]    Validate the ATWhiteLight Telemetry XML file.
+	[Tags]    smoke    ATWhiteLight
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   ATWhiteLight_Telemetry.xml - valid
+
 Validate CatchupArchiver Events
 	[Documentation]    Validate the CatchupArchiver Events XML file.
 	[Tags]    smoke    CatchupArchiver
@@ -497,6 +518,27 @@ Validate MTM1M3 Telemetry
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTM1M3/MTM1M3_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   MTM1M3_Telemetry.xml - valid
+
+Validate M2MS Commands
+	[Documentation]    Validate the M2MS Commands XML file.
+	[Tags]    smoke    M2MS
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/M2MS/M2MS_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   M2MS_Commands.xml - valid
+
+Validate M2MS Events
+	[Documentation]    Validate the M2MS Events XML file.
+	[Tags]    smoke    M2MS
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/M2MS/M2MS_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   M2MS_Events.xml - valid
+
+Validate M2MS Telemetry
+	[Documentation]    Validate the M2MS Telemetry XML file.
+	[Tags]    smoke    M2MS
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/M2MS/M2MS_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   M2MS_Telemetry.xml - valid
 
 Validate MTMount Commands
 	[Documentation]    Validate the MTMount Commands XML file.

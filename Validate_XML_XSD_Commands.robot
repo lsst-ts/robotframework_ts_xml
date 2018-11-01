@@ -56,6 +56,12 @@ Validate ATTCS Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   ATTCS_Commands.xml - valid
 
+Validate ATWhiteLight Commands XML file
+	[Tags]    smoke    ATWhiteLight
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   ATWhiteLight_Commands.xml - valid
+
 Validate CBP Commands XML file
 	[Tags]    smoke    CBP
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/CBP/CBP_Commands.xml
@@ -139,6 +145,12 @@ Validate MTM1M3 Commands XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/MTM1M3/MTM1M3_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   MTM1M3_Commands.xml - valid
+
+Validate M2MS Commands XML file
+	[Tags]    smoke    M2MS
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/M2MS/M2MS_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   M2MS_Commands.xml - valid
 
 Validate MTMount Commands XML file
 	[Tags]    smoke    MTMount

@@ -56,6 +56,12 @@ Validate ATTCS Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   ATTCS_Telemetry.xml - valid
 
+Validate ATWhiteLight Telemetry XML file
+	[Tags]    smoke    ATWhiteLight    TSS-3066
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   ATWhiteLight_Telemetry.xml - valid
+
 Validate CatchupArchiver Telemetry XML file
 	[Tags]    smoke    CatchupArchiver
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Telemetry.xml
@@ -145,6 +151,12 @@ Validate MTM1M3 Telemetry XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/MTM1M3/MTM1M3_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   MTM1M3_Telemetry.xml - valid
+
+Validate M2MS Telemetry XML file
+	[Tags]    smoke    M2MS
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/M2MS/M2MS_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   M2MS_Telemetry.xml - valid
 
 Validate MTMount Telemetry XML file
 	[Tags]    smoke    MTMount
