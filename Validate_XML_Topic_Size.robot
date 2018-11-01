@@ -7853,8 +7853,8 @@ Validate CatchupArchiver Event CatchupArchiver_logevent_settingsApplied Topic Co
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CatchupArchiver Event CatchupArchiver_logevent_summaryState Topic Byte Size
-	[Documentation]    Validate the CatchupArchiver_logevent_summaryState topic is less than 65536 bytes in total.
+Validate CatchupArchiver Event CatchupArchiver_logevent_catchuparchiverEntitySummaryState Topic Byte Size
+	[Documentation]    Validate the CatchupArchiver_logevent_catchuparchiverEntitySummaryState topic is less than 65536 bytes in total.
 	[Tags]    smoke    CatchupArchiver
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7877,8 +7877,8 @@ Validate CatchupArchiver Event CatchupArchiver_logevent_summaryState Topic Byte 
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CatchupArchiver Event CatchupArchiver_logevent_summaryState Topic Columns
-	[Documentation]    Validate the CatchupArchiver_logevent_summaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate CatchupArchiver Event CatchupArchiver_logevent_catchuparchiverEntitySummaryState Topic Columns
+	[Documentation]    Validate the CatchupArchiver_logevent_catchuparchiverEntitySummaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    CatchupArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7890,8 +7890,8 @@ Validate CatchupArchiver Event CatchupArchiver_logevent_summaryState Topic Colum
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate CatchupArchiver Event CatchupArchiver_logevent_catchuparchiverEntitySummaryState Topic Byte Size
-	[Documentation]    Validate the CatchupArchiver_logevent_catchuparchiverEntitySummaryState topic is less than 65536 bytes in total.
+Validate CatchupArchiver Event CatchupArchiver_logevent_catchuparchiverEntityShutdown Topic Byte Size
+	[Documentation]    Validate the CatchupArchiver_logevent_catchuparchiverEntityShutdown topic is less than 65536 bytes in total.
 	[Tags]    smoke    CatchupArchiver
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7914,50 +7914,13 @@ Validate CatchupArchiver Event CatchupArchiver_logevent_catchuparchiverEntitySum
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate CatchupArchiver Event CatchupArchiver_logevent_catchuparchiverEntitySummaryState Topic Columns
-	[Documentation]    Validate the CatchupArchiver_logevent_catchuparchiverEntitySummaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    CatchupArchiver
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate CatchupArchiver Event CatchupArchiver_logevent_catchuparchiverEntityShutdown Topic Byte Size
-	[Documentation]    Validate the CatchupArchiver_logevent_catchuparchiverEntityShutdown topic is less than 65536 bytes in total.
-	[Tags]    smoke    CatchupArchiver
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
 Validate CatchupArchiver Event CatchupArchiver_logevent_catchuparchiverEntityShutdown Topic Columns
 	[Documentation]    Validate the CatchupArchiver_logevent_catchuparchiverEntityShutdown topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    CatchupArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Events.xml
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -14994,8 +14957,8 @@ Validate LinearStage Telemetry LinearStage_position Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTArchiver Event MTArchiver_logevent_MTArchiverEntityShutdown Topic Byte Size
-	[Documentation]    Validate the MTArchiver_logevent_MTArchiverEntityShutdown topic is less than 65536 bytes in total.
+Validate MTArchiver Event MTArchiver_logevent_mtArchiverEntityShutdown Topic Byte Size
+	[Documentation]    Validate the MTArchiver_logevent_mtArchiverEntityShutdown topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTArchiver
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15018,8 +14981,8 @@ Validate MTArchiver Event MTArchiver_logevent_MTArchiverEntityShutdown Topic Byt
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTArchiver Event MTArchiver_logevent_MTArchiverEntityShutdown Topic Columns
-	[Documentation]    Validate the MTArchiver_logevent_MTArchiverEntityShutdown topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate MTArchiver Event MTArchiver_logevent_mtArchiverEntityShutdown Topic Columns
+	[Documentation]    Validate the MTArchiver_logevent_mtArchiverEntityShutdown topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    MTArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15031,8 +14994,8 @@ Validate MTArchiver Event MTArchiver_logevent_MTArchiverEntityShutdown Topic Col
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTArchiver Event MTArchiver_logevent_MTArchiverEntityStartup Topic Byte Size
-	[Documentation]    Validate the MTArchiver_logevent_MTArchiverEntityStartup topic is less than 65536 bytes in total.
+Validate MTArchiver Event MTArchiver_logevent_mtArchiverEntityStartup Topic Byte Size
+	[Documentation]    Validate the MTArchiver_logevent_mtArchiverEntityStartup topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTArchiver
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15055,8 +15018,8 @@ Validate MTArchiver Event MTArchiver_logevent_MTArchiverEntityStartup Topic Byte
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTArchiver Event MTArchiver_logevent_MTArchiverEntityStartup Topic Columns
-	[Documentation]    Validate the MTArchiver_logevent_MTArchiverEntityStartup topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate MTArchiver Event MTArchiver_logevent_mtArchiverEntityStartup Topic Columns
+	[Documentation]    Validate the MTArchiver_logevent_mtArchiverEntityStartup topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    MTArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15068,8 +15031,8 @@ Validate MTArchiver Event MTArchiver_logevent_MTArchiverEntityStartup Topic Colu
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTArchiver Event MTArchiver_logevent_settingsApplied Topic Byte Size
-	[Documentation]    Validate the MTArchiver_logevent_settingsApplied topic is less than 65536 bytes in total.
+Validate MTArchiver Event MTArchiver_logevent_mtArchiverEntitySummaryState Topic Byte Size
+	[Documentation]    Validate the MTArchiver_logevent_mtArchiverEntitySummaryState topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTArchiver
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15092,8 +15055,8 @@ Validate MTArchiver Event MTArchiver_logevent_settingsApplied Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTArchiver Event MTArchiver_logevent_settingsApplied Topic Columns
-	[Documentation]    Validate the MTArchiver_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate MTArchiver Event MTArchiver_logevent_mtArchiverEntitySummaryState Topic Columns
+	[Documentation]    Validate the MTArchiver_logevent_mtArchiverEntitySummaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    MTArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15105,8 +15068,8 @@ Validate MTArchiver Event MTArchiver_logevent_settingsApplied Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTArchiver Event MTArchiver_logevent_MTArchiverEntitySummaryState Topic Byte Size
-	[Documentation]    Validate the MTArchiver_logevent_MTArchiverEntitySummaryState topic is less than 65536 bytes in total.
+Validate MTArchiver Event MTArchiver_logevent_settingsApplied Topic Byte Size
+	[Documentation]    Validate the MTArchiver_logevent_settingsApplied topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTArchiver
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15129,8 +15092,8 @@ Validate MTArchiver Event MTArchiver_logevent_MTArchiverEntitySummaryState Topic
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTArchiver Event MTArchiver_logevent_MTArchiverEntitySummaryState Topic Columns
-	[Documentation]    Validate the MTArchiver_logevent_MTArchiverEntitySummaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate MTArchiver Event MTArchiver_logevent_settingsApplied Topic Columns
+	[Documentation]    Validate the MTArchiver_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    MTArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23578,8 +23541,8 @@ Validate OCS Telemetry OCS_SequencerHeartbeat Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate PromptProcessing Event PromptProceessing_logevent_ErrorCode Topic Byte Size
-	[Documentation]    Validate the PromptProceessing_logevent_ErrorCode topic is less than 65536 bytes in total.
+Validate PromptProcessing Event PromptProceessing_logevent_promptProceessingEntitySummaryState Topic Byte Size
+	[Documentation]    Validate the PromptProceessing_logevent_promptProceessingEntitySummaryState topic is less than 65536 bytes in total.
 	[Tags]    smoke    PromptProcessing
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23602,8 +23565,8 @@ Validate PromptProcessing Event PromptProceessing_logevent_ErrorCode Topic Byte 
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate PromptProcessing Event PromptProceessing_logevent_ErrorCode Topic Columns
-	[Documentation]    Validate the PromptProceessing_logevent_ErrorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate PromptProcessing Event PromptProceessing_logevent_promptProceessingEntitySummaryState Topic Columns
+	[Documentation]    Validate the PromptProceessing_logevent_promptProceessingEntitySummaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    PromptProcessing
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23615,8 +23578,8 @@ Validate PromptProcessing Event PromptProceessing_logevent_ErrorCode Topic Colum
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate PromptProcessing Event PromptProceessing_logevent_SettingsApplied Topic Byte Size
-	[Documentation]    Validate the PromptProceessing_logevent_SettingsApplied topic is less than 65536 bytes in total.
+Validate PromptProcessing Event PromptProceessing_logevent_promptProceessingEntityStartup Topic Byte Size
+	[Documentation]    Validate the PromptProceessing_logevent_promptProceessingEntityStartup topic is less than 65536 bytes in total.
 	[Tags]    smoke    PromptProcessing
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23639,8 +23602,8 @@ Validate PromptProcessing Event PromptProceessing_logevent_SettingsApplied Topic
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate PromptProcessing Event PromptProceessing_logevent_SettingsApplied Topic Columns
-	[Documentation]    Validate the PromptProceessing_logevent_SettingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate PromptProcessing Event PromptProceessing_logevent_promptProceessingEntityStartup Topic Columns
+	[Documentation]    Validate the PromptProceessing_logevent_promptProceessingEntityStartup topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    PromptProcessing
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23652,8 +23615,8 @@ Validate PromptProcessing Event PromptProceessing_logevent_SettingsApplied Topic
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate PromptProcessing Event PromptProceessing_logevent_PromptProceessingEntitySummaryState Topic Byte Size
-	[Documentation]    Validate the PromptProceessing_logevent_PromptProceessingEntitySummaryState topic is less than 65536 bytes in total.
+Validate PromptProcessing Event PromptProceessing_logevent_promptProceessingEntityShutdown Topic Byte Size
+	[Documentation]    Validate the PromptProceessing_logevent_promptProceessingEntityShutdown topic is less than 65536 bytes in total.
 	[Tags]    smoke    PromptProcessing
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23676,8 +23639,8 @@ Validate PromptProcessing Event PromptProceessing_logevent_PromptProceessingEnti
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate PromptProcessing Event PromptProceessing_logevent_PromptProceessingEntitySummaryState Topic Columns
-	[Documentation]    Validate the PromptProceessing_logevent_PromptProceessingEntitySummaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate PromptProcessing Event PromptProceessing_logevent_promptProceessingEntityShutdown Topic Columns
+	[Documentation]    Validate the PromptProceessing_logevent_promptProceessingEntityShutdown topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    PromptProcessing
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23689,82 +23652,8 @@ Validate PromptProcessing Event PromptProceessing_logevent_PromptProceessingEnti
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate PromptProcessing Event PromptProceessing_logevent_PromptProceessingEntityStartup Topic Byte Size
-	[Documentation]    Validate the PromptProceessing_logevent_PromptProceessingEntityStartup topic is less than 65536 bytes in total.
-	[Tags]    smoke    PromptProcessing
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PromptProcessing Event PromptProceessing_logevent_PromptProceessingEntityStartup Topic Columns
-	[Documentation]    Validate the PromptProceessing_logevent_PromptProceessingEntityStartup topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    PromptProcessing
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PromptProcessing Event PromptProceessing_logevent_PromptProceessingEntityShutdown Topic Byte Size
-	[Documentation]    Validate the PromptProceessing_logevent_PromptProceessingEntityShutdown topic is less than 65536 bytes in total.
-	[Tags]    smoke    PromptProcessing
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PromptProcessing Event PromptProceessing_logevent_PromptProceessingEntityShutdown Topic Columns
-	[Documentation]    Validate the PromptProceessing_logevent_PromptProceessingEntityShutdown topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    PromptProcessing
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PromptProcessing Telemetry PromptProcessing_SequencerHeartbeat Topic Byte Size
-	[Documentation]    Validate the PromptProcessing_SequencerHeartbeat topic is less than 65536 bytes in total.
+Validate PromptProcessing Telemetry PromptProcessing_sequencerHeartbeat Topic Byte Size
+	[Documentation]    Validate the PromptProcessing_sequencerHeartbeat topic is less than 65536 bytes in total.
 	[Tags]    smoke    PromptProcessing
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23787,8 +23676,8 @@ Validate PromptProcessing Telemetry PromptProcessing_SequencerHeartbeat Topic By
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate PromptProcessing Telemetry PromptProcessing_SequencerHeartbeat Topic Columns
-	[Documentation]    Validate the PromptProcessing_SequencerHeartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate PromptProcessing Telemetry PromptProcessing_sequencerHeartbeat Topic Columns
+	[Documentation]    Validate the PromptProcessing_sequencerHeartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    PromptProcessing
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
