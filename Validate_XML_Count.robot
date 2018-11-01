@@ -456,6 +456,22 @@ Validate EEC Telemetry XML Counts
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
+Validate EFD Events XML Counts
+	[Documentation]    Validate the EFD Events XML count.
+	[Tags]    smoke    EFD
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/EFD/EFD_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
+Validate EFD Telemetry XML Counts
+	[Documentation]    Validate the EFD Telemetry XML count.
+	[Tags]    smoke    EFD
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/EFD/EFD_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
 Validate Electrometer Commands XML Counts
 	[Documentation]    Validate the Electrometer Commands XML count.
 	[Tags]    smoke    Electrometer

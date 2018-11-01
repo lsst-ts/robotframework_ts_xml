@@ -122,6 +122,12 @@ Validate EEC Events XML file
 	Log    ${output}
 	Should Contain    ${output}   EEC_Events.xml - valid
 
+Validate EFD Events XML file
+	[Tags]    smoke    EFD
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/EFD/EFD_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   EFD_Events.xml - valid
+
 Validate Electrometer Events XML file
 	[Tags]    smoke    Electrometer
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/Electrometer/Electrometer_Events.xml

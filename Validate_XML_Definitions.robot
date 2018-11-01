@@ -400,6 +400,20 @@ Validate EEC Telemetry
 	Log    ${output}
 	Should Contain    ${output}   EEC_Telemetry.xml - valid
 
+Validate EFD Events
+	[Documentation]    Validate the EFD Events XML file.
+	[Tags]    smoke    EFD
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/EFD/EFD_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   EFD_Events.xml - valid
+
+Validate EFD Telemetry
+	[Documentation]    Validate the EFD Telemetry XML file.
+	[Tags]    smoke    EFD
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/EFD/EFD_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   EFD_Telemetry.xml - valid
+
 Validate Electrometer Commands
 	[Documentation]    Validate the Electrometer Commands XML file.
 	[Tags]    smoke    Electrometer
