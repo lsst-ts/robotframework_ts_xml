@@ -22875,8 +22875,8 @@ Validate MTMount Event MTMount_logevent_mountInPosition Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTMount Telemetry MTMount_Az Topic Byte Size
-	[Documentation]    Validate the MTMount_Az topic is less than 65536 bytes in total.
+Validate MTMount Telemetry MTMount_Auxliary_Cabinet_Azimuth Topic Byte Size
+	[Documentation]    Validate the MTMount_Auxliary_Cabinet_Azimuth topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22899,8 +22899,8 @@ Validate MTMount Telemetry MTMount_Az Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTMount Telemetry MTMount_Az Topic Columns
-	[Documentation]    Validate the MTMount_Az topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate MTMount Telemetry MTMount_Auxliary_Cabinet_Azimuth Topic Columns
+	[Documentation]    Validate the MTMount_Auxliary_Cabinet_Azimuth topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22912,8 +22912,8 @@ Validate MTMount Telemetry MTMount_Az Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTMount Telemetry MTMount_Alt Topic Byte Size
-	[Documentation]    Validate the MTMount_Alt topic is less than 65536 bytes in total.
+Validate MTMount Telemetry MTMount_General Topic Byte Size
+	[Documentation]    Validate the MTMount_General topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22936,8 +22936,8 @@ Validate MTMount Telemetry MTMount_Alt Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTMount Telemetry MTMount_Alt Topic Columns
-	[Documentation]    Validate the MTMount_Alt topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate MTMount Telemetry MTMount_General Topic Columns
+	[Documentation]    Validate the MTMount_General topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22949,8 +22949,8 @@ Validate MTMount Telemetry MTMount_Alt Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTMount Telemetry MTMount_Az_CW Topic Byte Size
-	[Documentation]    Validate the MTMount_Az_CW topic is less than 65536 bytes in total.
+Validate MTMount Telemetry MTMount_Azimuth_Cable_Wrap Topic Byte Size
+	[Documentation]    Validate the MTMount_Azimuth_Cable_Wrap topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22973,8 +22973,8 @@ Validate MTMount Telemetry MTMount_Az_CW Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTMount Telemetry MTMount_Az_CW Topic Columns
-	[Documentation]    Validate the MTMount_Az_CW topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate MTMount Telemetry MTMount_Azimuth_Cable_Wrap Topic Columns
+	[Documentation]    Validate the MTMount_Azimuth_Cable_Wrap topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22986,8 +22986,8 @@ Validate MTMount Telemetry MTMount_Az_CW Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTMount Telemetry MTMount_Az_OSS Topic Byte Size
-	[Documentation]    Validate the MTMount_Az_OSS topic is less than 65536 bytes in total.
+Validate MTMount Telemetry MTMount_Azimuth Topic Byte Size
+	[Documentation]    Validate the MTMount_Azimuth topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23010,8 +23010,8 @@ Validate MTMount Telemetry MTMount_Az_OSS Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTMount Telemetry MTMount_Az_OSS Topic Columns
-	[Documentation]    Validate the MTMount_Az_OSS topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate MTMount Telemetry MTMount_Azimuth Topic Columns
+	[Documentation]    Validate the MTMount_Azimuth topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23023,8 +23023,8 @@ Validate MTMount Telemetry MTMount_Az_OSS Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTMount Telemetry MTMount_Alt_OSS Topic Byte Size
-	[Documentation]    Validate the MTMount_Alt_OSS topic is less than 65536 bytes in total.
+Validate MTMount Telemetry MTMount_Azimuth_Drives Topic Byte Size
+	[Documentation]    Validate the MTMount_Azimuth_Drives topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23047,8 +23047,8 @@ Validate MTMount Telemetry MTMount_Alt_OSS Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTMount Telemetry MTMount_Alt_OSS Topic Columns
-	[Documentation]    Validate the MTMount_Alt_OSS topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate MTMount Telemetry MTMount_Azimuth_Drives Topic Columns
+	[Documentation]    Validate the MTMount_Azimuth_Drives topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23060,8 +23060,8 @@ Validate MTMount Telemetry MTMount_Alt_OSS Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTMount Telemetry MTMount_Az_TC Topic Byte Size
-	[Documentation]    Validate the MTMount_Az_TC topic is less than 65536 bytes in total.
+Validate MTMount Telemetry MTMount_Azimuth_Drives_Thermal Topic Byte Size
+	[Documentation]    Validate the MTMount_Azimuth_Drives_Thermal topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23084,8 +23084,8 @@ Validate MTMount Telemetry MTMount_Az_TC Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTMount Telemetry MTMount_Az_TC Topic Columns
-	[Documentation]    Validate the MTMount_Az_TC topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate MTMount Telemetry MTMount_Azimuth_Drives_Thermal Topic Columns
+	[Documentation]    Validate the MTMount_Azimuth_Drives_Thermal topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23097,8 +23097,8 @@ Validate MTMount Telemetry MTMount_Az_TC Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTMount Telemetry MTMount_Alt_TC Topic Byte Size
-	[Documentation]    Validate the MTMount_Alt_TC topic is less than 65536 bytes in total.
+Validate MTMount Telemetry MTMount_OSS Topic Byte Size
+	[Documentation]    Validate the MTMount_OSS topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23121,8 +23121,8 @@ Validate MTMount Telemetry MTMount_Alt_TC Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTMount Telemetry MTMount_Alt_TC Topic Columns
-	[Documentation]    Validate the MTMount_Alt_TC topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate MTMount Telemetry MTMount_OSS Topic Columns
+	[Documentation]    Validate the MTMount_OSS topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23134,8 +23134,8 @@ Validate MTMount Telemetry MTMount_Alt_TC Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTMount Telemetry MTMount_Bal Topic Byte Size
-	[Documentation]    Validate the MTMount_Bal topic is less than 65536 bytes in total.
+Validate MTMount Telemetry MTMount_Main_Power_Supply Topic Byte Size
+	[Documentation]    Validate the MTMount_Main_Power_Supply topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23158,8 +23158,8 @@ Validate MTMount Telemetry MTMount_Bal Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTMount Telemetry MTMount_Bal Topic Columns
-	[Documentation]    Validate the MTMount_Bal topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate MTMount Telemetry MTMount_Main_Power_Supply Topic Columns
+	[Documentation]    Validate the MTMount_Main_Power_Supply topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23171,8 +23171,8 @@ Validate MTMount Telemetry MTMount_Bal Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTMount Telemetry MTMount_MC Topic Byte Size
-	[Documentation]    Validate the MTMount_MC topic is less than 65536 bytes in total.
+Validate MTMount Telemetry MTMount_Encoder_EIB Topic Byte Size
+	[Documentation]    Validate the MTMount_Encoder_EIB topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23195,8 +23195,8 @@ Validate MTMount Telemetry MTMount_MC Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTMount Telemetry MTMount_MC Topic Columns
-	[Documentation]    Validate the MTMount_MC topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate MTMount Telemetry MTMount_Encoder_EIB Topic Columns
+	[Documentation]    Validate the MTMount_Encoder_EIB topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23208,8 +23208,8 @@ Validate MTMount Telemetry MTMount_MC Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTMount Telemetry MTMount_Cam_CW Topic Byte Size
-	[Documentation]    Validate the MTMount_Cam_CW topic is less than 65536 bytes in total.
+Validate MTMount Telemetry MTMount_Balancing_Drives Topic Byte Size
+	[Documentation]    Validate the MTMount_Balancing_Drives topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23232,8 +23232,8 @@ Validate MTMount Telemetry MTMount_Cam_CW Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTMount Telemetry MTMount_Cam_CW Topic Columns
-	[Documentation]    Validate the MTMount_Cam_CW topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate MTMount Telemetry MTMount_Balancing_Drives Topic Columns
+	[Documentation]    Validate the MTMount_Balancing_Drives topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23245,8 +23245,8 @@ Validate MTMount Telemetry MTMount_Cam_CW Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTMount Telemetry MTMount_Cab_TC Topic Byte Size
-	[Documentation]    Validate the MTMount_Cab_TC topic is less than 65536 bytes in total.
+Validate MTMount Telemetry MTMount_Balancing Topic Byte Size
+	[Documentation]    Validate the MTMount_Balancing topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23269,8 +23269,8 @@ Validate MTMount Telemetry MTMount_Cab_TC Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTMount Telemetry MTMount_Cab_TC Topic Columns
-	[Documentation]    Validate the MTMount_Cab_TC topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate MTMount Telemetry MTMount_Balancing Topic Columns
+	[Documentation]    Validate the MTMount_Balancing topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23282,8 +23282,8 @@ Validate MTMount Telemetry MTMount_Cab_TC Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTMount Telemetry MTMount_DP_1 Topic Byte Size
-	[Documentation]    Validate the MTMount_DP_1 topic is less than 65536 bytes in total.
+Validate MTMount Telemetry MTMount_Elevation Topic Byte Size
+	[Documentation]    Validate the MTMount_Elevation topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23306,8 +23306,8 @@ Validate MTMount Telemetry MTMount_DP_1 Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTMount Telemetry MTMount_DP_1 Topic Columns
-	[Documentation]    Validate the MTMount_DP_1 topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate MTMount Telemetry MTMount_Elevation Topic Columns
+	[Documentation]    Validate the MTMount_Elevation topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23319,8 +23319,8 @@ Validate MTMount Telemetry MTMount_DP_1 Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTMount Telemetry MTMount_DP_2 Topic Byte Size
-	[Documentation]    Validate the MTMount_DP_2 topic is less than 65536 bytes in total.
+Validate MTMount Telemetry MTMount_Elevation_Drives Topic Byte Size
+	[Documentation]    Validate the MTMount_Elevation_Drives topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23343,8 +23343,8 @@ Validate MTMount Telemetry MTMount_DP_2 Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTMount Telemetry MTMount_DP_2 Topic Columns
-	[Documentation]    Validate the MTMount_DP_2 topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate MTMount Telemetry MTMount_Elevation_Drives Topic Columns
+	[Documentation]    Validate the MTMount_Elevation_Drives topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23356,8 +23356,8 @@ Validate MTMount Telemetry MTMount_DP_2 Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTMount Telemetry MTMount_MotionParameters Topic Byte Size
-	[Documentation]    Validate the MTMount_MotionParameters topic is less than 65536 bytes in total.
+Validate MTMount Telemetry MTMount_Locking_Pins Topic Byte Size
+	[Documentation]    Validate the MTMount_Locking_Pins topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23380,13 +23380,531 @@ Validate MTMount Telemetry MTMount_MotionParameters Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTMount Telemetry MTMount_MotionParameters Topic Columns
-	[Documentation]    Validate the MTMount_MotionParameters topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate MTMount Telemetry MTMount_Locking_Pins Topic Columns
+	[Documentation]    Validate the MTMount_Locking_Pins topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[14]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[14]/item/Count" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate MTMount Telemetry MTMount_Camera_Cable_Wrap Topic Byte Size
+	[Documentation]    Validate the MTMount_Camera_Cable_Wrap topic is less than 65536 bytes in total.
+	[Tags]    smoke    MTMount
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[15]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[15]/item/Count" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[15]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate MTMount Telemetry MTMount_Camera_Cable_Wrap Topic Columns
+	[Documentation]    Validate the MTMount_Camera_Cable_Wrap topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    MTMount
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[15]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[15]/item/Count" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate MTMount Telemetry MTMount_Deployable_Platforms Topic Byte Size
+	[Documentation]    Validate the MTMount_Deployable_Platforms topic is less than 65536 bytes in total.
+	[Tags]    smoke    MTMount
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[16]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[16]/item/Count" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[16]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate MTMount Telemetry MTMount_Deployable_Platforms Topic Columns
+	[Documentation]    Validate the MTMount_Deployable_Platforms topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    MTMount
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[16]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[16]/item/Count" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate MTMount Telemetry MTMount_Elevation_Drives_Thermal Topic Byte Size
+	[Documentation]    Validate the MTMount_Elevation_Drives_Thermal topic is less than 65536 bytes in total.
+	[Tags]    smoke    MTMount
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[17]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[17]/item/Count" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[17]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate MTMount Telemetry MTMount_Elevation_Drives_Thermal Topic Columns
+	[Documentation]    Validate the MTMount_Elevation_Drives_Thermal topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    MTMount
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[17]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[17]/item/Count" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate MTMount Telemetry MTMount_Mirror_Cover Topic Byte Size
+	[Documentation]    Validate the MTMount_Mirror_Cover topic is less than 65536 bytes in total.
+	[Tags]    smoke    MTMount
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[18]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[18]/item/Count" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[18]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate MTMount Telemetry MTMount_Mirror_Cover Topic Columns
+	[Documentation]    Validate the MTMount_Mirror_Cover topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    MTMount
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[18]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[18]/item/Count" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate MTMount Telemetry MTMount_Mount_Control_Main_Cabinet Topic Byte Size
+	[Documentation]    Validate the MTMount_Mount_Control_Main_Cabinet topic is less than 65536 bytes in total.
+	[Tags]    smoke    MTMount
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[19]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[19]/item/Count" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[19]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate MTMount Telemetry MTMount_Mount_Control_Main_Cabinet Topic Columns
+	[Documentation]    Validate the MTMount_Mount_Control_Main_Cabinet topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    MTMount
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[19]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[19]/item/Count" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate MTMount Telemetry MTMount_Top_End_Chiller Topic Byte Size
+	[Documentation]    Validate the MTMount_Top_End_Chiller topic is less than 65536 bytes in total.
+	[Tags]    smoke    MTMount
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[20]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[20]/item/Count" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[20]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate MTMount Telemetry MTMount_Top_End_Chiller Topic Columns
+	[Documentation]    Validate the MTMount_Top_End_Chiller topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    MTMount
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[20]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[20]/item/Count" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate MTMount Telemetry MTMount_Mirror_Cover_Locks Topic Byte Size
+	[Documentation]    Validate the MTMount_Mirror_Cover_Locks topic is less than 65536 bytes in total.
+	[Tags]    smoke    MTMount
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[21]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[21]/item/Count" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[21]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate MTMount Telemetry MTMount_Mirror_Cover_Locks Topic Columns
+	[Documentation]    Validate the MTMount_Mirror_Cover_Locks topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    MTMount
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[21]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[21]/item/Count" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate MTMount Telemetry MTMount_Main_Power_Supply_Cabinet Topic Byte Size
+	[Documentation]    Validate the MTMount_Main_Power_Supply_Cabinet topic is less than 65536 bytes in total.
+	[Tags]    smoke    MTMount
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[22]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[22]/item/Count" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[22]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate MTMount Telemetry MTMount_Main_Power_Supply_Cabinet Topic Columns
+	[Documentation]    Validate the MTMount_Main_Power_Supply_Cabinet topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    MTMount
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[22]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[22]/item/Count" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate MTMount Telemetry MTMount_Auxiliary_Boxes Topic Byte Size
+	[Documentation]    Validate the MTMount_Auxiliary_Boxes topic is less than 65536 bytes in total.
+	[Tags]    smoke    MTMount
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[23]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[23]/item/Count" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[23]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate MTMount Telemetry MTMount_Auxiliary_Boxes Topic Columns
+	[Documentation]    Validate the MTMount_Auxiliary_Boxes topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    MTMount
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[23]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[23]/item/Count" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate MTMount Telemetry MTMount_Compressed_Air Topic Byte Size
+	[Documentation]    Validate the MTMount_Compressed_Air topic is less than 65536 bytes in total.
+	[Tags]    smoke    MTMount
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[24]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[24]/item/Count" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[24]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate MTMount Telemetry MTMount_Compressed_Air Topic Columns
+	[Documentation]    Validate the MTMount_Compressed_Air topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    MTMount
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[24]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[24]/item/Count" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate MTMount Telemetry MTMount_Cooling Topic Byte Size
+	[Documentation]    Validate the MTMount_Cooling topic is less than 65536 bytes in total.
+	[Tags]    smoke    MTMount
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[25]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[25]/item/Count" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[25]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate MTMount Telemetry MTMount_Cooling Topic Columns
+	[Documentation]    Validate the MTMount_Cooling topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    MTMount
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[25]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[25]/item/Count" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate MTMount Telemetry MTMount_Dynalene_Cooling Topic Byte Size
+	[Documentation]    Validate the MTMount_Dynalene_Cooling topic is less than 65536 bytes in total.
+	[Tags]    smoke    MTMount
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[26]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[26]/item/Count" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[26]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate MTMount Telemetry MTMount_Dynalene_Cooling Topic Columns
+	[Documentation]    Validate the MTMount_Dynalene_Cooling topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    MTMount
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[26]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[26]/item/Count" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate MTMount Telemetry MTMount_General_Purpose_Glycol_Water Topic Byte Size
+	[Documentation]    Validate the MTMount_General_Purpose_Glycol_Water topic is less than 65536 bytes in total.
+	[Tags]    smoke    MTMount
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[27]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[27]/item/Count" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[27]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate MTMount Telemetry MTMount_General_Purpose_Glycol_Water Topic Columns
+	[Documentation]    Validate the MTMount_General_Purpose_Glycol_Water topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    MTMount
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[27]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[27]/item/Count" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate MTMount Telemetry MTMount_Safety_System Topic Byte Size
+	[Documentation]    Validate the MTMount_Safety_System topic is less than 65536 bytes in total.
+	[Tags]    smoke    MTMount
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[28]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[28]/item/Count" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[28]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate MTMount Telemetry MTMount_Safety_System Topic Columns
+	[Documentation]    Validate the MTMount_Safety_System topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    MTMount
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[28]/item)" -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[28]/item/Count" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
