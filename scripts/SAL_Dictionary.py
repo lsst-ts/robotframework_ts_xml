@@ -9,6 +9,8 @@ import xml_common
 # Create/Open test suite file.
 file = open("../Validate_SALSubsystems.robot","w")
 sal_dict_file = "SALSubsystems.xml"
+home = os.environ['XML_HOME']
+
 
 # Set XML parser application name.
 # ... XMLStarlet is invoked differently in Redhat OS systems, like Jenkins.
@@ -21,7 +23,7 @@ except:
 # Create Settings header.
 file.write("*** Settings ***\n")
 file.write("Documentation    Validate the SAL cscs XML dictionary file.\n")
-file.write("Suite Setup    Set Suite Variable    ${xml}    xmlstarlet\n")
+file.write("Test Setup    Run Keyword If    \"${ContInt}\"==\"true\"    Set Suite Variable    ${xml}    xmlstarlet\n")
 file.write("Library    OperatingSystem\n")
 file.write("Library    Collections\n")
 file.write("Library    String\n")
@@ -50,7 +52,7 @@ file.write("\n")
 file.write("Validate Number of Defined CSCs\n")
 file.write("\t[Documentation]    Validate the number of defined CSCs matches expectation. This test will catch when a CSC is added or removed.\n")
 file.write("\t[Tags]    smoke\n")
-file.write("\t${output}=    Run    ${xml} sel -t -m \"//SALSubsystems/Subsystem/Name\" -v . -n ~/trunk/ts_xml/sal_interfaces/SALSubsystems.xml |sort |wc -l |sed -e 's/ //g'\n")
+file.write("\t${output}=    Run    ${xml} sel -t -m \"//SALSubsystems/Subsystem/Name\" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml |sort |wc -l |sed -e 's/ //g'\n")
 file.write("\tLog    ${output}\n")
 file.write("\tShould Be Equal As Integers    ${output}    48\n")
 file.write("\n")
@@ -138,7 +140,7 @@ for csc in cscs:
 	file.write("Validate " + xml_common.CapitalizeSubsystem(csc) + " Generics Element\n")
 	file.write("\t[Documentation]    Validate the " + sal_dict_file + " dictionary correctly defines the <Generics> element.\n")
 	file.write("\t[Tags]    smoke    " + csc + skipped + "\n")
-	file.write("\t${output}=    Run    ${xml} sel -t -m \"//SALSubsystems/Subsystem[" + str(index) + "]/Generics\" -v . -n ~/trunk/ts_xml/sal_interfaces/" + sal_dict_file + "\n")
+	file.write("\t${output}=    Run    ${xml} sel -t -m \"//SALSubsystems/Subsystem[" + str(index) + "]/Generics\" -v . -n ${folder}/sal_interfaces/" + sal_dict_file + "\n")
 	file.write("\tLog    " + csc + " has Generics: ${output}\n")
 	file.write("\tShould Be Equal As Strings    ${output}    " + value + "\n")
 	file.write("\n")
