@@ -182,6 +182,12 @@ Validate MTM1M3 Events XML file
 	Log    ${output}
 	Should Contain    ${output}   MTM1M3_Events.xml - valid
 
+Validate MTM2 Events XML file
+	[Tags]    smoke    MTM2
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/MTM2/MTM2_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   MTM2_Events.xml - valid
+
 Validate MTMount Events XML file
 	[Tags]    smoke    MTMount
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/MTMount/MTMount_Events.xml

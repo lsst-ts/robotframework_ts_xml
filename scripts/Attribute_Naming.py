@@ -35,7 +35,7 @@ for subsystem in xml_common.subsystems:
 		skipped="skipped"
 	elif subsystem == "Hexapod":
 		skipped="skipped"
-	elif subsystem == "M2MS":
+	elif subsystem == "MTM2":
 		skipped="skipped"
 	elif subsystem == "MTMount":
 		skipped="skipped"

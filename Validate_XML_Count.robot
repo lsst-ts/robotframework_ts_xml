@@ -656,6 +656,30 @@ Validate MTM1M3 Telemetry XML Counts
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
+Validate MTM2 Commands XML Counts
+	[Documentation]    Validate the MTM2 Commands XML count.
+	[Tags]    smoke    MTM2
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/MTM2/MTM2_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
+Validate MTM2 Events XML Counts
+	[Documentation]    Validate the MTM2 Events XML count.
+	[Tags]    smoke    MTM2
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/MTM2/MTM2_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
+Validate MTM2 Telemetry XML Counts
+	[Documentation]    Validate the MTM2 Telemetry XML count.
+	[Tags]    smoke    MTM2
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/MTM2/MTM2_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
 Validate MTMount Commands XML Counts
 	[Documentation]    Validate the MTMount Commands XML count.
 	[Tags]    smoke    MTMount

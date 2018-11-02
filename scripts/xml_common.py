@@ -14,7 +14,7 @@ subsystems = [ 'ATArchiver', 'ATCamera', 'AtDome', 'ATHeaderService', 'ATMCS', '
 				'ATSpectrograph', 'ATTCS', 'ATThermoelectricCooler', 'ATWhiteLight', 
 				'CatchupArchiver', 'CBP', 'Dome', 'DomeADB', 'DomeAPS', 'DomeLouvers', 'DomeLWS', 'DomeMONCS', 'DomeTHCS', 
 				'EEC', 'EFD', 'Electrometer', 'FiberSpectrograph', 'Hexapod', 'Laser', 'LinearStage', 
-				'MTArchiver', 'MTCamera', 'MTHeaderService', 'MTM1M3', 'M2MS', 'MTMount', 'MTOFC', 'MTWEP', 'OCS',
+				'MTArchiver', 'MTCamera', 'MTHeaderService', 'MTM1M3', 'MTM2', 'MTMount', 'MTOFC', 'MTWEP', 'OCS',
 				'PromptProcessing', 'Rotator', 'Scheduler', 'Sequencer', 'SummitFacility',
 				'TCS', 'Test', 'TunableLaser', 'VMS']
 
@@ -61,8 +61,8 @@ def CapitalizeSubsystem( subsystem ):
 		return "FiberSpectrograph"
 	elif subsystem == "LinearStage":
 		return "LinearStage"
-	elif subsystem == "M2MS":
-		return "M2MS"
+	elif subsystem == "MTM2":
+		return "MTM2"
 	elif subsystem == "MTArchiver":
 		return "MTArchiver"
 	elif subsystem == "MTHeaderService":

@@ -56,7 +56,7 @@ except:
 skipped=""
 com_skipped=""
 event_skipped=""
-enum_skipped=""
+enum_skipped="    TSS-3288"
 
 # Create the Test Cases.
 # Validate the sal_generics_file.

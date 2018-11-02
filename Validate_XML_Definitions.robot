@@ -575,6 +575,27 @@ Validate MTM1M3 Telemetry
 	Log    ${output}
 	Should Contain    ${output}   MTM1M3_Telemetry.xml - valid
 
+Validate MTM2 Commands
+	[Documentation]    Validate the MTM2 Commands XML file.
+	[Tags]    smoke    MTM2
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTM2/MTM2_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   MTM2_Commands.xml - valid
+
+Validate MTM2 Events
+	[Documentation]    Validate the MTM2 Events XML file.
+	[Tags]    smoke    MTM2
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTM2/MTM2_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   MTM2_Events.xml - valid
+
+Validate MTM2 Telemetry
+	[Documentation]    Validate the MTM2 Telemetry XML file.
+	[Tags]    smoke    MTM2
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTM2/MTM2_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   MTM2_Telemetry.xml - valid
+
 Validate MTMount Commands
 	[Documentation]    Validate the MTMount Commands XML file.
 	[Tags]    smoke    MTMount
