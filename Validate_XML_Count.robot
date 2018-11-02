@@ -288,145 +288,145 @@ Validate Dome Telemetry XML Counts
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate Domeadb Commands XML Counts
-	[Documentation]    Validate the Domeadb Commands XML count.
-	[Tags]    smoke    Domeadb
+Validate DomeADB Commands XML Counts
+	[Documentation]    Validate the DomeADB Commands XML count.
+	[Tags]    smoke    DomeADB
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/DomeADB/DomeADB_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate Domeadb Events XML Counts
-	[Documentation]    Validate the Domeadb Events XML count.
-	[Tags]    smoke    Domeadb
+Validate DomeADB Events XML Counts
+	[Documentation]    Validate the DomeADB Events XML count.
+	[Tags]    smoke    DomeADB
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate Domeadb Telemetry XML Counts
-	[Documentation]    Validate the Domeadb Telemetry XML count.
-	[Tags]    smoke    Domeadb
+Validate DomeADB Telemetry XML Counts
+	[Documentation]    Validate the DomeADB Telemetry XML count.
+	[Tags]    smoke    DomeADB
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/DomeADB/DomeADB_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate Domeaps Commands XML Counts
-	[Documentation]    Validate the Domeaps Commands XML count.
-	[Tags]    smoke    Domeaps
+Validate DomeAPS Commands XML Counts
+	[Documentation]    Validate the DomeAPS Commands XML count.
+	[Tags]    smoke    DomeAPS
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate Domeaps Events XML Counts
-	[Documentation]    Validate the Domeaps Events XML count.
-	[Tags]    smoke    Domeaps
+Validate DomeAPS Events XML Counts
+	[Documentation]    Validate the DomeAPS Events XML count.
+	[Tags]    smoke    DomeAPS
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate Domeaps Telemetry XML Counts
-	[Documentation]    Validate the Domeaps Telemetry XML count.
-	[Tags]    smoke    Domeaps
+Validate DomeAPS Telemetry XML Counts
+	[Documentation]    Validate the DomeAPS Telemetry XML count.
+	[Tags]    smoke    DomeAPS
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate Domelouvers Commands XML Counts
-	[Documentation]    Validate the Domelouvers Commands XML count.
-	[Tags]    smoke    Domelouvers
+Validate DomeLouvers Commands XML Counts
+	[Documentation]    Validate the DomeLouvers Commands XML count.
+	[Tags]    smoke    DomeLouvers
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate Domelouvers Events XML Counts
-	[Documentation]    Validate the Domelouvers Events XML count.
-	[Tags]    smoke    Domelouvers
+Validate DomeLouvers Events XML Counts
+	[Documentation]    Validate the DomeLouvers Events XML count.
+	[Tags]    smoke    DomeLouvers
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate Domelouvers Telemetry XML Counts
-	[Documentation]    Validate the Domelouvers Telemetry XML count.
-	[Tags]    smoke    Domelouvers
+Validate DomeLouvers Telemetry XML Counts
+	[Documentation]    Validate the DomeLouvers Telemetry XML count.
+	[Tags]    smoke    DomeLouvers
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate Domelws Commands XML Counts
-	[Documentation]    Validate the Domelws Commands XML count.
-	[Tags]    smoke    Domelws
+Validate DomeLWS Commands XML Counts
+	[Documentation]    Validate the DomeLWS Commands XML count.
+	[Tags]    smoke    DomeLWS
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate Domelws Events XML Counts
-	[Documentation]    Validate the Domelws Events XML count.
-	[Tags]    smoke    Domelws
+Validate DomeLWS Events XML Counts
+	[Documentation]    Validate the DomeLWS Events XML count.
+	[Tags]    smoke    DomeLWS
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate Domelws Telemetry XML Counts
-	[Documentation]    Validate the Domelws Telemetry XML count.
-	[Tags]    smoke    Domelws
+Validate DomeLWS Telemetry XML Counts
+	[Documentation]    Validate the DomeLWS Telemetry XML count.
+	[Tags]    smoke    DomeLWS
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate Domemoncs Commands XML Counts
-	[Documentation]    Validate the Domemoncs Commands XML count.
-	[Tags]    smoke    Domemoncs
+Validate DomeMONCS Commands XML Counts
+	[Documentation]    Validate the DomeMONCS Commands XML count.
+	[Tags]    smoke    DomeMONCS
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate Domemoncs Events XML Counts
-	[Documentation]    Validate the Domemoncs Events XML count.
-	[Tags]    smoke    Domemoncs
+Validate DomeMONCS Events XML Counts
+	[Documentation]    Validate the DomeMONCS Events XML count.
+	[Tags]    smoke    DomeMONCS
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate Domemoncs Telemetry XML Counts
-	[Documentation]    Validate the Domemoncs Telemetry XML count.
-	[Tags]    smoke    Domemoncs
+Validate DomeMONCS Telemetry XML Counts
+	[Documentation]    Validate the DomeMONCS Telemetry XML count.
+	[Tags]    smoke    DomeMONCS
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate Domethcs Commands XML Counts
-	[Documentation]    Validate the Domethcs Commands XML count.
-	[Tags]    smoke    Domethcs
+Validate DomeTHCS Commands XML Counts
+	[Documentation]    Validate the DomeTHCS Commands XML count.
+	[Tags]    smoke    DomeTHCS
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate Domethcs Events XML Counts
-	[Documentation]    Validate the Domethcs Events XML count.
-	[Tags]    smoke    Domethcs
+Validate DomeTHCS Events XML Counts
+	[Documentation]    Validate the DomeTHCS Events XML count.
+	[Tags]    smoke    DomeTHCS
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate Domethcs Telemetry XML Counts
-	[Documentation]    Validate the Domethcs Telemetry XML count.
-	[Tags]    smoke    Domethcs
+Validate DomeTHCS Telemetry XML Counts
+	[Documentation]    Validate the DomeTHCS Telemetry XML count.
+	[Tags]    smoke    DomeTHCS
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
@@ -484,6 +484,38 @@ Validate Electrometer Events XML Counts
 	[Documentation]    Validate the Electrometer Events XML count.
 	[Tags]    smoke    Electrometer
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/Electrometer/Electrometer_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
+Validate Environment Telemetry XML Counts
+	[Documentation]    Validate the Environment Telemetry XML count.
+	[Tags]    smoke    Environment
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/Environment/Environment_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
+Validate FiberSpectrograph Commands XML Counts
+	[Documentation]    Validate the FiberSpectrograph Commands XML count.
+	[Tags]    smoke    FiberSpectrograph
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
+Validate FiberSpectrograph Events XML Counts
+	[Documentation]    Validate the FiberSpectrograph Events XML count.
+	[Tags]    smoke    FiberSpectrograph
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
+Validate FiberSpectrograph Telemetry XML Counts
+	[Documentation]    Validate the FiberSpectrograph Telemetry XML count.
+	[Tags]    smoke    FiberSpectrograph
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,

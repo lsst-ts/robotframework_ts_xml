@@ -253,128 +253,128 @@ Validate Dome Telemetry
 	Log    ${output}
 	Should Contain    ${output}   Dome_Telemetry.xml - valid
 
-Validate Domeadb Commands
-	[Documentation]    Validate the Domeadb Commands XML file.
-	[Tags]    smoke    Domeadb
+Validate DomeADB Commands
+	[Documentation]    Validate the DomeADB Commands XML file.
+	[Tags]    smoke    DomeADB
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/DomeADB/DomeADB_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   DomeADB_Commands.xml - valid
 
-Validate Domeadb Events
-	[Documentation]    Validate the Domeadb Events XML file.
-	[Tags]    smoke    Domeadb
+Validate DomeADB Events
+	[Documentation]    Validate the DomeADB Events XML file.
+	[Tags]    smoke    DomeADB
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   DomeADB_Events.xml - valid
 
-Validate Domeadb Telemetry
-	[Documentation]    Validate the Domeadb Telemetry XML file.
-	[Tags]    smoke    Domeadb
+Validate DomeADB Telemetry
+	[Documentation]    Validate the DomeADB Telemetry XML file.
+	[Tags]    smoke    DomeADB
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/DomeADB/DomeADB_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   DomeADB_Telemetry.xml - valid
 
-Validate Domeaps Commands
-	[Documentation]    Validate the Domeaps Commands XML file.
-	[Tags]    smoke    Domeaps
+Validate DomeAPS Commands
+	[Documentation]    Validate the DomeAPS Commands XML file.
+	[Tags]    smoke    DomeAPS
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/DomeAPS/DomeAPS_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   DomeAPS_Commands.xml - valid
 
-Validate Domeaps Events
-	[Documentation]    Validate the Domeaps Events XML file.
-	[Tags]    smoke    Domeaps
+Validate DomeAPS Events
+	[Documentation]    Validate the DomeAPS Events XML file.
+	[Tags]    smoke    DomeAPS
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   DomeAPS_Events.xml - valid
 
-Validate Domeaps Telemetry
-	[Documentation]    Validate the Domeaps Telemetry XML file.
-	[Tags]    smoke    Domeaps
+Validate DomeAPS Telemetry
+	[Documentation]    Validate the DomeAPS Telemetry XML file.
+	[Tags]    smoke    DomeAPS
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/DomeAPS/DomeAPS_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   DomeAPS_Telemetry.xml - valid
 
-Validate Domelouvers Commands
-	[Documentation]    Validate the Domelouvers Commands XML file.
-	[Tags]    smoke    Domelouvers
+Validate DomeLouvers Commands
+	[Documentation]    Validate the DomeLouvers Commands XML file.
+	[Tags]    smoke    DomeLouvers
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   DomeLouvers_Commands.xml - valid
 
-Validate Domelouvers Events
-	[Documentation]    Validate the Domelouvers Events XML file.
-	[Tags]    smoke    Domelouvers
+Validate DomeLouvers Events
+	[Documentation]    Validate the DomeLouvers Events XML file.
+	[Tags]    smoke    DomeLouvers
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   DomeLouvers_Events.xml - valid
 
-Validate Domelouvers Telemetry
-	[Documentation]    Validate the Domelouvers Telemetry XML file.
-	[Tags]    smoke    Domelouvers
+Validate DomeLouvers Telemetry
+	[Documentation]    Validate the DomeLouvers Telemetry XML file.
+	[Tags]    smoke    DomeLouvers
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   DomeLouvers_Telemetry.xml - valid
 
-Validate Domelws Commands
-	[Documentation]    Validate the Domelws Commands XML file.
-	[Tags]    smoke    Domelws
+Validate DomeLWS Commands
+	[Documentation]    Validate the DomeLWS Commands XML file.
+	[Tags]    smoke    DomeLWS
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/DomeLWS/DomeLWS_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   DomeLWS_Commands.xml - valid
 
-Validate Domelws Events
-	[Documentation]    Validate the Domelws Events XML file.
-	[Tags]    smoke    Domelws
+Validate DomeLWS Events
+	[Documentation]    Validate the DomeLWS Events XML file.
+	[Tags]    smoke    DomeLWS
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   DomeLWS_Events.xml - valid
 
-Validate Domelws Telemetry
-	[Documentation]    Validate the Domelws Telemetry XML file.
-	[Tags]    smoke    Domelws
+Validate DomeLWS Telemetry
+	[Documentation]    Validate the DomeLWS Telemetry XML file.
+	[Tags]    smoke    DomeLWS
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/DomeLWS/DomeLWS_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   DomeLWS_Telemetry.xml - valid
 
-Validate Domemoncs Commands
-	[Documentation]    Validate the Domemoncs Commands XML file.
-	[Tags]    smoke    Domemoncs
+Validate DomeMONCS Commands
+	[Documentation]    Validate the DomeMONCS Commands XML file.
+	[Tags]    smoke    DomeMONCS
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   DomeMONCS_Commands.xml - valid
 
-Validate Domemoncs Events
-	[Documentation]    Validate the Domemoncs Events XML file.
-	[Tags]    smoke    Domemoncs
+Validate DomeMONCS Events
+	[Documentation]    Validate the DomeMONCS Events XML file.
+	[Tags]    smoke    DomeMONCS
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   DomeMONCS_Events.xml - valid
 
-Validate Domemoncs Telemetry
-	[Documentation]    Validate the Domemoncs Telemetry XML file.
-	[Tags]    smoke    Domemoncs
+Validate DomeMONCS Telemetry
+	[Documentation]    Validate the DomeMONCS Telemetry XML file.
+	[Tags]    smoke    DomeMONCS
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   DomeMONCS_Telemetry.xml - valid
 
-Validate Domethcs Commands
-	[Documentation]    Validate the Domethcs Commands XML file.
-	[Tags]    smoke    Domethcs
+Validate DomeTHCS Commands
+	[Documentation]    Validate the DomeTHCS Commands XML file.
+	[Tags]    smoke    DomeTHCS
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   DomeTHCS_Commands.xml - valid
 
-Validate Domethcs Events
-	[Documentation]    Validate the Domethcs Events XML file.
-	[Tags]    smoke    Domethcs
+Validate DomeTHCS Events
+	[Documentation]    Validate the DomeTHCS Events XML file.
+	[Tags]    smoke    DomeTHCS
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   DomeTHCS_Events.xml - valid
 
-Validate Domethcs Telemetry
-	[Documentation]    Validate the Domethcs Telemetry XML file.
-	[Tags]    smoke    Domethcs
+Validate DomeTHCS Telemetry
+	[Documentation]    Validate the DomeTHCS Telemetry XML file.
+	[Tags]    smoke    DomeTHCS
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   DomeTHCS_Telemetry.xml - valid
@@ -427,6 +427,34 @@ Validate Electrometer Events
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/Electrometer/Electrometer_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   Electrometer_Events.xml - valid
+
+Validate Environment Telemetry
+	[Documentation]    Validate the Environment Telemetry XML file.
+	[Tags]    smoke    Environment
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/Environment/Environment_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   Environment_Telemetry.xml - valid
+
+Validate FiberSpectrograph Commands
+	[Documentation]    Validate the FiberSpectrograph Commands XML file.
+	[Tags]    smoke    FiberSpectrograph
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   FiberSpectrograph_Commands.xml - valid
+
+Validate FiberSpectrograph Events
+	[Documentation]    Validate the FiberSpectrograph Events XML file.
+	[Tags]    smoke    FiberSpectrograph
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   FiberSpectrograph_Events.xml - valid
+
+Validate FiberSpectrograph Telemetry
+	[Documentation]    Validate the FiberSpectrograph Telemetry XML file.
+	[Tags]    smoke    FiberSpectrograph
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   FiberSpectrograph_Telemetry.xml - valid
 
 Validate Hexapod Commands
 	[Documentation]    Validate the Hexapod Commands XML file.

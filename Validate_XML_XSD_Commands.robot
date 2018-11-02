@@ -74,38 +74,38 @@ Validate Dome Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   Dome_Commands.xml - valid
 
-Validate Domeadb Commands XML file
-	[Tags]    smoke    Domeadb
+Validate DomeADB Commands XML file
+	[Tags]    smoke    DomeADB
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/DomeADB/DomeADB_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   DomeADB_Commands.xml - valid
 
-Validate Domeaps Commands XML file
-	[Tags]    smoke    Domeaps
+Validate DomeAPS Commands XML file
+	[Tags]    smoke    DomeAPS
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/DomeAPS/DomeAPS_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   DomeAPS_Commands.xml - valid
 
-Validate Domelouvers Commands XML file
-	[Tags]    smoke    Domelouvers
+Validate DomeLouvers Commands XML file
+	[Tags]    smoke    DomeLouvers
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   DomeLouvers_Commands.xml - valid
 
-Validate Domelws Commands XML file
-	[Tags]    smoke    Domelws
+Validate DomeLWS Commands XML file
+	[Tags]    smoke    DomeLWS
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/DomeLWS/DomeLWS_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   DomeLWS_Commands.xml - valid
 
-Validate Domemoncs Commands XML file
-	[Tags]    smoke    Domemoncs
+Validate DomeMONCS Commands XML file
+	[Tags]    smoke    DomeMONCS
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   DomeMONCS_Commands.xml - valid
 
-Validate Domethcs Commands XML file
-	[Tags]    smoke    Domethcs
+Validate DomeTHCS Commands XML file
+	[Tags]    smoke    DomeTHCS
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   DomeTHCS_Commands.xml - valid
@@ -121,6 +121,12 @@ Validate Electrometer Commands XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/Electrometer/Electrometer_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   Electrometer_Commands.xml - valid
+
+Validate FiberSpectrograph Commands XML file
+	[Tags]    smoke    FiberSpectrograph
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   FiberSpectrograph_Commands.xml - valid
 
 Validate Hexapod Commands XML file
 	[Tags]    smoke    Hexapod

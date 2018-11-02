@@ -9074,9 +9074,9 @@ Validate Dome Telemetry Dome_summary Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeadb Command DomeADB_command_crawl Topic Byte Size
+Validate DomeADB Command DomeADB_command_crawl Topic Byte Size
 	[Documentation]    Validate the DomeADB_command_crawl topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Commands.xml
@@ -9098,9 +9098,9 @@ Validate Domeadb Command DomeADB_command_crawl Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeadb Command DomeADB_command_crawl Topic Columns
+Validate DomeADB Command DomeADB_command_crawl Topic Columns
 	[Documentation]    Validate the DomeADB_command_crawl topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Commands.xml
@@ -9111,9 +9111,9 @@ Validate Domeadb Command DomeADB_command_crawl Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeadb Command DomeADB_command_move Topic Byte Size
+Validate DomeADB Command DomeADB_command_move Topic Byte Size
 	[Documentation]    Validate the DomeADB_command_move topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Commands.xml
@@ -9135,9 +9135,9 @@ Validate Domeadb Command DomeADB_command_move Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeadb Command DomeADB_command_move Topic Columns
+Validate DomeADB Command DomeADB_command_move Topic Columns
 	[Documentation]    Validate the DomeADB_command_move topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Commands.xml
@@ -9148,9 +9148,9 @@ Validate Domeadb Command DomeADB_command_move Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeadb Command DomeADB_command_velocityMove Topic Byte Size
+Validate DomeADB Command DomeADB_command_velocityMove Topic Byte Size
 	[Documentation]    Validate the DomeADB_command_velocityMove topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Commands.xml
@@ -9172,9 +9172,9 @@ Validate Domeadb Command DomeADB_command_velocityMove Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeadb Command DomeADB_command_velocityMove Topic Columns
+Validate DomeADB Command DomeADB_command_velocityMove Topic Columns
 	[Documentation]    Validate the DomeADB_command_velocityMove topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Commands.xml
@@ -9185,9 +9185,9 @@ Validate Domeadb Command DomeADB_command_velocityMove Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeadb Command DomeADB_command_echo Topic Byte Size
+Validate DomeADB Command DomeADB_command_echo Topic Byte Size
 	[Documentation]    Validate the DomeADB_command_echo topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Commands.xml
@@ -9209,9 +9209,9 @@ Validate Domeadb Command DomeADB_command_echo Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeadb Command DomeADB_command_echo Topic Columns
+Validate DomeADB Command DomeADB_command_echo Topic Columns
 	[Documentation]    Validate the DomeADB_command_echo topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Commands.xml
@@ -9222,9 +9222,9 @@ Validate Domeadb Command DomeADB_command_echo Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeadb Event DomeADB_logevent_stateChanged Topic Byte Size
+Validate DomeADB Event DomeADB_logevent_stateChanged Topic Byte Size
 	[Documentation]    Validate the DomeADB_logevent_stateChanged topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
@@ -9246,9 +9246,9 @@ Validate Domeadb Event DomeADB_logevent_stateChanged Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeadb Event DomeADB_logevent_stateChanged Topic Columns
+Validate DomeADB Event DomeADB_logevent_stateChanged Topic Columns
 	[Documentation]    Validate the DomeADB_logevent_stateChanged topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
@@ -9259,9 +9259,9 @@ Validate Domeadb Event DomeADB_logevent_stateChanged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeadb Event DomeADB_logevent_driveEnabled Topic Byte Size
+Validate DomeADB Event DomeADB_logevent_driveEnabled Topic Byte Size
 	[Documentation]    Validate the DomeADB_logevent_driveEnabled topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
@@ -9283,9 +9283,9 @@ Validate Domeadb Event DomeADB_logevent_driveEnabled Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeadb Event DomeADB_logevent_driveEnabled Topic Columns
+Validate DomeADB Event DomeADB_logevent_driveEnabled Topic Columns
 	[Documentation]    Validate the DomeADB_logevent_driveEnabled topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
@@ -9296,9 +9296,9 @@ Validate Domeadb Event DomeADB_logevent_driveEnabled Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeadb Event DomeADB_logevent_driveDisabled Topic Byte Size
+Validate DomeADB Event DomeADB_logevent_driveDisabled Topic Byte Size
 	[Documentation]    Validate the DomeADB_logevent_driveDisabled topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
@@ -9320,9 +9320,9 @@ Validate Domeadb Event DomeADB_logevent_driveDisabled Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeadb Event DomeADB_logevent_driveDisabled Topic Columns
+Validate DomeADB Event DomeADB_logevent_driveDisabled Topic Columns
 	[Documentation]    Validate the DomeADB_logevent_driveDisabled topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
@@ -9333,9 +9333,9 @@ Validate Domeadb Event DomeADB_logevent_driveDisabled Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeadb Event DomeADB_logevent_driveReady Topic Byte Size
+Validate DomeADB Event DomeADB_logevent_driveReady Topic Byte Size
 	[Documentation]    Validate the DomeADB_logevent_driveReady topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
@@ -9357,9 +9357,9 @@ Validate Domeadb Event DomeADB_logevent_driveReady Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeadb Event DomeADB_logevent_driveReady Topic Columns
+Validate DomeADB Event DomeADB_logevent_driveReady Topic Columns
 	[Documentation]    Validate the DomeADB_logevent_driveReady topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
@@ -9370,9 +9370,9 @@ Validate Domeadb Event DomeADB_logevent_driveReady Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeadb Event DomeADB_logevent_driveOverTemp Topic Byte Size
+Validate DomeADB Event DomeADB_logevent_driveOverTemp Topic Byte Size
 	[Documentation]    Validate the DomeADB_logevent_driveOverTemp topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
@@ -9394,9 +9394,9 @@ Validate Domeadb Event DomeADB_logevent_driveOverTemp Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeadb Event DomeADB_logevent_driveOverTemp Topic Columns
+Validate DomeADB Event DomeADB_logevent_driveOverTemp Topic Columns
 	[Documentation]    Validate the DomeADB_logevent_driveOverTemp topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
@@ -9407,9 +9407,9 @@ Validate Domeadb Event DomeADB_logevent_driveOverTemp Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeadb Event DomeADB_logevent_driveDriveFault Topic Byte Size
+Validate DomeADB Event DomeADB_logevent_driveDriveFault Topic Byte Size
 	[Documentation]    Validate the DomeADB_logevent_driveDriveFault topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
@@ -9431,9 +9431,9 @@ Validate Domeadb Event DomeADB_logevent_driveDriveFault Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeadb Event DomeADB_logevent_driveDriveFault Topic Columns
+Validate DomeADB Event DomeADB_logevent_driveDriveFault Topic Columns
 	[Documentation]    Validate the DomeADB_logevent_driveDriveFault topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
@@ -9444,9 +9444,9 @@ Validate Domeadb Event DomeADB_logevent_driveDriveFault Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeadb Event DomeADB_logevent_rotationEnabled Topic Byte Size
+Validate DomeADB Event DomeADB_logevent_rotationEnabled Topic Byte Size
 	[Documentation]    Validate the DomeADB_logevent_rotationEnabled topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
@@ -9468,9 +9468,9 @@ Validate Domeadb Event DomeADB_logevent_rotationEnabled Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeadb Event DomeADB_logevent_rotationEnabled Topic Columns
+Validate DomeADB Event DomeADB_logevent_rotationEnabled Topic Columns
 	[Documentation]    Validate the DomeADB_logevent_rotationEnabled topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
@@ -9481,9 +9481,9 @@ Validate Domeadb Event DomeADB_logevent_rotationEnabled Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeadb Event DomeADB_logevent_rotationPrevented Topic Byte Size
+Validate DomeADB Event DomeADB_logevent_rotationPrevented Topic Byte Size
 	[Documentation]    Validate the DomeADB_logevent_rotationPrevented topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
@@ -9505,9 +9505,9 @@ Validate Domeadb Event DomeADB_logevent_rotationPrevented Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeadb Event DomeADB_logevent_rotationPrevented Topic Columns
+Validate DomeADB Event DomeADB_logevent_rotationPrevented Topic Columns
 	[Documentation]    Validate the DomeADB_logevent_rotationPrevented topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
@@ -9518,9 +9518,9 @@ Validate Domeadb Event DomeADB_logevent_rotationPrevented Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeadb Event DomeADB_logevent_lockingPinEngaged Topic Byte Size
+Validate DomeADB Event DomeADB_logevent_lockingPinEngaged Topic Byte Size
 	[Documentation]    Validate the DomeADB_logevent_lockingPinEngaged topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
@@ -9542,9 +9542,9 @@ Validate Domeadb Event DomeADB_logevent_lockingPinEngaged Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeadb Event DomeADB_logevent_lockingPinEngaged Topic Columns
+Validate DomeADB Event DomeADB_logevent_lockingPinEngaged Topic Columns
 	[Documentation]    Validate the DomeADB_logevent_lockingPinEngaged topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
@@ -9555,9 +9555,9 @@ Validate Domeadb Event DomeADB_logevent_lockingPinEngaged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeadb Event DomeADB_logevent_lockingPinDisengaged Topic Byte Size
+Validate DomeADB Event DomeADB_logevent_lockingPinDisengaged Topic Byte Size
 	[Documentation]    Validate the DomeADB_logevent_lockingPinDisengaged topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
@@ -9579,9 +9579,9 @@ Validate Domeadb Event DomeADB_logevent_lockingPinDisengaged Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeadb Event DomeADB_logevent_lockingPinDisengaged Topic Columns
+Validate DomeADB Event DomeADB_logevent_lockingPinDisengaged Topic Columns
 	[Documentation]    Validate the DomeADB_logevent_lockingPinDisengaged topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
@@ -9592,9 +9592,9 @@ Validate Domeadb Event DomeADB_logevent_lockingPinDisengaged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeadb Event DomeADB_logevent_brakeEngaged Topic Byte Size
+Validate DomeADB Event DomeADB_logevent_brakeEngaged Topic Byte Size
 	[Documentation]    Validate the DomeADB_logevent_brakeEngaged topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
@@ -9616,9 +9616,9 @@ Validate Domeadb Event DomeADB_logevent_brakeEngaged Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeadb Event DomeADB_logevent_brakeEngaged Topic Columns
+Validate DomeADB Event DomeADB_logevent_brakeEngaged Topic Columns
 	[Documentation]    Validate the DomeADB_logevent_brakeEngaged topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
@@ -9629,9 +9629,9 @@ Validate Domeadb Event DomeADB_logevent_brakeEngaged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeadb Event DomeADB_logevent_brakeDisengaged Topic Byte Size
+Validate DomeADB Event DomeADB_logevent_brakeDisengaged Topic Byte Size
 	[Documentation]    Validate the DomeADB_logevent_brakeDisengaged topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[12]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
@@ -9653,9 +9653,9 @@ Validate Domeadb Event DomeADB_logevent_brakeDisengaged Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeadb Event DomeADB_logevent_brakeDisengaged Topic Columns
+Validate DomeADB Event DomeADB_logevent_brakeDisengaged Topic Columns
 	[Documentation]    Validate the DomeADB_logevent_brakeDisengaged topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[12]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
@@ -9666,9 +9666,9 @@ Validate Domeadb Event DomeADB_logevent_brakeDisengaged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeadb Event DomeADB_logevent_speedLimitReached Topic Byte Size
+Validate DomeADB Event DomeADB_logevent_speedLimitReached Topic Byte Size
 	[Documentation]    Validate the DomeADB_logevent_speedLimitReached topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[13]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
@@ -9690,9 +9690,9 @@ Validate Domeadb Event DomeADB_logevent_speedLimitReached Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeadb Event DomeADB_logevent_speedLimitReached Topic Columns
+Validate DomeADB Event DomeADB_logevent_speedLimitReached Topic Columns
 	[Documentation]    Validate the DomeADB_logevent_speedLimitReached topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[13]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
@@ -9703,9 +9703,9 @@ Validate Domeadb Event DomeADB_logevent_speedLimitReached Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeadb Event DomeADB_logevent_accelerationLimitReached Topic Byte Size
+Validate DomeADB Event DomeADB_logevent_accelerationLimitReached Topic Byte Size
 	[Documentation]    Validate the DomeADB_logevent_accelerationLimitReached topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[14]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
@@ -9727,9 +9727,9 @@ Validate Domeadb Event DomeADB_logevent_accelerationLimitReached Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeadb Event DomeADB_logevent_accelerationLimitReached Topic Columns
+Validate DomeADB Event DomeADB_logevent_accelerationLimitReached Topic Columns
 	[Documentation]    Validate the DomeADB_logevent_accelerationLimitReached topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[14]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
@@ -9740,9 +9740,9 @@ Validate Domeadb Event DomeADB_logevent_accelerationLimitReached Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeadb Event DomeADB_logevent_speedLimitSubsided Topic Byte Size
+Validate DomeADB Event DomeADB_logevent_speedLimitSubsided Topic Byte Size
 	[Documentation]    Validate the DomeADB_logevent_speedLimitSubsided topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[15]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
@@ -9764,9 +9764,9 @@ Validate Domeadb Event DomeADB_logevent_speedLimitSubsided Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeadb Event DomeADB_logevent_speedLimitSubsided Topic Columns
+Validate DomeADB Event DomeADB_logevent_speedLimitSubsided Topic Columns
 	[Documentation]    Validate the DomeADB_logevent_speedLimitSubsided topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[15]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
@@ -9777,9 +9777,9 @@ Validate Domeadb Event DomeADB_logevent_speedLimitSubsided Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeadb Event DomeADB_logevent_accelerationLimitSubsided Topic Byte Size
+Validate DomeADB Event DomeADB_logevent_accelerationLimitSubsided Topic Byte Size
 	[Documentation]    Validate the DomeADB_logevent_accelerationLimitSubsided topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[16]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
@@ -9801,9 +9801,9 @@ Validate Domeadb Event DomeADB_logevent_accelerationLimitSubsided Topic Byte Siz
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeadb Event DomeADB_logevent_accelerationLimitSubsided Topic Columns
+Validate DomeADB Event DomeADB_logevent_accelerationLimitSubsided Topic Columns
 	[Documentation]    Validate the DomeADB_logevent_accelerationLimitSubsided topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[16]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
@@ -9814,9 +9814,9 @@ Validate Domeadb Event DomeADB_logevent_accelerationLimitSubsided Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeadb Event DomeADB_logevent_echoResponse Topic Byte Size
+Validate DomeADB Event DomeADB_logevent_echoResponse Topic Byte Size
 	[Documentation]    Validate the DomeADB_logevent_echoResponse topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[17]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
@@ -9838,9 +9838,9 @@ Validate Domeadb Event DomeADB_logevent_echoResponse Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeadb Event DomeADB_logevent_echoResponse Topic Columns
+Validate DomeADB Event DomeADB_logevent_echoResponse Topic Columns
 	[Documentation]    Validate the DomeADB_logevent_echoResponse topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[17]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
@@ -9851,9 +9851,9 @@ Validate Domeadb Event DomeADB_logevent_echoResponse Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeadb Event DomeADB_logevent_motionModeChanged Topic Byte Size
+Validate DomeADB Event DomeADB_logevent_motionModeChanged Topic Byte Size
 	[Documentation]    Validate the DomeADB_logevent_motionModeChanged topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[18]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
@@ -9875,9 +9875,9 @@ Validate Domeadb Event DomeADB_logevent_motionModeChanged Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeadb Event DomeADB_logevent_motionModeChanged Topic Columns
+Validate DomeADB Event DomeADB_logevent_motionModeChanged Topic Columns
 	[Documentation]    Validate the DomeADB_logevent_motionModeChanged topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[18]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
@@ -9888,9 +9888,9 @@ Validate Domeadb Event DomeADB_logevent_motionModeChanged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeadb Telemetry DomeADB_status Topic Byte Size
+Validate DomeADB Telemetry DomeADB_status Topic Byte Size
 	[Documentation]    Validate the DomeADB_status topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Telemetry.xml
@@ -9912,9 +9912,9 @@ Validate Domeadb Telemetry DomeADB_status Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeadb Telemetry DomeADB_status Topic Columns
+Validate DomeADB Telemetry DomeADB_status Topic Columns
 	[Documentation]    Validate the DomeADB_status topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeadb
+	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Telemetry.xml
@@ -9925,9 +9925,9 @@ Validate Domeadb Telemetry DomeADB_status Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeaps Command DomeAPS_command_close Topic Byte Size
+Validate DomeAPS Command DomeAPS_command_close Topic Byte Size
 	[Documentation]    Validate the DomeAPS_command_close topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Commands.xml
@@ -9949,9 +9949,9 @@ Validate Domeaps Command DomeAPS_command_close Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeaps Command DomeAPS_command_close Topic Columns
+Validate DomeAPS Command DomeAPS_command_close Topic Columns
 	[Documentation]    Validate the DomeAPS_command_close topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Commands.xml
@@ -9962,9 +9962,9 @@ Validate Domeaps Command DomeAPS_command_close Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeaps Command DomeAPS_command_open Topic Byte Size
+Validate DomeAPS Command DomeAPS_command_open Topic Byte Size
 	[Documentation]    Validate the DomeAPS_command_open topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Commands.xml
@@ -9986,9 +9986,9 @@ Validate Domeaps Command DomeAPS_command_open Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeaps Command DomeAPS_command_open Topic Columns
+Validate DomeAPS Command DomeAPS_command_open Topic Columns
 	[Documentation]    Validate the DomeAPS_command_open topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Commands.xml
@@ -9999,9 +9999,9 @@ Validate Domeaps Command DomeAPS_command_open Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeaps Command DomeAPS_command_echo Topic Byte Size
+Validate DomeAPS Command DomeAPS_command_echo Topic Byte Size
 	[Documentation]    Validate the DomeAPS_command_echo topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Commands.xml
@@ -10023,9 +10023,9 @@ Validate Domeaps Command DomeAPS_command_echo Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeaps Command DomeAPS_command_echo Topic Columns
+Validate DomeAPS Command DomeAPS_command_echo Topic Columns
 	[Documentation]    Validate the DomeAPS_command_echo topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Commands.xml
@@ -10036,9 +10036,9 @@ Validate Domeaps Command DomeAPS_command_echo Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeaps Event DomeAPS_logevent_stateChanged Topic Byte Size
+Validate DomeAPS Event DomeAPS_logevent_stateChanged Topic Byte Size
 	[Documentation]    Validate the DomeAPS_logevent_stateChanged topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
@@ -10060,9 +10060,9 @@ Validate Domeaps Event DomeAPS_logevent_stateChanged Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeaps Event DomeAPS_logevent_stateChanged Topic Columns
+Validate DomeAPS Event DomeAPS_logevent_stateChanged Topic Columns
 	[Documentation]    Validate the DomeAPS_logevent_stateChanged topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
@@ -10073,9 +10073,9 @@ Validate Domeaps Event DomeAPS_logevent_stateChanged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeaps Event DomeAPS_logevent_driveEnabled Topic Byte Size
+Validate DomeAPS Event DomeAPS_logevent_driveEnabled Topic Byte Size
 	[Documentation]    Validate the DomeAPS_logevent_driveEnabled topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
@@ -10097,9 +10097,9 @@ Validate Domeaps Event DomeAPS_logevent_driveEnabled Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeaps Event DomeAPS_logevent_driveEnabled Topic Columns
+Validate DomeAPS Event DomeAPS_logevent_driveEnabled Topic Columns
 	[Documentation]    Validate the DomeAPS_logevent_driveEnabled topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
@@ -10110,9 +10110,9 @@ Validate Domeaps Event DomeAPS_logevent_driveEnabled Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeaps Event DomeAPS_logevent_driveDisabled Topic Byte Size
+Validate DomeAPS Event DomeAPS_logevent_driveDisabled Topic Byte Size
 	[Documentation]    Validate the DomeAPS_logevent_driveDisabled topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
@@ -10134,9 +10134,9 @@ Validate Domeaps Event DomeAPS_logevent_driveDisabled Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeaps Event DomeAPS_logevent_driveDisabled Topic Columns
+Validate DomeAPS Event DomeAPS_logevent_driveDisabled Topic Columns
 	[Documentation]    Validate the DomeAPS_logevent_driveDisabled topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
@@ -10147,9 +10147,9 @@ Validate Domeaps Event DomeAPS_logevent_driveDisabled Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeaps Event DomeAPS_logevent_driveReady Topic Byte Size
+Validate DomeAPS Event DomeAPS_logevent_driveReady Topic Byte Size
 	[Documentation]    Validate the DomeAPS_logevent_driveReady topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
@@ -10171,9 +10171,9 @@ Validate Domeaps Event DomeAPS_logevent_driveReady Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeaps Event DomeAPS_logevent_driveReady Topic Columns
+Validate DomeAPS Event DomeAPS_logevent_driveReady Topic Columns
 	[Documentation]    Validate the DomeAPS_logevent_driveReady topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
@@ -10184,9 +10184,9 @@ Validate Domeaps Event DomeAPS_logevent_driveReady Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeaps Event DomeAPS_logevent_driveFault Topic Byte Size
+Validate DomeAPS Event DomeAPS_logevent_driveFault Topic Byte Size
 	[Documentation]    Validate the DomeAPS_logevent_driveFault topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
@@ -10208,9 +10208,9 @@ Validate Domeaps Event DomeAPS_logevent_driveFault Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeaps Event DomeAPS_logevent_driveFault Topic Columns
+Validate DomeAPS Event DomeAPS_logevent_driveFault Topic Columns
 	[Documentation]    Validate the DomeAPS_logevent_driveFault topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
@@ -10221,9 +10221,9 @@ Validate Domeaps Event DomeAPS_logevent_driveFault Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeaps Event DomeAPS_logevent_movementEnabled Topic Byte Size
+Validate DomeAPS Event DomeAPS_logevent_movementEnabled Topic Byte Size
 	[Documentation]    Validate the DomeAPS_logevent_movementEnabled topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
@@ -10245,9 +10245,9 @@ Validate Domeaps Event DomeAPS_logevent_movementEnabled Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeaps Event DomeAPS_logevent_movementEnabled Topic Columns
+Validate DomeAPS Event DomeAPS_logevent_movementEnabled Topic Columns
 	[Documentation]    Validate the DomeAPS_logevent_movementEnabled topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
@@ -10258,9 +10258,9 @@ Validate Domeaps Event DomeAPS_logevent_movementEnabled Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeaps Event DomeAPS_logevent_movementPrevented Topic Byte Size
+Validate DomeAPS Event DomeAPS_logevent_movementPrevented Topic Byte Size
 	[Documentation]    Validate the DomeAPS_logevent_movementPrevented topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
@@ -10282,9 +10282,9 @@ Validate Domeaps Event DomeAPS_logevent_movementPrevented Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeaps Event DomeAPS_logevent_movementPrevented Topic Columns
+Validate DomeAPS Event DomeAPS_logevent_movementPrevented Topic Columns
 	[Documentation]    Validate the DomeAPS_logevent_movementPrevented topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
@@ -10295,9 +10295,9 @@ Validate Domeaps Event DomeAPS_logevent_movementPrevented Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeaps Event DomeAPS_logevent_lockingPinEngaged Topic Byte Size
+Validate DomeAPS Event DomeAPS_logevent_lockingPinEngaged Topic Byte Size
 	[Documentation]    Validate the DomeAPS_logevent_lockingPinEngaged topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
@@ -10319,9 +10319,9 @@ Validate Domeaps Event DomeAPS_logevent_lockingPinEngaged Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeaps Event DomeAPS_logevent_lockingPinEngaged Topic Columns
+Validate DomeAPS Event DomeAPS_logevent_lockingPinEngaged Topic Columns
 	[Documentation]    Validate the DomeAPS_logevent_lockingPinEngaged topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
@@ -10332,9 +10332,9 @@ Validate Domeaps Event DomeAPS_logevent_lockingPinEngaged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeaps Event DomeAPS_logevent_lockingPinDisengaged Topic Byte Size
+Validate DomeAPS Event DomeAPS_logevent_lockingPinDisengaged Topic Byte Size
 	[Documentation]    Validate the DomeAPS_logevent_lockingPinDisengaged topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
@@ -10356,9 +10356,9 @@ Validate Domeaps Event DomeAPS_logevent_lockingPinDisengaged Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeaps Event DomeAPS_logevent_lockingPinDisengaged Topic Columns
+Validate DomeAPS Event DomeAPS_logevent_lockingPinDisengaged Topic Columns
 	[Documentation]    Validate the DomeAPS_logevent_lockingPinDisengaged topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
@@ -10369,9 +10369,9 @@ Validate Domeaps Event DomeAPS_logevent_lockingPinDisengaged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeaps Event DomeAPS_logevent_lockingPinFloating Topic Byte Size
+Validate DomeAPS Event DomeAPS_logevent_lockingPinFloating Topic Byte Size
 	[Documentation]    Validate the DomeAPS_logevent_lockingPinFloating topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
@@ -10393,9 +10393,9 @@ Validate Domeaps Event DomeAPS_logevent_lockingPinFloating Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeaps Event DomeAPS_logevent_lockingPinFloating Topic Columns
+Validate DomeAPS Event DomeAPS_logevent_lockingPinFloating Topic Columns
 	[Documentation]    Validate the DomeAPS_logevent_lockingPinFloating topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
@@ -10406,9 +10406,9 @@ Validate Domeaps Event DomeAPS_logevent_lockingPinFloating Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeaps Event DomeAPS_logevent_centralLockingPinEngaged Topic Byte Size
+Validate DomeAPS Event DomeAPS_logevent_centralLockingPinEngaged Topic Byte Size
 	[Documentation]    Validate the DomeAPS_logevent_centralLockingPinEngaged topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
@@ -10430,9 +10430,9 @@ Validate Domeaps Event DomeAPS_logevent_centralLockingPinEngaged Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeaps Event DomeAPS_logevent_centralLockingPinEngaged Topic Columns
+Validate DomeAPS Event DomeAPS_logevent_centralLockingPinEngaged Topic Columns
 	[Documentation]    Validate the DomeAPS_logevent_centralLockingPinEngaged topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
@@ -10443,9 +10443,9 @@ Validate Domeaps Event DomeAPS_logevent_centralLockingPinEngaged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeaps Event DomeAPS_logevent_lockingPinHomed Topic Byte Size
+Validate DomeAPS Event DomeAPS_logevent_lockingPinHomed Topic Byte Size
 	[Documentation]    Validate the DomeAPS_logevent_lockingPinHomed topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[12]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
@@ -10467,9 +10467,9 @@ Validate Domeaps Event DomeAPS_logevent_lockingPinHomed Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeaps Event DomeAPS_logevent_lockingPinHomed Topic Columns
+Validate DomeAPS Event DomeAPS_logevent_lockingPinHomed Topic Columns
 	[Documentation]    Validate the DomeAPS_logevent_lockingPinHomed topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[12]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
@@ -10480,9 +10480,9 @@ Validate Domeaps Event DomeAPS_logevent_lockingPinHomed Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeaps Event DomeAPS_logevent_centralLockingPinDisengaged Topic Byte Size
+Validate DomeAPS Event DomeAPS_logevent_centralLockingPinDisengaged Topic Byte Size
 	[Documentation]    Validate the DomeAPS_logevent_centralLockingPinDisengaged topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[13]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
@@ -10504,9 +10504,9 @@ Validate Domeaps Event DomeAPS_logevent_centralLockingPinDisengaged Topic Byte S
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeaps Event DomeAPS_logevent_centralLockingPinDisengaged Topic Columns
+Validate DomeAPS Event DomeAPS_logevent_centralLockingPinDisengaged Topic Columns
 	[Documentation]    Validate the DomeAPS_logevent_centralLockingPinDisengaged topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[13]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
@@ -10517,9 +10517,9 @@ Validate Domeaps Event DomeAPS_logevent_centralLockingPinDisengaged Topic Column
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeaps Event DomeAPS_logevent_centralLockingPinHomed Topic Byte Size
+Validate DomeAPS Event DomeAPS_logevent_centralLockingPinHomed Topic Byte Size
 	[Documentation]    Validate the DomeAPS_logevent_centralLockingPinHomed topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[14]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
@@ -10541,9 +10541,9 @@ Validate Domeaps Event DomeAPS_logevent_centralLockingPinHomed Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeaps Event DomeAPS_logevent_centralLockingPinHomed Topic Columns
+Validate DomeAPS Event DomeAPS_logevent_centralLockingPinHomed Topic Columns
 	[Documentation]    Validate the DomeAPS_logevent_centralLockingPinHomed topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[14]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
@@ -10554,9 +10554,9 @@ Validate Domeaps Event DomeAPS_logevent_centralLockingPinHomed Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeaps Event DomeAPS_logevent_centralLockingPinFloating Topic Byte Size
+Validate DomeAPS Event DomeAPS_logevent_centralLockingPinFloating Topic Byte Size
 	[Documentation]    Validate the DomeAPS_logevent_centralLockingPinFloating topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[15]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
@@ -10578,9 +10578,9 @@ Validate Domeaps Event DomeAPS_logevent_centralLockingPinFloating Topic Byte Siz
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeaps Event DomeAPS_logevent_centralLockingPinFloating Topic Columns
+Validate DomeAPS Event DomeAPS_logevent_centralLockingPinFloating Topic Columns
 	[Documentation]    Validate the DomeAPS_logevent_centralLockingPinFloating topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[15]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
@@ -10591,9 +10591,9 @@ Validate Domeaps Event DomeAPS_logevent_centralLockingPinFloating Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeaps Event DomeAPS_logevent_brakeEngaged Topic Byte Size
+Validate DomeAPS Event DomeAPS_logevent_brakeEngaged Topic Byte Size
 	[Documentation]    Validate the DomeAPS_logevent_brakeEngaged topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[16]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
@@ -10615,9 +10615,9 @@ Validate Domeaps Event DomeAPS_logevent_brakeEngaged Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeaps Event DomeAPS_logevent_brakeEngaged Topic Columns
+Validate DomeAPS Event DomeAPS_logevent_brakeEngaged Topic Columns
 	[Documentation]    Validate the DomeAPS_logevent_brakeEngaged topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[16]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
@@ -10628,9 +10628,9 @@ Validate Domeaps Event DomeAPS_logevent_brakeEngaged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeaps Event DomeAPS_logevent_brakeDisengaged Topic Byte Size
+Validate DomeAPS Event DomeAPS_logevent_brakeDisengaged Topic Byte Size
 	[Documentation]    Validate the DomeAPS_logevent_brakeDisengaged topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[17]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
@@ -10652,9 +10652,9 @@ Validate Domeaps Event DomeAPS_logevent_brakeDisengaged Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeaps Event DomeAPS_logevent_brakeDisengaged Topic Columns
+Validate DomeAPS Event DomeAPS_logevent_brakeDisengaged Topic Columns
 	[Documentation]    Validate the DomeAPS_logevent_brakeDisengaged topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[17]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
@@ -10665,9 +10665,9 @@ Validate Domeaps Event DomeAPS_logevent_brakeDisengaged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeaps Event DomeAPS_logevent_echoResponse Topic Byte Size
+Validate DomeAPS Event DomeAPS_logevent_echoResponse Topic Byte Size
 	[Documentation]    Validate the DomeAPS_logevent_echoResponse topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[18]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
@@ -10689,9 +10689,9 @@ Validate Domeaps Event DomeAPS_logevent_echoResponse Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeaps Event DomeAPS_logevent_echoResponse Topic Columns
+Validate DomeAPS Event DomeAPS_logevent_echoResponse Topic Columns
 	[Documentation]    Validate the DomeAPS_logevent_echoResponse topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[18]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
@@ -10702,9 +10702,9 @@ Validate Domeaps Event DomeAPS_logevent_echoResponse Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeaps Event DomeAPS_logevent_apsSubsystemError Topic Byte Size
+Validate DomeAPS Event DomeAPS_logevent_apsSubsystemError Topic Byte Size
 	[Documentation]    Validate the DomeAPS_logevent_apsSubsystemError topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[19]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
@@ -10726,9 +10726,9 @@ Validate Domeaps Event DomeAPS_logevent_apsSubsystemError Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeaps Event DomeAPS_logevent_apsSubsystemError Topic Columns
+Validate DomeAPS Event DomeAPS_logevent_apsSubsystemError Topic Columns
 	[Documentation]    Validate the DomeAPS_logevent_apsSubsystemError topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[19]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
@@ -10739,9 +10739,9 @@ Validate Domeaps Event DomeAPS_logevent_apsSubsystemError Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domeaps Telemetry DomeAPS_status Topic Byte Size
+Validate DomeAPS Telemetry DomeAPS_status Topic Byte Size
 	[Documentation]    Validate the DomeAPS_status topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Telemetry.xml
@@ -10763,9 +10763,9 @@ Validate Domeaps Telemetry DomeAPS_status Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domeaps Telemetry DomeAPS_status Topic Columns
+Validate DomeAPS Telemetry DomeAPS_status Topic Columns
 	[Documentation]    Validate the DomeAPS_status topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domeaps
+	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Telemetry.xml
@@ -10776,9 +10776,9 @@ Validate Domeaps Telemetry DomeAPS_status Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domelouvers Command DomeLouvers_command_setPosition Topic Byte Size
+Validate DomeLouvers Command DomeLouvers_command_setPosition Topic Byte Size
 	[Documentation]    Validate the DomeLouvers_command_setPosition topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domelouvers
+	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Commands.xml
@@ -10800,9 +10800,9 @@ Validate Domelouvers Command DomeLouvers_command_setPosition Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domelouvers Command DomeLouvers_command_setPosition Topic Columns
+Validate DomeLouvers Command DomeLouvers_command_setPosition Topic Columns
 	[Documentation]    Validate the DomeLouvers_command_setPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domelouvers
+	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Commands.xml
@@ -10813,9 +10813,9 @@ Validate Domelouvers Command DomeLouvers_command_setPosition Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domelouvers Command DomeLouvers_command_echo Topic Byte Size
+Validate DomeLouvers Command DomeLouvers_command_echo Topic Byte Size
 	[Documentation]    Validate the DomeLouvers_command_echo topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domelouvers
+	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Commands.xml
@@ -10837,9 +10837,9 @@ Validate Domelouvers Command DomeLouvers_command_echo Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domelouvers Command DomeLouvers_command_echo Topic Columns
+Validate DomeLouvers Command DomeLouvers_command_echo Topic Columns
 	[Documentation]    Validate the DomeLouvers_command_echo topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domelouvers
+	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Commands.xml
@@ -10850,9 +10850,9 @@ Validate Domelouvers Command DomeLouvers_command_echo Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domelouvers Event DomeLouvers_logevent_stateChanged Topic Byte Size
+Validate DomeLouvers Event DomeLouvers_logevent_stateChanged Topic Byte Size
 	[Documentation]    Validate the DomeLouvers_logevent_stateChanged topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domelouvers
+	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml
@@ -10874,9 +10874,9 @@ Validate Domelouvers Event DomeLouvers_logevent_stateChanged Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domelouvers Event DomeLouvers_logevent_stateChanged Topic Columns
+Validate DomeLouvers Event DomeLouvers_logevent_stateChanged Topic Columns
 	[Documentation]    Validate the DomeLouvers_logevent_stateChanged topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domelouvers
+	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml
@@ -10887,9 +10887,9 @@ Validate Domelouvers Event DomeLouvers_logevent_stateChanged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domelouvers Event DomeLouvers_logevent_driveEnabled Topic Byte Size
+Validate DomeLouvers Event DomeLouvers_logevent_driveEnabled Topic Byte Size
 	[Documentation]    Validate the DomeLouvers_logevent_driveEnabled topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domelouvers
+	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml
@@ -10911,9 +10911,9 @@ Validate Domelouvers Event DomeLouvers_logevent_driveEnabled Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domelouvers Event DomeLouvers_logevent_driveEnabled Topic Columns
+Validate DomeLouvers Event DomeLouvers_logevent_driveEnabled Topic Columns
 	[Documentation]    Validate the DomeLouvers_logevent_driveEnabled topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domelouvers
+	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml
@@ -10924,9 +10924,9 @@ Validate Domelouvers Event DomeLouvers_logevent_driveEnabled Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domelouvers Event DomeLouvers_logevent_driveDisabled Topic Byte Size
+Validate DomeLouvers Event DomeLouvers_logevent_driveDisabled Topic Byte Size
 	[Documentation]    Validate the DomeLouvers_logevent_driveDisabled topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domelouvers
+	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml
@@ -10948,9 +10948,9 @@ Validate Domelouvers Event DomeLouvers_logevent_driveDisabled Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domelouvers Event DomeLouvers_logevent_driveDisabled Topic Columns
+Validate DomeLouvers Event DomeLouvers_logevent_driveDisabled Topic Columns
 	[Documentation]    Validate the DomeLouvers_logevent_driveDisabled topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domelouvers
+	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml
@@ -10961,9 +10961,9 @@ Validate Domelouvers Event DomeLouvers_logevent_driveDisabled Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domelouvers Event DomeLouvers_logevent_driveReady Topic Byte Size
+Validate DomeLouvers Event DomeLouvers_logevent_driveReady Topic Byte Size
 	[Documentation]    Validate the DomeLouvers_logevent_driveReady topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domelouvers
+	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml
@@ -10985,9 +10985,9 @@ Validate Domelouvers Event DomeLouvers_logevent_driveReady Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domelouvers Event DomeLouvers_logevent_driveReady Topic Columns
+Validate DomeLouvers Event DomeLouvers_logevent_driveReady Topic Columns
 	[Documentation]    Validate the DomeLouvers_logevent_driveReady topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domelouvers
+	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml
@@ -10998,9 +10998,9 @@ Validate Domelouvers Event DomeLouvers_logevent_driveReady Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domelouvers Event DomeLouvers_logevent_driveOverTemp Topic Byte Size
+Validate DomeLouvers Event DomeLouvers_logevent_driveOverTemp Topic Byte Size
 	[Documentation]    Validate the DomeLouvers_logevent_driveOverTemp topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domelouvers
+	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml
@@ -11022,9 +11022,9 @@ Validate Domelouvers Event DomeLouvers_logevent_driveOverTemp Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domelouvers Event DomeLouvers_logevent_driveOverTemp Topic Columns
+Validate DomeLouvers Event DomeLouvers_logevent_driveOverTemp Topic Columns
 	[Documentation]    Validate the DomeLouvers_logevent_driveOverTemp topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domelouvers
+	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml
@@ -11035,9 +11035,9 @@ Validate Domelouvers Event DomeLouvers_logevent_driveOverTemp Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domelouvers Event DomeLouvers_logevent_driveFault Topic Byte Size
+Validate DomeLouvers Event DomeLouvers_logevent_driveFault Topic Byte Size
 	[Documentation]    Validate the DomeLouvers_logevent_driveFault topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domelouvers
+	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml
@@ -11059,9 +11059,9 @@ Validate Domelouvers Event DomeLouvers_logevent_driveFault Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domelouvers Event DomeLouvers_logevent_driveFault Topic Columns
+Validate DomeLouvers Event DomeLouvers_logevent_driveFault Topic Columns
 	[Documentation]    Validate the DomeLouvers_logevent_driveFault topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domelouvers
+	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml
@@ -11072,9 +11072,9 @@ Validate Domelouvers Event DomeLouvers_logevent_driveFault Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domelouvers Event DomeLouvers_logevent_movementEnabled Topic Byte Size
+Validate DomeLouvers Event DomeLouvers_logevent_movementEnabled Topic Byte Size
 	[Documentation]    Validate the DomeLouvers_logevent_movementEnabled topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domelouvers
+	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml
@@ -11096,9 +11096,9 @@ Validate Domelouvers Event DomeLouvers_logevent_movementEnabled Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domelouvers Event DomeLouvers_logevent_movementEnabled Topic Columns
+Validate DomeLouvers Event DomeLouvers_logevent_movementEnabled Topic Columns
 	[Documentation]    Validate the DomeLouvers_logevent_movementEnabled topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domelouvers
+	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml
@@ -11109,9 +11109,9 @@ Validate Domelouvers Event DomeLouvers_logevent_movementEnabled Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domelouvers Event DomeLouvers_logevent_movementPrevented Topic Byte Size
+Validate DomeLouvers Event DomeLouvers_logevent_movementPrevented Topic Byte Size
 	[Documentation]    Validate the DomeLouvers_logevent_movementPrevented topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domelouvers
+	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml
@@ -11133,9 +11133,9 @@ Validate Domelouvers Event DomeLouvers_logevent_movementPrevented Topic Byte Siz
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domelouvers Event DomeLouvers_logevent_movementPrevented Topic Columns
+Validate DomeLouvers Event DomeLouvers_logevent_movementPrevented Topic Columns
 	[Documentation]    Validate the DomeLouvers_logevent_movementPrevented topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domelouvers
+	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml
@@ -11146,9 +11146,9 @@ Validate Domelouvers Event DomeLouvers_logevent_movementPrevented Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domelouvers Event DomeLouvers_logevent_echoResponse Topic Byte Size
+Validate DomeLouvers Event DomeLouvers_logevent_echoResponse Topic Byte Size
 	[Documentation]    Validate the DomeLouvers_logevent_echoResponse topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domelouvers
+	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml
@@ -11170,9 +11170,9 @@ Validate Domelouvers Event DomeLouvers_logevent_echoResponse Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domelouvers Event DomeLouvers_logevent_echoResponse Topic Columns
+Validate DomeLouvers Event DomeLouvers_logevent_echoResponse Topic Columns
 	[Documentation]    Validate the DomeLouvers_logevent_echoResponse topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domelouvers
+	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml
@@ -11183,9 +11183,9 @@ Validate Domelouvers Event DomeLouvers_logevent_echoResponse Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domelouvers Event DomeLouvers_logevent_subsystemError Topic Byte Size
+Validate DomeLouvers Event DomeLouvers_logevent_subsystemError Topic Byte Size
 	[Documentation]    Validate the DomeLouvers_logevent_subsystemError topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domelouvers
+	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml
@@ -11207,9 +11207,9 @@ Validate Domelouvers Event DomeLouvers_logevent_subsystemError Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domelouvers Event DomeLouvers_logevent_subsystemError Topic Columns
+Validate DomeLouvers Event DomeLouvers_logevent_subsystemError Topic Columns
 	[Documentation]    Validate the DomeLouvers_logevent_subsystemError topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domelouvers
+	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml
@@ -11220,9 +11220,9 @@ Validate Domelouvers Event DomeLouvers_logevent_subsystemError Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domelouvers Telemetry DomeLouvers_status Topic Byte Size
+Validate DomeLouvers Telemetry DomeLouvers_status Topic Byte Size
 	[Documentation]    Validate the DomeLouvers_status topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domelouvers
+	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Telemetry.xml
@@ -11244,9 +11244,9 @@ Validate Domelouvers Telemetry DomeLouvers_status Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domelouvers Telemetry DomeLouvers_status Topic Columns
+Validate DomeLouvers Telemetry DomeLouvers_status Topic Columns
 	[Documentation]    Validate the DomeLouvers_status topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domelouvers
+	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Telemetry.xml
@@ -11257,9 +11257,9 @@ Validate Domelouvers Telemetry DomeLouvers_status Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domelws Command DomeLWS_command_crawlLWS Topic Byte Size
+Validate DomeLWS Command DomeLWS_command_crawlLWS Topic Byte Size
 	[Documentation]    Validate the DomeLWS_command_crawlLWS topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Commands.xml
@@ -11281,9 +11281,9 @@ Validate Domelws Command DomeLWS_command_crawlLWS Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domelws Command DomeLWS_command_crawlLWS Topic Columns
+Validate DomeLWS Command DomeLWS_command_crawlLWS Topic Columns
 	[Documentation]    Validate the DomeLWS_command_crawlLWS topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Commands.xml
@@ -11294,9 +11294,9 @@ Validate Domelws Command DomeLWS_command_crawlLWS Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domelws Command DomeLWS_command_moveLWS Topic Byte Size
+Validate DomeLWS Command DomeLWS_command_moveLWS Topic Byte Size
 	[Documentation]    Validate the DomeLWS_command_moveLWS topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Commands.xml
@@ -11318,9 +11318,9 @@ Validate Domelws Command DomeLWS_command_moveLWS Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domelws Command DomeLWS_command_moveLWS Topic Columns
+Validate DomeLWS Command DomeLWS_command_moveLWS Topic Columns
 	[Documentation]    Validate the DomeLWS_command_moveLWS topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Commands.xml
@@ -11331,9 +11331,9 @@ Validate Domelws Command DomeLWS_command_moveLWS Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domelws Command DomeLWS_command_velocityMoveLWS Topic Byte Size
+Validate DomeLWS Command DomeLWS_command_velocityMoveLWS Topic Byte Size
 	[Documentation]    Validate the DomeLWS_command_velocityMoveLWS topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Commands.xml
@@ -11355,9 +11355,9 @@ Validate Domelws Command DomeLWS_command_velocityMoveLWS Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domelws Command DomeLWS_command_velocityMoveLWS Topic Columns
+Validate DomeLWS Command DomeLWS_command_velocityMoveLWS Topic Columns
 	[Documentation]    Validate the DomeLWS_command_velocityMoveLWS topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Commands.xml
@@ -11368,9 +11368,9 @@ Validate Domelws Command DomeLWS_command_velocityMoveLWS Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domelws Command DomeLWS_command_echoLWS Topic Byte Size
+Validate DomeLWS Command DomeLWS_command_echoLWS Topic Byte Size
 	[Documentation]    Validate the DomeLWS_command_echoLWS topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Commands.xml
@@ -11392,9 +11392,9 @@ Validate Domelws Command DomeLWS_command_echoLWS Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domelws Command DomeLWS_command_echoLWS Topic Columns
+Validate DomeLWS Command DomeLWS_command_echoLWS Topic Columns
 	[Documentation]    Validate the DomeLWS_command_echoLWS topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Commands.xml
@@ -11405,9 +11405,9 @@ Validate Domelws Command DomeLWS_command_echoLWS Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domelws Event DomeLWS_logevent_stateChanged Topic Byte Size
+Validate DomeLWS Event DomeLWS_logevent_stateChanged Topic Byte Size
 	[Documentation]    Validate the DomeLWS_logevent_stateChanged topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
@@ -11429,9 +11429,9 @@ Validate Domelws Event DomeLWS_logevent_stateChanged Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domelws Event DomeLWS_logevent_stateChanged Topic Columns
+Validate DomeLWS Event DomeLWS_logevent_stateChanged Topic Columns
 	[Documentation]    Validate the DomeLWS_logevent_stateChanged topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
@@ -11442,9 +11442,9 @@ Validate Domelws Event DomeLWS_logevent_stateChanged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domelws Event DomeLWS_logevent_driveEnabled Topic Byte Size
+Validate DomeLWS Event DomeLWS_logevent_driveEnabled Topic Byte Size
 	[Documentation]    Validate the DomeLWS_logevent_driveEnabled topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
@@ -11466,9 +11466,9 @@ Validate Domelws Event DomeLWS_logevent_driveEnabled Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domelws Event DomeLWS_logevent_driveEnabled Topic Columns
+Validate DomeLWS Event DomeLWS_logevent_driveEnabled Topic Columns
 	[Documentation]    Validate the DomeLWS_logevent_driveEnabled topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
@@ -11479,9 +11479,9 @@ Validate Domelws Event DomeLWS_logevent_driveEnabled Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domelws Event DomeLWS_logevent_driveDisabled Topic Byte Size
+Validate DomeLWS Event DomeLWS_logevent_driveDisabled Topic Byte Size
 	[Documentation]    Validate the DomeLWS_logevent_driveDisabled topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
@@ -11503,9 +11503,9 @@ Validate Domelws Event DomeLWS_logevent_driveDisabled Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domelws Event DomeLWS_logevent_driveDisabled Topic Columns
+Validate DomeLWS Event DomeLWS_logevent_driveDisabled Topic Columns
 	[Documentation]    Validate the DomeLWS_logevent_driveDisabled topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
@@ -11516,9 +11516,9 @@ Validate Domelws Event DomeLWS_logevent_driveDisabled Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domelws Event DomeLWS_logevent_driveReady Topic Byte Size
+Validate DomeLWS Event DomeLWS_logevent_driveReady Topic Byte Size
 	[Documentation]    Validate the DomeLWS_logevent_driveReady topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
@@ -11540,9 +11540,9 @@ Validate Domelws Event DomeLWS_logevent_driveReady Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domelws Event DomeLWS_logevent_driveReady Topic Columns
+Validate DomeLWS Event DomeLWS_logevent_driveReady Topic Columns
 	[Documentation]    Validate the DomeLWS_logevent_driveReady topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
@@ -11553,9 +11553,9 @@ Validate Domelws Event DomeLWS_logevent_driveReady Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domelws Event DomeLWS_logevent_driveOverTemp Topic Byte Size
+Validate DomeLWS Event DomeLWS_logevent_driveOverTemp Topic Byte Size
 	[Documentation]    Validate the DomeLWS_logevent_driveOverTemp topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
@@ -11577,9 +11577,9 @@ Validate Domelws Event DomeLWS_logevent_driveOverTemp Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domelws Event DomeLWS_logevent_driveOverTemp Topic Columns
+Validate DomeLWS Event DomeLWS_logevent_driveOverTemp Topic Columns
 	[Documentation]    Validate the DomeLWS_logevent_driveOverTemp topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
@@ -11590,9 +11590,9 @@ Validate Domelws Event DomeLWS_logevent_driveOverTemp Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domelws Event DomeLWS_logevent_driveFault Topic Byte Size
+Validate DomeLWS Event DomeLWS_logevent_driveFault Topic Byte Size
 	[Documentation]    Validate the DomeLWS_logevent_driveFault topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
@@ -11614,9 +11614,9 @@ Validate Domelws Event DomeLWS_logevent_driveFault Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domelws Event DomeLWS_logevent_driveFault Topic Columns
+Validate DomeLWS Event DomeLWS_logevent_driveFault Topic Columns
 	[Documentation]    Validate the DomeLWS_logevent_driveFault topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
@@ -11627,9 +11627,9 @@ Validate Domelws Event DomeLWS_logevent_driveFault Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domelws Event DomeLWS_logevent_movementEnabled Topic Byte Size
+Validate DomeLWS Event DomeLWS_logevent_movementEnabled Topic Byte Size
 	[Documentation]    Validate the DomeLWS_logevent_movementEnabled topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
@@ -11651,9 +11651,9 @@ Validate Domelws Event DomeLWS_logevent_movementEnabled Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domelws Event DomeLWS_logevent_movementEnabled Topic Columns
+Validate DomeLWS Event DomeLWS_logevent_movementEnabled Topic Columns
 	[Documentation]    Validate the DomeLWS_logevent_movementEnabled topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
@@ -11664,9 +11664,9 @@ Validate Domelws Event DomeLWS_logevent_movementEnabled Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domelws Event DomeLWS_logevent_movementPrevented Topic Byte Size
+Validate DomeLWS Event DomeLWS_logevent_movementPrevented Topic Byte Size
 	[Documentation]    Validate the DomeLWS_logevent_movementPrevented topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
@@ -11688,9 +11688,9 @@ Validate Domelws Event DomeLWS_logevent_movementPrevented Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domelws Event DomeLWS_logevent_movementPrevented Topic Columns
+Validate DomeLWS Event DomeLWS_logevent_movementPrevented Topic Columns
 	[Documentation]    Validate the DomeLWS_logevent_movementPrevented topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
@@ -11701,9 +11701,9 @@ Validate Domelws Event DomeLWS_logevent_movementPrevented Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domelws Event DomeLWS_logevent_lockingPinDisengaged Topic Byte Size
+Validate DomeLWS Event DomeLWS_logevent_lockingPinDisengaged Topic Byte Size
 	[Documentation]    Validate the DomeLWS_logevent_lockingPinDisengaged topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
@@ -11725,9 +11725,9 @@ Validate Domelws Event DomeLWS_logevent_lockingPinDisengaged Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domelws Event DomeLWS_logevent_lockingPinDisengaged Topic Columns
+Validate DomeLWS Event DomeLWS_logevent_lockingPinDisengaged Topic Columns
 	[Documentation]    Validate the DomeLWS_logevent_lockingPinDisengaged topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
@@ -11738,9 +11738,9 @@ Validate Domelws Event DomeLWS_logevent_lockingPinDisengaged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domelws Event DomeLWS_logevent_LockingPinEngaged Topic Byte Size
+Validate DomeLWS Event DomeLWS_logevent_LockingPinEngaged Topic Byte Size
 	[Documentation]    Validate the DomeLWS_logevent_LockingPinEngaged topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
@@ -11762,9 +11762,9 @@ Validate Domelws Event DomeLWS_logevent_LockingPinEngaged Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domelws Event DomeLWS_logevent_LockingPinEngaged Topic Columns
+Validate DomeLWS Event DomeLWS_logevent_LockingPinEngaged Topic Columns
 	[Documentation]    Validate the DomeLWS_logevent_LockingPinEngaged topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
@@ -11775,9 +11775,9 @@ Validate Domelws Event DomeLWS_logevent_LockingPinEngaged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domelws Event DomeLWS_logevent_lockingPinHomed Topic Byte Size
+Validate DomeLWS Event DomeLWS_logevent_lockingPinHomed Topic Byte Size
 	[Documentation]    Validate the DomeLWS_logevent_lockingPinHomed topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
@@ -11799,9 +11799,9 @@ Validate Domelws Event DomeLWS_logevent_lockingPinHomed Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domelws Event DomeLWS_logevent_lockingPinHomed Topic Columns
+Validate DomeLWS Event DomeLWS_logevent_lockingPinHomed Topic Columns
 	[Documentation]    Validate the DomeLWS_logevent_lockingPinHomed topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
@@ -11812,9 +11812,9 @@ Validate Domelws Event DomeLWS_logevent_lockingPinHomed Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domelws Event DomeLWS_logevent_lockingPinFloating Topic Byte Size
+Validate DomeLWS Event DomeLWS_logevent_lockingPinFloating Topic Byte Size
 	[Documentation]    Validate the DomeLWS_logevent_lockingPinFloating topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[12]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
@@ -11836,9 +11836,9 @@ Validate Domelws Event DomeLWS_logevent_lockingPinFloating Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domelws Event DomeLWS_logevent_lockingPinFloating Topic Columns
+Validate DomeLWS Event DomeLWS_logevent_lockingPinFloating Topic Columns
 	[Documentation]    Validate the DomeLWS_logevent_lockingPinFloating topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[12]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
@@ -11849,9 +11849,9 @@ Validate Domelws Event DomeLWS_logevent_lockingPinFloating Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domelws Event DomeLWS_logevent_brakeEngaged Topic Byte Size
+Validate DomeLWS Event DomeLWS_logevent_brakeEngaged Topic Byte Size
 	[Documentation]    Validate the DomeLWS_logevent_brakeEngaged topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[13]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
@@ -11873,9 +11873,9 @@ Validate Domelws Event DomeLWS_logevent_brakeEngaged Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domelws Event DomeLWS_logevent_brakeEngaged Topic Columns
+Validate DomeLWS Event DomeLWS_logevent_brakeEngaged Topic Columns
 	[Documentation]    Validate the DomeLWS_logevent_brakeEngaged topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[13]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
@@ -11886,9 +11886,9 @@ Validate Domelws Event DomeLWS_logevent_brakeEngaged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domelws Event DomeLWS_logevent_brakeDisengaged Topic Byte Size
+Validate DomeLWS Event DomeLWS_logevent_brakeDisengaged Topic Byte Size
 	[Documentation]    Validate the DomeLWS_logevent_brakeDisengaged topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[14]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
@@ -11910,9 +11910,9 @@ Validate Domelws Event DomeLWS_logevent_brakeDisengaged Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domelws Event DomeLWS_logevent_brakeDisengaged Topic Columns
+Validate DomeLWS Event DomeLWS_logevent_brakeDisengaged Topic Columns
 	[Documentation]    Validate the DomeLWS_logevent_brakeDisengaged topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[14]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
@@ -11923,9 +11923,9 @@ Validate Domelws Event DomeLWS_logevent_brakeDisengaged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domelws Event DomeLWS_logevent_speedLimitReached Topic Byte Size
+Validate DomeLWS Event DomeLWS_logevent_speedLimitReached Topic Byte Size
 	[Documentation]    Validate the DomeLWS_logevent_speedLimitReached topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[15]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
@@ -11947,9 +11947,9 @@ Validate Domelws Event DomeLWS_logevent_speedLimitReached Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domelws Event DomeLWS_logevent_speedLimitReached Topic Columns
+Validate DomeLWS Event DomeLWS_logevent_speedLimitReached Topic Columns
 	[Documentation]    Validate the DomeLWS_logevent_speedLimitReached topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[15]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
@@ -11960,9 +11960,9 @@ Validate Domelws Event DomeLWS_logevent_speedLimitReached Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domelws Event DomeLWS_logevent_accelerationLimitReached Topic Byte Size
+Validate DomeLWS Event DomeLWS_logevent_accelerationLimitReached Topic Byte Size
 	[Documentation]    Validate the DomeLWS_logevent_accelerationLimitReached topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[16]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
@@ -11984,9 +11984,9 @@ Validate Domelws Event DomeLWS_logevent_accelerationLimitReached Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domelws Event DomeLWS_logevent_accelerationLimitReached Topic Columns
+Validate DomeLWS Event DomeLWS_logevent_accelerationLimitReached Topic Columns
 	[Documentation]    Validate the DomeLWS_logevent_accelerationLimitReached topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[16]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
@@ -11997,9 +11997,9 @@ Validate Domelws Event DomeLWS_logevent_accelerationLimitReached Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domelws Event DomeLWS_logevent_speedLimitSubsided Topic Byte Size
+Validate DomeLWS Event DomeLWS_logevent_speedLimitSubsided Topic Byte Size
 	[Documentation]    Validate the DomeLWS_logevent_speedLimitSubsided topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[17]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
@@ -12021,9 +12021,9 @@ Validate Domelws Event DomeLWS_logevent_speedLimitSubsided Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domelws Event DomeLWS_logevent_speedLimitSubsided Topic Columns
+Validate DomeLWS Event DomeLWS_logevent_speedLimitSubsided Topic Columns
 	[Documentation]    Validate the DomeLWS_logevent_speedLimitSubsided topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[17]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
@@ -12034,9 +12034,9 @@ Validate Domelws Event DomeLWS_logevent_speedLimitSubsided Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domelws Event DomeLWS_logevent_accelerationLimitSubsided Topic Byte Size
+Validate DomeLWS Event DomeLWS_logevent_accelerationLimitSubsided Topic Byte Size
 	[Documentation]    Validate the DomeLWS_logevent_accelerationLimitSubsided topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[18]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
@@ -12058,9 +12058,9 @@ Validate Domelws Event DomeLWS_logevent_accelerationLimitSubsided Topic Byte Siz
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domelws Event DomeLWS_logevent_accelerationLimitSubsided Topic Columns
+Validate DomeLWS Event DomeLWS_logevent_accelerationLimitSubsided Topic Columns
 	[Documentation]    Validate the DomeLWS_logevent_accelerationLimitSubsided topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[18]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
@@ -12071,9 +12071,9 @@ Validate Domelws Event DomeLWS_logevent_accelerationLimitSubsided Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domelws Event DomeLWS_logevent_echoResponse Topic Byte Size
+Validate DomeLWS Event DomeLWS_logevent_echoResponse Topic Byte Size
 	[Documentation]    Validate the DomeLWS_logevent_echoResponse topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[19]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
@@ -12095,9 +12095,9 @@ Validate Domelws Event DomeLWS_logevent_echoResponse Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domelws Event DomeLWS_logevent_echoResponse Topic Columns
+Validate DomeLWS Event DomeLWS_logevent_echoResponse Topic Columns
 	[Documentation]    Validate the DomeLWS_logevent_echoResponse topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[19]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
@@ -12108,9 +12108,9 @@ Validate Domelws Event DomeLWS_logevent_echoResponse Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domelws Event DomeLWS_logevent_motionModeChanged Topic Byte Size
+Validate DomeLWS Event DomeLWS_logevent_motionModeChanged Topic Byte Size
 	[Documentation]    Validate the DomeLWS_logevent_motionModeChanged topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[20]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
@@ -12132,9 +12132,9 @@ Validate Domelws Event DomeLWS_logevent_motionModeChanged Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domelws Event DomeLWS_logevent_motionModeChanged Topic Columns
+Validate DomeLWS Event DomeLWS_logevent_motionModeChanged Topic Columns
 	[Documentation]    Validate the DomeLWS_logevent_motionModeChanged topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[20]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
@@ -12145,9 +12145,9 @@ Validate Domelws Event DomeLWS_logevent_motionModeChanged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domelws Event DomeLWS_logevent_subsystemError Topic Byte Size
+Validate DomeLWS Event DomeLWS_logevent_subsystemError Topic Byte Size
 	[Documentation]    Validate the DomeLWS_logevent_subsystemError topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[21]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
@@ -12169,9 +12169,9 @@ Validate Domelws Event DomeLWS_logevent_subsystemError Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domelws Event DomeLWS_logevent_subsystemError Topic Columns
+Validate DomeLWS Event DomeLWS_logevent_subsystemError Topic Columns
 	[Documentation]    Validate the DomeLWS_logevent_subsystemError topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[21]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
@@ -12182,9 +12182,9 @@ Validate Domelws Event DomeLWS_logevent_subsystemError Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domelws Telemetry DomeLWS_status Topic Byte Size
+Validate DomeLWS Telemetry DomeLWS_status Topic Byte Size
 	[Documentation]    Validate the DomeLWS_status topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Telemetry.xml
@@ -12206,9 +12206,9 @@ Validate Domelws Telemetry DomeLWS_status Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domelws Telemetry DomeLWS_status Topic Columns
+Validate DomeLWS Telemetry DomeLWS_status Topic Columns
 	[Documentation]    Validate the DomeLWS_status topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domelws
+	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Telemetry.xml
@@ -12219,9 +12219,9 @@ Validate Domelws Telemetry DomeLWS_status Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domemoncs Command DomeMONCS_command_echo Topic Byte Size
+Validate DomeMONCS Command DomeMONCS_command_echo Topic Byte Size
 	[Documentation]    Validate the DomeMONCS_command_echo topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domemoncs
+	[Tags]    smoke    DomeMONCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Commands.xml
@@ -12243,9 +12243,9 @@ Validate Domemoncs Command DomeMONCS_command_echo Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domemoncs Command DomeMONCS_command_echo Topic Columns
+Validate DomeMONCS Command DomeMONCS_command_echo Topic Columns
 	[Documentation]    Validate the DomeMONCS_command_echo topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domemoncs
+	[Tags]    smoke    DomeMONCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Commands.xml
@@ -12256,9 +12256,9 @@ Validate Domemoncs Command DomeMONCS_command_echo Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domemoncs Event DomeMONCS_logevent_stateChanged Topic Byte Size
+Validate DomeMONCS Event DomeMONCS_logevent_stateChanged Topic Byte Size
 	[Documentation]    Validate the DomeMONCS_logevent_stateChanged topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domemoncs
+	[Tags]    smoke    DomeMONCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Events.xml
@@ -12280,9 +12280,9 @@ Validate Domemoncs Event DomeMONCS_logevent_stateChanged Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domemoncs Event DomeMONCS_logevent_stateChanged Topic Columns
+Validate DomeMONCS Event DomeMONCS_logevent_stateChanged Topic Columns
 	[Documentation]    Validate the DomeMONCS_logevent_stateChanged topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domemoncs
+	[Tags]    smoke    DomeMONCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Events.xml
@@ -12293,9 +12293,9 @@ Validate Domemoncs Event DomeMONCS_logevent_stateChanged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domemoncs Event DomeMONCS_logevent_echoResponse Topic Byte Size
+Validate DomeMONCS Event DomeMONCS_logevent_echoResponse Topic Byte Size
 	[Documentation]    Validate the DomeMONCS_logevent_echoResponse topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domemoncs
+	[Tags]    smoke    DomeMONCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Events.xml
@@ -12317,9 +12317,9 @@ Validate Domemoncs Event DomeMONCS_logevent_echoResponse Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domemoncs Event DomeMONCS_logevent_echoResponse Topic Columns
+Validate DomeMONCS Event DomeMONCS_logevent_echoResponse Topic Columns
 	[Documentation]    Validate the DomeMONCS_logevent_echoResponse topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domemoncs
+	[Tags]    smoke    DomeMONCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Events.xml
@@ -12330,9 +12330,9 @@ Validate Domemoncs Event DomeMONCS_logevent_echoResponse Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domemoncs Event DomeMONCS_logevent_subsystemError Topic Byte Size
+Validate DomeMONCS Event DomeMONCS_logevent_subsystemError Topic Byte Size
 	[Documentation]    Validate the DomeMONCS_logevent_subsystemError topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domemoncs
+	[Tags]    smoke    DomeMONCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Events.xml
@@ -12354,9 +12354,9 @@ Validate Domemoncs Event DomeMONCS_logevent_subsystemError Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domemoncs Event DomeMONCS_logevent_subsystemError Topic Columns
+Validate DomeMONCS Event DomeMONCS_logevent_subsystemError Topic Columns
 	[Documentation]    Validate the DomeMONCS_logevent_subsystemError topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domemoncs
+	[Tags]    smoke    DomeMONCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Events.xml
@@ -12367,9 +12367,9 @@ Validate Domemoncs Event DomeMONCS_logevent_subsystemError Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domemoncs Event DomeMONCS_logevent_interlock Topic Byte Size
+Validate DomeMONCS Event DomeMONCS_logevent_interlock Topic Byte Size
 	[Documentation]    Validate the DomeMONCS_logevent_interlock topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domemoncs
+	[Tags]    smoke    DomeMONCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Events.xml
@@ -12391,9 +12391,9 @@ Validate Domemoncs Event DomeMONCS_logevent_interlock Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domemoncs Event DomeMONCS_logevent_interlock Topic Columns
+Validate DomeMONCS Event DomeMONCS_logevent_interlock Topic Columns
 	[Documentation]    Validate the DomeMONCS_logevent_interlock topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domemoncs
+	[Tags]    smoke    DomeMONCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Events.xml
@@ -12404,9 +12404,9 @@ Validate Domemoncs Event DomeMONCS_logevent_interlock Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domemoncs Telemetry DomeMONCS_status Topic Byte Size
+Validate DomeMONCS Telemetry DomeMONCS_status Topic Byte Size
 	[Documentation]    Validate the DomeMONCS_status topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domemoncs
+	[Tags]    smoke    DomeMONCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Telemetry.xml
@@ -12428,9 +12428,9 @@ Validate Domemoncs Telemetry DomeMONCS_status Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domemoncs Telemetry DomeMONCS_status Topic Columns
+Validate DomeMONCS Telemetry DomeMONCS_status Topic Columns
 	[Documentation]    Validate the DomeMONCS_status topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domemoncs
+	[Tags]    smoke    DomeMONCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Telemetry.xml
@@ -12441,9 +12441,9 @@ Validate Domemoncs Telemetry DomeMONCS_status Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domethcs Command DomeTHCS_command_echo Topic Byte Size
+Validate DomeTHCS Command DomeTHCS_command_echo Topic Byte Size
 	[Documentation]    Validate the DomeTHCS_command_echo topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domethcs
+	[Tags]    smoke    DomeTHCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Commands.xml
@@ -12465,9 +12465,9 @@ Validate Domethcs Command DomeTHCS_command_echo Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domethcs Command DomeTHCS_command_echo Topic Columns
+Validate DomeTHCS Command DomeTHCS_command_echo Topic Columns
 	[Documentation]    Validate the DomeTHCS_command_echo topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domethcs
+	[Tags]    smoke    DomeTHCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Commands.xml
@@ -12478,9 +12478,9 @@ Validate Domethcs Command DomeTHCS_command_echo Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domethcs Event DomeTHCS_logevent_stateChanged Topic Byte Size
+Validate DomeTHCS Event DomeTHCS_logevent_stateChanged Topic Byte Size
 	[Documentation]    Validate the DomeTHCS_logevent_stateChanged topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domethcs
+	[Tags]    smoke    DomeTHCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Events.xml
@@ -12502,9 +12502,9 @@ Validate Domethcs Event DomeTHCS_logevent_stateChanged Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domethcs Event DomeTHCS_logevent_stateChanged Topic Columns
+Validate DomeTHCS Event DomeTHCS_logevent_stateChanged Topic Columns
 	[Documentation]    Validate the DomeTHCS_logevent_stateChanged topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domethcs
+	[Tags]    smoke    DomeTHCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Events.xml
@@ -12515,9 +12515,9 @@ Validate Domethcs Event DomeTHCS_logevent_stateChanged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domethcs Event DomeTHCS_logevent_movementEnabled Topic Byte Size
+Validate DomeTHCS Event DomeTHCS_logevent_movementEnabled Topic Byte Size
 	[Documentation]    Validate the DomeTHCS_logevent_movementEnabled topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domethcs
+	[Tags]    smoke    DomeTHCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Events.xml
@@ -12539,9 +12539,9 @@ Validate Domethcs Event DomeTHCS_logevent_movementEnabled Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domethcs Event DomeTHCS_logevent_movementEnabled Topic Columns
+Validate DomeTHCS Event DomeTHCS_logevent_movementEnabled Topic Columns
 	[Documentation]    Validate the DomeTHCS_logevent_movementEnabled topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domethcs
+	[Tags]    smoke    DomeTHCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Events.xml
@@ -12552,9 +12552,9 @@ Validate Domethcs Event DomeTHCS_logevent_movementEnabled Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domethcs Event DomeTHCS_logevent_movementPrevented Topic Byte Size
+Validate DomeTHCS Event DomeTHCS_logevent_movementPrevented Topic Byte Size
 	[Documentation]    Validate the DomeTHCS_logevent_movementPrevented topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domethcs
+	[Tags]    smoke    DomeTHCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Events.xml
@@ -12576,9 +12576,9 @@ Validate Domethcs Event DomeTHCS_logevent_movementPrevented Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domethcs Event DomeTHCS_logevent_movementPrevented Topic Columns
+Validate DomeTHCS Event DomeTHCS_logevent_movementPrevented Topic Columns
 	[Documentation]    Validate the DomeTHCS_logevent_movementPrevented topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domethcs
+	[Tags]    smoke    DomeTHCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Events.xml
@@ -12589,9 +12589,9 @@ Validate Domethcs Event DomeTHCS_logevent_movementPrevented Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domethcs Event DomeTHCS_logevent_echoResponse Topic Byte Size
+Validate DomeTHCS Event DomeTHCS_logevent_echoResponse Topic Byte Size
 	[Documentation]    Validate the DomeTHCS_logevent_echoResponse topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domethcs
+	[Tags]    smoke    DomeTHCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Events.xml
@@ -12613,9 +12613,9 @@ Validate Domethcs Event DomeTHCS_logevent_echoResponse Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domethcs Event DomeTHCS_logevent_echoResponse Topic Columns
+Validate DomeTHCS Event DomeTHCS_logevent_echoResponse Topic Columns
 	[Documentation]    Validate the DomeTHCS_logevent_echoResponse topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domethcs
+	[Tags]    smoke    DomeTHCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Events.xml
@@ -12626,9 +12626,9 @@ Validate Domethcs Event DomeTHCS_logevent_echoResponse Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domethcs Event DomeTHCS_logevent_subsystemError Topic Byte Size
+Validate DomeTHCS Event DomeTHCS_logevent_subsystemError Topic Byte Size
 	[Documentation]    Validate the DomeTHCS_logevent_subsystemError topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domethcs
+	[Tags]    smoke    DomeTHCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Events.xml
@@ -12650,9 +12650,9 @@ Validate Domethcs Event DomeTHCS_logevent_subsystemError Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domethcs Event DomeTHCS_logevent_subsystemError Topic Columns
+Validate DomeTHCS Event DomeTHCS_logevent_subsystemError Topic Columns
 	[Documentation]    Validate the DomeTHCS_logevent_subsystemError topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domethcs
+	[Tags]    smoke    DomeTHCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Events.xml
@@ -12663,9 +12663,9 @@ Validate Domethcs Event DomeTHCS_logevent_subsystemError Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Domethcs Telemetry DomeTHCS_status Topic Byte Size
+Validate DomeTHCS Telemetry DomeTHCS_status Topic Byte Size
 	[Documentation]    Validate the DomeTHCS_status topic is less than 65536 bytes in total.
-	[Tags]    smoke    Domethcs
+	[Tags]    smoke    DomeTHCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Telemetry.xml
@@ -12687,9 +12687,9 @@ Validate Domethcs Telemetry DomeTHCS_status Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Domethcs Telemetry DomeTHCS_status Topic Columns
+Validate DomeTHCS Telemetry DomeTHCS_status Topic Columns
 	[Documentation]    Validate the DomeTHCS_status topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Domethcs
+	[Tags]    smoke    DomeTHCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Telemetry.xml
@@ -14100,6 +14100,450 @@ Validate Electrometer Event Electrometer_logevent_deviceErrorCode Topic Columns
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/Electrometer/Electrometer_Events.xml
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/Count" -v . -n ${folder}/sal_interfaces/Electrometer/Electrometer_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Environment Telemetry Environment_weather Topic Byte Size
+	[Documentation]    Validate the Environment_weather topic is less than 65536 bytes in total.
+	[Tags]    smoke    Environment
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/Environment/Environment_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/Count" -v . -n ${folder}/sal_interfaces/Environment/Environment_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/Environment/Environment_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Environment Telemetry Environment_weather Topic Columns
+	[Documentation]    Validate the Environment_weather topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    Environment
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/Environment/Environment_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/Count" -v . -n ${folder}/sal_interfaces/Environment/Environment_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate FiberSpectrograph Command FiberSpectrograph_command_captureSpectImage Topic Byte Size
+	[Documentation]    Validate the FiberSpectrograph_command_captureSpectImage topic is less than 65536 bytes in total.
+	[Tags]    smoke    FiberSpectrograph
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/Count" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate FiberSpectrograph Command FiberSpectrograph_command_captureSpectImage Topic Columns
+	[Documentation]    Validate the FiberSpectrograph_command_captureSpectImage topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    FiberSpectrograph
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/Count" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate FiberSpectrograph Event FiberSpectrograph_logevent_largeFileObjectAvailable Topic Byte Size
+	[Documentation]    Validate the FiberSpectrograph_logevent_largeFileObjectAvailable topic is less than 65536 bytes in total.
+	[Tags]    smoke    FiberSpectrograph
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[1]/item/Count" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[1]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate FiberSpectrograph Event FiberSpectrograph_logevent_largeFileObjectAvailable Topic Columns
+	[Documentation]    Validate the FiberSpectrograph_logevent_largeFileObjectAvailable topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    FiberSpectrograph
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[1]/item/Count" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate FiberSpectrograph Event FiberSpectrograph_logevent_measuredSpectrum Topic Byte Size
+	[Documentation]    Validate the FiberSpectrograph_logevent_measuredSpectrum topic is less than 65536 bytes in total.
+	[Tags]    smoke    FiberSpectrograph
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/Count" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate FiberSpectrograph Event FiberSpectrograph_logevent_measuredSpectrum Topic Columns
+	[Documentation]    Validate the FiberSpectrograph_logevent_measuredSpectrum topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    FiberSpectrograph
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/Count" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate FiberSpectrograph Event FiberSpectrograph_logevent_timeout Topic Byte Size
+	[Documentation]    Validate the FiberSpectrograph_logevent_timeout topic is less than 65536 bytes in total.
+	[Tags]    smoke    FiberSpectrograph
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/Count" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate FiberSpectrograph Event FiberSpectrograph_logevent_timeout Topic Columns
+	[Documentation]    Validate the FiberSpectrograph_logevent_timeout topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    FiberSpectrograph
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/Count" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate FiberSpectrograph Event FiberSpectrograph_logevent_rejectedCommand Topic Byte Size
+	[Documentation]    Validate the FiberSpectrograph_logevent_rejectedCommand topic is less than 65536 bytes in total.
+	[Tags]    smoke    FiberSpectrograph
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate FiberSpectrograph Event FiberSpectrograph_logevent_rejectedCommand Topic Columns
+	[Documentation]    Validate the FiberSpectrograph_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    FiberSpectrograph
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate FiberSpectrograph Event FiberSpectrograph_logevent_loopTimeOutOfRange Topic Byte Size
+	[Documentation]    Validate the FiberSpectrograph_logevent_loopTimeOutOfRange topic is less than 65536 bytes in total.
+	[Tags]    smoke    FiberSpectrograph
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate FiberSpectrograph Event FiberSpectrograph_logevent_loopTimeOutOfRange Topic Columns
+	[Documentation]    Validate the FiberSpectrograph_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    FiberSpectrograph
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate FiberSpectrograph Event FiberSpectrograph_logevent_internalCommand Topic Byte Size
+	[Documentation]    Validate the FiberSpectrograph_logevent_internalCommand topic is less than 65536 bytes in total.
+	[Tags]    smoke    FiberSpectrograph
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/Count" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate FiberSpectrograph Event FiberSpectrograph_logevent_internalCommand Topic Columns
+	[Documentation]    Validate the FiberSpectrograph_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    FiberSpectrograph
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/Count" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate FiberSpectrograph Event FiberSpectrograph_logevent_heartbeat Topic Byte Size
+	[Documentation]    Validate the FiberSpectrograph_logevent_heartbeat topic is less than 65536 bytes in total.
+	[Tags]    smoke    FiberSpectrograph
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/Count" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate FiberSpectrograph Event FiberSpectrograph_logevent_heartbeat Topic Columns
+	[Documentation]    Validate the FiberSpectrograph_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    FiberSpectrograph
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/Count" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate FiberSpectrograph Telemetry FiberSpectrograph_spectTemperature Topic Byte Size
+	[Documentation]    Validate the FiberSpectrograph_spectTemperature topic is less than 65536 bytes in total.
+	[Tags]    smoke    FiberSpectrograph
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/Count" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate FiberSpectrograph Telemetry FiberSpectrograph_spectTemperature Topic Columns
+	[Documentation]    Validate the FiberSpectrograph_spectTemperature topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    FiberSpectrograph
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/Count" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate FiberSpectrograph Telemetry FiberSpectrograph_loopTime_ms Topic Byte Size
+	[Documentation]    Validate the FiberSpectrograph_loopTime_ms topic is less than 65536 bytes in total.
+	[Tags]    smoke    FiberSpectrograph
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[2]/item/Count" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate FiberSpectrograph Telemetry FiberSpectrograph_loopTime_ms Topic Columns
+	[Documentation]    Validate the FiberSpectrograph_loopTime_ms topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    FiberSpectrograph
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[2]/item/Count" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate FiberSpectrograph Telemetry FiberSpectrograph_timestamp Topic Byte Size
+	[Documentation]    Validate the FiberSpectrograph_timestamp topic is less than 65536 bytes in total.
+	[Tags]    smoke    FiberSpectrograph
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[3]/item)" -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[3]/item/Count" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[3]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate FiberSpectrograph Telemetry FiberSpectrograph_timestamp Topic Columns
+	[Documentation]    Validate the FiberSpectrograph_timestamp topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    FiberSpectrograph
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[3]/item)" -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[3]/item/Count" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Telemetry.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
