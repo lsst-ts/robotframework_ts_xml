@@ -52,9 +52,9 @@ for subsystem in xml_common.subsystems:
 			
 			# Mark test cases with Jira tickets
 			byte_skipped=col_skipped=""
-			if subsystem == "FiberSpectrometer" and topic.decode("utf-8") == "FiberSpectrometer_logevent_measuredSpectrum":
+			if subsystem == "FiberSpectrograph" and topic.decode("utf-8") == "FiberSpectrograph_logevent_measuredSpectrum":
 				col_skipped="	TSS-2987"
-			elif subsystem == "FiberSpectrometer" and topic.decode("utf-8") == "Fiberpectrometer_logevent_internalCommand":
+			elif subsystem == "FiberSpectrograph" and topic.decode("utf-8") == "FiberSpectrograph_logevent_internalCommand":
 				col_skipped="	TSS-2988"
 			elif subsystem == "MTM1M3" and topic.decode("utf-8") == "MTM1M3_command_runMirrorForceProfile":
 				col_skipped="	TSS-2989"
