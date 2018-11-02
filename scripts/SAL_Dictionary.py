@@ -21,6 +21,7 @@ except:
 # Create Settings header.
 file.write("*** Settings ***\n")
 file.write("Documentation    Validate the SAL cscs XML dictionary file.\n")
+file.write("Suite Setup    Set Suite Variable    ${xml}    xmlstarlet\n")
 file.write("Library    OperatingSystem\n")
 file.write("Library    Collections\n")
 file.write("Library    String\n")

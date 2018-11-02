@@ -1,5 +1,6 @@
 *** Settings ***
 Documentation    Validate the SAL cscs XML dictionary file.
+Suite Setup    Set Suite Variable    ${xml}    xmlstarlet
 Library    OperatingSystem
 Library    Collections
 Library    String
