@@ -62,6 +62,12 @@ Validate ATTCS Events XML file
 	Log    ${output}
 	Should Contain    ${output}   ATTCS_Events.xml - valid
 
+Validate ATThermoelectricCooler Events XML file
+	[Tags]    smoke    ATThermoelectricCooler
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/ATThermoelectricCooler/ATThermoelectricCooler_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   ATThermoelectricCooler_Events.xml - valid
+
 Validate ATWhiteLight Events XML file
 	[Tags]    smoke    ATWhiteLight
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Events.xml

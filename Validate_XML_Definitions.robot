@@ -183,6 +183,27 @@ Validate ATTCS Telemetry
 	Log    ${output}
 	Should Contain    ${output}   ATTCS_Telemetry.xml - valid
 
+Validate ATThermoelectricCooler Commands
+	[Documentation]    Validate the ATThermoelectricCooler Commands XML file.
+	[Tags]    smoke    ATThermoelectricCooler
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ATThermoelectricCooler/ATThermoelectricCooler_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   ATThermoelectricCooler_Commands.xml - valid
+
+Validate ATThermoelectricCooler Events
+	[Documentation]    Validate the ATThermoelectricCooler Events XML file.
+	[Tags]    smoke    ATThermoelectricCooler
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ATThermoelectricCooler/ATThermoelectricCooler_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   ATThermoelectricCooler_Events.xml - valid
+
+Validate ATThermoelectricCooler Telemetry
+	[Documentation]    Validate the ATThermoelectricCooler Telemetry XML file.
+	[Tags]    smoke    ATThermoelectricCooler
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ATThermoelectricCooler/ATThermoelectricCooler_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   ATThermoelectricCooler_Telemetry.xml - valid
+
 Validate ATWhiteLight Commands
 	[Documentation]    Validate the ATWhiteLight Commands XML file.
 	[Tags]    smoke    ATWhiteLight
@@ -427,13 +448,6 @@ Validate Electrometer Events
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/Electrometer/Electrometer_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   Electrometer_Events.xml - valid
-
-Validate Environment Telemetry
-	[Documentation]    Validate the Environment Telemetry XML file.
-	[Tags]    smoke    Environment
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/Environment/Environment_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   Environment_Telemetry.xml - valid
 
 Validate FiberSpectrograph Commands
 	[Documentation]    Validate the FiberSpectrograph Commands XML file.

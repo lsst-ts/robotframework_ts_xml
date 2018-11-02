@@ -56,6 +56,12 @@ Validate ATTCS Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   ATTCS_Telemetry.xml - valid
 
+Validate ATThermoelectricCooler Telemetry XML file
+	[Tags]    smoke    ATThermoelectricCooler
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/ATThermoelectricCooler/ATThermoelectricCooler_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   ATThermoelectricCooler_Telemetry.xml - valid
+
 Validate ATWhiteLight Telemetry XML file
 	[Tags]    smoke    ATWhiteLight    TSS-3066
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Telemetry.xml
@@ -128,12 +134,6 @@ Validate EFD Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   EFD_Telemetry.xml - valid
 
-Validate Environment Telemetry XML file
-	[Tags]    smoke    Environment
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/Environment/Environment_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   Environment_Telemetry.xml - valid
-
 Validate FiberSpectrograph Telemetry XML file
 	[Tags]    smoke    FiberSpectrograph
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Telemetry.xml
@@ -153,7 +153,7 @@ Validate LinearStage Telemetry XML file
 	Should Contain    ${output}   LinearStage_Telemetry.xml - valid
 
 Validate MTArchiver Telemetry XML file
-	[Tags]    smoke    MTArchiver
+	[Tags]    smoke    MTArchiver    TSS-3284
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/MTArchiver/MTArchiver_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   MTArchiver_Telemetry.xml - valid
@@ -171,7 +171,7 @@ Validate MTM1M3 Telemetry XML file
 	Should Contain    ${output}   MTM1M3_Telemetry.xml - valid
 
 Validate MTMount Telemetry XML file
-	[Tags]    smoke    MTMount
+	[Tags]    smoke    MTMount    TSS-3286
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   MTMount_Telemetry.xml - valid
@@ -195,7 +195,7 @@ Validate OCS Telemetry XML file
 	Should Contain    ${output}   OCS_Telemetry.xml - valid
 
 Validate PromptProcessing Telemetry XML file
-	[Tags]    smoke    PromptProcessing
+	[Tags]    smoke    PromptProcessing    TSS-3285
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   PromptProcessing_Telemetry.xml - valid

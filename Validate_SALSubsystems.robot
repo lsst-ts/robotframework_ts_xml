@@ -7,7 +7,7 @@ Resource    Global_Vars.robot
 
 *** Variables ***
 ${xml}    xml
-@{cscs}    ATArchiver    ATCamera    AtDome    ATHeaderService    ATMCS    ATMonochromator    ATPneumatics    ATSpectrograph    ATTCS    ATWhiteLight    CatchupArchiver    CBP    Dome    DomeADB    DomeAPS    DomeLouvers    DomeLWS    DomeMONCS    DomeTHCS    EEC    EFD    Electrometer    Environment    FiberSpectrograph    Hexapod    Laser    LinearStage    MTArchiver    MTCamera    MTHeaderService    MTM1M3    M2MS    MTMount    MTOFC    MTWEP    OCS    PromptProcessing    Rotator    Scheduler    Sequencer    SummitFacility    TCS    Test    TunableLaser    VMS
+@{cscs}    ATArchiver    ATCamera    AtDome    ATHeaderService    ATMCS    ATMonochromator    ATPneumatics    ATSpectrograph    ATTCS    ATThermoelectricCooler    ATWhiteLight    CatchupArchiver    CBP    Dome    DomeADB    DomeAPS    DomeLouvers    DomeLWS    DomeMONCS    DomeTHCS    EEC    EFD    Electrometer    FiberSpectrograph    Hexapod    Laser    LinearStage    MTArchiver    MTCamera    MTHeaderService    MTM1M3    M2MS    MTMount    MTOFC    MTWEP    OCS    PromptProcessing    Rotator    Scheduler    Sequencer    SummitFacility    TCS    Test    TunableLaser    VMS
 
 *** Test Cases ***
 Validate SALSubsystems.xml
