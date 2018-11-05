@@ -659,7 +659,7 @@ Validate LinearStage Telemetry Attribute Names
 
 Validate MTArchiver Events Attribute Names
 	[Documentation]    Validate the MTArchiver Events attribute names conform to naming convention.
-	[Tags]    smoke    MTArchiver    TSS-3281
+	[Tags]    smoke    MTArchiver    
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/MTArchiver/MTArchiver_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -668,7 +668,7 @@ Validate MTArchiver Events Attribute Names
 
 Validate MTArchiver Telemetry Attribute Names
 	[Documentation]    Validate the MTArchiver Telemetry attribute names conform to naming convention.
-	[Tags]    smoke    MTArchiver    TSS-3281
+	[Tags]    smoke    MTArchiver    
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/MTArchiver/MTArchiver_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -866,7 +866,7 @@ Validate OCS Telemetry Attribute Names
 
 Validate PromptProcessing Events Attribute Names
 	[Documentation]    Validate the PromptProcessing Events attribute names conform to naming convention.
-	[Tags]    smoke    PromptProcessing    TSS-3280
+	[Tags]    smoke    PromptProcessing    
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -875,7 +875,7 @@ Validate PromptProcessing Events Attribute Names
 
 Validate PromptProcessing Telemetry Attribute Names
 	[Documentation]    Validate the PromptProcessing Telemetry attribute names conform to naming convention.
-	[Tags]    smoke    PromptProcessing    TSS-3280
+	[Tags]    smoke    PromptProcessing    
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}

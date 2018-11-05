@@ -69,28 +69,28 @@ Validate MTMount Generics Element
 
 Validate MTArchiver Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
-	[Tags]    smoke    MTArchiver    TSS-2979
+	[Tags]    smoke    MTArchiver
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    MTArchiver
 	Should Contain    ${cscs}    ${csc}
 
 Validate MTArchiver Generics Element
 	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
-	[Tags]    smoke    MTArchiver    TSS-2979
+	[Tags]    smoke    MTArchiver
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[4]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    MTArchiver has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
 Validate ATArchiver Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
-	[Tags]    smoke    ATArchiver    TSS-2980
+	[Tags]    smoke    ATArchiver
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    ATArchiver
 	Should Contain    ${cscs}    ${csc}
 
 Validate ATArchiver Generics Element
 	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
-	[Tags]    smoke    ATArchiver    TSS-2980
+	[Tags]    smoke    ATArchiver
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[5]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    ATArchiver has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
@@ -181,28 +181,28 @@ Validate ATWhiteLight Generics Element
 
 Validate ATCamera Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
-	[Tags]    smoke    ATCamera    TSS-2981
+	[Tags]    smoke    ATCamera
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    ATCamera
 	Should Contain    ${cscs}    ${csc}
 
 Validate ATCamera Generics Element
 	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
-	[Tags]    smoke    ATCamera    TSS-2981
+	[Tags]    smoke    ATCamera
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[12]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    ATCamera has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
 Validate ATThermoelectricCooler Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
-	[Tags]    smoke    ATThermoelectricCooler    TSS-3064
+	[Tags]    smoke    ATThermoelectricCooler
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    ATThermoelectricCooler
 	Should Contain    ${cscs}    ${csc}
 
 Validate ATThermoelectricCooler Generics Element
 	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
-	[Tags]    smoke    ATThermoelectricCooler    TSS-3064
+	[Tags]    smoke    ATThermoelectricCooler
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[13]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    ATThermoelectricCooler has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
@@ -237,14 +237,14 @@ Validate Electrometer Generics Element
 
 Validate Mtcamera Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
-	[Tags]    smoke    MTCamera    TSS-2982
+	[Tags]    smoke    MTCamera
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    MTCamera
 	Should Contain    ${cscs}    ${csc}
 
 Validate Mtcamera Generics Element
 	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
-	[Tags]    smoke    MTCamera    TSS-2982
+	[Tags]    smoke    MTCamera
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[16]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    MTCamera has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes

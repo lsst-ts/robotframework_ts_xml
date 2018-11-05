@@ -89,14 +89,6 @@ for csc in cscs:
 		skipped="    TSS-1795"
 	elif csc == "Dome":
 		skipped="    TSS-1778"
-	elif csc == "MTArchiver":
-		skipped="    TSS-2979"
-	elif csc == "ATArchiver":
-		skipped="    TSS-2980"
-	elif csc == "ATCamera":
-		skipped="    TSS-2981"
-	elif csc == "MTCamera":
-		skipped="    TSS-2982"
 	elif csc == "EEC":
 		skipped="    TSS-2983"
 	elif csc == "calibrationElectrometer":
@@ -109,8 +101,6 @@ for csc in cscs:
 		skipped="    TSS-3009"
 	elif csc == "ATWhiteLight":
 		skipped="    TSS-3063"
-	elif csc == "ATThermoelectricCooler":
-		skipped="    TSS-3064"
 	elif csc == "ATMCS":
 		skipped="    TSS-3089"
 	elif csc == "Environment":
