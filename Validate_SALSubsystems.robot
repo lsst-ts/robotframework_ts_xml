@@ -487,6 +487,20 @@ Validate MTM2 Generics Element
 	Log    MTM2 has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
+Validate MTVMS Is Defined
+	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
+	[Tags]    smoke    MTVMS
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    MTVMS
+	Should Contain    ${cscs}    ${csc}
+
+Validate MTVMS Generics Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
+	[Tags]    smoke    MTVMS
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[34]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    MTVMS has Generics: ${output}
+	Should Be Equal As Strings    ${output}    yes
+
 Validate OCS Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
 	[Tags]    smoke    OCS    TSS-1792
@@ -497,7 +511,7 @@ Validate OCS Is Defined
 Validate OCS Generics Element
 	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
 	[Tags]    smoke    OCS    TSS-1792
-	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[34]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[35]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    OCS has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
@@ -511,7 +525,7 @@ Validate PromptProcessing Is Defined
 Validate PromptProcessing Generics Element
 	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
 	[Tags]    smoke    PromptProcessing
-	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[35]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[36]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    PromptProcessing has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
@@ -525,7 +539,7 @@ Validate Rotator Is Defined
 Validate Rotator Generics Element
 	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
 	[Tags]    smoke    Rotator
-	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[36]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[37]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    Rotator has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
@@ -539,7 +553,7 @@ Validate Scheduler Is Defined
 Validate Scheduler Generics Element
 	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
 	[Tags]    smoke    Scheduler
-	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[37]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[38]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    Scheduler has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
@@ -553,7 +567,7 @@ Validate Script Is Defined
 Validate Script Generics Element
 	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
 	[Tags]    smoke    Script    TSS-3221
-	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[38]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[39]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    Script has Generics: ${output}
 	Should Be Equal As Strings    ${output}    no
 
@@ -567,7 +581,7 @@ Validate ScriptLoader Is Defined
 Validate ScriptLoader Generics Element
 	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
 	[Tags]    smoke    ScriptLoader    TSS-3221
-	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[39]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[40]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    ScriptLoader has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
@@ -581,7 +595,7 @@ Validate ScriptQueue Is Defined
 Validate ScriptQueue Generics Element
 	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
 	[Tags]    smoke    ScriptQueue    TSS-3221
-	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[40]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[41]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    ScriptQueue has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
@@ -595,7 +609,7 @@ Validate FiberSpectrograph Is Defined
 Validate FiberSpectrograph Generics Element
 	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
 	[Tags]    smoke    FiberSpectrograph
-	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[41]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[42]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    FiberSpectrograph has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
@@ -609,7 +623,7 @@ Validate Sequencer Is Defined
 Validate Sequencer Generics Element
 	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
 	[Tags]    smoke    Sequencer    TSS-1793
-	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[42]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[43]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    Sequencer has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
@@ -623,7 +637,7 @@ Validate SummitFacility Is Defined
 Validate SummitFacility Generics Element
 	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
 	[Tags]    smoke    SummitFacility
-	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[43]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[44]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    SummitFacility has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
@@ -637,7 +651,7 @@ Validate MTOFC Is Defined
 Validate MTOFC Generics Element
 	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
 	[Tags]    smoke    MTOFC
-	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[44]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[45]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    MTOFC has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
@@ -651,7 +665,7 @@ Validate MTWEP Is Defined
 Validate MTWEP Generics Element
 	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
 	[Tags]    smoke    MTWEP
-	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[45]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[46]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    MTWEP has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
@@ -665,7 +679,7 @@ Validate TCS Is Defined
 Validate TCS Generics Element
 	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
 	[Tags]    smoke    TCS    TSS-1795
-	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[46]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[47]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    TCS has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
@@ -679,21 +693,7 @@ Validate Test Is Defined
 Validate Test Generics Element
 	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
 	[Tags]    smoke    Test
-	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[47]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
-	Log    Test has Generics: ${output}
-	Should Be Equal As Strings    ${output}    yes
-
-Validate Vms Is Defined
-	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
-	[Tags]    smoke    VMS
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    VMS
-	Should Contain    ${cscs}    ${csc}
-
-Validate Vms Generics Element
-	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
-	[Tags]    smoke    VMS
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[48]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
-	Log    VMS has Generics: ${output}
+	Log    Test has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
