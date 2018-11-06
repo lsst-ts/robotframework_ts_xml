@@ -820,24 +820,3 @@ Validate TunableLaser Telemetry
 	Log    ${output}
 	Should Contain    ${output}   TunableLaser_Telemetry.xml - valid
 
-Validate VMS Commands
-	[Documentation]    Validate the VMS Commands XML file.
-	[Tags]    smoke    VMS
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/VMS/VMS_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   VMS_Commands.xml - valid
-
-Validate VMS Events
-	[Documentation]    Validate the VMS Events XML file.
-	[Tags]    smoke    VMS
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/VMS/VMS_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   VMS_Events.xml - valid
-
-Validate VMS Telemetry
-	[Documentation]    Validate the VMS Telemetry XML file.
-	[Tags]    smoke    VMS
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/VMS/VMS_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   VMS_Telemetry.xml - valid
-

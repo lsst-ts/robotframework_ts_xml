@@ -212,9 +212,3 @@ Validate TunableLaser Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   TunableLaser_Commands.xml - valid
 
-Validate VMS Commands XML file
-	[Tags]    smoke    VMS
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/VMS/VMS_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   VMS_Commands.xml - valid
-

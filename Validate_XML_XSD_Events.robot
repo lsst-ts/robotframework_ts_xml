@@ -260,9 +260,3 @@ Validate TunableLaser Events XML file
 	Log    ${output}
 	Should Contain    ${output}   TunableLaser_Events.xml - valid
 
-Validate VMS Events XML file
-	[Tags]    smoke    VMS
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/VMS/VMS_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   VMS_Events.xml - valid
-
