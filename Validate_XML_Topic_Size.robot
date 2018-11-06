@@ -7583,7 +7583,7 @@ Validate ATTCS Event ATTCS_logevent_InternalCommand Topic Byte Size
 
 Validate ATTCS Event ATTCS_logevent_InternalCommand Topic Columns
 	[Documentation]    Validate the ATTCS_logevent_InternalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    ATTCS	TSS-2994
+	[Tags]    smoke    ATTCS	TSS-2761
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/ATTCS/ATTCS_Events.xml
