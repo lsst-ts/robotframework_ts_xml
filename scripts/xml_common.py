@@ -9,14 +9,14 @@ import os
 # Variables
 # =========
 """Defines the array of Commandable SAL Components, or CSCs."""
-# ATThermoelectricCooler 'Script', 'ScriptQueue',
+# 'Script', 'ScriptQueue',
 subsystems = [ 'ATArchiver', 'ATCamera', 'AtDome', 'ATHeaderService', 'ATMCS', 'ATMonochromator', 'ATPneumatics', 
 				'ATSpectrograph', 'ATTCS', 'ATThermoelectricCooler', 'ATWhiteLight', 
 				'CatchupArchiver', 'CBP', 'Dome', 'DomeADB', 'DomeAPS', 'DomeLouvers', 'DomeLWS', 'DomeMONCS', 'DomeTHCS', 
 				'EEC', 'EFD', 'Electrometer', 'FiberSpectrograph', 'Hexapod', 'Laser', 'LinearStage', 
 				'MTArchiver', 'MTCamera', 'MTHeaderService', 'MTM1M3', 'MTM2', 'MTMount', 'MTOFC', 'MTWEP', 'OCS',
 				'PromptProcessing', 'Rotator', 'Scheduler', 'Sequencer', 'SummitFacility',
-				'TCS', 'Test', 'TunableLaser', 'VMS']
+				'TCS', 'Test', 'TunableLaser', 'MTVMS']
 
 
 # =========
@@ -89,8 +89,8 @@ def CapitalizeSubsystem( subsystem ):
 		return "ScriptQueue"
 	elif subsystem == "TunableLaser":
 		return "TunableLaser"
-	elif subsystem == "VMS":
-		return "VMS"
+	elif subsystem == "MTVMS":
+		return "MTVMS"
 	else:
 		return subsystem.capitalize()
 

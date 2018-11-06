@@ -248,3 +248,9 @@ Validate TunableLaser Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   TunableLaser_Telemetry.xml - valid
 
+Validate MTVMS Telemetry XML file
+	[Tags]    smoke    MTVMS
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/MTVMS/MTVMS_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   MTVMS_Telemetry.xml - valid
+

@@ -820,3 +820,24 @@ Validate TunableLaser Telemetry
 	Log    ${output}
 	Should Contain    ${output}   TunableLaser_Telemetry.xml - valid
 
+Validate MTVMS Commands
+	[Documentation]    Validate the MTVMS Commands XML file.
+	[Tags]    smoke    MTVMS
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTVMS/MTVMS_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   MTVMS_Commands.xml - valid
+
+Validate MTVMS Events
+	[Documentation]    Validate the MTVMS Events XML file.
+	[Tags]    smoke    MTVMS
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTVMS/MTVMS_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   MTVMS_Events.xml - valid
+
+Validate MTVMS Telemetry
+	[Documentation]    Validate the MTVMS Telemetry XML file.
+	[Tags]    smoke    MTVMS
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTVMS/MTVMS_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   MTVMS_Telemetry.xml - valid
+

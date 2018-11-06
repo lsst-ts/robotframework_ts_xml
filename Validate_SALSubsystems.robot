@@ -8,7 +8,7 @@ Resource    Global_Vars.robot
 
 *** Variables ***
 ${xml}    xml
-@{cscs}    ATArchiver    ATCamera    AtDome    ATHeaderService    ATMCS    ATMonochromator    ATPneumatics    ATSpectrograph    ATTCS    ATThermoelectricCooler    ATWhiteLight    CatchupArchiver    CBP    Dome    DomeADB    DomeAPS    DomeLouvers    DomeLWS    DomeMONCS    DomeTHCS    EEC    EFD    Electrometer    FiberSpectrograph    Hexapod    Laser    LinearStage    MTArchiver    MTCamera    MTHeaderService    MTM1M3    MTM2    MTMount    MTOFC    MTWEP    OCS    PromptProcessing    Rotator    Scheduler    Sequencer    SummitFacility    TCS    Test    TunableLaser    VMS
+@{cscs}    ATArchiver    ATCamera    AtDome    ATHeaderService    ATMCS    ATMonochromator    ATPneumatics    ATSpectrograph    ATTCS    ATThermoelectricCooler    ATWhiteLight    CatchupArchiver    CBP    Dome    DomeADB    DomeAPS    DomeLouvers    DomeLWS    DomeMONCS    DomeTHCS    EEC    EFD    Electrometer    FiberSpectrograph    Hexapod    Laser    LinearStage    MTArchiver    MTCamera    MTHeaderService    MTM1M3    MTM2    MTMount    MTOFC    MTWEP    OCS    PromptProcessing    Rotator    Scheduler    Sequencer    SummitFacility    TCS    Test    TunableLaser    MTVMS
 
 *** Test Cases ***
 Validate SALSubsystems.xml
@@ -461,14 +461,14 @@ Validate TunableLaser Generics Element
 
 Validate MTM1M3 Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
-	[Tags]    smoke    MTM1M3    TSS-2617
+	[Tags]    smoke    MTM1M3
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    MTM1M3
 	Should Contain    ${cscs}    ${csc}
 
 Validate MTM1M3 Generics Element
 	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
-	[Tags]    smoke    MTM1M3    TSS-2617
+	[Tags]    smoke    MTM1M3
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[32]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    MTM1M3 has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
@@ -683,16 +683,16 @@ Validate Test Generics Element
 	Log    Test has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
-Validate VMS Is Defined
+Validate Vms Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
-	[Tags]    smoke    VMS    TSS-2618
+	[Tags]    smoke    VMS
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    VMS
 	Should Contain    ${cscs}    ${csc}
 
-Validate VMS Generics Element
+Validate Vms Generics Element
 	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
-	[Tags]    smoke    VMS    TSS-2618
+	[Tags]    smoke    VMS
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[48]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    VMS has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes

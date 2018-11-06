@@ -73,11 +73,7 @@ for csc in cscs:
 	csc=csc.decode("utf-8")
 
 	# Mark test cases with Jira tickets
-	if csc == "VMS":
-		skipped="    TSS-2618"
-	elif csc == "MTM1M3":
-		skipped="    TSS-2617"
-	elif csc == "TCS":
+	if csc == "TCS":
 		skipped="    TSS-1795"
 	elif csc == "OCS":
 		skipped="    TSS-1792"
