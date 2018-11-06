@@ -19693,8 +19693,8 @@ Validate MTM1M3 Command MTM1M3_command_resetPID Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTM1M3 Command MTM1M3_command_runMirrorForceProfile Topic Byte Size
-	[Documentation]    Validate the MTM1M3_command_runMirrorForceProfile topic is less than 65536 bytes in total.
+Validate MTM1M3 Command MTM1M3_command_setThermalSetpoint Topic Byte Size
+	[Documentation]    Validate the MTM1M3_command_setThermalSetpoint topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19717,9 +19717,9 @@ Validate MTM1M3 Command MTM1M3_command_runMirrorForceProfile Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTM1M3 Command MTM1M3_command_runMirrorForceProfile Topic Columns
-	[Documentation]    Validate the MTM1M3_command_runMirrorForceProfile topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    MTM1M3	TSS-2989
+Validate MTM1M3 Command MTM1M3_command_setThermalSetpoint Topic Columns
+	[Documentation]    Validate the MTM1M3_command_setThermalSetpoint topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[24]/item)" -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Commands.xml
@@ -19730,8 +19730,8 @@ Validate MTM1M3 Command MTM1M3_command_runMirrorForceProfile Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTM1M3 Command MTM1M3_command_setThermalSetpoint Topic Byte Size
-	[Documentation]    Validate the MTM1M3_command_setThermalSetpoint topic is less than 65536 bytes in total.
+Validate MTM1M3 Command MTM1M3_command_shutdown Topic Byte Size
+	[Documentation]    Validate the MTM1M3_command_shutdown topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19754,8 +19754,8 @@ Validate MTM1M3 Command MTM1M3_command_setThermalSetpoint Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTM1M3 Command MTM1M3_command_setThermalSetpoint Topic Columns
-	[Documentation]    Validate the MTM1M3_command_setThermalSetpoint topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate MTM1M3 Command MTM1M3_command_shutdown Topic Columns
+	[Documentation]    Validate the MTM1M3_command_shutdown topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19767,8 +19767,8 @@ Validate MTM1M3 Command MTM1M3_command_setThermalSetpoint Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTM1M3 Command MTM1M3_command_shutdown Topic Byte Size
-	[Documentation]    Validate the MTM1M3_command_shutdown topic is less than 65536 bytes in total.
+Validate MTM1M3 Command MTM1M3_command_stopHardpointMotion Topic Byte Size
+	[Documentation]    Validate the MTM1M3_command_stopHardpointMotion topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19791,8 +19791,8 @@ Validate MTM1M3 Command MTM1M3_command_shutdown Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTM1M3 Command MTM1M3_command_shutdown Topic Columns
-	[Documentation]    Validate the MTM1M3_command_shutdown topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate MTM1M3 Command MTM1M3_command_stopHardpointMotion Topic Columns
+	[Documentation]    Validate the MTM1M3_command_stopHardpointMotion topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19804,8 +19804,8 @@ Validate MTM1M3 Command MTM1M3_command_shutdown Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTM1M3 Command MTM1M3_command_stopHardpointMotion Topic Byte Size
-	[Documentation]    Validate the MTM1M3_command_stopHardpointMotion topic is less than 65536 bytes in total.
+Validate MTM1M3 Command MTM1M3_command_testAir Topic Byte Size
+	[Documentation]    Validate the MTM1M3_command_testAir topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19828,8 +19828,8 @@ Validate MTM1M3 Command MTM1M3_command_stopHardpointMotion Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTM1M3 Command MTM1M3_command_stopHardpointMotion Topic Columns
-	[Documentation]    Validate the MTM1M3_command_stopHardpointMotion topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate MTM1M3 Command MTM1M3_command_testAir Topic Columns
+	[Documentation]    Validate the MTM1M3_command_testAir topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19841,8 +19841,8 @@ Validate MTM1M3 Command MTM1M3_command_stopHardpointMotion Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTM1M3 Command MTM1M3_command_testAir Topic Byte Size
-	[Documentation]    Validate the MTM1M3_command_testAir topic is less than 65536 bytes in total.
+Validate MTM1M3 Command MTM1M3_command_testForceActuator Topic Byte Size
+	[Documentation]    Validate the MTM1M3_command_testForceActuator topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19865,8 +19865,8 @@ Validate MTM1M3 Command MTM1M3_command_testAir Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTM1M3 Command MTM1M3_command_testAir Topic Columns
-	[Documentation]    Validate the MTM1M3_command_testAir topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate MTM1M3 Command MTM1M3_command_testForceActuator Topic Columns
+	[Documentation]    Validate the MTM1M3_command_testForceActuator topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19878,8 +19878,8 @@ Validate MTM1M3 Command MTM1M3_command_testAir Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTM1M3 Command MTM1M3_command_testForceActuator Topic Byte Size
-	[Documentation]    Validate the MTM1M3_command_testForceActuator topic is less than 65536 bytes in total.
+Validate MTM1M3 Command MTM1M3_command_testHardpoint Topic Byte Size
+	[Documentation]    Validate the MTM1M3_command_testHardpoint topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19902,8 +19902,8 @@ Validate MTM1M3 Command MTM1M3_command_testForceActuator Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTM1M3 Command MTM1M3_command_testForceActuator Topic Columns
-	[Documentation]    Validate the MTM1M3_command_testForceActuator topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate MTM1M3 Command MTM1M3_command_testHardpoint Topic Columns
+	[Documentation]    Validate the MTM1M3_command_testHardpoint topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19915,8 +19915,8 @@ Validate MTM1M3 Command MTM1M3_command_testForceActuator Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTM1M3 Command MTM1M3_command_testHardpoint Topic Byte Size
-	[Documentation]    Validate the MTM1M3_command_testHardpoint topic is less than 65536 bytes in total.
+Validate MTM1M3 Command MTM1M3_command_translateM1M3 Topic Byte Size
+	[Documentation]    Validate the MTM1M3_command_translateM1M3 topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19939,8 +19939,8 @@ Validate MTM1M3 Command MTM1M3_command_testHardpoint Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTM1M3 Command MTM1M3_command_testHardpoint Topic Columns
-	[Documentation]    Validate the MTM1M3_command_testHardpoint topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate MTM1M3 Command MTM1M3_command_translateM1M3 Topic Columns
+	[Documentation]    Validate the MTM1M3_command_translateM1M3 topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19952,8 +19952,8 @@ Validate MTM1M3 Command MTM1M3_command_testHardpoint Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTM1M3 Command MTM1M3_command_translateM1M3 Topic Byte Size
-	[Documentation]    Validate the MTM1M3_command_translateM1M3 topic is less than 65536 bytes in total.
+Validate MTM1M3 Command MTM1M3_command_turnAirOff Topic Byte Size
+	[Documentation]    Validate the MTM1M3_command_turnAirOff topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19976,8 +19976,8 @@ Validate MTM1M3 Command MTM1M3_command_translateM1M3 Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTM1M3 Command MTM1M3_command_translateM1M3 Topic Columns
-	[Documentation]    Validate the MTM1M3_command_translateM1M3 topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate MTM1M3 Command MTM1M3_command_turnAirOff Topic Columns
+	[Documentation]    Validate the MTM1M3_command_turnAirOff topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19989,8 +19989,8 @@ Validate MTM1M3 Command MTM1M3_command_translateM1M3 Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTM1M3 Command MTM1M3_command_turnAirOff Topic Byte Size
-	[Documentation]    Validate the MTM1M3_command_turnAirOff topic is less than 65536 bytes in total.
+Validate MTM1M3 Command MTM1M3_command_turnAirOn Topic Byte Size
+	[Documentation]    Validate the MTM1M3_command_turnAirOn topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -20013,8 +20013,8 @@ Validate MTM1M3 Command MTM1M3_command_turnAirOff Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTM1M3 Command MTM1M3_command_turnAirOff Topic Columns
-	[Documentation]    Validate the MTM1M3_command_turnAirOff topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate MTM1M3 Command MTM1M3_command_turnAirOn Topic Columns
+	[Documentation]    Validate the MTM1M3_command_turnAirOn topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -20026,8 +20026,8 @@ Validate MTM1M3 Command MTM1M3_command_turnAirOff Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTM1M3 Command MTM1M3_command_turnAirOn Topic Byte Size
-	[Documentation]    Validate the MTM1M3_command_turnAirOn topic is less than 65536 bytes in total.
+Validate MTM1M3 Command MTM1M3_command_turnLightsOff Topic Byte Size
+	[Documentation]    Validate the MTM1M3_command_turnLightsOff topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -20050,8 +20050,8 @@ Validate MTM1M3 Command MTM1M3_command_turnAirOn Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTM1M3 Command MTM1M3_command_turnAirOn Topic Columns
-	[Documentation]    Validate the MTM1M3_command_turnAirOn topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate MTM1M3 Command MTM1M3_command_turnLightsOff Topic Columns
+	[Documentation]    Validate the MTM1M3_command_turnLightsOff topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -20063,8 +20063,8 @@ Validate MTM1M3 Command MTM1M3_command_turnAirOn Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTM1M3 Command MTM1M3_command_turnLightsOff Topic Byte Size
-	[Documentation]    Validate the MTM1M3_command_turnLightsOff topic is less than 65536 bytes in total.
+Validate MTM1M3 Command MTM1M3_command_turnLightsOn Topic Byte Size
+	[Documentation]    Validate the MTM1M3_command_turnLightsOn topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -20087,8 +20087,8 @@ Validate MTM1M3 Command MTM1M3_command_turnLightsOff Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTM1M3 Command MTM1M3_command_turnLightsOff Topic Columns
-	[Documentation]    Validate the MTM1M3_command_turnLightsOff topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate MTM1M3 Command MTM1M3_command_turnLightsOn Topic Columns
+	[Documentation]    Validate the MTM1M3_command_turnLightsOn topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -20100,8 +20100,8 @@ Validate MTM1M3 Command MTM1M3_command_turnLightsOff Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTM1M3 Command MTM1M3_command_turnLightsOn Topic Byte Size
-	[Documentation]    Validate the MTM1M3_command_turnLightsOn topic is less than 65536 bytes in total.
+Validate MTM1M3 Command MTM1M3_command_turnPowerOff Topic Byte Size
+	[Documentation]    Validate the MTM1M3_command_turnPowerOff topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -20124,8 +20124,8 @@ Validate MTM1M3 Command MTM1M3_command_turnLightsOn Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTM1M3 Command MTM1M3_command_turnLightsOn Topic Columns
-	[Documentation]    Validate the MTM1M3_command_turnLightsOn topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate MTM1M3 Command MTM1M3_command_turnPowerOff Topic Columns
+	[Documentation]    Validate the MTM1M3_command_turnPowerOff topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -20137,8 +20137,8 @@ Validate MTM1M3 Command MTM1M3_command_turnLightsOn Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTM1M3 Command MTM1M3_command_turnPowerOff Topic Byte Size
-	[Documentation]    Validate the MTM1M3_command_turnPowerOff topic is less than 65536 bytes in total.
+Validate MTM1M3 Command MTM1M3_command_turnPowerOn Topic Byte Size
+	[Documentation]    Validate the MTM1M3_command_turnPowerOn topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -20161,8 +20161,8 @@ Validate MTM1M3 Command MTM1M3_command_turnPowerOff Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTM1M3 Command MTM1M3_command_turnPowerOff Topic Columns
-	[Documentation]    Validate the MTM1M3_command_turnPowerOff topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate MTM1M3 Command MTM1M3_command_turnPowerOn Topic Columns
+	[Documentation]    Validate the MTM1M3_command_turnPowerOn topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -20174,8 +20174,8 @@ Validate MTM1M3 Command MTM1M3_command_turnPowerOff Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTM1M3 Command MTM1M3_command_turnPowerOn Topic Byte Size
-	[Documentation]    Validate the MTM1M3_command_turnPowerOn topic is less than 65536 bytes in total.
+Validate MTM1M3 Command MTM1M3_command_updatePID Topic Byte Size
+	[Documentation]    Validate the MTM1M3_command_updatePID topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -20198,50 +20198,13 @@ Validate MTM1M3 Command MTM1M3_command_turnPowerOn Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTM1M3 Command MTM1M3_command_turnPowerOn Topic Columns
-	[Documentation]    Validate the MTM1M3_command_turnPowerOn topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    MTM1M3
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[37]/item)" -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[37]/item/Count" -v . -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTM1M3 Command MTM1M3_command_updatePID Topic Byte Size
-	[Documentation]    Validate the MTM1M3_command_updatePID topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTM1M3
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[38]/item)" -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[38]/item/Count" -v . -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[38]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
 Validate MTM1M3 Command MTM1M3_command_updatePID Topic Columns
 	[Documentation]    Validate the MTM1M3_command_updatePID topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[38]/item)" -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[38]/item/Count" -v . -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Commands.xml
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[37]/item)" -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[37]/item/Count" -v . -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Commands.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -21580,8 +21543,8 @@ Validate MTM1M3 Event MTM1M3_logevent_modbusResponse Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTM1M3 Event MTM1M3_logevent_pIDInfo Topic Byte Size
-	[Documentation]    Validate the MTM1M3_logevent_pIDInfo topic is less than 65536 bytes in total.
+Validate MTM1M3 Event MTM1M3_logevent_pidInfo Topic Byte Size
+	[Documentation]    Validate the MTM1M3_logevent_pidInfo topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -21604,8 +21567,8 @@ Validate MTM1M3 Event MTM1M3_logevent_pIDInfo Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTM1M3 Event MTM1M3_logevent_pIDInfo Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_pIDInfo topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate MTM1M3 Event MTM1M3_logevent_pidInfo Topic Columns
+	[Documentation]    Validate the MTM1M3_logevent_pidInfo topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22166,6 +22129,43 @@ Validate MTM1M3 Event MTM1M3_logevent_rejectedVelocityForces Topic Columns
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[52]/item)" -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Events.xml
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[52]/item/Count" -v . -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate MTM1M3 Event MTM1M3_logevent_settingsApplied Topic Byte Size
+	[Documentation]    Validate the MTM1M3_logevent_settingsApplied topic is less than 65536 bytes in total.
+	[Tags]    smoke    MTM1M3
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[53]/item)" -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[53]/item/Count" -v . -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[53]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate MTM1M3 Event MTM1M3_logevent_settingsApplied Topic Columns
+	[Documentation]    Validate the MTM1M3_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    MTM1M3
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[53]/item)" -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[53]/item/Count" -v . -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
