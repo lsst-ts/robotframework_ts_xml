@@ -85,18 +85,10 @@ for csc in cscs:
 		skipped="    TSS-1795"
 	elif csc == "Dome":
 		skipped="    TSS-1778"
-	elif csc == "EEC":
-		skipped="    TSS-2983"
-	elif csc == "calibrationElectrometer":
-		skipped="    TSS-2997"
 	elif csc == "ATDome":
 		skipped="    TSS-3060"
 	elif csc == "ATPneumatics":
 		skipped="    TSS-3062"
-	elif csc == "ATSpectrograph":
-		skipped="    TSS-3009"
-	elif csc == "ATWhiteLight":
-		skipped="    TSS-3063"
 	elif csc == "ATMCS":
 		skipped="    TSS-3089"
 	elif csc == "Environment":

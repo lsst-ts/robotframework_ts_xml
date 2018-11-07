@@ -27,14 +27,14 @@ Validate Number of Defined CSCs
 
 Validate ATSpectrograph Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
-	[Tags]    smoke    ATSpectrograph    TSS-3009
+	[Tags]    smoke    ATSpectrograph
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    ATSpectrograph
 	Should Contain    ${cscs}    ${csc}
 
 Validate ATSpectrograph Generics Element
 	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
-	[Tags]    smoke    ATSpectrograph    TSS-3009
+	[Tags]    smoke    ATSpectrograph
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[1]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    ATSpectrograph has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
@@ -167,14 +167,14 @@ Validate ATMonochromator Generics Element
 
 Validate ATWhiteLight Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
-	[Tags]    smoke    ATWhiteLight    TSS-3063
+	[Tags]    smoke    ATWhiteLight
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    ATWhiteLight
 	Should Contain    ${cscs}    ${csc}
 
 Validate ATWhiteLight Generics Element
 	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
-	[Tags]    smoke    ATWhiteLight    TSS-3063
+	[Tags]    smoke    ATWhiteLight
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[11]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    ATWhiteLight has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
@@ -377,14 +377,14 @@ Validate Dome Generics Element
 
 Validate EEC Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
-	[Tags]    smoke    EEC    TSS-2983
+	[Tags]    smoke    EEC
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    EEC
 	Should Contain    ${cscs}    ${csc}
 
 Validate EEC Generics Element
 	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
-	[Tags]    smoke    EEC    TSS-2983
+	[Tags]    smoke    EEC
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[26]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    EEC has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
