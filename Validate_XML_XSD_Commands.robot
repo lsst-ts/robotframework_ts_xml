@@ -194,12 +194,6 @@ Validate Sequencer Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   Sequencer_Commands.xml - valid
 
-Validate TCS Commands XML file
-	[Tags]    smoke    TCS
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/TCS/TCS_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   TCS_Commands.xml - valid
-
 Validate Test Commands XML file
 	[Tags]    smoke    Test
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/Test/Test_Commands.xml

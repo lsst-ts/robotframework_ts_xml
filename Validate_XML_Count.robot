@@ -864,30 +864,6 @@ Validate SummitFacility Telemetry XML Counts
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate TCS Commands XML Counts
-	[Documentation]    Validate the TCS Commands XML count.
-	[Tags]    smoke    TCS
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/TCS/TCS_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
-Validate TCS Events XML Counts
-	[Documentation]    Validate the TCS Events XML count.
-	[Tags]    smoke    TCS
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/TCS/TCS_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
-Validate TCS Telemetry XML Counts
-	[Documentation]    Validate the TCS Telemetry XML count.
-	[Tags]    smoke    TCS
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/TCS/TCS_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
 Validate Test Commands XML Counts
 	[Documentation]    Validate the Test Commands XML count.
 	[Tags]    smoke    Test

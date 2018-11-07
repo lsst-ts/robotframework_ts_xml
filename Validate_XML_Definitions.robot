@@ -757,27 +757,6 @@ Validate SummitFacility Telemetry
 	Log    ${output}
 	Should Contain    ${output}   SummitFacility_Telemetry.xml - valid
 
-Validate TCS Commands
-	[Documentation]    Validate the TCS Commands XML file.
-	[Tags]    smoke    TCS
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/TCS/TCS_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   TCS_Commands.xml - valid
-
-Validate TCS Events
-	[Documentation]    Validate the TCS Events XML file.
-	[Tags]    smoke    TCS
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/TCS/TCS_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   TCS_Events.xml - valid
-
-Validate TCS Telemetry
-	[Documentation]    Validate the TCS Telemetry XML file.
-	[Tags]    smoke    TCS
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/TCS/TCS_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   TCS_Telemetry.xml - valid
-
 Validate Test Commands
 	[Documentation]    Validate the Test Commands XML file.
 	[Tags]    smoke    Test
