@@ -757,6 +757,27 @@ Validate SummitFacility Telemetry
 	Log    ${output}
 	Should Contain    ${output}   SummitFacility_Telemetry.xml - valid
 
+Validate MTTCS Commands
+	[Documentation]    Validate the MTTCS Commands XML file.
+	[Tags]    smoke    MTTCS
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTTCS/MTTCS_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   MTTCS_Commands.xml - valid
+
+Validate MTTCS Events
+	[Documentation]    Validate the MTTCS Events XML file.
+	[Tags]    smoke    MTTCS
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   MTTCS_Events.xml - valid
+
+Validate MTTCS Telemetry
+	[Documentation]    Validate the MTTCS Telemetry XML file.
+	[Tags]    smoke    MTTCS
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   MTTCS_Telemetry.xml - valid
+
 Validate Test Commands
 	[Documentation]    Validate the Test Commands XML file.
 	[Tags]    smoke    Test

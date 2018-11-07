@@ -669,18 +669,18 @@ Validate MTWEP Generics Element
 	Log    MTWEP has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
-Validate Tcs Is Defined
+Validate MTTCS Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
-	[Tags]    smoke    TCS
+	[Tags]    smoke    MTTCS    TSS-1795
 	Comment    Define CSC.
-	Set Test Variable    ${csc}    TCS
+	Set Test Variable    ${csc}    MTTCS
 	Should Contain    ${cscs}    ${csc}
 
-Validate Tcs Generics Element
+Validate MTTCS Generics Element
 	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
-	[Tags]    smoke    TCS
+	[Tags]    smoke    MTTCS    TSS-1795
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[47]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
-	Log    TCS has Generics: ${output}
+	Log    MTTCS has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
 Validate Test Is Defined

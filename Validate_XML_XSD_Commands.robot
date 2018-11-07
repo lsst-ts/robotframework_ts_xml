@@ -194,6 +194,12 @@ Validate Sequencer Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   Sequencer_Commands.xml - valid
 
+Validate MTTCS Commands XML file
+	[Tags]    smoke    MTTCS
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/MTTCS/MTTCS_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   MTTCS_Commands.xml - valid
+
 Validate Test Commands XML file
 	[Tags]    smoke    Test
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/Test/Test_Commands.xml

@@ -242,6 +242,12 @@ Validate SummitFacility Events XML file
 	Log    ${output}
 	Should Contain    ${output}   SummitFacility_Events.xml - valid
 
+Validate MTTCS Events XML file
+	[Tags]    smoke    MTTCS
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   MTTCS_Events.xml - valid
+
 Validate Test Events XML file
 	[Tags]    smoke    Test
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/Test/Test_Events.xml
