@@ -56,30 +56,6 @@ Validate ATCamera Telemetry XML Counts
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate AtDome Commands XML Counts
-	[Documentation]    Validate the AtDome Commands XML count.
-	[Tags]    smoke    AtDome
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/AtDome/AtDome_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
-Validate AtDome Events XML Counts
-	[Documentation]    Validate the AtDome Events XML count.
-	[Tags]    smoke    AtDome
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/AtDome/AtDome_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
-Validate AtDome Telemetry XML Counts
-	[Documentation]    Validate the AtDome Telemetry XML count.
-	[Tags]    smoke    AtDome
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/AtDome/AtDome_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
 Validate ATHeaderService Events XML Counts
 	[Documentation]    Validate the ATHeaderService Events XML count.
 	[Tags]    smoke    ATHeaderService

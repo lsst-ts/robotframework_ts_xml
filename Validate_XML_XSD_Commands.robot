@@ -20,12 +20,6 @@ Validate ATCamera Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   ATCamera_Commands.xml - valid
 
-Validate AtDome Commands XML file
-	[Tags]    smoke    AtDome
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/AtDome/AtDome_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   AtDome_Commands.xml - valid
-
 Validate ATMCS Commands XML file
 	[Tags]    smoke    ATMCS
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/ATMCS/ATMCS_Commands.xml

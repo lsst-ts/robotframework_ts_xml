@@ -20,12 +20,6 @@ Validate ATCamera Events XML file
 	Log    ${output}
 	Should Contain    ${output}   ATCamera_Events.xml - valid
 
-Validate AtDome Events XML file
-	[Tags]    smoke    AtDome
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/AtDome/AtDome_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   AtDome_Events.xml - valid
-
 Validate ATHeaderService Events XML file
 	[Tags]    smoke    ATHeaderService
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/ATHeaderService/ATHeaderService_Events.xml
