@@ -50,6 +50,27 @@ Validate ATCamera Telemetry
 	Log    ${output}
 	Should Contain    ${output}   ATCamera_Telemetry.xml - valid
 
+Validate ATDome Commands
+	[Documentation]    Validate the ATDome Commands XML file.
+	[Tags]    smoke    ATDome
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ATDome/ATDome_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   ATDome_Commands.xml - valid
+
+Validate ATDome Events
+	[Documentation]    Validate the ATDome Events XML file.
+	[Tags]    smoke    ATDome
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ATDome/ATDome_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   ATDome_Events.xml - valid
+
+Validate ATDome Telemetry
+	[Documentation]    Validate the ATDome Telemetry XML file.
+	[Tags]    smoke    ATDome
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ATDome/ATDome_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   ATDome_Telemetry.xml - valid
+
 Validate ATHeaderService Events
 	[Documentation]    Validate the ATHeaderService Events XML file.
 	[Tags]    smoke    ATHeaderService

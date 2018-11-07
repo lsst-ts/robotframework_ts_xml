@@ -10,7 +10,7 @@ import os
 # =========
 """Defines the array of Commandable SAL Components, or CSCs."""
 # 'Script', 'ScriptQueue',
-subsystems = [ 'ATArchiver', 'ATCamera', 'AtDome', 'ATHeaderService', 'ATMCS', 'ATMonochromator', 'ATPneumatics', 
+subsystems = [ 'ATArchiver', 'ATCamera', 'ATDome', 'ATHeaderService', 'ATMCS', 'ATMonochromator', 'ATPneumatics', 
 				'ATSpectrograph', 'ATTCS', 'ATThermoelectricCooler', 'ATWhiteLight', 
 				'CatchupArchiver', 'CBP', 'Dome', 'DomeADB', 'DomeAPS', 'DomeLouvers', 'DomeLWS', 'DomeMONCS', 'DomeTHCS', 
 				'EEC', 'EFD', 'Electrometer', 'FiberSpectrograph', 'Hexapod', 'Laser', 'LinearStage', 
@@ -31,8 +31,8 @@ def CapitalizeSubsystem( subsystem ):
 		return "ATArchiver"
 	elif subsystem == "ATCamera":
 		return "ATCamera"
-	elif subsystem == "AtDome":
-		return "AtDome"
+	elif subsystem == "ATDome":
+		return "ATDome"
 	elif subsystem == "ATTCS":
 		return "ATTCS"
 	elif subsystem == "ATMCS":

@@ -8,7 +8,7 @@ Resource    Global_Vars.robot
 
 *** Variables ***
 ${xml}    xml
-@{cscs}    ATArchiver    ATCamera    AtDome    ATHeaderService    ATMCS    ATMonochromator    ATPneumatics    ATSpectrograph    ATTCS    ATThermoelectricCooler    ATWhiteLight    CatchupArchiver    CBP    Dome    DomeADB    DomeAPS    DomeLouvers    DomeLWS    DomeMONCS    DomeTHCS    EEC    EFD    Electrometer    FiberSpectrograph    Hexapod    Laser    LinearStage    MTArchiver    MTCamera    MTHeaderService    MTM1M3    MTM2    MTMount    MTOFC    MTWEP    OCS    PromptProcessing    Rotator    Scheduler    Sequencer    SummitFacility    TCS    Test    TunableLaser    MTVMS
+@{cscs}    ATArchiver    ATCamera    ATDome    ATHeaderService    ATMCS    ATMonochromator    ATPneumatics    ATSpectrograph    ATTCS    ATThermoelectricCooler    ATWhiteLight    CatchupArchiver    CBP    Dome    DomeADB    DomeAPS    DomeLouvers    DomeLWS    DomeMONCS    DomeTHCS    EEC    EFD    Electrometer    FiberSpectrograph    Hexapod    Laser    LinearStage    MTArchiver    MTCamera    MTHeaderService    MTM1M3    MTM2    MTMount    MTOFC    MTWEP    OCS    PromptProcessing    Rotator    Scheduler    Sequencer    SummitFacility    TCS    Test    TunableLaser    MTVMS
 
 *** Test Cases ***
 Validate SALSubsystems.xml
@@ -95,14 +95,14 @@ Validate ATArchiver Generics Element
 	Log    ATArchiver has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
-Validate Atdome Is Defined
+Validate ATDome Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
 	[Tags]    smoke    ATDome    TSS-3060
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    ATDome
 	Should Contain    ${cscs}    ${csc}
 
-Validate Atdome Generics Element
+Validate ATDome Generics Element
 	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
 	[Tags]    smoke    ATDome    TSS-3060
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[6]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
@@ -125,14 +125,14 @@ Validate ATMCS Generics Element
 
 Validate ATPneumatics Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
-	[Tags]    smoke    ATPneumatics    TSS-3062
+	[Tags]    smoke    ATPneumatics
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    ATPneumatics
 	Should Contain    ${cscs}    ${csc}
 
 Validate ATPneumatics Generics Element
 	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
-	[Tags]    smoke    ATPneumatics    TSS-3062
+	[Tags]    smoke    ATPneumatics
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[8]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    ATPneumatics has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
