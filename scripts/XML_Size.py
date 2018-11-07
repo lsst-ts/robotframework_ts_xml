@@ -60,7 +60,7 @@ for subsystem in xml_common.subsystems:
 				col_skipped="	TSS-2991"
 			elif subsystem == "MTM1M3" and topic.decode("utf-8") == "MTM1M3_logevent_forceActuatorWarning":
 				col_skipped="	TSS-2992"
-			elif subsystem == "TCS" and topic.decode("utf-8") == "TCS_logevent_InternalCommand":
+			elif subsystem == "MTTCS" and topic.decode("utf-8") == "MTTCS_logevent_InternalCommand":
 				col_skipped="	TSS-2561"
 			else:
 				byte_skipped=""

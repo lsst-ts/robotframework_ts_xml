@@ -73,7 +73,7 @@ for csc in cscs:
 	csc=csc.decode("utf-8")
 
 	# Mark test cases with Jira tickets
-	if csc == "TCS":
+	if csc == "MTTCS":
 		skipped="    TSS-1795"
 	elif csc == "OCS":
 		skipped="    TSS-1792"
@@ -81,7 +81,7 @@ for csc in cscs:
 		skipped="    TSS-1793"
 	elif csc == "ATTCS":
 		skipped="    TSS-2978"
-	elif csc == "TCS":
+	elif csc == "MTTCS":
 		skipped="    TSS-1795"
 	elif csc == "Dome":
 		skipped="    TSS-1778"

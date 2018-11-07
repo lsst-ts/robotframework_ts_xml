@@ -16,7 +16,7 @@ subsystems = [ 'ATArchiver', 'ATCamera', 'ATDome', 'ATHeaderService', 'ATMCS', '
 				'EEC', 'EFD', 'Electrometer', 'FiberSpectrograph', 'Hexapod', 'Laser', 'LinearStage', 
 				'MTArchiver', 'MTCamera', 'MTHeaderService', 'MTM1M3', 'MTM2', 'MTMount', 'MTOFC', 'MTWEP', 'OCS',
 				'PromptProcessing', 'Rotator', 'Scheduler', 'Sequencer', 'SummitFacility',
-				'TCS', 'Test', 'TunableLaser', 'MTVMS']
+				'MTTCS', 'Test', 'TunableLaser', 'MTVMS']
 
 
 # =========
@@ -77,8 +77,8 @@ def CapitalizeSubsystem( subsystem ):
 		return "PromptProcessing"
 	elif subsystem == "SummitFacility":
 		return "SummitFacility"
-	elif subsystem == "TCS":
-		return "TCS"
+	elif subsystem == "MTTCS":
+		return "MTTCS"
 	elif subsystem == "MTOFC":
 		return "MTOFC"
 	elif subsystem == "MTWEP":

@@ -7224,8 +7224,8 @@ Validate ATTCS Command ATTCS_command_target Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATTCS Command ATTCS_command_offset Topic Byte Size
-	[Documentation]    Validate the ATTCS_command_offset topic is less than 65536 bytes in total.
+Validate ATTCS Command ATTCS_command_Offset Topic Byte Size
+	[Documentation]    Validate the ATTCS_command_Offset topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATTCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7248,8 +7248,8 @@ Validate ATTCS Command ATTCS_command_offset Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATTCS Command ATTCS_command_offset Topic Columns
-	[Documentation]    Validate the ATTCS_command_offset topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATTCS Command ATTCS_command_Offset Topic Columns
+	[Documentation]    Validate the ATTCS_command_Offset topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25946,8 +25946,8 @@ Validate OCS Command OCS_command_script Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate OCS Event OCS_logevent_oCSEntitySummaryState Topic Byte Size
-	[Documentation]    Validate the OCS_logevent_oCSEntitySummaryState topic is less than 65536 bytes in total.
+Validate OCS Event OCS_logevent_OCSEntitySummaryState Topic Byte Size
+	[Documentation]    Validate the OCS_logevent_OCSEntitySummaryState topic is less than 65536 bytes in total.
 	[Tags]    smoke    OCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25970,8 +25970,8 @@ Validate OCS Event OCS_logevent_oCSEntitySummaryState Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate OCS Event OCS_logevent_oCSEntitySummaryState Topic Columns
-	[Documentation]    Validate the OCS_logevent_oCSEntitySummaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate OCS Event OCS_logevent_OCSEntitySummaryState Topic Columns
+	[Documentation]    Validate the OCS_logevent_OCSEntitySummaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    OCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25983,8 +25983,8 @@ Validate OCS Event OCS_logevent_oCSEntitySummaryState Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate OCS Event OCS_logevent_oCSEntityStartup Topic Byte Size
-	[Documentation]    Validate the OCS_logevent_oCSEntityStartup topic is less than 65536 bytes in total.
+Validate OCS Event OCS_logevent_OCSEntityStartup Topic Byte Size
+	[Documentation]    Validate the OCS_logevent_OCSEntityStartup topic is less than 65536 bytes in total.
 	[Tags]    smoke    OCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26007,8 +26007,8 @@ Validate OCS Event OCS_logevent_oCSEntityStartup Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate OCS Event OCS_logevent_oCSEntityStartup Topic Columns
-	[Documentation]    Validate the OCS_logevent_oCSEntityStartup topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate OCS Event OCS_logevent_OCSEntityStartup Topic Columns
+	[Documentation]    Validate the OCS_logevent_OCSEntityStartup topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    OCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26020,8 +26020,8 @@ Validate OCS Event OCS_logevent_oCSEntityStartup Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate OCS Event OCS_logevent_oCSEntityShutdown Topic Byte Size
-	[Documentation]    Validate the OCS_logevent_oCSEntityShutdown topic is less than 65536 bytes in total.
+Validate OCS Event OCS_logevent_OCSEntityShutdown Topic Byte Size
+	[Documentation]    Validate the OCS_logevent_OCSEntityShutdown topic is less than 65536 bytes in total.
 	[Tags]    smoke    OCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26044,8 +26044,8 @@ Validate OCS Event OCS_logevent_oCSEntityShutdown Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate OCS Event OCS_logevent_oCSEntityShutdown Topic Columns
-	[Documentation]    Validate the OCS_logevent_oCSEntityShutdown topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate OCS Event OCS_logevent_OCSEntityShutdown Topic Columns
+	[Documentation]    Validate the OCS_logevent_OCSEntityShutdown topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    OCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26057,8 +26057,8 @@ Validate OCS Event OCS_logevent_oCSEntityShutdown Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate OCS Event OCS_logevent_oCSCommandIssued Topic Byte Size
-	[Documentation]    Validate the OCS_logevent_oCSCommandIssued topic is less than 65536 bytes in total.
+Validate OCS Event OCS_logevent_OCSCommandIssued Topic Byte Size
+	[Documentation]    Validate the OCS_logevent_OCSCommandIssued topic is less than 65536 bytes in total.
 	[Tags]    smoke    OCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26081,8 +26081,8 @@ Validate OCS Event OCS_logevent_oCSCommandIssued Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate OCS Event OCS_logevent_oCSCommandIssued Topic Columns
-	[Documentation]    Validate the OCS_logevent_oCSCommandIssued topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate OCS Event OCS_logevent_OCSCommandIssued Topic Columns
+	[Documentation]    Validate the OCS_logevent_OCSCommandIssued topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    OCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26094,8 +26094,8 @@ Validate OCS Event OCS_logevent_oCSCommandIssued Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate OCS Event OCS_logevent_oCSCommandStatus Topic Byte Size
-	[Documentation]    Validate the OCS_logevent_oCSCommandStatus topic is less than 65536 bytes in total.
+Validate OCS Event OCS_logevent_OCSCommandStatus Topic Byte Size
+	[Documentation]    Validate the OCS_logevent_OCSCommandStatus topic is less than 65536 bytes in total.
 	[Tags]    smoke    OCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26118,8 +26118,8 @@ Validate OCS Event OCS_logevent_oCSCommandStatus Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate OCS Event OCS_logevent_oCSCommandStatus Topic Columns
-	[Documentation]    Validate the OCS_logevent_oCSCommandStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate OCS Event OCS_logevent_OCSCommandStatus Topic Columns
+	[Documentation]    Validate the OCS_logevent_OCSCommandStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    OCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26131,8 +26131,8 @@ Validate OCS Event OCS_logevent_oCSCommandStatus Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate OCS Event OCS_logevent_oCSCurrentScript Topic Byte Size
-	[Documentation]    Validate the OCS_logevent_oCSCurrentScript topic is less than 65536 bytes in total.
+Validate OCS Event OCS_logevent_OCSCurrentScript Topic Byte Size
+	[Documentation]    Validate the OCS_logevent_OCSCurrentScript topic is less than 65536 bytes in total.
 	[Tags]    smoke    OCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26155,8 +26155,8 @@ Validate OCS Event OCS_logevent_oCSCurrentScript Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate OCS Event OCS_logevent_oCSCurrentScript Topic Columns
-	[Documentation]    Validate the OCS_logevent_oCSCurrentScript topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate OCS Event OCS_logevent_OCSCurrentScript Topic Columns
+	[Documentation]    Validate the OCS_logevent_OCSCurrentScript topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    OCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26168,8 +26168,8 @@ Validate OCS Event OCS_logevent_oCSCurrentScript Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate OCS Event OCS_logevent_oCSNextScript Topic Byte Size
-	[Documentation]    Validate the OCS_logevent_oCSNextScript topic is less than 65536 bytes in total.
+Validate OCS Event OCS_logevent_OCSNextScript Topic Byte Size
+	[Documentation]    Validate the OCS_logevent_OCSNextScript topic is less than 65536 bytes in total.
 	[Tags]    smoke    OCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26192,8 +26192,8 @@ Validate OCS Event OCS_logevent_oCSNextScript Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate OCS Event OCS_logevent_oCSNextScript Topic Columns
-	[Documentation]    Validate the OCS_logevent_oCSNextScript topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate OCS Event OCS_logevent_OCSNextScript Topic Columns
+	[Documentation]    Validate the OCS_logevent_OCSNextScript topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    OCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26205,8 +26205,8 @@ Validate OCS Event OCS_logevent_oCSNextScript Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate OCS Event OCS_logevent_oCSScriptStart Topic Byte Size
-	[Documentation]    Validate the OCS_logevent_oCSScriptStart topic is less than 65536 bytes in total.
+Validate OCS Event OCS_logevent_OCSScriptStart Topic Byte Size
+	[Documentation]    Validate the OCS_logevent_OCSScriptStart topic is less than 65536 bytes in total.
 	[Tags]    smoke    OCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26229,8 +26229,8 @@ Validate OCS Event OCS_logevent_oCSScriptStart Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate OCS Event OCS_logevent_oCSScriptStart Topic Columns
-	[Documentation]    Validate the OCS_logevent_oCSScriptStart topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate OCS Event OCS_logevent_OCSScriptStart Topic Columns
+	[Documentation]    Validate the OCS_logevent_OCSScriptStart topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    OCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26242,8 +26242,8 @@ Validate OCS Event OCS_logevent_oCSScriptStart Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate OCS Event OCS_logevent_oCSScriptEnd Topic Byte Size
-	[Documentation]    Validate the OCS_logevent_oCSScriptEnd topic is less than 65536 bytes in total.
+Validate OCS Event OCS_logevent_OCSScriptEnd Topic Byte Size
+	[Documentation]    Validate the OCS_logevent_OCSScriptEnd topic is less than 65536 bytes in total.
 	[Tags]    smoke    OCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26266,8 +26266,8 @@ Validate OCS Event OCS_logevent_oCSScriptEnd Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate OCS Event OCS_logevent_oCSScriptEnd Topic Columns
-	[Documentation]    Validate the OCS_logevent_oCSScriptEnd topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate OCS Event OCS_logevent_OCSScriptEnd Topic Columns
+	[Documentation]    Validate the OCS_logevent_OCSScriptEnd topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    OCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26279,8 +26279,8 @@ Validate OCS Event OCS_logevent_oCSScriptEnd Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate OCS Event OCS_logevent_oCSScriptError Topic Byte Size
-	[Documentation]    Validate the OCS_logevent_oCSScriptError topic is less than 65536 bytes in total.
+Validate OCS Event OCS_logevent_OCSScriptError Topic Byte Size
+	[Documentation]    Validate the OCS_logevent_OCSScriptError topic is less than 65536 bytes in total.
 	[Tags]    smoke    OCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26303,8 +26303,8 @@ Validate OCS Event OCS_logevent_oCSScriptError Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate OCS Event OCS_logevent_oCSScriptError Topic Columns
-	[Documentation]    Validate the OCS_logevent_oCSScriptError topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate OCS Event OCS_logevent_OCSScriptError Topic Columns
+	[Documentation]    Validate the OCS_logevent_OCSScriptError topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    OCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26316,8 +26316,8 @@ Validate OCS Event OCS_logevent_oCSScriptError Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate OCS Event OCS_logevent_oCSScriptEntititesInUse Topic Byte Size
-	[Documentation]    Validate the OCS_logevent_oCSScriptEntititesInUse topic is less than 65536 bytes in total.
+Validate OCS Event OCS_logevent_OCSScriptEntititesInUse Topic Byte Size
+	[Documentation]    Validate the OCS_logevent_OCSScriptEntititesInUse topic is less than 65536 bytes in total.
 	[Tags]    smoke    OCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26340,8 +26340,8 @@ Validate OCS Event OCS_logevent_oCSScriptEntititesInUse Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate OCS Event OCS_logevent_oCSScriptEntititesInUse Topic Columns
-	[Documentation]    Validate the OCS_logevent_oCSScriptEntititesInUse topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate OCS Event OCS_logevent_OCSScriptEntititesInUse Topic Columns
+	[Documentation]    Validate the OCS_logevent_OCSScriptEntititesInUse topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    OCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26353,8 +26353,8 @@ Validate OCS Event OCS_logevent_oCSScriptEntititesInUse Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate OCS Telemetry oCSSequencerHeartbeat Topic Byte Size
-	[Documentation]    Validate the oCSSequencerHeartbeat topic is less than 65536 bytes in total.
+Validate OCS Telemetry OCS_SequencerHeartbeat Topic Byte Size
+	[Documentation]    Validate the OCS_SequencerHeartbeat topic is less than 65536 bytes in total.
 	[Tags]    smoke    OCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26377,8 +26377,8 @@ Validate OCS Telemetry oCSSequencerHeartbeat Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate OCS Telemetry oCSSequencerHeartbeat Topic Columns
-	[Documentation]    Validate the oCSSequencerHeartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate OCS Telemetry OCS_SequencerHeartbeat Topic Columns
+	[Documentation]    Validate the OCS_SequencerHeartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    OCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -28795,8 +28795,8 @@ Validate Sequencer Command Sequencer_command_script Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Sequencer Event Sequencer_logevent_sequencerEntitySummaryState Topic Byte Size
-	[Documentation]    Validate the Sequencer_logevent_sequencerEntitySummaryState topic is less than 65536 bytes in total.
+Validate Sequencer Event Sequencer_logevent_SequencerEntitySummaryState Topic Byte Size
+	[Documentation]    Validate the Sequencer_logevent_SequencerEntitySummaryState topic is less than 65536 bytes in total.
 	[Tags]    smoke    Sequencer
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -28819,8 +28819,8 @@ Validate Sequencer Event Sequencer_logevent_sequencerEntitySummaryState Topic By
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Sequencer Event Sequencer_logevent_sequencerEntitySummaryState Topic Columns
-	[Documentation]    Validate the Sequencer_logevent_sequencerEntitySummaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Sequencer Event Sequencer_logevent_SequencerEntitySummaryState Topic Columns
+	[Documentation]    Validate the Sequencer_logevent_SequencerEntitySummaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    Sequencer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -28832,8 +28832,8 @@ Validate Sequencer Event Sequencer_logevent_sequencerEntitySummaryState Topic Co
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Sequencer Event Sequencer_logevent_sequencerEntityStartup Topic Byte Size
-	[Documentation]    Validate the Sequencer_logevent_sequencerEntityStartup topic is less than 65536 bytes in total.
+Validate Sequencer Event Sequencer_logevent_SequencerEntityStartup Topic Byte Size
+	[Documentation]    Validate the Sequencer_logevent_SequencerEntityStartup topic is less than 65536 bytes in total.
 	[Tags]    smoke    Sequencer
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -28856,8 +28856,8 @@ Validate Sequencer Event Sequencer_logevent_sequencerEntityStartup Topic Byte Si
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Sequencer Event Sequencer_logevent_sequencerEntityStartup Topic Columns
-	[Documentation]    Validate the Sequencer_logevent_sequencerEntityStartup topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Sequencer Event Sequencer_logevent_SequencerEntityStartup Topic Columns
+	[Documentation]    Validate the Sequencer_logevent_SequencerEntityStartup topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    Sequencer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -28869,8 +28869,8 @@ Validate Sequencer Event Sequencer_logevent_sequencerEntityStartup Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Sequencer Event Sequencer_logevent_sequencerEntityShutdown Topic Byte Size
-	[Documentation]    Validate the Sequencer_logevent_sequencerEntityShutdown topic is less than 65536 bytes in total.
+Validate Sequencer Event Sequencer_logevent_SequencerEntityShutdown Topic Byte Size
+	[Documentation]    Validate the Sequencer_logevent_SequencerEntityShutdown topic is less than 65536 bytes in total.
 	[Tags]    smoke    Sequencer
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -28893,8 +28893,8 @@ Validate Sequencer Event Sequencer_logevent_sequencerEntityShutdown Topic Byte S
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Sequencer Event Sequencer_logevent_sequencerEntityShutdown Topic Columns
-	[Documentation]    Validate the Sequencer_logevent_sequencerEntityShutdown topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Sequencer Event Sequencer_logevent_SequencerEntityShutdown Topic Columns
+	[Documentation]    Validate the Sequencer_logevent_SequencerEntityShutdown topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    Sequencer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -28906,8 +28906,8 @@ Validate Sequencer Event Sequencer_logevent_sequencerEntityShutdown Topic Column
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Sequencer Event Sequencer_logevent_sequencerCommandIssued Topic Byte Size
-	[Documentation]    Validate the Sequencer_logevent_sequencerCommandIssued topic is less than 65536 bytes in total.
+Validate Sequencer Event Sequencer_logevent_SequencerCommandIssued Topic Byte Size
+	[Documentation]    Validate the Sequencer_logevent_SequencerCommandIssued topic is less than 65536 bytes in total.
 	[Tags]    smoke    Sequencer
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -28930,8 +28930,8 @@ Validate Sequencer Event Sequencer_logevent_sequencerCommandIssued Topic Byte Si
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Sequencer Event Sequencer_logevent_sequencerCommandIssued Topic Columns
-	[Documentation]    Validate the Sequencer_logevent_sequencerCommandIssued topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Sequencer Event Sequencer_logevent_SequencerCommandIssued Topic Columns
+	[Documentation]    Validate the Sequencer_logevent_SequencerCommandIssued topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    Sequencer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -28943,8 +28943,8 @@ Validate Sequencer Event Sequencer_logevent_sequencerCommandIssued Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Sequencer Event Sequencer_logevent_sequencerCommandStatus Topic Byte Size
-	[Documentation]    Validate the Sequencer_logevent_sequencerCommandStatus topic is less than 65536 bytes in total.
+Validate Sequencer Event Sequencer_logevent_SequencerCommandStatus Topic Byte Size
+	[Documentation]    Validate the Sequencer_logevent_SequencerCommandStatus topic is less than 65536 bytes in total.
 	[Tags]    smoke    Sequencer
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -28967,8 +28967,8 @@ Validate Sequencer Event Sequencer_logevent_sequencerCommandStatus Topic Byte Si
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Sequencer Event Sequencer_logevent_sequencerCommandStatus Topic Columns
-	[Documentation]    Validate the Sequencer_logevent_sequencerCommandStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Sequencer Event Sequencer_logevent_SequencerCommandStatus Topic Columns
+	[Documentation]    Validate the Sequencer_logevent_SequencerCommandStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    Sequencer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -28980,8 +28980,8 @@ Validate Sequencer Event Sequencer_logevent_sequencerCommandStatus Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Sequencer Event Sequencer_logevent_sequencerCurrentScript Topic Byte Size
-	[Documentation]    Validate the Sequencer_logevent_sequencerCurrentScript topic is less than 65536 bytes in total.
+Validate Sequencer Event Sequencer_logevent_SequencerCurrentScript Topic Byte Size
+	[Documentation]    Validate the Sequencer_logevent_SequencerCurrentScript topic is less than 65536 bytes in total.
 	[Tags]    smoke    Sequencer
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -29004,8 +29004,8 @@ Validate Sequencer Event Sequencer_logevent_sequencerCurrentScript Topic Byte Si
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Sequencer Event Sequencer_logevent_sequencerCurrentScript Topic Columns
-	[Documentation]    Validate the Sequencer_logevent_sequencerCurrentScript topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Sequencer Event Sequencer_logevent_SequencerCurrentScript Topic Columns
+	[Documentation]    Validate the Sequencer_logevent_SequencerCurrentScript topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    Sequencer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -29017,8 +29017,8 @@ Validate Sequencer Event Sequencer_logevent_sequencerCurrentScript Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Sequencer Event Sequencer_logevent_sequencerNextScript Topic Byte Size
-	[Documentation]    Validate the Sequencer_logevent_sequencerNextScript topic is less than 65536 bytes in total.
+Validate Sequencer Event Sequencer_logevent_SequencerNextScript Topic Byte Size
+	[Documentation]    Validate the Sequencer_logevent_SequencerNextScript topic is less than 65536 bytes in total.
 	[Tags]    smoke    Sequencer
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -29041,8 +29041,8 @@ Validate Sequencer Event Sequencer_logevent_sequencerNextScript Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Sequencer Event Sequencer_logevent_sequencerNextScript Topic Columns
-	[Documentation]    Validate the Sequencer_logevent_sequencerNextScript topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Sequencer Event Sequencer_logevent_SequencerNextScript Topic Columns
+	[Documentation]    Validate the Sequencer_logevent_SequencerNextScript topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    Sequencer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -29054,8 +29054,8 @@ Validate Sequencer Event Sequencer_logevent_sequencerNextScript Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Sequencer Event Sequencer_logevent_sequencerScriptStart Topic Byte Size
-	[Documentation]    Validate the Sequencer_logevent_sequencerScriptStart topic is less than 65536 bytes in total.
+Validate Sequencer Event Sequencer_logevent_SequencerScriptStart Topic Byte Size
+	[Documentation]    Validate the Sequencer_logevent_SequencerScriptStart topic is less than 65536 bytes in total.
 	[Tags]    smoke    Sequencer
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -29078,8 +29078,8 @@ Validate Sequencer Event Sequencer_logevent_sequencerScriptStart Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Sequencer Event Sequencer_logevent_sequencerScriptStart Topic Columns
-	[Documentation]    Validate the Sequencer_logevent_sequencerScriptStart topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Sequencer Event Sequencer_logevent_SequencerScriptStart Topic Columns
+	[Documentation]    Validate the Sequencer_logevent_SequencerScriptStart topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    Sequencer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -29091,8 +29091,8 @@ Validate Sequencer Event Sequencer_logevent_sequencerScriptStart Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Sequencer Event Sequencer_logevent_sequencerScriptEnd Topic Byte Size
-	[Documentation]    Validate the Sequencer_logevent_sequencerScriptEnd topic is less than 65536 bytes in total.
+Validate Sequencer Event Sequencer_logevent_SequencerScriptEnd Topic Byte Size
+	[Documentation]    Validate the Sequencer_logevent_SequencerScriptEnd topic is less than 65536 bytes in total.
 	[Tags]    smoke    Sequencer
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -29115,8 +29115,8 @@ Validate Sequencer Event Sequencer_logevent_sequencerScriptEnd Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Sequencer Event Sequencer_logevent_sequencerScriptEnd Topic Columns
-	[Documentation]    Validate the Sequencer_logevent_sequencerScriptEnd topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Sequencer Event Sequencer_logevent_SequencerScriptEnd Topic Columns
+	[Documentation]    Validate the Sequencer_logevent_SequencerScriptEnd topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    Sequencer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -29128,8 +29128,8 @@ Validate Sequencer Event Sequencer_logevent_sequencerScriptEnd Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Sequencer Event Sequencer_logevent_sequencerScriptError Topic Byte Size
-	[Documentation]    Validate the Sequencer_logevent_sequencerScriptError topic is less than 65536 bytes in total.
+Validate Sequencer Event Sequencer_logevent_SequencerScriptError Topic Byte Size
+	[Documentation]    Validate the Sequencer_logevent_SequencerScriptError topic is less than 65536 bytes in total.
 	[Tags]    smoke    Sequencer
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -29152,8 +29152,8 @@ Validate Sequencer Event Sequencer_logevent_sequencerScriptError Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Sequencer Event Sequencer_logevent_sequencerScriptError Topic Columns
-	[Documentation]    Validate the Sequencer_logevent_sequencerScriptError topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Sequencer Event Sequencer_logevent_SequencerScriptError Topic Columns
+	[Documentation]    Validate the Sequencer_logevent_SequencerScriptError topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    Sequencer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -29165,8 +29165,8 @@ Validate Sequencer Event Sequencer_logevent_sequencerScriptError Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Sequencer Event Sequencer_logevent_sequencerScriptEntititesInUse Topic Byte Size
-	[Documentation]    Validate the Sequencer_logevent_sequencerScriptEntititesInUse topic is less than 65536 bytes in total.
+Validate Sequencer Event Sequencer_logevent_SequencerScriptEntititesInUse Topic Byte Size
+	[Documentation]    Validate the Sequencer_logevent_SequencerScriptEntititesInUse topic is less than 65536 bytes in total.
 	[Tags]    smoke    Sequencer
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -29189,8 +29189,8 @@ Validate Sequencer Event Sequencer_logevent_sequencerScriptEntititesInUse Topic 
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Sequencer Event Sequencer_logevent_sequencerScriptEntititesInUse Topic Columns
-	[Documentation]    Validate the Sequencer_logevent_sequencerScriptEntititesInUse topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Sequencer Event Sequencer_logevent_SequencerScriptEntititesInUse Topic Columns
+	[Documentation]    Validate the Sequencer_logevent_SequencerScriptEntititesInUse topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    Sequencer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -29202,8 +29202,8 @@ Validate Sequencer Event Sequencer_logevent_sequencerScriptEntititesInUse Topic 
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Sequencer Telemetry Sequencer_sequencerHeartbeat Topic Byte Size
-	[Documentation]    Validate the Sequencer_sequencerHeartbeat topic is less than 65536 bytes in total.
+Validate Sequencer Telemetry Sequencer_SequencerHeartbeat Topic Byte Size
+	[Documentation]    Validate the Sequencer_SequencerHeartbeat topic is less than 65536 bytes in total.
 	[Tags]    smoke    Sequencer
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -29226,8 +29226,8 @@ Validate Sequencer Telemetry Sequencer_sequencerHeartbeat Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Sequencer Telemetry Sequencer_sequencerHeartbeat Topic Columns
-	[Documentation]    Validate the Sequencer_sequencerHeartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Sequencer Telemetry Sequencer_SequencerHeartbeat Topic Columns
+	[Documentation]    Validate the Sequencer_SequencerHeartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    Sequencer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.

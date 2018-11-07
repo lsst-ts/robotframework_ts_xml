@@ -8,7 +8,7 @@ Resource    Global_Vars.robot
 
 *** Variables ***
 ${xml}    xml
-@{cscs}    ATArchiver    ATCamera    ATDome    ATHeaderService    ATMCS    ATMonochromator    ATPneumatics    ATSpectrograph    ATTCS    ATThermoelectricCooler    ATWhiteLight    CatchupArchiver    CBP    Dome    DomeADB    DomeAPS    DomeLouvers    DomeLWS    DomeMONCS    DomeTHCS    EEC    EFD    Electrometer    FiberSpectrograph    Hexapod    Laser    LinearStage    MTArchiver    MTCamera    MTHeaderService    MTM1M3    MTM2    MTMount    MTOFC    MTWEP    OCS    PromptProcessing    Rotator    Scheduler    Sequencer    SummitFacility    TCS    Test    TunableLaser    MTVMS
+@{cscs}    ATArchiver    ATCamera    ATDome    ATHeaderService    ATMCS    ATMonochromator    ATPneumatics    ATSpectrograph    ATTCS    ATThermoelectricCooler    ATWhiteLight    CatchupArchiver    CBP    Dome    DomeADB    DomeAPS    DomeLouvers    DomeLWS    DomeMONCS    DomeTHCS    EEC    EFD    Electrometer    FiberSpectrograph    Hexapod    Laser    LinearStage    MTArchiver    MTCamera    MTHeaderService    MTM1M3    MTM2    MTMount    MTOFC    MTWEP    OCS    PromptProcessing    Rotator    Scheduler    Sequencer    SummitFacility    MTTCS    Test    TunableLaser    MTVMS
 
 *** Test Cases ***
 Validate SALSubsystems.xml
@@ -669,18 +669,18 @@ Validate MTWEP Generics Element
 	Log    MTWEP has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
-Validate Mttcs Is Defined
+Validate Tcs Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
-	[Tags]    smoke    MTTCS
+	[Tags]    smoke    TCS
 	Comment    Define CSC.
-	Set Test Variable    ${csc}    MTTCS
+	Set Test Variable    ${csc}    TCS
 	Should Contain    ${cscs}    ${csc}
 
-Validate Mttcs Generics Element
+Validate Tcs Generics Element
 	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
-	[Tags]    smoke    MTTCS
+	[Tags]    smoke    TCS
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[47]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
-	Log    MTTCS has Generics: ${output}
+	Log    TCS has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
 Validate Test Is Defined
