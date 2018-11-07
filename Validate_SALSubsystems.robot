@@ -97,14 +97,14 @@ Validate ATArchiver Generics Element
 
 Validate ATDome Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
-	[Tags]    smoke    ATDome    TSS-3060
+	[Tags]    smoke    ATDome
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    ATDome
 	Should Contain    ${cscs}    ${csc}
 
 Validate ATDome Generics Element
 	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
-	[Tags]    smoke    ATDome    TSS-3060
+	[Tags]    smoke    ATDome
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[6]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    ATDome has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes

@@ -52,9 +52,7 @@ for subsystem in xml_common.subsystems:
 			
 			# Mark test cases with Jira tickets
 			byte_skipped=col_skipped=""
-			if subsystem == "FiberSpectrograph" and topic.decode("utf-8") == "FiberSpectrograph_logevent_internalCommand":
-				col_skipped="	TSS-2988"
-			elif subsystem == "MTM1M3" and topic.decode("utf-8") == "MTM1M3_command_runMirrorForceProfile":
+			if subsystem == "MTM1M3" and topic.decode("utf-8") == "MTM1M3_command_runMirrorForceProfile":
 				col_skipped="	TSS-2989"
 			elif subsystem == "MTM1M3" and topic.decode("utf-8") == "MTM1M3_logevent_forceActuatorInfo":
 				col_skipped="	TSS-2990"
@@ -62,8 +60,6 @@ for subsystem in xml_common.subsystems:
 				col_skipped="	TSS-2991"
 			elif subsystem == "MTM1M3" and topic.decode("utf-8") == "MTM1M3_logevent_forceActuatorWarning":
 				col_skipped="	TSS-2992"
-			elif subsystem == "ATTCS" and topic.decode("utf-8") == "ATTCS_logevent_InternalCommand":
-				col_skipped="	TSS-2761"
 			elif subsystem == "TCS" and topic.decode("utf-8") == "TCS_logevent_InternalCommand":
 				col_skipped="	TSS-2561"
 			else:

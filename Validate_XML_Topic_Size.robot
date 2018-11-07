@@ -15020,7 +15020,7 @@ Validate FiberSpectrograph Event FiberSpectrograph_logevent_internalCommand Topi
 
 Validate FiberSpectrograph Event FiberSpectrograph_logevent_internalCommand Topic Columns
 	[Documentation]    Validate the FiberSpectrograph_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    FiberSpectrograph	TSS-2988
+	[Tags]    smoke    FiberSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
