@@ -153,7 +153,7 @@ Validate LinearStage Telemetry XML file
 	Should Contain    ${output}   LinearStage_Telemetry.xml - valid
 
 Validate MTArchiver Telemetry XML file
-	[Tags]    smoke    MTArchiver    TSS-3284
+	[Tags]    smoke    MTArchiver
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/MTArchiver/MTArchiver_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   MTArchiver_Telemetry.xml - valid
@@ -201,7 +201,7 @@ Validate OCS Telemetry XML file
 	Should Contain    ${output}   OCS_Telemetry.xml - valid
 
 Validate PromptProcessing Telemetry XML file
-	[Tags]    smoke    PromptProcessing    TSS-3285
+	[Tags]    smoke    PromptProcessing
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   PromptProcessing_Telemetry.xml - valid
