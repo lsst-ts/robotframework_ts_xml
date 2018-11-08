@@ -22,7 +22,7 @@ except:
 file.write("*** Settings ***\n")
 file.write("Documentation    Validate the Generics XML definition file contains the required topics.\n")
 file.write("Suite Setup    Run Keywords    Create the Generic Commands Array    AND    Create the Generic Events Array    AND\n")
-file.write("...    Create the Enumeration Array    AND    Run Keyword If    \"${ContInt}\"==\"true\"    Set Suite Variable    ${xml}    xmlstarlet\n")
+file.write("...    Run Keyword If    \"${ContInt}\"==\"true\"    Set Suite Variable    ${xml}    xmlstarlet\n")
 file.write("Library    OperatingSystem\n")
 file.write("Library    String\n")
 file.write("Resource    Global_Vars.robot\n")
@@ -94,27 +94,31 @@ file.write("\t\    ${string}=    Catenate   SEPARATOR=    SALGeneric_logevent_  
 file.write("\t\    Run Keyword And Continue On Failure    Should Contain    ${Events}    ${string}\n")
 file.write("\n")
 
-# Validate the sal_generics_file defines the SummaryState Event Enumerations.
-#file.write("Validate " + sal_generics_file + " SummaryState Event Enumeration\n")
-#file.write("\t[Documentation]    Validate the " + sal_generics_file + " defines the required enumerations.\n")
-#file.write("\t[Tags]    smoke    " + enum_skipped + skipped + "\n")
-#file.write("\tComment    Define CSC.\n")
-#file.write("\tComment    Get the SummaryState Event Enumerations.\n")
-#file.write("\t${enums}=    Run    ${xml} sel -t -m \"//SALEventSet/Enumeration\" -v . -n ${folder}/sal_interfaces/" + sal_generics_file + "\n")
-#file.write("\t:FOR    ${item}    IN    @{Summary}\n")
-#file.write("\t\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}\n")
-#file.write("\n")
+# Verify the CSCs DO NOT explicitly define the Generic Events.
+for subsystem in xml_common.subsystems:
+	events_file = glob.glob(os.environ['XML_HOME'] + "/sal_interfaces/" + subsystem + "/" + subsystem + "_Events.xml")
+	if events_file:
+		file.write("Validate " + subsystem + "_Events.xml Does Not Contain Generic Events\n")
+		file.write("\t[Documentation]    Validate the " + subsystem + "_Events.xml does not contain Generic Events.\n")
+		file.write("\t[Tags]    smoke    " + event_skipped + skipped + "\n")
+		file.write("\tComment    Get the CSC Events.\n")
+		file.write("\t${events}=    Run    ${xml} sel -t -m \"//SALEventSet/SALEvent/EFDB_Topic\" -v . -n ${folder}/sal_interfaces/" + subsystem + "/" + subsystem + "_Events.xml\n")
+		file.write("\tLog    ${events}\n")
+		file.write("\t:FOR    ${item}    IN    @{GenericEvents}\n")
+		file.write("\t\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    " + subsystem + "_logevent_${item}\n")
+		file.write("\n")
 
-# Validate the sal_generics_file defines the DetailedState Event Enumerations.
-#file.write("Validate " + sal_generics_file + " DetailedState Event Enumeration\n")
-#file.write("\t[Documentation]    Validate the " + sal_generics_file + " defines the required enumerations.\n")
-#file.write("\t[Tags]    smoke    " + enum_skipped + skipped + "\n")
-#file.write("\tComment    Define CSC.\n")
-#file.write("\tComment    Get the DetailedState Event Enumerations.\n")
-#file.write("\t${enums}=    Run    ${xml} sel -t -m \"//SALEventSet/Enumeration\" -v . -n ${folder}/sal_interfaces/" + sal_generics_file + "\n")
-#file.write("\t:FOR    ${item}    IN    @{Detailed}\n")
-#file.write("\t\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}\n")
-#file.write("\n")
+# Verify the CSCs DO NOT explicitly define the Generic Commands.
+	commands_file = glob.glob(os.environ['XML_HOME'] + "/sal_interfaces/" + subsystem + "/" + subsystem + "_Commands.xml")
+	if commands_file:
+		file.write("Validate " + subsystem + "_Commands.xml Does Not Contain Generic Commands\n")
+		file.write("\t[Documentation]    Validate the " + subsystem + "_Commands.xml does not contain Generic Commands.\n")
+		file.write("\t[Tags]    smoke    " + com_skipped + skipped + "\n")
+		file.write("\tComment    Get the CSC Commands.\n")
+		file.write("\t${commands}=    Run    ${xml} sel -t -m \"//SALCommandSet/SALCommand/EFDB_Topic\" -v . -n ${folder}/sal_interfaces/" + subsystem + "/" + subsystem + "_Commands.xml\n")
+		file.write("\t:FOR    ${generic}    IN    @{GenericCommands}\n")
+		file.write("\t\    Run Keyword And Continue On Failure    Test Commands    ${commands}    " + subsystem + "_command_${generic}\n")
+		file.write("\n")
 
 # Create custom keywords
 # Create Generic Commands Array
@@ -134,15 +138,12 @@ file.write("\tLog Many    @{GenericEvents}\n")
 file.write("\tSet Suite Variable    @{GenericEvents}\n")
 file.write("\n")
 
-# Create Enumeration Arrays
-file.write("Create the Enumeration Array\n")
-file.write("\t[Tags]    smoke\n")
-file.write("\t@{Summary}=    Create List    SummaryState_DisabledState    SummaryState_EnabledState\n")
-file.write("\t...    SummaryState_FaultState    SummaryState_OfflineState    SummaryState_StandbyState\n")
-file.write("\tLog Many    @{Summary}\n")
-file.write("\tSet Suite Variable    @{Summary}\n")
-file.write("\t@{Detailed}=    Create List    DetailedState_DisabledState    DetailedState_EnabledState\n")
-file.write("\t...    DetailedState_FaultState    DetailedState_OfflineState    DetailedState_StandbyState\n")
-file.write("\tLog Many    @{Detailed}\n")
-file.write("\tSet Suite Variable    @{Detailed}\n")
+# Create Command Validation keyword
+file.write("Test Commands\n")
+file.write("\t[Arguments]    ${commands}    ${generic}\n")
+file.write("\tComment    Convert to list.\n")
+file.write("\t@{commands}=    Split String    ${commands}\n")
+file.write("\t:FOR    ${item}    IN    @{commands}\n")
+file.write("\t\    Log Many    ${item}    ${generic}\n")
+file.write("\t\    Should Not Match    ${item}    ${generic}\n")
 file.write("\n")
