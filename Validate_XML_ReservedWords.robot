@@ -1177,49 +1177,49 @@ Validate MTArchiver Telemetry EFDB_Name Values Do Not Use MySQL Reserved Words
 	Log    ${output}
 	Should Not Contain MySQL Reserved Word    ${output}
 
-Validate Mtcamera Commands EFDB_Name Values Do Not Use IDL Reserved words
-	[Documentation]    Validate the Mtcamera Commands <EFDB_Name> tags do not contain IDL Reserved Words.
-	[Tags]    smoke    Mtcamera
+Validate MTCamera Commands EFDB_Name Values Do Not Use IDL Reserved words
+	[Documentation]    Validate the MTCamera Commands <EFDB_Name> tags do not contain IDL Reserved Words.
+	[Tags]    smoke    MTCamera
 	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/MTCamera/MTCamera_Commands.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain IDL Reserved Word    ${output}
 
-Validate Mtcamera Commands EFDB_Name Values Do Not Use MySQL Reserved Words
-	[Documentation]    Validate the Mtcamera Commands <EFDB_Name> tags do not contain MySQL Reserved Words.
-	[Tags]    smoke    Mtcamera
+Validate MTCamera Commands EFDB_Name Values Do Not Use MySQL Reserved Words
+	[Documentation]    Validate the MTCamera Commands <EFDB_Name> tags do not contain MySQL Reserved Words.
+	[Tags]    smoke    MTCamera
 	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/MTCamera/MTCamera_Commands.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain MySQL Reserved Word    ${output}
 
-Validate Mtcamera Events EFDB_Name Values Do Not Use IDL Reserved words
-	[Documentation]    Validate the Mtcamera Events <EFDB_Name> tags do not contain IDL Reserved Words.
-	[Tags]    smoke    Mtcamera
+Validate MTCamera Events EFDB_Name Values Do Not Use IDL Reserved words
+	[Documentation]    Validate the MTCamera Events <EFDB_Name> tags do not contain IDL Reserved Words.
+	[Tags]    smoke    MTCamera
 	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain IDL Reserved Word    ${output}
 
-Validate Mtcamera Events EFDB_Name Values Do Not Use MySQL Reserved Words
-	[Documentation]    Validate the Mtcamera Events <EFDB_Name> tags do not contain MySQL Reserved Words.
-	[Tags]    smoke    Mtcamera
+Validate MTCamera Events EFDB_Name Values Do Not Use MySQL Reserved Words
+	[Documentation]    Validate the MTCamera Events <EFDB_Name> tags do not contain MySQL Reserved Words.
+	[Tags]    smoke    MTCamera
 	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain MySQL Reserved Word    ${output}
 
-Validate Mtcamera Telemetry EFDB_Name Values Do Not Use IDL Reserved words
-	[Documentation]    Validate the Mtcamera Telemetry <EFDB_Name> tags do not contain IDL Reserved Words.
-	[Tags]    smoke    Mtcamera
+Validate MTCamera Telemetry EFDB_Name Values Do Not Use IDL Reserved words
+	[Documentation]    Validate the MTCamera Telemetry <EFDB_Name> tags do not contain IDL Reserved Words.
+	[Tags]    smoke    MTCamera
 	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain IDL Reserved Word    ${output}
 
-Validate Mtcamera Telemetry EFDB_Name Values Do Not Use MySQL Reserved Words
-	[Documentation]    Validate the Mtcamera Telemetry <EFDB_Name> tags do not contain MySQL Reserved Words.
-	[Tags]    smoke    Mtcamera
+Validate MTCamera Telemetry EFDB_Name Values Do Not Use MySQL Reserved Words
+	[Documentation]    Validate the MTCamera Telemetry <EFDB_Name> tags do not contain MySQL Reserved Words.
+	[Tags]    smoke    MTCamera
 	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
 	Log    ${output}

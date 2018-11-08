@@ -2052,86 +2052,86 @@ Validate MTArchiver Telemetry <EFDB_Name> element
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate Mtcamera Commands <Subsystem> element
-	[Documentation]    Validate the Mtcamera Commands <Subsystem> elements do not contain embedded spaces.
-	[Tags]    smoke    Mtcamera
+Validate MTCamera Commands <Subsystem> element
+	[Documentation]    Validate the MTCamera Commands <Subsystem> elements do not contain embedded spaces.
+	[Tags]    smoke    MTCamera
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Subsystem" -v . -n ${folder}/sal_interfaces/MTCamera/MTCamera_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate Mtcamera Commands <EFDB_Topic> element
-	[Documentation]    Validate the Mtcamera Commands <EFDB_Topic> elements do not contain embedded spaces.
-	[Tags]    smoke    Mtcamera
+Validate MTCamera Commands <EFDB_Topic> element
+	[Documentation]    Validate the MTCamera Commands <EFDB_Topic> elements do not contain embedded spaces.
+	[Tags]    smoke    MTCamera
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/MTCamera/MTCamera_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate Mtcamera Commands <Alias> element
-	[Documentation]    Validate the Mtcamera Commands <Alias> elements do not contain embedded spaces.
-	[Tags]    smoke    Mtcamera
+Validate MTCamera Commands <Alias> element
+	[Documentation]    Validate the MTCamera Commands <Alias> elements do not contain embedded spaces.
+	[Tags]    smoke    MTCamera
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/MTCamera/MTCamera_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate Mtcamera Commands <EFDB_Name> element
-	[Documentation]    Validate the Mtcamera Commands <EFDB_Name> elements do not contain embedded spaces.
-	[Tags]    smoke    Mtcamera
+Validate MTCamera Commands <EFDB_Name> element
+	[Documentation]    Validate the MTCamera Commands <EFDB_Name> elements do not contain embedded spaces.
+	[Tags]    smoke    MTCamera
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/MTCamera/MTCamera_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate Mtcamera Events <Subsystem> element
-	[Documentation]    Validate the Mtcamera Events <Subsystem> elements do not contain embedded spaces.
-	[Tags]    smoke    Mtcamera
+Validate MTCamera Events <Subsystem> element
+	[Documentation]    Validate the MTCamera Events <Subsystem> elements do not contain embedded spaces.
+	[Tags]    smoke    MTCamera
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Subsystem" -v . -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate Mtcamera Events <EFDB_Topic> element
-	[Documentation]    Validate the Mtcamera Events <EFDB_Topic> elements do not contain embedded spaces.
-	[Tags]    smoke    Mtcamera
+Validate MTCamera Events <EFDB_Topic> element
+	[Documentation]    Validate the MTCamera Events <EFDB_Topic> elements do not contain embedded spaces.
+	[Tags]    smoke    MTCamera
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate Mtcamera Events <Alias> element
-	[Documentation]    Validate the Mtcamera Events <Alias> elements do not contain embedded spaces.
-	[Tags]    smoke    Mtcamera
+Validate MTCamera Events <Alias> element
+	[Documentation]    Validate the MTCamera Events <Alias> elements do not contain embedded spaces.
+	[Tags]    smoke    MTCamera
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate Mtcamera Events <EFDB_Name> element
-	[Documentation]    Validate the Mtcamera Events <EFDB_Name> elements do not contain embedded spaces.
-	[Tags]    smoke    Mtcamera
+Validate MTCamera Events <EFDB_Name> element
+	[Documentation]    Validate the MTCamera Events <EFDB_Name> elements do not contain embedded spaces.
+	[Tags]    smoke    MTCamera
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate Mtcamera Telemetry <Subsystem> element
-	[Documentation]    Validate the Mtcamera Telemetry <Subsystem> elements do not contain embedded spaces.
-	[Tags]    smoke    Mtcamera
+Validate MTCamera Telemetry <Subsystem> element
+	[Documentation]    Validate the MTCamera Telemetry <Subsystem> elements do not contain embedded spaces.
+	[Tags]    smoke    MTCamera
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Subsystem" -v . -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate Mtcamera Telemetry <EFDB_Topic> element
-	[Documentation]    Validate the Mtcamera Telemetry <EFDB_Topic> elements do not contain embedded spaces.
-	[Tags]    smoke    Mtcamera
+Validate MTCamera Telemetry <EFDB_Topic> element
+	[Documentation]    Validate the MTCamera Telemetry <EFDB_Topic> elements do not contain embedded spaces.
+	[Tags]    smoke    MTCamera
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/EFDB_Topic" -v . -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate Mtcamera Telemetry <Alias> element
-	[Documentation]    Validate the Mtcamera Telemetry <Alias> elements do not contain embedded spaces.
-	[Tags]    smoke    Mtcamera
+Validate MTCamera Telemetry <Alias> element
+	[Documentation]    Validate the MTCamera Telemetry <Alias> elements do not contain embedded spaces.
+	[Tags]    smoke    MTCamera
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate Mtcamera Telemetry <EFDB_Name> element
-	[Documentation]    Validate the Mtcamera Telemetry <EFDB_Name> elements do not contain embedded spaces.
-	[Tags]    smoke    Mtcamera
+Validate MTCamera Telemetry <EFDB_Name> element
+	[Documentation]    Validate the MTCamera Telemetry <EFDB_Name> elements do not contain embedded spaces.
+	[Tags]    smoke    MTCamera
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}

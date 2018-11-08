@@ -519,23 +519,23 @@ Validate MTArchiver Telemetry
 	Log    ${output}
 	Should Contain    ${output}   MTArchiver_Telemetry.xml - valid
 
-Validate Mtcamera Commands
-	[Documentation]    Validate the Mtcamera Commands XML file.
-	[Tags]    smoke    Mtcamera
+Validate MTCamera Commands
+	[Documentation]    Validate the MTCamera Commands XML file.
+	[Tags]    smoke    MTCamera
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTCamera/MTCamera_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   MTCamera_Commands.xml - valid
 
-Validate Mtcamera Events
-	[Documentation]    Validate the Mtcamera Events XML file.
-	[Tags]    smoke    Mtcamera
+Validate MTCamera Events
+	[Documentation]    Validate the MTCamera Events XML file.
+	[Tags]    smoke    MTCamera
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   MTCamera_Events.xml - valid
 
-Validate Mtcamera Telemetry
-	[Documentation]    Validate the Mtcamera Telemetry XML file.
-	[Tags]    smoke    Mtcamera
+Validate MTCamera Telemetry
+	[Documentation]    Validate the MTCamera Telemetry XML file.
+	[Tags]    smoke    MTCamera
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   MTCamera_Telemetry.xml - valid

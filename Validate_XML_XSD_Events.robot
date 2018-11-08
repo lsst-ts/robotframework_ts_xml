@@ -158,8 +158,8 @@ Validate MTArchiver Events XML file
 	Log    ${output}
 	Should Contain    ${output}   MTArchiver_Events.xml - valid
 
-Validate Mtcamera Events XML file
-	[Tags]    smoke    Mtcamera
+Validate MTCamera Events XML file
+	[Tags]    smoke    MTCamera
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   MTCamera_Events.xml - valid

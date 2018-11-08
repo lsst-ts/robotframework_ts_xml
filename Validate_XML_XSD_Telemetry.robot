@@ -158,8 +158,8 @@ Validate MTArchiver Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   MTArchiver_Telemetry.xml - valid
 
-Validate Mtcamera Telemetry XML file
-	[Tags]    smoke    Mtcamera
+Validate MTCamera Telemetry XML file
+	[Tags]    smoke    MTCamera
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   MTCamera_Telemetry.xml - valid

@@ -146,8 +146,8 @@ Validate LinearStage Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   LinearStage_Commands.xml - valid
 
-Validate Mtcamera Commands XML file
-	[Tags]    smoke    Mtcamera
+Validate MTCamera Commands XML file
+	[Tags]    smoke    MTCamera
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/MTCamera/MTCamera_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   MTCamera_Commands.xml - valid

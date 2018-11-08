@@ -666,27 +666,27 @@ Validate MTArchiver Telemetry Topic Names
 	: FOR    ${item}    IN    @{topics}
 	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
 
-Validate Mtcamera Commands Topic Names
-	[Documentation]    Validate the Mtcamera Commands topic names conform to naming convention.
-	[Tags]    smoke    Mtcamera    
+Validate MTCamera Commands Topic Names
+	[Documentation]    Validate the MTCamera Commands topic names conform to naming convention.
+	[Tags]    smoke    MTCamera    
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/MTCamera/MTCamera_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
 	: FOR    ${item}    IN    @{topics}
 	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
 
-Validate Mtcamera Events Topic Names
-	[Documentation]    Validate the Mtcamera Events topic names conform to naming convention.
-	[Tags]    smoke    Mtcamera    
+Validate MTCamera Events Topic Names
+	[Documentation]    Validate the MTCamera Events topic names conform to naming convention.
+	[Tags]    smoke    MTCamera    
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
 	: FOR    ${item}    IN    @{topics}
 	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
 
-Validate Mtcamera Telemetry Topic Names
-	[Documentation]    Validate the Mtcamera Telemetry topic names conform to naming convention.
-	[Tags]    smoke    Mtcamera    
+Validate MTCamera Telemetry Topic Names
+	[Documentation]    Validate the MTCamera Telemetry topic names conform to naming convention.
+	[Tags]    smoke    MTCamera    
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}

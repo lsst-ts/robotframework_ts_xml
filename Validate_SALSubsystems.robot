@@ -8,7 +8,7 @@ Resource    Global_Vars.robot
 
 *** Variables ***
 ${xml}    xml
-@{cscs}    ATArchiver    ATCamera    ATDome    ATHeaderService    ATMCS    ATMonochromator    ATPneumatics    ATSpectrograph    ATTCS    ATThermoelectricCooler    ATWhiteLight    CatchupArchiver    CBP    Dome    DomeADB    DomeAPS    DomeLouvers    DomeLWS    DomeMONCS    DomeTHCS    EEC    EFD    Electrometer    FiberSpectrograph    Hexapod    Laser    LinearStage    MTArchiver    MTCamera    MTHeaderService    MTM1M3    MTM2    MTMount    MTOFC    MTWEP    OCS    PromptProcessing    Rotator    Scheduler    Sequencer    SummitFacility    MTTCS    Test    TunableLaser    MTVMS
+@{cscs}    ATArchiver    ATCamera    ATDome    ATHeaderService    ATMCS    ATMonochromator    ATPneumatics    ATSpectrograph    ATTCS    ATThermoelectricCooler    ATWhiteLight    CatchupArchiver    CBP    Dome    DomeADB    DomeAPS    DomeLouvers    DomeLWS    DomeMONCS    DomeTHCS    EEC    EFD    Electrometer    FiberSpectrograph    Hexapod    LinearStage    MTArchiver    MTCamera    MTHeaderService    MTM1M3    MTM2    MTMount    MTOFC    MTWEP    OCS    PromptProcessing    Rotator    Scheduler    Sequencer    SummitFacility    MTTCS    Test    TunableLaser    MTVMS
 
 *** Test Cases ***
 Validate SALSubsystems.xml
@@ -235,14 +235,14 @@ Validate Electrometer Generics Element
 	Log    Electrometer has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
-Validate Mtcamera Is Defined
+Validate MTCamera Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
 	[Tags]    smoke    MTCamera
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    MTCamera
 	Should Contain    ${cscs}    ${csc}
 
-Validate Mtcamera Generics Element
+Validate MTCamera Generics Element
 	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
 	[Tags]    smoke    MTCamera
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[16]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml

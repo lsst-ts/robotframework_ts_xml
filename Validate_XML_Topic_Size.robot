@@ -15993,9 +15993,9 @@ Validate MTArchiver Telemetry MTArchiver_sequencerHeartbeat Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Command MTCamera_command_discardRows Topic Byte Size
+Validate MTCamera Command MTCamera_command_discardRows Topic Byte Size
 	[Documentation]    Validate the MTCamera_command_discardRows topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Commands.xml
@@ -16017,9 +16017,9 @@ Validate Mtcamera Command MTCamera_command_discardRows Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Command MTCamera_command_discardRows Topic Columns
+Validate MTCamera Command MTCamera_command_discardRows Topic Columns
 	[Documentation]    Validate the MTCamera_command_discardRows topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Commands.xml
@@ -16030,9 +16030,9 @@ Validate Mtcamera Command MTCamera_command_discardRows Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Command MTCamera_command_startImage Topic Byte Size
+Validate MTCamera Command MTCamera_command_startImage Topic Byte Size
 	[Documentation]    Validate the MTCamera_command_startImage topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Commands.xml
@@ -16054,9 +16054,9 @@ Validate Mtcamera Command MTCamera_command_startImage Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Command MTCamera_command_startImage Topic Columns
+Validate MTCamera Command MTCamera_command_startImage Topic Columns
 	[Documentation]    Validate the MTCamera_command_startImage topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Commands.xml
@@ -16067,9 +16067,9 @@ Validate Mtcamera Command MTCamera_command_startImage Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Command MTCamera_command_disableCalibration Topic Byte Size
+Validate MTCamera Command MTCamera_command_disableCalibration Topic Byte Size
 	[Documentation]    Validate the MTCamera_command_disableCalibration topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Commands.xml
@@ -16091,9 +16091,9 @@ Validate Mtcamera Command MTCamera_command_disableCalibration Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Command MTCamera_command_disableCalibration Topic Columns
+Validate MTCamera Command MTCamera_command_disableCalibration Topic Columns
 	[Documentation]    Validate the MTCamera_command_disableCalibration topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Commands.xml
@@ -16104,9 +16104,9 @@ Validate Mtcamera Command MTCamera_command_disableCalibration Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Command MTCamera_command_initGuiders Topic Byte Size
+Validate MTCamera Command MTCamera_command_initGuiders Topic Byte Size
 	[Documentation]    Validate the MTCamera_command_initGuiders topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Commands.xml
@@ -16128,9 +16128,9 @@ Validate Mtcamera Command MTCamera_command_initGuiders Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Command MTCamera_command_initGuiders Topic Columns
+Validate MTCamera Command MTCamera_command_initGuiders Topic Columns
 	[Documentation]    Validate the MTCamera_command_initGuiders topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Commands.xml
@@ -16141,9 +16141,9 @@ Validate Mtcamera Command MTCamera_command_initGuiders Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Command MTCamera_command_enableCalibration Topic Byte Size
+Validate MTCamera Command MTCamera_command_enableCalibration Topic Byte Size
 	[Documentation]    Validate the MTCamera_command_enableCalibration topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Commands.xml
@@ -16165,9 +16165,9 @@ Validate Mtcamera Command MTCamera_command_enableCalibration Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Command MTCamera_command_enableCalibration Topic Columns
+Validate MTCamera Command MTCamera_command_enableCalibration Topic Columns
 	[Documentation]    Validate the MTCamera_command_enableCalibration topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Commands.xml
@@ -16178,9 +16178,9 @@ Validate Mtcamera Command MTCamera_command_enableCalibration Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Command MTCamera_command_initImage Topic Byte Size
+Validate MTCamera Command MTCamera_command_initImage Topic Byte Size
 	[Documentation]    Validate the MTCamera_command_initImage topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Commands.xml
@@ -16202,9 +16202,9 @@ Validate Mtcamera Command MTCamera_command_initImage Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Command MTCamera_command_initImage Topic Columns
+Validate MTCamera Command MTCamera_command_initImage Topic Columns
 	[Documentation]    Validate the MTCamera_command_initImage topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Commands.xml
@@ -16215,9 +16215,9 @@ Validate Mtcamera Command MTCamera_command_initImage Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Command MTCamera_command_endImage Topic Byte Size
+Validate MTCamera Command MTCamera_command_endImage Topic Byte Size
 	[Documentation]    Validate the MTCamera_command_endImage topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[7]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Commands.xml
@@ -16239,9 +16239,9 @@ Validate Mtcamera Command MTCamera_command_endImage Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Command MTCamera_command_endImage Topic Columns
+Validate MTCamera Command MTCamera_command_endImage Topic Columns
 	[Documentation]    Validate the MTCamera_command_endImage topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[7]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Commands.xml
@@ -16252,9 +16252,9 @@ Validate Mtcamera Command MTCamera_command_endImage Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Command MTCamera_command_setFilter Topic Byte Size
+Validate MTCamera Command MTCamera_command_setFilter Topic Byte Size
 	[Documentation]    Validate the MTCamera_command_setFilter topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[8]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Commands.xml
@@ -16276,9 +16276,9 @@ Validate Mtcamera Command MTCamera_command_setFilter Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Command MTCamera_command_setFilter Topic Columns
+Validate MTCamera Command MTCamera_command_setFilter Topic Columns
 	[Documentation]    Validate the MTCamera_command_setFilter topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[8]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Commands.xml
@@ -16289,9 +16289,9 @@ Validate Mtcamera Command MTCamera_command_setFilter Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Command MTCamera_command_clear Topic Byte Size
+Validate MTCamera Command MTCamera_command_clear Topic Byte Size
 	[Documentation]    Validate the MTCamera_command_clear topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[9]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Commands.xml
@@ -16313,9 +16313,9 @@ Validate Mtcamera Command MTCamera_command_clear Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Command MTCamera_command_clear Topic Columns
+Validate MTCamera Command MTCamera_command_clear Topic Columns
 	[Documentation]    Validate the MTCamera_command_clear topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[9]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Commands.xml
@@ -16326,9 +16326,9 @@ Validate Mtcamera Command MTCamera_command_clear Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Command MTCamera_command_takeImages Topic Byte Size
+Validate MTCamera Command MTCamera_command_takeImages Topic Byte Size
 	[Documentation]    Validate the MTCamera_command_takeImages topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[10]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Commands.xml
@@ -16350,9 +16350,9 @@ Validate Mtcamera Command MTCamera_command_takeImages Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Command MTCamera_command_takeImages Topic Columns
+Validate MTCamera Command MTCamera_command_takeImages Topic Columns
 	[Documentation]    Validate the MTCamera_command_takeImages topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[10]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Commands.xml
@@ -16363,9 +16363,9 @@ Validate Mtcamera Command MTCamera_command_takeImages Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Event MTCamera_logevent_offlineDetailedState Topic Byte Size
+Validate MTCamera Event MTCamera_logevent_offlineDetailedState Topic Byte Size
 	[Documentation]    Validate the MTCamera_logevent_offlineDetailedState topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -16387,9 +16387,9 @@ Validate Mtcamera Event MTCamera_logevent_offlineDetailedState Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Event MTCamera_logevent_offlineDetailedState Topic Columns
+Validate MTCamera Event MTCamera_logevent_offlineDetailedState Topic Columns
 	[Documentation]    Validate the MTCamera_logevent_offlineDetailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -16400,9 +16400,9 @@ Validate Mtcamera Event MTCamera_logevent_offlineDetailedState Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Event MTCamera_logevent_endReadout Topic Byte Size
+Validate MTCamera Event MTCamera_logevent_endReadout Topic Byte Size
 	[Documentation]    Validate the MTCamera_logevent_endReadout topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -16424,9 +16424,9 @@ Validate Mtcamera Event MTCamera_logevent_endReadout Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Event MTCamera_logevent_endReadout Topic Columns
+Validate MTCamera Event MTCamera_logevent_endReadout Topic Columns
 	[Documentation]    Validate the MTCamera_logevent_endReadout topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -16437,9 +16437,9 @@ Validate Mtcamera Event MTCamera_logevent_endReadout Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Event MTCamera_logevent_endTakeImage Topic Byte Size
+Validate MTCamera Event MTCamera_logevent_endTakeImage Topic Byte Size
 	[Documentation]    Validate the MTCamera_logevent_endTakeImage topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -16461,9 +16461,9 @@ Validate Mtcamera Event MTCamera_logevent_endTakeImage Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Event MTCamera_logevent_endTakeImage Topic Columns
+Validate MTCamera Event MTCamera_logevent_endTakeImage Topic Columns
 	[Documentation]    Validate the MTCamera_logevent_endTakeImage topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -16474,9 +16474,9 @@ Validate Mtcamera Event MTCamera_logevent_endTakeImage Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Event MTCamera_logevent_imageReadinessDetailedState Topic Byte Size
+Validate MTCamera Event MTCamera_logevent_imageReadinessDetailedState Topic Byte Size
 	[Documentation]    Validate the MTCamera_logevent_imageReadinessDetailedState topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -16498,9 +16498,9 @@ Validate Mtcamera Event MTCamera_logevent_imageReadinessDetailedState Topic Byte
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Event MTCamera_logevent_imageReadinessDetailedState Topic Columns
+Validate MTCamera Event MTCamera_logevent_imageReadinessDetailedState Topic Columns
 	[Documentation]    Validate the MTCamera_logevent_imageReadinessDetailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -16511,9 +16511,9 @@ Validate Mtcamera Event MTCamera_logevent_imageReadinessDetailedState Topic Colu
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Event MTCamera_logevent_startSetFilter Topic Byte Size
+Validate MTCamera Event MTCamera_logevent_startSetFilter Topic Byte Size
 	[Documentation]    Validate the MTCamera_logevent_startSetFilter topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -16535,9 +16535,9 @@ Validate Mtcamera Event MTCamera_logevent_startSetFilter Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Event MTCamera_logevent_startSetFilter Topic Columns
+Validate MTCamera Event MTCamera_logevent_startSetFilter Topic Columns
 	[Documentation]    Validate the MTCamera_logevent_startSetFilter topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -16548,9 +16548,9 @@ Validate Mtcamera Event MTCamera_logevent_startSetFilter Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Event MTCamera_logevent_startUnloadFilter Topic Byte Size
+Validate MTCamera Event MTCamera_logevent_startUnloadFilter Topic Byte Size
 	[Documentation]    Validate the MTCamera_logevent_startUnloadFilter topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -16572,9 +16572,9 @@ Validate Mtcamera Event MTCamera_logevent_startUnloadFilter Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Event MTCamera_logevent_startUnloadFilter Topic Columns
+Validate MTCamera Event MTCamera_logevent_startUnloadFilter Topic Columns
 	[Documentation]    Validate the MTCamera_logevent_startUnloadFilter topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -16585,9 +16585,9 @@ Validate Mtcamera Event MTCamera_logevent_startUnloadFilter Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Event MTCamera_logevent_notReadyToTakeImage Topic Byte Size
+Validate MTCamera Event MTCamera_logevent_notReadyToTakeImage Topic Byte Size
 	[Documentation]    Validate the MTCamera_logevent_notReadyToTakeImage topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -16609,9 +16609,9 @@ Validate Mtcamera Event MTCamera_logevent_notReadyToTakeImage Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Event MTCamera_logevent_notReadyToTakeImage Topic Columns
+Validate MTCamera Event MTCamera_logevent_notReadyToTakeImage Topic Columns
 	[Documentation]    Validate the MTCamera_logevent_notReadyToTakeImage topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -16622,9 +16622,9 @@ Validate Mtcamera Event MTCamera_logevent_notReadyToTakeImage Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Event MTCamera_logevent_startShutterClose Topic Byte Size
+Validate MTCamera Event MTCamera_logevent_startShutterClose Topic Byte Size
 	[Documentation]    Validate the MTCamera_logevent_startShutterClose topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -16646,9 +16646,9 @@ Validate Mtcamera Event MTCamera_logevent_startShutterClose Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Event MTCamera_logevent_startShutterClose Topic Columns
+Validate MTCamera Event MTCamera_logevent_startShutterClose Topic Columns
 	[Documentation]    Validate the MTCamera_logevent_startShutterClose topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -16659,9 +16659,9 @@ Validate Mtcamera Event MTCamera_logevent_startShutterClose Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Event MTCamera_logevent_endInitializeGuider Topic Byte Size
+Validate MTCamera Event MTCamera_logevent_endInitializeGuider Topic Byte Size
 	[Documentation]    Validate the MTCamera_logevent_endInitializeGuider topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -16683,9 +16683,9 @@ Validate Mtcamera Event MTCamera_logevent_endInitializeGuider Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Event MTCamera_logevent_endInitializeGuider Topic Columns
+Validate MTCamera Event MTCamera_logevent_endInitializeGuider Topic Columns
 	[Documentation]    Validate the MTCamera_logevent_endInitializeGuider topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -16696,9 +16696,9 @@ Validate Mtcamera Event MTCamera_logevent_endInitializeGuider Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Event MTCamera_logevent_endShutterClose Topic Byte Size
+Validate MTCamera Event MTCamera_logevent_endShutterClose Topic Byte Size
 	[Documentation]    Validate the MTCamera_logevent_endShutterClose topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -16720,9 +16720,9 @@ Validate Mtcamera Event MTCamera_logevent_endShutterClose Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Event MTCamera_logevent_endShutterClose Topic Columns
+Validate MTCamera Event MTCamera_logevent_endShutterClose Topic Columns
 	[Documentation]    Validate the MTCamera_logevent_endShutterClose topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -16733,9 +16733,9 @@ Validate Mtcamera Event MTCamera_logevent_endShutterClose Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Event MTCamera_logevent_endOfImageTelemetry Topic Byte Size
+Validate MTCamera Event MTCamera_logevent_endOfImageTelemetry Topic Byte Size
 	[Documentation]    Validate the MTCamera_logevent_endOfImageTelemetry topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -16757,9 +16757,9 @@ Validate Mtcamera Event MTCamera_logevent_endOfImageTelemetry Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Event MTCamera_logevent_endOfImageTelemetry Topic Columns
+Validate MTCamera Event MTCamera_logevent_endOfImageTelemetry Topic Columns
 	[Documentation]    Validate the MTCamera_logevent_endOfImageTelemetry topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -16770,9 +16770,9 @@ Validate Mtcamera Event MTCamera_logevent_endOfImageTelemetry Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Event MTCamera_logevent_endUnloadFilter Topic Byte Size
+Validate MTCamera Event MTCamera_logevent_endUnloadFilter Topic Byte Size
 	[Documentation]    Validate the MTCamera_logevent_endUnloadFilter topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[12]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -16794,9 +16794,9 @@ Validate Mtcamera Event MTCamera_logevent_endUnloadFilter Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Event MTCamera_logevent_endUnloadFilter Topic Columns
+Validate MTCamera Event MTCamera_logevent_endUnloadFilter Topic Columns
 	[Documentation]    Validate the MTCamera_logevent_endUnloadFilter topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[12]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -16807,9 +16807,9 @@ Validate Mtcamera Event MTCamera_logevent_endUnloadFilter Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Event MTCamera_logevent_calibrationDetailedState Topic Byte Size
+Validate MTCamera Event MTCamera_logevent_calibrationDetailedState Topic Byte Size
 	[Documentation]    Validate the MTCamera_logevent_calibrationDetailedState topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[13]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -16831,9 +16831,9 @@ Validate Mtcamera Event MTCamera_logevent_calibrationDetailedState Topic Byte Si
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Event MTCamera_logevent_calibrationDetailedState Topic Columns
+Validate MTCamera Event MTCamera_logevent_calibrationDetailedState Topic Columns
 	[Documentation]    Validate the MTCamera_logevent_calibrationDetailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[13]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -16844,9 +16844,9 @@ Validate Mtcamera Event MTCamera_logevent_calibrationDetailedState Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Event MTCamera_logevent_endRotateCarousel Topic Byte Size
+Validate MTCamera Event MTCamera_logevent_endRotateCarousel Topic Byte Size
 	[Documentation]    Validate the MTCamera_logevent_endRotateCarousel topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[14]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -16868,9 +16868,9 @@ Validate Mtcamera Event MTCamera_logevent_endRotateCarousel Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Event MTCamera_logevent_endRotateCarousel Topic Columns
+Validate MTCamera Event MTCamera_logevent_endRotateCarousel Topic Columns
 	[Documentation]    Validate the MTCamera_logevent_endRotateCarousel topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[14]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -16881,9 +16881,9 @@ Validate Mtcamera Event MTCamera_logevent_endRotateCarousel Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Event MTCamera_logevent_startLoadFilter Topic Byte Size
+Validate MTCamera Event MTCamera_logevent_startLoadFilter Topic Byte Size
 	[Documentation]    Validate the MTCamera_logevent_startLoadFilter topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[15]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -16905,9 +16905,9 @@ Validate Mtcamera Event MTCamera_logevent_startLoadFilter Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Event MTCamera_logevent_startLoadFilter Topic Columns
+Validate MTCamera Event MTCamera_logevent_startLoadFilter Topic Columns
 	[Documentation]    Validate the MTCamera_logevent_startLoadFilter topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[15]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -16918,9 +16918,9 @@ Validate Mtcamera Event MTCamera_logevent_startLoadFilter Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Event MTCamera_logevent_filterChangerDetailedState Topic Byte Size
+Validate MTCamera Event MTCamera_logevent_filterChangerDetailedState Topic Byte Size
 	[Documentation]    Validate the MTCamera_logevent_filterChangerDetailedState topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[16]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -16942,9 +16942,9 @@ Validate Mtcamera Event MTCamera_logevent_filterChangerDetailedState Topic Byte 
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Event MTCamera_logevent_filterChangerDetailedState Topic Columns
+Validate MTCamera Event MTCamera_logevent_filterChangerDetailedState Topic Columns
 	[Documentation]    Validate the MTCamera_logevent_filterChangerDetailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[16]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -16955,9 +16955,9 @@ Validate Mtcamera Event MTCamera_logevent_filterChangerDetailedState Topic Colum
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Event MTCamera_logevent_shutterDetailedState Topic Byte Size
+Validate MTCamera Event MTCamera_logevent_shutterDetailedState Topic Byte Size
 	[Documentation]    Validate the MTCamera_logevent_shutterDetailedState topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[17]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -16979,9 +16979,9 @@ Validate Mtcamera Event MTCamera_logevent_shutterDetailedState Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Event MTCamera_logevent_shutterDetailedState Topic Columns
+Validate MTCamera Event MTCamera_logevent_shutterDetailedState Topic Columns
 	[Documentation]    Validate the MTCamera_logevent_shutterDetailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[17]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -16992,9 +16992,9 @@ Validate Mtcamera Event MTCamera_logevent_shutterDetailedState Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Event MTCamera_logevent_readyToTakeImage Topic Byte Size
+Validate MTCamera Event MTCamera_logevent_readyToTakeImage Topic Byte Size
 	[Documentation]    Validate the MTCamera_logevent_readyToTakeImage topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[18]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -17016,9 +17016,9 @@ Validate Mtcamera Event MTCamera_logevent_readyToTakeImage Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Event MTCamera_logevent_readyToTakeImage Topic Columns
+Validate MTCamera Event MTCamera_logevent_readyToTakeImage Topic Columns
 	[Documentation]    Validate the MTCamera_logevent_readyToTakeImage topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[18]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -17029,9 +17029,9 @@ Validate Mtcamera Event MTCamera_logevent_readyToTakeImage Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Event MTCamera_logevent_ccsCommandState Topic Byte Size
+Validate MTCamera Event MTCamera_logevent_ccsCommandState Topic Byte Size
 	[Documentation]    Validate the MTCamera_logevent_ccsCommandState topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[19]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -17053,9 +17053,9 @@ Validate Mtcamera Event MTCamera_logevent_ccsCommandState Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Event MTCamera_logevent_ccsCommandState Topic Columns
+Validate MTCamera Event MTCamera_logevent_ccsCommandState Topic Columns
 	[Documentation]    Validate the MTCamera_logevent_ccsCommandState topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[19]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -17066,9 +17066,9 @@ Validate Mtcamera Event MTCamera_logevent_ccsCommandState Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Event MTCamera_logevent_prepareToTakeImage Topic Byte Size
+Validate MTCamera Event MTCamera_logevent_prepareToTakeImage Topic Byte Size
 	[Documentation]    Validate the MTCamera_logevent_prepareToTakeImage topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[20]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -17090,9 +17090,9 @@ Validate Mtcamera Event MTCamera_logevent_prepareToTakeImage Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Event MTCamera_logevent_prepareToTakeImage Topic Columns
+Validate MTCamera Event MTCamera_logevent_prepareToTakeImage Topic Columns
 	[Documentation]    Validate the MTCamera_logevent_prepareToTakeImage topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[20]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -17103,9 +17103,9 @@ Validate Mtcamera Event MTCamera_logevent_prepareToTakeImage Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Event MTCamera_logevent_ccsConfigured Topic Byte Size
+Validate MTCamera Event MTCamera_logevent_ccsConfigured Topic Byte Size
 	[Documentation]    Validate the MTCamera_logevent_ccsConfigured topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[21]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -17127,9 +17127,9 @@ Validate Mtcamera Event MTCamera_logevent_ccsConfigured Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Event MTCamera_logevent_ccsConfigured Topic Columns
+Validate MTCamera Event MTCamera_logevent_ccsConfigured Topic Columns
 	[Documentation]    Validate the MTCamera_logevent_ccsConfigured topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[21]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -17140,9 +17140,9 @@ Validate Mtcamera Event MTCamera_logevent_ccsConfigured Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Event MTCamera_logevent_endLoadFilter Topic Byte Size
+Validate MTCamera Event MTCamera_logevent_endLoadFilter Topic Byte Size
 	[Documentation]    Validate the MTCamera_logevent_endLoadFilter topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[22]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -17164,9 +17164,9 @@ Validate Mtcamera Event MTCamera_logevent_endLoadFilter Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Event MTCamera_logevent_endLoadFilter Topic Columns
+Validate MTCamera Event MTCamera_logevent_endLoadFilter Topic Columns
 	[Documentation]    Validate the MTCamera_logevent_endLoadFilter topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[22]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -17177,9 +17177,9 @@ Validate Mtcamera Event MTCamera_logevent_endLoadFilter Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Event MTCamera_logevent_endShutterOpen Topic Byte Size
+Validate MTCamera Event MTCamera_logevent_endShutterOpen Topic Byte Size
 	[Documentation]    Validate the MTCamera_logevent_endShutterOpen topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[23]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -17201,9 +17201,9 @@ Validate Mtcamera Event MTCamera_logevent_endShutterOpen Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Event MTCamera_logevent_endShutterOpen Topic Columns
+Validate MTCamera Event MTCamera_logevent_endShutterOpen Topic Columns
 	[Documentation]    Validate the MTCamera_logevent_endShutterOpen topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[23]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -17214,9 +17214,9 @@ Validate Mtcamera Event MTCamera_logevent_endShutterOpen Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Event MTCamera_logevent_startIntegration Topic Byte Size
+Validate MTCamera Event MTCamera_logevent_startIntegration Topic Byte Size
 	[Documentation]    Validate the MTCamera_logevent_startIntegration topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[24]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -17238,9 +17238,9 @@ Validate Mtcamera Event MTCamera_logevent_startIntegration Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Event MTCamera_logevent_startIntegration Topic Columns
+Validate MTCamera Event MTCamera_logevent_startIntegration Topic Columns
 	[Documentation]    Validate the MTCamera_logevent_startIntegration topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[24]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -17251,9 +17251,9 @@ Validate Mtcamera Event MTCamera_logevent_startIntegration Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Event MTCamera_logevent_endInitializeImage Topic Byte Size
+Validate MTCamera Event MTCamera_logevent_endInitializeImage Topic Byte Size
 	[Documentation]    Validate the MTCamera_logevent_endInitializeImage topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[25]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -17275,9 +17275,9 @@ Validate Mtcamera Event MTCamera_logevent_endInitializeImage Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Event MTCamera_logevent_endInitializeImage Topic Columns
+Validate MTCamera Event MTCamera_logevent_endInitializeImage Topic Columns
 	[Documentation]    Validate the MTCamera_logevent_endInitializeImage topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[25]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -17288,9 +17288,9 @@ Validate Mtcamera Event MTCamera_logevent_endInitializeImage Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Event MTCamera_logevent_settingsApplied Topic Byte Size
+Validate MTCamera Event MTCamera_logevent_settingsApplied Topic Byte Size
 	[Documentation]    Validate the MTCamera_logevent_settingsApplied topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[26]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -17312,9 +17312,9 @@ Validate Mtcamera Event MTCamera_logevent_settingsApplied Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Event MTCamera_logevent_settingsApplied Topic Columns
+Validate MTCamera Event MTCamera_logevent_settingsApplied Topic Columns
 	[Documentation]    Validate the MTCamera_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[26]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -17325,9 +17325,9 @@ Validate Mtcamera Event MTCamera_logevent_settingsApplied Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Event MTCamera_logevent_endSetFilter Topic Byte Size
+Validate MTCamera Event MTCamera_logevent_endSetFilter Topic Byte Size
 	[Documentation]    Validate the MTCamera_logevent_endSetFilter topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[27]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -17349,9 +17349,9 @@ Validate Mtcamera Event MTCamera_logevent_endSetFilter Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Event MTCamera_logevent_endSetFilter Topic Columns
+Validate MTCamera Event MTCamera_logevent_endSetFilter Topic Columns
 	[Documentation]    Validate the MTCamera_logevent_endSetFilter topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[27]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -17362,9 +17362,9 @@ Validate Mtcamera Event MTCamera_logevent_endSetFilter Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Event MTCamera_logevent_startShutterOpen Topic Byte Size
+Validate MTCamera Event MTCamera_logevent_startShutterOpen Topic Byte Size
 	[Documentation]    Validate the MTCamera_logevent_startShutterOpen topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[28]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -17386,9 +17386,9 @@ Validate Mtcamera Event MTCamera_logevent_startShutterOpen Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Event MTCamera_logevent_startShutterOpen Topic Columns
+Validate MTCamera Event MTCamera_logevent_startShutterOpen Topic Columns
 	[Documentation]    Validate the MTCamera_logevent_startShutterOpen topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[28]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -17399,9 +17399,9 @@ Validate Mtcamera Event MTCamera_logevent_startShutterOpen Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Event MTCamera_logevent_raftsDetailedState Topic Byte Size
+Validate MTCamera Event MTCamera_logevent_raftsDetailedState Topic Byte Size
 	[Documentation]    Validate the MTCamera_logevent_raftsDetailedState topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[29]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -17423,9 +17423,9 @@ Validate Mtcamera Event MTCamera_logevent_raftsDetailedState Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Event MTCamera_logevent_raftsDetailedState Topic Columns
+Validate MTCamera Event MTCamera_logevent_raftsDetailedState Topic Columns
 	[Documentation]    Validate the MTCamera_logevent_raftsDetailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[29]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -17436,9 +17436,9 @@ Validate Mtcamera Event MTCamera_logevent_raftsDetailedState Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Event MTCamera_logevent_availableFilters Topic Byte Size
+Validate MTCamera Event MTCamera_logevent_availableFilters Topic Byte Size
 	[Documentation]    Validate the MTCamera_logevent_availableFilters topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[30]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -17460,9 +17460,9 @@ Validate Mtcamera Event MTCamera_logevent_availableFilters Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Event MTCamera_logevent_availableFilters Topic Columns
+Validate MTCamera Event MTCamera_logevent_availableFilters Topic Columns
 	[Documentation]    Validate the MTCamera_logevent_availableFilters topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[30]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -17473,9 +17473,9 @@ Validate Mtcamera Event MTCamera_logevent_availableFilters Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Event MTCamera_logevent_startReadout Topic Byte Size
+Validate MTCamera Event MTCamera_logevent_startReadout Topic Byte Size
 	[Documentation]    Validate the MTCamera_logevent_startReadout topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[31]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -17497,9 +17497,9 @@ Validate Mtcamera Event MTCamera_logevent_startReadout Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Event MTCamera_logevent_startReadout Topic Columns
+Validate MTCamera Event MTCamera_logevent_startReadout Topic Columns
 	[Documentation]    Validate the MTCamera_logevent_startReadout topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[31]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -17510,9 +17510,9 @@ Validate Mtcamera Event MTCamera_logevent_startReadout Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Event MTCamera_logevent_startRotateCarousel Topic Byte Size
+Validate MTCamera Event MTCamera_logevent_startRotateCarousel Topic Byte Size
 	[Documentation]    Validate the MTCamera_logevent_startRotateCarousel topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[32]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -17534,9 +17534,9 @@ Validate Mtcamera Event MTCamera_logevent_startRotateCarousel Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Event MTCamera_logevent_startRotateCarousel Topic Columns
+Validate MTCamera Event MTCamera_logevent_startRotateCarousel Topic Columns
 	[Documentation]    Validate the MTCamera_logevent_startRotateCarousel topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[32]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -17547,9 +17547,9 @@ Validate Mtcamera Event MTCamera_logevent_startRotateCarousel Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Telemetry MTCamera_shutter Topic Byte Size
+Validate MTCamera Telemetry MTCamera_shutter Topic Byte Size
 	[Documentation]    Validate the MTCamera_shutter topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml
@@ -17571,9 +17571,9 @@ Validate Mtcamera Telemetry MTCamera_shutter Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Telemetry MTCamera_shutter Topic Columns
+Validate MTCamera Telemetry MTCamera_shutter Topic Columns
 	[Documentation]    Validate the MTCamera_shutter topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml
@@ -17584,9 +17584,9 @@ Validate Mtcamera Telemetry MTCamera_shutter Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Telemetry MTCamera_prot Topic Byte Size
+Validate MTCamera Telemetry MTCamera_prot Topic Byte Size
 	[Documentation]    Validate the MTCamera_prot topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml
@@ -17608,9 +17608,9 @@ Validate Mtcamera Telemetry MTCamera_prot Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Telemetry MTCamera_prot Topic Columns
+Validate MTCamera Telemetry MTCamera_prot Topic Columns
 	[Documentation]    Validate the MTCamera_prot topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml
@@ -17621,9 +17621,9 @@ Validate Mtcamera Telemetry MTCamera_prot Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Telemetry MTCamera_filter Topic Byte Size
+Validate MTCamera Telemetry MTCamera_filter Topic Byte Size
 	[Documentation]    Validate the MTCamera_filter topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[3]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml
@@ -17645,9 +17645,9 @@ Validate Mtcamera Telemetry MTCamera_filter Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Telemetry MTCamera_filter Topic Columns
+Validate MTCamera Telemetry MTCamera_filter Topic Columns
 	[Documentation]    Validate the MTCamera_filter topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[3]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml
@@ -17658,9 +17658,9 @@ Validate Mtcamera Telemetry MTCamera_filter Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Telemetry MTCamera_heartbeat Topic Byte Size
+Validate MTCamera Telemetry MTCamera_heartbeat Topic Byte Size
 	[Documentation]    Validate the MTCamera_heartbeat topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[4]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml
@@ -17682,9 +17682,9 @@ Validate Mtcamera Telemetry MTCamera_heartbeat Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Telemetry MTCamera_heartbeat Topic Columns
+Validate MTCamera Telemetry MTCamera_heartbeat Topic Columns
 	[Documentation]    Validate the MTCamera_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[4]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml
@@ -17695,9 +17695,9 @@ Validate Mtcamera Telemetry MTCamera_heartbeat Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Telemetry MTCamera_was Topic Byte Size
+Validate MTCamera Telemetry MTCamera_was Topic Byte Size
 	[Documentation]    Validate the MTCamera_was topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[5]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml
@@ -17719,9 +17719,9 @@ Validate Mtcamera Telemetry MTCamera_was Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Telemetry MTCamera_was Topic Columns
+Validate MTCamera Telemetry MTCamera_was Topic Columns
 	[Documentation]    Validate the MTCamera_was topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[5]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml
@@ -17732,9 +17732,9 @@ Validate Mtcamera Telemetry MTCamera_was Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Telemetry MTCamera_ccs Topic Byte Size
+Validate MTCamera Telemetry MTCamera_ccs Topic Byte Size
 	[Documentation]    Validate the MTCamera_ccs topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[6]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml
@@ -17756,9 +17756,9 @@ Validate Mtcamera Telemetry MTCamera_ccs Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Telemetry MTCamera_ccs Topic Columns
+Validate MTCamera Telemetry MTCamera_ccs Topic Columns
 	[Documentation]    Validate the MTCamera_ccs topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[6]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml
@@ -17769,9 +17769,9 @@ Validate Mtcamera Telemetry MTCamera_ccs Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Telemetry MTCamera_clusterEncoder Topic Byte Size
+Validate MTCamera Telemetry MTCamera_clusterEncoder Topic Byte Size
 	[Documentation]    Validate the MTCamera_clusterEncoder topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[7]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml
@@ -17793,9 +17793,9 @@ Validate Mtcamera Telemetry MTCamera_clusterEncoder Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Telemetry MTCamera_clusterEncoder Topic Columns
+Validate MTCamera Telemetry MTCamera_clusterEncoder Topic Columns
 	[Documentation]    Validate the MTCamera_clusterEncoder topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[7]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml
@@ -17806,9 +17806,9 @@ Validate Mtcamera Telemetry MTCamera_clusterEncoder Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Telemetry MTCamera_cyro Topic Byte Size
+Validate MTCamera Telemetry MTCamera_cyro Topic Byte Size
 	[Documentation]    Validate the MTCamera_cyro topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[8]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml
@@ -17830,9 +17830,9 @@ Validate Mtcamera Telemetry MTCamera_cyro Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Telemetry MTCamera_cyro Topic Columns
+Validate MTCamera Telemetry MTCamera_cyro Topic Columns
 	[Documentation]    Validate the MTCamera_cyro topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[8]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml
@@ -17843,9 +17843,9 @@ Validate Mtcamera Telemetry MTCamera_cyro Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Telemetry MTCamera_purge Topic Byte Size
+Validate MTCamera Telemetry MTCamera_purge Topic Byte Size
 	[Documentation]    Validate the MTCamera_purge topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[9]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml
@@ -17867,9 +17867,9 @@ Validate Mtcamera Telemetry MTCamera_purge Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Telemetry MTCamera_purge Topic Columns
+Validate MTCamera Telemetry MTCamera_purge Topic Columns
 	[Documentation]    Validate the MTCamera_purge topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[9]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml
@@ -17880,9 +17880,9 @@ Validate Mtcamera Telemetry MTCamera_purge Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Telemetry MTCamera_wds Topic Byte Size
+Validate MTCamera Telemetry MTCamera_wds Topic Byte Size
 	[Documentation]    Validate the MTCamera_wds topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[10]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml
@@ -17904,9 +17904,9 @@ Validate Mtcamera Telemetry MTCamera_wds Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Telemetry MTCamera_wds Topic Columns
+Validate MTCamera Telemetry MTCamera_wds Topic Columns
 	[Documentation]    Validate the MTCamera_wds topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[10]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml
@@ -17917,9 +17917,9 @@ Validate Mtcamera Telemetry MTCamera_wds Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Telemetry MTCamera_gds Topic Byte Size
+Validate MTCamera Telemetry MTCamera_gds Topic Byte Size
 	[Documentation]    Validate the MTCamera_gds topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[11]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml
@@ -17941,9 +17941,9 @@ Validate Mtcamera Telemetry MTCamera_gds Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Telemetry MTCamera_gds Topic Columns
+Validate MTCamera Telemetry MTCamera_gds Topic Columns
 	[Documentation]    Validate the MTCamera_gds topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[11]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml
@@ -17954,9 +17954,9 @@ Validate Mtcamera Telemetry MTCamera_gds Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Telemetry MTCamera_sds Topic Byte Size
+Validate MTCamera Telemetry MTCamera_sds Topic Byte Size
 	[Documentation]    Validate the MTCamera_sds topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[12]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml
@@ -17978,9 +17978,9 @@ Validate Mtcamera Telemetry MTCamera_sds Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Telemetry MTCamera_sds Topic Columns
+Validate MTCamera Telemetry MTCamera_sds Topic Columns
 	[Documentation]    Validate the MTCamera_sds topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[12]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml
@@ -17991,9 +17991,9 @@ Validate Mtcamera Telemetry MTCamera_sds Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Telemetry MTCamera_gas Topic Byte Size
+Validate MTCamera Telemetry MTCamera_gas Topic Byte Size
 	[Documentation]    Validate the MTCamera_gas topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[13]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml
@@ -18015,9 +18015,9 @@ Validate Mtcamera Telemetry MTCamera_gas Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Telemetry MTCamera_gas Topic Columns
+Validate MTCamera Telemetry MTCamera_gas Topic Columns
 	[Documentation]    Validate the MTCamera_gas topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[13]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml
@@ -18028,9 +18028,9 @@ Validate Mtcamera Telemetry MTCamera_gas Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Telemetry MTCamera_pcms Topic Byte Size
+Validate MTCamera Telemetry MTCamera_pcms Topic Byte Size
 	[Documentation]    Validate the MTCamera_pcms topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[14]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml
@@ -18052,9 +18052,9 @@ Validate Mtcamera Telemetry MTCamera_pcms Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Telemetry MTCamera_pcms Topic Columns
+Validate MTCamera Telemetry MTCamera_pcms Topic Columns
 	[Documentation]    Validate the MTCamera_pcms topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[14]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml
@@ -18065,9 +18065,9 @@ Validate Mtcamera Telemetry MTCamera_pcms Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Telemetry MTCamera_sas Topic Byte Size
+Validate MTCamera Telemetry MTCamera_sas Topic Byte Size
 	[Documentation]    Validate the MTCamera_sas topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[15]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml
@@ -18089,9 +18089,9 @@ Validate Mtcamera Telemetry MTCamera_sas Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Telemetry MTCamera_sas Topic Columns
+Validate MTCamera Telemetry MTCamera_sas Topic Columns
 	[Documentation]    Validate the MTCamera_sas topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[15]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml
@@ -18102,9 +18102,9 @@ Validate Mtcamera Telemetry MTCamera_sas Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Mtcamera Telemetry MTCamera_cold Topic Byte Size
+Validate MTCamera Telemetry MTCamera_cold Topic Byte Size
 	[Documentation]    Validate the MTCamera_cold topic is less than 65536 bytes in total.
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[16]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml
@@ -18126,9 +18126,9 @@ Validate Mtcamera Telemetry MTCamera_cold Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Mtcamera Telemetry MTCamera_cold Topic Columns
+Validate MTCamera Telemetry MTCamera_cold Topic Columns
 	[Documentation]    Validate the MTCamera_cold topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Mtcamera
+	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[16]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml

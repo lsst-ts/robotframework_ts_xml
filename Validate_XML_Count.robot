@@ -592,25 +592,25 @@ Validate MTArchiver Telemetry XML Counts
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate Mtcamera Commands XML Counts
-	[Documentation]    Validate the Mtcamera Commands XML count.
-	[Tags]    smoke    Mtcamera
+Validate MTCamera Commands XML Counts
+	[Documentation]    Validate the MTCamera Commands XML count.
+	[Tags]    smoke    MTCamera
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/MTCamera/MTCamera_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate Mtcamera Events XML Counts
-	[Documentation]    Validate the Mtcamera Events XML count.
-	[Tags]    smoke    Mtcamera
+Validate MTCamera Events XML Counts
+	[Documentation]    Validate the MTCamera Events XML count.
+	[Tags]    smoke    MTCamera
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate Mtcamera Telemetry XML Counts
-	[Documentation]    Validate the Mtcamera Telemetry XML count.
-	[Tags]    smoke    Mtcamera
+Validate MTCamera Telemetry XML Counts
+	[Documentation]    Validate the MTCamera Telemetry XML count.
+	[Tags]    smoke    MTCamera
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
