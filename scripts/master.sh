@@ -1,3 +1,14 @@
+echo "=======Update ts_xml======="; 
+read -n 1 -p "Do you want to update ts_xml? [y]: " -e confirm
+confirm="${confirm:-"y"}"
+
+if [ "$confirm" == "y" ]; then
+	echo "Updating ts_xml..."
+	cd $HOME/trunk/ts_xml
+	git pull
+	cd ~-
+fi
+
 echo "=======Begin test generation======="; 
 echo "SAL Dictionary tests..."; python SAL_Dictionary.py; 
 echo "Generic topics tests..."; python SAL_Generics.py; 

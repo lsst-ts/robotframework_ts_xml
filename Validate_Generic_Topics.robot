@@ -41,7 +41,7 @@ Validate SALGenerics.xml Generic Events
 
 Validate SALGenerics.xml SummaryState Event Enumeration
 	[Documentation]    Validate the SALGenerics.xml defines the required enumerations.
-	[Tags]    smoke        TSS-3288
+	[Tags]    smoke    
 	Comment    Define CSC.
 	Comment    Get the SummaryState Event Enumerations.
 	${enums}=    Run    ${xml} sel -t -m "//SALEventSet/Enumeration" -v . -n ${folder}/sal_interfaces/SALGenerics.xml
@@ -50,7 +50,7 @@ Validate SALGenerics.xml SummaryState Event Enumeration
 
 Validate SALGenerics.xml DetailedState Event Enumeration
 	[Documentation]    Validate the SALGenerics.xml defines the required enumerations.
-	[Tags]    smoke        TSS-3288
+	[Tags]    smoke    
 	Comment    Define CSC.
 	Comment    Get the DetailedState Event Enumerations.
 	${enums}=    Run    ${xml} sel -t -m "//SALEventSet/Enumeration" -v . -n ${folder}/sal_interfaces/SALGenerics.xml
