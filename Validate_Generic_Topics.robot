@@ -39,24 +39,6 @@ Validate SALGenerics.xml Generic Events
 	\    ${string}=    Catenate   SEPARATOR=    SALGeneric_logevent_    ${item}
 	\    Run Keyword And Continue On Failure    Should Contain    ${Events}    ${string}
 
-Validate SALGenerics.xml SummaryState Event Enumeration
-	[Documentation]    Validate the SALGenerics.xml defines the required enumerations.
-	[Tags]    smoke    
-	Comment    Define CSC.
-	Comment    Get the SummaryState Event Enumerations.
-	${enums}=    Run    ${xml} sel -t -m "//SALEventSet/Enumeration" -v . -n ${folder}/sal_interfaces/SALGenerics.xml
-	:FOR    ${item}    IN    @{Summary}
-	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
-
-Validate SALGenerics.xml DetailedState Event Enumeration
-	[Documentation]    Validate the SALGenerics.xml defines the required enumerations.
-	[Tags]    smoke    
-	Comment    Define CSC.
-	Comment    Get the DetailedState Event Enumerations.
-	${enums}=    Run    ${xml} sel -t -m "//SALEventSet/Enumeration" -v . -n ${folder}/sal_interfaces/SALGenerics.xml
-	:FOR    ${item}    IN    @{Detailed}
-	\    Run Keyword And Continue On Failure    Should Contain    ${enums}    ${item}
-
 *** Keywords ***
 Create the Generic Commands Array
 	[Tags]    smoke
