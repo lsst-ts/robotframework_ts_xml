@@ -7335,8 +7335,8 @@ Validate ATTCS Command ATTCS_command_start Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATTCS Event ATTCS_logevent_appliedSettingsMatchStart Topic Byte Size
-	[Documentation]    Validate the ATTCS_logevent_appliedSettingsMatchStart topic is less than 65536 bytes in total.
+Validate ATTCS Event ATTCS_logevent_detailedState Topic Byte Size
+	[Documentation]    Validate the ATTCS_logevent_detailedState topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATTCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7359,8 +7359,8 @@ Validate ATTCS Event ATTCS_logevent_appliedSettingsMatchStart Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATTCS Event ATTCS_logevent_appliedSettingsMatchStart Topic Columns
-	[Documentation]    Validate the ATTCS_logevent_appliedSettingsMatchStart topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATTCS Event ATTCS_logevent_detailedState Topic Columns
+	[Documentation]    Validate the ATTCS_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7372,8 +7372,8 @@ Validate ATTCS Event ATTCS_logevent_appliedSettingsMatchStart Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATTCS Event ATTCS_logevent_errorCode Topic Byte Size
-	[Documentation]    Validate the ATTCS_logevent_errorCode topic is less than 65536 bytes in total.
+Validate ATTCS Event ATTCS_logevent_spectrographInPosition Topic Byte Size
+	[Documentation]    Validate the ATTCS_logevent_spectrographInPosition topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATTCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7396,8 +7396,8 @@ Validate ATTCS Event ATTCS_logevent_errorCode Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATTCS Event ATTCS_logevent_errorCode Topic Columns
-	[Documentation]    Validate the ATTCS_logevent_errorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATTCS Event ATTCS_logevent_spectrographInPosition Topic Columns
+	[Documentation]    Validate the ATTCS_logevent_spectrographInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7409,8 +7409,8 @@ Validate ATTCS Event ATTCS_logevent_errorCode Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATTCS Event ATTCS_logevent_summaryState Topic Byte Size
-	[Documentation]    Validate the ATTCS_logevent_summaryState topic is less than 65536 bytes in total.
+Validate ATTCS Event ATTCS_logevent_telescopeInPosition Topic Byte Size
+	[Documentation]    Validate the ATTCS_logevent_telescopeInPosition topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATTCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7433,8 +7433,8 @@ Validate ATTCS Event ATTCS_logevent_summaryState Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATTCS Event ATTCS_logevent_summaryState Topic Columns
-	[Documentation]    Validate the ATTCS_logevent_summaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATTCS Event ATTCS_logevent_telescopeInPosition Topic Columns
+	[Documentation]    Validate the ATTCS_logevent_telescopeInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7446,8 +7446,8 @@ Validate ATTCS Event ATTCS_logevent_summaryState Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATTCS Event ATTCS_logevent_detailedState Topic Byte Size
-	[Documentation]    Validate the ATTCS_logevent_detailedState topic is less than 65536 bytes in total.
+Validate ATTCS Event ATTCS_logevent_rejectedCommand Topic Byte Size
+	[Documentation]    Validate the ATTCS_logevent_rejectedCommand topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATTCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7470,8 +7470,8 @@ Validate ATTCS Event ATTCS_logevent_detailedState Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATTCS Event ATTCS_logevent_detailedState Topic Columns
-	[Documentation]    Validate the ATTCS_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATTCS Event ATTCS_logevent_rejectedCommand Topic Columns
+	[Documentation]    Validate the ATTCS_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7483,8 +7483,8 @@ Validate ATTCS Event ATTCS_logevent_detailedState Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATTCS Event ATTCS_logevent_spectrographInPosition Topic Byte Size
-	[Documentation]    Validate the ATTCS_logevent_spectrographInPosition topic is less than 65536 bytes in total.
+Validate ATTCS Event ATTCS_logevent_internalCommand Topic Byte Size
+	[Documentation]    Validate the ATTCS_logevent_internalCommand topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATTCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7507,8 +7507,8 @@ Validate ATTCS Event ATTCS_logevent_spectrographInPosition Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATTCS Event ATTCS_logevent_spectrographInPosition Topic Columns
-	[Documentation]    Validate the ATTCS_logevent_spectrographInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATTCS Event ATTCS_logevent_internalCommand Topic Columns
+	[Documentation]    Validate the ATTCS_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7520,8 +7520,8 @@ Validate ATTCS Event ATTCS_logevent_spectrographInPosition Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATTCS Event ATTCS_logevent_telescopeInPosition Topic Byte Size
-	[Documentation]    Validate the ATTCS_logevent_telescopeInPosition topic is less than 65536 bytes in total.
+Validate ATTCS Event ATTCS_logevent_heartbeat Topic Byte Size
+	[Documentation]    Validate the ATTCS_logevent_heartbeat topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATTCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7544,8 +7544,8 @@ Validate ATTCS Event ATTCS_logevent_telescopeInPosition Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATTCS Event ATTCS_logevent_telescopeInPosition Topic Columns
-	[Documentation]    Validate the ATTCS_logevent_telescopeInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATTCS Event ATTCS_logevent_heartbeat Topic Columns
+	[Documentation]    Validate the ATTCS_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7557,8 +7557,8 @@ Validate ATTCS Event ATTCS_logevent_telescopeInPosition Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATTCS Event ATTCS_logevent_rejectedCommand Topic Byte Size
-	[Documentation]    Validate the ATTCS_logevent_rejectedCommand topic is less than 65536 bytes in total.
+Validate ATTCS Event ATTCS_logevent_loopTimeOutOfRange Topic Byte Size
+	[Documentation]    Validate the ATTCS_logevent_loopTimeOutOfRange topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATTCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7581,8 +7581,8 @@ Validate ATTCS Event ATTCS_logevent_rejectedCommand Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATTCS Event ATTCS_logevent_rejectedCommand Topic Columns
-	[Documentation]    Validate the ATTCS_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATTCS Event ATTCS_logevent_loopTimeOutOfRange Topic Columns
+	[Documentation]    Validate the ATTCS_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7594,8 +7594,8 @@ Validate ATTCS Event ATTCS_logevent_rejectedCommand Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATTCS Event ATTCS_logevent_internalCommand Topic Byte Size
-	[Documentation]    Validate the ATTCS_logevent_internalCommand topic is less than 65536 bytes in total.
+Validate ATTCS Event ATTCS_logevent_settingsApplied_Example Topic Byte Size
+	[Documentation]    Validate the ATTCS_logevent_settingsApplied_Example topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATTCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7618,161 +7618,13 @@ Validate ATTCS Event ATTCS_logevent_internalCommand Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATTCS Event ATTCS_logevent_internalCommand Topic Columns
-	[Documentation]    Validate the ATTCS_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    ATTCS
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/ATTCS/ATTCS_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/Count" -v . -n ${folder}/sal_interfaces/ATTCS/ATTCS_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate ATTCS Event ATTCS_logevent_heartbeat Topic Byte Size
-	[Documentation]    Validate the ATTCS_logevent_heartbeat topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATTCS
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/ATTCS/ATTCS_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/Count" -v . -n ${folder}/sal_interfaces/ATTCS/ATTCS_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATTCS/ATTCS_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate ATTCS Event ATTCS_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the ATTCS_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    ATTCS
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/ATTCS/ATTCS_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/Count" -v . -n ${folder}/sal_interfaces/ATTCS/ATTCS_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate ATTCS Event ATTCS_logevent_settingVersions Topic Byte Size
-	[Documentation]    Validate the ATTCS_logevent_settingVersions topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATTCS
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/ATTCS/ATTCS_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/Count" -v . -n ${folder}/sal_interfaces/ATTCS/ATTCS_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATTCS/ATTCS_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate ATTCS Event ATTCS_logevent_settingVersions Topic Columns
-	[Documentation]    Validate the ATTCS_logevent_settingVersions topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    ATTCS
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/ATTCS/ATTCS_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/Count" -v . -n ${folder}/sal_interfaces/ATTCS/ATTCS_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate ATTCS Event ATTCS_logevent_loopTimeOutOfRange Topic Byte Size
-	[Documentation]    Validate the ATTCS_logevent_loopTimeOutOfRange topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATTCS
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/ATTCS/ATTCS_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[11]/item/Count" -v . -n ${folder}/sal_interfaces/ATTCS/ATTCS_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[11]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATTCS/ATTCS_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate ATTCS Event ATTCS_logevent_loopTimeOutOfRange Topic Columns
-	[Documentation]    Validate the ATTCS_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    ATTCS
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/ATTCS/ATTCS_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[11]/item/Count" -v . -n ${folder}/sal_interfaces/ATTCS/ATTCS_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate ATTCS Event ATTCS_logevent_settingsApplied_Example Topic Byte Size
-	[Documentation]    Validate the ATTCS_logevent_settingsApplied_Example topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATTCS
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[12]/item)" -n ${folder}/sal_interfaces/ATTCS/ATTCS_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[12]/item/Count" -v . -n ${folder}/sal_interfaces/ATTCS/ATTCS_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[12]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATTCS/ATTCS_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
 Validate ATTCS Event ATTCS_logevent_settingsApplied_Example Topic Columns
 	[Documentation]    Validate the ATTCS_logevent_settingsApplied_Example topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[12]/item)" -n ${folder}/sal_interfaces/ATTCS/ATTCS_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[12]/item/Count" -v . -n ${folder}/sal_interfaces/ATTCS/ATTCS_Events.xml
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/ATTCS/ATTCS_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/Count" -v . -n ${folder}/sal_interfaces/ATTCS/ATTCS_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
