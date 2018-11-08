@@ -105,6 +105,7 @@ for subsystem in xml_common.subsystems:
 		file.write("\t${events}=    Run    ${xml} sel -t -m \"//SALEventSet/SALEvent/EFDB_Topic\" -v . -n ${folder}/sal_interfaces/" + subsystem + "/" + subsystem + "_Events.xml\n")
 		file.write("\tLog    ${events}\n")
 		file.write("\t:FOR    ${item}    IN    @{GenericEvents}\n")
+		file.write("\t\    Log Many    ${events}    " + subsystem + "_logevent_${item}\n")
 		file.write("\t\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    " + subsystem + "_logevent_${item}\n")
 		file.write("\n")
 

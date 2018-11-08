@@ -46,6 +46,7 @@ Validate ATArchiver_Events.xml Does Not Contain Generic Events
 	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/ATArchiver/ATArchiver_Events.xml
 	Log    ${events}
 	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    ATArchiver_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    ATArchiver_logevent_${item}
 
 Validate ATArchiver_Commands.xml Does Not Contain Generic Commands
@@ -63,6 +64,7 @@ Validate ATCamera_Events.xml Does Not Contain Generic Events
 	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/ATCamera/ATCamera_Events.xml
 	Log    ${events}
 	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    ATCamera_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    ATCamera_logevent_${item}
 
 Validate ATCamera_Commands.xml Does Not Contain Generic Commands
@@ -80,6 +82,7 @@ Validate ATDome_Events.xml Does Not Contain Generic Events
 	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/ATDome/ATDome_Events.xml
 	Log    ${events}
 	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    ATDome_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    ATDome_logevent_${item}
 
 Validate ATDome_Commands.xml Does Not Contain Generic Commands
@@ -97,6 +100,7 @@ Validate ATHeaderService_Events.xml Does Not Contain Generic Events
 	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/ATHeaderService/ATHeaderService_Events.xml
 	Log    ${events}
 	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    ATHeaderService_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    ATHeaderService_logevent_${item}
 
 Validate ATMCS_Events.xml Does Not Contain Generic Events
@@ -106,6 +110,7 @@ Validate ATMCS_Events.xml Does Not Contain Generic Events
 	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/ATMCS/ATMCS_Events.xml
 	Log    ${events}
 	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    ATMCS_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    ATMCS_logevent_${item}
 
 Validate ATMCS_Commands.xml Does Not Contain Generic Commands
@@ -123,6 +128,7 @@ Validate ATMonochromator_Events.xml Does Not Contain Generic Events
 	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/ATMonochromator/ATMonochromator_Events.xml
 	Log    ${events}
 	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    ATMonochromator_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    ATMonochromator_logevent_${item}
 
 Validate ATMonochromator_Commands.xml Does Not Contain Generic Commands
@@ -140,6 +146,7 @@ Validate ATPneumatics_Events.xml Does Not Contain Generic Events
 	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/ATPneumatics/ATPneumatics_Events.xml
 	Log    ${events}
 	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    ATPneumatics_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    ATPneumatics_logevent_${item}
 
 Validate ATPneumatics_Commands.xml Does Not Contain Generic Commands
@@ -157,6 +164,7 @@ Validate ATSpectrograph_Events.xml Does Not Contain Generic Events
 	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/ATSpectrograph/ATSpectrograph_Events.xml
 	Log    ${events}
 	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    ATSpectrograph_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    ATSpectrograph_logevent_${item}
 
 Validate ATSpectrograph_Commands.xml Does Not Contain Generic Commands
@@ -174,6 +182,7 @@ Validate ATTCS_Events.xml Does Not Contain Generic Events
 	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/ATTCS/ATTCS_Events.xml
 	Log    ${events}
 	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    ATTCS_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    ATTCS_logevent_${item}
 
 Validate ATTCS_Commands.xml Does Not Contain Generic Commands
@@ -191,6 +200,7 @@ Validate ATThermoelectricCooler_Events.xml Does Not Contain Generic Events
 	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/ATThermoelectricCooler/ATThermoelectricCooler_Events.xml
 	Log    ${events}
 	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    ATThermoelectricCooler_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    ATThermoelectricCooler_logevent_${item}
 
 Validate ATThermoelectricCooler_Commands.xml Does Not Contain Generic Commands
@@ -208,6 +218,7 @@ Validate ATWhiteLight_Events.xml Does Not Contain Generic Events
 	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Events.xml
 	Log    ${events}
 	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    ATWhiteLight_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    ATWhiteLight_logevent_${item}
 
 Validate ATWhiteLight_Commands.xml Does Not Contain Generic Commands
@@ -225,6 +236,7 @@ Validate CatchupArchiver_Events.xml Does Not Contain Generic Events
 	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Events.xml
 	Log    ${events}
 	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    CatchupArchiver_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    CatchupArchiver_logevent_${item}
 
 Validate CBP_Commands.xml Does Not Contain Generic Commands
@@ -242,6 +254,7 @@ Validate Dome_Events.xml Does Not Contain Generic Events
 	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/Dome/Dome_Events.xml
 	Log    ${events}
 	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    Dome_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    Dome_logevent_${item}
 
 Validate Dome_Commands.xml Does Not Contain Generic Commands
@@ -259,6 +272,7 @@ Validate DomeADB_Events.xml Does Not Contain Generic Events
 	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
 	Log    ${events}
 	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    DomeADB_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    DomeADB_logevent_${item}
 
 Validate DomeADB_Commands.xml Does Not Contain Generic Commands
@@ -276,6 +290,7 @@ Validate DomeAPS_Events.xml Does Not Contain Generic Events
 	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
 	Log    ${events}
 	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    DomeAPS_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    DomeAPS_logevent_${item}
 
 Validate DomeAPS_Commands.xml Does Not Contain Generic Commands
@@ -293,6 +308,7 @@ Validate DomeLouvers_Events.xml Does Not Contain Generic Events
 	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml
 	Log    ${events}
 	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    DomeLouvers_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    DomeLouvers_logevent_${item}
 
 Validate DomeLouvers_Commands.xml Does Not Contain Generic Commands
@@ -310,6 +326,7 @@ Validate DomeLWS_Events.xml Does Not Contain Generic Events
 	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
 	Log    ${events}
 	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    DomeLWS_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    DomeLWS_logevent_${item}
 
 Validate DomeLWS_Commands.xml Does Not Contain Generic Commands
@@ -327,6 +344,7 @@ Validate DomeMONCS_Events.xml Does Not Contain Generic Events
 	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Events.xml
 	Log    ${events}
 	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    DomeMONCS_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    DomeMONCS_logevent_${item}
 
 Validate DomeMONCS_Commands.xml Does Not Contain Generic Commands
@@ -344,6 +362,7 @@ Validate DomeTHCS_Events.xml Does Not Contain Generic Events
 	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Events.xml
 	Log    ${events}
 	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    DomeTHCS_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    DomeTHCS_logevent_${item}
 
 Validate DomeTHCS_Commands.xml Does Not Contain Generic Commands
@@ -361,6 +380,7 @@ Validate EEC_Events.xml Does Not Contain Generic Events
 	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/EEC/EEC_Events.xml
 	Log    ${events}
 	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    EEC_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    EEC_logevent_${item}
 
 Validate EEC_Commands.xml Does Not Contain Generic Commands
@@ -378,6 +398,7 @@ Validate EFD_Events.xml Does Not Contain Generic Events
 	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/EFD/EFD_Events.xml
 	Log    ${events}
 	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    EFD_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    EFD_logevent_${item}
 
 Validate Electrometer_Events.xml Does Not Contain Generic Events
@@ -387,6 +408,7 @@ Validate Electrometer_Events.xml Does Not Contain Generic Events
 	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/Electrometer/Electrometer_Events.xml
 	Log    ${events}
 	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    Electrometer_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    Electrometer_logevent_${item}
 
 Validate Electrometer_Commands.xml Does Not Contain Generic Commands
@@ -404,6 +426,7 @@ Validate FiberSpectrograph_Events.xml Does Not Contain Generic Events
 	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
 	Log    ${events}
 	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    FiberSpectrograph_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    FiberSpectrograph_logevent_${item}
 
 Validate FiberSpectrograph_Commands.xml Does Not Contain Generic Commands
@@ -421,6 +444,7 @@ Validate Hexapod_Events.xml Does Not Contain Generic Events
 	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/Hexapod/Hexapod_Events.xml
 	Log    ${events}
 	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    Hexapod_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    Hexapod_logevent_${item}
 
 Validate Hexapod_Commands.xml Does Not Contain Generic Commands
@@ -446,6 +470,7 @@ Validate MTArchiver_Events.xml Does Not Contain Generic Events
 	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/MTArchiver/MTArchiver_Events.xml
 	Log    ${events}
 	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    MTArchiver_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    MTArchiver_logevent_${item}
 
 Validate MTCamera_Events.xml Does Not Contain Generic Events
@@ -455,6 +480,7 @@ Validate MTCamera_Events.xml Does Not Contain Generic Events
 	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
 	Log    ${events}
 	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    MTCamera_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    MTCamera_logevent_${item}
 
 Validate MTCamera_Commands.xml Does Not Contain Generic Commands
@@ -472,6 +498,7 @@ Validate MTHeaderService_Events.xml Does Not Contain Generic Events
 	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Events.xml
 	Log    ${events}
 	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    MTHeaderService_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    MTHeaderService_logevent_${item}
 
 Validate MTM1M3_Events.xml Does Not Contain Generic Events
@@ -481,6 +508,7 @@ Validate MTM1M3_Events.xml Does Not Contain Generic Events
 	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Events.xml
 	Log    ${events}
 	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    MTM1M3_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    MTM1M3_logevent_${item}
 
 Validate MTM1M3_Commands.xml Does Not Contain Generic Commands
@@ -498,6 +526,7 @@ Validate MTM2_Events.xml Does Not Contain Generic Events
 	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/MTM2/MTM2_Events.xml
 	Log    ${events}
 	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    MTM2_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    MTM2_logevent_${item}
 
 Validate MTM2_Commands.xml Does Not Contain Generic Commands
@@ -515,6 +544,7 @@ Validate MTMount_Events.xml Does Not Contain Generic Events
 	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Events.xml
 	Log    ${events}
 	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    MTMount_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    MTMount_logevent_${item}
 
 Validate MTMount_Commands.xml Does Not Contain Generic Commands
@@ -532,6 +562,7 @@ Validate MTOFC_Events.xml Does Not Contain Generic Events
 	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/MTOFC/MTOFC_Events.xml
 	Log    ${events}
 	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    MTOFC_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    MTOFC_logevent_${item}
 
 Validate MTOFC_Commands.xml Does Not Contain Generic Commands
@@ -549,6 +580,7 @@ Validate MTWEP_Events.xml Does Not Contain Generic Events
 	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/MTWEP/MTWEP_Events.xml
 	Log    ${events}
 	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    MTWEP_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    MTWEP_logevent_${item}
 
 Validate OCS_Events.xml Does Not Contain Generic Events
@@ -558,6 +590,7 @@ Validate OCS_Events.xml Does Not Contain Generic Events
 	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/OCS/OCS_Events.xml
 	Log    ${events}
 	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    OCS_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    OCS_logevent_${item}
 
 Validate OCS_Commands.xml Does Not Contain Generic Commands
@@ -575,6 +608,7 @@ Validate PromptProcessing_Events.xml Does Not Contain Generic Events
 	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
 	Log    ${events}
 	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    PromptProcessing_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    PromptProcessing_logevent_${item}
 
 Validate Rotator_Events.xml Does Not Contain Generic Events
@@ -584,6 +618,7 @@ Validate Rotator_Events.xml Does Not Contain Generic Events
 	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/Rotator/Rotator_Events.xml
 	Log    ${events}
 	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    Rotator_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    Rotator_logevent_${item}
 
 Validate Rotator_Commands.xml Does Not Contain Generic Commands
@@ -601,6 +636,7 @@ Validate Scheduler_Events.xml Does Not Contain Generic Events
 	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/Scheduler/Scheduler_Events.xml
 	Log    ${events}
 	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    Scheduler_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    Scheduler_logevent_${item}
 
 Validate Sequencer_Events.xml Does Not Contain Generic Events
@@ -610,6 +646,7 @@ Validate Sequencer_Events.xml Does Not Contain Generic Events
 	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/Sequencer/Sequencer_Events.xml
 	Log    ${events}
 	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    Sequencer_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    Sequencer_logevent_${item}
 
 Validate Sequencer_Commands.xml Does Not Contain Generic Commands
@@ -627,6 +664,7 @@ Validate SummitFacility_Events.xml Does Not Contain Generic Events
 	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Events.xml
 	Log    ${events}
 	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    SummitFacility_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    SummitFacility_logevent_${item}
 
 Validate MTTCS_Events.xml Does Not Contain Generic Events
@@ -636,6 +674,7 @@ Validate MTTCS_Events.xml Does Not Contain Generic Events
 	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
 	Log    ${events}
 	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    MTTCS_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    MTTCS_logevent_${item}
 
 Validate MTTCS_Commands.xml Does Not Contain Generic Commands
@@ -653,6 +692,7 @@ Validate Test_Events.xml Does Not Contain Generic Events
 	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/Test/Test_Events.xml
 	Log    ${events}
 	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    Test_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    Test_logevent_${item}
 
 Validate Test_Commands.xml Does Not Contain Generic Commands
@@ -670,6 +710,7 @@ Validate TunableLaser_Events.xml Does Not Contain Generic Events
 	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/TunableLaser/TunableLaser_Events.xml
 	Log    ${events}
 	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    TunableLaser_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    TunableLaser_logevent_${item}
 
 Validate TunableLaser_Commands.xml Does Not Contain Generic Commands
@@ -687,6 +728,7 @@ Validate MTVMS_Events.xml Does Not Contain Generic Events
 	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/MTVMS/MTVMS_Events.xml
 	Log    ${events}
 	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    MTVMS_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    MTVMS_logevent_${item}
 
 Validate MTVMS_Commands.xml Does Not Contain Generic Commands
