@@ -498,13 +498,6 @@ Validate LinearStage Commands
 	Log    ${output}
 	Should Contain    ${output}   LinearStage_Commands.xml - valid
 
-Validate LinearStage Events
-	[Documentation]    Validate the LinearStage Events XML file.
-	[Tags]    smoke    LinearStage
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   LinearStage_Events.xml - valid
-
 Validate LinearStage Telemetry
 	[Documentation]    Validate the LinearStage Telemetry XML file.
 	[Tags]    smoke    LinearStage

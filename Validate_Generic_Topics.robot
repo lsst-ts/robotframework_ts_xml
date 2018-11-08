@@ -431,15 +431,6 @@ Validate Hexapod_Commands.xml Does Not Contain Generic Commands
 	:FOR    ${generic}    IN    @{GenericCommands}
 	\    Run Keyword And Continue On Failure    Test Commands    ${commands}    Hexapod_command_${generic}
 
-Validate LinearStage_Events.xml Does Not Contain Generic Events
-	[Documentation]    Validate the LinearStage_Events.xml does not contain Generic Events.
-	[Tags]    smoke    
-	Comment    Get the CSC Events.
-	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
-	Log    ${events}
-	:FOR    ${item}    IN    @{GenericEvents}
-	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    LinearStage_logevent_${item}
-
 Validate LinearStage_Commands.xml Does Not Contain Generic Commands
 	[Documentation]    Validate the LinearStage_Commands.xml does not contain Generic Commands.
 	[Tags]    smoke    

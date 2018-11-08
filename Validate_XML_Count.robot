@@ -568,14 +568,6 @@ Validate LinearStage Commands XML Counts
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate LinearStage Events XML Counts
-	[Documentation]    Validate the LinearStage Events XML count.
-	[Tags]    smoke    LinearStage
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
 Validate LinearStage Telemetry XML Counts
 	[Documentation]    Validate the LinearStage Telemetry XML count.
 	[Tags]    smoke    LinearStage

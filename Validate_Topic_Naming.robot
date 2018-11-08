@@ -639,15 +639,6 @@ Validate LinearStage Commands Topic Names
 	: FOR    ${item}    IN    @{topics}
 	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
 
-Validate LinearStage Events Topic Names
-	[Documentation]    Validate the LinearStage Events topic names conform to naming convention.
-	[Tags]    smoke    LinearStage    
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml |sed -e 's/\\n/,/g'
-	Log    ${output}
-	@{topics}=    Split to Lines    ${output}
-	: FOR    ${item}    IN    @{topics}
-	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
-
 Validate LinearStage Telemetry Topic Names
 	[Documentation]    Validate the LinearStage Telemetry topic names conform to naming convention.
 	[Tags]    smoke    LinearStage    
