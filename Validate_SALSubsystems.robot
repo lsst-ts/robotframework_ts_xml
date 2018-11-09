@@ -107,7 +107,7 @@ Validate ATDome Generics Element
 	[Tags]    smoke    ATDome
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[6]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    ATDome has Generics: ${output}
-	Should Be Equal As Strings    ${output}    no
+	Should Be Equal As Strings    ${output}    yes
 
 Validate ATMCS Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
@@ -135,7 +135,7 @@ Validate ATPneumatics Generics Element
 	[Tags]    smoke    ATPneumatics
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[8]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    ATPneumatics has Generics: ${output}
-	Should Be Equal As Strings    ${output}    no
+	Should Be Equal As Strings    ${output}    yes
 
 Validate ATHeaderService Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
@@ -163,7 +163,7 @@ Validate ATHexapod Generics Element
 	[Tags]    smoke    ATHexapod
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[10]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    ATHexapod has Generics: ${output}
-	Should Be Equal As Strings    ${output}    no
+	Should Be Equal As Strings    ${output}    yes
 
 Validate ATMonochromator Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
@@ -247,7 +247,7 @@ Validate Electrometer Generics Element
 	[Tags]    smoke    Electrometer
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[16]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    Electrometer has Generics: ${output}
-	Should Be Equal As Strings    ${output}    no
+	Should Be Equal As Strings    ${output}    yes
 
 Validate MTCamera Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.

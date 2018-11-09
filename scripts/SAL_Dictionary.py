@@ -109,14 +109,6 @@ for csc in cscs:
 
 	if csc == "Script":
 		value="no"
-	elif csc == "ATDome":
-		value="no"
-	elif csc == "ATHexapod":
-		value="no"
-	elif csc == "ATPneumatics":
-		value="no"
-	elif csc == "Electrometer":
-		value="no"
 	else:
 		value="yes"
 
