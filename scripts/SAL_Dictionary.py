@@ -54,7 +54,7 @@ file.write("\t[Documentation]    Validate the number of defined CSCs matches exp
 file.write("\t[Tags]    smoke\n")
 file.write("\t${output}=    Run    ${xml} sel -t -m \"//SALSubsystems/Subsystem/Name\" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml |sort |wc -l |sed -e 's/ //g'\n")
 file.write("\tLog    ${output}\n")
-file.write("\tShould Be Equal As Integers    ${output}    48\n")
+file.write("\tShould Be Equal As Integers    ${output}    49\n")
 file.write("\n")
 
 # Get the list of XMLs for each CSC, to include Telemetry, Events and Commands.
@@ -109,8 +109,17 @@ for csc in cscs:
 
 	if csc == "Script":
 		value="no"
+	elif csc == "ATDome":
+		value="no"
+	elif csc == "ATHexapod":
+		value="no"
+	elif csc == "ATPneumatics":
+		value="no"
+	elif csc == "Electrometer":
+		value="no"
 	else:
 		value="yes"
+
 	file.write("Validate " + xml_common.CapitalizeSubsystem(csc) + " Generics Element\n")
 	file.write("\t[Documentation]    Validate the " + sal_dict_file + " dictionary correctly defines the <Generics> element.\n")
 	file.write("\t[Tags]    smoke    " + csc + skipped + "\n")

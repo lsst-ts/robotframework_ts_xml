@@ -32,6 +32,12 @@ Validate ATHeaderService Events XML file
 	Log    ${output}
 	Should Contain    ${output}   ATHeaderService_Events.xml - valid
 
+Validate ATHexapod Events XML file
+	[Tags]    smoke    ATHexapod
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/ATHexapod/ATHexapod_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   ATHexapod_Events.xml - valid
+
 Validate ATMCS Events XML file
 	[Tags]    smoke    ATMCS
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/ATMCS/ATMCS_Events.xml

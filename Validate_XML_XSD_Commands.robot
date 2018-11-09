@@ -26,6 +26,12 @@ Validate ATDome Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   ATDome_Commands.xml - valid
 
+Validate ATHexapod Commands XML file
+	[Tags]    smoke    ATHexapod
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/ATHexapod/ATHexapod_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   ATHexapod_Commands.xml - valid
+
 Validate ATMCS Commands XML file
 	[Tags]    smoke    ATMCS
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/ATMCS/ATMCS_Commands.xml

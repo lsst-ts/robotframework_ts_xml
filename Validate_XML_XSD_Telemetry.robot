@@ -26,6 +26,12 @@ Validate ATDome Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   ATDome_Telemetry.xml - valid
 
+Validate ATHexapod Telemetry XML file
+	[Tags]    smoke    ATHexapod
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/ATHexapod/ATHexapod_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   ATHexapod_Telemetry.xml - valid
+
 Validate ATMCS Telemetry XML file
 	[Tags]    smoke    ATMCS
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/ATMCS/ATMCS_Telemetry.xml

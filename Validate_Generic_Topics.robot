@@ -103,6 +103,24 @@ Validate ATHeaderService_Events.xml Does Not Contain Generic Events
 	\    Log Many    ${events}    ATHeaderService_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    ATHeaderService_logevent_${item}
 
+Validate ATHexapod_Events.xml Does Not Contain Generic Events
+	[Documentation]    Validate the ATHexapod_Events.xml does not contain Generic Events.
+	[Tags]    smoke    
+	Comment    Get the CSC Events.
+	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Events.xml
+	Log    ${events}
+	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    ATHexapod_logevent_${item}
+	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    ATHexapod_logevent_${item}
+
+Validate ATHexapod_Commands.xml Does Not Contain Generic Commands
+	[Documentation]    Validate the ATHexapod_Commands.xml does not contain Generic Commands.
+	[Tags]    smoke    
+	Comment    Get the CSC Commands.
+	${commands}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Commands.xml
+	:FOR    ${generic}    IN    @{GenericCommands}
+	\    Run Keyword And Continue On Failure    Test Commands    ${commands}    ATHexapod_command_${generic}
+
 Validate ATMCS_Events.xml Does Not Contain Generic Events
 	[Documentation]    Validate the ATMCS_Events.xml does not contain Generic Events.
 	[Tags]    smoke    

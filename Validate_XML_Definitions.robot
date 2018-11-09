@@ -78,6 +78,27 @@ Validate ATHeaderService Events
 	Log    ${output}
 	Should Contain    ${output}   ATHeaderService_Events.xml - valid
 
+Validate ATHexapod Commands
+	[Documentation]    Validate the ATHexapod Commands XML file.
+	[Tags]    smoke    ATHexapod
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ATHexapod/ATHexapod_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   ATHexapod_Commands.xml - valid
+
+Validate ATHexapod Events
+	[Documentation]    Validate the ATHexapod Events XML file.
+	[Tags]    smoke    ATHexapod
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ATHexapod/ATHexapod_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   ATHexapod_Events.xml - valid
+
+Validate ATHexapod Telemetry
+	[Documentation]    Validate the ATHexapod Telemetry XML file.
+	[Tags]    smoke    ATHexapod
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ATHexapod/ATHexapod_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   ATHexapod_Telemetry.xml - valid
+
 Validate ATMCS Commands
 	[Documentation]    Validate the ATMCS Commands XML file.
 	[Tags]    smoke    ATMCS
