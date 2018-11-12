@@ -8408,8 +8408,8 @@ Validate ATThermoelectricCooler Command ATThermoelectricCooler_command_powerChil
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_internalCommand Topic Byte Size
-	[Documentation]    Validate the ATThermoelectricCooler_logevent_internalCommand topic is less than 65536 bytes in total.
+Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_detailedState Topic Byte Size
+	[Documentation]    Validate the ATThermoelectricCooler_logevent_detailedState topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATThermoelectricCooler
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8432,8 +8432,8 @@ Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_internalCo
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_internalCommand Topic Columns
-	[Documentation]    Validate the ATThermoelectricCooler_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_detailedState Topic Columns
+	[Documentation]    Validate the ATThermoelectricCooler_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATThermoelectricCooler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8445,8 +8445,8 @@ Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_internalCo
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_heartbeat Topic Byte Size
-	[Documentation]    Validate the ATThermoelectricCooler_logevent_heartbeat topic is less than 65536 bytes in total.
+Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_internalCommand Topic Byte Size
+	[Documentation]    Validate the ATThermoelectricCooler_logevent_internalCommand topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATThermoelectricCooler
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8469,8 +8469,8 @@ Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_heartbeat 
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the ATThermoelectricCooler_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_internalCommand Topic Columns
+	[Documentation]    Validate the ATThermoelectricCooler_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATThermoelectricCooler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8482,8 +8482,8 @@ Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_heartbeat 
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_loopTimeOutOfRange Topic Byte Size
-	[Documentation]    Validate the ATThermoelectricCooler_logevent_loopTimeOutOfRange topic is less than 65536 bytes in total.
+Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_heartbeat Topic Byte Size
+	[Documentation]    Validate the ATThermoelectricCooler_logevent_heartbeat topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATThermoelectricCooler
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8506,8 +8506,8 @@ Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_loopTimeOu
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_loopTimeOutOfRange Topic Columns
-	[Documentation]    Validate the ATThermoelectricCooler_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_heartbeat Topic Columns
+	[Documentation]    Validate the ATThermoelectricCooler_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATThermoelectricCooler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8519,8 +8519,8 @@ Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_loopTimeOu
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_rejectedCommand Topic Byte Size
-	[Documentation]    Validate the ATThermoelectricCooler_logevent_rejectedCommand topic is less than 65536 bytes in total.
+Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_loopTimeOutOfRange Topic Byte Size
+	[Documentation]    Validate the ATThermoelectricCooler_logevent_loopTimeOutOfRange topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATThermoelectricCooler
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8543,8 +8543,8 @@ Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_rejectedCo
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_rejectedCommand Topic Columns
-	[Documentation]    Validate the ATThermoelectricCooler_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_loopTimeOutOfRange Topic Columns
+	[Documentation]    Validate the ATThermoelectricCooler_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATThermoelectricCooler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8556,8 +8556,8 @@ Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_rejectedCo
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_deviceErrorCode Topic Byte Size
-	[Documentation]    Validate the ATThermoelectricCooler_logevent_deviceErrorCode topic is less than 65536 bytes in total.
+Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_rejectedCommand Topic Byte Size
+	[Documentation]    Validate the ATThermoelectricCooler_logevent_rejectedCommand topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATThermoelectricCooler
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8580,8 +8580,8 @@ Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_deviceErro
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_deviceErrorCode Topic Columns
-	[Documentation]    Validate the ATThermoelectricCooler_logevent_deviceErrorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_rejectedCommand Topic Columns
+	[Documentation]    Validate the ATThermoelectricCooler_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATThermoelectricCooler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8593,8 +8593,8 @@ Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_deviceErro
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_hardwareWarning Topic Byte Size
-	[Documentation]    Validate the ATThermoelectricCooler_logevent_hardwareWarning topic is less than 65536 bytes in total.
+Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_deviceErrorCode Topic Byte Size
+	[Documentation]    Validate the ATThermoelectricCooler_logevent_deviceErrorCode topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATThermoelectricCooler
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8617,8 +8617,8 @@ Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_hardwareWa
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_hardwareWarning Topic Columns
-	[Documentation]    Validate the ATThermoelectricCooler_logevent_hardwareWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_deviceErrorCode Topic Columns
+	[Documentation]    Validate the ATThermoelectricCooler_logevent_deviceErrorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATThermoelectricCooler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8630,8 +8630,8 @@ Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_hardwareWa
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_temperatureReached Topic Byte Size
-	[Documentation]    Validate the ATThermoelectricCooler_logevent_temperatureReached topic is less than 65536 bytes in total.
+Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_hardwareWarning Topic Byte Size
+	[Documentation]    Validate the ATThermoelectricCooler_logevent_hardwareWarning topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATThermoelectricCooler
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8654,13 +8654,50 @@ Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_temperatur
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_temperatureReached Topic Columns
-	[Documentation]    Validate the ATThermoelectricCooler_logevent_temperatureReached topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_hardwareWarning Topic Columns
+	[Documentation]    Validate the ATThermoelectricCooler_logevent_hardwareWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATThermoelectricCooler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/ATThermoelectricCooler/ATThermoelectricCooler_Events.xml
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/Count" -v . -n ${folder}/sal_interfaces/ATThermoelectricCooler/ATThermoelectricCooler_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_temperatureReached Topic Byte Size
+	[Documentation]    Validate the ATThermoelectricCooler_logevent_temperatureReached topic is less than 65536 bytes in total.
+	[Tags]    smoke    ATThermoelectricCooler
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/ATThermoelectricCooler/ATThermoelectricCooler_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/Count" -v . -n ${folder}/sal_interfaces/ATThermoelectricCooler/ATThermoelectricCooler_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATThermoelectricCooler/ATThermoelectricCooler_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_temperatureReached Topic Columns
+	[Documentation]    Validate the ATThermoelectricCooler_logevent_temperatureReached topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    ATThermoelectricCooler
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/ATThermoelectricCooler/ATThermoelectricCooler_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/Count" -v . -n ${folder}/sal_interfaces/ATThermoelectricCooler/ATThermoelectricCooler_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
