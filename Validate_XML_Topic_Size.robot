@@ -26575,8 +26575,8 @@ Validate OCS Event OCS_logevent_oCSScriptEntititesInUse Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate OCS Telemetry oCSSequencerHeartbeat Topic Byte Size
-	[Documentation]    Validate the oCSSequencerHeartbeat topic is less than 65536 bytes in total.
+Validate OCS Telemetry OCS_sequencerHeartbeat Topic Byte Size
+	[Documentation]    Validate the OCS_sequencerHeartbeat topic is less than 65536 bytes in total.
 	[Tags]    smoke    OCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26599,8 +26599,8 @@ Validate OCS Telemetry oCSSequencerHeartbeat Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate OCS Telemetry oCSSequencerHeartbeat Topic Columns
-	[Documentation]    Validate the oCSSequencerHeartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate OCS Telemetry OCS_sequencerHeartbeat Topic Columns
+	[Documentation]    Validate the OCS_sequencerHeartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    OCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26612,8 +26612,8 @@ Validate OCS Telemetry oCSSequencerHeartbeat Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate PromptProcessing Event PromptProceessing_logevent_promptProceessingEntitySummaryState Topic Byte Size
-	[Documentation]    Validate the PromptProceessing_logevent_promptProceessingEntitySummaryState topic is less than 65536 bytes in total.
+Validate PromptProcessing Event PromptProceessing_entitySummaryState Topic Byte Size
+	[Documentation]    Validate the PromptProceessing_entitySummaryState topic is less than 65536 bytes in total.
 	[Tags]    smoke    PromptProcessing
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26636,8 +26636,8 @@ Validate PromptProcessing Event PromptProceessing_logevent_promptProceessingEnti
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate PromptProcessing Event PromptProceessing_logevent_promptProceessingEntitySummaryState Topic Columns
-	[Documentation]    Validate the PromptProceessing_logevent_promptProceessingEntitySummaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate PromptProcessing Event PromptProceessing_entitySummaryState Topic Columns
+	[Documentation]    Validate the PromptProceessing_entitySummaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    PromptProcessing
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26649,8 +26649,8 @@ Validate PromptProcessing Event PromptProceessing_logevent_promptProceessingEnti
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate PromptProcessing Event PromptProceessing_logevent_promptProceessingEntityStartup Topic Byte Size
-	[Documentation]    Validate the PromptProceessing_logevent_promptProceessingEntityStartup topic is less than 65536 bytes in total.
+Validate PromptProcessing Event PromptProceessing_entityStartup Topic Byte Size
+	[Documentation]    Validate the PromptProceessing_entityStartup topic is less than 65536 bytes in total.
 	[Tags]    smoke    PromptProcessing
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26673,8 +26673,8 @@ Validate PromptProcessing Event PromptProceessing_logevent_promptProceessingEnti
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate PromptProcessing Event PromptProceessing_logevent_promptProceessingEntityStartup Topic Columns
-	[Documentation]    Validate the PromptProceessing_logevent_promptProceessingEntityStartup topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate PromptProcessing Event PromptProceessing_entityStartup Topic Columns
+	[Documentation]    Validate the PromptProceessing_entityStartup topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    PromptProcessing
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26686,8 +26686,8 @@ Validate PromptProcessing Event PromptProceessing_logevent_promptProceessingEnti
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate PromptProcessing Event PromptProceessing_logevent_promptProceessingEntityShutdown Topic Byte Size
-	[Documentation]    Validate the PromptProceessing_logevent_promptProceessingEntityShutdown topic is less than 65536 bytes in total.
+Validate PromptProcessing Event PromptProceessing_entityShutdown Topic Byte Size
+	[Documentation]    Validate the PromptProceessing_entityShutdown topic is less than 65536 bytes in total.
 	[Tags]    smoke    PromptProcessing
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26710,8 +26710,8 @@ Validate PromptProcessing Event PromptProceessing_logevent_promptProceessingEnti
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate PromptProcessing Event PromptProceessing_logevent_promptProceessingEntityShutdown Topic Columns
-	[Documentation]    Validate the PromptProceessing_logevent_promptProceessingEntityShutdown topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate PromptProcessing Event PromptProceessing_entityShutdown Topic Columns
+	[Documentation]    Validate the PromptProceessing_entityShutdown topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    PromptProcessing
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
