@@ -230,6 +230,18 @@ Validate Scheduler Events XML file
 	Log    ${output}
 	Should Contain    ${output}   Scheduler_Events.xml - valid
 
+Validate Script Events XML file
+	[Tags]    smoke    Script
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/Script/Script_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   Script_Events.xml - valid
+
+Validate ScriptQueue Events XML file
+	[Tags]    smoke    ScriptQueue
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   ScriptQueue_Events.xml - valid
+
 Validate Sequencer Events XML file
 	[Tags]    smoke    Sequencer
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/Sequencer/Sequencer_Events.xml

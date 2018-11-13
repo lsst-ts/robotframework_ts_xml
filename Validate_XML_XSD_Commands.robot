@@ -194,6 +194,18 @@ Validate Rotator Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   Rotator_Commands.xml - valid
 
+Validate Script Commands XML file
+	[Tags]    smoke    Script
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/Script/Script_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   Script_Commands.xml - valid
+
+Validate ScriptQueue Commands XML file
+	[Tags]    smoke    ScriptQueue
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   ScriptQueue_Commands.xml - valid
+
 Validate Sequencer Commands XML file
 	[Tags]    smoke    Sequencer
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/Sequencer/Sequencer_Commands.xml

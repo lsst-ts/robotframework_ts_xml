@@ -657,6 +657,42 @@ Validate Scheduler_Events.xml Does Not Contain Generic Events
 	\    Log Many    ${events}    Scheduler_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    Scheduler_logevent_${item}
 
+Validate Script_Events.xml Does Not Contain Generic Events
+	[Documentation]    Validate the Script_Events.xml does not contain Generic Events.
+	[Tags]    smoke    
+	Comment    Get the CSC Events.
+	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/Script/Script_Events.xml
+	Log    ${events}
+	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    Script_logevent_${item}
+	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    Script_logevent_${item}
+
+Validate Script_Commands.xml Does Not Contain Generic Commands
+	[Documentation]    Validate the Script_Commands.xml does not contain Generic Commands.
+	[Tags]    smoke    
+	Comment    Get the CSC Commands.
+	${commands}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/Script/Script_Commands.xml
+	:FOR    ${generic}    IN    @{GenericCommands}
+	\    Run Keyword And Continue On Failure    Test Commands    ${commands}    Script_command_${generic}
+
+Validate ScriptQueue_Events.xml Does Not Contain Generic Events
+	[Documentation]    Validate the ScriptQueue_Events.xml does not contain Generic Events.
+	[Tags]    smoke    
+	Comment    Get the CSC Events.
+	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Events.xml
+	Log    ${events}
+	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    ScriptQueue_logevent_${item}
+	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    ScriptQueue_logevent_${item}
+
+Validate ScriptQueue_Commands.xml Does Not Contain Generic Commands
+	[Documentation]    Validate the ScriptQueue_Commands.xml does not contain Generic Commands.
+	[Tags]    smoke    
+	Comment    Get the CSC Commands.
+	${commands}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Commands.xml
+	:FOR    ${generic}    IN    @{GenericCommands}
+	\    Run Keyword And Continue On Failure    Test Commands    ${commands}    ScriptQueue_command_${generic}
+
 Validate Sequencer_Events.xml Does Not Contain Generic Events
 	[Documentation]    Validate the Sequencer_Events.xml does not contain Generic Events.
 	[Tags]    smoke    

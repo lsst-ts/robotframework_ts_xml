@@ -736,6 +736,34 @@ Validate Scheduler Telemetry
 	Log    ${output}
 	Should Contain    ${output}   Scheduler_Telemetry.xml - valid
 
+Validate Script Commands
+	[Documentation]    Validate the Script Commands XML file.
+	[Tags]    smoke    Script
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/Script/Script_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   Script_Commands.xml - valid
+
+Validate Script Events
+	[Documentation]    Validate the Script Events XML file.
+	[Tags]    smoke    Script
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/Script/Script_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   Script_Events.xml - valid
+
+Validate ScriptQueue Commands
+	[Documentation]    Validate the ScriptQueue Commands XML file.
+	[Tags]    smoke    ScriptQueue
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   ScriptQueue_Commands.xml - valid
+
+Validate ScriptQueue Events
+	[Documentation]    Validate the ScriptQueue Events XML file.
+	[Tags]    smoke    ScriptQueue
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   ScriptQueue_Events.xml - valid
+
 Validate Sequencer Commands
 	[Documentation]    Validate the Sequencer Commands XML file.
 	[Tags]    smoke    Sequencer

@@ -9,13 +9,13 @@ import os
 # Variables
 # =========
 """Defines the array of Commandable SAL Components, or CSCs."""
-# 'Script', 'ScriptQueue',
+
 subsystems = [ 'ATArchiver', 'ATCamera', 'ATDome', 'ATHeaderService', 'ATHexapod', 'ATMCS', 'ATMonochromator', 'ATPneumatics', 
 				'ATSpectrograph', 'ATTCS', 'ATThermoelectricCooler', 'ATWhiteLight', 
 				'CatchupArchiver', 'CBP', 'Dome', 'DomeADB', 'DomeAPS', 'DomeLouvers', 'DomeLWS', 'DomeMONCS', 'DomeTHCS', 
 				'EEC', 'EFD', 'Electrometer', 'FiberSpectrograph', 'Hexapod', 'LinearStage', 
 				'MTArchiver', 'MTCamera', 'MTHeaderService', 'MTM1M3', 'MTM2', 'MTMount', 'MTOFC', 'MTWEP', 'OCS',
-				'PromptProcessing', 'Rotator', 'Scheduler', 'Sequencer', 'SummitFacility',
+				'PromptProcessing', 'Rotator', 'Scheduler', 'Script', 'ScriptQueue', 'Sequencer', 'SummitFacility',
 				'MTTCS', 'Test', 'TunableLaser', 'MTVMS']
 
 
