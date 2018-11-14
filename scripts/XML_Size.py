@@ -60,11 +60,16 @@ for subsystem in xml_common.subsystems:
 				col_skipped="	TSS-2991"
 			elif subsystem == "MTM1M3" and topic.decode("utf-8") == "MTM1M3_logevent_forceActuatorWarning":
 				col_skipped="	TSS-2992"
+			elif subsystem == "ScriptQueue" and topic.decode("utf-8") == "ScriptQueue_command_stopScripts":
+				col_skipped="	TSS-3326"
+			elif subsystem == "ScriptQueue" and topic.decode("utf-8") == "ScriptQueue_logevent_queue":
+				col_skipped="	TSS-3326"
 			else:
 				byte_skipped=""
 				col_skipped=""
 
 			index += 1
+
 			# Create the Test Cases.
 			file.write("Validate " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType.rstrip("s") + " " + topic.decode("utf-8") + " Topic Byte Size\n")
 			file.write("\t[Documentation]    Validate the " + topic.decode("utf-8") + " topic is less than 65536 bytes in total.\n")

@@ -231,7 +231,7 @@ Validate Scheduler Events XML file
 	Should Contain    ${output}   Scheduler_Events.xml - valid
 
 Validate Script Events XML file
-	[Tags]    smoke    Script
+	[Tags]    smoke    Script    TSS-3332
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/Script/Script_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   Script_Events.xml - valid

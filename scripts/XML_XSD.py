@@ -38,6 +38,12 @@ for topictype in ["Commands", "Events", "Telemetry"]:
 		elif (subsystem == "MTMount" and topictype == "Telemetry"):
 			telem_skipped="    TSS-3286"
 			skipped=com_skipped=event_skipped=""
+		elif (subsystem == "Script" and topictype == "Commands"):
+			telem_skipped="    TSS-3331"
+			skipped=com_skipped=event_skipped=""
+		elif (subsystem == "Script" and topictype == "Events"):
+			telem_skipped="    TSS-3332"
+			skipped=com_skipped=event_skipped=""
 		else:
 			skipped=""
 			com_skipped=""

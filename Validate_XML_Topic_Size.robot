@@ -29746,7 +29746,7 @@ Validate ScriptQueue Command ScriptQueue_command_stopScripts Topic Byte Size
 
 Validate ScriptQueue Command ScriptQueue_command_stopScripts Topic Columns
 	[Documentation]    Validate the ScriptQueue_command_stopScripts topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    ScriptQueue
+	[Tags]    smoke    ScriptQueue	TSS-3326
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[9]/item)" -n ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Commands.xml
@@ -29894,7 +29894,7 @@ Validate ScriptQueue Event ScriptQueue_logevent_queue Topic Byte Size
 
 Validate ScriptQueue Event ScriptQueue_logevent_queue Topic Columns
 	[Documentation]    Validate the ScriptQueue_logevent_queue topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    ScriptQueue
+	[Tags]    smoke    ScriptQueue	TSS-3326
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Events.xml
