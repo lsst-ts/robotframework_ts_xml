@@ -14883,8 +14883,8 @@ Validate Electrometer Command Electrometer_command_stopScan Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Electrometer Event Electrometer_logevent_digitalFilterChange Topic Byte Size
-	[Documentation]    Validate the Electrometer_logevent_digitalFilterChange topic is less than 65536 bytes in total.
+Validate Electrometer Event Electrometer_logevent_detailedState Topic Byte Size
+	[Documentation]    Validate the Electrometer_logevent_detailedState topic is less than 65536 bytes in total.
 	[Tags]    smoke    Electrometer
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14907,8 +14907,8 @@ Validate Electrometer Event Electrometer_logevent_digitalFilterChange Topic Byte
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Electrometer Event Electrometer_logevent_digitalFilterChange Topic Columns
-	[Documentation]    Validate the Electrometer_logevent_digitalFilterChange topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Electrometer Event Electrometer_logevent_detailedState Topic Columns
+	[Documentation]    Validate the Electrometer_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    Electrometer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14920,8 +14920,8 @@ Validate Electrometer Event Electrometer_logevent_digitalFilterChange Topic Colu
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Electrometer Event Electrometer_logevent_heartbeat Topic Byte Size
-	[Documentation]    Validate the Electrometer_logevent_heartbeat topic is less than 65536 bytes in total.
+Validate Electrometer Event Electrometer_logevent_digitalFilterChange Topic Byte Size
+	[Documentation]    Validate the Electrometer_logevent_digitalFilterChange topic is less than 65536 bytes in total.
 	[Tags]    smoke    Electrometer
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14944,8 +14944,8 @@ Validate Electrometer Event Electrometer_logevent_heartbeat Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Electrometer Event Electrometer_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the Electrometer_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Electrometer Event Electrometer_logevent_digitalFilterChange Topic Columns
+	[Documentation]    Validate the Electrometer_logevent_digitalFilterChange topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    Electrometer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14957,8 +14957,8 @@ Validate Electrometer Event Electrometer_logevent_heartbeat Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Electrometer Event Electrometer_logevent_integrationTime Topic Byte Size
-	[Documentation]    Validate the Electrometer_logevent_integrationTime topic is less than 65536 bytes in total.
+Validate Electrometer Event Electrometer_logevent_heartbeat Topic Byte Size
+	[Documentation]    Validate the Electrometer_logevent_heartbeat topic is less than 65536 bytes in total.
 	[Tags]    smoke    Electrometer
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14981,8 +14981,8 @@ Validate Electrometer Event Electrometer_logevent_integrationTime Topic Byte Siz
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Electrometer Event Electrometer_logevent_integrationTime Topic Columns
-	[Documentation]    Validate the Electrometer_logevent_integrationTime topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Electrometer Event Electrometer_logevent_heartbeat Topic Columns
+	[Documentation]    Validate the Electrometer_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    Electrometer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14994,8 +14994,8 @@ Validate Electrometer Event Electrometer_logevent_integrationTime Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Electrometer Event Electrometer_logevent_intensity Topic Byte Size
-	[Documentation]    Validate the Electrometer_logevent_intensity topic is less than 65536 bytes in total.
+Validate Electrometer Event Electrometer_logevent_integrationTime Topic Byte Size
+	[Documentation]    Validate the Electrometer_logevent_integrationTime topic is less than 65536 bytes in total.
 	[Tags]    smoke    Electrometer
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15018,8 +15018,8 @@ Validate Electrometer Event Electrometer_logevent_intensity Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Electrometer Event Electrometer_logevent_intensity Topic Columns
-	[Documentation]    Validate the Electrometer_logevent_intensity topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Electrometer Event Electrometer_logevent_integrationTime Topic Columns
+	[Documentation]    Validate the Electrometer_logevent_integrationTime topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    Electrometer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15031,8 +15031,8 @@ Validate Electrometer Event Electrometer_logevent_intensity Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Electrometer Event Electrometer_logevent_largeFileObjectAvailable Topic Byte Size
-	[Documentation]    Validate the Electrometer_logevent_largeFileObjectAvailable topic is less than 65536 bytes in total.
+Validate Electrometer Event Electrometer_logevent_intensity Topic Byte Size
+	[Documentation]    Validate the Electrometer_logevent_intensity topic is less than 65536 bytes in total.
 	[Tags]    smoke    Electrometer
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15055,8 +15055,8 @@ Validate Electrometer Event Electrometer_logevent_largeFileObjectAvailable Topic
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Electrometer Event Electrometer_logevent_largeFileObjectAvailable Topic Columns
-	[Documentation]    Validate the Electrometer_logevent_largeFileObjectAvailable topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Electrometer Event Electrometer_logevent_intensity Topic Columns
+	[Documentation]    Validate the Electrometer_logevent_intensity topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    Electrometer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15068,8 +15068,8 @@ Validate Electrometer Event Electrometer_logevent_largeFileObjectAvailable Topic
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Electrometer Event Electrometer_logevent_measureRange Topic Byte Size
-	[Documentation]    Validate the Electrometer_logevent_measureRange topic is less than 65536 bytes in total.
+Validate Electrometer Event Electrometer_logevent_largeFileObjectAvailable Topic Byte Size
+	[Documentation]    Validate the Electrometer_logevent_largeFileObjectAvailable topic is less than 65536 bytes in total.
 	[Tags]    smoke    Electrometer
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15092,8 +15092,8 @@ Validate Electrometer Event Electrometer_logevent_measureRange Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Electrometer Event Electrometer_logevent_measureRange Topic Columns
-	[Documentation]    Validate the Electrometer_logevent_measureRange topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Electrometer Event Electrometer_logevent_largeFileObjectAvailable Topic Columns
+	[Documentation]    Validate the Electrometer_logevent_largeFileObjectAvailable topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    Electrometer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15105,8 +15105,8 @@ Validate Electrometer Event Electrometer_logevent_measureRange Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Electrometer Event Electrometer_logevent_measureType Topic Byte Size
-	[Documentation]    Validate the Electrometer_logevent_measureType topic is less than 65536 bytes in total.
+Validate Electrometer Event Electrometer_logevent_measureRange Topic Byte Size
+	[Documentation]    Validate the Electrometer_logevent_measureRange topic is less than 65536 bytes in total.
 	[Tags]    smoke    Electrometer
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15129,8 +15129,8 @@ Validate Electrometer Event Electrometer_logevent_measureType Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Electrometer Event Electrometer_logevent_measureType Topic Columns
-	[Documentation]    Validate the Electrometer_logevent_measureType topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Electrometer Event Electrometer_logevent_measureRange Topic Columns
+	[Documentation]    Validate the Electrometer_logevent_measureRange topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    Electrometer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15142,8 +15142,8 @@ Validate Electrometer Event Electrometer_logevent_measureType Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Electrometer Event Electrometer_logevent_settingsAppliedReadSets Topic Byte Size
-	[Documentation]    Validate the Electrometer_logevent_settingsAppliedReadSets topic is less than 65536 bytes in total.
+Validate Electrometer Event Electrometer_logevent_measureType Topic Byte Size
+	[Documentation]    Validate the Electrometer_logevent_measureType topic is less than 65536 bytes in total.
 	[Tags]    smoke    Electrometer
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15166,8 +15166,8 @@ Validate Electrometer Event Electrometer_logevent_settingsAppliedReadSets Topic 
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Electrometer Event Electrometer_logevent_settingsAppliedReadSets Topic Columns
-	[Documentation]    Validate the Electrometer_logevent_settingsAppliedReadSets topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Electrometer Event Electrometer_logevent_measureType Topic Columns
+	[Documentation]    Validate the Electrometer_logevent_measureType topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    Electrometer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15179,8 +15179,8 @@ Validate Electrometer Event Electrometer_logevent_settingsAppliedReadSets Topic 
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Electrometer Event Electrometer_logevent_settingsAppliedSerConf Topic Byte Size
-	[Documentation]    Validate the Electrometer_logevent_settingsAppliedSerConf topic is less than 65536 bytes in total.
+Validate Electrometer Event Electrometer_logevent_settingsAppliedReadSets Topic Byte Size
+	[Documentation]    Validate the Electrometer_logevent_settingsAppliedReadSets topic is less than 65536 bytes in total.
 	[Tags]    smoke    Electrometer
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15203,8 +15203,8 @@ Validate Electrometer Event Electrometer_logevent_settingsAppliedSerConf Topic B
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Electrometer Event Electrometer_logevent_settingsAppliedSerConf Topic Columns
-	[Documentation]    Validate the Electrometer_logevent_settingsAppliedSerConf topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Electrometer Event Electrometer_logevent_settingsAppliedReadSets Topic Columns
+	[Documentation]    Validate the Electrometer_logevent_settingsAppliedReadSets topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    Electrometer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15216,8 +15216,8 @@ Validate Electrometer Event Electrometer_logevent_settingsAppliedSerConf Topic C
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Electrometer Event Electrometer_logevent_deviceErrorCode Topic Byte Size
-	[Documentation]    Validate the Electrometer_logevent_deviceErrorCode topic is less than 65536 bytes in total.
+Validate Electrometer Event Electrometer_logevent_settingsAppliedSerConf Topic Byte Size
+	[Documentation]    Validate the Electrometer_logevent_settingsAppliedSerConf topic is less than 65536 bytes in total.
 	[Tags]    smoke    Electrometer
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15240,13 +15240,50 @@ Validate Electrometer Event Electrometer_logevent_deviceErrorCode Topic Byte Siz
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Electrometer Event Electrometer_logevent_deviceErrorCode Topic Columns
-	[Documentation]    Validate the Electrometer_logevent_deviceErrorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Electrometer Event Electrometer_logevent_settingsAppliedSerConf Topic Columns
+	[Documentation]    Validate the Electrometer_logevent_settingsAppliedSerConf topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    Electrometer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/Electrometer/Electrometer_Events.xml
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/Count" -v . -n ${folder}/sal_interfaces/Electrometer/Electrometer_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Electrometer Event Electrometer_logevent_deviceErrorCode Topic Byte Size
+	[Documentation]    Validate the Electrometer_logevent_deviceErrorCode topic is less than 65536 bytes in total.
+	[Tags]    smoke    Electrometer
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/Electrometer/Electrometer_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[11]/item/Count" -v . -n ${folder}/sal_interfaces/Electrometer/Electrometer_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[11]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/Electrometer/Electrometer_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Electrometer Event Electrometer_logevent_deviceErrorCode Topic Columns
+	[Documentation]    Validate the Electrometer_logevent_deviceErrorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    Electrometer
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/Electrometer/Electrometer_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[11]/item/Count" -v . -n ${folder}/sal_interfaces/Electrometer/Electrometer_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
