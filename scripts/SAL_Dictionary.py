@@ -11,8 +11,6 @@ import xml_common
 file = open("../Validate_SALSubsystems.robot","w")
 sal_dict_file = "SALSubsystems.xml"
 home = os.environ['XML_HOME']
-csc_count = 73
-
 
 # Set XML parser application name.
 # ... XMLStarlet is invoked differently in Redhat OS systems, like Jenkins.
@@ -32,9 +30,20 @@ file.write("Resource    Global_Vars.robot\n")
 file.write("\n")
 
 # Create Variables table.
+csc_xml_path = '//SALSubsystems/Subsystem/Name'
+ 
+# Get the list of CSCs.
+try:
+	cscs = "    ".join(subprocess.check_output(app + ' sel -t -m "' + csc_xml_path + '" -v . -n ' + home + '/sal_interfaces/' + sal_dict_file, shell=True).decode("utf-8").split())
+except:
+	print("\tERROR: " + csc + "_Commands.xml" + " is not valid XML.")
+words = str(cscs).split()
+sorted_cscs = sorted(words)
+
+# Create the Variables table.
 file.write("*** Variables ***\n")
 file.write("${xml}    xml\n")
-file.write("@{cscs}    " + str(xml_common.subsystems).strip("[]").replace("'","").replace(", ","    ") + "\n")
+file.write("@{cscs}    " + str(cscs) + "\n")
 file.write("\n")
 
 # Create Test Case table.
@@ -50,6 +59,8 @@ file.write("\tShould Contain    ${output}   " + sal_dict_file + " - valid\n")
 file.write("\n")
 
 # Ensure expected number of CSCs. This will catch when CSCs are added or removed.
+# ...The plus 1 accounts for the Environment CSC, which is temporary, testing only placeholder.
+csc_count = len(xml_common.subsystems) + 1
 file.write("Validate Number of Defined CSCs\n")
 file.write("\t[Documentation]    Validate the number of defined CSCs matches expectation. This test will catch when a CSC is added or removed.\n")
 file.write("\t[Tags]    smoke\n")
@@ -58,20 +69,19 @@ file.write("\tLog    ${output}\n")
 file.write("\tShould Be Equal As Integers    ${output}    " + str(csc_count) + "\n")
 file.write("\n")
 
-# Get the list of XMLs for each CSC, to include Telemetry, Events and Commands.
-home = os.environ['XML_HOME']
-csc_xml_path = '//SALSubsystems/Subsystem/Name'
+# Ensure the SAL Dictionary does not contain duplicate entries.
+file.write("Validate SAL Dictionary Does Not Contain Duplicates\n")
+file.write("\t[Documentation]    Validate the SALSubsystems.xml file does not have any duplicate entries.\n")
+file.write("\t[Tags]    smoke\n")
+file.write("\t${output}=    Run    ${xml} sel -t -m \"//SALSubsystems/Subsystem/Name\" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml |uniq -d\n")
+file.write("\tLog    ${output}\n")
+file.write("\tShould Be Empty    ${output}\n")
+file.write("\n")
 
-# Get the list of CSCs.
-try:
-	cscs = subprocess.check_output(app + ' sel -t -m "' + csc_xml_path + '" -v . -n ' + home + '/sal_interfaces/' + sal_dict_file, shell=True).split()
-except:
-	print("\tERROR: " + csc + "_Commands.xml" + " is not valid XML.")
-
+# Begin testing eash for each CSC.
 index=0
-for csc in cscs:
+for csc in xml_common.subsystems:
 	index += 1
-	csc=csc.decode("utf-8")
 
 	# Mark test cases with Jira tickets
 	if csc == "MTTCS":
@@ -90,10 +100,6 @@ for csc in cscs:
 		skipped="    TSS-3089"
 	elif csc == "Environment":
 		skipped="    skipped"
-	elif csc == "ScriptQueue":
-		skipped="    TSS-3221"
-	elif csc == "Script":
-		skipped="    TSS-3221"
 	else:
 		skipped=""
 
