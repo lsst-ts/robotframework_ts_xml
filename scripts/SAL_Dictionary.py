@@ -89,8 +89,6 @@ for csc in cscs:
 		skipped="    TSS-3089"
 	elif csc == "Environment":
 		skipped="    skipped"
-	elif csc == "ScriptLoader":
-		skipped="    TSS-3221"
 	elif csc == "ScriptQueue":
 		skipped="    TSS-3221"
 	elif csc == "Script":
