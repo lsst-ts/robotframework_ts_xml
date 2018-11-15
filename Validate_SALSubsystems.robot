@@ -8,7 +8,7 @@ Resource    Global_Vars.robot
 
 *** Variables ***
 ${xml}    xml
-@{cscs}    ATArchiver    ATCamera    ATDome    ATHeaderService    ATHexapod    ATMCS    ATMonochromator    ATPneumatics    ATSpectrograph    ATTCS    ATThermoelectricCooler    ATWhiteLight    CatchupArchiver    CBP    Dome    DomeADB    DomeAPS    DomeLouvers    DomeLWS    DomeMONCS    DomeTHCS    EAS    EEC    EFD    Electrometer    FiberSpectrograph    Hexapod    LinearStage    MTArchiver    MTCamera    MTHeaderService    MTM1M3    MTM2    MTMount    MTOFC    MTWEP    OCS    PromptProcessing    Rotator    Scheduler    Script    ScriptQueue    Sequencer    SummitFacility    MTTCS    Test    TunableLaser    MTVMS
+@{cscs}    ATArchiver    ATBuilding    ATCalCS    ATCamera    ATDome    ATDomeTrajectory    ATHeaderService    ATHexapod    ATMCS    ATMonochromator    ATPneumatics    ATSpectrograph    ATTCS    ATThermoelectricCooler    ATWhiteLight    CatchupArchiver    CBP    DIMM    Dome    DomeADB    DomeAPS    DomeLouvers    DomeLWS    DomeMONCS    DomeTHCS    EAS    EEC    EFD    EFDTransformationServer    Electrometer    FiberSpectrograph    IOTA    Hexapod    LinearStage    MTArchiver    MTCalCS    MTCamera    MTDomeTrajectory    MTGuider    MTHeaderService    MTLaserTracker    MTM1M3    MTM2    MTMount    MTOFC    MTTCS    MTWEP    MTVMS    OCS    PromptProcessing    Rotator    Scheduler    Script    ScriptQueue    Sequencer    SummitFacility    Test    TunableLaser
 
 *** Test Cases ***
 Validate SALSubsystems.xml
@@ -697,6 +697,160 @@ Validate MTTCS Generics Element
 	Log    MTTCS has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
+Validate EAS Is Defined
+	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
+	[Tags]    smoke    EAS
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    EAS
+	Should Contain    ${cscs}    ${csc}
+
+Validate EAS Generics Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
+	[Tags]    smoke    EAS
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[49]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    EAS has Generics: ${output}
+	Should Be Equal As Strings    ${output}    yes
+
+Validate MTDomeTrajectory Is Defined
+	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
+	[Tags]    smoke    MTDomeTrajectory
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    MTDomeTrajectory
+	Should Contain    ${cscs}    ${csc}
+
+Validate MTDomeTrajectory Generics Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
+	[Tags]    smoke    MTDomeTrajectory
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[50]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    MTDomeTrajectory has Generics: ${output}
+	Should Be Equal As Strings    ${output}    yes
+
+Validate ATDomeTrajectory Is Defined
+	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
+	[Tags]    smoke    ATDomeTrajectory
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    ATDomeTrajectory
+	Should Contain    ${cscs}    ${csc}
+
+Validate ATDomeTrajectory Generics Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
+	[Tags]    smoke    ATDomeTrajectory
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[51]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ATDomeTrajectory has Generics: ${output}
+	Should Be Equal As Strings    ${output}    yes
+
+Validate ATBuilding Is Defined
+	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
+	[Tags]    smoke    ATBuilding
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    ATBuilding
+	Should Contain    ${cscs}    ${csc}
+
+Validate ATBuilding Generics Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
+	[Tags]    smoke    ATBuilding
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[52]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ATBuilding has Generics: ${output}
+	Should Be Equal As Strings    ${output}    yes
+
+Validate DIMM Is Defined
+	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
+	[Tags]    smoke    DIMM
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    DIMM
+	Should Contain    ${cscs}    ${csc}
+
+Validate DIMM Generics Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
+	[Tags]    smoke    DIMM
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[53]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    DIMM has Generics: ${output}
+	Should Be Equal As Strings    ${output}    yes
+
+Validate MTLaserTracker Is Defined
+	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
+	[Tags]    smoke    MTLaserTracker
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    MTLaserTracker
+	Should Contain    ${cscs}    ${csc}
+
+Validate MTLaserTracker Generics Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
+	[Tags]    smoke    MTLaserTracker
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[54]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    MTLaserTracker has Generics: ${output}
+	Should Be Equal As Strings    ${output}    yes
+
+Validate IOTA Is Defined
+	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
+	[Tags]    smoke    IOTA
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    IOTA
+	Should Contain    ${cscs}    ${csc}
+
+Validate IOTA Generics Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
+	[Tags]    smoke    IOTA
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[55]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    IOTA has Generics: ${output}
+	Should Be Equal As Strings    ${output}    yes
+
+Validate MTGuider Is Defined
+	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
+	[Tags]    smoke    MTGuider
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    MTGuider
+	Should Contain    ${cscs}    ${csc}
+
+Validate MTGuider Generics Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
+	[Tags]    smoke    MTGuider
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[56]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    MTGuider has Generics: ${output}
+	Should Be Equal As Strings    ${output}    yes
+
+Validate EFDTransformationServer Is Defined
+	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
+	[Tags]    smoke    EFDTransformationServer
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    EFDTransformationServer
+	Should Contain    ${cscs}    ${csc}
+
+Validate EFDTransformationServer Generics Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
+	[Tags]    smoke    EFDTransformationServer
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[57]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    EFDTransformationServer has Generics: ${output}
+	Should Be Equal As Strings    ${output}    yes
+
+Validate MTCalCS Is Defined
+	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
+	[Tags]    smoke    MTCalCS
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    MTCalCS
+	Should Contain    ${cscs}    ${csc}
+
+Validate MTCalCS Generics Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
+	[Tags]    smoke    MTCalCS
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[58]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    MTCalCS has Generics: ${output}
+	Should Be Equal As Strings    ${output}    yes
+
+Validate ATCalCS Is Defined
+	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
+	[Tags]    smoke    ATCalCS
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    ATCalCS
+	Should Contain    ${cscs}    ${csc}
+
+Validate ATCalCS Generics Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
+	[Tags]    smoke    ATCalCS
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[59]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ATCalCS has Generics: ${output}
+	Should Be Equal As Strings    ${output}    yes
+
 Validate Test Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
 	[Tags]    smoke    Test
@@ -707,7 +861,7 @@ Validate Test Is Defined
 Validate Test Generics Element
 	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
 	[Tags]    smoke    Test
-	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[49]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[60]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    Test has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 

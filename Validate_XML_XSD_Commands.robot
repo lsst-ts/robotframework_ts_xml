@@ -122,12 +122,6 @@ Validate DomeTHCS Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   DomeTHCS_Commands.xml - valid
 
-Validate EAS Commands XML file
-	[Tags]    smoke    EAS
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/EAS/EAS_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   EAS_Commands.xml - valid
-
 Validate EEC Commands XML file
 	[Tags]    smoke    EEC
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/EEC/EEC_Commands.xml
@@ -188,6 +182,18 @@ Validate MTOFC Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   MTOFC_Commands.xml - valid
 
+Validate MTTCS Commands XML file
+	[Tags]    smoke    MTTCS
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/MTTCS/MTTCS_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   MTTCS_Commands.xml - valid
+
+Validate MTVMS Commands XML file
+	[Tags]    smoke    MTVMS
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/MTVMS/MTVMS_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   MTVMS_Commands.xml - valid
+
 Validate OCS Commands XML file
 	[Tags]    smoke    OCS
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/OCS/OCS_Commands.xml
@@ -218,12 +224,6 @@ Validate Sequencer Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   Sequencer_Commands.xml - valid
 
-Validate MTTCS Commands XML file
-	[Tags]    smoke    MTTCS
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/MTTCS/MTTCS_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   MTTCS_Commands.xml - valid
-
 Validate Test Commands XML file
 	[Tags]    smoke    Test
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/Test/Test_Commands.xml
@@ -235,10 +235,4 @@ Validate TunableLaser Commands XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/TunableLaser/TunableLaser_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   TunableLaser_Commands.xml - valid
-
-Validate MTVMS Commands XML file
-	[Tags]    smoke    MTVMS
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/MTVMS/MTVMS_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   MTVMS_Commands.xml - valid
 
