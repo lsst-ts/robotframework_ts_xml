@@ -11,6 +11,7 @@ import xml_common
 file = open("../Validate_SALSubsystems.robot","w")
 sal_dict_file = "SALSubsystems.xml"
 home = os.environ['XML_HOME']
+csc_count = 73
 
 
 # Set XML parser application name.
@@ -54,7 +55,7 @@ file.write("\t[Documentation]    Validate the number of defined CSCs matches exp
 file.write("\t[Tags]    smoke\n")
 file.write("\t${output}=    Run    ${xml} sel -t -m \"//SALSubsystems/Subsystem/Name\" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml |sort |wc -l |sed -e 's/ //g'\n")
 file.write("\tLog    ${output}\n")
-file.write("\tShould Be Equal As Integers    ${output}    49\n")
+file.write("\tShould Be Equal As Integers    ${output}    " + str(csc_count) + "\n")
 file.write("\n")
 
 # Get the list of XMLs for each CSC, to include Telemetry, Events and Commands.
