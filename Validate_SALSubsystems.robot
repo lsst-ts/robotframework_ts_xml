@@ -697,6 +697,20 @@ Validate MTTCS Generics Element
 	Log    MTTCS has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
+Validate EAS Is Defined
+	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
+	[Tags]    smoke    EAS
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    EAS
+	Should Contain    ${cscs}    ${csc}
+
+Validate EAS Generics Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
+	[Tags]    smoke    EAS
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[49]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    EAS has Generics: ${output}
+	Should Be Equal As Strings    ${output}    yes
+
 Validate Test Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
 	[Tags]    smoke    Test
@@ -707,7 +721,7 @@ Validate Test Is Defined
 Validate Test Generics Element
 	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
 	[Tags]    smoke    Test
-	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[49]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem[50]/Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    Test has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 

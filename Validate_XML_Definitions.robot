@@ -421,13 +421,6 @@ Validate DomeTHCS Telemetry
 	Log    ${output}
 	Should Contain    ${output}   DomeTHCS_Telemetry.xml - valid
 
-Validate EAS Commands
-	[Documentation]    Validate the EAS Commands XML file.
-	[Tags]    smoke    EAS
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/EAS/EAS_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   EAS_Commands.xml - valid
-
 Validate EAS Events
 	[Documentation]    Validate the EAS Events XML file.
 	[Tags]    smoke    EAS

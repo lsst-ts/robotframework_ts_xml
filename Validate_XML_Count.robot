@@ -480,14 +480,6 @@ Validate DomeTHCS Telemetry XML Counts
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate EAS Commands XML Counts
-	[Documentation]    Validate the EAS Commands XML count.
-	[Tags]    smoke    EAS
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/EAS/EAS_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
 Validate EAS Events XML Counts
 	[Documentation]    Validate the EAS Events XML count.
 	[Tags]    smoke    EAS

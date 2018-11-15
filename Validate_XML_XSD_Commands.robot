@@ -122,12 +122,6 @@ Validate DomeTHCS Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   DomeTHCS_Commands.xml - valid
 
-Validate EAS Commands XML file
-	[Tags]    smoke    EAS
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/EAS/EAS_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   EAS_Commands.xml - valid
-
 Validate EEC Commands XML file
 	[Tags]    smoke    EEC
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/EEC/EEC_Commands.xml

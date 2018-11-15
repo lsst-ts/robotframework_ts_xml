@@ -1660,34 +1660,6 @@ Validate DomeTHCS Telemetry <EFDB_Name> element
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate EAS Commands <Subsystem> element
-	[Documentation]    Validate the EAS Commands <Subsystem> elements do not contain embedded spaces.
-	[Tags]    smoke    EAS
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Subsystem" -v . -n ${folder}/sal_interfaces/EAS/EAS_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate EAS Commands <EFDB_Topic> element
-	[Documentation]    Validate the EAS Commands <EFDB_Topic> elements do not contain embedded spaces.
-	[Tags]    smoke    EAS
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/EAS/EAS_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate EAS Commands <Alias> element
-	[Documentation]    Validate the EAS Commands <Alias> elements do not contain embedded spaces.
-	[Tags]    smoke    EAS
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/EAS/EAS_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate EAS Commands <EFDB_Name> element
-	[Documentation]    Validate the EAS Commands <EFDB_Name> elements do not contain embedded spaces.
-	[Tags]    smoke    EAS
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/EAS/EAS_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
 Validate EAS Events <Subsystem> element
 	[Documentation]    Validate the EAS Events <Subsystem> elements do not contain embedded spaces.
 	[Tags]    smoke    EAS
