@@ -23,7 +23,7 @@ Validate Number of Defined CSCs
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml |sort |wc -l |sed -e 's/ //g'
 	Log    ${output}
-	Should Be Equal As Integers    ${output}    49
+	Should Be Equal As Integers    ${output}    60
 
 Validate ATSpectrograph Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
