@@ -4,17 +4,18 @@ import glob
 import re
 import subprocess
 import os
+import platform
 import xml_common
 
 # Create/Open test suite file.
 file = open("../Validate_XML_Topic_Size.robot","w")
+home = os.environ['XML_HOME']
 
 # Set XML parser application name.
 # ... XMLStarlet is invoked differently in Redhat OS systems, like Jenkins.
-try:
-	os.environ['JENKINS_HOME']
+if (platform.system() == "Linux"):
 	app="xmlstarlet"
-except:
+else:
 	app="xml"
 
 # Create Settings header.
@@ -39,7 +40,8 @@ for subsystem in xml_common.subsystems:
 	xmls = glob.glob(os.environ['XML_HOME'] + "/sal_interfaces/" + subsystem + "/" + subsystem + "*")
 	for xml in xmls:
 		# Get the message type, i.e. Telemetry, Events, Commands.
-		messageType = xml.split('/')[7].split('_')[1].split('.')[0]
+		homelength = len(home.split('/'))
+		messageType = xml.split('/')[homelength + 2].split('_')[1].split('.')[0]
 		# Get the Topics for each message type.
 		home = os.environ['XML_HOME']
 		salxmlpath = '/SAL' + messageType.rstrip("s") + 'Set/SAL' + messageType.rstrip("s")

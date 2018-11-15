@@ -4,6 +4,7 @@ import glob
 import re
 import subprocess
 import os
+import platform
 import xml_common
 
 # Create/Open test suite file.
@@ -12,10 +13,9 @@ sal_generics_file = "SALGenerics.xml"
 
 # Set XML parser application name.
 # ... XMLStarlet is invoked differently in Redhat OS systems, like Jenkins.
-try:
-	os.environ['JENKINS_HOME']
+if (platform.system() == "Linux"):
 	app="xmlstarlet"
-except:
+else:
 	app="xml"
 
 # Create Settings header.
