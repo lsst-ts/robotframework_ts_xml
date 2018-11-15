@@ -128,6 +128,12 @@ Validate DomeTHCS Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   DomeTHCS_Telemetry.xml - valid
 
+Validate EAS Telemetry XML file
+	[Tags]    smoke    EAS
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/EAS/EAS_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   EAS_Telemetry.xml - valid
+
 Validate EEC Telemetry XML file
 	[Tags]    smoke    EEC
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/EEC/EEC_Telemetry.xml

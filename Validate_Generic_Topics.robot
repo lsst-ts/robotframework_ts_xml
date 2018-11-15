@@ -391,6 +391,24 @@ Validate DomeTHCS_Commands.xml Does Not Contain Generic Commands
 	:FOR    ${generic}    IN    @{GenericCommands}
 	\    Run Keyword And Continue On Failure    Test Commands    ${commands}    DomeTHCS_command_${generic}
 
+Validate EAS_Events.xml Does Not Contain Generic Events
+	[Documentation]    Validate the EAS_Events.xml does not contain Generic Events.
+	[Tags]    smoke    
+	Comment    Get the CSC Events.
+	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/EAS/EAS_Events.xml
+	Log    ${events}
+	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    EAS_logevent_${item}
+	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    EAS_logevent_${item}
+
+Validate EAS_Commands.xml Does Not Contain Generic Commands
+	[Documentation]    Validate the EAS_Commands.xml does not contain Generic Commands.
+	[Tags]    smoke    
+	Comment    Get the CSC Commands.
+	${commands}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/EAS/EAS_Commands.xml
+	:FOR    ${generic}    IN    @{GenericCommands}
+	\    Run Keyword And Continue On Failure    Test Commands    ${commands}    EAS_command_${generic}
+
 Validate EEC_Events.xml Does Not Contain Generic Events
 	[Documentation]    Validate the EEC_Events.xml does not contain Generic Events.
 	[Tags]    smoke    

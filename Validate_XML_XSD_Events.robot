@@ -128,6 +128,12 @@ Validate DomeTHCS Events XML file
 	Log    ${output}
 	Should Contain    ${output}   DomeTHCS_Events.xml - valid
 
+Validate EAS Events XML file
+	[Tags]    smoke    EAS
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/EAS/EAS_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   EAS_Events.xml - valid
+
 Validate EEC Events XML file
 	[Tags]    smoke    EEC
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/EEC/EEC_Events.xml
