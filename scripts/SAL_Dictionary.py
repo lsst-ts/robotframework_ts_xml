@@ -32,7 +32,7 @@ file.write("\n")
 # Create Variables table.
 csc_xml_path = '//SALSubsystems/Subsystem/Name'
  
-# Get the list of CSCs.
+# Get the list of CSCs from the SAL Dictionary, SALSubsystems.xml.
 try:
 	cscs = "    ".join(subprocess.check_output(app + ' sel -t -m "' + csc_xml_path + '" -v . -n ' + home + '/sal_interfaces/' + sal_dict_file, shell=True).decode("utf-8").split())
 except:
@@ -120,7 +120,7 @@ for csc in xml_common.subsystems:
 	file.write("Validate " + xml_common.CapitalizeSubsystem(csc) + " Generics Element\n")
 	file.write("\t[Documentation]    Validate the " + sal_dict_file + " dictionary correctly defines the <Generics> element.\n")
 	file.write("\t[Tags]    smoke    " + csc + skipped + "\n")
-	file.write("\t${output}=    Run    ${xml} sel -t -m \"//SALSubsystems/Subsystem[" + str(index) + "]/Generics\" -v . -n ${folder}/sal_interfaces/" + sal_dict_file + "\n")
+	file.write("\t${output}=    Run    ${xml} sel -t -m \"//SALSubsystems/Subsystem/Name[text()='" + xml_common.CapitalizeSubsystem(csc) + "']/../Generics\" -v . -n ${folder}/sal_interfaces/" + sal_dict_file + "\n")
 	file.write("\tLog    " + csc + " has Generics: ${output}\n")
 	file.write("\tShould Be Equal As Strings    ${output}    " + value + "\n")
 	file.write("\n")
