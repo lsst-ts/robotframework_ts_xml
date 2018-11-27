@@ -29,6 +29,34 @@ Validate ATArchiver Telemetry
 	Log    ${output}
 	Should Contain    ${output}   ATArchiver_Telemetry.xml - valid
 
+Validate ATBuilding Events
+	[Documentation]    Validate the ATBuilding Events XML file.
+	[Tags]    smoke    ATBuilding
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ATBuilding/ATBuilding_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   ATBuilding_Events.xml - valid
+
+Validate ATBuilding Telemetry
+	[Documentation]    Validate the ATBuilding Telemetry XML file.
+	[Tags]    smoke    ATBuilding
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ATBuilding/ATBuilding_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   ATBuilding_Telemetry.xml - valid
+
+Validate ATCalCS Events
+	[Documentation]    Validate the ATCalCS Events XML file.
+	[Tags]    smoke    ATCalCS
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ATCalCS/ATCalCS_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   ATCalCS_Events.xml - valid
+
+Validate ATCalCS Telemetry
+	[Documentation]    Validate the ATCalCS Telemetry XML file.
+	[Tags]    smoke    ATCalCS
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ATCalCS/ATCalCS_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   ATCalCS_Telemetry.xml - valid
+
 Validate ATCamera Commands
 	[Documentation]    Validate the ATCamera Commands XML file.
 	[Tags]    smoke    ATCamera
@@ -70,6 +98,20 @@ Validate ATDome Telemetry
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ATDome/ATDome_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   ATDome_Telemetry.xml - valid
+
+Validate ATDomeTrajectory Events
+	[Documentation]    Validate the ATDomeTrajectory Events XML file.
+	[Tags]    smoke    ATDomeTrajectory
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ATDomeTrajectory/ATDomeTrajectory_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   ATDomeTrajectory_Events.xml - valid
+
+Validate ATDomeTrajectory Telemetry
+	[Documentation]    Validate the ATDomeTrajectory Telemetry XML file.
+	[Tags]    smoke    ATDomeTrajectory
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ATDomeTrajectory/ATDomeTrajectory_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   ATDomeTrajectory_Telemetry.xml - valid
 
 Validate ATHeaderService Events
 	[Documentation]    Validate the ATHeaderService Events XML file.
@@ -274,6 +316,20 @@ Validate CBP Telemetry
 	Log    ${output}
 	Should Contain    ${output}   CBP_Telemetry.xml - valid
 
+Validate DIMM Events
+	[Documentation]    Validate the DIMM Events XML file.
+	[Tags]    smoke    DIMM
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/DIMM/DIMM_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   DIMM_Events.xml - valid
+
+Validate DIMM Telemetry
+	[Documentation]    Validate the DIMM Telemetry XML file.
+	[Tags]    smoke    DIMM
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/DIMM/DIMM_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   DIMM_Telemetry.xml - valid
+
 Validate Dome Commands
 	[Documentation]    Validate the Dome Commands XML file.
 	[Tags]    smoke    Dome
@@ -470,6 +526,20 @@ Validate EFD Telemetry
 	Log    ${output}
 	Should Contain    ${output}   EFD_Telemetry.xml - valid
 
+Validate EFDTransformationServer Events
+	[Documentation]    Validate the EFDTransformationServer Events XML file.
+	[Tags]    smoke    EFDTransformationServer
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/EFDTransformationServer/EFDTransformationServer_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   EFDTransformationServer_Events.xml - valid
+
+Validate EFDTransformationServer Telemetry
+	[Documentation]    Validate the EFDTransformationServer Telemetry XML file.
+	[Tags]    smoke    EFDTransformationServer
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/EFDTransformationServer/EFDTransformationServer_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   EFDTransformationServer_Telemetry.xml - valid
+
 Validate Electrometer Commands
 	[Documentation]    Validate the Electrometer Commands XML file.
 	[Tags]    smoke    Electrometer
@@ -504,6 +574,20 @@ Validate FiberSpectrograph Telemetry
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   FiberSpectrograph_Telemetry.xml - valid
+
+Validate IOTA Events
+	[Documentation]    Validate the IOTA Events XML file.
+	[Tags]    smoke    IOTA
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/IOTA/IOTA_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   IOTA_Events.xml - valid
+
+Validate IOTA Telemetry
+	[Documentation]    Validate the IOTA Telemetry XML file.
+	[Tags]    smoke    IOTA
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/IOTA/IOTA_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   IOTA_Telemetry.xml - valid
 
 Validate Hexapod Commands
 	[Documentation]    Validate the Hexapod Commands XML file.
@@ -554,6 +638,20 @@ Validate MTArchiver Telemetry
 	Log    ${output}
 	Should Contain    ${output}   MTArchiver_Telemetry.xml - valid
 
+Validate MTCalCS Events
+	[Documentation]    Validate the MTCalCS Events XML file.
+	[Tags]    smoke    MTCalCS
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTCalCS/MTCalCS_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   MTCalCS_Events.xml - valid
+
+Validate MTCalCS Telemetry
+	[Documentation]    Validate the MTCalCS Telemetry XML file.
+	[Tags]    smoke    MTCalCS
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTCalCS/MTCalCS_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   MTCalCS_Telemetry.xml - valid
+
 Validate MTCamera Commands
 	[Documentation]    Validate the MTCamera Commands XML file.
 	[Tags]    smoke    MTCamera
@@ -575,12 +673,54 @@ Validate MTCamera Telemetry
 	Log    ${output}
 	Should Contain    ${output}   MTCamera_Telemetry.xml - valid
 
+Validate MTDomeTrajectory Events
+	[Documentation]    Validate the MTDomeTrajectory Events XML file.
+	[Tags]    smoke    MTDomeTrajectory
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTDomeTrajectory/MTDomeTrajectory_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   MTDomeTrajectory_Events.xml - valid
+
+Validate MTDomeTrajectory Telemetry
+	[Documentation]    Validate the MTDomeTrajectory Telemetry XML file.
+	[Tags]    smoke    MTDomeTrajectory
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTDomeTrajectory/MTDomeTrajectory_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   MTDomeTrajectory_Telemetry.xml - valid
+
+Validate MTGuider Events
+	[Documentation]    Validate the MTGuider Events XML file.
+	[Tags]    smoke    MTGuider
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTGuider/MTGuider_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   MTGuider_Events.xml - valid
+
+Validate MTGuider Telemetry
+	[Documentation]    Validate the MTGuider Telemetry XML file.
+	[Tags]    smoke    MTGuider
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTGuider/MTGuider_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   MTGuider_Telemetry.xml - valid
+
 Validate MTHeaderService Events
 	[Documentation]    Validate the MTHeaderService Events XML file.
 	[Tags]    smoke    MTHeaderService
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   MTHeaderService_Events.xml - valid
+
+Validate MTLaserTracker Events
+	[Documentation]    Validate the MTLaserTracker Events XML file.
+	[Tags]    smoke    MTLaserTracker
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTLaserTracker/MTLaserTracker_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   MTLaserTracker_Events.xml - valid
+
+Validate MTLaserTracker Telemetry
+	[Documentation]    Validate the MTLaserTracker Telemetry XML file.
+	[Tags]    smoke    MTLaserTracker
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTLaserTracker/MTLaserTracker_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   MTLaserTracker_Telemetry.xml - valid
 
 Validate MTM1M3 Commands
 	[Documentation]    Validate the MTM1M3 Commands XML file.
@@ -666,6 +806,27 @@ Validate MTOFC Telemetry
 	Log    ${output}
 	Should Contain    ${output}   MTOFC_Telemetry.xml - valid
 
+Validate MTTCS Commands
+	[Documentation]    Validate the MTTCS Commands XML file.
+	[Tags]    smoke    MTTCS
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTTCS/MTTCS_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   MTTCS_Commands.xml - valid
+
+Validate MTTCS Events
+	[Documentation]    Validate the MTTCS Events XML file.
+	[Tags]    smoke    MTTCS
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   MTTCS_Events.xml - valid
+
+Validate MTTCS Telemetry
+	[Documentation]    Validate the MTTCS Telemetry XML file.
+	[Tags]    smoke    MTTCS
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   MTTCS_Telemetry.xml - valid
+
 Validate MTWEP Events
 	[Documentation]    Validate the MTWEP Events XML file.
 	[Tags]    smoke    MTWEP
@@ -679,6 +840,27 @@ Validate MTWEP Telemetry
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTWEP/MTWEP_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   MTWEP_Telemetry.xml - valid
+
+Validate MTVMS Commands
+	[Documentation]    Validate the MTVMS Commands XML file.
+	[Tags]    smoke    MTVMS
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTVMS/MTVMS_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   MTVMS_Commands.xml - valid
+
+Validate MTVMS Events
+	[Documentation]    Validate the MTVMS Events XML file.
+	[Tags]    smoke    MTVMS
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTVMS/MTVMS_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   MTVMS_Events.xml - valid
+
+Validate MTVMS Telemetry
+	[Documentation]    Validate the MTVMS Telemetry XML file.
+	[Tags]    smoke    MTVMS
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTVMS/MTVMS_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   MTVMS_Telemetry.xml - valid
 
 Validate OCS Commands
 	[Documentation]    Validate the OCS Commands XML file.
@@ -813,27 +995,6 @@ Validate SummitFacility Telemetry
 	Log    ${output}
 	Should Contain    ${output}   SummitFacility_Telemetry.xml - valid
 
-Validate MTTCS Commands
-	[Documentation]    Validate the MTTCS Commands XML file.
-	[Tags]    smoke    MTTCS
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTTCS/MTTCS_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   MTTCS_Commands.xml - valid
-
-Validate MTTCS Events
-	[Documentation]    Validate the MTTCS Events XML file.
-	[Tags]    smoke    MTTCS
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   MTTCS_Events.xml - valid
-
-Validate MTTCS Telemetry
-	[Documentation]    Validate the MTTCS Telemetry XML file.
-	[Tags]    smoke    MTTCS
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   MTTCS_Telemetry.xml - valid
-
 Validate Test Commands
 	[Documentation]    Validate the Test Commands XML file.
 	[Tags]    smoke    Test
@@ -875,25 +1036,4 @@ Validate TunableLaser Telemetry
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/TunableLaser/TunableLaser_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   TunableLaser_Telemetry.xml - valid
-
-Validate MTVMS Commands
-	[Documentation]    Validate the MTVMS Commands XML file.
-	[Tags]    smoke    MTVMS
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTVMS/MTVMS_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   MTVMS_Commands.xml - valid
-
-Validate MTVMS Events
-	[Documentation]    Validate the MTVMS Events XML file.
-	[Tags]    smoke    MTVMS
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTVMS/MTVMS_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   MTVMS_Events.xml - valid
-
-Validate MTVMS Telemetry
-	[Documentation]    Validate the MTVMS Telemetry XML file.
-	[Tags]    smoke    MTVMS
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTVMS/MTVMS_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   MTVMS_Telemetry.xml - valid
 

@@ -1,10 +1,17 @@
 echo "=======Update ts_xml======="; 
 read -n 1 -p "Do you want to update ts_xml? [y]: " -e confirm
 confirm="${confirm:-"y"}"
+echo $XML_HOME
 
 if [ "$confirm" == "y" ] && [ -z $JENKINS_HOME ]; then
+	if [ ! -z $XML_HOME ]; then
+		cd ${XML_HOME}
+	else
+		echo "ERROR: XML_HOME not defined. Exiting."
+		exit 1;
+    fi
 	echo "Updating ts_xml..."
-	cd $HOME/trunk/ts_xml
+	git branch
 	git pull
 	cd ~-
 fi
