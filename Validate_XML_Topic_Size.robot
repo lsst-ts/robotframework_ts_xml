@@ -6262,8 +6262,8 @@ Validate ATMonochromator Event ATMonochromator_logevent_loopTimeOutOfRange Topic
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Event ATMonochromator_logevent_rejectedCommand Topic Byte Size
-	[Documentation]    Validate the ATMonochromator_logevent_rejectedCommand topic is less than 65536 bytes in total.
+Validate ATMonochromator Event ATMonochromator_logevent_detailedState Topic Byte Size
+	[Documentation]    Validate the ATMonochromator_logevent_detailedState topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMonochromator
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6286,8 +6286,8 @@ Validate ATMonochromator Event ATMonochromator_logevent_rejectedCommand Topic By
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Event ATMonochromator_logevent_rejectedCommand Topic Columns
-	[Documentation]    Validate the ATMonochromator_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMonochromator Event ATMonochromator_logevent_detailedState Topic Columns
+	[Documentation]    Validate the ATMonochromator_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMonochromator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6299,8 +6299,8 @@ Validate ATMonochromator Event ATMonochromator_logevent_rejectedCommand Topic Co
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Event ATMonochromator_logevent_settingsAppliedMonoCommunication Topic Byte Size
-	[Documentation]    Validate the ATMonochromator_logevent_settingsAppliedMonoCommunication topic is less than 65536 bytes in total.
+Validate ATMonochromator Event ATMonochromator_logevent_rejectedCommand Topic Byte Size
+	[Documentation]    Validate the ATMonochromator_logevent_rejectedCommand topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMonochromator
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6323,8 +6323,8 @@ Validate ATMonochromator Event ATMonochromator_logevent_settingsAppliedMonoCommu
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Event ATMonochromator_logevent_settingsAppliedMonoCommunication Topic Columns
-	[Documentation]    Validate the ATMonochromator_logevent_settingsAppliedMonoCommunication topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMonochromator Event ATMonochromator_logevent_rejectedCommand Topic Columns
+	[Documentation]    Validate the ATMonochromator_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMonochromator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6336,8 +6336,8 @@ Validate ATMonochromator Event ATMonochromator_logevent_settingsAppliedMonoCommu
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Event ATMonochromator_logevent_selectedGrating Topic Byte Size
-	[Documentation]    Validate the ATMonochromator_logevent_selectedGrating topic is less than 65536 bytes in total.
+Validate ATMonochromator Event ATMonochromator_logevent_settingsAppliedMonoCommunication Topic Byte Size
+	[Documentation]    Validate the ATMonochromator_logevent_settingsAppliedMonoCommunication topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMonochromator
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6360,8 +6360,8 @@ Validate ATMonochromator Event ATMonochromator_logevent_selectedGrating Topic By
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Event ATMonochromator_logevent_selectedGrating Topic Columns
-	[Documentation]    Validate the ATMonochromator_logevent_selectedGrating topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMonochromator Event ATMonochromator_logevent_settingsAppliedMonoCommunication Topic Columns
+	[Documentation]    Validate the ATMonochromator_logevent_settingsAppliedMonoCommunication topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMonochromator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6373,8 +6373,8 @@ Validate ATMonochromator Event ATMonochromator_logevent_selectedGrating Topic Co
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Event ATMonochromator_logevent_wavelength Topic Byte Size
-	[Documentation]    Validate the ATMonochromator_logevent_wavelength topic is less than 65536 bytes in total.
+Validate ATMonochromator Event ATMonochromator_logevent_selectedGrating Topic Byte Size
+	[Documentation]    Validate the ATMonochromator_logevent_selectedGrating topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMonochromator
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6397,8 +6397,8 @@ Validate ATMonochromator Event ATMonochromator_logevent_wavelength Topic Byte Si
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Event ATMonochromator_logevent_wavelength Topic Columns
-	[Documentation]    Validate the ATMonochromator_logevent_wavelength topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMonochromator Event ATMonochromator_logevent_selectedGrating Topic Columns
+	[Documentation]    Validate the ATMonochromator_logevent_selectedGrating topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMonochromator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6410,8 +6410,8 @@ Validate ATMonochromator Event ATMonochromator_logevent_wavelength Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Event ATMonochromator_logevent_slitWidth Topic Byte Size
-	[Documentation]    Validate the ATMonochromator_logevent_slitWidth topic is less than 65536 bytes in total.
+Validate ATMonochromator Event ATMonochromator_logevent_wavelength Topic Byte Size
+	[Documentation]    Validate the ATMonochromator_logevent_wavelength topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMonochromator
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6434,8 +6434,8 @@ Validate ATMonochromator Event ATMonochromator_logevent_slitWidth Topic Byte Siz
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Event ATMonochromator_logevent_slitWidth Topic Columns
-	[Documentation]    Validate the ATMonochromator_logevent_slitWidth topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMonochromator Event ATMonochromator_logevent_wavelength Topic Columns
+	[Documentation]    Validate the ATMonochromator_logevent_wavelength topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMonochromator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6447,8 +6447,8 @@ Validate ATMonochromator Event ATMonochromator_logevent_slitWidth Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Event ATMonochromator_logevent_inPosition Topic Byte Size
-	[Documentation]    Validate the ATMonochromator_logevent_inPosition topic is less than 65536 bytes in total.
+Validate ATMonochromator Event ATMonochromator_logevent_slitWidth Topic Byte Size
+	[Documentation]    Validate the ATMonochromator_logevent_slitWidth topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMonochromator
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6471,8 +6471,8 @@ Validate ATMonochromator Event ATMonochromator_logevent_inPosition Topic Byte Si
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Event ATMonochromator_logevent_inPosition Topic Columns
-	[Documentation]    Validate the ATMonochromator_logevent_inPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMonochromator Event ATMonochromator_logevent_slitWidth Topic Columns
+	[Documentation]    Validate the ATMonochromator_logevent_slitWidth topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMonochromator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6484,8 +6484,8 @@ Validate ATMonochromator Event ATMonochromator_logevent_inPosition Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Event ATMonochromator_logevent_monochromatorConnected Topic Byte Size
-	[Documentation]    Validate the ATMonochromator_logevent_monochromatorConnected topic is less than 65536 bytes in total.
+Validate ATMonochromator Event ATMonochromator_logevent_inPosition Topic Byte Size
+	[Documentation]    Validate the ATMonochromator_logevent_inPosition topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMonochromator
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6508,8 +6508,8 @@ Validate ATMonochromator Event ATMonochromator_logevent_monochromatorConnected T
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Event ATMonochromator_logevent_monochromatorConnected Topic Columns
-	[Documentation]    Validate the ATMonochromator_logevent_monochromatorConnected topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMonochromator Event ATMonochromator_logevent_inPosition Topic Columns
+	[Documentation]    Validate the ATMonochromator_logevent_inPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMonochromator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6521,8 +6521,8 @@ Validate ATMonochromator Event ATMonochromator_logevent_monochromatorConnected T
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Event ATMonochromator_logevent_settingsAppliedMonoHeartbeat Topic Byte Size
-	[Documentation]    Validate the ATMonochromator_logevent_settingsAppliedMonoHeartbeat topic is less than 65536 bytes in total.
+Validate ATMonochromator Event ATMonochromator_logevent_monochromatorConnected Topic Byte Size
+	[Documentation]    Validate the ATMonochromator_logevent_monochromatorConnected topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMonochromator
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6545,8 +6545,8 @@ Validate ATMonochromator Event ATMonochromator_logevent_settingsAppliedMonoHeart
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Event ATMonochromator_logevent_settingsAppliedMonoHeartbeat Topic Columns
-	[Documentation]    Validate the ATMonochromator_logevent_settingsAppliedMonoHeartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMonochromator Event ATMonochromator_logevent_monochromatorConnected Topic Columns
+	[Documentation]    Validate the ATMonochromator_logevent_monochromatorConnected topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMonochromator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6558,8 +6558,8 @@ Validate ATMonochromator Event ATMonochromator_logevent_settingsAppliedMonoHeart
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Event ATMonochromator_logevent_settingsAppliedLoop Topic Byte Size
-	[Documentation]    Validate the ATMonochromator_logevent_settingsAppliedLoop topic is less than 65536 bytes in total.
+Validate ATMonochromator Event ATMonochromator_logevent_settingsAppliedMonoHeartbeat Topic Byte Size
+	[Documentation]    Validate the ATMonochromator_logevent_settingsAppliedMonoHeartbeat topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMonochromator
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6582,8 +6582,8 @@ Validate ATMonochromator Event ATMonochromator_logevent_settingsAppliedLoop Topi
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Event ATMonochromator_logevent_settingsAppliedLoop Topic Columns
-	[Documentation]    Validate the ATMonochromator_logevent_settingsAppliedLoop topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMonochromator Event ATMonochromator_logevent_settingsAppliedMonoHeartbeat Topic Columns
+	[Documentation]    Validate the ATMonochromator_logevent_settingsAppliedMonoHeartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMonochromator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6595,8 +6595,8 @@ Validate ATMonochromator Event ATMonochromator_logevent_settingsAppliedLoop Topi
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMonochromator Event ATMonochromator_logevent_settingsAppliedMonochromatorRanges Topic Byte Size
-	[Documentation]    Validate the ATMonochromator_logevent_settingsAppliedMonochromatorRanges topic is less than 65536 bytes in total.
+Validate ATMonochromator Event ATMonochromator_logevent_settingsAppliedLoop Topic Byte Size
+	[Documentation]    Validate the ATMonochromator_logevent_settingsAppliedLoop topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMonochromator
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6619,13 +6619,50 @@ Validate ATMonochromator Event ATMonochromator_logevent_settingsAppliedMonochrom
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMonochromator Event ATMonochromator_logevent_settingsAppliedMonochromatorRanges Topic Columns
-	[Documentation]    Validate the ATMonochromator_logevent_settingsAppliedMonochromatorRanges topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMonochromator Event ATMonochromator_logevent_settingsAppliedLoop Topic Columns
+	[Documentation]    Validate the ATMonochromator_logevent_settingsAppliedLoop topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMonochromator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[13]/item)" -n ${folder}/sal_interfaces/ATMonochromator/ATMonochromator_Events.xml
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[13]/item/Count" -v . -n ${folder}/sal_interfaces/ATMonochromator/ATMonochromator_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate ATMonochromator Event ATMonochromator_logevent_settingsAppliedMonochromatorRanges Topic Byte Size
+	[Documentation]    Validate the ATMonochromator_logevent_settingsAppliedMonochromatorRanges topic is less than 65536 bytes in total.
+	[Tags]    smoke    ATMonochromator
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[14]/item)" -n ${folder}/sal_interfaces/ATMonochromator/ATMonochromator_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[14]/item/Count" -v . -n ${folder}/sal_interfaces/ATMonochromator/ATMonochromator_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[14]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATMonochromator/ATMonochromator_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate ATMonochromator Event ATMonochromator_logevent_settingsAppliedMonochromatorRanges Topic Columns
+	[Documentation]    Validate the ATMonochromator_logevent_settingsAppliedMonochromatorRanges topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    ATMonochromator
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[14]/item)" -n ${folder}/sal_interfaces/ATMonochromator/ATMonochromator_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[14]/item/Count" -v . -n ${folder}/sal_interfaces/ATMonochromator/ATMonochromator_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -16918,8 +16955,8 @@ Validate FiberSpectrograph Event FiberSpectrograph_logevent_largeFileObjectAvail
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate FiberSpectrograph Event FiberSpectrograph_logevent_measuredSpectrum Topic Byte Size
-	[Documentation]    Validate the FiberSpectrograph_logevent_measuredSpectrum topic is less than 65536 bytes in total.
+Validate FiberSpectrograph Event FiberSpectrograph_logevent_detailedState Topic Byte Size
+	[Documentation]    Validate the FiberSpectrograph_logevent_detailedState topic is less than 65536 bytes in total.
 	[Tags]    smoke    FiberSpectrograph
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16942,8 +16979,8 @@ Validate FiberSpectrograph Event FiberSpectrograph_logevent_measuredSpectrum Top
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate FiberSpectrograph Event FiberSpectrograph_logevent_measuredSpectrum Topic Columns
-	[Documentation]    Validate the FiberSpectrograph_logevent_measuredSpectrum topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate FiberSpectrograph Event FiberSpectrograph_logevent_detailedState Topic Columns
+	[Documentation]    Validate the FiberSpectrograph_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    FiberSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16955,8 +16992,8 @@ Validate FiberSpectrograph Event FiberSpectrograph_logevent_measuredSpectrum Top
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate FiberSpectrograph Event FiberSpectrograph_logevent_timeout Topic Byte Size
-	[Documentation]    Validate the FiberSpectrograph_logevent_timeout topic is less than 65536 bytes in total.
+Validate FiberSpectrograph Event FiberSpectrograph_logevent_measuredSpectrum Topic Byte Size
+	[Documentation]    Validate the FiberSpectrograph_logevent_measuredSpectrum topic is less than 65536 bytes in total.
 	[Tags]    smoke    FiberSpectrograph
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16979,8 +17016,8 @@ Validate FiberSpectrograph Event FiberSpectrograph_logevent_timeout Topic Byte S
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate FiberSpectrograph Event FiberSpectrograph_logevent_timeout Topic Columns
-	[Documentation]    Validate the FiberSpectrograph_logevent_timeout topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate FiberSpectrograph Event FiberSpectrograph_logevent_measuredSpectrum Topic Columns
+	[Documentation]    Validate the FiberSpectrograph_logevent_measuredSpectrum topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    FiberSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16992,8 +17029,8 @@ Validate FiberSpectrograph Event FiberSpectrograph_logevent_timeout Topic Column
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate FiberSpectrograph Event FiberSpectrograph_logevent_rejectedCommand Topic Byte Size
-	[Documentation]    Validate the FiberSpectrograph_logevent_rejectedCommand topic is less than 65536 bytes in total.
+Validate FiberSpectrograph Event FiberSpectrograph_logevent_timeout Topic Byte Size
+	[Documentation]    Validate the FiberSpectrograph_logevent_timeout topic is less than 65536 bytes in total.
 	[Tags]    smoke    FiberSpectrograph
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17016,8 +17053,8 @@ Validate FiberSpectrograph Event FiberSpectrograph_logevent_rejectedCommand Topi
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate FiberSpectrograph Event FiberSpectrograph_logevent_rejectedCommand Topic Columns
-	[Documentation]    Validate the FiberSpectrograph_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate FiberSpectrograph Event FiberSpectrograph_logevent_timeout Topic Columns
+	[Documentation]    Validate the FiberSpectrograph_logevent_timeout topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    FiberSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17029,8 +17066,8 @@ Validate FiberSpectrograph Event FiberSpectrograph_logevent_rejectedCommand Topi
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate FiberSpectrograph Event FiberSpectrograph_logevent_loopTimeOutOfRange Topic Byte Size
-	[Documentation]    Validate the FiberSpectrograph_logevent_loopTimeOutOfRange topic is less than 65536 bytes in total.
+Validate FiberSpectrograph Event FiberSpectrograph_logevent_rejectedCommand Topic Byte Size
+	[Documentation]    Validate the FiberSpectrograph_logevent_rejectedCommand topic is less than 65536 bytes in total.
 	[Tags]    smoke    FiberSpectrograph
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17053,8 +17090,8 @@ Validate FiberSpectrograph Event FiberSpectrograph_logevent_loopTimeOutOfRange T
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate FiberSpectrograph Event FiberSpectrograph_logevent_loopTimeOutOfRange Topic Columns
-	[Documentation]    Validate the FiberSpectrograph_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate FiberSpectrograph Event FiberSpectrograph_logevent_rejectedCommand Topic Columns
+	[Documentation]    Validate the FiberSpectrograph_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    FiberSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17066,8 +17103,8 @@ Validate FiberSpectrograph Event FiberSpectrograph_logevent_loopTimeOutOfRange T
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate FiberSpectrograph Event FiberSpectrograph_logevent_internalCommand Topic Byte Size
-	[Documentation]    Validate the FiberSpectrograph_logevent_internalCommand topic is less than 65536 bytes in total.
+Validate FiberSpectrograph Event FiberSpectrograph_logevent_loopTimeOutOfRange Topic Byte Size
+	[Documentation]    Validate the FiberSpectrograph_logevent_loopTimeOutOfRange topic is less than 65536 bytes in total.
 	[Tags]    smoke    FiberSpectrograph
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17090,8 +17127,8 @@ Validate FiberSpectrograph Event FiberSpectrograph_logevent_internalCommand Topi
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate FiberSpectrograph Event FiberSpectrograph_logevent_internalCommand Topic Columns
-	[Documentation]    Validate the FiberSpectrograph_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate FiberSpectrograph Event FiberSpectrograph_logevent_loopTimeOutOfRange Topic Columns
+	[Documentation]    Validate the FiberSpectrograph_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    FiberSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17103,8 +17140,8 @@ Validate FiberSpectrograph Event FiberSpectrograph_logevent_internalCommand Topi
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate FiberSpectrograph Event FiberSpectrograph_logevent_heartbeat Topic Byte Size
-	[Documentation]    Validate the FiberSpectrograph_logevent_heartbeat topic is less than 65536 bytes in total.
+Validate FiberSpectrograph Event FiberSpectrograph_logevent_internalCommand Topic Byte Size
+	[Documentation]    Validate the FiberSpectrograph_logevent_internalCommand topic is less than 65536 bytes in total.
 	[Tags]    smoke    FiberSpectrograph
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17127,13 +17164,50 @@ Validate FiberSpectrograph Event FiberSpectrograph_logevent_heartbeat Topic Byte
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate FiberSpectrograph Event FiberSpectrograph_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the FiberSpectrograph_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate FiberSpectrograph Event FiberSpectrograph_logevent_internalCommand Topic Columns
+	[Documentation]    Validate the FiberSpectrograph_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    FiberSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/Count" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate FiberSpectrograph Event FiberSpectrograph_logevent_heartbeat Topic Byte Size
+	[Documentation]    Validate the FiberSpectrograph_logevent_heartbeat topic is less than 65536 bytes in total.
+	[Tags]    smoke    FiberSpectrograph
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/Count" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate FiberSpectrograph Event FiberSpectrograph_logevent_heartbeat Topic Columns
+	[Documentation]    Validate the FiberSpectrograph_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    FiberSpectrograph
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/Count" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -35011,8 +35085,8 @@ Validate Test Command Test_command_setArrays Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Test Command Test_command_fault Topic Byte Size
-	[Documentation]    Validate the Test_command_fault topic is less than 65536 bytes in total.
+Validate Test Command Test_command_setLogging Topic Byte Size
+	[Documentation]    Validate the Test_command_setLogging topic is less than 65536 bytes in total.
 	[Tags]    smoke    Test
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -35035,8 +35109,8 @@ Validate Test Command Test_command_fault Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Test Command Test_command_fault Topic Columns
-	[Documentation]    Validate the Test_command_fault topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Test Command Test_command_setLogging Topic Columns
+	[Documentation]    Validate the Test_command_setLogging topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    Test
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -35048,8 +35122,8 @@ Validate Test Command Test_command_fault Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Test Command Test_command_wait Topic Byte Size
-	[Documentation]    Validate the Test_command_wait topic is less than 65536 bytes in total.
+Validate Test Command Test_command_fault Topic Byte Size
+	[Documentation]    Validate the Test_command_fault topic is less than 65536 bytes in total.
 	[Tags]    smoke    Test
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -35072,13 +35146,50 @@ Validate Test Command Test_command_wait Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Test Command Test_command_wait Topic Columns
-	[Documentation]    Validate the Test_command_wait topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Test Command Test_command_fault Topic Columns
+	[Documentation]    Validate the Test_command_fault topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    Test
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/Test/Test_Commands.xml
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[4]/item/Count" -v . -n ${folder}/sal_interfaces/Test/Test_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Test Command Test_command_wait Topic Byte Size
+	[Documentation]    Validate the Test_command_wait topic is less than 65536 bytes in total.
+	[Tags]    smoke    Test
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/Test/Test_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[5]/item/Count" -v . -n ${folder}/sal_interfaces/Test/Test_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/Test/Test_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Test Command Test_command_wait Topic Columns
+	[Documentation]    Validate the Test_command_wait topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    Test
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/Test/Test_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[5]/item/Count" -v . -n ${folder}/sal_interfaces/Test/Test_Commands.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -35190,6 +35301,43 @@ Validate Test Event Test_logevent_arrays Topic Columns
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/Test/Test_Events.xml
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/Count" -v . -n ${folder}/sal_interfaces/Test/Test_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Test Event Test_logevent_logMessage Topic Byte Size
+	[Documentation]    Validate the Test_logevent_logMessage topic is less than 65536 bytes in total.
+	[Tags]    smoke    Test
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/Test/Test_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/Test/Test_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/Test/Test_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Test Event Test_logevent_logMessage Topic Columns
+	[Documentation]    Validate the Test_logevent_logMessage topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    Test
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/Test/Test_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/Test/Test_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
