@@ -9,85 +9,22 @@ import os
 # Variables
 # =========
 """Defines the array of Commandable SAL Components, or CSCs."""
-subsystems = ['archiver', 'atArchiver', 'AtDome', 'atHeaderService', 'AtMCS', 'atMonochromator', 'AtPneumatics', 'atScheduler', 'AtWhiteLight', 
-				'AtWhiteLightChiller', 'atcamera', 'atcs', 'camera', 'catchupArchiver', 'CBP',
-				'dome', 'domeADB', 'domeAPS', 'domeLouvers', 'domeLWS', 'domeMONCS', 'domeTHCS', 'eec', 'efd', 
-				'headerService', 'hexapod', 'Laser', 'LinearStage', 'm1m3', 'm2ms', 'MtAtElectrometer', 'MTMount', 'ocs', 'PromptProcessing', 'rotator', 
-				'scheduler', 'ScriptLoader', 'sedSpectrometer', 'sequencer', 'Spectrograph', 'summitFacility', 'tcs', 'tcsOfc', 'tcsWEP', 'Test', 'vms']
 
+subsystems = [	'AOCLC', 'ATAOS', 'ATArchiver', 'ATBuilding', 'ATCalCS', 'ATCamera', 'ATDome', 'ATDomeTrajectory', 'ATHeaderService', 'ATHexapod',
+				'ATMCS', 'ATMonochromator', 'ATPneumatics', 'ATPointingComponent', 'ATSpectrograph', 'ATTCS', 'ATThermoelectricCooler', 'ATWhiteLight', 
+				'CatchupArchiver', 'CBP', 'DIMM', 'Dome', 'DomeADB', 'DomeAPS', 'DomeLouvers', 'DomeLWS', 'DomeMONCS', 'DomeTHCS', 
+				'EAS', 'EEC', 'EFD', 'EFDTransformationServer', 'Electrometer', 'FiberSpectrograph', 'IOTA', 'Hexapod', 'LinearStage', 'LOVE',
+				'MTArchiver', 'MTCalCS', 'MTCamera', 'MTDomeTrajectory', 'MTGuider', 'MTHeaderService', 'MTLaserTracker', 'MTM1M3', 'MTM2',
+				'MTMount', 'MTOFC', 'MTTCS', 'MTWEP', 'MTVMS', 'OCS', 'PromptProcessing', 'Rotator', 'Scheduler', 'Script', 'ScriptQueue',
+				'Sequencer', 'SummitFacility', 'Test', 'TunableLaser']
 
 # =========
 # Functions
 # =========
 
 def CapitalizeSubsystem( subsystem ):
-	"""Certain CSC abbreviations are capitalized in non-standard ways. This function correctly handles that capitalization."""
-	if re.match("^dome\S+", subsystem):
-		return subsystem[0].upper() + subsystem[1:]
-	elif subsystem == "atArchiver":
-		return "AtArchiver"
-	elif subsystem == "atcamera":
-		return "AtCamera"
-	elif subsystem == "AtDome":
-		return "AtDome"
-	elif subsystem == "atcs":
-		return "ATCS"
-	elif subsystem == "AtMCS":
-		return "AtMCS"
-	elif subsystem == "atHeaderService":
-		return "AtHeaderService"
-	elif subsystem == "atMonochromator":
-		return "AtMonochromator"
-	elif subsystem == "AtPneumatics":
-		return "AtPneumatics"
-	elif subsystem == "atScheduler":
-		return "AtScheduler"
-	elif subsystem == "AtSpectrograph":
-		return "AtSpectrograph"
-	elif subsystem == "AtWhiteLight":
-		return "AtWhiteLight"
-	elif subsystem == "AtWhiteLightChiller":
-		return "AtWhiteLightChiller"
-	elif subsystem == "catchuparchiver":
-		return "CatchupArchiver"
-	elif subsystem == "catchuparchiver":
-		return "CatchupArchiver"
-	elif subsystem == "eec":
-		return "EEC"
-	elif subsystem == "efd":
-		return "EFD"
-	elif subsystem == "headerService":
-		return "HeaderService"
-	elif subsystem == "LinearStage":
-		return "LinearStage"
-	elif subsystem == "m1m3":
-		return "M1M3"
-	elif subsystem == "m2ms":
-		return "M2MS"
-	elif subsystem == "MtAtElectrometer":
-		return "MtAtElectrometer"
-	elif subsystem == "MTMount":
-		return subsystem
-	elif subsystem == "ocs":
-		return "OCS"
-	elif subsystem == "PromptProcessing":
-		return "PromptProcessing"
-	elif subsystem == "ScriptLoader":
-		return "ScriptLoader"
-	elif subsystem == "sedSpectrometer":
-		return "SEDSpectrometer"
-	elif subsystem == "summitFacility":
-		return "SummitFacility"
-	elif subsystem == "tcs":
-		return "TCS"
-	elif subsystem == "tcsOfc":
-		return "TcsOfc"
-	elif subsystem == "tcsWEP":
-		return "TcsWEP"
-	elif subsystem == "vms":
-		return "VMS"
-	else:
-		return subsystem.capitalize()
+	"""Certain CSCs used to be capitalized in non-standard ways. This function is holdover and should be removed."""
+	return subsystem
 
 def GetSubsystemVersion( string ):
 	# Right now, the topic version is controlled manually, which requries a 

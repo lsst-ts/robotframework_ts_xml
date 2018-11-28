@@ -7,6 +7,7 @@ import xml_common
 
 # Create/Open test suite file.
 file = open("../Validate_XML_ReservedWords.robot","w")
+home = os.environ['XML_HOME']
 
 # Create Settings header.
 file.write("*** Settings ***\n")
@@ -27,14 +28,23 @@ file.write("*** Test Cases ***\n")
 for subsystem in xml_common.subsystems:
 	# Get the list of XMLs for each CSC, to include Telemetry, Events and Commands.
 	xmls = glob.glob(os.environ['XML_HOME'] + "/sal_interfaces/" + subsystem + "/" + subsystem + "*")
+
 	for xml in xmls:
 		# Get the message type, i.e. Telemetry, Events, Commands.
-		messageType = xml.split('/')[7].split('_')[1].split('.')[0]
+		homelength = len(home.split('/'))
+		messageType = xml.split('/')[homelength + 2].split('_')[1].split('.')[0]
+
+		# Mark test cases with Jira tickets
+		if subsystem == "test" and messageType == "test":
+			mysql_skipped=""
+		else:
+			mysql_skipped=""
+			idl_skipped=""
 
         # Create the EFDB_Name Test Cases to verify IDL Reserved words.
 		file.write("Validate " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType + " EFDB_Name Values Do Not Use IDL Reserved words\n")
 		file.write("\t[Documentation]    Validate the " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType + " <EFDB_Name> tags do not contain IDL Reserved Words.\n")
-		file.write("\t[Tags]    smoke    " + xml_common.CapitalizeSubsystem(subsystem) + "\n")
+		file.write("\t[Tags]    smoke    " + xml_common.CapitalizeSubsystem(subsystem) + idl_skipped + "\n")
 		file.write("\tComment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.\n")
 		file.write("\t${output}=    Run    ${xml} sel -t -m \"//SAL" + messageType.rstrip('s') + "Set/SAL" + messageType.rstrip('s') + "/item/EFDB_Name\" -v . -n ${folder}/sal_interfaces/" + subsystem + "/" + subsystem + "_" + messageType + ".xml |awk '{$1=$1};1' |uniq |tr '\\n' '|'\n")
 		file.write("\tLog    ${output}\n")
@@ -43,7 +53,7 @@ for subsystem in xml_common.subsystems:
 		# Create the EFDB_Name Test Cases to verify MySQL Reserved words.
 		file.write("Validate " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType + " EFDB_Name Values Do Not Use MySQL Reserved Words\n")
 		file.write("\t[Documentation]    Validate the " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType + " <EFDB_Name> tags do not contain MySQL Reserved Words.\n")
-		file.write("\t[Tags]    smoke    " + xml_common.CapitalizeSubsystem(subsystem) + "\n")
+		file.write("\t[Tags]    smoke    " + xml_common.CapitalizeSubsystem(subsystem) + mysql_skipped + "\n")
 		file.write("\tComment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.\n")
 		file.write("\t${output}=    Run    ${xml} sel -t -m \"//SAL" + messageType.rstrip('s') + "Set/SAL" + messageType.rstrip('s') + "/item/EFDB_Name\" -v . -n ${folder}/sal_interfaces/" + subsystem + "/" + subsystem + "_" + messageType + ".xml |awk '{$1=$1};1' |uniq |tr '\\n' '|'\n")
 		file.write("\tLog    ${output}\n")

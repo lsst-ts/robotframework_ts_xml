@@ -7,6 +7,7 @@ import xml_common
 
 # Create/Open test suite file.
 file = open("../Validate_XML_Count.robot","w")
+home = os.environ['XML_HOME']
 
 # Create Settings header.
 file.write("*** Settings ***\n")
@@ -28,7 +29,8 @@ for subsystem in xml_common.subsystems:
 	xmls = glob.glob(os.environ['XML_HOME'] + "/sal_interfaces/" + subsystem + "/" + subsystem + "*")
 	for xml in xmls:
 		# Get the message type, i.e. Telemetry, Events, Commands.
-		messageType = xml.split('/')[7].split('_')[1].split('.')[0]
+		homelength = len(home.split('/'))
+		messageType = xml.split('/')[homelength + 2].split('_')[1].split('.')[0]
 		# Create the Test Cases.
 		file.write("Validate " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType + " XML Counts\n")
 		file.write("\t[Documentation]    Validate the " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType + " XML count.\n")

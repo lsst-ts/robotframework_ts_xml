@@ -4,17 +4,18 @@ import glob
 import re
 import subprocess
 import os
+import platform
 import xml_common
 
 # Create/Open test suite file.
 file = open("../Validate_XML_Topic_Size.robot","w")
+home = os.environ['XML_HOME']
 
 # Set XML parser application name.
 # ... XMLStarlet is invoked differently in Redhat OS systems, like Jenkins.
-try:
-	os.environ['JENKINS_HOME']
+if (platform.system() == "Linux"):
 	app="xmlstarlet"
-except:
+else:
 	app="xml"
 
 # Create Settings header.
@@ -39,37 +40,38 @@ for subsystem in xml_common.subsystems:
 	xmls = glob.glob(os.environ['XML_HOME'] + "/sal_interfaces/" + subsystem + "/" + subsystem + "*")
 	for xml in xmls:
 		# Get the message type, i.e. Telemetry, Events, Commands.
-		messageType = xml.split('/')[7].split('_')[1].split('.')[0]
+		homelength = len(home.split('/'))
+		messageType = xml.split('/')[homelength + 2].split('_')[1].split('.')[0]
 		# Get the Topics for each message type.
 		home = os.environ['XML_HOME']
 		salxmlpath = '/SAL' + messageType.rstrip("s") + 'Set/SAL' + messageType.rstrip("s")
 		xmlfile = 'sal_interfaces/' + subsystem + '/' + subsystem + '_' + messageType + '.xml'
-		topics = subprocess.check_output(app + ' sel -t -m "/' + salxmlpath + '/EFDB_Topic" -v . -n ' + home + '/' + xmlfile, shell=True).split()
+		try:
+			topics = subprocess.check_output(app + ' sel -t -m "/' + salxmlpath + '/EFDB_Topic" -v . -n ' + home + '/' + xmlfile, shell=True).split()
+		except:
+			print("\tERROR: " + subsystem + '_' + messageType + ".xml" + " is not valid XML.")
 		for index, topic in enumerate(topics):
 			
 			# Mark test cases with Jira tickets
 			byte_skipped=col_skipped=""
-			if subsystem == "sedSpectrometer" and topic.decode("utf-8") == "sedSpectrometer_logevent_measuredSpectrum":
-				col_skipped="	TSS-2987"
-			elif subsystem == "sedSpectrometer" and topic.decode("utf-8") == "sedSpectrometer_logevent_internalCommand":
-				col_skipped="	TSS-2988"
-			elif subsystem == "m1m3" and topic.decode("utf-8") == "m1m3_command_RunMirrorForceProfile":
+			if subsystem == "MTM1M3" and topic.decode("utf-8") == "MTM1M3_command_runMirrorForceProfile":
 				col_skipped="	TSS-2989"
-			elif subsystem == "m1m3" and topic.decode("utf-8") == "m1m3_logevent_ForceActuatorInfo":
+			elif subsystem == "MTM1M3" and topic.decode("utf-8") == "MTM1M3_logevent_forceActuatorInfo":
 				col_skipped="	TSS-2990"
-			elif subsystem == "m1m3" and topic.decode("utf-8") == "m1m3_logevent_ForceSetpointWarning":
+			elif subsystem == "MTM1M3" and topic.decode("utf-8") == "MTM1M3_logevent_forceSetpointWarning":
 				col_skipped="	TSS-2991"
-			elif subsystem == "m1m3" and topic.decode("utf-8") == "m1m3_logevent_ForceActuatorWarning":
+			elif subsystem == "MTM1M3" and topic.decode("utf-8") == "MTM1M3_logevent_forceActuatorWarning":
 				col_skipped="	TSS-2992"
-			elif subsystem == "atcs" and topic.decode("utf-8") == "atcs_logevent_InternalCommand":
-				col_skipped="	TSS-2994"
-			elif subsystem == "tcs" and topic.decode("utf-8") == "tcs_logevent_InternalCommand":
-				col_skipped="	TSS-2561"
+			elif subsystem == "ScriptQueue" and topic.decode("utf-8") == "ScriptQueue_command_stopScripts":
+				col_skipped="	TSS-3326"
+			elif subsystem == "ScriptQueue" and topic.decode("utf-8") == "ScriptQueue_logevent_queue":
+				col_skipped="	TSS-3326"
 			else:
 				byte_skipped=""
 				col_skipped=""
 
 			index += 1
+
 			# Create the Test Cases.
 			file.write("Validate " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType.rstrip("s") + " " + topic.decode("utf-8") + " Topic Byte Size\n")
 			file.write("\t[Documentation]    Validate the " + topic.decode("utf-8") + " topic is less than 65536 bytes in total.\n")

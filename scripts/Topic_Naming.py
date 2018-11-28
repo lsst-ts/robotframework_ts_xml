@@ -7,6 +7,7 @@ import xml_common
 
 # Create/Open test suite file.
 file = open("../Validate_Topic_Naming.robot","w")
+home = os.environ['XML_HOME']
 
 # Create Settings header.
 file.write("*** Settings ***\n")
@@ -27,36 +28,28 @@ file.write("*** Test Cases ***\n")
 for subsystem in xml_common.subsystems:
 
 	# Mark test cases with Jira tickets
-	if subsystem == "vms":
-		skipped="TSS-2618"
-	elif subsystem == "m1m3":
-		skipped="TSS-2617"
-	elif re.match("^dome\S+", subsystem):
+	if re.match("^Dome\S+", subsystem):
 		skipped="skipped"
-	elif subsystem == "hexapod":
+	elif subsystem == "Hexapod":
 		skipped="skipped"
-	elif subsystem == "m2ms":
+	elif subsystem == "MTM2":
 		skipped="skipped"
 	elif subsystem == "MTMount":
 		skipped="skipped"
-	elif subsystem == "rotator":
+	elif subsystem == "Rotator":
 		skipped="skipped"
-	elif subsystem == "ocs":
+	elif subsystem == "OCS":
 		skipped="TSS-1792"
-	elif subsystem == "sequencer":
+	elif subsystem == "Sequencer":
 		skipped="TSS-1793"
-	elif subsystem == "atcs":
+	elif subsystem == "ATTCS":
 		skipped="TSS-2978"
-	elif subsystem == "tcs":
+	elif subsystem == "MTTCS":
 		skipped="TSS-1795"
-	elif subsystem == "dome":
+	elif subsystem == "Dome":
 		skipped="TSS-1778"
-	elif subsystem == "efd":
+	elif subsystem == "EFD":
 		skipped="TSS-2985"
-	elif subsystem == "sedSpectrometer":
-		skipped="TSS-2986"
-	elif subsystem == "AtDome":
-		skipped="TSS-3059"
 	else:
 		skipped=""
 
@@ -64,7 +57,8 @@ for subsystem in xml_common.subsystems:
 	xmls = glob.glob(os.environ['XML_HOME'] + "/sal_interfaces/" + subsystem + "/" + subsystem + "*")
 	for xml in xmls:
 		# Get the message type, i.e. Telemetry, Events, Commands.
-		messageType = xml.split('/')[7].split('_')[1].split('.')[0]
+		homelength = len(home.split('/'))
+		messageType = xml.split('/')[homelength + 2].split('_')[1].split('.')[0]
 		# Create the Test Cases.
 		file.write("Validate " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType + " Topic Names\n")
 		file.write("\t[Documentation]    Validate the " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType + " topic names conform to naming convention.\n")

@@ -29,10 +29,32 @@ for topictype in ["Commands", "Events", "Telemetry"]:
 	for subsystem in xml_common.subsystems:
 		# Get the list of XMLs for each CSC, to include Telemetry, Events and Commands.
 		xmls = glob.glob(os.environ['XML_HOME'] + "/sal_interfaces/" + subsystem + "/" + subsystem + "_" + topictype + "*")
+
+		# Mark test cases with Jira tickets
+		skipped=com_skipped=event_skipped=enum_skipped=""
+		if (subsystem == "Test" and topictype == "Telemetry"):
+			telem_skipped="    TSS-3224"
+			skipped=com_skipped=event_skipped=""
+		elif (subsystem == "MTMount" and topictype == "Telemetry"):
+			telem_skipped="    TSS-3286"
+			skipped=com_skipped=event_skipped=""
+		elif (subsystem == "Script" and topictype == "Commands"):
+			telem_skipped="    TSS-3331"
+			skipped=com_skipped=event_skipped=""
+		elif (subsystem == "Script" and topictype == "Events"):
+			telem_skipped="    TSS-3332"
+			skipped=com_skipped=event_skipped=""
+		else:
+			skipped=""
+			com_skipped=""
+			event_skipped=""
+			telem_skipped=""
+
+		# Validate each XML
 		for xml in xmls:
 			# Create the Test Cases.
 			file.write("Validate " + xml_common.CapitalizeSubsystem(subsystem) + " " + topictype + " XML file\n")
-			file.write("\t[Tags]    smoke    " + xml_common.CapitalizeSubsystem(subsystem) + "\n")
+			file.write("\t[Tags]    smoke    " + xml_common.CapitalizeSubsystem(subsystem) + com_skipped + event_skipped + telem_skipped + skipped +"\n")
 			file.write("\t${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SAL" + topictype.rstrip("s") + "Set.xsd ${folder}/sal_interfaces/" + subsystem + "/" + subsystem + "_" + topictype + ".xml\n")
 			file.write("\tLog    ${output}\n")
 			file.write("\tShould Contain    ${output}   " + subsystem + "_" + topictype + ".xml - valid\n")
