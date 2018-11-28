@@ -62,12 +62,6 @@ Validate ATPneumatics Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   ATPneumatics_Telemetry.xml - valid
 
-Validate ATPtg Telemetry XML file
-	[Tags]    smoke    ATPtg
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/ATPtg/ATPtg_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   ATPtg_Telemetry.xml - valid
-
 Validate ATSpectrograph Telemetry XML file
 	[Tags]    smoke    ATSpectrograph
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/ATSpectrograph/ATSpectrograph_Telemetry.xml
@@ -254,12 +248,6 @@ Validate MTMount Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   MTMount_Telemetry.xml - valid
 
-Validate MTPtg Telemetry XML file
-	[Tags]    smoke    MTPtg
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/MTPtg/MTPtg_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   MTPtg_Telemetry.xml - valid
-
 Validate MTOFC Telemetry XML file
 	[Tags]    smoke    MTOFC
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/MTOFC/MTOFC_Telemetry.xml
@@ -289,6 +277,12 @@ Validate OCS Telemetry XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/OCS/OCS_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   OCS_Telemetry.xml - valid
+
+Validate PointingComponent Telemetry XML file
+	[Tags]    smoke    PointingComponent
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   PointingComponent_Telemetry.xml - valid
 
 Validate PromptProcessing Telemetry XML file
 	[Tags]    smoke    PromptProcessing
