@@ -10,12 +10,12 @@ import os
 # =========
 """Defines the array of Commandable SAL Components, or CSCs."""
 
-subsystems = [	'AOCLC', 'ATAOS', 'ATArchiver', 'ATBuilding', 'ATCalCS', 'ATCamera', 'ATDome', 'ATDomeTrajectory', 'ATHeaderService', 'ATHexapod',
-				'ATMCS', 'ATMonochromator', 'ATPneumatics', 'ATPointingComponent', 'ATSpectrograph', 'ATTCS', 'ATThermoelectricCooler', 'ATWhiteLight', 
+subsystems = [	'AOCLC', 'ATAOS', 'ATArchiver', 'ATBuilding', 'ATCalCS', 'ATCamera', 'ATDome', 'ATDomeTrajectory', 'ATEEC', 'ATHeaderService', 'ATHexapod',
+				'ATMCS', 'ATMonochromator', 'ATPneumatics', 'ATPtg', 'ATSpectrograph', 'ATTCS', 'ATThermoelectricCooler', 'ATWhiteLight', 
 				'CatchupArchiver', 'CBP', 'DIMM', 'Dome', 'DomeADB', 'DomeAPS', 'DomeLouvers', 'DomeLWS', 'DomeMONCS', 'DomeTHCS', 
-				'EAS', 'EEC', 'EFD', 'EFDTransformationServer', 'Electrometer', 'FiberSpectrograph', 'IOTA', 'Hexapod', 'LinearStage', 'LOVE',
-				'MTArchiver', 'MTCalCS', 'MTCamera', 'MTDomeTrajectory', 'MTGuider', 'MTHeaderService', 'MTLaserTracker', 'MTM1M3', 'MTM2',
-				'MTMount', 'MTOFC', 'MTTCS', 'MTWEP', 'MTVMS', 'OCS', 'PromptProcessing', 'Rotator', 'Scheduler', 'Script', 'ScriptQueue',
+				'EAS', 'EFD', 'EFDTransformationServer', 'Electrometer', 'FiberSpectrograph', 'IOTA', 'Hexapod', 'HVAC', 'LinearStage', 'LOVE',
+				'MTArchiver', 'MTCalCS', 'MTCamera', 'MTDomeTrajectory', 'MTEEC', 'MTGuider', 'MTHeaderService', 'MTLaserTracker', 'MTM1M3', 'MTM2',
+				'MTMount', 'MTPtg', 'MTOFC', 'MTTCS', 'MTWEP', 'MTVMS', 'OCS', 'PromptProcessing', 'Rotator', 'Scheduler', 'Script', 'ScriptQueue',
 				'Sequencer', 'SummitFacility', 'Test', 'TunableLaser']
 
 # =========
