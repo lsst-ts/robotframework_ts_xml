@@ -135,10 +135,19 @@ Validate ATDomeTrajectory Events Attribute Names
 	: FOR    ${item}    IN    @{attributes}
 	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
 
-Validate ATDomeTrajectory Telemetry Attribute Names
-	[Documentation]    Validate the ATDomeTrajectory Telemetry attribute names conform to naming convention.
-	[Tags]    smoke    ATDomeTrajectory    
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/ATDomeTrajectory/ATDomeTrajectory_Telemetry.xml |sed -e 's/\\n/,/g'
+Validate ATEEC Commands Attribute Names
+	[Documentation]    Validate the ATEEC Commands attribute names conform to naming convention.
+	[Tags]    smoke    ATEEC    
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/ATEEC/ATEEC_Commands.xml |sed -e 's/\\n/,/g'
+	Log    ${output}
+	@{attributes}=    Split to Lines    ${output}
+	: FOR    ${item}    IN    @{attributes}
+	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
+
+Validate ATEEC Events Attribute Names
+	[Documentation]    Validate the ATEEC Events attribute names conform to naming convention.
+	[Tags]    smoke    ATEEC    
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/ATEEC/ATEEC_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
 	: FOR    ${item}    IN    @{attributes}
@@ -256,6 +265,33 @@ Validate ATPneumatics Telemetry Attribute Names
 	[Documentation]    Validate the ATPneumatics Telemetry attribute names conform to naming convention.
 	[Tags]    smoke    ATPneumatics    
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/ATPneumatics/ATPneumatics_Telemetry.xml |sed -e 's/\\n/,/g'
+	Log    ${output}
+	@{attributes}=    Split to Lines    ${output}
+	: FOR    ${item}    IN    @{attributes}
+	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
+
+Validate ATPtg Commands Attribute Names
+	[Documentation]    Validate the ATPtg Commands attribute names conform to naming convention.
+	[Tags]    smoke    ATPtg    
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/ATPtg/ATPtg_Commands.xml |sed -e 's/\\n/,/g'
+	Log    ${output}
+	@{attributes}=    Split to Lines    ${output}
+	: FOR    ${item}    IN    @{attributes}
+	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
+
+Validate ATPtg Events Attribute Names
+	[Documentation]    Validate the ATPtg Events attribute names conform to naming convention.
+	[Tags]    smoke    ATPtg    
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/ATPtg/ATPtg_Events.xml |sed -e 's/\\n/,/g'
+	Log    ${output}
+	@{attributes}=    Split to Lines    ${output}
+	: FOR    ${item}    IN    @{attributes}
+	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
+
+Validate ATPtg Telemetry Attribute Names
+	[Documentation]    Validate the ATPtg Telemetry attribute names conform to naming convention.
+	[Tags]    smoke    ATPtg    
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/ATPtg/ATPtg_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
 	: FOR    ${item}    IN    @{attributes}
@@ -630,33 +666,6 @@ Validate EAS Telemetry Attribute Names
 	: FOR    ${item}    IN    @{attributes}
 	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
 
-Validate EEC Commands Attribute Names
-	[Documentation]    Validate the EEC Commands attribute names conform to naming convention.
-	[Tags]    smoke    EEC    
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/EEC/EEC_Commands.xml |sed -e 's/\\n/,/g'
-	Log    ${output}
-	@{attributes}=    Split to Lines    ${output}
-	: FOR    ${item}    IN    @{attributes}
-	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
-
-Validate EEC Events Attribute Names
-	[Documentation]    Validate the EEC Events attribute names conform to naming convention.
-	[Tags]    smoke    EEC    
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/EEC/EEC_Events.xml |sed -e 's/\\n/,/g'
-	Log    ${output}
-	@{attributes}=    Split to Lines    ${output}
-	: FOR    ${item}    IN    @{attributes}
-	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
-
-Validate EEC Telemetry Attribute Names
-	[Documentation]    Validate the EEC Telemetry attribute names conform to naming convention.
-	[Tags]    smoke    EEC    
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/EEC/EEC_Telemetry.xml |sed -e 's/\\n/,/g'
-	Log    ${output}
-	@{attributes}=    Split to Lines    ${output}
-	: FOR    ${item}    IN    @{attributes}
-	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
-
 Validate EFD Events Attribute Names
 	[Documentation]    Validate the EFD Events attribute names conform to naming convention.
 	[Tags]    smoke    EFD    TSS-2985
@@ -783,6 +792,33 @@ Validate Hexapod Telemetry Attribute Names
 	: FOR    ${item}    IN    @{attributes}
 	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
 
+Validate HVAC Commands Attribute Names
+	[Documentation]    Validate the HVAC Commands attribute names conform to naming convention.
+	[Tags]    smoke    HVAC    
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/HVAC/HVAC_Commands.xml |sed -e 's/\\n/,/g'
+	Log    ${output}
+	@{attributes}=    Split to Lines    ${output}
+	: FOR    ${item}    IN    @{attributes}
+	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
+
+Validate HVAC Events Attribute Names
+	[Documentation]    Validate the HVAC Events attribute names conform to naming convention.
+	[Tags]    smoke    HVAC    
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/HVAC/HVAC_Events.xml |sed -e 's/\\n/,/g'
+	Log    ${output}
+	@{attributes}=    Split to Lines    ${output}
+	: FOR    ${item}    IN    @{attributes}
+	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
+
+Validate HVAC Telemetry Attribute Names
+	[Documentation]    Validate the HVAC Telemetry attribute names conform to naming convention.
+	[Tags]    smoke    HVAC    
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/HVAC/HVAC_Telemetry.xml |sed -e 's/\\n/,/g'
+	Log    ${output}
+	@{attributes}=    Split to Lines    ${output}
+	: FOR    ${item}    IN    @{attributes}
+	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
+
 Validate LinearStage Commands Attribute Names
 	[Documentation]    Validate the LinearStage Commands attribute names conform to naming convention.
 	[Tags]    smoke    LinearStage    
@@ -877,6 +913,24 @@ Validate MTDomeTrajectory Telemetry Attribute Names
 	[Documentation]    Validate the MTDomeTrajectory Telemetry attribute names conform to naming convention.
 	[Tags]    smoke    MTDomeTrajectory    
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/MTDomeTrajectory/MTDomeTrajectory_Telemetry.xml |sed -e 's/\\n/,/g'
+	Log    ${output}
+	@{attributes}=    Split to Lines    ${output}
+	: FOR    ${item}    IN    @{attributes}
+	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
+
+Validate MTEEC Commands Attribute Names
+	[Documentation]    Validate the MTEEC Commands attribute names conform to naming convention.
+	[Tags]    smoke    MTEEC    
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/MTEEC/MTEEC_Commands.xml |sed -e 's/\\n/,/g'
+	Log    ${output}
+	@{attributes}=    Split to Lines    ${output}
+	: FOR    ${item}    IN    @{attributes}
+	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
+
+Validate MTEEC Events Attribute Names
+	[Documentation]    Validate the MTEEC Events attribute names conform to naming convention.
+	[Tags]    smoke    MTEEC    
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/MTEEC/MTEEC_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
 	: FOR    ${item}    IN    @{attributes}
@@ -1003,6 +1057,33 @@ Validate MTMount Telemetry Attribute Names
 	[Documentation]    Validate the MTMount Telemetry attribute names conform to naming convention.
 	[Tags]    smoke    MTMount    skipped
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml |sed -e 's/\\n/,/g'
+	Log    ${output}
+	@{attributes}=    Split to Lines    ${output}
+	: FOR    ${item}    IN    @{attributes}
+	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
+
+Validate MTPtg Commands Attribute Names
+	[Documentation]    Validate the MTPtg Commands attribute names conform to naming convention.
+	[Tags]    smoke    MTPtg    
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/MTPtg/MTPtg_Commands.xml |sed -e 's/\\n/,/g'
+	Log    ${output}
+	@{attributes}=    Split to Lines    ${output}
+	: FOR    ${item}    IN    @{attributes}
+	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
+
+Validate MTPtg Events Attribute Names
+	[Documentation]    Validate the MTPtg Events attribute names conform to naming convention.
+	[Tags]    smoke    MTPtg    
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/MTPtg/MTPtg_Events.xml |sed -e 's/\\n/,/g'
+	Log    ${output}
+	@{attributes}=    Split to Lines    ${output}
+	: FOR    ${item}    IN    @{attributes}
+	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
+
+Validate MTPtg Telemetry Attribute Names
+	[Documentation]    Validate the MTPtg Telemetry attribute names conform to naming convention.
+	[Tags]    smoke    MTPtg    
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/MTPtg/MTPtg_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
 	: FOR    ${item}    IN    @{attributes}

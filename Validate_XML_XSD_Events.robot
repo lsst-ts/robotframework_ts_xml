@@ -44,6 +44,12 @@ Validate ATDomeTrajectory Events XML file
 	Log    ${output}
 	Should Contain    ${output}   ATDomeTrajectory_Events.xml - valid
 
+Validate ATEEC Events XML file
+	[Tags]    smoke    ATEEC
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/ATEEC/ATEEC_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   ATEEC_Events.xml - valid
+
 Validate ATHeaderService Events XML file
 	[Tags]    smoke    ATHeaderService
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/ATHeaderService/ATHeaderService_Events.xml
@@ -73,6 +79,12 @@ Validate ATPneumatics Events XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/ATPneumatics/ATPneumatics_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   ATPneumatics_Events.xml - valid
+
+Validate ATPtg Events XML file
+	[Tags]    smoke    ATPtg
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/ATPtg/ATPtg_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   ATPtg_Events.xml - valid
 
 Validate ATSpectrograph Events XML file
 	[Tags]    smoke    ATSpectrograph
@@ -158,12 +170,6 @@ Validate EAS Events XML file
 	Log    ${output}
 	Should Contain    ${output}   EAS_Events.xml - valid
 
-Validate EEC Events XML file
-	[Tags]    smoke    EEC
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/EEC/EEC_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   EEC_Events.xml - valid
-
 Validate EFD Events XML file
 	[Tags]    smoke    EFD
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/EFD/EFD_Events.xml
@@ -200,6 +206,12 @@ Validate Hexapod Events XML file
 	Log    ${output}
 	Should Contain    ${output}   Hexapod_Events.xml - valid
 
+Validate HVAC Events XML file
+	[Tags]    smoke    HVAC
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/HVAC/HVAC_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   HVAC_Events.xml - valid
+
 Validate MTArchiver Events XML file
 	[Tags]    smoke    MTArchiver
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/MTArchiver/MTArchiver_Events.xml
@@ -223,6 +235,12 @@ Validate MTDomeTrajectory Events XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/MTDomeTrajectory/MTDomeTrajectory_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   MTDomeTrajectory_Events.xml - valid
+
+Validate MTEEC Events XML file
+	[Tags]    smoke    MTEEC
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/MTEEC/MTEEC_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   MTEEC_Events.xml - valid
 
 Validate MTGuider Events XML file
 	[Tags]    smoke    MTGuider
@@ -259,6 +277,12 @@ Validate MTMount Events XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/MTMount/MTMount_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   MTMount_Events.xml - valid
+
+Validate MTPtg Events XML file
+	[Tags]    smoke    MTPtg
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/MTPtg/MTPtg_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   MTPtg_Events.xml - valid
 
 Validate MTOFC Events XML file
 	[Tags]    smoke    MTOFC

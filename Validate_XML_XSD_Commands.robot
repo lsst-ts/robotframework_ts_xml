@@ -26,6 +26,12 @@ Validate ATDome Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   ATDome_Commands.xml - valid
 
+Validate ATEEC Commands XML file
+	[Tags]    smoke    ATEEC
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/ATEEC/ATEEC_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   ATEEC_Commands.xml - valid
+
 Validate ATHexapod Commands XML file
 	[Tags]    smoke    ATHexapod
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/ATHexapod/ATHexapod_Commands.xml
@@ -49,6 +55,12 @@ Validate ATPneumatics Commands XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/ATPneumatics/ATPneumatics_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   ATPneumatics_Commands.xml - valid
+
+Validate ATPtg Commands XML file
+	[Tags]    smoke    ATPtg
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/ATPtg/ATPtg_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   ATPtg_Commands.xml - valid
 
 Validate ATSpectrograph Commands XML file
 	[Tags]    smoke    ATSpectrograph
@@ -122,12 +134,6 @@ Validate DomeTHCS Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   DomeTHCS_Commands.xml - valid
 
-Validate EEC Commands XML file
-	[Tags]    smoke    EEC
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/EEC/EEC_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   EEC_Commands.xml - valid
-
 Validate Electrometer Commands XML file
 	[Tags]    smoke    Electrometer
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/Electrometer/Electrometer_Commands.xml
@@ -146,6 +152,12 @@ Validate Hexapod Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   Hexapod_Commands.xml - valid
 
+Validate HVAC Commands XML file
+	[Tags]    smoke    HVAC
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/HVAC/HVAC_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   HVAC_Commands.xml - valid
+
 Validate LinearStage Commands XML file
 	[Tags]    smoke    LinearStage
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml
@@ -157,6 +169,12 @@ Validate MTCamera Commands XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/MTCamera/MTCamera_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   MTCamera_Commands.xml - valid
+
+Validate MTEEC Commands XML file
+	[Tags]    smoke    MTEEC
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/MTEEC/MTEEC_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   MTEEC_Commands.xml - valid
 
 Validate MTM1M3 Commands XML file
 	[Tags]    smoke    MTM1M3
@@ -175,6 +193,12 @@ Validate MTMount Commands XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/MTMount/MTMount_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   MTMount_Commands.xml - valid
+
+Validate MTPtg Commands XML file
+	[Tags]    smoke    MTPtg
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/MTPtg/MTPtg_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   MTPtg_Commands.xml - valid
 
 Validate MTOFC Commands XML file
 	[Tags]    smoke    MTOFC

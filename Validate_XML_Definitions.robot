@@ -106,12 +106,19 @@ Validate ATDomeTrajectory Events
 	Log    ${output}
 	Should Contain    ${output}   ATDomeTrajectory_Events.xml - valid
 
-Validate ATDomeTrajectory Telemetry
-	[Documentation]    Validate the ATDomeTrajectory Telemetry XML file.
-	[Tags]    smoke    ATDomeTrajectory
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ATDomeTrajectory/ATDomeTrajectory_Telemetry.xml
+Validate ATEEC Commands
+	[Documentation]    Validate the ATEEC Commands XML file.
+	[Tags]    smoke    ATEEC
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ATEEC/ATEEC_Commands.xml
 	Log    ${output}
-	Should Contain    ${output}   ATDomeTrajectory_Telemetry.xml - valid
+	Should Contain    ${output}   ATEEC_Commands.xml - valid
+
+Validate ATEEC Events
+	[Documentation]    Validate the ATEEC Events XML file.
+	[Tags]    smoke    ATEEC
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ATEEC/ATEEC_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   ATEEC_Events.xml - valid
 
 Validate ATHeaderService Events
 	[Documentation]    Validate the ATHeaderService Events XML file.
@@ -203,6 +210,27 @@ Validate ATPneumatics Telemetry
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ATPneumatics/ATPneumatics_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   ATPneumatics_Telemetry.xml - valid
+
+Validate ATPtg Commands
+	[Documentation]    Validate the ATPtg Commands XML file.
+	[Tags]    smoke    ATPtg
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ATPtg/ATPtg_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   ATPtg_Commands.xml - valid
+
+Validate ATPtg Events
+	[Documentation]    Validate the ATPtg Events XML file.
+	[Tags]    smoke    ATPtg
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ATPtg/ATPtg_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   ATPtg_Events.xml - valid
+
+Validate ATPtg Telemetry
+	[Documentation]    Validate the ATPtg Telemetry XML file.
+	[Tags]    smoke    ATPtg
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ATPtg/ATPtg_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   ATPtg_Telemetry.xml - valid
 
 Validate ATSpectrograph Commands
 	[Documentation]    Validate the ATSpectrograph Commands XML file.
@@ -491,27 +519,6 @@ Validate EAS Telemetry
 	Log    ${output}
 	Should Contain    ${output}   EAS_Telemetry.xml - valid
 
-Validate EEC Commands
-	[Documentation]    Validate the EEC Commands XML file.
-	[Tags]    smoke    EEC
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/EEC/EEC_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   EEC_Commands.xml - valid
-
-Validate EEC Events
-	[Documentation]    Validate the EEC Events XML file.
-	[Tags]    smoke    EEC
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/EEC/EEC_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   EEC_Events.xml - valid
-
-Validate EEC Telemetry
-	[Documentation]    Validate the EEC Telemetry XML file.
-	[Tags]    smoke    EEC
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/EEC/EEC_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   EEC_Telemetry.xml - valid
-
 Validate EFD Events
 	[Documentation]    Validate the EFD Events XML file.
 	[Tags]    smoke    EFD
@@ -610,6 +617,27 @@ Validate Hexapod Telemetry
 	Log    ${output}
 	Should Contain    ${output}   Hexapod_Telemetry.xml - valid
 
+Validate HVAC Commands
+	[Documentation]    Validate the HVAC Commands XML file.
+	[Tags]    smoke    HVAC
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/HVAC/HVAC_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   HVAC_Commands.xml - valid
+
+Validate HVAC Events
+	[Documentation]    Validate the HVAC Events XML file.
+	[Tags]    smoke    HVAC
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/HVAC/HVAC_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   HVAC_Events.xml - valid
+
+Validate HVAC Telemetry
+	[Documentation]    Validate the HVAC Telemetry XML file.
+	[Tags]    smoke    HVAC
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/HVAC/HVAC_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   HVAC_Telemetry.xml - valid
+
 Validate LinearStage Commands
 	[Documentation]    Validate the LinearStage Commands XML file.
 	[Tags]    smoke    LinearStage
@@ -686,6 +714,20 @@ Validate MTDomeTrajectory Telemetry
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTDomeTrajectory/MTDomeTrajectory_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   MTDomeTrajectory_Telemetry.xml - valid
+
+Validate MTEEC Commands
+	[Documentation]    Validate the MTEEC Commands XML file.
+	[Tags]    smoke    MTEEC
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTEEC/MTEEC_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   MTEEC_Commands.xml - valid
+
+Validate MTEEC Events
+	[Documentation]    Validate the MTEEC Events XML file.
+	[Tags]    smoke    MTEEC
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTEEC/MTEEC_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   MTEEC_Events.xml - valid
 
 Validate MTGuider Events
 	[Documentation]    Validate the MTGuider Events XML file.
@@ -784,6 +826,27 @@ Validate MTMount Telemetry
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   MTMount_Telemetry.xml - valid
+
+Validate MTPtg Commands
+	[Documentation]    Validate the MTPtg Commands XML file.
+	[Tags]    smoke    MTPtg
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTPtg/MTPtg_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   MTPtg_Commands.xml - valid
+
+Validate MTPtg Events
+	[Documentation]    Validate the MTPtg Events XML file.
+	[Tags]    smoke    MTPtg
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTPtg/MTPtg_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   MTPtg_Events.xml - valid
+
+Validate MTPtg Telemetry
+	[Documentation]    Validate the MTPtg Telemetry XML file.
+	[Tags]    smoke    MTPtg
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTPtg/MTPtg_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   MTPtg_Telemetry.xml - valid
 
 Validate MTOFC Commands
 	[Documentation]    Validate the MTOFC Commands XML file.

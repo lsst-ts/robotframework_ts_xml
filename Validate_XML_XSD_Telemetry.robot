@@ -38,12 +38,6 @@ Validate ATDome Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   ATDome_Telemetry.xml - valid
 
-Validate ATDomeTrajectory Telemetry XML file
-	[Tags]    smoke    ATDomeTrajectory
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/ATDomeTrajectory/ATDomeTrajectory_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   ATDomeTrajectory_Telemetry.xml - valid
-
 Validate ATHexapod Telemetry XML file
 	[Tags]    smoke    ATHexapod
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/ATHexapod/ATHexapod_Telemetry.xml
@@ -67,6 +61,12 @@ Validate ATPneumatics Telemetry XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/ATPneumatics/ATPneumatics_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   ATPneumatics_Telemetry.xml - valid
+
+Validate ATPtg Telemetry XML file
+	[Tags]    smoke    ATPtg
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/ATPtg/ATPtg_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   ATPtg_Telemetry.xml - valid
 
 Validate ATSpectrograph Telemetry XML file
 	[Tags]    smoke    ATSpectrograph
@@ -158,12 +158,6 @@ Validate EAS Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   EAS_Telemetry.xml - valid
 
-Validate EEC Telemetry XML file
-	[Tags]    smoke    EEC
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/EEC/EEC_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   EEC_Telemetry.xml - valid
-
 Validate EFD Telemetry XML file
 	[Tags]    smoke    EFD
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/EFD/EFD_Telemetry.xml
@@ -193,6 +187,12 @@ Validate Hexapod Telemetry XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/Hexapod/Hexapod_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   Hexapod_Telemetry.xml - valid
+
+Validate HVAC Telemetry XML file
+	[Tags]    smoke    HVAC
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/HVAC/HVAC_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   HVAC_Telemetry.xml - valid
 
 Validate LinearStage Telemetry XML file
 	[Tags]    smoke    LinearStage
@@ -253,6 +253,12 @@ Validate MTMount Telemetry XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   MTMount_Telemetry.xml - valid
+
+Validate MTPtg Telemetry XML file
+	[Tags]    smoke    MTPtg
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/MTPtg/MTPtg_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   MTPtg_Telemetry.xml - valid
 
 Validate MTOFC Telemetry XML file
 	[Tags]    smoke    MTOFC
