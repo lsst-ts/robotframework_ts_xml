@@ -8,6 +8,12 @@ Resource    Global_Vars.robot
 ${xml}    xml
 
 *** Test Cases ***
+Validate ATAOS Commands XML file
+	[Tags]    smoke    ATAOS
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/ATAOS/ATAOS_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   ATAOS_Commands.xml - valid
+
 Validate ATArchiver Commands XML file
 	[Tags]    smoke    ATArchiver
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/ATArchiver/ATArchiver_Commands.xml

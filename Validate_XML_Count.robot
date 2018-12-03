@@ -8,6 +8,30 @@ Resource    Global_Vars.robot
 ${xml}    xml
 
 *** Test Cases ***
+Validate ATAOS Commands XML Counts
+	[Documentation]    Validate the ATAOS Commands XML count.
+	[Tags]    smoke    ATAOS
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/ATAOS/ATAOS_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
+Validate ATAOS Events XML Counts
+	[Documentation]    Validate the ATAOS Events XML count.
+	[Tags]    smoke    ATAOS
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/ATAOS/ATAOS_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
+Validate ATAOS Telemetry XML Counts
+	[Documentation]    Validate the ATAOS Telemetry XML count.
+	[Tags]    smoke    ATAOS
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/ATAOS/ATAOS_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
 Validate ATArchiver Commands XML Counts
 	[Documentation]    Validate the ATArchiver Commands XML count.
 	[Tags]    smoke    ATArchiver
