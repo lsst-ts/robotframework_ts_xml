@@ -89,7 +89,7 @@ for subsystem in xml_common.subsystems:
 			file.write("\t\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint\n")
 			file.write("\t\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort\n")
 			file.write("\t\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong\n")
-			file.write("\t\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong\n")
+			file.write("\t\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong\n")
 			file.write("\t\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong\n")
 			file.write("\t\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]\n")
 			file.write("\t\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]\n")
