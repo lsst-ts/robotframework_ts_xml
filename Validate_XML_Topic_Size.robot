@@ -25,6 +25,7 @@ Validate ATArchiver Command ATArchiver_command_resetFromFault Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -62,6 +63,7 @@ Validate ATArchiver Event ATArchiver_logevent_archiverEntityStartup Topic Byte S
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -99,6 +101,7 @@ Validate ATArchiver Event ATArchiver_logevent_archiverEntitySummaryState Topic B
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -136,6 +139,7 @@ Validate ATArchiver Event ATArchiver_logevent_archiverEntityShutdown Topic Byte 
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -173,6 +177,7 @@ Validate ATArchiver Event ATArchiver_logevent_settingsApplied Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -210,6 +215,7 @@ Validate ATArchiver Event ATArchiver_logevent_processingStatus Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -247,6 +253,7 @@ Validate ATArchiver Telemetry ATArchiver_sequencerHeartbeat Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -284,6 +291,7 @@ Validate ATBuilding Event ATBuilding_logevent_detailedState Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -321,6 +329,7 @@ Validate ATBuilding Event ATBuilding_logevent_internalCommand Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -358,6 +367,7 @@ Validate ATBuilding Event ATBuilding_logevent_heartbeat Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -395,6 +405,7 @@ Validate ATBuilding Event ATBuilding_logevent_loopTimeOutOfRange Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -432,6 +443,7 @@ Validate ATBuilding Event ATBuilding_logevent_rejectedCommand Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -469,6 +481,7 @@ Validate ATBuilding Telemetry ATBuilding_timestamp Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -506,6 +519,7 @@ Validate ATBuilding Telemetry ATBuilding_loopTime Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -543,6 +557,7 @@ Validate ATCalCS Event ATCalCS_logevent_detailedState Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -580,6 +595,7 @@ Validate ATCalCS Event ATCalCS_logevent_internalCommand Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -617,6 +633,7 @@ Validate ATCalCS Event ATCalCS_logevent_heartbeat Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -654,6 +671,7 @@ Validate ATCalCS Event ATCalCS_logevent_loopTimeOutOfRange Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -691,6 +709,7 @@ Validate ATCalCS Event ATCalCS_logevent_rejectedCommand Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -728,6 +747,7 @@ Validate ATCalCS Telemetry ATCalCS_timestamp Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -765,6 +785,7 @@ Validate ATCalCS Telemetry ATCalCS_loopTime Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -802,6 +823,7 @@ Validate ATCamera Command ATCamera_command_discardRows Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -839,6 +861,7 @@ Validate ATCamera Command ATCamera_command_startImage Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -876,6 +899,7 @@ Validate ATCamera Command ATCamera_command_disableCalibration Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -913,6 +937,7 @@ Validate ATCamera Command ATCamera_command_initGuiders Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -950,6 +975,7 @@ Validate ATCamera Command ATCamera_command_enableCalibration Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -987,6 +1013,7 @@ Validate ATCamera Command ATCamera_command_initImage Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -1024,6 +1051,7 @@ Validate ATCamera Command ATCamera_command_endImage Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -1061,6 +1089,7 @@ Validate ATCamera Command ATCamera_command_clear Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -1098,6 +1127,7 @@ Validate ATCamera Command ATCamera_command_takeImages Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -1135,6 +1165,7 @@ Validate ATCamera Event ATCamera_logevent_offlineDetailedState Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -1172,6 +1203,7 @@ Validate ATCamera Event ATCamera_logevent_endReadout Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -1209,6 +1241,7 @@ Validate ATCamera Event ATCamera_logevent_endTakeImage Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -1246,6 +1279,7 @@ Validate ATCamera Event ATCamera_logevent_imageReadinessDetailedState Topic Byte
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -1283,6 +1317,7 @@ Validate ATCamera Event ATCamera_logevent_notReadyToTakeImage Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -1320,6 +1355,7 @@ Validate ATCamera Event ATCamera_logevent_startShutterClose Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -1357,6 +1393,7 @@ Validate ATCamera Event ATCamera_logevent_endShutterClose Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -1394,6 +1431,7 @@ Validate ATCamera Event ATCamera_logevent_endOfImageTelemetry Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -1431,6 +1469,7 @@ Validate ATCamera Event ATCamera_logevent_calibrationDetailedState Topic Byte Si
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -1468,6 +1507,7 @@ Validate ATCamera Event ATCamera_logevent_shutterDetailedState Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -1505,6 +1545,7 @@ Validate ATCamera Event ATCamera_logevent_readyToTakeImage Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -1542,6 +1583,7 @@ Validate ATCamera Event ATCamera_logevent_ccsCommandState Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -1579,6 +1621,7 @@ Validate ATCamera Event ATCamera_logevent_prepareToTakeImage Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -1616,6 +1659,7 @@ Validate ATCamera Event ATCamera_logevent_endShutterOpen Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -1653,6 +1697,7 @@ Validate ATCamera Event ATCamera_logevent_startIntegration Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -1690,6 +1735,7 @@ Validate ATCamera Event ATCamera_logevent_startShutterOpen Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -1727,6 +1773,7 @@ Validate ATCamera Event ATCamera_logevent_raftsDetailedState Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -1764,6 +1811,7 @@ Validate ATCamera Event ATCamera_logevent_startReadout Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -1801,6 +1849,7 @@ Validate ATCamera Event ATCamera_logevent_shutterMotionProfile Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -1838,6 +1887,7 @@ Validate ATCamera Event ATCamera_logevent_imageReadoutParameters Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -1875,6 +1925,7 @@ Validate ATCamera Event ATCamera_logevent_settingsApplied Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -1912,6 +1963,7 @@ Validate ATCamera Event ATCamera_logevent_bonnShutterSettingsApplied Topic Byte 
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -1949,6 +2001,7 @@ Validate ATCamera Event ATCamera_logevent_wrebSettingsApplied Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -1986,6 +2039,7 @@ Validate ATCamera Telemetry ATCamera_heartbeat Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -2023,6 +2077,7 @@ Validate ATCamera Telemetry ATCamera_wreb Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -2060,6 +2115,7 @@ Validate ATCamera Telemetry ATCamera_bonnShutter Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -2097,6 +2153,7 @@ Validate ATCamera Telemetry ATCamera_wrebPower Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -2134,6 +2191,7 @@ Validate ATDome Command ATDome_command_moveAzimuth Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -2171,6 +2229,7 @@ Validate ATDome Command ATDome_command_moveShutterDropoutDoor Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -2208,6 +2267,7 @@ Validate ATDome Command ATDome_command_closeShutter Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -2245,6 +2305,7 @@ Validate ATDome Command ATDome_command_stopMotionAllAxis Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -2282,6 +2343,7 @@ Validate ATDome Command ATDome_command_stopShutter Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -2319,6 +2381,7 @@ Validate ATDome Command ATDome_command_openShutter Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -2356,6 +2419,7 @@ Validate ATDome Command ATDome_command_moveShutterMainDoor Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -2393,6 +2457,7 @@ Validate ATDome Command ATDome_command_stopAzimuth Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -2430,6 +2495,7 @@ Validate ATDome Event ATDome_logevent_azimuthState Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -2467,6 +2533,7 @@ Validate ATDome Event ATDome_logevent_internalCommand Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -2504,6 +2571,7 @@ Validate ATDome Event ATDome_logevent_heartbeat Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -2541,6 +2609,7 @@ Validate ATDome Event ATDome_logevent_loopTimeOutOfRange Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -2578,6 +2647,7 @@ Validate ATDome Event ATDome_logevent_rejectedCommand Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -2615,6 +2685,7 @@ Validate ATDome Event ATDome_logevent_allAxisInPosition Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -2652,6 +2723,7 @@ Validate ATDome Event ATDome_logevent_emergencyStop Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -2689,6 +2761,7 @@ Validate ATDome Event ATDome_logevent_internalStatus Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -2726,6 +2799,7 @@ Validate ATDome Event ATDome_logevent_scbLink Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -2763,6 +2837,7 @@ Validate ATDome Event ATDome_logevent_shutterInPosition Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -2800,6 +2875,7 @@ Validate ATDome Event ATDome_logevent_azimuthInPosition Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -2837,6 +2913,7 @@ Validate ATDome Event ATDome_logevent_azimuthMovingDirection Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -2874,6 +2951,7 @@ Validate ATDome Event ATDome_logevent_settingsAppliedDomeController Topic Byte S
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -2911,6 +2989,7 @@ Validate ATDome Event ATDome_logevent_dropoutDoorState Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -2948,6 +3027,7 @@ Validate ATDome Event ATDome_logevent_mainDoorState Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -2985,6 +3065,7 @@ Validate ATDome Event ATDome_logevent_settingsAppliedDomeTcp Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -3022,6 +3103,7 @@ Validate ATDome Event ATDome_logevent_detailedState Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -3059,6 +3141,7 @@ Validate ATDome Telemetry ATDome_timestamp Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -3096,6 +3179,7 @@ Validate ATDome Telemetry ATDome_loopTime Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -3133,6 +3217,7 @@ Validate ATDome Telemetry ATDome_position Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -3170,6 +3255,7 @@ Validate ATDomeTrajectory Event ATDomeTrajectory_logevent_detailedState Topic By
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -3207,6 +3293,7 @@ Validate ATDomeTrajectory Event ATDomeTrajectory_logevent_internalCommand Topic 
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -3244,6 +3331,7 @@ Validate ATDomeTrajectory Event ATDomeTrajectory_logevent_heartbeat Topic Byte S
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -3281,6 +3369,7 @@ Validate ATDomeTrajectory Event ATDomeTrajectory_logevent_loopTimeOutOfRange Top
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -3318,6 +3407,7 @@ Validate ATDomeTrajectory Event ATDomeTrajectory_logevent_rejectedCommand Topic 
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -3355,6 +3445,7 @@ Validate ATDomeTrajectory Telemetry ATDomeTrajectory_timestamp Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -3392,6 +3483,7 @@ Validate ATDomeTrajectory Telemetry ATDomeTrajectory_loopTime Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -3429,6 +3521,7 @@ Validate ATHeaderService Event ATHeaderService_logevent_heartbeat Topic Byte Siz
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -3466,6 +3559,7 @@ Validate ATHeaderService Event ATHeaderService_logevent_rejectedCommand Topic By
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -3503,6 +3597,7 @@ Validate ATHeaderService Event ATHeaderService_logevent_largeFileObjectAvailable
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -3540,6 +3635,7 @@ Validate ATHeaderService Event ATHeaderService_logevent_settingsApplied Topic By
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -3577,6 +3673,7 @@ Validate ATHexapod Command ATHexapod_command_applyPositionLimits Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -3614,6 +3711,7 @@ Validate ATHexapod Command ATHexapod_command_moveToPosition Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -3651,6 +3749,7 @@ Validate ATHexapod Command ATHexapod_command_setMaxSpeeds Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -3688,6 +3787,7 @@ Validate ATHexapod Command ATHexapod_command_applyPositionOffset Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -3725,6 +3825,7 @@ Validate ATHexapod Command ATHexapod_command_stopAllAxes Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -3762,6 +3863,7 @@ Validate ATHexapod Command ATHexapod_command_pivot Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -3799,6 +3901,7 @@ Validate ATHexapod Event ATHexapod_logevent_inPosition Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -3836,6 +3939,7 @@ Validate ATHexapod Event ATHexapod_logevent_heartbeat Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -3873,6 +3977,7 @@ Validate ATHexapod Event ATHexapod_logevent_loopTimeOutOfRange Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -3910,6 +4015,7 @@ Validate ATHexapod Event ATHexapod_logevent_internalCommand Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -3947,6 +4053,7 @@ Validate ATHexapod Event ATHexapod_logevent_detailedState Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -3984,6 +4091,7 @@ Validate ATHexapod Event ATHexapod_logevent_rejectedCommand Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -4021,6 +4129,7 @@ Validate ATHexapod Event ATHexapod_logevent_settingsAppliedPositions Topic Byte 
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -4058,6 +4167,7 @@ Validate ATHexapod Event ATHexapod_logevent_deviceError Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -4095,6 +4205,7 @@ Validate ATHexapod Event ATHexapod_logevent_settingsAppliedTcp Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -4132,6 +4243,7 @@ Validate ATHexapod Event ATHexapod_logevent_settingsAppliedLoop Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -4169,6 +4281,7 @@ Validate ATHexapod Event ATHexapod_logevent_settingsAppliedHexapodHeartbeat Topi
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -4206,6 +4319,7 @@ Validate ATHexapod Event ATHexapod_logevent_readyForCommand Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -4243,6 +4357,7 @@ Validate ATHexapod Telemetry ATHexapod_actuatorPositions Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -4280,6 +4395,7 @@ Validate ATHexapod Telemetry ATHexapod_positionStatus Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -4317,6 +4433,7 @@ Validate ATHexapod Telemetry ATHexapod_timestamp Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -4354,6 +4471,7 @@ Validate ATHexapod Telemetry ATHexapod_loopTime Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -4391,6 +4509,7 @@ Validate ATMCS Command ATMCS_command_startTracking Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -4428,6 +4547,7 @@ Validate ATMCS Command ATMCS_command_trackTarget Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -4465,6 +4585,7 @@ Validate ATMCS Command ATMCS_command_setInstrumentPort Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -4502,6 +4623,7 @@ Validate ATMCS Command ATMCS_command_stopTracking Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -4539,6 +4661,7 @@ Validate ATMCS Event ATMCS_logevent_m3State Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -4576,6 +4699,7 @@ Validate ATMCS Event ATMCS_logevent_elevationInPosition Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -4613,6 +4737,7 @@ Validate ATMCS Event ATMCS_logevent_azimuthInPosition Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -4650,6 +4775,7 @@ Validate ATMCS Event ATMCS_logevent_allAxesInPosition Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -4687,6 +4813,7 @@ Validate ATMCS Event ATMCS_logevent_nasmyth1RotatorInPosition Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -4724,6 +4851,7 @@ Validate ATMCS Event ATMCS_logevent_azimuthLimitSwitchCCW Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -4761,6 +4889,7 @@ Validate ATMCS Event ATMCS_logevent_elevationLimitSwitchUpper Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -4798,6 +4927,7 @@ Validate ATMCS Event ATMCS_logevent_nasmyth1LimitSwitchCW Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -4835,6 +4965,7 @@ Validate ATMCS Event ATMCS_logevent_nasmyth2LimitSwitchCCW Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -4872,6 +5003,7 @@ Validate ATMCS Event ATMCS_logevent_azimuthBrake1 Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -4909,6 +5041,7 @@ Validate ATMCS Event ATMCS_logevent_elevationBrake Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -4946,6 +5079,7 @@ Validate ATMCS Event ATMCS_logevent_nasmyth1Brake Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -4983,6 +5117,7 @@ Validate ATMCS Event ATMCS_logevent_nasmyth2Brake Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -5020,6 +5155,7 @@ Validate ATMCS Event ATMCS_logevent_azimuthToppleBlockCCW Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -5057,6 +5193,7 @@ Validate ATMCS Event ATMCS_logevent_azimuthBrake2 Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -5094,6 +5231,7 @@ Validate ATMCS Event ATMCS_logevent_nasmyth1LimitSwitchCCW Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -5131,6 +5269,7 @@ Validate ATMCS Event ATMCS_logevent_azimuthToppleBlockCW Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -5168,6 +5307,7 @@ Validate ATMCS Event ATMCS_logevent_nasmyth2LimitSwitchCW Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -5205,6 +5345,7 @@ Validate ATMCS Event ATMCS_logevent_azimuthLimitSwitchCW Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -5242,6 +5383,7 @@ Validate ATMCS Event ATMCS_logevent_azimuthDrive1Status Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -5279,6 +5421,7 @@ Validate ATMCS Event ATMCS_logevent_azimuthDrive2Status Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -5316,6 +5459,7 @@ Validate ATMCS Event ATMCS_logevent_elevationDriveStatus Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -5353,6 +5497,7 @@ Validate ATMCS Event ATMCS_logevent_nasmyth1DriveStatus Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -5390,6 +5535,7 @@ Validate ATMCS Event ATMCS_logevent_nasmyth2DriveStatus Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -5427,6 +5573,7 @@ Validate ATMCS Event ATMCS_logevent_m3DriveStatus Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -5464,6 +5611,7 @@ Validate ATMCS Event ATMCS_logevent_nasmyth2RotatorInPosition Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -5501,6 +5649,7 @@ Validate ATMCS Event ATMCS_logevent_elevationLimitSwitchLower Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -5538,6 +5687,7 @@ Validate ATMCS Event ATMCS_logevent_atMountState Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -5575,6 +5725,7 @@ Validate ATMCS Event ATMCS_logevent_m3RotatorLimitSwitchCW Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -5612,6 +5763,7 @@ Validate ATMCS Event ATMCS_logevent_m3RotatorLimitSwitchCCW Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -5649,6 +5801,7 @@ Validate ATMCS Event ATMCS_logevent_m3RotatorDetentLimitSwitch Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -5686,6 +5839,7 @@ Validate ATMCS Event ATMCS_logevent_m3InPosition Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -5723,6 +5877,7 @@ Validate ATMCS Event ATMCS_logevent_m3PortSelected Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -5760,6 +5915,7 @@ Validate ATMCS Event ATMCS_logevent_detailedState Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -5797,6 +5953,7 @@ Validate ATMCS Telemetry ATMCS_mountEncoders Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -5834,6 +5991,7 @@ Validate ATMCS Telemetry ATMCS_torqueDemand Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -5871,6 +6029,7 @@ Validate ATMCS Telemetry ATMCS_measuredTorque Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -5908,6 +6067,7 @@ Validate ATMCS Telemetry ATMCS_measuredMotorVelocity Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -5945,6 +6105,7 @@ Validate ATMCS Telemetry ATMCS_mountMotorEncoders Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -5982,6 +6143,7 @@ Validate ATMonochromator Command ATMonochromator_command_changeWavelength Topic 
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -6019,6 +6181,7 @@ Validate ATMonochromator Command ATMonochromator_command_calibrateWavelength Top
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -6056,6 +6219,7 @@ Validate ATMonochromator Command ATMonochromator_command_power Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -6093,6 +6257,7 @@ Validate ATMonochromator Command ATMonochromator_command_selectGrating Topic Byt
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -6130,6 +6295,7 @@ Validate ATMonochromator Command ATMonochromator_command_changeSlitWidth Topic B
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -6167,6 +6333,7 @@ Validate ATMonochromator Command ATMonochromator_command_updateMonochromatorSetu
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -6204,6 +6371,7 @@ Validate ATMonochromator Event ATMonochromator_logevent_internalCommand Topic By
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -6241,6 +6409,7 @@ Validate ATMonochromator Event ATMonochromator_logevent_heartbeat Topic Byte Siz
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -6278,6 +6447,7 @@ Validate ATMonochromator Event ATMonochromator_logevent_loopTimeOutOfRange Topic
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -6315,6 +6485,7 @@ Validate ATMonochromator Event ATMonochromator_logevent_detailedState Topic Byte
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -6352,6 +6523,7 @@ Validate ATMonochromator Event ATMonochromator_logevent_rejectedCommand Topic By
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -6389,6 +6561,7 @@ Validate ATMonochromator Event ATMonochromator_logevent_settingsAppliedMonoCommu
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -6426,6 +6599,7 @@ Validate ATMonochromator Event ATMonochromator_logevent_selectedGrating Topic By
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -6463,6 +6637,7 @@ Validate ATMonochromator Event ATMonochromator_logevent_wavelength Topic Byte Si
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -6500,6 +6675,7 @@ Validate ATMonochromator Event ATMonochromator_logevent_slitWidth Topic Byte Siz
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -6537,6 +6713,7 @@ Validate ATMonochromator Event ATMonochromator_logevent_inPosition Topic Byte Si
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -6574,6 +6751,7 @@ Validate ATMonochromator Event ATMonochromator_logevent_monochromatorConnected T
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -6611,6 +6789,7 @@ Validate ATMonochromator Event ATMonochromator_logevent_settingsAppliedMonoHeart
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -6648,6 +6827,7 @@ Validate ATMonochromator Event ATMonochromator_logevent_settingsAppliedLoop Topi
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -6685,6 +6865,7 @@ Validate ATMonochromator Event ATMonochromator_logevent_settingsAppliedMonochrom
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -6722,6 +6903,7 @@ Validate ATMonochromator Telemetry ATMonochromator_timestamp Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -6759,6 +6941,7 @@ Validate ATMonochromator Telemetry ATMonochromator_loopTime Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -6796,6 +6979,7 @@ Validate ATPneumatics Command ATPneumatics_command_openMasterAirSupply Topic Byt
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -6833,6 +7017,7 @@ Validate ATPneumatics Command ATPneumatics_command_m1SetPressure Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -6870,6 +7055,7 @@ Validate ATPneumatics Command ATPneumatics_command_m2SetPressure Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -6907,6 +7093,7 @@ Validate ATPneumatics Command ATPneumatics_command_openM1CellVents Topic Byte Si
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -6944,6 +7131,7 @@ Validate ATPneumatics Command ATPneumatics_command_openM1Cover Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -6981,6 +7169,7 @@ Validate ATPneumatics Command ATPneumatics_command_openInstrumentAirValve Topic 
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -7018,6 +7207,7 @@ Validate ATPneumatics Command ATPneumatics_command_closeInstrumentAirValve Topic
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -7055,6 +7245,7 @@ Validate ATPneumatics Command ATPneumatics_command_closeMasterAirSupply Topic By
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -7092,6 +7283,7 @@ Validate ATPneumatics Command ATPneumatics_command_closeM1Cover Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -7129,6 +7321,7 @@ Validate ATPneumatics Command ATPneumatics_command_m2OpenAirValve Topic Byte Siz
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -7166,6 +7359,7 @@ Validate ATPneumatics Command ATPneumatics_command_m2CloseAirValve Topic Byte Si
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -7203,6 +7397,7 @@ Validate ATPneumatics Command ATPneumatics_command_m1CloseAirValve Topic Byte Si
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -7240,6 +7435,7 @@ Validate ATPneumatics Command ATPneumatics_command_m1OpenAirValve Topic Byte Siz
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -7277,6 +7473,7 @@ Validate ATPneumatics Command ATPneumatics_command_closeM1CellVents Topic Byte S
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -7314,6 +7511,7 @@ Validate ATPneumatics Event ATPneumatics_logevent_m1CoverLimitSwitches Topic Byt
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -7351,6 +7549,7 @@ Validate ATPneumatics Event ATPneumatics_logevent_m1VentsLimitSwitches Topic Byt
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -7388,6 +7587,7 @@ Validate ATPneumatics Event ATPneumatics_logevent_powerStatus Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -7425,6 +7625,7 @@ Validate ATPneumatics Event ATPneumatics_logevent_eStopTriggered Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -7462,6 +7663,7 @@ Validate ATPneumatics Event ATPneumatics_logevent_resetEStopTriggered Topic Byte
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -7499,6 +7701,7 @@ Validate ATPneumatics Event ATPneumatics_logevent_m1CoverState Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -7536,6 +7739,7 @@ Validate ATPneumatics Event ATPneumatics_logevent_m1State Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -7573,6 +7777,7 @@ Validate ATPneumatics Event ATPneumatics_logevent_m2State Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -7610,6 +7815,7 @@ Validate ATPneumatics Event ATPneumatics_logevent_instrumentState Topic Byte Siz
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -7647,6 +7853,7 @@ Validate ATPneumatics Event ATPneumatics_logevent_cellVentsState Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -7684,6 +7891,7 @@ Validate ATPneumatics Event ATPneumatics_logevent_mainValveState Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -7721,6 +7929,7 @@ Validate ATPneumatics Event ATPneumatics_logevent_m1CoverPosition Topic Byte Siz
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -7758,6 +7967,7 @@ Validate ATPneumatics Event ATPneumatics_logevent_m1VentsPosition Topic Byte Siz
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -7795,6 +8005,7 @@ Validate ATPneumatics Event ATPneumatics_logevent_detailedState Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -7832,6 +8043,7 @@ Validate ATPneumatics Telemetry ATPneumatics_m1AirPressure Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -7869,6 +8081,7 @@ Validate ATPneumatics Telemetry ATPneumatics_m2AirPressure Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -7906,6 +8119,7 @@ Validate ATPneumatics Telemetry ATPneumatics_mainAirSourcePressure Topic Byte Si
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -7943,6 +8157,7 @@ Validate ATPneumatics Telemetry ATPneumatics_loadCell Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -7980,6 +8195,7 @@ Validate ATSpectrograph Command ATSpectrograph_command_changeFilter Topic Byte S
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -8017,6 +8233,7 @@ Validate ATSpectrograph Command ATSpectrograph_command_changeDisperser Topic Byt
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -8054,6 +8271,7 @@ Validate ATSpectrograph Command ATSpectrograph_command_moveLinearStage Topic Byt
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -8091,6 +8309,7 @@ Validate ATSpectrograph Command ATSpectrograph_command_homeLinearStage Topic Byt
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -8128,6 +8347,7 @@ Validate ATSpectrograph Command ATSpectrograph_command_stopAllAxes Topic Byte Si
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -8165,6 +8385,7 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_heartbeat Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -8202,6 +8423,7 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_internalCommand Topic Byte
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -8239,6 +8461,7 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_loopTimeOutOfRange Topic B
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -8276,6 +8499,7 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_rejectedCommand Topic Byte
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -8313,6 +8537,7 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_timeout Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -8350,6 +8575,7 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_filterInPosition Topic Byt
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -8387,6 +8613,7 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_reportedFilterPosition Top
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -8424,6 +8651,7 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_reportedDisperserPosition 
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -8461,6 +8689,7 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_disperserInPosition Topic 
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -8498,6 +8727,7 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_linearStageInPosition Topi
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -8535,6 +8765,7 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_fwState Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -8572,6 +8803,7 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_gwState Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -8609,6 +8841,7 @@ Validate ATSpectrograph Telemetry ATSpectrograph_timestamp Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -8646,6 +8879,7 @@ Validate ATSpectrograph Telemetry ATSpectrograph_loopTime Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -8683,6 +8917,7 @@ Validate ATTCS Command ATTCS_command_target Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -8720,6 +8955,7 @@ Validate ATTCS Command ATTCS_command_offset Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -8757,6 +8993,7 @@ Validate ATTCS Command ATTCS_command_spectrographSetup Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -8794,6 +9031,7 @@ Validate ATTCS Event ATTCS_logevent_detailedState Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -8831,6 +9069,7 @@ Validate ATTCS Event ATTCS_logevent_spectrographInPosition Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -8868,6 +9107,7 @@ Validate ATTCS Event ATTCS_logevent_telescopeInPosition Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -8905,6 +9145,7 @@ Validate ATTCS Event ATTCS_logevent_rejectedCommand Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -8942,6 +9183,7 @@ Validate ATTCS Event ATTCS_logevent_internalCommand Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -8979,6 +9221,7 @@ Validate ATTCS Event ATTCS_logevent_heartbeat Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -9016,6 +9259,7 @@ Validate ATTCS Event ATTCS_logevent_loopTimeOutOfRange Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -9053,6 +9297,7 @@ Validate ATTCS Event ATTCS_logevent_settingsApplied_Example Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -9090,6 +9335,7 @@ Validate ATTCS Telemetry ATTCS_loopTime Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -9127,6 +9373,7 @@ Validate ATTCS Telemetry ATTCS_timestamp Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -9164,6 +9411,7 @@ Validate ATThermoelectricCooler Command ATThermoelectricCooler_command_setTemper
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -9201,6 +9449,7 @@ Validate ATThermoelectricCooler Command ATThermoelectricCooler_command_powerChil
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -9238,6 +9487,7 @@ Validate ATThermoelectricCooler Command ATThermoelectricCooler_command_powerChil
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -9275,6 +9525,7 @@ Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_detailedSt
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -9312,6 +9563,7 @@ Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_internalCo
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -9349,6 +9601,7 @@ Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_heartbeat 
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -9386,6 +9639,7 @@ Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_loopTimeOu
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -9423,6 +9677,7 @@ Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_rejectedCo
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -9460,6 +9715,7 @@ Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_deviceErro
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -9497,6 +9753,7 @@ Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_hardwareWa
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -9534,6 +9791,7 @@ Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_temperatur
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -9571,6 +9829,7 @@ Validate ATThermoelectricCooler Telemetry ATThermoelectricCooler_timestamp Topic
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -9608,6 +9867,7 @@ Validate ATThermoelectricCooler Telemetry ATThermoelectricCooler_loopTime Topic 
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -9645,6 +9905,7 @@ Validate ATThermoelectricCooler Telemetry ATThermoelectricCooler_fansSpeed Topic
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -9682,6 +9943,7 @@ Validate ATThermoelectricCooler Telemetry ATThermoelectricCooler_unitUpTime Topi
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -9719,6 +9981,7 @@ Validate ATThermoelectricCooler Telemetry ATThermoelectricCooler_temperatureSens
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -9756,6 +10019,7 @@ Validate ATThermoelectricCooler Telemetry ATThermoelectricCooler_processFlow Top
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -9793,6 +10057,7 @@ Validate ATWhiteLight Command ATWhiteLight_command_powerLightOn Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -9830,6 +10095,7 @@ Validate ATWhiteLight Command ATWhiteLight_command_powerLightOff Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -9867,6 +10133,7 @@ Validate ATWhiteLight Command ATWhiteLight_command_setLightPower Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -9904,6 +10171,7 @@ Validate ATWhiteLight Event ATWhiteLight_logevent_heartbeat Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -9941,6 +10209,7 @@ Validate ATWhiteLight Event ATWhiteLight_logevent_loopTimeOutOfRange Topic Byte 
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -9978,6 +10247,7 @@ Validate ATWhiteLight Event ATWhiteLight_logevent_rejectedCommand Topic Byte Siz
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -10015,6 +10285,7 @@ Validate ATWhiteLight Event ATWhiteLight_logevent_whiteLightStatus Topic Byte Si
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -10052,6 +10323,7 @@ Validate ATWhiteLight Telemetry ATWhiteLight_timestamp Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -10089,6 +10361,7 @@ Validate ATWhiteLight Telemetry ATWhiteLight_loopTime Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -10126,6 +10399,7 @@ Validate CatchupArchiver Event CatchupArchiver_logevent_catchuparchiverEntitySta
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -10163,6 +10437,7 @@ Validate CatchupArchiver Event CatchupArchiver_logevent_settingsApplied Topic By
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -10200,6 +10475,7 @@ Validate CatchupArchiver Event CatchupArchiver_logevent_catchuparchiverEntitySum
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -10237,6 +10513,7 @@ Validate CatchupArchiver Event CatchupArchiver_logevent_catchuparchiverEntityShu
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -10274,6 +10551,7 @@ Validate CatchupArchiver Telemetry CatchupArchiver_sequencerHeartbeat Topic Byte
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -10311,6 +10589,7 @@ Validate CBP Command CBP_command_clearFault Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -10348,6 +10627,7 @@ Validate CBP Command CBP_command_moveAzimuth Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -10385,6 +10665,7 @@ Validate CBP Command CBP_command_moveAltitude Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -10422,6 +10703,7 @@ Validate CBP Command CBP_command_changeMask Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -10459,6 +10741,7 @@ Validate CBP Command CBP_command_setFocus Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -10496,6 +10779,7 @@ Validate CBP Command CBP_command_park Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -10533,6 +10817,7 @@ Validate CBP Telemetry CBP_status Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -10570,6 +10855,7 @@ Validate CBP Telemetry CBP_mask Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -10607,6 +10893,7 @@ Validate CBP Telemetry CBP_azimuth Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -10644,6 +10931,7 @@ Validate CBP Telemetry CBP_altitude Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -10681,6 +10969,7 @@ Validate CBP Telemetry CBP_focus Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -10718,6 +11007,7 @@ Validate CBP Telemetry CBP_parked Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -10755,6 +11045,7 @@ Validate DIMM Event DIMM_logevent_detailedState Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -10792,6 +11083,7 @@ Validate DIMM Event DIMM_logevent_internalCommand Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -10829,6 +11121,7 @@ Validate DIMM Event DIMM_logevent_heartbeat Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -10866,6 +11159,7 @@ Validate DIMM Event DIMM_logevent_loopTimeOutOfRange Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -10903,6 +11197,7 @@ Validate DIMM Event DIMM_logevent_rejectedCommand Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -10940,6 +11235,7 @@ Validate DIMM Telemetry DIMM_timestamp Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -10977,6 +11273,7 @@ Validate DIMM Telemetry DIMM_loopTime Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -11014,6 +11311,7 @@ Validate Dome Command Dome_command_crawl Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -11051,6 +11349,7 @@ Validate Dome Command Dome_command_move Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -11088,6 +11387,7 @@ Validate Dome Command Dome_command_park Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -11125,6 +11425,7 @@ Validate Dome Command Dome_command_setLouvers Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -11162,6 +11463,7 @@ Validate Dome Command Dome_command_closeShutter Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -11199,6 +11501,7 @@ Validate Dome Command Dome_command_openShutter Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -11236,6 +11539,7 @@ Validate Dome Command Dome_command_stopShutter Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -11273,6 +11577,7 @@ Validate Dome Event Dome_logevent_stateChanged Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -11310,6 +11615,7 @@ Validate Dome Telemetry Dome_summary Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -11347,6 +11653,7 @@ Validate DomeADB Command DomeADB_command_crawl Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -11384,6 +11691,7 @@ Validate DomeADB Command DomeADB_command_move Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -11421,6 +11729,7 @@ Validate DomeADB Command DomeADB_command_velocityMove Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -11458,6 +11767,7 @@ Validate DomeADB Command DomeADB_command_echo Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -11495,6 +11805,7 @@ Validate DomeADB Event DomeADB_logevent_stateChanged Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -11532,6 +11843,7 @@ Validate DomeADB Event DomeADB_logevent_driveEnabled Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -11569,6 +11881,7 @@ Validate DomeADB Event DomeADB_logevent_driveDisabled Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -11606,6 +11919,7 @@ Validate DomeADB Event DomeADB_logevent_driveReady Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -11643,6 +11957,7 @@ Validate DomeADB Event DomeADB_logevent_driveOverTemp Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -11680,6 +11995,7 @@ Validate DomeADB Event DomeADB_logevent_driveDriveFault Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -11717,6 +12033,7 @@ Validate DomeADB Event DomeADB_logevent_rotationEnabled Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -11754,6 +12071,7 @@ Validate DomeADB Event DomeADB_logevent_rotationPrevented Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -11791,6 +12109,7 @@ Validate DomeADB Event DomeADB_logevent_lockingPinEngaged Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -11828,6 +12147,7 @@ Validate DomeADB Event DomeADB_logevent_lockingPinDisengaged Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -11865,6 +12185,7 @@ Validate DomeADB Event DomeADB_logevent_brakeEngaged Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -11902,6 +12223,7 @@ Validate DomeADB Event DomeADB_logevent_brakeDisengaged Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -11939,6 +12261,7 @@ Validate DomeADB Event DomeADB_logevent_speedLimitReached Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -11976,6 +12299,7 @@ Validate DomeADB Event DomeADB_logevent_accelerationLimitReached Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -12013,6 +12337,7 @@ Validate DomeADB Event DomeADB_logevent_speedLimitSubsided Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -12050,6 +12375,7 @@ Validate DomeADB Event DomeADB_logevent_accelerationLimitSubsided Topic Byte Siz
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -12087,6 +12413,7 @@ Validate DomeADB Event DomeADB_logevent_echoResponse Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -12124,6 +12451,7 @@ Validate DomeADB Event DomeADB_logevent_motionModeChanged Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -12161,6 +12489,7 @@ Validate DomeADB Telemetry DomeADB_status Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -12198,6 +12527,7 @@ Validate DomeAPS Command DomeAPS_command_close Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -12235,6 +12565,7 @@ Validate DomeAPS Command DomeAPS_command_open Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -12272,6 +12603,7 @@ Validate DomeAPS Command DomeAPS_command_echo Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -12309,6 +12641,7 @@ Validate DomeAPS Event DomeAPS_logevent_stateChanged Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -12346,6 +12679,7 @@ Validate DomeAPS Event DomeAPS_logevent_driveEnabled Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -12383,6 +12717,7 @@ Validate DomeAPS Event DomeAPS_logevent_driveDisabled Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -12420,6 +12755,7 @@ Validate DomeAPS Event DomeAPS_logevent_driveReady Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -12457,6 +12793,7 @@ Validate DomeAPS Event DomeAPS_logevent_driveFault Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -12494,6 +12831,7 @@ Validate DomeAPS Event DomeAPS_logevent_movementEnabled Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -12531,6 +12869,7 @@ Validate DomeAPS Event DomeAPS_logevent_movementPrevented Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -12568,6 +12907,7 @@ Validate DomeAPS Event DomeAPS_logevent_lockingPinEngaged Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -12605,6 +12945,7 @@ Validate DomeAPS Event DomeAPS_logevent_lockingPinDisengaged Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -12642,6 +12983,7 @@ Validate DomeAPS Event DomeAPS_logevent_lockingPinFloating Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -12679,6 +13021,7 @@ Validate DomeAPS Event DomeAPS_logevent_centralLockingPinEngaged Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -12716,6 +13059,7 @@ Validate DomeAPS Event DomeAPS_logevent_lockingPinHomed Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -12753,6 +13097,7 @@ Validate DomeAPS Event DomeAPS_logevent_centralLockingPinDisengaged Topic Byte S
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -12790,6 +13135,7 @@ Validate DomeAPS Event DomeAPS_logevent_centralLockingPinHomed Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -12827,6 +13173,7 @@ Validate DomeAPS Event DomeAPS_logevent_centralLockingPinFloating Topic Byte Siz
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -12864,6 +13211,7 @@ Validate DomeAPS Event DomeAPS_logevent_brakeEngaged Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -12901,6 +13249,7 @@ Validate DomeAPS Event DomeAPS_logevent_brakeDisengaged Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -12938,6 +13287,7 @@ Validate DomeAPS Event DomeAPS_logevent_echoResponse Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -12975,6 +13325,7 @@ Validate DomeAPS Event DomeAPS_logevent_apsSubsystemError Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -13012,6 +13363,7 @@ Validate DomeAPS Telemetry DomeAPS_status Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -13049,6 +13401,7 @@ Validate DomeLouvers Command DomeLouvers_command_setPosition Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -13086,6 +13439,7 @@ Validate DomeLouvers Command DomeLouvers_command_echo Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -13123,6 +13477,7 @@ Validate DomeLouvers Event DomeLouvers_logevent_stateChanged Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -13160,6 +13515,7 @@ Validate DomeLouvers Event DomeLouvers_logevent_driveEnabled Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -13197,6 +13553,7 @@ Validate DomeLouvers Event DomeLouvers_logevent_driveDisabled Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -13234,6 +13591,7 @@ Validate DomeLouvers Event DomeLouvers_logevent_driveReady Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -13271,6 +13629,7 @@ Validate DomeLouvers Event DomeLouvers_logevent_driveOverTemp Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -13308,6 +13667,7 @@ Validate DomeLouvers Event DomeLouvers_logevent_driveFault Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -13345,6 +13705,7 @@ Validate DomeLouvers Event DomeLouvers_logevent_movementEnabled Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -13382,6 +13743,7 @@ Validate DomeLouvers Event DomeLouvers_logevent_movementPrevented Topic Byte Siz
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -13419,6 +13781,7 @@ Validate DomeLouvers Event DomeLouvers_logevent_echoResponse Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -13456,6 +13819,7 @@ Validate DomeLouvers Event DomeLouvers_logevent_subsystemError Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -13493,6 +13857,7 @@ Validate DomeLouvers Telemetry DomeLouvers_status Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -13530,6 +13895,7 @@ Validate DomeLWS Command DomeLWS_command_crawlLWS Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -13567,6 +13933,7 @@ Validate DomeLWS Command DomeLWS_command_moveLWS Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -13604,6 +13971,7 @@ Validate DomeLWS Command DomeLWS_command_velocityMoveLWS Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -13641,6 +14009,7 @@ Validate DomeLWS Command DomeLWS_command_echoLWS Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -13678,6 +14047,7 @@ Validate DomeLWS Event DomeLWS_logevent_stateChanged Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -13715,6 +14085,7 @@ Validate DomeLWS Event DomeLWS_logevent_driveEnabled Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -13752,6 +14123,7 @@ Validate DomeLWS Event DomeLWS_logevent_driveDisabled Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -13789,6 +14161,7 @@ Validate DomeLWS Event DomeLWS_logevent_driveReady Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -13826,6 +14199,7 @@ Validate DomeLWS Event DomeLWS_logevent_driveOverTemp Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -13863,6 +14237,7 @@ Validate DomeLWS Event DomeLWS_logevent_driveFault Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -13900,6 +14275,7 @@ Validate DomeLWS Event DomeLWS_logevent_movementEnabled Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -13937,6 +14313,7 @@ Validate DomeLWS Event DomeLWS_logevent_movementPrevented Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -13974,6 +14351,7 @@ Validate DomeLWS Event DomeLWS_logevent_lockingPinDisengaged Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -14011,6 +14389,7 @@ Validate DomeLWS Event DomeLWS_logevent_LockingPinEngaged Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -14048,6 +14427,7 @@ Validate DomeLWS Event DomeLWS_logevent_lockingPinHomed Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -14085,6 +14465,7 @@ Validate DomeLWS Event DomeLWS_logevent_lockingPinFloating Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -14122,6 +14503,7 @@ Validate DomeLWS Event DomeLWS_logevent_brakeEngaged Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -14159,6 +14541,7 @@ Validate DomeLWS Event DomeLWS_logevent_brakeDisengaged Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -14196,6 +14579,7 @@ Validate DomeLWS Event DomeLWS_logevent_speedLimitReached Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -14233,6 +14617,7 @@ Validate DomeLWS Event DomeLWS_logevent_accelerationLimitReached Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -14270,6 +14655,7 @@ Validate DomeLWS Event DomeLWS_logevent_speedLimitSubsided Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -14307,6 +14693,7 @@ Validate DomeLWS Event DomeLWS_logevent_accelerationLimitSubsided Topic Byte Siz
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -14344,6 +14731,7 @@ Validate DomeLWS Event DomeLWS_logevent_echoResponse Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -14381,6 +14769,7 @@ Validate DomeLWS Event DomeLWS_logevent_motionModeChanged Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -14418,6 +14807,7 @@ Validate DomeLWS Event DomeLWS_logevent_subsystemError Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -14455,6 +14845,7 @@ Validate DomeLWS Telemetry DomeLWS_status Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -14492,6 +14883,7 @@ Validate DomeMONCS Command DomeMONCS_command_echo Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -14529,6 +14921,7 @@ Validate DomeMONCS Event DomeMONCS_logevent_stateChanged Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -14566,6 +14959,7 @@ Validate DomeMONCS Event DomeMONCS_logevent_echoResponse Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -14603,6 +14997,7 @@ Validate DomeMONCS Event DomeMONCS_logevent_subsystemError Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -14640,6 +15035,7 @@ Validate DomeMONCS Event DomeMONCS_logevent_interlock Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -14677,6 +15073,7 @@ Validate DomeMONCS Telemetry DomeMONCS_status Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -14714,6 +15111,7 @@ Validate DomeTHCS Command DomeTHCS_command_echo Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -14751,6 +15149,7 @@ Validate DomeTHCS Event DomeTHCS_logevent_stateChanged Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -14788,6 +15187,7 @@ Validate DomeTHCS Event DomeTHCS_logevent_movementEnabled Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -14825,6 +15225,7 @@ Validate DomeTHCS Event DomeTHCS_logevent_movementPrevented Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -14862,6 +15263,7 @@ Validate DomeTHCS Event DomeTHCS_logevent_echoResponse Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -14899,6 +15301,7 @@ Validate DomeTHCS Event DomeTHCS_logevent_subsystemError Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -14936,6 +15339,7 @@ Validate DomeTHCS Telemetry DomeTHCS_status Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -14973,6 +15377,7 @@ Validate EAS Event EAS_logevent_detailedState Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -15010,6 +15415,7 @@ Validate EAS Event EAS_logevent_internalCommand Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -15047,6 +15453,7 @@ Validate EAS Event EAS_logevent_heartbeat Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -15084,6 +15491,7 @@ Validate EAS Event EAS_logevent_loopTimeOutOfRange Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -15121,6 +15529,7 @@ Validate EAS Event EAS_logevent_rejectedCommand Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -15158,6 +15567,7 @@ Validate EAS Telemetry EAS_timestamp Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -15195,6 +15605,7 @@ Validate EAS Telemetry EAS_loopTime Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -15232,6 +15643,7 @@ Validate EEC Command EEC_command_operatoMode Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -15269,6 +15681,7 @@ Validate EEC Command EEC_command_nightTimeMode Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -15306,6 +15719,7 @@ Validate EEC Command EEC_command_setHVAC Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -15343,6 +15757,7 @@ Validate EEC Command EEC_command_dayTimeMode Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -15380,6 +15795,7 @@ Validate EEC Command EEC_command_setLouvers Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -15417,6 +15833,7 @@ Validate EEC Command EEC_command_engineeringMode Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -15454,6 +15871,7 @@ Validate EEC Event EEC_logevent_nightTimeFail Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -15491,6 +15909,7 @@ Validate EEC Event EEC_logevent_rejectedCommand Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -15528,6 +15947,7 @@ Validate EEC Event EEC_logevent_dayTimeFail Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -15565,6 +15985,7 @@ Validate EEC Event EEC_logevent_internalCommand Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -15602,6 +16023,7 @@ Validate EEC Event EEC_logevent_loopTimeOutOfRange Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -15639,6 +16061,7 @@ Validate EEC Event EEC_logevent_heartbeat Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -15676,6 +16099,7 @@ Validate EEC Telemetry EEC_hvacTelem Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -15713,6 +16137,7 @@ Validate EEC Telemetry EEC_timestamp Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -15750,6 +16175,7 @@ Validate EEC Telemetry EEC_nightSetPoint Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -15787,6 +16213,7 @@ Validate EEC Telemetry EEC_EECTelem Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -15824,6 +16251,7 @@ Validate EEC Telemetry EEC_loopTimeMs Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -15861,6 +16289,7 @@ Validate EEC Telemetry EEC_daySetPoint Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -15898,6 +16327,7 @@ Validate EFD Event EFD_logevent_largeFileObjectAvailable Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -15935,6 +16365,7 @@ Validate EFD Telemetry EFD_Summary Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -15972,6 +16403,7 @@ Validate EFDTransformationServer Event EFDTransformationServer_logevent_detailed
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -16009,6 +16441,7 @@ Validate EFDTransformationServer Event EFDTransformationServer_logevent_internal
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -16046,6 +16479,7 @@ Validate EFDTransformationServer Event EFDTransformationServer_logevent_heartbea
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -16083,6 +16517,7 @@ Validate EFDTransformationServer Event EFDTransformationServer_logevent_loopTime
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -16120,6 +16555,7 @@ Validate EFDTransformationServer Event EFDTransformationServer_logevent_rejected
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -16157,6 +16593,7 @@ Validate EFDTransformationServer Telemetry EFDTransformationServer_timestamp Top
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -16194,6 +16631,7 @@ Validate EFDTransformationServer Telemetry EFDTransformationServer_loopTime Topi
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -16231,6 +16669,7 @@ Validate Electrometer Command Electrometer_command_performZeroCalib Topic Byte S
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -16268,6 +16707,7 @@ Validate Electrometer Command Electrometer_command_setDigitalFilter Topic Byte S
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -16305,6 +16745,7 @@ Validate Electrometer Command Electrometer_command_setIntegrationTime Topic Byte
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -16342,6 +16783,7 @@ Validate Electrometer Command Electrometer_command_setMode Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -16379,6 +16821,7 @@ Validate Electrometer Command Electrometer_command_setRange Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -16416,6 +16859,7 @@ Validate Electrometer Command Electrometer_command_startScan Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -16453,6 +16897,7 @@ Validate Electrometer Command Electrometer_command_startScanDt Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -16490,6 +16935,7 @@ Validate Electrometer Command Electrometer_command_stopScan Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -16527,6 +16973,7 @@ Validate Electrometer Event Electrometer_logevent_detailedState Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -16564,6 +17011,7 @@ Validate Electrometer Event Electrometer_logevent_digitalFilterChange Topic Byte
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -16601,6 +17049,7 @@ Validate Electrometer Event Electrometer_logevent_heartbeat Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -16638,6 +17087,7 @@ Validate Electrometer Event Electrometer_logevent_integrationTime Topic Byte Siz
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -16675,6 +17125,7 @@ Validate Electrometer Event Electrometer_logevent_intensity Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -16712,6 +17163,7 @@ Validate Electrometer Event Electrometer_logevent_largeFileObjectAvailable Topic
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -16749,6 +17201,7 @@ Validate Electrometer Event Electrometer_logevent_measureRange Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -16786,6 +17239,7 @@ Validate Electrometer Event Electrometer_logevent_measureType Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -16823,6 +17277,7 @@ Validate Electrometer Event Electrometer_logevent_settingsAppliedReadSets Topic 
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -16860,6 +17315,7 @@ Validate Electrometer Event Electrometer_logevent_settingsAppliedSerConf Topic B
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -16897,6 +17353,7 @@ Validate Electrometer Event Electrometer_logevent_deviceErrorCode Topic Byte Siz
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -16934,6 +17391,7 @@ Validate FiberSpectrograph Command FiberSpectrograph_command_captureSpectImage T
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -16971,6 +17429,7 @@ Validate FiberSpectrograph Event FiberSpectrograph_logevent_largeFileObjectAvail
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -17008,6 +17467,7 @@ Validate FiberSpectrograph Event FiberSpectrograph_logevent_detailedState Topic 
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -17045,6 +17505,7 @@ Validate FiberSpectrograph Event FiberSpectrograph_logevent_measuredSpectrum Top
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -17082,6 +17543,7 @@ Validate FiberSpectrograph Event FiberSpectrograph_logevent_timeout Topic Byte S
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -17119,6 +17581,7 @@ Validate FiberSpectrograph Event FiberSpectrograph_logevent_rejectedCommand Topi
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -17156,6 +17619,7 @@ Validate FiberSpectrograph Event FiberSpectrograph_logevent_loopTimeOutOfRange T
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -17193,6 +17657,7 @@ Validate FiberSpectrograph Event FiberSpectrograph_logevent_internalCommand Topi
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -17230,6 +17695,7 @@ Validate FiberSpectrograph Event FiberSpectrograph_logevent_heartbeat Topic Byte
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -17267,6 +17733,7 @@ Validate FiberSpectrograph Telemetry FiberSpectrograph_spectTemperature Topic By
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -17304,6 +17771,7 @@ Validate FiberSpectrograph Telemetry FiberSpectrograph_loopTime_ms Topic Byte Si
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -17341,6 +17809,7 @@ Validate FiberSpectrograph Telemetry FiberSpectrograph_timestamp Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -17378,6 +17847,7 @@ Validate IOTA Event IOTA_logevent_detailedState Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -17415,6 +17885,7 @@ Validate IOTA Event IOTA_logevent_internalCommand Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -17452,6 +17923,7 @@ Validate IOTA Event IOTA_logevent_heartbeat Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -17489,6 +17961,7 @@ Validate IOTA Event IOTA_logevent_loopTimeOutOfRange Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -17526,6 +17999,7 @@ Validate IOTA Event IOTA_logevent_rejectedCommand Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -17563,6 +18037,7 @@ Validate IOTA Telemetry IOTA_timestamp Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -17600,6 +18075,7 @@ Validate IOTA Telemetry IOTA_loopTime Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -17637,6 +18113,7 @@ Validate Hexapod Command Hexapod_command_configureAcceleration Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -17674,6 +18151,7 @@ Validate Hexapod Command Hexapod_command_configureLimits Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -17711,6 +18189,7 @@ Validate Hexapod Command Hexapod_command_configureElevationRawLUT Topic Byte Siz
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -17748,6 +18227,7 @@ Validate Hexapod Command Hexapod_command_move Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -17785,6 +18265,7 @@ Validate Hexapod Command Hexapod_command_positionSet Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -17822,6 +18303,7 @@ Validate Hexapod Command Hexapod_command_configureVelocity Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -17859,6 +18341,7 @@ Validate Hexapod Command Hexapod_command_offset Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -17896,6 +18379,7 @@ Validate Hexapod Command Hexapod_command_pivot Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -17933,6 +18417,7 @@ Validate Hexapod Command Hexapod_command_clearError Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -17970,6 +18455,7 @@ Validate Hexapod Command Hexapod_command_test Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -18007,6 +18493,7 @@ Validate Hexapod Command Hexapod_command_configureAzimuthRawLUT Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -18044,6 +18531,7 @@ Validate Hexapod Command Hexapod_command_configureTemperatureRawLUT Topic Byte S
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -18081,6 +18569,7 @@ Validate Hexapod Command Hexapod_command_moveLUT Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -18118,6 +18607,7 @@ Validate Hexapod Event Hexapod_logevent_interlock Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -18155,6 +18645,7 @@ Validate Hexapod Event Hexapod_logevent_inPosition Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -18192,6 +18683,7 @@ Validate Hexapod Event Hexapod_logevent_deviceError Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -18229,6 +18721,7 @@ Validate Hexapod Event Hexapod_logevent_settingsApplied Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -18266,6 +18759,7 @@ Validate Hexapod Event Hexapod_logevent_rejectedCommand Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -18303,6 +18797,7 @@ Validate Hexapod Event Hexapod_logevent_commandableByDDS Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -18340,6 +18835,7 @@ Validate Hexapod Telemetry Hexapod_Actuators Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -18377,6 +18873,7 @@ Validate Hexapod Telemetry Hexapod_Application Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -18414,6 +18911,7 @@ Validate Hexapod Telemetry Hexapod_Electrical Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -18451,6 +18949,7 @@ Validate LinearStage Command LinearStage_command_moveRelative Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -18488,6 +18987,7 @@ Validate LinearStage Command LinearStage_command_moveAbsolute Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -18525,6 +19025,7 @@ Validate LinearStage Command LinearStage_command_getHome Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -18562,6 +19063,7 @@ Validate LinearStage Command LinearStage_command_stop Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -18599,6 +19101,7 @@ Validate LinearStage Telemetry LinearStage_position Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -18636,6 +19139,7 @@ Validate MTArchiver Event MTArchiver_logevent_mtArchiverEntityShutdown Topic Byt
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -18673,6 +19177,7 @@ Validate MTArchiver Event MTArchiver_logevent_mtArchiverEntityStartup Topic Byte
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -18710,6 +19215,7 @@ Validate MTArchiver Event MTArchiver_logevent_mtArchiverEntitySummaryState Topic
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -18747,6 +19253,7 @@ Validate MTArchiver Event MTArchiver_logevent_settingsApplied Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -18784,6 +19291,7 @@ Validate MTArchiver Telemetry MTArchiver_sequencerHeartbeat Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -18821,6 +19329,7 @@ Validate MTCalCS Event MTCalCS_logevent_detailedState Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -18858,6 +19367,7 @@ Validate MTCalCS Event MTCalCS_logevent_internalCommand Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -18895,6 +19405,7 @@ Validate MTCalCS Event MTCalCS_logevent_heartbeat Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -18932,6 +19443,7 @@ Validate MTCalCS Event MTCalCS_logevent_loopTimeOutOfRange Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -18969,6 +19481,7 @@ Validate MTCalCS Event MTCalCS_logevent_rejectedCommand Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -19006,6 +19519,7 @@ Validate MTCalCS Telemetry MTCalCS_timestamp Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -19043,6 +19557,7 @@ Validate MTCalCS Telemetry MTCalCS_loopTime Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -19080,6 +19595,7 @@ Validate MTCamera Command MTCamera_command_discardRows Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -19117,6 +19633,7 @@ Validate MTCamera Command MTCamera_command_startImage Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -19154,6 +19671,7 @@ Validate MTCamera Command MTCamera_command_disableCalibration Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -19191,6 +19709,7 @@ Validate MTCamera Command MTCamera_command_initGuiders Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -19228,6 +19747,7 @@ Validate MTCamera Command MTCamera_command_enableCalibration Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -19265,6 +19785,7 @@ Validate MTCamera Command MTCamera_command_initImage Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -19302,6 +19823,7 @@ Validate MTCamera Command MTCamera_command_endImage Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -19339,6 +19861,7 @@ Validate MTCamera Command MTCamera_command_setFilter Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -19376,6 +19899,7 @@ Validate MTCamera Command MTCamera_command_clear Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -19413,6 +19937,7 @@ Validate MTCamera Command MTCamera_command_takeImages Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -19450,6 +19975,7 @@ Validate MTCamera Event MTCamera_logevent_offlineDetailedState Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -19487,6 +20013,7 @@ Validate MTCamera Event MTCamera_logevent_endReadout Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -19524,6 +20051,7 @@ Validate MTCamera Event MTCamera_logevent_endTakeImage Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -19561,6 +20089,7 @@ Validate MTCamera Event MTCamera_logevent_imageReadinessDetailedState Topic Byte
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -19598,6 +20127,7 @@ Validate MTCamera Event MTCamera_logevent_startSetFilter Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -19635,6 +20165,7 @@ Validate MTCamera Event MTCamera_logevent_startUnloadFilter Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -19672,6 +20203,7 @@ Validate MTCamera Event MTCamera_logevent_notReadyToTakeImage Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -19709,6 +20241,7 @@ Validate MTCamera Event MTCamera_logevent_startShutterClose Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -19746,6 +20279,7 @@ Validate MTCamera Event MTCamera_logevent_endInitializeGuider Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -19783,6 +20317,7 @@ Validate MTCamera Event MTCamera_logevent_endShutterClose Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -19820,6 +20355,7 @@ Validate MTCamera Event MTCamera_logevent_endOfImageTelemetry Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -19857,6 +20393,7 @@ Validate MTCamera Event MTCamera_logevent_endUnloadFilter Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -19894,6 +20431,7 @@ Validate MTCamera Event MTCamera_logevent_calibrationDetailedState Topic Byte Si
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -19931,6 +20469,7 @@ Validate MTCamera Event MTCamera_logevent_endRotateCarousel Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -19968,6 +20507,7 @@ Validate MTCamera Event MTCamera_logevent_startLoadFilter Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -20005,6 +20545,7 @@ Validate MTCamera Event MTCamera_logevent_filterChangerDetailedState Topic Byte 
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -20042,6 +20583,7 @@ Validate MTCamera Event MTCamera_logevent_shutterDetailedState Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -20079,6 +20621,7 @@ Validate MTCamera Event MTCamera_logevent_readyToTakeImage Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -20116,6 +20659,7 @@ Validate MTCamera Event MTCamera_logevent_ccsCommandState Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -20153,6 +20697,7 @@ Validate MTCamera Event MTCamera_logevent_prepareToTakeImage Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -20190,6 +20735,7 @@ Validate MTCamera Event MTCamera_logevent_ccsConfigured Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -20227,6 +20773,7 @@ Validate MTCamera Event MTCamera_logevent_endLoadFilter Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -20264,6 +20811,7 @@ Validate MTCamera Event MTCamera_logevent_endShutterOpen Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -20301,6 +20849,7 @@ Validate MTCamera Event MTCamera_logevent_startIntegration Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -20338,6 +20887,7 @@ Validate MTCamera Event MTCamera_logevent_endInitializeImage Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -20375,6 +20925,7 @@ Validate MTCamera Event MTCamera_logevent_settingsApplied Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -20412,6 +20963,7 @@ Validate MTCamera Event MTCamera_logevent_endSetFilter Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -20449,6 +21001,7 @@ Validate MTCamera Event MTCamera_logevent_startShutterOpen Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -20486,6 +21039,7 @@ Validate MTCamera Event MTCamera_logevent_raftsDetailedState Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -20523,6 +21077,7 @@ Validate MTCamera Event MTCamera_logevent_availableFilters Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -20560,6 +21115,7 @@ Validate MTCamera Event MTCamera_logevent_startReadout Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -20597,6 +21153,7 @@ Validate MTCamera Event MTCamera_logevent_startRotateCarousel Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -20634,6 +21191,7 @@ Validate MTCamera Event MTCamera_logevent_imageReadoutParameters Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -20671,6 +21229,7 @@ Validate MTCamera Telemetry MTCamera_shutter Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -20708,6 +21267,7 @@ Validate MTCamera Telemetry MTCamera_prot Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -20745,6 +21305,7 @@ Validate MTCamera Telemetry MTCamera_filter Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -20782,6 +21343,7 @@ Validate MTCamera Telemetry MTCamera_heartbeat Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -20819,6 +21381,7 @@ Validate MTCamera Telemetry MTCamera_was Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -20856,6 +21419,7 @@ Validate MTCamera Telemetry MTCamera_ccs Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -20893,6 +21457,7 @@ Validate MTCamera Telemetry MTCamera_clusterEncoder Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -20930,6 +21495,7 @@ Validate MTCamera Telemetry MTCamera_cyro Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -20967,6 +21533,7 @@ Validate MTCamera Telemetry MTCamera_purge Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -21004,6 +21571,7 @@ Validate MTCamera Telemetry MTCamera_wds Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -21041,6 +21609,7 @@ Validate MTCamera Telemetry MTCamera_gds Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -21078,6 +21647,7 @@ Validate MTCamera Telemetry MTCamera_sds Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -21115,6 +21685,7 @@ Validate MTCamera Telemetry MTCamera_gas Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -21152,6 +21723,7 @@ Validate MTCamera Telemetry MTCamera_pcms Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -21189,6 +21761,7 @@ Validate MTCamera Telemetry MTCamera_sas Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -21226,6 +21799,7 @@ Validate MTCamera Telemetry MTCamera_cold Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -21263,6 +21837,7 @@ Validate MTDomeTrajectory Event MTDomeTrajectory_logevent_detailedState Topic By
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -21300,6 +21875,7 @@ Validate MTDomeTrajectory Event MTDomeTrajectory_logevent_internalCommand Topic 
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -21337,6 +21913,7 @@ Validate MTDomeTrajectory Event MTDomeTrajectory_logevent_heartbeat Topic Byte S
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -21374,6 +21951,7 @@ Validate MTDomeTrajectory Event MTDomeTrajectory_logevent_loopTimeOutOfRange Top
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -21411,6 +21989,7 @@ Validate MTDomeTrajectory Event MTDomeTrajectory_logevent_rejectedCommand Topic 
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -21448,6 +22027,7 @@ Validate MTDomeTrajectory Telemetry MTDomeTrajectory_timestamp Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -21485,6 +22065,7 @@ Validate MTDomeTrajectory Telemetry MTDomeTrajectory_loopTime Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -21522,6 +22103,7 @@ Validate MTGuider Event MTGuider_logevent_detailedState Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -21559,6 +22141,7 @@ Validate MTGuider Event MTGuider_logevent_internalCommand Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -21596,6 +22179,7 @@ Validate MTGuider Event MTGuider_logevent_heartbeat Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -21633,6 +22217,7 @@ Validate MTGuider Event MTGuider_logevent_loopTimeOutOfRange Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -21670,6 +22255,7 @@ Validate MTGuider Event MTGuider_logevent_rejectedCommand Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -21707,6 +22293,7 @@ Validate MTGuider Telemetry MTGuider_timestamp Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -21744,6 +22331,7 @@ Validate MTGuider Telemetry MTGuider_loopTime Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -21781,6 +22369,7 @@ Validate MTHeaderService Event MTHeaderService_logevent_heartbeat Topic Byte Siz
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -21818,6 +22407,7 @@ Validate MTHeaderService Event MTHeaderService_logevent_rejectedCommand Topic By
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -21855,6 +22445,7 @@ Validate MTHeaderService Event MTHeaderService_logevent_largeFileObjectAvailable
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -21892,6 +22483,7 @@ Validate MTHeaderService Event MTHeaderService_logevent_settingsApplied Topic By
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -21929,6 +22521,7 @@ Validate MTLaserTracker Event MTLaserTracker_logevent_detailedState Topic Byte S
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -21966,6 +22559,7 @@ Validate MTLaserTracker Event MTLaserTracker_logevent_internalCommand Topic Byte
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -22003,6 +22597,7 @@ Validate MTLaserTracker Event MTLaserTracker_logevent_heartbeat Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -22040,6 +22635,7 @@ Validate MTLaserTracker Event MTLaserTracker_logevent_loopTimeOutOfRange Topic B
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -22077,6 +22673,7 @@ Validate MTLaserTracker Event MTLaserTracker_logevent_rejectedCommand Topic Byte
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -22114,6 +22711,7 @@ Validate MTLaserTracker Telemetry MTLaserTracker_timestamp Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -22151,6 +22749,7 @@ Validate MTLaserTracker Telemetry MTLaserTracker_loopTime Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -22188,6 +22787,7 @@ Validate MTM1M3 Command MTM1M3_command_abortRaiseM1M3 Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -22225,6 +22825,7 @@ Validate MTM1M3 Command MTM1M3_command_applyAberrationForces Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -22262,6 +22863,7 @@ Validate MTM1M3 Command MTM1M3_command_applyAberrationForcesByBendingModes Topic
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -22299,6 +22901,7 @@ Validate MTM1M3 Command MTM1M3_command_applyActiveOpticForces Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -22336,6 +22939,7 @@ Validate MTM1M3 Command MTM1M3_command_applyActiveOpticForcesByBendingModes Topi
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -22373,6 +22977,7 @@ Validate MTM1M3 Command MTM1M3_command_applyOffsetForces Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -22410,6 +23015,7 @@ Validate MTM1M3 Command MTM1M3_command_applyOffsetForcesByMirrorForce Topic Byte
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -22447,6 +23053,7 @@ Validate MTM1M3 Command MTM1M3_command_clearAberrationForces Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -22484,6 +23091,7 @@ Validate MTM1M3 Command MTM1M3_command_clearActiveOpticForces Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -22521,6 +23129,7 @@ Validate MTM1M3 Command MTM1M3_command_clearOffsetForces Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -22558,6 +23167,7 @@ Validate MTM1M3 Command MTM1M3_command_disableHardpointChase Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -22595,6 +23205,7 @@ Validate MTM1M3 Command MTM1M3_command_disableHardpointCorrections Topic Byte Si
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -22632,6 +23243,7 @@ Validate MTM1M3 Command MTM1M3_command_enableHardpointChase Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -22669,6 +23281,7 @@ Validate MTM1M3 Command MTM1M3_command_enableHardpointCorrections Topic Byte Siz
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -22706,6 +23319,7 @@ Validate MTM1M3 Command MTM1M3_command_enterEngineering Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -22743,6 +23357,7 @@ Validate MTM1M3 Command MTM1M3_command_exitEngineering Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -22780,6 +23395,7 @@ Validate MTM1M3 Command MTM1M3_command_lowerM1M3 Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -22817,6 +23433,7 @@ Validate MTM1M3 Command MTM1M3_command_modbusTransmit Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -22854,6 +23471,7 @@ Validate MTM1M3 Command MTM1M3_command_moveHardpointActuators Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -22891,6 +23509,7 @@ Validate MTM1M3 Command MTM1M3_command_positionM1M3 Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -22928,6 +23547,7 @@ Validate MTM1M3 Command MTM1M3_command_programILC Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -22965,6 +23585,7 @@ Validate MTM1M3 Command MTM1M3_command_raiseM1M3 Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -23002,6 +23623,7 @@ Validate MTM1M3 Command MTM1M3_command_resetPID Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -23039,6 +23661,7 @@ Validate MTM1M3 Command MTM1M3_command_shutdown Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -23076,6 +23699,7 @@ Validate MTM1M3 Command MTM1M3_command_stopHardpointMotion Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -23113,6 +23737,7 @@ Validate MTM1M3 Command MTM1M3_command_testAir Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -23150,6 +23775,7 @@ Validate MTM1M3 Command MTM1M3_command_testForceActuator Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -23187,6 +23813,7 @@ Validate MTM1M3 Command MTM1M3_command_testHardpoint Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -23224,6 +23851,7 @@ Validate MTM1M3 Command MTM1M3_command_translateM1M3 Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -23261,6 +23889,7 @@ Validate MTM1M3 Command MTM1M3_command_turnAirOff Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -23298,6 +23927,7 @@ Validate MTM1M3 Command MTM1M3_command_turnAirOn Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -23335,6 +23965,7 @@ Validate MTM1M3 Command MTM1M3_command_turnLightsOff Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -23372,6 +24003,7 @@ Validate MTM1M3 Command MTM1M3_command_turnLightsOn Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -23409,6 +24041,7 @@ Validate MTM1M3 Command MTM1M3_command_turnPowerOff Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -23446,6 +24079,7 @@ Validate MTM1M3 Command MTM1M3_command_turnPowerOn Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -23483,6 +24117,7 @@ Validate MTM1M3 Command MTM1M3_command_updatePID Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -23520,6 +24155,7 @@ Validate MTM1M3 Event MTM1M3_logevent_accelerometerWarning Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -23557,6 +24193,7 @@ Validate MTM1M3 Event MTM1M3_logevent_airSupplyStatus Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -23594,6 +24231,7 @@ Validate MTM1M3 Event MTM1M3_logevent_airSupplyWarning Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -23631,6 +24269,7 @@ Validate MTM1M3 Event MTM1M3_logevent_appliedAberrationForces Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -23668,6 +24307,7 @@ Validate MTM1M3 Event MTM1M3_logevent_appliedAccelerationForces Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -23705,6 +24345,7 @@ Validate MTM1M3 Event MTM1M3_logevent_appliedActiveOpticForces Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -23742,6 +24383,7 @@ Validate MTM1M3 Event MTM1M3_logevent_appliedAzimuthForces Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -23779,6 +24421,7 @@ Validate MTM1M3 Event MTM1M3_logevent_appliedBalanceForces Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -23816,6 +24459,7 @@ Validate MTM1M3 Event MTM1M3_logevent_appliedCylinderForces Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -23853,6 +24497,7 @@ Validate MTM1M3 Event MTM1M3_logevent_appliedElevationForces Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -23890,6 +24535,7 @@ Validate MTM1M3 Event MTM1M3_logevent_appliedForces Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -23927,6 +24573,7 @@ Validate MTM1M3 Event MTM1M3_logevent_appliedHardpointSteps Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -23964,6 +24611,7 @@ Validate MTM1M3 Event MTM1M3_logevent_appliedOffsetForces Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -24001,6 +24649,7 @@ Validate MTM1M3 Event MTM1M3_logevent_appliedStaticForces Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -24038,6 +24687,7 @@ Validate MTM1M3 Event MTM1M3_logevent_appliedThermalForces Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -24075,6 +24725,7 @@ Validate MTM1M3 Event MTM1M3_logevent_appliedVelocityForces Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -24112,6 +24763,7 @@ Validate MTM1M3 Event MTM1M3_logevent_cellLightStatus Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -24149,6 +24801,7 @@ Validate MTM1M3 Event MTM1M3_logevent_cellLightWarning Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -24186,6 +24839,7 @@ Validate MTM1M3 Event MTM1M3_logevent_detailedState Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -24223,6 +24877,7 @@ Validate MTM1M3 Event MTM1M3_logevent_displacementSensorWarning Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -24260,6 +24915,7 @@ Validate MTM1M3 Event MTM1M3_logevent_forceActuatorBackupCalibrationInfo Topic B
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -24297,6 +24953,7 @@ Validate MTM1M3 Event MTM1M3_logevent_forceActuatorILCInfo Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -24334,6 +24991,7 @@ Validate MTM1M3 Event MTM1M3_logevent_forceActuatorIdInfo Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -24371,6 +25029,7 @@ Validate MTM1M3 Event MTM1M3_logevent_forceActuatorMainCalibrationInfo Topic Byt
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -24408,6 +25067,7 @@ Validate MTM1M3 Event MTM1M3_logevent_forceActuatorMezzanineCalibrationInfo Topi
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -24445,6 +25105,7 @@ Validate MTM1M3 Event MTM1M3_logevent_forceActuatorPositionInfo Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -24482,6 +25143,7 @@ Validate MTM1M3 Event MTM1M3_logevent_forceActuatorState Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -24519,6 +25181,7 @@ Validate MTM1M3 Event MTM1M3_logevent_forceActuatorWarning Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -24556,6 +25219,7 @@ Validate MTM1M3 Event MTM1M3_logevent_gyroWarning Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -24593,6 +25257,7 @@ Validate MTM1M3 Event MTM1M3_logevent_hardpointActuatorInfo Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -24630,6 +25295,7 @@ Validate MTM1M3 Event MTM1M3_logevent_hardpointActuatorState Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -24667,6 +25333,7 @@ Validate MTM1M3 Event MTM1M3_logevent_hardpointActuatorWarning Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -24704,6 +25371,7 @@ Validate MTM1M3 Event MTM1M3_logevent_hardpointMonitorInfo Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -24741,6 +25409,7 @@ Validate MTM1M3 Event MTM1M3_logevent_hardpointMonitorState Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -24778,6 +25447,7 @@ Validate MTM1M3 Event MTM1M3_logevent_hardpointMonitorWarning Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -24815,6 +25485,7 @@ Validate MTM1M3 Event MTM1M3_logevent_inclinometerSensorWarning Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -24852,6 +25523,7 @@ Validate MTM1M3 Event MTM1M3_logevent_interlockStatus Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -24889,6 +25561,7 @@ Validate MTM1M3 Event MTM1M3_logevent_interlockWarning Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -24926,6 +25599,7 @@ Validate MTM1M3 Event MTM1M3_logevent_modbusResponse Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -24963,6 +25637,7 @@ Validate MTM1M3 Event MTM1M3_logevent_modbusWarning Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -25000,6 +25675,7 @@ Validate MTM1M3 Event MTM1M3_logevent_pidInfo Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -25037,6 +25713,7 @@ Validate MTM1M3 Event MTM1M3_logevent_powerStatus Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -25074,6 +25751,7 @@ Validate MTM1M3 Event MTM1M3_logevent_powerWarning Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -25111,6 +25789,7 @@ Validate MTM1M3 Event MTM1M3_logevent_rejectedAberrationForces Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -25148,6 +25827,7 @@ Validate MTM1M3 Event MTM1M3_logevent_rejectedAccelerationForces Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -25185,6 +25865,7 @@ Validate MTM1M3 Event MTM1M3_logevent_rejectedActiveOpticForces Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -25222,6 +25903,7 @@ Validate MTM1M3 Event MTM1M3_logevent_rejectedAzimuthForces Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -25259,6 +25941,7 @@ Validate MTM1M3 Event MTM1M3_logevent_rejectedBalanceForces Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -25296,6 +25979,7 @@ Validate MTM1M3 Event MTM1M3_logevent_rejectedCylinderForces Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -25333,6 +26017,7 @@ Validate MTM1M3 Event MTM1M3_logevent_rejectedElevationForces Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -25370,6 +26055,7 @@ Validate MTM1M3 Event MTM1M3_logevent_rejectedForces Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -25407,6 +26093,7 @@ Validate MTM1M3 Event MTM1M3_logevent_rejectedOffsetForces Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -25444,6 +26131,7 @@ Validate MTM1M3 Event MTM1M3_logevent_rejectedStaticForces Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -25481,6 +26169,7 @@ Validate MTM1M3 Event MTM1M3_logevent_rejectedThermalForces Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -25518,6 +26207,7 @@ Validate MTM1M3 Event MTM1M3_logevent_rejectedVelocityForces Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -25555,6 +26245,7 @@ Validate MTM1M3 Telemetry MTM1M3_accelerometerData Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -25592,6 +26283,7 @@ Validate MTM1M3 Telemetry MTM1M3_forceActuatorData Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -25629,6 +26321,7 @@ Validate MTM1M3 Telemetry MTM1M3_forceActuatorPressure Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -25666,6 +26359,7 @@ Validate MTM1M3 Telemetry MTM1M3_gyroData Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -25703,6 +26397,7 @@ Validate MTM1M3 Telemetry MTM1M3_hardpointActuatorData Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -25740,6 +26435,7 @@ Validate MTM1M3 Telemetry MTM1M3_hardpointMonitorData Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -25777,6 +26473,7 @@ Validate MTM1M3 Telemetry MTM1M3_imsData Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -25814,6 +26511,7 @@ Validate MTM1M3 Telemetry MTM1M3_inclinometerData Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -25851,6 +26549,7 @@ Validate MTM1M3 Telemetry MTM1M3_outerLoopData Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -25888,6 +26587,7 @@ Validate MTM1M3 Telemetry MTM1M3_pidData Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -25925,6 +26625,7 @@ Validate MTM1M3 Telemetry MTM1M3_powerData Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -25962,6 +26663,7 @@ Validate MTM2 Command MTM2_command_applyBendingMode Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -25999,6 +26701,7 @@ Validate MTM2 Command MTM2_command_applyForce Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -26036,6 +26739,7 @@ Validate MTM2 Command MTM2_command_setCorrectionMode Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -26073,6 +26777,7 @@ Validate MTM2 Command MTM2_command_positionMirror Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -26110,6 +26815,7 @@ Validate MTM2 Command MTM2_command_moveAxialActuator Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -26147,6 +26853,7 @@ Validate MTM2 Event MTM2_logevent_m2FaultState Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -26184,6 +26891,7 @@ Validate MTM2 Event MTM2_logevent_m2AssemblyInPosition Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -26221,6 +26929,7 @@ Validate MTM2 Telemetry MTM2_mirrorPositionMeasured Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -26258,6 +26967,7 @@ Validate MTM2 Telemetry MTM2_axialForcesMeasured Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -26295,6 +27005,7 @@ Validate MTM2 Telemetry MTM2_tangentForcesMeasured Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -26332,6 +27043,7 @@ Validate MTM2 Telemetry MTM2_zenithAngleMeasured Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -26369,6 +27081,7 @@ Validate MTM2 Telemetry MTM2_axialActuatorAbsolutePositionSteps Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -26406,6 +27119,7 @@ Validate MTM2 Telemetry MTM2_tangentActuatorAbsolutePositionSteps Topic Byte Siz
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -26443,6 +27157,7 @@ Validate MTM2 Telemetry MTM2_axialActuatorPositionAbsoluteEncoderPositionMeasure
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -26480,6 +27195,7 @@ Validate MTM2 Telemetry MTM2_tangentActuatorPositionAbsoluteEncoderPositionMeasu
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -26517,6 +27233,7 @@ Validate MTM2 Telemetry MTM2_powerStatus Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -26554,6 +27271,7 @@ Validate MTM2 Telemetry MTM2_temperaturesMeasured Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -26591,6 +27309,7 @@ Validate MTM2 Telemetry MTM2_rawDisplacement Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -26628,6 +27347,7 @@ Validate MTM2 Telemetry MTM2_stepVectorUpdate Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -26665,6 +27385,7 @@ Validate MTM2 Telemetry MTM2_targetForces Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -26702,6 +27423,7 @@ Validate MTM2 Telemetry MTM2_systemStatus Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -26739,6 +27461,7 @@ Validate MTM2 Telemetry MTM2_rawTelemetry Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -26776,6 +27499,7 @@ Validate MTM2 Telemetry MTM2_actuatorLimitSwitches Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -26813,6 +27537,7 @@ Validate MTMount Command MTMount_command_closeMirrorCover Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -26850,6 +27575,7 @@ Validate MTMount Command MTMount_command_configure Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -26887,6 +27613,7 @@ Validate MTMount Command MTMount_command_disableCamWrap Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -26924,6 +27651,7 @@ Validate MTMount Command MTMount_command_enableCamWrap Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -26961,6 +27689,7 @@ Validate MTMount Command MTMount_command_moveToTarget Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -26998,6 +27727,7 @@ Validate MTMount Command MTMount_command_openMirrorCover Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -27035,6 +27765,7 @@ Validate MTMount Command MTMount_command_trackTarget Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -27072,6 +27803,7 @@ Validate MTMount Command MTMount_command_clearerror Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -27109,6 +27841,7 @@ Validate MTMount Event MTMount_logevent_mountState Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -27146,6 +27879,7 @@ Validate MTMount Event MTMount_logevent_mountWarning Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -27183,6 +27917,7 @@ Validate MTMount Event MTMount_logevent_mountError Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -27220,6 +27955,7 @@ Validate MTMount Event MTMount_logevent_mountInPosition Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -27257,6 +27993,7 @@ Validate MTMount Telemetry MTMount_Auxliary_Cabinet_Azimuth Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -27294,6 +28031,7 @@ Validate MTMount Telemetry MTMount_General Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -27331,6 +28069,7 @@ Validate MTMount Telemetry MTMount_Azimuth_Cable_Wrap Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -27368,6 +28107,7 @@ Validate MTMount Telemetry MTMount_Azimuth Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -27405,6 +28145,7 @@ Validate MTMount Telemetry MTMount_Azimuth_Drives Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -27442,6 +28183,7 @@ Validate MTMount Telemetry MTMount_Azimuth_Drives_Thermal Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -27479,6 +28221,7 @@ Validate MTMount Telemetry MTMount_OSS Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -27516,6 +28259,7 @@ Validate MTMount Telemetry MTMount_Main_Power_Supply Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -27553,6 +28297,7 @@ Validate MTMount Telemetry MTMount_Encoder_EIB Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -27590,6 +28335,7 @@ Validate MTMount Telemetry MTMount_Balancing_Drives Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -27627,6 +28373,7 @@ Validate MTMount Telemetry MTMount_Balancing Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -27664,6 +28411,7 @@ Validate MTMount Telemetry MTMount_Elevation Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -27701,6 +28449,7 @@ Validate MTMount Telemetry MTMount_Elevation_Drives Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -27738,6 +28487,7 @@ Validate MTMount Telemetry MTMount_Locking_Pins Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -27775,6 +28525,7 @@ Validate MTMount Telemetry MTMount_Camera_Cable_Wrap Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -27812,6 +28563,7 @@ Validate MTMount Telemetry MTMount_Deployable_Platforms Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -27849,6 +28601,7 @@ Validate MTMount Telemetry MTMount_Elevation_Drives_Thermal Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -27886,6 +28639,7 @@ Validate MTMount Telemetry MTMount_Mirror_Cover Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -27923,6 +28677,7 @@ Validate MTMount Telemetry MTMount_Mount_Control_Main_Cabinet Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -27960,6 +28715,7 @@ Validate MTMount Telemetry MTMount_Top_End_Chiller Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -27997,6 +28753,7 @@ Validate MTMount Telemetry MTMount_Mirror_Cover_Locks Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -28034,6 +28791,7 @@ Validate MTMount Telemetry MTMount_Main_Power_Supply_Cabinet Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -28071,6 +28829,7 @@ Validate MTMount Telemetry MTMount_Auxiliary_Boxes Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -28108,6 +28867,7 @@ Validate MTMount Telemetry MTMount_Compressed_Air Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -28145,6 +28905,7 @@ Validate MTMount Telemetry MTMount_Cooling Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -28182,6 +28943,7 @@ Validate MTMount Telemetry MTMount_Dynalene_Cooling Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -28219,6 +28981,7 @@ Validate MTMount Telemetry MTMount_General_Purpose_Glycol_Water Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -28256,6 +29019,7 @@ Validate MTMount Telemetry MTMount_Safety_System Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -28293,6 +29057,7 @@ Validate MTOFC Command MTOFC_command_readShwfsFile Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -28330,6 +29095,7 @@ Validate MTOFC Command MTOFC_command_readWfsFile Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -28367,6 +29133,7 @@ Validate MTOFC Event MTOFC_logevent_internalCommand Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -28404,6 +29171,7 @@ Validate MTOFC Event MTOFC_logevent_heartbeat Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -28441,6 +29209,7 @@ Validate MTOFC Event MTOFC_logevent_loopTimeOutOfRange Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -28478,6 +29247,7 @@ Validate MTOFC Event MTOFC_logevent_rejectedCommand Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -28515,6 +29285,7 @@ Validate MTOFC Event MTOFC_logevent_noEnoughZernikeTerm Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -28552,6 +29323,7 @@ Validate MTOFC Event MTOFC_logevent_degreeOfFreedom Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -28589,6 +29361,7 @@ Validate MTOFC Telemetry MTOFC_timestamp Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -28626,6 +29399,7 @@ Validate MTOFC Telemetry MTOFC_loopTimeMs Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -28663,6 +29437,7 @@ Validate MTTCS Command MTTCS_command_wfpCalculate Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -28700,6 +29475,7 @@ Validate MTTCS Command MTTCS_command_wfpSimulate Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -28737,6 +29513,7 @@ Validate MTTCS Command MTTCS_command_filterChangeRequest Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -28774,6 +29551,7 @@ Validate MTTCS Command MTTCS_command_stopMotion Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -28811,6 +29589,7 @@ Validate MTTCS Command MTTCS_command_target Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -28848,6 +29627,7 @@ Validate MTTCS Event MTTCS_logevent_wfpDataReady Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -28885,6 +29665,7 @@ Validate MTTCS Event MTTCS_logevent_zemaxError Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -28922,6 +29703,7 @@ Validate MTTCS Event MTTCS_logevent_internalCommand Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -28959,6 +29741,7 @@ Validate MTTCS Event MTTCS_logevent_detailedState Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -28996,6 +29779,7 @@ Validate MTTCS Event MTTCS_logevent_heartbeat Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -29033,6 +29817,7 @@ Validate MTTCS Event MTTCS_logevent_loopTimeOutOfRange Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -29070,6 +29855,7 @@ Validate MTTCS Event MTTCS_logevent_rejectedCommand Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -29107,6 +29893,7 @@ Validate MTTCS Event MTTCS_logevent_heartbeatIn Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -29144,6 +29931,7 @@ Validate MTTCS Event MTTCS_logevent_filterChangeInPosition Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -29181,6 +29969,7 @@ Validate MTTCS Event MTTCS_logevent_targetInPosition Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -29218,6 +30007,7 @@ Validate MTTCS Event MTTCS_logevent_settingsApplied Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -29255,6 +30045,7 @@ Validate MTTCS Telemetry MTTCS_kernelPointingModel Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -29292,6 +30083,7 @@ Validate MTTCS Telemetry MTTCS_aOCS Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -29329,6 +30121,7 @@ Validate MTTCS Telemetry MTTCS_kernelTimeKeeper Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -29366,6 +30159,7 @@ Validate MTTCS Telemetry MTTCS_kernelSite Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -29403,6 +30197,7 @@ Validate MTTCS Telemetry MTTCS_kernelTarget Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -29440,6 +30235,7 @@ Validate MTTCS Telemetry MTTCS_kernelPointingControl Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -29477,6 +30273,7 @@ Validate MTTCS Telemetry MTTCS_kernelTrackRefSys Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -29514,6 +30311,7 @@ Validate MTTCS Telemetry MTTCS_zEMAX Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -29551,6 +30349,7 @@ Validate MTTCS Telemetry MTTCS_kernelPointingLog Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -29588,6 +30387,7 @@ Validate MTTCS Telemetry MTTCS_kernelDawdleFilter Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -29625,6 +30425,7 @@ Validate MTTCS Telemetry MTTCS_kernelOpticsVt Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -29662,6 +30463,7 @@ Validate MTTCS Telemetry MTTCS_wEP Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -29699,6 +30501,7 @@ Validate MTTCS Telemetry MTTCS_kernelTrackingTarget Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -29736,6 +30539,7 @@ Validate MTTCS Telemetry MTTCS_kernelFK5Target Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -29773,6 +30577,7 @@ Validate MTTCS Telemetry MTTCS_loopTime Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -29810,6 +30615,7 @@ Validate MTTCS Telemetry MTTCS_timestamp Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -29847,6 +30653,7 @@ Validate MTWEP Event MTWEP_logevent_internalCommand Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -29884,6 +30691,7 @@ Validate MTWEP Event MTWEP_logevent_heartbeat Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -29921,6 +30729,7 @@ Validate MTWEP Event MTWEP_logevent_loopTimeOutOfRange Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -29958,6 +30767,7 @@ Validate MTWEP Event MTWEP_logevent_rejectedCommand Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -29995,6 +30805,7 @@ Validate MTWEP Event MTWEP_logevent_noEnoughWfsNum Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -30032,6 +30843,7 @@ Validate MTWEP Event MTWEP_logevent_wavefrontError Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -30069,6 +30881,7 @@ Validate MTWEP Event MTWEP_logevent_normalTargetWfsList Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -30106,6 +30919,7 @@ Validate MTWEP Event MTWEP_logevent_comcamTargetWfsList Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -30143,6 +30957,7 @@ Validate MTWEP Event MTWEP_logevent_famTargetWfsList Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -30180,6 +30995,7 @@ Validate MTWEP Event MTWEP_logevent_sensorPssnList Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -30217,6 +31033,7 @@ Validate MTWEP Event MTWEP_logevent_simParamList Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -30254,6 +31071,7 @@ Validate MTWEP Event MTWEP_logevent_imageReady Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -30291,6 +31109,7 @@ Validate MTWEP Telemetry MTWEP_timestamp Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -30328,6 +31147,7 @@ Validate MTWEP Telemetry MTWEP_loopTimeMs Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -30365,6 +31185,7 @@ Validate MTVMS Command MTVMS_command_shutdown Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -30402,6 +31223,7 @@ Validate MTVMS Event MTVMS_logevent_settingsApplied Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -30439,6 +31261,7 @@ Validate MTVMS Event MTVMS_logevent_acquisitionRate Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -30476,6 +31299,7 @@ Validate MTVMS Telemetry MTVMS_M1M3 Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -30513,6 +31337,7 @@ Validate MTVMS Telemetry MTVMS_TMA Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -30550,6 +31375,7 @@ Validate MTVMS Telemetry MTVMS_M2 Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -30587,6 +31413,7 @@ Validate MTVMS Telemetry MTVMS_cameraRotator Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -30624,6 +31451,7 @@ Validate OCS Command OCS_command_sequence Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -30661,6 +31489,7 @@ Validate OCS Command OCS_command_script Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -30698,6 +31527,7 @@ Validate OCS Event OCS_logevent_oCSEntitySummaryState Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -30735,6 +31565,7 @@ Validate OCS Event OCS_logevent_oCSEntityStartup Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -30772,6 +31603,7 @@ Validate OCS Event OCS_logevent_oCSEntityShutdown Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -30809,6 +31641,7 @@ Validate OCS Event OCS_logevent_oCSCommandIssued Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -30846,6 +31679,7 @@ Validate OCS Event OCS_logevent_oCSCommandStatus Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -30883,6 +31717,7 @@ Validate OCS Event OCS_logevent_oCSCurrentScript Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -30920,6 +31755,7 @@ Validate OCS Event OCS_logevent_oCSNextScript Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -30957,6 +31793,7 @@ Validate OCS Event OCS_logevent_oCSScriptStart Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -30994,6 +31831,7 @@ Validate OCS Event OCS_logevent_oCSScriptEnd Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -31031,6 +31869,7 @@ Validate OCS Event OCS_logevent_oCSScriptError Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -31068,6 +31907,7 @@ Validate OCS Event OCS_logevent_oCSScriptEntititesInUse Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -31105,6 +31945,7 @@ Validate OCS Telemetry OCS_sequencerHeartbeat Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -31142,6 +31983,7 @@ Validate PromptProcessing Event PromptProcessing_logevent_entitySummaryState Top
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -31179,6 +32021,7 @@ Validate PromptProcessing Event PromptProcessing_logevent_entityStartup Topic By
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -31216,6 +32059,7 @@ Validate PromptProcessing Event PromptProcessing_logevent_entityShutdown Topic B
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -31253,6 +32097,7 @@ Validate PromptProcessing Telemetry PromptProcessing_sequencerHeartbeat Topic By
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -31290,6 +32135,7 @@ Validate Rotator Command Rotator_command_configureAcceleration Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -31327,6 +32173,7 @@ Validate Rotator Command Rotator_command_configureVelocity Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -31364,6 +32211,7 @@ Validate Rotator Command Rotator_command_move Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -31401,6 +32249,7 @@ Validate Rotator Command Rotator_command_track Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -31438,6 +32287,7 @@ Validate Rotator Command Rotator_command_test Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -31475,6 +32325,7 @@ Validate Rotator Command Rotator_command_trackStart Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -31512,6 +32363,7 @@ Validate Rotator Command Rotator_command_clearError Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -31549,6 +32401,7 @@ Validate Rotator Command Rotator_command_positionSet Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -31586,6 +32439,7 @@ Validate Rotator Command Rotator_command_moveConstantVelocity Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -31623,6 +32477,7 @@ Validate Rotator Command Rotator_command_velocitySet Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -31660,6 +32515,7 @@ Validate Rotator Event Rotator_logevent_interlock Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -31697,6 +32553,7 @@ Validate Rotator Event Rotator_logevent_trackLost Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -31734,6 +32591,7 @@ Validate Rotator Event Rotator_logevent_tracking Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -31771,6 +32629,7 @@ Validate Rotator Event Rotator_logevent_deviceError Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -31808,6 +32667,7 @@ Validate Rotator Event Rotator_logevent_inPosition Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -31845,6 +32705,7 @@ Validate Rotator Event Rotator_logevent_settingsApplied Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -31882,6 +32743,7 @@ Validate Rotator Event Rotator_logevent_rejectedCommand Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -31919,6 +32781,7 @@ Validate Rotator Event Rotator_logevent_commandableByDDS Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -31956,6 +32819,7 @@ Validate Rotator Telemetry Rotator_Electrical Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -31993,6 +32857,7 @@ Validate Rotator Telemetry Rotator_Application Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -32030,6 +32895,7 @@ Validate Rotator Telemetry Rotator_Motors Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -32067,6 +32933,7 @@ Validate Scheduler Event Scheduler_logevent_internalCommand Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -32104,6 +32971,7 @@ Validate Scheduler Event Scheduler_logevent_heartbeat Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -32141,6 +33009,7 @@ Validate Scheduler Event Scheduler_logevent_loopTimeOutOfRange Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -32178,6 +33047,7 @@ Validate Scheduler Event Scheduler_logevent_rejectedCommand Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -32215,6 +33085,7 @@ Validate Scheduler Event Scheduler_logevent_settingsApplied Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -32252,6 +33123,7 @@ Validate Scheduler Event Scheduler_logevent_target Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -32289,6 +33161,7 @@ Validate Scheduler Event Scheduler_logevent_invalidateTarget Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -32326,6 +33199,7 @@ Validate Scheduler Event Scheduler_logevent_needFilterSwap Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -32363,6 +33237,7 @@ Validate Scheduler Telemetry Scheduler_timestamp Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -32400,6 +33275,7 @@ Validate Scheduler Telemetry Scheduler_loopTimeMs Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -32437,6 +33313,7 @@ Validate Scheduler Telemetry Scheduler_nightSummary Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -32474,6 +33351,7 @@ Validate Scheduler Telemetry Scheduler_predictedSchedule Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -32511,6 +33389,7 @@ Validate Scheduler Telemetry Scheduler_surveyTopology Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -32548,6 +33427,7 @@ Validate Scheduler Telemetry Scheduler_schedulerConfig Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -32585,6 +33465,7 @@ Validate Scheduler Telemetry Scheduler_driverConfig Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -32622,6 +33503,7 @@ Validate Scheduler Telemetry Scheduler_obsSiteConfig Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -32659,6 +33541,7 @@ Validate Scheduler Telemetry Scheduler_telescopeConfig Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -32696,6 +33579,7 @@ Validate Scheduler Telemetry Scheduler_rotatorConfig Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -32733,6 +33617,7 @@ Validate Scheduler Telemetry Scheduler_domeConfig Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -32770,6 +33655,7 @@ Validate Scheduler Telemetry Scheduler_cameraConfig Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -32807,6 +33693,7 @@ Validate Scheduler Telemetry Scheduler_slewConfig Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -32844,6 +33731,7 @@ Validate Scheduler Telemetry Scheduler_opticsLoopCorrConfig Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -32881,6 +33769,7 @@ Validate Scheduler Telemetry Scheduler_parkConfig Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -32918,6 +33807,7 @@ Validate Scheduler Telemetry Scheduler_generalPropConfig Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -32955,6 +33845,7 @@ Validate Scheduler Telemetry Scheduler_sequencePropConfig Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -32992,6 +33883,7 @@ Validate Scheduler Telemetry Scheduler_observatoryState Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -33029,6 +33921,7 @@ Validate Scheduler Telemetry Scheduler_observation Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -33066,6 +33959,7 @@ Validate Scheduler Telemetry Scheduler_interestedProposal Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -33103,6 +33997,7 @@ Validate Scheduler Telemetry Scheduler_timeHandler Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -33140,6 +34035,7 @@ Validate Scheduler Telemetry Scheduler_bulkCloud Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -33177,6 +34073,7 @@ Validate Scheduler Telemetry Scheduler_cloudMap Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -33214,6 +34111,7 @@ Validate Scheduler Telemetry Scheduler_seeing Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -33251,6 +34149,7 @@ Validate Scheduler Telemetry Scheduler_wind Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -33288,6 +34187,7 @@ Validate Scheduler Telemetry Scheduler_temperature Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -33325,6 +34225,7 @@ Validate Scheduler Telemetry Scheduler_skyBrightness Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -33362,6 +34263,7 @@ Validate Scheduler Telemetry Scheduler_photometricQuality Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -33399,6 +34301,7 @@ Validate Scheduler Telemetry Scheduler_avoidanceRegions Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -33436,6 +34339,7 @@ Validate Scheduler Telemetry Scheduler_downtime Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -33473,6 +34377,7 @@ Validate Script Command Script_command_configure Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -33510,6 +34415,7 @@ Validate Script Command Script_command_run Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -33547,6 +34453,7 @@ Validate Script Command Script_command_resume Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -33568,8 +34475,8 @@ Validate Script Command Script_command_resume Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Script Command Script_command_setLogLevel Topic Byte Size
-	[Documentation]    Validate the Script_command_setLogLevel topic is less than 65536 bytes in total.
+Validate Script Command Script_command_setLogging Topic Byte Size
+	[Documentation]    Validate the Script_command_setLogging topic is less than 65536 bytes in total.
 	[Tags]    smoke    Script
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -33584,6 +34491,7 @@ Validate Script Command Script_command_setLogLevel Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -33592,8 +34500,8 @@ Validate Script Command Script_command_setLogLevel Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Script Command Script_command_setLogLevel Topic Columns
-	[Documentation]    Validate the Script_command_setLogLevel topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Script Command Script_command_setLogging Topic Columns
+	[Documentation]    Validate the Script_command_setLogging topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    Script
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -33621,6 +34529,7 @@ Validate Script Command Script_command_setCheckpoints Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -33658,6 +34567,7 @@ Validate Script Command Script_command_stop Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -33695,6 +34605,7 @@ Validate Script Event Script_logevent_heartbeat Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -33732,6 +34643,7 @@ Validate Script Event Script_logevent_checkpoints Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -33753,8 +34665,8 @@ Validate Script Event Script_logevent_checkpoints Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Script Event Script_logevent_logLevel Topic Byte Size
-	[Documentation]    Validate the Script_logevent_logLevel topic is less than 65536 bytes in total.
+Validate Script Event Script_logevent_logMessage Topic Byte Size
+	[Documentation]    Validate the Script_logevent_logMessage topic is less than 65536 bytes in total.
 	[Tags]    smoke    Script
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -33769,6 +34681,7 @@ Validate Script Event Script_logevent_logLevel Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -33777,8 +34690,8 @@ Validate Script Event Script_logevent_logLevel Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Script Event Script_logevent_logLevel Topic Columns
-	[Documentation]    Validate the Script_logevent_logLevel topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Script Event Script_logevent_logMessage Topic Columns
+	[Documentation]    Validate the Script_logevent_logMessage topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    Script
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -33790,8 +34703,8 @@ Validate Script Event Script_logevent_logLevel Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Script Event Script_logevent_logMessage Topic Byte Size
-	[Documentation]    Validate the Script_logevent_logMessage topic is less than 65536 bytes in total.
+Validate Script Event Script_logevent_description Topic Byte Size
+	[Documentation]    Validate the Script_logevent_description topic is less than 65536 bytes in total.
 	[Tags]    smoke    Script
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -33806,6 +34719,7 @@ Validate Script Event Script_logevent_logMessage Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -33814,8 +34728,8 @@ Validate Script Event Script_logevent_logMessage Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Script Event Script_logevent_logMessage Topic Columns
-	[Documentation]    Validate the Script_logevent_logMessage topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Script Event Script_logevent_description Topic Columns
+	[Documentation]    Validate the Script_logevent_description topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    Script
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -33827,8 +34741,8 @@ Validate Script Event Script_logevent_logMessage Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Script Event Script_logevent_description Topic Byte Size
-	[Documentation]    Validate the Script_logevent_description topic is less than 65536 bytes in total.
+Validate Script Event Script_logevent_metadata Topic Byte Size
+	[Documentation]    Validate the Script_logevent_metadata topic is less than 65536 bytes in total.
 	[Tags]    smoke    Script
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -33843,6 +34757,7 @@ Validate Script Event Script_logevent_description Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -33851,8 +34766,8 @@ Validate Script Event Script_logevent_description Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Script Event Script_logevent_description Topic Columns
-	[Documentation]    Validate the Script_logevent_description topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Script Event Script_logevent_metadata Topic Columns
+	[Documentation]    Validate the Script_logevent_metadata topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    Script
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -33864,8 +34779,8 @@ Validate Script Event Script_logevent_description Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Script Event Script_logevent_metadata Topic Byte Size
-	[Documentation]    Validate the Script_logevent_metadata topic is less than 65536 bytes in total.
+Validate Script Event Script_logevent_state Topic Byte Size
+	[Documentation]    Validate the Script_logevent_state topic is less than 65536 bytes in total.
 	[Tags]    smoke    Script
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -33880,43 +34795,7 @@ Validate Script Event Script_logevent_metadata Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate Script Event Script_logevent_metadata Topic Columns
-	[Documentation]    Validate the Script_logevent_metadata topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    Script
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/Script/Script_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/Count" -v . -n ${folder}/sal_interfaces/Script/Script_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate Script Event Script_logevent_state Topic Byte Size
-	[Documentation]    Validate the Script_logevent_state topic is less than 65536 bytes in total.
-	[Tags]    smoke    Script
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/Script/Script_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/Count" -v . -n ${folder}/sal_interfaces/Script/Script_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/Script/Script_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -33930,8 +34809,8 @@ Validate Script Event Script_logevent_state Topic Columns
 	[Tags]    smoke    Script
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/Script/Script_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/Count" -v . -n ${folder}/sal_interfaces/Script/Script_Events.xml
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/Script/Script_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/Count" -v . -n ${folder}/sal_interfaces/Script/Script_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -33954,6 +34833,7 @@ Validate ScriptQueue Command ScriptQueue_command_showAvailableScripts Topic Byte
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -33991,6 +34871,7 @@ Validate ScriptQueue Command ScriptQueue_command_showQueue Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -34028,6 +34909,7 @@ Validate ScriptQueue Command ScriptQueue_command_showScript Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -34065,6 +34947,7 @@ Validate ScriptQueue Command ScriptQueue_command_pause Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -34102,6 +34985,7 @@ Validate ScriptQueue Command ScriptQueue_command_resume Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -34139,6 +35023,7 @@ Validate ScriptQueue Command ScriptQueue_command_add Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -34176,6 +35061,7 @@ Validate ScriptQueue Command ScriptQueue_command_move Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -34213,6 +35099,7 @@ Validate ScriptQueue Command ScriptQueue_command_requeue Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -34250,6 +35137,7 @@ Validate ScriptQueue Command ScriptQueue_command_stopScripts Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -34287,6 +35175,7 @@ Validate ScriptQueue Event ScriptQueue_logevent_heartbeat Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -34324,6 +35213,7 @@ Validate ScriptQueue Event ScriptQueue_logevent_availableScripts Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -34361,6 +35251,7 @@ Validate ScriptQueue Event ScriptQueue_logevent_script Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -34398,6 +35289,7 @@ Validate ScriptQueue Event ScriptQueue_logevent_queue Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -34435,6 +35327,7 @@ Validate Sequencer Command Sequencer_command_sequence Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -34472,6 +35365,7 @@ Validate Sequencer Command Sequencer_command_script Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -34509,6 +35403,7 @@ Validate Sequencer Event Sequencer_logevent_sequencerEntitySummaryState Topic By
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -34546,6 +35441,7 @@ Validate Sequencer Event Sequencer_logevent_sequencerEntityStartup Topic Byte Si
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -34583,6 +35479,7 @@ Validate Sequencer Event Sequencer_logevent_sequencerEntityShutdown Topic Byte S
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -34620,6 +35517,7 @@ Validate Sequencer Event Sequencer_logevent_sequencerCommandIssued Topic Byte Si
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -34657,6 +35555,7 @@ Validate Sequencer Event Sequencer_logevent_sequencerCommandStatus Topic Byte Si
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -34694,6 +35593,7 @@ Validate Sequencer Event Sequencer_logevent_sequencerCurrentScript Topic Byte Si
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -34731,6 +35631,7 @@ Validate Sequencer Event Sequencer_logevent_sequencerNextScript Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -34768,6 +35669,7 @@ Validate Sequencer Event Sequencer_logevent_sequencerScriptStart Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -34805,6 +35707,7 @@ Validate Sequencer Event Sequencer_logevent_sequencerScriptEnd Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -34842,6 +35745,7 @@ Validate Sequencer Event Sequencer_logevent_sequencerScriptError Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -34879,6 +35783,7 @@ Validate Sequencer Event Sequencer_logevent_sequencerScriptEntititesInUse Topic 
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -34916,6 +35821,7 @@ Validate Sequencer Telemetry Sequencer_sequencerHeartbeat Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -34953,6 +35859,7 @@ Validate SummitFacility Event SummitFacility_logevent_internalCommand Topic Byte
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -34990,6 +35897,7 @@ Validate SummitFacility Event SummitFacility_logevent_heartbeat Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -35027,6 +35935,7 @@ Validate SummitFacility Event SummitFacility_logevent_loopTimeOutOfRange Topic B
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -35064,6 +35973,7 @@ Validate SummitFacility Event SummitFacility_logevent_rejectedCommand Topic Byte
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -35101,6 +36011,7 @@ Validate SummitFacility Telemetry SummitFacility_timestamp Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -35138,6 +36049,7 @@ Validate SummitFacility Telemetry SummitFacility_loopTime Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -35175,6 +36087,7 @@ Validate Test Command Test_command_setScalars Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -35212,6 +36125,7 @@ Validate Test Command Test_command_setArrays Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -35233,8 +36147,8 @@ Validate Test Command Test_command_setArrays Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Test Command Test_command_fault Topic Byte Size
-	[Documentation]    Validate the Test_command_fault topic is less than 65536 bytes in total.
+Validate Test Command Test_command_setLogging Topic Byte Size
+	[Documentation]    Validate the Test_command_setLogging topic is less than 65536 bytes in total.
 	[Tags]    smoke    Test
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -35249,6 +36163,7 @@ Validate Test Command Test_command_fault Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -35257,8 +36172,8 @@ Validate Test Command Test_command_fault Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Test Command Test_command_fault Topic Columns
-	[Documentation]    Validate the Test_command_fault topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Test Command Test_command_setLogging Topic Columns
+	[Documentation]    Validate the Test_command_setLogging topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    Test
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -35270,8 +36185,8 @@ Validate Test Command Test_command_fault Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Test Command Test_command_wait Topic Byte Size
-	[Documentation]    Validate the Test_command_wait topic is less than 65536 bytes in total.
+Validate Test Command Test_command_fault Topic Byte Size
+	[Documentation]    Validate the Test_command_fault topic is less than 65536 bytes in total.
 	[Tags]    smoke    Test
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -35286,6 +36201,45 @@ Validate Test Command Test_command_wait Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Test Command Test_command_fault Topic Columns
+	[Documentation]    Validate the Test_command_fault topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    Test
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/Test/Test_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[4]/item/Count" -v . -n ${folder}/sal_interfaces/Test/Test_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Test Command Test_command_wait Topic Byte Size
+	[Documentation]    Validate the Test_command_wait topic is less than 65536 bytes in total.
+	[Tags]    smoke    Test
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/Test/Test_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[5]/item/Count" -v . -n ${folder}/sal_interfaces/Test/Test_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/Test/Test_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -35299,8 +36253,8 @@ Validate Test Command Test_command_wait Topic Columns
 	[Tags]    smoke    Test
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/Test/Test_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[4]/item/Count" -v . -n ${folder}/sal_interfaces/Test/Test_Commands.xml
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/Test/Test_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[5]/item/Count" -v . -n ${folder}/sal_interfaces/Test/Test_Commands.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -35323,6 +36277,7 @@ Validate Test Event Test_logevent_heartbeat Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -35360,6 +36315,7 @@ Validate Test Event Test_logevent_scalars Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -35397,6 +36353,7 @@ Validate Test Event Test_logevent_arrays Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -35412,6 +36369,44 @@ Validate Test Event Test_logevent_arrays Topic Columns
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/Test/Test_Events.xml
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/Count" -v . -n ${folder}/sal_interfaces/Test/Test_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Test Event Test_logevent_logMessage Topic Byte Size
+	[Documentation]    Validate the Test_logevent_logMessage topic is less than 65536 bytes in total.
+	[Tags]    smoke    Test
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/Test/Test_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/Test/Test_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/Test/Test_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Test Event Test_logevent_logMessage Topic Columns
+	[Documentation]    Validate the Test_logevent_logMessage topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    Test
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/Test/Test_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/Test/Test_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -35434,6 +36429,7 @@ Validate Test Telemetry Test_scalars Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -35471,6 +36467,7 @@ Validate Test Telemetry Test_arrays Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -35508,6 +36505,7 @@ Validate TunableLaser Command TunableLaser_command_startPropagateLaser Topic Byt
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -35545,6 +36543,7 @@ Validate TunableLaser Command TunableLaser_command_stopPropagateLaser Topic Byte
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -35582,6 +36581,7 @@ Validate TunableLaser Command TunableLaser_command_clearFaultState Topic Byte Si
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -35619,6 +36619,7 @@ Validate TunableLaser Command TunableLaser_command_changeWavelength Topic Byte S
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -35656,6 +36657,7 @@ Validate TunableLaser Event TunableLaser_logevent_laserInstabilityFlag Topic Byt
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -35693,6 +36695,7 @@ Validate TunableLaser Telemetry TunableLaser_temperature Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -35730,6 +36733,7 @@ Validate TunableLaser Telemetry TunableLaser_wavelength Topic Byte Size
 	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
 	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
 	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned logn long'    Set Test Variable    ${key}    ullong
 	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
 	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
 	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
@@ -35754,7 +36758,7 @@ Validate TunableLaser Telemetry TunableLaser_wavelength Topic Columns
 *** Keywords ***
 Create the DataType:Size Dictionary
 	[Tags]    smoke
-	&{dict}=    Create Dictionary    boolean=2    byte=1    char=1    double=8    float=4    int=4    long=4    llong=8    octet=1    short=2    string=1    uint=4    ushort=2    ulong=4
+	&{dict}=    Create Dictionary    boolean=2    byte=1    char=1    double=8    float=4    int=4    long=4    llong=8    octet=1    short=2    string=1    uint=4    ushort=2    ulong=4    ullong=8
 	Log Many    &{dict}
 	Set Suite Variable    &{dict}
 
