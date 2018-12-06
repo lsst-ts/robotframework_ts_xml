@@ -21202,7 +21202,7 @@ Validate MTCamera Event MTCamera_logevent_imageReadoutParameters Topic Byte Size
 
 Validate MTCamera Event MTCamera_logevent_imageReadoutParameters Topic Columns
 	[Documentation]    Validate the MTCamera_logevent_imageReadoutParameters topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    MTCamera
+	[Tags]    smoke    MTCamera	TSS-119    #TSEIA-119
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[33]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml

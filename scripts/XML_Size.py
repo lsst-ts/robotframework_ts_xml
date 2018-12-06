@@ -62,6 +62,8 @@ for subsystem in xml_common.subsystems:
 				col_skipped="	TSS-2991"
 			elif subsystem == "MTM1M3" and topic.decode("utf-8") == "MTM1M3_logevent_forceActuatorWarning":
 				col_skipped="	TSS-2992"
+			elif subsystem == "MTCamera" and topic.decode("utf-8") == "MTCamera_logevent_imageReadoutParameters":
+				col_skipped="	TSS-119    #TSEIA-119"
 			elif subsystem == "ScriptQueue" and topic.decode("utf-8") == "ScriptQueue_command_stopScripts":
 				col_skipped="	TSS-3326"
 			elif subsystem == "ScriptQueue" and topic.decode("utf-8") == "ScriptQueue_logevent_queue":
