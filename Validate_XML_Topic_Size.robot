@@ -34475,8 +34475,8 @@ Validate Script Command Script_command_resume Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Script Command Script_command_setLogging Topic Byte Size
-	[Documentation]    Validate the Script_command_setLogging topic is less than 65536 bytes in total.
+Validate Script Command Script_command_setLogLevel Topic Byte Size
+	[Documentation]    Validate the Script_command_setLogLevel topic is less than 65536 bytes in total.
 	[Tags]    smoke    Script
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -34500,8 +34500,8 @@ Validate Script Command Script_command_setLogging Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Script Command Script_command_setLogging Topic Columns
-	[Documentation]    Validate the Script_command_setLogging topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Script Command Script_command_setLogLevel Topic Columns
+	[Documentation]    Validate the Script_command_setLogLevel topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    Script
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -34665,8 +34665,8 @@ Validate Script Event Script_logevent_checkpoints Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Script Event Script_logevent_logMessage Topic Byte Size
-	[Documentation]    Validate the Script_logevent_logMessage topic is less than 65536 bytes in total.
+Validate Script Event Script_logevent_logLevel Topic Byte Size
+	[Documentation]    Validate the Script_logevent_logLevel topic is less than 65536 bytes in total.
 	[Tags]    smoke    Script
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -34690,8 +34690,8 @@ Validate Script Event Script_logevent_logMessage Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Script Event Script_logevent_logMessage Topic Columns
-	[Documentation]    Validate the Script_logevent_logMessage topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Script Event Script_logevent_logLevel Topic Columns
+	[Documentation]    Validate the Script_logevent_logLevel topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    Script
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -34703,8 +34703,8 @@ Validate Script Event Script_logevent_logMessage Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Script Event Script_logevent_description Topic Byte Size
-	[Documentation]    Validate the Script_logevent_description topic is less than 65536 bytes in total.
+Validate Script Event Script_logevent_logMessage Topic Byte Size
+	[Documentation]    Validate the Script_logevent_logMessage topic is less than 65536 bytes in total.
 	[Tags]    smoke    Script
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -34728,8 +34728,8 @@ Validate Script Event Script_logevent_description Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Script Event Script_logevent_description Topic Columns
-	[Documentation]    Validate the Script_logevent_description topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Script Event Script_logevent_logMessage Topic Columns
+	[Documentation]    Validate the Script_logevent_logMessage topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    Script
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -34741,8 +34741,8 @@ Validate Script Event Script_logevent_description Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Script Event Script_logevent_metadata Topic Byte Size
-	[Documentation]    Validate the Script_logevent_metadata topic is less than 65536 bytes in total.
+Validate Script Event Script_logevent_description Topic Byte Size
+	[Documentation]    Validate the Script_logevent_description topic is less than 65536 bytes in total.
 	[Tags]    smoke    Script
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -34766,8 +34766,8 @@ Validate Script Event Script_logevent_metadata Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Script Event Script_logevent_metadata Topic Columns
-	[Documentation]    Validate the Script_logevent_metadata topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Script Event Script_logevent_description Topic Columns
+	[Documentation]    Validate the Script_logevent_description topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    Script
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -34779,8 +34779,8 @@ Validate Script Event Script_logevent_metadata Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Script Event Script_logevent_state Topic Byte Size
-	[Documentation]    Validate the Script_logevent_state topic is less than 65536 bytes in total.
+Validate Script Event Script_logevent_metadata Topic Byte Size
+	[Documentation]    Validate the Script_logevent_metadata topic is less than 65536 bytes in total.
 	[Tags]    smoke    Script
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -34804,13 +34804,51 @@ Validate Script Event Script_logevent_state Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Script Event Script_logevent_state Topic Columns
-	[Documentation]    Validate the Script_logevent_state topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate Script Event Script_logevent_metadata Topic Columns
+	[Documentation]    Validate the Script_logevent_metadata topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    Script
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/Script/Script_Events.xml
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/Count" -v . -n ${folder}/sal_interfaces/Script/Script_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Script Event Script_logevent_state Topic Byte Size
+	[Documentation]    Validate the Script_logevent_state topic is less than 65536 bytes in total.
+	[Tags]    smoke    Script
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/Script/Script_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/Count" -v . -n ${folder}/sal_interfaces/Script/Script_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/Script/Script_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Script Event Script_logevent_state Topic Columns
+	[Documentation]    Validate the Script_logevent_state topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    Script
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/Script/Script_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/Count" -v . -n ${folder}/sal_interfaces/Script/Script_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
