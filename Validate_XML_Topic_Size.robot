@@ -8369,8 +8369,8 @@ Validate ATSpectrograph Command ATSpectrograph_command_stopAllAxes Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATSpectrograph Event ATSpectrograph_logevent_heartbeat Topic Byte Size
-	[Documentation]    Validate the ATSpectrograph_logevent_heartbeat topic is less than 65536 bytes in total.
+Validate ATSpectrograph Event ATSpectrograph_logevent_detailedState Topic Byte Size
+	[Documentation]    Validate the ATSpectrograph_logevent_detailedState topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8394,8 +8394,8 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_heartbeat Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATSpectrograph Event ATSpectrograph_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the ATSpectrograph_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATSpectrograph Event ATSpectrograph_logevent_detailedState Topic Columns
+	[Documentation]    Validate the ATSpectrograph_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8407,8 +8407,8 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_heartbeat Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATSpectrograph Event ATSpectrograph_logevent_internalCommand Topic Byte Size
-	[Documentation]    Validate the ATSpectrograph_logevent_internalCommand topic is less than 65536 bytes in total.
+Validate ATSpectrograph Event ATSpectrograph_logevent_heartbeat Topic Byte Size
+	[Documentation]    Validate the ATSpectrograph_logevent_heartbeat topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8432,8 +8432,8 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_internalCommand Topic Byte
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATSpectrograph Event ATSpectrograph_logevent_internalCommand Topic Columns
-	[Documentation]    Validate the ATSpectrograph_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATSpectrograph Event ATSpectrograph_logevent_heartbeat Topic Columns
+	[Documentation]    Validate the ATSpectrograph_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8445,8 +8445,8 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_internalCommand Topic Colu
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATSpectrograph Event ATSpectrograph_logevent_loopTimeOutOfRange Topic Byte Size
-	[Documentation]    Validate the ATSpectrograph_logevent_loopTimeOutOfRange topic is less than 65536 bytes in total.
+Validate ATSpectrograph Event ATSpectrograph_logevent_internalCommand Topic Byte Size
+	[Documentation]    Validate the ATSpectrograph_logevent_internalCommand topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8470,8 +8470,8 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_loopTimeOutOfRange Topic B
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATSpectrograph Event ATSpectrograph_logevent_loopTimeOutOfRange Topic Columns
-	[Documentation]    Validate the ATSpectrograph_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATSpectrograph Event ATSpectrograph_logevent_internalCommand Topic Columns
+	[Documentation]    Validate the ATSpectrograph_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8483,8 +8483,8 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_loopTimeOutOfRange Topic C
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATSpectrograph Event ATSpectrograph_logevent_rejectedCommand Topic Byte Size
-	[Documentation]    Validate the ATSpectrograph_logevent_rejectedCommand topic is less than 65536 bytes in total.
+Validate ATSpectrograph Event ATSpectrograph_logevent_loopTimeOutOfRange Topic Byte Size
+	[Documentation]    Validate the ATSpectrograph_logevent_loopTimeOutOfRange topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8508,8 +8508,8 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_rejectedCommand Topic Byte
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATSpectrograph Event ATSpectrograph_logevent_rejectedCommand Topic Columns
-	[Documentation]    Validate the ATSpectrograph_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATSpectrograph Event ATSpectrograph_logevent_loopTimeOutOfRange Topic Columns
+	[Documentation]    Validate the ATSpectrograph_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8521,8 +8521,8 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_rejectedCommand Topic Colu
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATSpectrograph Event ATSpectrograph_logevent_timeout Topic Byte Size
-	[Documentation]    Validate the ATSpectrograph_logevent_timeout topic is less than 65536 bytes in total.
+Validate ATSpectrograph Event ATSpectrograph_logevent_rejectedCommand Topic Byte Size
+	[Documentation]    Validate the ATSpectrograph_logevent_rejectedCommand topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8546,8 +8546,8 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_timeout Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATSpectrograph Event ATSpectrograph_logevent_timeout Topic Columns
-	[Documentation]    Validate the ATSpectrograph_logevent_timeout topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATSpectrograph Event ATSpectrograph_logevent_rejectedCommand Topic Columns
+	[Documentation]    Validate the ATSpectrograph_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8559,8 +8559,8 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_timeout Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATSpectrograph Event ATSpectrograph_logevent_filterInPosition Topic Byte Size
-	[Documentation]    Validate the ATSpectrograph_logevent_filterInPosition topic is less than 65536 bytes in total.
+Validate ATSpectrograph Event ATSpectrograph_logevent_timeout Topic Byte Size
+	[Documentation]    Validate the ATSpectrograph_logevent_timeout topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8584,8 +8584,8 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_filterInPosition Topic Byt
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATSpectrograph Event ATSpectrograph_logevent_filterInPosition Topic Columns
-	[Documentation]    Validate the ATSpectrograph_logevent_filterInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATSpectrograph Event ATSpectrograph_logevent_timeout Topic Columns
+	[Documentation]    Validate the ATSpectrograph_logevent_timeout topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8597,8 +8597,8 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_filterInPosition Topic Col
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATSpectrograph Event ATSpectrograph_logevent_reportedFilterPosition Topic Byte Size
-	[Documentation]    Validate the ATSpectrograph_logevent_reportedFilterPosition topic is less than 65536 bytes in total.
+Validate ATSpectrograph Event ATSpectrograph_logevent_filterInPosition Topic Byte Size
+	[Documentation]    Validate the ATSpectrograph_logevent_filterInPosition topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8622,8 +8622,8 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_reportedFilterPosition Top
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATSpectrograph Event ATSpectrograph_logevent_reportedFilterPosition Topic Columns
-	[Documentation]    Validate the ATSpectrograph_logevent_reportedFilterPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATSpectrograph Event ATSpectrograph_logevent_filterInPosition Topic Columns
+	[Documentation]    Validate the ATSpectrograph_logevent_filterInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8635,8 +8635,8 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_reportedFilterPosition Top
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATSpectrograph Event ATSpectrograph_logevent_reportedDisperserPosition Topic Byte Size
-	[Documentation]    Validate the ATSpectrograph_logevent_reportedDisperserPosition topic is less than 65536 bytes in total.
+Validate ATSpectrograph Event ATSpectrograph_logevent_reportedFilterPosition Topic Byte Size
+	[Documentation]    Validate the ATSpectrograph_logevent_reportedFilterPosition topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8660,8 +8660,8 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_reportedDisperserPosition 
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATSpectrograph Event ATSpectrograph_logevent_reportedDisperserPosition Topic Columns
-	[Documentation]    Validate the ATSpectrograph_logevent_reportedDisperserPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATSpectrograph Event ATSpectrograph_logevent_reportedFilterPosition Topic Columns
+	[Documentation]    Validate the ATSpectrograph_logevent_reportedFilterPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8673,8 +8673,8 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_reportedDisperserPosition 
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATSpectrograph Event ATSpectrograph_logevent_disperserInPosition Topic Byte Size
-	[Documentation]    Validate the ATSpectrograph_logevent_disperserInPosition topic is less than 65536 bytes in total.
+Validate ATSpectrograph Event ATSpectrograph_logevent_reportedDisperserPosition Topic Byte Size
+	[Documentation]    Validate the ATSpectrograph_logevent_reportedDisperserPosition topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8698,8 +8698,8 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_disperserInPosition Topic 
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATSpectrograph Event ATSpectrograph_logevent_disperserInPosition Topic Columns
-	[Documentation]    Validate the ATSpectrograph_logevent_disperserInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATSpectrograph Event ATSpectrograph_logevent_reportedDisperserPosition Topic Columns
+	[Documentation]    Validate the ATSpectrograph_logevent_reportedDisperserPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8711,8 +8711,8 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_disperserInPosition Topic 
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATSpectrograph Event ATSpectrograph_logevent_linearStageInPosition Topic Byte Size
-	[Documentation]    Validate the ATSpectrograph_logevent_linearStageInPosition topic is less than 65536 bytes in total.
+Validate ATSpectrograph Event ATSpectrograph_logevent_disperserInPosition Topic Byte Size
+	[Documentation]    Validate the ATSpectrograph_logevent_disperserInPosition topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8736,8 +8736,8 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_linearStageInPosition Topi
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATSpectrograph Event ATSpectrograph_logevent_linearStageInPosition Topic Columns
-	[Documentation]    Validate the ATSpectrograph_logevent_linearStageInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATSpectrograph Event ATSpectrograph_logevent_disperserInPosition Topic Columns
+	[Documentation]    Validate the ATSpectrograph_logevent_disperserInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8749,8 +8749,8 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_linearStageInPosition Topi
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATSpectrograph Event ATSpectrograph_logevent_fwState Topic Byte Size
-	[Documentation]    Validate the ATSpectrograph_logevent_fwState topic is less than 65536 bytes in total.
+Validate ATSpectrograph Event ATSpectrograph_logevent_linearStageInPosition Topic Byte Size
+	[Documentation]    Validate the ATSpectrograph_logevent_linearStageInPosition topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8774,8 +8774,8 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_fwState Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATSpectrograph Event ATSpectrograph_logevent_fwState Topic Columns
-	[Documentation]    Validate the ATSpectrograph_logevent_fwState topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATSpectrograph Event ATSpectrograph_logevent_linearStageInPosition Topic Columns
+	[Documentation]    Validate the ATSpectrograph_logevent_linearStageInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8787,8 +8787,8 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_fwState Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATSpectrograph Event ATSpectrograph_logevent_gwState Topic Byte Size
-	[Documentation]    Validate the ATSpectrograph_logevent_gwState topic is less than 65536 bytes in total.
+Validate ATSpectrograph Event ATSpectrograph_logevent_fwState Topic Byte Size
+	[Documentation]    Validate the ATSpectrograph_logevent_fwState topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8812,13 +8812,51 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_gwState Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATSpectrograph Event ATSpectrograph_logevent_gwState Topic Columns
-	[Documentation]    Validate the ATSpectrograph_logevent_gwState topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATSpectrograph Event ATSpectrograph_logevent_fwState Topic Columns
+	[Documentation]    Validate the ATSpectrograph_logevent_fwState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[12]/item)" -n ${folder}/sal_interfaces/ATSpectrograph/ATSpectrograph_Events.xml
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[12]/item/Count" -v . -n ${folder}/sal_interfaces/ATSpectrograph/ATSpectrograph_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate ATSpectrograph Event ATSpectrograph_logevent_gwState Topic Byte Size
+	[Documentation]    Validate the ATSpectrograph_logevent_gwState topic is less than 65536 bytes in total.
+	[Tags]    smoke    ATSpectrograph
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[13]/item)" -n ${folder}/sal_interfaces/ATSpectrograph/ATSpectrograph_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[13]/item/Count" -v . -n ${folder}/sal_interfaces/ATSpectrograph/ATSpectrograph_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[13]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATSpectrograph/ATSpectrograph_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate ATSpectrograph Event ATSpectrograph_logevent_gwState Topic Columns
+	[Documentation]    Validate the ATSpectrograph_logevent_gwState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    ATSpectrograph
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[13]/item)" -n ${folder}/sal_interfaces/ATSpectrograph/ATSpectrograph_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[13]/item/Count" -v . -n ${folder}/sal_interfaces/ATSpectrograph/ATSpectrograph_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
