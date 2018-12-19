@@ -35425,8 +35425,8 @@ Validate PromptProcessing Event PromptProcessing_logevent_entitySummaryState Top
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate PromptProcessing Event PromptProcessing_logevent_entityStartup Topic Byte Size
-	[Documentation]    Validate the PromptProcessing_logevent_entityStartup topic is less than 65536 bytes in total.
+Validate PromptProcessing Event PromptProcessing_logevent_settingsApplied Topic Byte Size
+	[Documentation]    Validate the PromptProcessing_logevent_settingsApplied topic is less than 65536 bytes in total.
 	[Tags]    smoke    PromptProcessing
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -35450,8 +35450,8 @@ Validate PromptProcessing Event PromptProcessing_logevent_entityStartup Topic By
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate PromptProcessing Event PromptProcessing_logevent_entityStartup Topic Columns
-	[Documentation]    Validate the PromptProcessing_logevent_entityStartup topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate PromptProcessing Event PromptProcessing_logevent_settingsApplied Topic Columns
+	[Documentation]    Validate the PromptProcessing_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    PromptProcessing
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -35463,8 +35463,8 @@ Validate PromptProcessing Event PromptProcessing_logevent_entityStartup Topic Co
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate PromptProcessing Event PromptProcessing_logevent_entityShutdown Topic Byte Size
-	[Documentation]    Validate the PromptProcessing_logevent_entityShutdown topic is less than 65536 bytes in total.
+Validate PromptProcessing Event PromptProcessing_logevent_entityStartup Topic Byte Size
+	[Documentation]    Validate the PromptProcessing_logevent_entityStartup topic is less than 65536 bytes in total.
 	[Tags]    smoke    PromptProcessing
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -35488,13 +35488,51 @@ Validate PromptProcessing Event PromptProcessing_logevent_entityShutdown Topic B
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate PromptProcessing Event PromptProcessing_logevent_entityShutdown Topic Columns
-	[Documentation]    Validate the PromptProcessing_logevent_entityShutdown topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate PromptProcessing Event PromptProcessing_logevent_entityStartup Topic Columns
+	[Documentation]    Validate the PromptProcessing_logevent_entityStartup topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    PromptProcessing
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate PromptProcessing Event PromptProcessing_logevent_entityShutdown Topic Byte Size
+	[Documentation]    Validate the PromptProcessing_logevent_entityShutdown topic is less than 65536 bytes in total.
+	[Tags]    smoke    PromptProcessing
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate PromptProcessing Event PromptProcessing_logevent_entityShutdown Topic Columns
+	[Documentation]    Validate the PromptProcessing_logevent_entityShutdown topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    PromptProcessing
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
