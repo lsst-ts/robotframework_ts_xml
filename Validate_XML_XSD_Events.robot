@@ -8,6 +8,12 @@ Resource    Global_Vars.robot
 ${xml}    xml
 
 *** Test Cases ***
+Validate ATAOS Events XML file
+	[Tags]    smoke    ATAOS
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/ATAOS/ATAOS_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   ATAOS_Events.xml - valid
+
 Validate ATArchiver Events XML file
 	[Tags]    smoke    ATArchiver
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/ATArchiver/ATArchiver_Events.xml
@@ -157,12 +163,6 @@ Validate EAS Events XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/EAS/EAS_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   EAS_Events.xml - valid
-
-Validate EEC Events XML file
-	[Tags]    smoke    EEC
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/EEC/EEC_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   EEC_Events.xml - valid
 
 Validate EFD Events XML file
 	[Tags]    smoke    EFD

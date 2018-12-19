@@ -8,6 +8,27 @@ Resource    Global_Vars.robot
 ${xml}    xml
 
 *** Test Cases ***
+Validate ATAOS Commands
+	[Documentation]    Validate the ATAOS Commands XML file.
+	[Tags]    smoke    ATAOS
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ATAOS/ATAOS_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   ATAOS_Commands.xml - valid
+
+Validate ATAOS Events
+	[Documentation]    Validate the ATAOS Events XML file.
+	[Tags]    smoke    ATAOS
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ATAOS/ATAOS_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   ATAOS_Events.xml - valid
+
+Validate ATAOS Telemetry
+	[Documentation]    Validate the ATAOS Telemetry XML file.
+	[Tags]    smoke    ATAOS
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ATAOS/ATAOS_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   ATAOS_Telemetry.xml - valid
+
 Validate ATArchiver Commands
 	[Documentation]    Validate the ATArchiver Commands XML file.
 	[Tags]    smoke    ATArchiver
@@ -105,13 +126,6 @@ Validate ATDomeTrajectory Events
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ATDomeTrajectory/ATDomeTrajectory_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   ATDomeTrajectory_Events.xml - valid
-
-Validate ATDomeTrajectory Telemetry
-	[Documentation]    Validate the ATDomeTrajectory Telemetry XML file.
-	[Tags]    smoke    ATDomeTrajectory
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ATDomeTrajectory/ATDomeTrajectory_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   ATDomeTrajectory_Telemetry.xml - valid
 
 Validate ATHeaderService Events
 	[Documentation]    Validate the ATHeaderService Events XML file.
@@ -490,27 +504,6 @@ Validate EAS Telemetry
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/EAS/EAS_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   EAS_Telemetry.xml - valid
-
-Validate EEC Commands
-	[Documentation]    Validate the EEC Commands XML file.
-	[Tags]    smoke    EEC
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/EEC/EEC_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   EEC_Commands.xml - valid
-
-Validate EEC Events
-	[Documentation]    Validate the EEC Events XML file.
-	[Tags]    smoke    EEC
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/EEC/EEC_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   EEC_Events.xml - valid
-
-Validate EEC Telemetry
-	[Documentation]    Validate the EEC Telemetry XML file.
-	[Tags]    smoke    EEC
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/EEC/EEC_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   EEC_Telemetry.xml - valid
 
 Validate EFD Events
 	[Documentation]    Validate the EFD Events XML file.

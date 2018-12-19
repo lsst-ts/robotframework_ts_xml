@@ -8,6 +8,12 @@ Resource    Global_Vars.robot
 ${xml}    xml
 
 *** Test Cases ***
+Validate ATAOS Telemetry XML file
+	[Tags]    smoke    ATAOS
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/ATAOS/ATAOS_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   ATAOS_Telemetry.xml - valid
+
 Validate ATArchiver Telemetry XML file
 	[Tags]    smoke    ATArchiver
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/ATArchiver/ATArchiver_Telemetry.xml
@@ -37,12 +43,6 @@ Validate ATDome Telemetry XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/ATDome/ATDome_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   ATDome_Telemetry.xml - valid
-
-Validate ATDomeTrajectory Telemetry XML file
-	[Tags]    smoke    ATDomeTrajectory
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/ATDomeTrajectory/ATDomeTrajectory_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   ATDomeTrajectory_Telemetry.xml - valid
 
 Validate ATHexapod Telemetry XML file
 	[Tags]    smoke    ATHexapod
@@ -157,12 +157,6 @@ Validate EAS Telemetry XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/EAS/EAS_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   EAS_Telemetry.xml - valid
-
-Validate EEC Telemetry XML file
-	[Tags]    smoke    EEC
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/EEC/EEC_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   EEC_Telemetry.xml - valid
 
 Validate EFD Telemetry XML file
 	[Tags]    smoke    EFD
