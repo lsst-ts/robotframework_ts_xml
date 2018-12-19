@@ -127,6 +127,20 @@ Validate ATDomeTrajectory Events
 	Log    ${output}
 	Should Contain    ${output}   ATDomeTrajectory_Events.xml - valid
 
+Validate ATEEC Commands
+	[Documentation]    Validate the ATEEC Commands XML file.
+	[Tags]    smoke    ATEEC
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ATEEC/ATEEC_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   ATEEC_Commands.xml - valid
+
+Validate ATEEC Events
+	[Documentation]    Validate the ATEEC Events XML file.
+	[Tags]    smoke    ATEEC
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ATEEC/ATEEC_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   ATEEC_Events.xml - valid
+
 Validate ATHeaderService Events
 	[Documentation]    Validate the ATHeaderService Events XML file.
 	[Tags]    smoke    ATHeaderService
@@ -603,6 +617,27 @@ Validate Hexapod Telemetry
 	Log    ${output}
 	Should Contain    ${output}   Hexapod_Telemetry.xml - valid
 
+Validate HVAC Commands
+	[Documentation]    Validate the HVAC Commands XML file.
+	[Tags]    smoke    HVAC
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/HVAC/HVAC_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   HVAC_Commands.xml - valid
+
+Validate HVAC Events
+	[Documentation]    Validate the HVAC Events XML file.
+	[Tags]    smoke    HVAC
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/HVAC/HVAC_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   HVAC_Events.xml - valid
+
+Validate HVAC Telemetry
+	[Documentation]    Validate the HVAC Telemetry XML file.
+	[Tags]    smoke    HVAC
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/HVAC/HVAC_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   HVAC_Telemetry.xml - valid
+
 Validate LinearStage Commands
 	[Documentation]    Validate the LinearStage Commands XML file.
 	[Tags]    smoke    LinearStage
@@ -679,6 +714,20 @@ Validate MTDomeTrajectory Telemetry
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTDomeTrajectory/MTDomeTrajectory_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   MTDomeTrajectory_Telemetry.xml - valid
+
+Validate MTEEC Commands
+	[Documentation]    Validate the MTEEC Commands XML file.
+	[Tags]    smoke    MTEEC
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTEEC/MTEEC_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   MTEEC_Commands.xml - valid
+
+Validate MTEEC Events
+	[Documentation]    Validate the MTEEC Events XML file.
+	[Tags]    smoke    MTEEC
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTEEC/MTEEC_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   MTEEC_Events.xml - valid
 
 Validate MTGuider Events
 	[Documentation]    Validate the MTGuider Events XML file.
@@ -875,6 +924,27 @@ Validate OCS Telemetry
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/OCS/OCS_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   OCS_Telemetry.xml - valid
+
+Validate PointingComponent Commands
+	[Documentation]    Validate the PointingComponent Commands XML file.
+	[Tags]    smoke    PointingComponent
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   PointingComponent_Commands.xml - valid
+
+Validate PointingComponent Events
+	[Documentation]    Validate the PointingComponent Events XML file.
+	[Tags]    smoke    PointingComponent
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   PointingComponent_Events.xml - valid
+
+Validate PointingComponent Telemetry
+	[Documentation]    Validate the PointingComponent Telemetry XML file.
+	[Tags]    smoke    PointingComponent
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   PointingComponent_Telemetry.xml - valid
 
 Validate PromptProcessing Events
 	[Documentation]    Validate the PromptProcessing Events XML file.

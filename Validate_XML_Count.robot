@@ -144,6 +144,22 @@ Validate ATDomeTrajectory Events XML Counts
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
+Validate ATEEC Commands XML Counts
+	[Documentation]    Validate the ATEEC Commands XML count.
+	[Tags]    smoke    ATEEC
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/ATEEC/ATEEC_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
+Validate ATEEC Events XML Counts
+	[Documentation]    Validate the ATEEC Events XML count.
+	[Tags]    smoke    ATEEC
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/ATEEC/ATEEC_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
 Validate ATHeaderService Events XML Counts
 	[Documentation]    Validate the ATHeaderService Events XML count.
 	[Tags]    smoke    ATHeaderService
@@ -688,6 +704,30 @@ Validate Hexapod Telemetry XML Counts
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
+Validate HVAC Commands XML Counts
+	[Documentation]    Validate the HVAC Commands XML count.
+	[Tags]    smoke    HVAC
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/HVAC/HVAC_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
+Validate HVAC Events XML Counts
+	[Documentation]    Validate the HVAC Events XML count.
+	[Tags]    smoke    HVAC
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/HVAC/HVAC_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
+Validate HVAC Telemetry XML Counts
+	[Documentation]    Validate the HVAC Telemetry XML count.
+	[Tags]    smoke    HVAC
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/HVAC/HVAC_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
 Validate LinearStage Commands XML Counts
 	[Documentation]    Validate the LinearStage Commands XML count.
 	[Tags]    smoke    LinearStage
@@ -772,6 +812,22 @@ Validate MTDomeTrajectory Telemetry XML Counts
 	[Documentation]    Validate the MTDomeTrajectory Telemetry XML count.
 	[Tags]    smoke    MTDomeTrajectory
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/MTDomeTrajectory/MTDomeTrajectory_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
+Validate MTEEC Commands XML Counts
+	[Documentation]    Validate the MTEEC Commands XML count.
+	[Tags]    smoke    MTEEC
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/MTEEC/MTEEC_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
+Validate MTEEC Events XML Counts
+	[Documentation]    Validate the MTEEC Events XML count.
+	[Tags]    smoke    MTEEC
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/MTEEC/MTEEC_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
@@ -996,6 +1052,30 @@ Validate OCS Telemetry XML Counts
 	[Documentation]    Validate the OCS Telemetry XML count.
 	[Tags]    smoke    OCS
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/OCS/OCS_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
+Validate PointingComponent Commands XML Counts
+	[Documentation]    Validate the PointingComponent Commands XML count.
+	[Tags]    smoke    PointingComponent
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
+Validate PointingComponent Events XML Counts
+	[Documentation]    Validate the PointingComponent Events XML count.
+	[Tags]    smoke    PointingComponent
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
+Validate PointingComponent Telemetry XML Counts
+	[Documentation]    Validate the PointingComponent Telemetry XML count.
+	[Tags]    smoke    PointingComponent
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,

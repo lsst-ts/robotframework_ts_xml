@@ -32,6 +32,12 @@ Validate ATDome Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   ATDome_Commands.xml - valid
 
+Validate ATEEC Commands XML file
+	[Tags]    smoke    ATEEC
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/ATEEC/ATEEC_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   ATEEC_Commands.xml - valid
+
 Validate ATHexapod Commands XML file
 	[Tags]    smoke    ATHexapod
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/ATHexapod/ATHexapod_Commands.xml
@@ -146,6 +152,12 @@ Validate Hexapod Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   Hexapod_Commands.xml - valid
 
+Validate HVAC Commands XML file
+	[Tags]    smoke    HVAC
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/HVAC/HVAC_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   HVAC_Commands.xml - valid
+
 Validate LinearStage Commands XML file
 	[Tags]    smoke    LinearStage
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml
@@ -157,6 +169,12 @@ Validate MTCamera Commands XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/MTCamera/MTCamera_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   MTCamera_Commands.xml - valid
+
+Validate MTEEC Commands XML file
+	[Tags]    smoke    MTEEC
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/MTEEC/MTEEC_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   MTEEC_Commands.xml - valid
 
 Validate MTM1M3 Commands XML file
 	[Tags]    smoke    MTM1M3
@@ -199,6 +217,12 @@ Validate OCS Commands XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/OCS/OCS_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   OCS_Commands.xml - valid
+
+Validate PointingComponent Commands XML file
+	[Tags]    smoke    PointingComponent
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   PointingComponent_Commands.xml - valid
 
 Validate Rotator Commands XML file
 	[Tags]    smoke    Rotator

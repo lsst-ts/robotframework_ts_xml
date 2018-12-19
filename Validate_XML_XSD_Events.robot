@@ -50,6 +50,12 @@ Validate ATDomeTrajectory Events XML file
 	Log    ${output}
 	Should Contain    ${output}   ATDomeTrajectory_Events.xml - valid
 
+Validate ATEEC Events XML file
+	[Tags]    smoke    ATEEC
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/ATEEC/ATEEC_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   ATEEC_Events.xml - valid
+
 Validate ATHeaderService Events XML file
 	[Tags]    smoke    ATHeaderService
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/ATHeaderService/ATHeaderService_Events.xml
@@ -200,6 +206,12 @@ Validate Hexapod Events XML file
 	Log    ${output}
 	Should Contain    ${output}   Hexapod_Events.xml - valid
 
+Validate HVAC Events XML file
+	[Tags]    smoke    HVAC
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/HVAC/HVAC_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   HVAC_Events.xml - valid
+
 Validate MTArchiver Events XML file
 	[Tags]    smoke    MTArchiver
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/MTArchiver/MTArchiver_Events.xml
@@ -223,6 +235,12 @@ Validate MTDomeTrajectory Events XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/MTDomeTrajectory/MTDomeTrajectory_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   MTDomeTrajectory_Events.xml - valid
+
+Validate MTEEC Events XML file
+	[Tags]    smoke    MTEEC
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/MTEEC/MTEEC_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   MTEEC_Events.xml - valid
 
 Validate MTGuider Events XML file
 	[Tags]    smoke    MTGuider
@@ -289,6 +307,12 @@ Validate OCS Events XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/OCS/OCS_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   OCS_Events.xml - valid
+
+Validate PointingComponent Events XML file
+	[Tags]    smoke    PointingComponent
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   PointingComponent_Events.xml - valid
 
 Validate PromptProcessing Events XML file
 	[Tags]    smoke    PromptProcessing

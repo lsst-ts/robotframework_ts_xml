@@ -281,6 +281,38 @@ Validate ATDomeTrajectory Events EFDB_Name Values Do Not Use MySQL Reserved Word
 	Log    ${output}
 	Should Not Contain MySQL Reserved Word    ${output}
 
+Validate ATEEC Commands EFDB_Name Values Do Not Use IDL Reserved words
+	[Documentation]    Validate the ATEEC Commands <EFDB_Name> tags do not contain IDL Reserved Words.
+	[Tags]    smoke    ATEEC
+	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/ATEEC/ATEEC_Commands.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain IDL Reserved Word    ${output}
+
+Validate ATEEC Commands EFDB_Name Values Do Not Use MySQL Reserved Words
+	[Documentation]    Validate the ATEEC Commands <EFDB_Name> tags do not contain MySQL Reserved Words.
+	[Tags]    smoke    ATEEC
+	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/ATEEC/ATEEC_Commands.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain MySQL Reserved Word    ${output}
+
+Validate ATEEC Events EFDB_Name Values Do Not Use IDL Reserved words
+	[Documentation]    Validate the ATEEC Events <EFDB_Name> tags do not contain IDL Reserved Words.
+	[Tags]    smoke    ATEEC
+	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/ATEEC/ATEEC_Events.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain IDL Reserved Word    ${output}
+
+Validate ATEEC Events EFDB_Name Values Do Not Use MySQL Reserved Words
+	[Documentation]    Validate the ATEEC Events <EFDB_Name> tags do not contain MySQL Reserved Words.
+	[Tags]    smoke    ATEEC
+	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/ATEEC/ATEEC_Events.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain MySQL Reserved Word    ${output}
+
 Validate ATHeaderService Events EFDB_Name Values Do Not Use IDL Reserved words
 	[Documentation]    Validate the ATHeaderService Events <EFDB_Name> tags do not contain IDL Reserved Words.
 	[Tags]    smoke    ATHeaderService
@@ -1369,6 +1401,54 @@ Validate Hexapod Telemetry EFDB_Name Values Do Not Use MySQL Reserved Words
 	Log    ${output}
 	Should Not Contain MySQL Reserved Word    ${output}
 
+Validate HVAC Commands EFDB_Name Values Do Not Use IDL Reserved words
+	[Documentation]    Validate the HVAC Commands <EFDB_Name> tags do not contain IDL Reserved Words.
+	[Tags]    smoke    HVAC
+	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/HVAC/HVAC_Commands.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain IDL Reserved Word    ${output}
+
+Validate HVAC Commands EFDB_Name Values Do Not Use MySQL Reserved Words
+	[Documentation]    Validate the HVAC Commands <EFDB_Name> tags do not contain MySQL Reserved Words.
+	[Tags]    smoke    HVAC
+	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/HVAC/HVAC_Commands.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain MySQL Reserved Word    ${output}
+
+Validate HVAC Events EFDB_Name Values Do Not Use IDL Reserved words
+	[Documentation]    Validate the HVAC Events <EFDB_Name> tags do not contain IDL Reserved Words.
+	[Tags]    smoke    HVAC
+	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/HVAC/HVAC_Events.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain IDL Reserved Word    ${output}
+
+Validate HVAC Events EFDB_Name Values Do Not Use MySQL Reserved Words
+	[Documentation]    Validate the HVAC Events <EFDB_Name> tags do not contain MySQL Reserved Words.
+	[Tags]    smoke    HVAC
+	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/HVAC/HVAC_Events.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain MySQL Reserved Word    ${output}
+
+Validate HVAC Telemetry EFDB_Name Values Do Not Use IDL Reserved words
+	[Documentation]    Validate the HVAC Telemetry <EFDB_Name> tags do not contain IDL Reserved Words.
+	[Tags]    smoke    HVAC
+	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/HVAC/HVAC_Telemetry.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain IDL Reserved Word    ${output}
+
+Validate HVAC Telemetry EFDB_Name Values Do Not Use MySQL Reserved Words
+	[Documentation]    Validate the HVAC Telemetry <EFDB_Name> tags do not contain MySQL Reserved Words.
+	[Tags]    smoke    HVAC
+	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/HVAC/HVAC_Telemetry.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain MySQL Reserved Word    ${output}
+
 Validate LinearStage Commands EFDB_Name Values Do Not Use IDL Reserved words
 	[Documentation]    Validate the LinearStage Commands <EFDB_Name> tags do not contain IDL Reserved Words.
 	[Tags]    smoke    LinearStage
@@ -1542,6 +1622,38 @@ Validate MTDomeTrajectory Telemetry EFDB_Name Values Do Not Use MySQL Reserved W
 	[Tags]    smoke    MTDomeTrajectory
 	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/MTDomeTrajectory/MTDomeTrajectory_Telemetry.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain MySQL Reserved Word    ${output}
+
+Validate MTEEC Commands EFDB_Name Values Do Not Use IDL Reserved words
+	[Documentation]    Validate the MTEEC Commands <EFDB_Name> tags do not contain IDL Reserved Words.
+	[Tags]    smoke    MTEEC
+	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/MTEEC/MTEEC_Commands.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain IDL Reserved Word    ${output}
+
+Validate MTEEC Commands EFDB_Name Values Do Not Use MySQL Reserved Words
+	[Documentation]    Validate the MTEEC Commands <EFDB_Name> tags do not contain MySQL Reserved Words.
+	[Tags]    smoke    MTEEC
+	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/MTEEC/MTEEC_Commands.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain MySQL Reserved Word    ${output}
+
+Validate MTEEC Events EFDB_Name Values Do Not Use IDL Reserved words
+	[Documentation]    Validate the MTEEC Events <EFDB_Name> tags do not contain IDL Reserved Words.
+	[Tags]    smoke    MTEEC
+	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/MTEEC/MTEEC_Events.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain IDL Reserved Word    ${output}
+
+Validate MTEEC Events EFDB_Name Values Do Not Use MySQL Reserved Words
+	[Documentation]    Validate the MTEEC Events <EFDB_Name> tags do not contain MySQL Reserved Words.
+	[Tags]    smoke    MTEEC
+	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/MTEEC/MTEEC_Events.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain MySQL Reserved Word    ${output}
 
@@ -1990,6 +2102,54 @@ Validate OCS Telemetry EFDB_Name Values Do Not Use MySQL Reserved Words
 	[Tags]    smoke    OCS
 	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/OCS/OCS_Telemetry.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain MySQL Reserved Word    ${output}
+
+Validate PointingComponent Commands EFDB_Name Values Do Not Use IDL Reserved words
+	[Documentation]    Validate the PointingComponent Commands <EFDB_Name> tags do not contain IDL Reserved Words.
+	[Tags]    smoke    PointingComponent
+	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain IDL Reserved Word    ${output}
+
+Validate PointingComponent Commands EFDB_Name Values Do Not Use MySQL Reserved Words
+	[Documentation]    Validate the PointingComponent Commands <EFDB_Name> tags do not contain MySQL Reserved Words.
+	[Tags]    smoke    PointingComponent
+	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain MySQL Reserved Word    ${output}
+
+Validate PointingComponent Events EFDB_Name Values Do Not Use IDL Reserved words
+	[Documentation]    Validate the PointingComponent Events <EFDB_Name> tags do not contain IDL Reserved Words.
+	[Tags]    smoke    PointingComponent
+	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain IDL Reserved Word    ${output}
+
+Validate PointingComponent Events EFDB_Name Values Do Not Use MySQL Reserved Words
+	[Documentation]    Validate the PointingComponent Events <EFDB_Name> tags do not contain MySQL Reserved Words.
+	[Tags]    smoke    PointingComponent
+	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain MySQL Reserved Word    ${output}
+
+Validate PointingComponent Telemetry EFDB_Name Values Do Not Use IDL Reserved words
+	[Documentation]    Validate the PointingComponent Telemetry <EFDB_Name> tags do not contain IDL Reserved Words.
+	[Tags]    smoke    PointingComponent
+	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain IDL Reserved Word    ${output}
+
+Validate PointingComponent Telemetry EFDB_Name Values Do Not Use MySQL Reserved Words
+	[Documentation]    Validate the PointingComponent Telemetry <EFDB_Name> tags do not contain MySQL Reserved Words.
+	[Tags]    smoke    PointingComponent    TSS-3370
+	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain MySQL Reserved Word    ${output}
 

@@ -188,6 +188,12 @@ Validate Hexapod Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   Hexapod_Telemetry.xml - valid
 
+Validate HVAC Telemetry XML file
+	[Tags]    smoke    HVAC
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/HVAC/HVAC_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   HVAC_Telemetry.xml - valid
+
 Validate LinearStage Telemetry XML file
 	[Tags]    smoke    LinearStage
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/LinearStage/LinearStage_Telemetry.xml
@@ -277,6 +283,12 @@ Validate OCS Telemetry XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/OCS/OCS_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   OCS_Telemetry.xml - valid
+
+Validate PointingComponent Telemetry XML file
+	[Tags]    smoke    PointingComponent
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   PointingComponent_Telemetry.xml - valid
 
 Validate PromptProcessing Telemetry XML file
 	[Tags]    smoke    PromptProcessing
