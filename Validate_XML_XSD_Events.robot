@@ -86,6 +86,12 @@ Validate ATPneumatics Events XML file
 	Log    ${output}
 	Should Contain    ${output}   ATPneumatics_Events.xml - valid
 
+Validate ATPtg Events XML file
+	[Tags]    smoke    ATPtg
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/ATPtg/ATPtg_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   ATPtg_Events.xml - valid
+
 Validate ATSpectrograph Events XML file
 	[Tags]    smoke    ATSpectrograph
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/ATSpectrograph/ATSpectrograph_Events.xml
@@ -283,6 +289,12 @@ Validate MTOFC Events XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/MTOFC/MTOFC_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   MTOFC_Events.xml - valid
+
+Validate MTPtg Events XML file
+	[Tags]    smoke    MTPtg
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/MTPtg/MTPtg_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   MTPtg_Events.xml - valid
 
 Validate MTTCS Events XML file
 	[Tags]    smoke    MTTCS

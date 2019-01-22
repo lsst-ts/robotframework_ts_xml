@@ -62,6 +62,12 @@ Validate ATPneumatics Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   ATPneumatics_Commands.xml - valid
 
+Validate ATPtg Commands XML file
+	[Tags]    smoke    ATPtg
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/ATPtg/ATPtg_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   ATPtg_Commands.xml - valid
+
 Validate ATSpectrograph Commands XML file
 	[Tags]    smoke    ATSpectrograph
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/ATSpectrograph/ATSpectrograph_Commands.xml
@@ -199,6 +205,12 @@ Validate MTOFC Commands XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/MTOFC/MTOFC_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   MTOFC_Commands.xml - valid
+
+Validate MTPtg Commands XML file
+	[Tags]    smoke    MTPtg
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/MTPtg/MTPtg_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   MTPtg_Commands.xml - valid
 
 Validate MTTCS Commands XML file
 	[Tags]    smoke    MTTCS
