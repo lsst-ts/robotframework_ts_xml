@@ -666,12 +666,40 @@ Validate LinearStage Commands
 	Log    ${output}
 	Should Contain    ${output}   LinearStage_Commands.xml - valid
 
+Validate LinearStage Events
+	[Documentation]    Validate the LinearStage Events XML file.
+	[Tags]    smoke    LinearStage
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   LinearStage_Events.xml - valid
+
 Validate LinearStage Telemetry
 	[Documentation]    Validate the LinearStage Telemetry XML file.
 	[Tags]    smoke    LinearStage
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/LinearStage/LinearStage_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   LinearStage_Telemetry.xml - valid
+
+Validate MTAOS Commands
+	[Documentation]    Validate the MTAOS Commands XML file.
+	[Tags]    smoke    MTAOS
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   MTAOS_Commands.xml - valid
+
+Validate MTAOS Events
+	[Documentation]    Validate the MTAOS Events XML file.
+	[Tags]    smoke    MTAOS
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   MTAOS_Events.xml - valid
+
+Validate MTAOS Telemetry
+	[Documentation]    Validate the MTAOS Telemetry XML file.
+	[Tags]    smoke    MTAOS
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTAOS/MTAOS_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   MTAOS_Telemetry.xml - valid
 
 Validate MTArchiver Events
 	[Documentation]    Validate the MTArchiver Events XML file.

@@ -170,6 +170,12 @@ Validate LinearStage Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   LinearStage_Commands.xml - valid
 
+Validate MTAOS Commands XML file
+	[Tags]    smoke    MTAOS
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   MTAOS_Commands.xml - valid
+
 Validate MTCamera Commands XML file
 	[Tags]    smoke    MTCamera
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/MTCamera/MTCamera_Commands.xml
@@ -243,7 +249,7 @@ Validate Rotator Commands XML file
 	Should Contain    ${output}   Rotator_Commands.xml - valid
 
 Validate Script Commands XML file
-	[Tags]    smoke    Script    TSS-3331
+	[Tags]    smoke    Script
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/Script/Script_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   Script_Commands.xml - valid

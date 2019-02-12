@@ -597,6 +597,16 @@ Validate HVAC_Commands.xml Does Not Contain Generic Commands
 	:FOR    ${generic}    IN    @{GenericCommands}
 	\    Run Keyword And Continue On Failure    Test Commands    ${commands}    HVAC_command_${generic}
 
+Validate LinearStage_Events.xml Does Not Contain Generic Events
+	[Documentation]    Validate the LinearStage_Events.xml does not contain Generic Events.
+	[Tags]    smoke    
+	Comment    Get the CSC Events.
+	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
+	Log    ${events}
+	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    LinearStage_logevent_${item}
+	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    LinearStage_logevent_${item}
+
 Validate LinearStage_Commands.xml Does Not Contain Generic Commands
 	[Documentation]    Validate the LinearStage_Commands.xml does not contain Generic Commands.
 	[Tags]    smoke    
@@ -604,6 +614,24 @@ Validate LinearStage_Commands.xml Does Not Contain Generic Commands
 	${commands}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml
 	:FOR    ${generic}    IN    @{GenericCommands}
 	\    Run Keyword And Continue On Failure    Test Commands    ${commands}    LinearStage_command_${generic}
+
+Validate MTAOS_Events.xml Does Not Contain Generic Events
+	[Documentation]    Validate the MTAOS_Events.xml does not contain Generic Events.
+	[Tags]    smoke    
+	Comment    Get the CSC Events.
+	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	Log    ${events}
+	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    MTAOS_logevent_${item}
+	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    MTAOS_logevent_${item}
+
+Validate MTAOS_Commands.xml Does Not Contain Generic Commands
+	[Documentation]    Validate the MTAOS_Commands.xml does not contain Generic Commands.
+	[Tags]    smoke    
+	Comment    Get the CSC Commands.
+	${commands}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	:FOR    ${generic}    IN    @{GenericCommands}
+	\    Run Keyword And Continue On Failure    Test Commands    ${commands}    MTAOS_command_${generic}
 
 Validate MTArchiver_Events.xml Does Not Contain Generic Events
 	[Documentation]    Validate the MTArchiver_Events.xml does not contain Generic Events.

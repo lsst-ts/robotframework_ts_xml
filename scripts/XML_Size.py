@@ -54,20 +54,8 @@ for subsystem in xml_common.subsystems:
 			
 			# Mark test cases with Jira tickets
 			byte_skipped=col_skipped=""
-			if subsystem == "MTM1M3" and topic.decode("utf-8") == "MTM1M3_command_runMirrorForceProfile":
-				col_skipped="	TSS-2989"
-			elif subsystem == "MTM1M3" and topic.decode("utf-8") == "MTM1M3_logevent_forceActuatorInfo":
-				col_skipped="	TSS-2990"
-			elif subsystem == "MTM1M3" and topic.decode("utf-8") == "MTM1M3_logevent_forceSetpointWarning":
-				col_skipped="	TSS-2991"
-			elif subsystem == "MTM1M3" and topic.decode("utf-8") == "MTM1M3_logevent_forceActuatorWarning":
-				col_skipped="	TSS-2992"
-			elif subsystem == "MTCamera" and topic.decode("utf-8") == "MTCamera_logevent_imageReadoutParameters":
-				col_skipped="	TSS-119    #TSEIA-119"
-			elif subsystem == "ScriptQueue" and topic.decode("utf-8") == "ScriptQueue_command_stopScripts":
-				col_skipped="	TSS-3326"
-			elif subsystem == "ScriptQueue" and topic.decode("utf-8") == "ScriptQueue_logevent_queue":
-				col_skipped="	TSS-3326"
+			if subsystem == "MTCamera" and topic.decode("utf-8") == "MTCamera_logevent_imageReadoutParameters":
+				col_skipped="	TSEIA-119"
 			else:
 				byte_skipped=""
 				col_skipped=""

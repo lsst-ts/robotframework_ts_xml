@@ -38,18 +38,10 @@ for subsystem in xml_common.subsystems:
 		skipped="skipped"
 	elif subsystem == "Rotator":
 		skipped="skipped"
-	elif subsystem == "OCS":
-		skipped="TSS-1792"
-	elif subsystem == "Sequencer":
-		skipped="TSS-1793"
 	elif subsystem == "ATTCS":
-		skipped="TSS-2978"
+		skipped="DM-17353"
 	elif subsystem == "MTTCS":
-		skipped="TSS-1795"
-	elif subsystem == "Dome":
-		skipped="TSS-1778"
-	elif subsystem == "EFD":
-		skipped="TSS-2985"
+		skipped="DM-17357"
 	else:
 		skipped=""
 
