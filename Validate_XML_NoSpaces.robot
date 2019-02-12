@@ -2556,6 +2556,34 @@ Validate LinearStage Commands <EFDB_Name> element
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
+Validate LinearStage Events <Subsystem> element
+	[Documentation]    Validate the LinearStage Events <Subsystem> elements do not contain embedded spaces.
+	[Tags]    smoke    LinearStage
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Subsystem" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate LinearStage Events <EFDB_Topic> element
+	[Documentation]    Validate the LinearStage Events <EFDB_Topic> elements do not contain embedded spaces.
+	[Tags]    smoke    LinearStage
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate LinearStage Events <Alias> element
+	[Documentation]    Validate the LinearStage Events <Alias> elements do not contain embedded spaces.
+	[Tags]    smoke    LinearStage
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate LinearStage Events <EFDB_Name> element
+	[Documentation]    Validate the LinearStage Events <EFDB_Name> elements do not contain embedded spaces.
+	[Tags]    smoke    LinearStage
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
 Validate LinearStage Telemetry <Subsystem> element
 	[Documentation]    Validate the LinearStage Telemetry <Subsystem> elements do not contain embedded spaces.
 	[Tags]    smoke    LinearStage
@@ -2581,6 +2609,90 @@ Validate LinearStage Telemetry <EFDB_Name> element
 	[Documentation]    Validate the LinearStage Telemetry <EFDB_Name> elements do not contain embedded spaces.
 	[Tags]    smoke    LinearStage
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate MTAOS Commands <Subsystem> element
+	[Documentation]    Validate the MTAOS Commands <Subsystem> elements do not contain embedded spaces.
+	[Tags]    smoke    MTAOS
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Subsystem" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate MTAOS Commands <EFDB_Topic> element
+	[Documentation]    Validate the MTAOS Commands <EFDB_Topic> elements do not contain embedded spaces.
+	[Tags]    smoke    MTAOS
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate MTAOS Commands <Alias> element
+	[Documentation]    Validate the MTAOS Commands <Alias> elements do not contain embedded spaces.
+	[Tags]    smoke    MTAOS
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate MTAOS Commands <EFDB_Name> element
+	[Documentation]    Validate the MTAOS Commands <EFDB_Name> elements do not contain embedded spaces.
+	[Tags]    smoke    MTAOS
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate MTAOS Events <Subsystem> element
+	[Documentation]    Validate the MTAOS Events <Subsystem> elements do not contain embedded spaces.
+	[Tags]    smoke    MTAOS
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Subsystem" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate MTAOS Events <EFDB_Topic> element
+	[Documentation]    Validate the MTAOS Events <EFDB_Topic> elements do not contain embedded spaces.
+	[Tags]    smoke    MTAOS
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate MTAOS Events <Alias> element
+	[Documentation]    Validate the MTAOS Events <Alias> elements do not contain embedded spaces.
+	[Tags]    smoke    MTAOS
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate MTAOS Events <EFDB_Name> element
+	[Documentation]    Validate the MTAOS Events <EFDB_Name> elements do not contain embedded spaces.
+	[Tags]    smoke    MTAOS
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate MTAOS Telemetry <Subsystem> element
+	[Documentation]    Validate the MTAOS Telemetry <Subsystem> elements do not contain embedded spaces.
+	[Tags]    smoke    MTAOS
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Subsystem" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate MTAOS Telemetry <EFDB_Topic> element
+	[Documentation]    Validate the MTAOS Telemetry <EFDB_Topic> elements do not contain embedded spaces.
+	[Tags]    smoke    MTAOS
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/EFDB_Topic" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate MTAOS Telemetry <Alias> element
+	[Documentation]    Validate the MTAOS Telemetry <Alias> elements do not contain embedded spaces.
+	[Tags]    smoke    MTAOS
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate MTAOS Telemetry <EFDB_Name> element
+	[Documentation]    Validate the MTAOS Telemetry <EFDB_Name> elements do not contain embedded spaces.
+	[Tags]    smoke    MTAOS
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 

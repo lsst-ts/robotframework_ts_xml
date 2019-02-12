@@ -2897,8 +2897,8 @@ Validate ATDome Command ATDome_command_moveAzimuth Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATDome Command ATDome_command_moveShutterDropoutDoor Topic Byte Size
-	[Documentation]    Validate the ATDome_command_moveShutterDropoutDoor topic is less than 65536 bytes in total.
+Validate ATDome Command ATDome_command_closeShutter Topic Byte Size
+	[Documentation]    Validate the ATDome_command_closeShutter topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -2922,8 +2922,8 @@ Validate ATDome Command ATDome_command_moveShutterDropoutDoor Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATDome Command ATDome_command_moveShutterDropoutDoor Topic Columns
-	[Documentation]    Validate the ATDome_command_moveShutterDropoutDoor topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATDome Command ATDome_command_closeShutter Topic Columns
+	[Documentation]    Validate the ATDome_command_closeShutter topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -2935,8 +2935,8 @@ Validate ATDome Command ATDome_command_moveShutterDropoutDoor Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATDome Command ATDome_command_closeShutter Topic Byte Size
-	[Documentation]    Validate the ATDome_command_closeShutter topic is less than 65536 bytes in total.
+Validate ATDome Command ATDome_command_openShutter Topic Byte Size
+	[Documentation]    Validate the ATDome_command_openShutter topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -2960,8 +2960,8 @@ Validate ATDome Command ATDome_command_closeShutter Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATDome Command ATDome_command_closeShutter Topic Columns
-	[Documentation]    Validate the ATDome_command_closeShutter topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATDome Command ATDome_command_openShutter Topic Columns
+	[Documentation]    Validate the ATDome_command_openShutter topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -2973,8 +2973,8 @@ Validate ATDome Command ATDome_command_closeShutter Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATDome Command ATDome_command_stopMotionAllAxis Topic Byte Size
-	[Documentation]    Validate the ATDome_command_stopMotionAllAxis topic is less than 65536 bytes in total.
+Validate ATDome Command ATDome_command_stopMotion Topic Byte Size
+	[Documentation]    Validate the ATDome_command_stopMotion topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -2998,8 +2998,8 @@ Validate ATDome Command ATDome_command_stopMotionAllAxis Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATDome Command ATDome_command_stopMotionAllAxis Topic Columns
-	[Documentation]    Validate the ATDome_command_stopMotionAllAxis topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATDome Command ATDome_command_stopMotion Topic Columns
+	[Documentation]    Validate the ATDome_command_stopMotion topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3011,8 +3011,8 @@ Validate ATDome Command ATDome_command_stopMotionAllAxis Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATDome Command ATDome_command_stopShutter Topic Byte Size
-	[Documentation]    Validate the ATDome_command_stopShutter topic is less than 65536 bytes in total.
+Validate ATDome Command ATDome_command_homeAzimuth Topic Byte Size
+	[Documentation]    Validate the ATDome_command_homeAzimuth topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3036,8 +3036,8 @@ Validate ATDome Command ATDome_command_stopShutter Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATDome Command ATDome_command_stopShutter Topic Columns
-	[Documentation]    Validate the ATDome_command_stopShutter topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATDome Command ATDome_command_homeAzimuth Topic Columns
+	[Documentation]    Validate the ATDome_command_homeAzimuth topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3049,8 +3049,8 @@ Validate ATDome Command ATDome_command_stopShutter Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATDome Command ATDome_command_openShutter Topic Byte Size
-	[Documentation]    Validate the ATDome_command_openShutter topic is less than 65536 bytes in total.
+Validate ATDome Command ATDome_command_moveShutterDropoutDoor Topic Byte Size
+	[Documentation]    Validate the ATDome_command_moveShutterDropoutDoor topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3074,8 +3074,8 @@ Validate ATDome Command ATDome_command_openShutter Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATDome Command ATDome_command_openShutter Topic Columns
-	[Documentation]    Validate the ATDome_command_openShutter topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATDome Command ATDome_command_moveShutterDropoutDoor Topic Columns
+	[Documentation]    Validate the ATDome_command_moveShutterDropoutDoor topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3125,46 +3125,8 @@ Validate ATDome Command ATDome_command_moveShutterMainDoor Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATDome Command ATDome_command_stopAzimuth Topic Byte Size
-	[Documentation]    Validate the ATDome_command_stopAzimuth topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATDome
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[8]/item)" -n ${folder}/sal_interfaces/ATDome/ATDome_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[8]/item/Count" -v . -n ${folder}/sal_interfaces/ATDome/ATDome_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[8]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATDome/ATDome_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate ATDome Command ATDome_command_stopAzimuth Topic Columns
-	[Documentation]    Validate the ATDome_command_stopAzimuth topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    ATDome
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[8]/item)" -n ${folder}/sal_interfaces/ATDome/ATDome_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[8]/item/Count" -v . -n ${folder}/sal_interfaces/ATDome/ATDome_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate ATDome Event ATDome_logevent_azimuthState Topic Byte Size
-	[Documentation]    Validate the ATDome_logevent_azimuthState topic is less than 65536 bytes in total.
+Validate ATDome Event ATDome_logevent_heartbeat Topic Byte Size
+	[Documentation]    Validate the ATDome_logevent_heartbeat topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3188,8 +3150,8 @@ Validate ATDome Event ATDome_logevent_azimuthState Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATDome Event ATDome_logevent_azimuthState Topic Columns
-	[Documentation]    Validate the ATDome_logevent_azimuthState topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATDome Event ATDome_logevent_heartbeat Topic Columns
+	[Documentation]    Validate the ATDome_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3201,8 +3163,8 @@ Validate ATDome Event ATDome_logevent_azimuthState Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATDome Event ATDome_logevent_internalCommand Topic Byte Size
-	[Documentation]    Validate the ATDome_logevent_internalCommand topic is less than 65536 bytes in total.
+Validate ATDome Event ATDome_logevent_azimuthState Topic Byte Size
+	[Documentation]    Validate the ATDome_logevent_azimuthState topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3226,8 +3188,8 @@ Validate ATDome Event ATDome_logevent_internalCommand Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATDome Event ATDome_logevent_internalCommand Topic Columns
-	[Documentation]    Validate the ATDome_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATDome Event ATDome_logevent_azimuthState Topic Columns
+	[Documentation]    Validate the ATDome_logevent_azimuthState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3239,8 +3201,8 @@ Validate ATDome Event ATDome_logevent_internalCommand Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATDome Event ATDome_logevent_heartbeat Topic Byte Size
-	[Documentation]    Validate the ATDome_logevent_heartbeat topic is less than 65536 bytes in total.
+Validate ATDome Event ATDome_logevent_dropoutDoorState Topic Byte Size
+	[Documentation]    Validate the ATDome_logevent_dropoutDoorState topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3264,8 +3226,8 @@ Validate ATDome Event ATDome_logevent_heartbeat Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATDome Event ATDome_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the ATDome_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATDome Event ATDome_logevent_dropoutDoorState Topic Columns
+	[Documentation]    Validate the ATDome_logevent_dropoutDoorState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3277,8 +3239,8 @@ Validate ATDome Event ATDome_logevent_heartbeat Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATDome Event ATDome_logevent_loopTimeOutOfRange Topic Byte Size
-	[Documentation]    Validate the ATDome_logevent_loopTimeOutOfRange topic is less than 65536 bytes in total.
+Validate ATDome Event ATDome_logevent_mainDoorState Topic Byte Size
+	[Documentation]    Validate the ATDome_logevent_mainDoorState topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3302,8 +3264,8 @@ Validate ATDome Event ATDome_logevent_loopTimeOutOfRange Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATDome Event ATDome_logevent_loopTimeOutOfRange Topic Columns
-	[Documentation]    Validate the ATDome_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATDome Event ATDome_logevent_mainDoorState Topic Columns
+	[Documentation]    Validate the ATDome_logevent_mainDoorState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3315,8 +3277,8 @@ Validate ATDome Event ATDome_logevent_loopTimeOutOfRange Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATDome Event ATDome_logevent_rejectedCommand Topic Byte Size
-	[Documentation]    Validate the ATDome_logevent_rejectedCommand topic is less than 65536 bytes in total.
+Validate ATDome Event ATDome_logevent_azimuthInPosition Topic Byte Size
+	[Documentation]    Validate the ATDome_logevent_azimuthInPosition topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3340,8 +3302,8 @@ Validate ATDome Event ATDome_logevent_rejectedCommand Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATDome Event ATDome_logevent_rejectedCommand Topic Columns
-	[Documentation]    Validate the ATDome_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATDome Event ATDome_logevent_azimuthInPosition Topic Columns
+	[Documentation]    Validate the ATDome_logevent_azimuthInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3353,8 +3315,8 @@ Validate ATDome Event ATDome_logevent_rejectedCommand Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATDome Event ATDome_logevent_allAxisInPosition Topic Byte Size
-	[Documentation]    Validate the ATDome_logevent_allAxisInPosition topic is less than 65536 bytes in total.
+Validate ATDome Event ATDome_logevent_shutterInPosition Topic Byte Size
+	[Documentation]    Validate the ATDome_logevent_shutterInPosition topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3378,8 +3340,8 @@ Validate ATDome Event ATDome_logevent_allAxisInPosition Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATDome Event ATDome_logevent_allAxisInPosition Topic Columns
-	[Documentation]    Validate the ATDome_logevent_allAxisInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATDome Event ATDome_logevent_shutterInPosition Topic Columns
+	[Documentation]    Validate the ATDome_logevent_shutterInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3391,8 +3353,8 @@ Validate ATDome Event ATDome_logevent_allAxisInPosition Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATDome Event ATDome_logevent_emergencyStop Topic Byte Size
-	[Documentation]    Validate the ATDome_logevent_emergencyStop topic is less than 65536 bytes in total.
+Validate ATDome Event ATDome_logevent_allAxesInPosition Topic Byte Size
+	[Documentation]    Validate the ATDome_logevent_allAxesInPosition topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3416,8 +3378,8 @@ Validate ATDome Event ATDome_logevent_emergencyStop Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATDome Event ATDome_logevent_emergencyStop Topic Columns
-	[Documentation]    Validate the ATDome_logevent_emergencyStop topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATDome Event ATDome_logevent_allAxesInPosition Topic Columns
+	[Documentation]    Validate the ATDome_logevent_allAxesInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3429,8 +3391,8 @@ Validate ATDome Event ATDome_logevent_emergencyStop Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATDome Event ATDome_logevent_internalStatus Topic Byte Size
-	[Documentation]    Validate the ATDome_logevent_internalStatus topic is less than 65536 bytes in total.
+Validate ATDome Event ATDome_logevent_emergencyStop Topic Byte Size
+	[Documentation]    Validate the ATDome_logevent_emergencyStop topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3454,8 +3416,8 @@ Validate ATDome Event ATDome_logevent_internalStatus Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATDome Event ATDome_logevent_internalStatus Topic Columns
-	[Documentation]    Validate the ATDome_logevent_internalStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATDome Event ATDome_logevent_emergencyStop Topic Columns
+	[Documentation]    Validate the ATDome_logevent_emergencyStop topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3505,8 +3467,8 @@ Validate ATDome Event ATDome_logevent_scbLink Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATDome Event ATDome_logevent_shutterInPosition Topic Byte Size
-	[Documentation]    Validate the ATDome_logevent_shutterInPosition topic is less than 65536 bytes in total.
+Validate ATDome Event ATDome_logevent_settingsAppliedDomeController Topic Byte Size
+	[Documentation]    Validate the ATDome_logevent_settingsAppliedDomeController topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3530,8 +3492,8 @@ Validate ATDome Event ATDome_logevent_shutterInPosition Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATDome Event ATDome_logevent_shutterInPosition Topic Columns
-	[Documentation]    Validate the ATDome_logevent_shutterInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATDome Event ATDome_logevent_settingsAppliedDomeController Topic Columns
+	[Documentation]    Validate the ATDome_logevent_settingsAppliedDomeController topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3543,8 +3505,8 @@ Validate ATDome Event ATDome_logevent_shutterInPosition Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATDome Event ATDome_logevent_azimuthInPosition Topic Byte Size
-	[Documentation]    Validate the ATDome_logevent_azimuthInPosition topic is less than 65536 bytes in total.
+Validate ATDome Event ATDome_logevent_settingsAppliedDomeTcp Topic Byte Size
+	[Documentation]    Validate the ATDome_logevent_settingsAppliedDomeTcp topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3568,8 +3530,8 @@ Validate ATDome Event ATDome_logevent_azimuthInPosition Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATDome Event ATDome_logevent_azimuthInPosition Topic Columns
-	[Documentation]    Validate the ATDome_logevent_azimuthInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATDome Event ATDome_logevent_settingsAppliedDomeTcp Topic Columns
+	[Documentation]    Validate the ATDome_logevent_settingsAppliedDomeTcp topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3581,236 +3543,8 @@ Validate ATDome Event ATDome_logevent_azimuthInPosition Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATDome Event ATDome_logevent_azimuthMovingDirection Topic Byte Size
-	[Documentation]    Validate the ATDome_logevent_azimuthMovingDirection topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATDome
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[12]/item)" -n ${folder}/sal_interfaces/ATDome/ATDome_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[12]/item/Count" -v . -n ${folder}/sal_interfaces/ATDome/ATDome_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[12]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATDome/ATDome_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate ATDome Event ATDome_logevent_azimuthMovingDirection Topic Columns
-	[Documentation]    Validate the ATDome_logevent_azimuthMovingDirection topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    ATDome
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[12]/item)" -n ${folder}/sal_interfaces/ATDome/ATDome_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[12]/item/Count" -v . -n ${folder}/sal_interfaces/ATDome/ATDome_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate ATDome Event ATDome_logevent_settingsAppliedDomeController Topic Byte Size
-	[Documentation]    Validate the ATDome_logevent_settingsAppliedDomeController topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATDome
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[13]/item)" -n ${folder}/sal_interfaces/ATDome/ATDome_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[13]/item/Count" -v . -n ${folder}/sal_interfaces/ATDome/ATDome_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[13]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATDome/ATDome_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate ATDome Event ATDome_logevent_settingsAppliedDomeController Topic Columns
-	[Documentation]    Validate the ATDome_logevent_settingsAppliedDomeController topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    ATDome
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[13]/item)" -n ${folder}/sal_interfaces/ATDome/ATDome_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[13]/item/Count" -v . -n ${folder}/sal_interfaces/ATDome/ATDome_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate ATDome Event ATDome_logevent_dropoutDoorState Topic Byte Size
-	[Documentation]    Validate the ATDome_logevent_dropoutDoorState topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATDome
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[14]/item)" -n ${folder}/sal_interfaces/ATDome/ATDome_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[14]/item/Count" -v . -n ${folder}/sal_interfaces/ATDome/ATDome_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[14]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATDome/ATDome_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate ATDome Event ATDome_logevent_dropoutDoorState Topic Columns
-	[Documentation]    Validate the ATDome_logevent_dropoutDoorState topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    ATDome
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[14]/item)" -n ${folder}/sal_interfaces/ATDome/ATDome_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[14]/item/Count" -v . -n ${folder}/sal_interfaces/ATDome/ATDome_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate ATDome Event ATDome_logevent_mainDoorState Topic Byte Size
-	[Documentation]    Validate the ATDome_logevent_mainDoorState topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATDome
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[15]/item)" -n ${folder}/sal_interfaces/ATDome/ATDome_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[15]/item/Count" -v . -n ${folder}/sal_interfaces/ATDome/ATDome_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[15]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATDome/ATDome_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate ATDome Event ATDome_logevent_mainDoorState Topic Columns
-	[Documentation]    Validate the ATDome_logevent_mainDoorState topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    ATDome
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[15]/item)" -n ${folder}/sal_interfaces/ATDome/ATDome_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[15]/item/Count" -v . -n ${folder}/sal_interfaces/ATDome/ATDome_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate ATDome Event ATDome_logevent_settingsAppliedDomeTcp Topic Byte Size
-	[Documentation]    Validate the ATDome_logevent_settingsAppliedDomeTcp topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATDome
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[16]/item)" -n ${folder}/sal_interfaces/ATDome/ATDome_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[16]/item/Count" -v . -n ${folder}/sal_interfaces/ATDome/ATDome_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[16]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATDome/ATDome_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate ATDome Event ATDome_logevent_settingsAppliedDomeTcp Topic Columns
-	[Documentation]    Validate the ATDome_logevent_settingsAppliedDomeTcp topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    ATDome
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[16]/item)" -n ${folder}/sal_interfaces/ATDome/ATDome_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[16]/item/Count" -v . -n ${folder}/sal_interfaces/ATDome/ATDome_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate ATDome Event ATDome_logevent_detailedState Topic Byte Size
-	[Documentation]    Validate the ATDome_logevent_detailedState topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATDome
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[17]/item)" -n ${folder}/sal_interfaces/ATDome/ATDome_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[17]/item/Count" -v . -n ${folder}/sal_interfaces/ATDome/ATDome_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[17]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATDome/ATDome_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate ATDome Event ATDome_logevent_detailedState Topic Columns
-	[Documentation]    Validate the ATDome_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    ATDome
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[17]/item)" -n ${folder}/sal_interfaces/ATDome/ATDome_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[17]/item/Count" -v . -n ${folder}/sal_interfaces/ATDome/ATDome_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate ATDome Telemetry ATDome_timestamp Topic Byte Size
-	[Documentation]    Validate the ATDome_timestamp topic is less than 65536 bytes in total.
+Validate ATDome Telemetry ATDome_position Topic Byte Size
+	[Documentation]    Validate the ATDome_position topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3834,8 +3568,8 @@ Validate ATDome Telemetry ATDome_timestamp Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATDome Telemetry ATDome_timestamp Topic Columns
-	[Documentation]    Validate the ATDome_timestamp topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATDome Telemetry ATDome_position Topic Columns
+	[Documentation]    Validate the ATDome_position topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3847,84 +3581,8 @@ Validate ATDome Telemetry ATDome_timestamp Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATDome Telemetry ATDome_loopTime Topic Byte Size
-	[Documentation]    Validate the ATDome_loopTime topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATDome
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/ATDome/ATDome_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[2]/item/Count" -v . -n ${folder}/sal_interfaces/ATDome/ATDome_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATDome/ATDome_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate ATDome Telemetry ATDome_loopTime Topic Columns
-	[Documentation]    Validate the ATDome_loopTime topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    ATDome
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/ATDome/ATDome_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[2]/item/Count" -v . -n ${folder}/sal_interfaces/ATDome/ATDome_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate ATDome Telemetry ATDome_position Topic Byte Size
-	[Documentation]    Validate the ATDome_position topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATDome
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[3]/item)" -n ${folder}/sal_interfaces/ATDome/ATDome_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[3]/item/Count" -v . -n ${folder}/sal_interfaces/ATDome/ATDome_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[3]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATDome/ATDome_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate ATDome Telemetry ATDome_position Topic Columns
-	[Documentation]    Validate the ATDome_position topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    ATDome
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[3]/item)" -n ${folder}/sal_interfaces/ATDome/ATDome_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[3]/item/Count" -v . -n ${folder}/sal_interfaces/ATDome/ATDome_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate ATDomeTrajectory Event ATDomeTrajectory_logevent_detailedState Topic Byte Size
-	[Documentation]    Validate the ATDomeTrajectory_logevent_detailedState topic is less than 65536 bytes in total.
+Validate ATDomeTrajectory Event ATDomeTrajectory_logevent_heartbeat Topic Byte Size
+	[Documentation]    Validate the ATDomeTrajectory_logevent_heartbeat topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATDomeTrajectory
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3948,8 +3606,8 @@ Validate ATDomeTrajectory Event ATDomeTrajectory_logevent_detailedState Topic By
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATDomeTrajectory Event ATDomeTrajectory_logevent_detailedState Topic Columns
-	[Documentation]    Validate the ATDomeTrajectory_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATDomeTrajectory Event ATDomeTrajectory_logevent_heartbeat Topic Columns
+	[Documentation]    Validate the ATDomeTrajectory_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATDomeTrajectory
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3961,8 +3619,8 @@ Validate ATDomeTrajectory Event ATDomeTrajectory_logevent_detailedState Topic Co
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATDomeTrajectory Event ATDomeTrajectory_logevent_heartbeat Topic Byte Size
-	[Documentation]    Validate the ATDomeTrajectory_logevent_heartbeat topic is less than 65536 bytes in total.
+Validate ATDomeTrajectory Event ATDomeTrajectory_logevent_settingsApplied Topic Byte Size
+	[Documentation]    Validate the ATDomeTrajectory_logevent_settingsApplied topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATDomeTrajectory
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3986,8 +3644,8 @@ Validate ATDomeTrajectory Event ATDomeTrajectory_logevent_heartbeat Topic Byte S
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATDomeTrajectory Event ATDomeTrajectory_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the ATDomeTrajectory_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATDomeTrajectory Event ATDomeTrajectory_logevent_settingsApplied Topic Columns
+	[Documentation]    Validate the ATDomeTrajectory_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATDomeTrajectory
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4455,8 +4113,8 @@ Validate ATHexapod Command ATHexapod_command_moveToPosition Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATHexapod Command ATHexapod_command_setMaxSpeeds Topic Byte Size
-	[Documentation]    Validate the ATHexapod_command_setMaxSpeeds topic is less than 65536 bytes in total.
+Validate ATHexapod Command ATHexapod_command_setMaxSystemSpeeds Topic Byte Size
+	[Documentation]    Validate the ATHexapod_command_setMaxSystemSpeeds topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATHexapod
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4480,8 +4138,8 @@ Validate ATHexapod Command ATHexapod_command_setMaxSpeeds Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATHexapod Command ATHexapod_command_setMaxSpeeds Topic Columns
-	[Documentation]    Validate the ATHexapod_command_setMaxSpeeds topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATHexapod Command ATHexapod_command_setMaxSystemSpeeds Topic Columns
+	[Documentation]    Validate the ATHexapod_command_setMaxSystemSpeeds topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATHexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4683,8 +4341,8 @@ Validate ATHexapod Event ATHexapod_logevent_heartbeat Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATHexapod Event ATHexapod_logevent_loopTimeOutOfRange Topic Byte Size
-	[Documentation]    Validate the ATHexapod_logevent_loopTimeOutOfRange topic is less than 65536 bytes in total.
+Validate ATHexapod Event ATHexapod_logevent_detailedState Topic Byte Size
+	[Documentation]    Validate the ATHexapod_logevent_detailedState topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATHexapod
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4708,8 +4366,8 @@ Validate ATHexapod Event ATHexapod_logevent_loopTimeOutOfRange Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATHexapod Event ATHexapod_logevent_loopTimeOutOfRange Topic Columns
-	[Documentation]    Validate the ATHexapod_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATHexapod Event ATHexapod_logevent_detailedState Topic Columns
+	[Documentation]    Validate the ATHexapod_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATHexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4721,8 +4379,8 @@ Validate ATHexapod Event ATHexapod_logevent_loopTimeOutOfRange Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATHexapod Event ATHexapod_logevent_internalCommand Topic Byte Size
-	[Documentation]    Validate the ATHexapod_logevent_internalCommand topic is less than 65536 bytes in total.
+Validate ATHexapod Event ATHexapod_logevent_settingsAppliedPositionLimits Topic Byte Size
+	[Documentation]    Validate the ATHexapod_logevent_settingsAppliedPositionLimits topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATHexapod
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4746,8 +4404,8 @@ Validate ATHexapod Event ATHexapod_logevent_internalCommand Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATHexapod Event ATHexapod_logevent_internalCommand Topic Columns
-	[Documentation]    Validate the ATHexapod_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATHexapod Event ATHexapod_logevent_settingsAppliedPositionLimits Topic Columns
+	[Documentation]    Validate the ATHexapod_logevent_settingsAppliedPositionLimits topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATHexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4759,8 +4417,8 @@ Validate ATHexapod Event ATHexapod_logevent_internalCommand Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATHexapod Event ATHexapod_logevent_detailedState Topic Byte Size
-	[Documentation]    Validate the ATHexapod_logevent_detailedState topic is less than 65536 bytes in total.
+Validate ATHexapod Event ATHexapod_logevent_settingsAppliedVelocities Topic Byte Size
+	[Documentation]    Validate the ATHexapod_logevent_settingsAppliedVelocities topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATHexapod
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4784,8 +4442,8 @@ Validate ATHexapod Event ATHexapod_logevent_detailedState Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATHexapod Event ATHexapod_logevent_detailedState Topic Columns
-	[Documentation]    Validate the ATHexapod_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATHexapod Event ATHexapod_logevent_settingsAppliedVelocities Topic Columns
+	[Documentation]    Validate the ATHexapod_logevent_settingsAppliedVelocities topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATHexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4797,8 +4455,8 @@ Validate ATHexapod Event ATHexapod_logevent_detailedState Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATHexapod Event ATHexapod_logevent_rejectedCommand Topic Byte Size
-	[Documentation]    Validate the ATHexapod_logevent_rejectedCommand topic is less than 65536 bytes in total.
+Validate ATHexapod Event ATHexapod_logevent_settingsAppliedPivot Topic Byte Size
+	[Documentation]    Validate the ATHexapod_logevent_settingsAppliedPivot topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATHexapod
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4822,8 +4480,8 @@ Validate ATHexapod Event ATHexapod_logevent_rejectedCommand Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATHexapod Event ATHexapod_logevent_rejectedCommand Topic Columns
-	[Documentation]    Validate the ATHexapod_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATHexapod Event ATHexapod_logevent_settingsAppliedPivot Topic Columns
+	[Documentation]    Validate the ATHexapod_logevent_settingsAppliedPivot topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATHexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4835,8 +4493,8 @@ Validate ATHexapod Event ATHexapod_logevent_rejectedCommand Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATHexapod Event ATHexapod_logevent_settingsAppliedPositions Topic Byte Size
-	[Documentation]    Validate the ATHexapod_logevent_settingsAppliedPositions topic is less than 65536 bytes in total.
+Validate ATHexapod Event ATHexapod_logevent_positionUpdate Topic Byte Size
+	[Documentation]    Validate the ATHexapod_logevent_positionUpdate topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATHexapod
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4860,8 +4518,8 @@ Validate ATHexapod Event ATHexapod_logevent_settingsAppliedPositions Topic Byte 
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATHexapod Event ATHexapod_logevent_settingsAppliedPositions Topic Columns
-	[Documentation]    Validate the ATHexapod_logevent_settingsAppliedPositions topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATHexapod Event ATHexapod_logevent_positionUpdate Topic Columns
+	[Documentation]    Validate the ATHexapod_logevent_positionUpdate topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATHexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4873,8 +4531,8 @@ Validate ATHexapod Event ATHexapod_logevent_settingsAppliedPositions Topic Colum
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATHexapod Event ATHexapod_logevent_deviceError Topic Byte Size
-	[Documentation]    Validate the ATHexapod_logevent_deviceError topic is less than 65536 bytes in total.
+Validate ATHexapod Event ATHexapod_logevent_settingsAppliedTcp Topic Byte Size
+	[Documentation]    Validate the ATHexapod_logevent_settingsAppliedTcp topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATHexapod
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4898,8 +4556,8 @@ Validate ATHexapod Event ATHexapod_logevent_deviceError Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATHexapod Event ATHexapod_logevent_deviceError Topic Columns
-	[Documentation]    Validate the ATHexapod_logevent_deviceError topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATHexapod Event ATHexapod_logevent_settingsAppliedTcp Topic Columns
+	[Documentation]    Validate the ATHexapod_logevent_settingsAppliedTcp topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATHexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4911,8 +4569,8 @@ Validate ATHexapod Event ATHexapod_logevent_deviceError Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATHexapod Event ATHexapod_logevent_settingsAppliedTcp Topic Byte Size
-	[Documentation]    Validate the ATHexapod_logevent_settingsAppliedTcp topic is less than 65536 bytes in total.
+Validate ATHexapod Event ATHexapod_logevent_readyForCommand Topic Byte Size
+	[Documentation]    Validate the ATHexapod_logevent_readyForCommand topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATHexapod
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4936,8 +4594,8 @@ Validate ATHexapod Event ATHexapod_logevent_settingsAppliedTcp Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATHexapod Event ATHexapod_logevent_settingsAppliedTcp Topic Columns
-	[Documentation]    Validate the ATHexapod_logevent_settingsAppliedTcp topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATHexapod Event ATHexapod_logevent_readyForCommand Topic Columns
+	[Documentation]    Validate the ATHexapod_logevent_readyForCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATHexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4949,122 +4607,8 @@ Validate ATHexapod Event ATHexapod_logevent_settingsAppliedTcp Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATHexapod Event ATHexapod_logevent_settingsAppliedLoop Topic Byte Size
-	[Documentation]    Validate the ATHexapod_logevent_settingsAppliedLoop topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATHexapod
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/Count" -v . -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate ATHexapod Event ATHexapod_logevent_settingsAppliedLoop Topic Columns
-	[Documentation]    Validate the ATHexapod_logevent_settingsAppliedLoop topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    ATHexapod
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/Count" -v . -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate ATHexapod Event ATHexapod_logevent_settingsAppliedHexapodHeartbeat Topic Byte Size
-	[Documentation]    Validate the ATHexapod_logevent_settingsAppliedHexapodHeartbeat topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATHexapod
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[11]/item/Count" -v . -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[11]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate ATHexapod Event ATHexapod_logevent_settingsAppliedHexapodHeartbeat Topic Columns
-	[Documentation]    Validate the ATHexapod_logevent_settingsAppliedHexapodHeartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    ATHexapod
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[11]/item/Count" -v . -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate ATHexapod Event ATHexapod_logevent_readyForCommand Topic Byte Size
-	[Documentation]    Validate the ATHexapod_logevent_readyForCommand topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATHexapod
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[12]/item)" -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[12]/item/Count" -v . -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[12]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate ATHexapod Event ATHexapod_logevent_readyForCommand Topic Columns
-	[Documentation]    Validate the ATHexapod_logevent_readyForCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    ATHexapod
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[12]/item)" -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[12]/item/Count" -v . -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate ATHexapod Telemetry ATHexapod_actuatorPositions Topic Byte Size
-	[Documentation]    Validate the ATHexapod_actuatorPositions topic is less than 65536 bytes in total.
+Validate ATHexapod Telemetry ATHexapod_positionStatus Topic Byte Size
+	[Documentation]    Validate the ATHexapod_positionStatus topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATHexapod
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5088,127 +4632,13 @@ Validate ATHexapod Telemetry ATHexapod_actuatorPositions Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATHexapod Telemetry ATHexapod_actuatorPositions Topic Columns
-	[Documentation]    Validate the ATHexapod_actuatorPositions topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    ATHexapod
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/Count" -v . -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate ATHexapod Telemetry ATHexapod_positionStatus Topic Byte Size
-	[Documentation]    Validate the ATHexapod_positionStatus topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATHexapod
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[2]/item/Count" -v . -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
 Validate ATHexapod Telemetry ATHexapod_positionStatus Topic Columns
 	[Documentation]    Validate the ATHexapod_positionStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATHexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[2]/item/Count" -v . -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate ATHexapod Telemetry ATHexapod_timestamp Topic Byte Size
-	[Documentation]    Validate the ATHexapod_timestamp topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATHexapod
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[3]/item)" -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[3]/item/Count" -v . -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[3]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate ATHexapod Telemetry ATHexapod_timestamp Topic Columns
-	[Documentation]    Validate the ATHexapod_timestamp topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    ATHexapod
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[3]/item)" -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[3]/item/Count" -v . -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate ATHexapod Telemetry ATHexapod_loopTime Topic Byte Size
-	[Documentation]    Validate the ATHexapod_loopTime topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATHexapod
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[4]/item)" -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[4]/item/Count" -v . -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate ATHexapod Telemetry ATHexapod_loopTime Topic Columns
-	[Documentation]    Validate the ATHexapod_loopTime topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    ATHexapod
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[4]/item)" -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[4]/item/Count" -v . -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Telemetry.xml
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/Count" -v . -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Telemetry.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -5367,8 +4797,8 @@ Validate ATMCS Command ATMCS_command_stopTracking Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_m3State Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_m3State topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_heartbeat Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_heartbeat topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5392,8 +4822,8 @@ Validate ATMCS Event ATMCS_logevent_m3State Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_m3State Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_m3State topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMCS Event ATMCS_logevent_heartbeat Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5405,8 +4835,8 @@ Validate ATMCS Event ATMCS_logevent_m3State Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_elevationInPosition Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_elevationInPosition topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_m3State Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_m3State topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5430,8 +4860,8 @@ Validate ATMCS Event ATMCS_logevent_elevationInPosition Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_elevationInPosition Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_elevationInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMCS Event ATMCS_logevent_m3State Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_m3State topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5443,8 +4873,8 @@ Validate ATMCS Event ATMCS_logevent_elevationInPosition Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_azimuthInPosition Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_azimuthInPosition topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_elevationInPosition Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_elevationInPosition topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5468,8 +4898,8 @@ Validate ATMCS Event ATMCS_logevent_azimuthInPosition Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_azimuthInPosition Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_azimuthInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMCS Event ATMCS_logevent_elevationInPosition Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_elevationInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5481,8 +4911,8 @@ Validate ATMCS Event ATMCS_logevent_azimuthInPosition Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_allAxesInPosition Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_allAxesInPosition topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_azimuthInPosition Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_azimuthInPosition topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5506,8 +4936,8 @@ Validate ATMCS Event ATMCS_logevent_allAxesInPosition Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_allAxesInPosition Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_allAxesInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMCS Event ATMCS_logevent_azimuthInPosition Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_azimuthInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5519,8 +4949,8 @@ Validate ATMCS Event ATMCS_logevent_allAxesInPosition Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_nasmyth1RotatorInPosition Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_nasmyth1RotatorInPosition topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_allAxesInPosition Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_allAxesInPosition topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5544,8 +4974,8 @@ Validate ATMCS Event ATMCS_logevent_nasmyth1RotatorInPosition Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_nasmyth1RotatorInPosition Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_nasmyth1RotatorInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMCS Event ATMCS_logevent_allAxesInPosition Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_allAxesInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5557,8 +4987,8 @@ Validate ATMCS Event ATMCS_logevent_nasmyth1RotatorInPosition Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_azimuthLimitSwitchCCW Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_azimuthLimitSwitchCCW topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_nasmyth1RotatorInPosition Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_nasmyth1RotatorInPosition topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5582,8 +5012,8 @@ Validate ATMCS Event ATMCS_logevent_azimuthLimitSwitchCCW Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_azimuthLimitSwitchCCW Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_azimuthLimitSwitchCCW topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMCS Event ATMCS_logevent_nasmyth1RotatorInPosition Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_nasmyth1RotatorInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5595,8 +5025,8 @@ Validate ATMCS Event ATMCS_logevent_azimuthLimitSwitchCCW Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_elevationLimitSwitchUpper Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_elevationLimitSwitchUpper topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_azimuthLimitSwitchCCW Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_azimuthLimitSwitchCCW topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5620,8 +5050,8 @@ Validate ATMCS Event ATMCS_logevent_elevationLimitSwitchUpper Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_elevationLimitSwitchUpper Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_elevationLimitSwitchUpper topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMCS Event ATMCS_logevent_azimuthLimitSwitchCCW Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_azimuthLimitSwitchCCW topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5633,8 +5063,8 @@ Validate ATMCS Event ATMCS_logevent_elevationLimitSwitchUpper Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_nasmyth1LimitSwitchCW Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_nasmyth1LimitSwitchCW topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_elevationLimitSwitchUpper Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_elevationLimitSwitchUpper topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5658,8 +5088,8 @@ Validate ATMCS Event ATMCS_logevent_nasmyth1LimitSwitchCW Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_nasmyth1LimitSwitchCW Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_nasmyth1LimitSwitchCW topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMCS Event ATMCS_logevent_elevationLimitSwitchUpper Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_elevationLimitSwitchUpper topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5671,8 +5101,8 @@ Validate ATMCS Event ATMCS_logevent_nasmyth1LimitSwitchCW Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_nasmyth2LimitSwitchCCW Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_nasmyth2LimitSwitchCCW topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_nasmyth1LimitSwitchCW Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_nasmyth1LimitSwitchCW topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5696,8 +5126,8 @@ Validate ATMCS Event ATMCS_logevent_nasmyth2LimitSwitchCCW Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_nasmyth2LimitSwitchCCW Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_nasmyth2LimitSwitchCCW topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMCS Event ATMCS_logevent_nasmyth1LimitSwitchCW Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_nasmyth1LimitSwitchCW topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5709,8 +5139,8 @@ Validate ATMCS Event ATMCS_logevent_nasmyth2LimitSwitchCCW Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_azimuthBrake1 Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_azimuthBrake1 topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_nasmyth2LimitSwitchCCW Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_nasmyth2LimitSwitchCCW topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5734,8 +5164,8 @@ Validate ATMCS Event ATMCS_logevent_azimuthBrake1 Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_azimuthBrake1 Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_azimuthBrake1 topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMCS Event ATMCS_logevent_nasmyth2LimitSwitchCCW Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_nasmyth2LimitSwitchCCW topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5747,8 +5177,8 @@ Validate ATMCS Event ATMCS_logevent_azimuthBrake1 Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_elevationBrake Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_elevationBrake topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_azimuthBrake1 Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_azimuthBrake1 topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5772,8 +5202,8 @@ Validate ATMCS Event ATMCS_logevent_elevationBrake Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_elevationBrake Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_elevationBrake topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMCS Event ATMCS_logevent_azimuthBrake1 Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_azimuthBrake1 topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5785,8 +5215,8 @@ Validate ATMCS Event ATMCS_logevent_elevationBrake Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_nasmyth1Brake Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_nasmyth1Brake topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_elevationBrake Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_elevationBrake topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5810,8 +5240,8 @@ Validate ATMCS Event ATMCS_logevent_nasmyth1Brake Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_nasmyth1Brake Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_nasmyth1Brake topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMCS Event ATMCS_logevent_elevationBrake Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_elevationBrake topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5823,8 +5253,8 @@ Validate ATMCS Event ATMCS_logevent_nasmyth1Brake Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_nasmyth2Brake Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_nasmyth2Brake topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_nasmyth1Brake Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_nasmyth1Brake topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5848,8 +5278,8 @@ Validate ATMCS Event ATMCS_logevent_nasmyth2Brake Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_nasmyth2Brake Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_nasmyth2Brake topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMCS Event ATMCS_logevent_nasmyth1Brake Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_nasmyth1Brake topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5861,8 +5291,8 @@ Validate ATMCS Event ATMCS_logevent_nasmyth2Brake Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_azimuthToppleBlockCCW Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_azimuthToppleBlockCCW topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_nasmyth2Brake Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_nasmyth2Brake topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5886,8 +5316,8 @@ Validate ATMCS Event ATMCS_logevent_azimuthToppleBlockCCW Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_azimuthToppleBlockCCW Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_azimuthToppleBlockCCW topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMCS Event ATMCS_logevent_nasmyth2Brake Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_nasmyth2Brake topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5899,8 +5329,8 @@ Validate ATMCS Event ATMCS_logevent_azimuthToppleBlockCCW Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_azimuthBrake2 Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_azimuthBrake2 topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_azimuthToppleBlockCCW Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_azimuthToppleBlockCCW topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5924,8 +5354,8 @@ Validate ATMCS Event ATMCS_logevent_azimuthBrake2 Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_azimuthBrake2 Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_azimuthBrake2 topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMCS Event ATMCS_logevent_azimuthToppleBlockCCW Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_azimuthToppleBlockCCW topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5937,8 +5367,8 @@ Validate ATMCS Event ATMCS_logevent_azimuthBrake2 Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_nasmyth1LimitSwitchCCW Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_nasmyth1LimitSwitchCCW topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_azimuthBrake2 Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_azimuthBrake2 topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5962,8 +5392,8 @@ Validate ATMCS Event ATMCS_logevent_nasmyth1LimitSwitchCCW Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_nasmyth1LimitSwitchCCW Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_nasmyth1LimitSwitchCCW topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMCS Event ATMCS_logevent_azimuthBrake2 Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_azimuthBrake2 topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5975,8 +5405,8 @@ Validate ATMCS Event ATMCS_logevent_nasmyth1LimitSwitchCCW Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_azimuthToppleBlockCW Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_azimuthToppleBlockCW topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_nasmyth1LimitSwitchCCW Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_nasmyth1LimitSwitchCCW topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6000,8 +5430,8 @@ Validate ATMCS Event ATMCS_logevent_azimuthToppleBlockCW Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_azimuthToppleBlockCW Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_azimuthToppleBlockCW topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMCS Event ATMCS_logevent_nasmyth1LimitSwitchCCW Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_nasmyth1LimitSwitchCCW topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6013,8 +5443,8 @@ Validate ATMCS Event ATMCS_logevent_azimuthToppleBlockCW Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_nasmyth2LimitSwitchCW Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_nasmyth2LimitSwitchCW topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_azimuthToppleBlockCW Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_azimuthToppleBlockCW topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6038,8 +5468,8 @@ Validate ATMCS Event ATMCS_logevent_nasmyth2LimitSwitchCW Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_nasmyth2LimitSwitchCW Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_nasmyth2LimitSwitchCW topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMCS Event ATMCS_logevent_azimuthToppleBlockCW Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_azimuthToppleBlockCW topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6051,8 +5481,8 @@ Validate ATMCS Event ATMCS_logevent_nasmyth2LimitSwitchCW Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_azimuthLimitSwitchCW Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_azimuthLimitSwitchCW topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_nasmyth2LimitSwitchCW Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_nasmyth2LimitSwitchCW topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6076,8 +5506,8 @@ Validate ATMCS Event ATMCS_logevent_azimuthLimitSwitchCW Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_azimuthLimitSwitchCW Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_azimuthLimitSwitchCW topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMCS Event ATMCS_logevent_nasmyth2LimitSwitchCW Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_nasmyth2LimitSwitchCW topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6089,8 +5519,8 @@ Validate ATMCS Event ATMCS_logevent_azimuthLimitSwitchCW Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_azimuthDrive1Status Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_azimuthDrive1Status topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_azimuthLimitSwitchCW Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_azimuthLimitSwitchCW topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6114,8 +5544,8 @@ Validate ATMCS Event ATMCS_logevent_azimuthDrive1Status Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_azimuthDrive1Status Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_azimuthDrive1Status topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMCS Event ATMCS_logevent_azimuthLimitSwitchCW Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_azimuthLimitSwitchCW topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6127,8 +5557,8 @@ Validate ATMCS Event ATMCS_logevent_azimuthDrive1Status Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_azimuthDrive2Status Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_azimuthDrive2Status topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_azimuthDrive1Status Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_azimuthDrive1Status topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6152,8 +5582,8 @@ Validate ATMCS Event ATMCS_logevent_azimuthDrive2Status Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_azimuthDrive2Status Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_azimuthDrive2Status topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMCS Event ATMCS_logevent_azimuthDrive1Status Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_azimuthDrive1Status topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6165,8 +5595,8 @@ Validate ATMCS Event ATMCS_logevent_azimuthDrive2Status Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_elevationDriveStatus Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_elevationDriveStatus topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_azimuthDrive2Status Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_azimuthDrive2Status topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6190,8 +5620,8 @@ Validate ATMCS Event ATMCS_logevent_elevationDriveStatus Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_elevationDriveStatus Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_elevationDriveStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMCS Event ATMCS_logevent_azimuthDrive2Status Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_azimuthDrive2Status topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6203,8 +5633,8 @@ Validate ATMCS Event ATMCS_logevent_elevationDriveStatus Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_nasmyth1DriveStatus Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_nasmyth1DriveStatus topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_elevationDriveStatus Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_elevationDriveStatus topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6228,8 +5658,8 @@ Validate ATMCS Event ATMCS_logevent_nasmyth1DriveStatus Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_nasmyth1DriveStatus Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_nasmyth1DriveStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMCS Event ATMCS_logevent_elevationDriveStatus Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_elevationDriveStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6241,8 +5671,8 @@ Validate ATMCS Event ATMCS_logevent_nasmyth1DriveStatus Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_nasmyth2DriveStatus Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_nasmyth2DriveStatus topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_nasmyth1DriveStatus Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_nasmyth1DriveStatus topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6266,8 +5696,8 @@ Validate ATMCS Event ATMCS_logevent_nasmyth2DriveStatus Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_nasmyth2DriveStatus Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_nasmyth2DriveStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMCS Event ATMCS_logevent_nasmyth1DriveStatus Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_nasmyth1DriveStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6279,8 +5709,8 @@ Validate ATMCS Event ATMCS_logevent_nasmyth2DriveStatus Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_m3DriveStatus Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_m3DriveStatus topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_nasmyth2DriveStatus Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_nasmyth2DriveStatus topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6304,8 +5734,8 @@ Validate ATMCS Event ATMCS_logevent_m3DriveStatus Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_m3DriveStatus Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_m3DriveStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMCS Event ATMCS_logevent_nasmyth2DriveStatus Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_nasmyth2DriveStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6317,8 +5747,8 @@ Validate ATMCS Event ATMCS_logevent_m3DriveStatus Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_nasmyth2RotatorInPosition Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_nasmyth2RotatorInPosition topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_m3DriveStatus Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_m3DriveStatus topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6342,8 +5772,8 @@ Validate ATMCS Event ATMCS_logevent_nasmyth2RotatorInPosition Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_nasmyth2RotatorInPosition Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_nasmyth2RotatorInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMCS Event ATMCS_logevent_m3DriveStatus Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_m3DriveStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6355,8 +5785,8 @@ Validate ATMCS Event ATMCS_logevent_nasmyth2RotatorInPosition Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_elevationLimitSwitchLower Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_elevationLimitSwitchLower topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_nasmyth2RotatorInPosition Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_nasmyth2RotatorInPosition topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6380,8 +5810,8 @@ Validate ATMCS Event ATMCS_logevent_elevationLimitSwitchLower Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_elevationLimitSwitchLower Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_elevationLimitSwitchLower topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMCS Event ATMCS_logevent_nasmyth2RotatorInPosition Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_nasmyth2RotatorInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6393,8 +5823,8 @@ Validate ATMCS Event ATMCS_logevent_elevationLimitSwitchLower Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_atMountState Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_atMountState topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_elevationLimitSwitchLower Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_elevationLimitSwitchLower topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6418,8 +5848,8 @@ Validate ATMCS Event ATMCS_logevent_atMountState Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_atMountState Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_atMountState topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMCS Event ATMCS_logevent_elevationLimitSwitchLower Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_elevationLimitSwitchLower topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6431,8 +5861,8 @@ Validate ATMCS Event ATMCS_logevent_atMountState Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_m3RotatorLimitSwitchCW Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_m3RotatorLimitSwitchCW topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_atMountState Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_atMountState topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6456,8 +5886,8 @@ Validate ATMCS Event ATMCS_logevent_m3RotatorLimitSwitchCW Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_m3RotatorLimitSwitchCW Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_m3RotatorLimitSwitchCW topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMCS Event ATMCS_logevent_atMountState Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_atMountState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6469,8 +5899,8 @@ Validate ATMCS Event ATMCS_logevent_m3RotatorLimitSwitchCW Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_m3RotatorLimitSwitchCCW Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_m3RotatorLimitSwitchCCW topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_m3RotatorLimitSwitchCW Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_m3RotatorLimitSwitchCW topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6494,8 +5924,8 @@ Validate ATMCS Event ATMCS_logevent_m3RotatorLimitSwitchCCW Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_m3RotatorLimitSwitchCCW Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_m3RotatorLimitSwitchCCW topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMCS Event ATMCS_logevent_m3RotatorLimitSwitchCW Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_m3RotatorLimitSwitchCW topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6507,8 +5937,8 @@ Validate ATMCS Event ATMCS_logevent_m3RotatorLimitSwitchCCW Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_m3RotatorDetentLimitSwitch Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_m3RotatorDetentLimitSwitch topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_m3RotatorLimitSwitchCCW Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_m3RotatorLimitSwitchCCW topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6532,8 +5962,8 @@ Validate ATMCS Event ATMCS_logevent_m3RotatorDetentLimitSwitch Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_m3RotatorDetentLimitSwitch Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_m3RotatorDetentLimitSwitch topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMCS Event ATMCS_logevent_m3RotatorLimitSwitchCCW Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_m3RotatorLimitSwitchCCW topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6545,8 +5975,8 @@ Validate ATMCS Event ATMCS_logevent_m3RotatorDetentLimitSwitch Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_m3InPosition Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_m3InPosition topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_m3RotatorDetentLimitSwitch Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_m3RotatorDetentLimitSwitch topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6570,8 +6000,8 @@ Validate ATMCS Event ATMCS_logevent_m3InPosition Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_m3InPosition Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_m3InPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMCS Event ATMCS_logevent_m3RotatorDetentLimitSwitch Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_m3RotatorDetentLimitSwitch topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6583,8 +6013,8 @@ Validate ATMCS Event ATMCS_logevent_m3InPosition Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_m3PortSelected Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_m3PortSelected topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_m3InPosition Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_m3InPosition topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6608,8 +6038,8 @@ Validate ATMCS Event ATMCS_logevent_m3PortSelected Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_m3PortSelected Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_m3PortSelected topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMCS Event ATMCS_logevent_m3InPosition Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_m3InPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6621,8 +6051,8 @@ Validate ATMCS Event ATMCS_logevent_m3PortSelected Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_detailedState Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_detailedState topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_m3PortSelected Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_m3PortSelected topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6646,13 +6076,51 @@ Validate ATMCS Event ATMCS_logevent_detailedState Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_detailedState Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATMCS Event ATMCS_logevent_m3PortSelected Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_m3PortSelected topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[34]/item)" -n ${folder}/sal_interfaces/ATMCS/ATMCS_Events.xml
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[34]/item/Count" -v . -n ${folder}/sal_interfaces/ATMCS/ATMCS_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate ATMCS Event ATMCS_logevent_detailedState Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_detailedState topic is less than 65536 bytes in total.
+	[Tags]    smoke    ATMCS
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[35]/item)" -n ${folder}/sal_interfaces/ATMCS/ATMCS_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[35]/item/Count" -v . -n ${folder}/sal_interfaces/ATMCS/ATMCS_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[35]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATMCS/ATMCS_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate ATMCS Event ATMCS_logevent_detailedState Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    ATMCS
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[35]/item)" -n ${folder}/sal_interfaces/ATMCS/ATMCS_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[35]/item/Count" -v . -n ${folder}/sal_interfaces/ATMCS/ATMCS_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -8217,8 +7685,8 @@ Validate ATPneumatics Command ATPneumatics_command_closeM1CellVents Topic Column
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATPneumatics Event ATPneumatics_logevent_m1CoverLimitSwitches Topic Byte Size
-	[Documentation]    Validate the ATPneumatics_logevent_m1CoverLimitSwitches topic is less than 65536 bytes in total.
+Validate ATPneumatics Event ATPneumatics_logevent_heartbeat Topic Byte Size
+	[Documentation]    Validate the ATPneumatics_logevent_heartbeat topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8242,8 +7710,8 @@ Validate ATPneumatics Event ATPneumatics_logevent_m1CoverLimitSwitches Topic Byt
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATPneumatics Event ATPneumatics_logevent_m1CoverLimitSwitches Topic Columns
-	[Documentation]    Validate the ATPneumatics_logevent_m1CoverLimitSwitches topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATPneumatics Event ATPneumatics_logevent_heartbeat Topic Columns
+	[Documentation]    Validate the ATPneumatics_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8255,8 +7723,8 @@ Validate ATPneumatics Event ATPneumatics_logevent_m1CoverLimitSwitches Topic Col
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATPneumatics Event ATPneumatics_logevent_m1VentsLimitSwitches Topic Byte Size
-	[Documentation]    Validate the ATPneumatics_logevent_m1VentsLimitSwitches topic is less than 65536 bytes in total.
+Validate ATPneumatics Event ATPneumatics_logevent_m1CoverLimitSwitches Topic Byte Size
+	[Documentation]    Validate the ATPneumatics_logevent_m1CoverLimitSwitches topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8280,8 +7748,8 @@ Validate ATPneumatics Event ATPneumatics_logevent_m1VentsLimitSwitches Topic Byt
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATPneumatics Event ATPneumatics_logevent_m1VentsLimitSwitches Topic Columns
-	[Documentation]    Validate the ATPneumatics_logevent_m1VentsLimitSwitches topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATPneumatics Event ATPneumatics_logevent_m1CoverLimitSwitches Topic Columns
+	[Documentation]    Validate the ATPneumatics_logevent_m1CoverLimitSwitches topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8293,8 +7761,8 @@ Validate ATPneumatics Event ATPneumatics_logevent_m1VentsLimitSwitches Topic Col
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATPneumatics Event ATPneumatics_logevent_powerStatus Topic Byte Size
-	[Documentation]    Validate the ATPneumatics_logevent_powerStatus topic is less than 65536 bytes in total.
+Validate ATPneumatics Event ATPneumatics_logevent_m1VentsLimitSwitches Topic Byte Size
+	[Documentation]    Validate the ATPneumatics_logevent_m1VentsLimitSwitches topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8318,8 +7786,8 @@ Validate ATPneumatics Event ATPneumatics_logevent_powerStatus Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATPneumatics Event ATPneumatics_logevent_powerStatus Topic Columns
-	[Documentation]    Validate the ATPneumatics_logevent_powerStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATPneumatics Event ATPneumatics_logevent_m1VentsLimitSwitches Topic Columns
+	[Documentation]    Validate the ATPneumatics_logevent_m1VentsLimitSwitches topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8331,8 +7799,8 @@ Validate ATPneumatics Event ATPneumatics_logevent_powerStatus Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATPneumatics Event ATPneumatics_logevent_eStopTriggered Topic Byte Size
-	[Documentation]    Validate the ATPneumatics_logevent_eStopTriggered topic is less than 65536 bytes in total.
+Validate ATPneumatics Event ATPneumatics_logevent_powerStatus Topic Byte Size
+	[Documentation]    Validate the ATPneumatics_logevent_powerStatus topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8356,8 +7824,8 @@ Validate ATPneumatics Event ATPneumatics_logevent_eStopTriggered Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATPneumatics Event ATPneumatics_logevent_eStopTriggered Topic Columns
-	[Documentation]    Validate the ATPneumatics_logevent_eStopTriggered topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATPneumatics Event ATPneumatics_logevent_powerStatus Topic Columns
+	[Documentation]    Validate the ATPneumatics_logevent_powerStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8369,8 +7837,8 @@ Validate ATPneumatics Event ATPneumatics_logevent_eStopTriggered Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATPneumatics Event ATPneumatics_logevent_resetEStopTriggered Topic Byte Size
-	[Documentation]    Validate the ATPneumatics_logevent_resetEStopTriggered topic is less than 65536 bytes in total.
+Validate ATPneumatics Event ATPneumatics_logevent_eStop Topic Byte Size
+	[Documentation]    Validate the ATPneumatics_logevent_eStop topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8394,8 +7862,8 @@ Validate ATPneumatics Event ATPneumatics_logevent_resetEStopTriggered Topic Byte
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATPneumatics Event ATPneumatics_logevent_resetEStopTriggered Topic Columns
-	[Documentation]    Validate the ATPneumatics_logevent_resetEStopTriggered topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATPneumatics Event ATPneumatics_logevent_eStop Topic Columns
+	[Documentation]    Validate the ATPneumatics_logevent_eStop topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8635,8 +8103,8 @@ Validate ATPneumatics Event ATPneumatics_logevent_mainValveState Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATPneumatics Event ATPneumatics_logevent_m1CoverPosition Topic Byte Size
-	[Documentation]    Validate the ATPneumatics_logevent_m1CoverPosition topic is less than 65536 bytes in total.
+Validate ATPneumatics Event ATPneumatics_logevent_m1VentsPosition Topic Byte Size
+	[Documentation]    Validate the ATPneumatics_logevent_m1VentsPosition topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8660,8 +8128,8 @@ Validate ATPneumatics Event ATPneumatics_logevent_m1CoverPosition Topic Byte Siz
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATPneumatics Event ATPneumatics_logevent_m1CoverPosition Topic Columns
-	[Documentation]    Validate the ATPneumatics_logevent_m1CoverPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATPneumatics Event ATPneumatics_logevent_m1VentsPosition Topic Columns
+	[Documentation]    Validate the ATPneumatics_logevent_m1VentsPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8673,8 +8141,8 @@ Validate ATPneumatics Event ATPneumatics_logevent_m1CoverPosition Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATPneumatics Event ATPneumatics_logevent_m1VentsPosition Topic Byte Size
-	[Documentation]    Validate the ATPneumatics_logevent_m1VentsPosition topic is less than 65536 bytes in total.
+Validate ATPneumatics Event ATPneumatics_logevent_m1SetPressure Topic Byte Size
+	[Documentation]    Validate the ATPneumatics_logevent_m1SetPressure topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8698,8 +8166,8 @@ Validate ATPneumatics Event ATPneumatics_logevent_m1VentsPosition Topic Byte Siz
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATPneumatics Event ATPneumatics_logevent_m1VentsPosition Topic Columns
-	[Documentation]    Validate the ATPneumatics_logevent_m1VentsPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATPneumatics Event ATPneumatics_logevent_m1SetPressure Topic Columns
+	[Documentation]    Validate the ATPneumatics_logevent_m1SetPressure topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8711,8 +8179,8 @@ Validate ATPneumatics Event ATPneumatics_logevent_m1VentsPosition Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATPneumatics Event ATPneumatics_logevent_detailedState Topic Byte Size
-	[Documentation]    Validate the ATPneumatics_logevent_detailedState topic is less than 65536 bytes in total.
+Validate ATPneumatics Event ATPneumatics_logevent_m2SetPressure Topic Byte Size
+	[Documentation]    Validate the ATPneumatics_logevent_m2SetPressure topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8736,8 +8204,8 @@ Validate ATPneumatics Event ATPneumatics_logevent_detailedState Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATPneumatics Event ATPneumatics_logevent_detailedState Topic Columns
-	[Documentation]    Validate the ATPneumatics_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATPneumatics Event ATPneumatics_logevent_m2SetPressure Topic Columns
+	[Documentation]    Validate the ATPneumatics_logevent_m2SetPressure topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -9509,8 +8977,8 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_linearStageInPosition Topi
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATSpectrograph Event ATSpectrograph_logevent_fwState Topic Byte Size
-	[Documentation]    Validate the ATSpectrograph_logevent_fwState topic is less than 65536 bytes in total.
+Validate ATSpectrograph Event ATSpectrograph_logevent_reportedLinearStagePosition Topic Byte Size
+	[Documentation]    Validate the ATSpectrograph_logevent_reportedLinearStagePosition topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -9534,8 +9002,8 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_fwState Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATSpectrograph Event ATSpectrograph_logevent_fwState Topic Columns
-	[Documentation]    Validate the ATSpectrograph_logevent_fwState topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATSpectrograph Event ATSpectrograph_logevent_reportedLinearStagePosition Topic Columns
+	[Documentation]    Validate the ATSpectrograph_logevent_reportedLinearStagePosition topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -9547,8 +9015,8 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_fwState Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATSpectrograph Event ATSpectrograph_logevent_gwState Topic Byte Size
-	[Documentation]    Validate the ATSpectrograph_logevent_gwState topic is less than 65536 bytes in total.
+Validate ATSpectrograph Event ATSpectrograph_logevent_lsState Topic Byte Size
+	[Documentation]    Validate the ATSpectrograph_logevent_lsState topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -9572,13 +9040,89 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_gwState Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATSpectrograph Event ATSpectrograph_logevent_gwState Topic Columns
-	[Documentation]    Validate the ATSpectrograph_logevent_gwState topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATSpectrograph Event ATSpectrograph_logevent_lsState Topic Columns
+	[Documentation]    Validate the ATSpectrograph_logevent_lsState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[13]/item)" -n ${folder}/sal_interfaces/ATSpectrograph/ATSpectrograph_Events.xml
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[13]/item/Count" -v . -n ${folder}/sal_interfaces/ATSpectrograph/ATSpectrograph_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate ATSpectrograph Event ATSpectrograph_logevent_fwState Topic Byte Size
+	[Documentation]    Validate the ATSpectrograph_logevent_fwState topic is less than 65536 bytes in total.
+	[Tags]    smoke    ATSpectrograph
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[14]/item)" -n ${folder}/sal_interfaces/ATSpectrograph/ATSpectrograph_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[14]/item/Count" -v . -n ${folder}/sal_interfaces/ATSpectrograph/ATSpectrograph_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[14]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATSpectrograph/ATSpectrograph_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate ATSpectrograph Event ATSpectrograph_logevent_fwState Topic Columns
+	[Documentation]    Validate the ATSpectrograph_logevent_fwState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    ATSpectrograph
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[14]/item)" -n ${folder}/sal_interfaces/ATSpectrograph/ATSpectrograph_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[14]/item/Count" -v . -n ${folder}/sal_interfaces/ATSpectrograph/ATSpectrograph_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate ATSpectrograph Event ATSpectrograph_logevent_gwState Topic Byte Size
+	[Documentation]    Validate the ATSpectrograph_logevent_gwState topic is less than 65536 bytes in total.
+	[Tags]    smoke    ATSpectrograph
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[15]/item)" -n ${folder}/sal_interfaces/ATSpectrograph/ATSpectrograph_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[15]/item/Count" -v . -n ${folder}/sal_interfaces/ATSpectrograph/ATSpectrograph_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[15]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATSpectrograph/ATSpectrograph_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate ATSpectrograph Event ATSpectrograph_logevent_gwState Topic Columns
+	[Documentation]    Validate the ATSpectrograph_logevent_gwState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    ATSpectrograph
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[15]/item)" -n ${folder}/sal_interfaces/ATSpectrograph/ATSpectrograph_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[15]/item/Count" -v . -n ${folder}/sal_interfaces/ATSpectrograph/ATSpectrograph_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -12435,6 +11979,44 @@ Validate Dome Event Dome_logevent_stateChanged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
+Validate Dome Event Dome_logevent_detailedState Topic Byte Size
+	[Documentation]    Validate the Dome_logevent_detailedState topic is less than 65536 bytes in total.
+	[Tags]    smoke    Dome
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/Dome/Dome_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/Count" -v . -n ${folder}/sal_interfaces/Dome/Dome_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/Dome/Dome_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Dome Event Dome_logevent_detailedState Topic Columns
+	[Documentation]    Validate the Dome_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    Dome
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/Dome/Dome_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/Count" -v . -n ${folder}/sal_interfaces/Dome/Dome_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
 Validate Dome Telemetry Dome_summary Topic Byte Size
 	[Documentation]    Validate the Dome_summary topic is less than 65536 bytes in total.
 	[Tags]    smoke    Dome
@@ -12663,8 +12245,8 @@ Validate DomeADB Event DomeADB_logevent_stateChanged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeADB Event DomeADB_logevent_driveEnabled Topic Byte Size
-	[Documentation]    Validate the DomeADB_logevent_driveEnabled topic is less than 65536 bytes in total.
+Validate DomeADB Event DomeADB_logevent_detailedState Topic Byte Size
+	[Documentation]    Validate the DomeADB_logevent_detailedState topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12688,8 +12270,8 @@ Validate DomeADB Event DomeADB_logevent_driveEnabled Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeADB Event DomeADB_logevent_driveEnabled Topic Columns
-	[Documentation]    Validate the DomeADB_logevent_driveEnabled topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeADB Event DomeADB_logevent_detailedState Topic Columns
+	[Documentation]    Validate the DomeADB_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12701,8 +12283,8 @@ Validate DomeADB Event DomeADB_logevent_driveEnabled Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeADB Event DomeADB_logevent_driveDisabled Topic Byte Size
-	[Documentation]    Validate the DomeADB_logevent_driveDisabled topic is less than 65536 bytes in total.
+Validate DomeADB Event DomeADB_logevent_driveEnabled Topic Byte Size
+	[Documentation]    Validate the DomeADB_logevent_driveEnabled topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12726,8 +12308,8 @@ Validate DomeADB Event DomeADB_logevent_driveDisabled Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeADB Event DomeADB_logevent_driveDisabled Topic Columns
-	[Documentation]    Validate the DomeADB_logevent_driveDisabled topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeADB Event DomeADB_logevent_driveEnabled Topic Columns
+	[Documentation]    Validate the DomeADB_logevent_driveEnabled topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12739,8 +12321,8 @@ Validate DomeADB Event DomeADB_logevent_driveDisabled Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeADB Event DomeADB_logevent_driveReady Topic Byte Size
-	[Documentation]    Validate the DomeADB_logevent_driveReady topic is less than 65536 bytes in total.
+Validate DomeADB Event DomeADB_logevent_driveDisabled Topic Byte Size
+	[Documentation]    Validate the DomeADB_logevent_driveDisabled topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12764,8 +12346,8 @@ Validate DomeADB Event DomeADB_logevent_driveReady Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeADB Event DomeADB_logevent_driveReady Topic Columns
-	[Documentation]    Validate the DomeADB_logevent_driveReady topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeADB Event DomeADB_logevent_driveDisabled Topic Columns
+	[Documentation]    Validate the DomeADB_logevent_driveDisabled topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12777,8 +12359,8 @@ Validate DomeADB Event DomeADB_logevent_driveReady Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeADB Event DomeADB_logevent_driveOverTemp Topic Byte Size
-	[Documentation]    Validate the DomeADB_logevent_driveOverTemp topic is less than 65536 bytes in total.
+Validate DomeADB Event DomeADB_logevent_driveReady Topic Byte Size
+	[Documentation]    Validate the DomeADB_logevent_driveReady topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12802,8 +12384,8 @@ Validate DomeADB Event DomeADB_logevent_driveOverTemp Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeADB Event DomeADB_logevent_driveOverTemp Topic Columns
-	[Documentation]    Validate the DomeADB_logevent_driveOverTemp topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeADB Event DomeADB_logevent_driveReady Topic Columns
+	[Documentation]    Validate the DomeADB_logevent_driveReady topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12815,8 +12397,8 @@ Validate DomeADB Event DomeADB_logevent_driveOverTemp Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeADB Event DomeADB_logevent_driveDriveFault Topic Byte Size
-	[Documentation]    Validate the DomeADB_logevent_driveDriveFault topic is less than 65536 bytes in total.
+Validate DomeADB Event DomeADB_logevent_driveOverTemp Topic Byte Size
+	[Documentation]    Validate the DomeADB_logevent_driveOverTemp topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12840,8 +12422,8 @@ Validate DomeADB Event DomeADB_logevent_driveDriveFault Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeADB Event DomeADB_logevent_driveDriveFault Topic Columns
-	[Documentation]    Validate the DomeADB_logevent_driveDriveFault topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeADB Event DomeADB_logevent_driveOverTemp Topic Columns
+	[Documentation]    Validate the DomeADB_logevent_driveOverTemp topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12853,8 +12435,8 @@ Validate DomeADB Event DomeADB_logevent_driveDriveFault Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeADB Event DomeADB_logevent_rotationEnabled Topic Byte Size
-	[Documentation]    Validate the DomeADB_logevent_rotationEnabled topic is less than 65536 bytes in total.
+Validate DomeADB Event DomeADB_logevent_driveDriveFault Topic Byte Size
+	[Documentation]    Validate the DomeADB_logevent_driveDriveFault topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12878,8 +12460,8 @@ Validate DomeADB Event DomeADB_logevent_rotationEnabled Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeADB Event DomeADB_logevent_rotationEnabled Topic Columns
-	[Documentation]    Validate the DomeADB_logevent_rotationEnabled topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeADB Event DomeADB_logevent_driveDriveFault Topic Columns
+	[Documentation]    Validate the DomeADB_logevent_driveDriveFault topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12891,8 +12473,8 @@ Validate DomeADB Event DomeADB_logevent_rotationEnabled Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeADB Event DomeADB_logevent_rotationPrevented Topic Byte Size
-	[Documentation]    Validate the DomeADB_logevent_rotationPrevented topic is less than 65536 bytes in total.
+Validate DomeADB Event DomeADB_logevent_rotationEnabled Topic Byte Size
+	[Documentation]    Validate the DomeADB_logevent_rotationEnabled topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12916,8 +12498,8 @@ Validate DomeADB Event DomeADB_logevent_rotationPrevented Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeADB Event DomeADB_logevent_rotationPrevented Topic Columns
-	[Documentation]    Validate the DomeADB_logevent_rotationPrevented topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeADB Event DomeADB_logevent_rotationEnabled Topic Columns
+	[Documentation]    Validate the DomeADB_logevent_rotationEnabled topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12929,8 +12511,8 @@ Validate DomeADB Event DomeADB_logevent_rotationPrevented Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeADB Event DomeADB_logevent_lockingPinEngaged Topic Byte Size
-	[Documentation]    Validate the DomeADB_logevent_lockingPinEngaged topic is less than 65536 bytes in total.
+Validate DomeADB Event DomeADB_logevent_rotationPrevented Topic Byte Size
+	[Documentation]    Validate the DomeADB_logevent_rotationPrevented topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12954,8 +12536,8 @@ Validate DomeADB Event DomeADB_logevent_lockingPinEngaged Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeADB Event DomeADB_logevent_lockingPinEngaged Topic Columns
-	[Documentation]    Validate the DomeADB_logevent_lockingPinEngaged topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeADB Event DomeADB_logevent_rotationPrevented Topic Columns
+	[Documentation]    Validate the DomeADB_logevent_rotationPrevented topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12967,8 +12549,8 @@ Validate DomeADB Event DomeADB_logevent_lockingPinEngaged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeADB Event DomeADB_logevent_lockingPinDisengaged Topic Byte Size
-	[Documentation]    Validate the DomeADB_logevent_lockingPinDisengaged topic is less than 65536 bytes in total.
+Validate DomeADB Event DomeADB_logevent_lockingPinEngaged Topic Byte Size
+	[Documentation]    Validate the DomeADB_logevent_lockingPinEngaged topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12992,8 +12574,8 @@ Validate DomeADB Event DomeADB_logevent_lockingPinDisengaged Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeADB Event DomeADB_logevent_lockingPinDisengaged Topic Columns
-	[Documentation]    Validate the DomeADB_logevent_lockingPinDisengaged topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeADB Event DomeADB_logevent_lockingPinEngaged Topic Columns
+	[Documentation]    Validate the DomeADB_logevent_lockingPinEngaged topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13005,8 +12587,8 @@ Validate DomeADB Event DomeADB_logevent_lockingPinDisengaged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeADB Event DomeADB_logevent_brakeEngaged Topic Byte Size
-	[Documentation]    Validate the DomeADB_logevent_brakeEngaged topic is less than 65536 bytes in total.
+Validate DomeADB Event DomeADB_logevent_lockingPinDisengaged Topic Byte Size
+	[Documentation]    Validate the DomeADB_logevent_lockingPinDisengaged topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13030,8 +12612,8 @@ Validate DomeADB Event DomeADB_logevent_brakeEngaged Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeADB Event DomeADB_logevent_brakeEngaged Topic Columns
-	[Documentation]    Validate the DomeADB_logevent_brakeEngaged topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeADB Event DomeADB_logevent_lockingPinDisengaged Topic Columns
+	[Documentation]    Validate the DomeADB_logevent_lockingPinDisengaged topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13043,8 +12625,8 @@ Validate DomeADB Event DomeADB_logevent_brakeEngaged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeADB Event DomeADB_logevent_brakeDisengaged Topic Byte Size
-	[Documentation]    Validate the DomeADB_logevent_brakeDisengaged topic is less than 65536 bytes in total.
+Validate DomeADB Event DomeADB_logevent_brakeEngaged Topic Byte Size
+	[Documentation]    Validate the DomeADB_logevent_brakeEngaged topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13068,8 +12650,8 @@ Validate DomeADB Event DomeADB_logevent_brakeDisengaged Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeADB Event DomeADB_logevent_brakeDisengaged Topic Columns
-	[Documentation]    Validate the DomeADB_logevent_brakeDisengaged topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeADB Event DomeADB_logevent_brakeEngaged Topic Columns
+	[Documentation]    Validate the DomeADB_logevent_brakeEngaged topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13081,8 +12663,8 @@ Validate DomeADB Event DomeADB_logevent_brakeDisengaged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeADB Event DomeADB_logevent_speedLimitReached Topic Byte Size
-	[Documentation]    Validate the DomeADB_logevent_speedLimitReached topic is less than 65536 bytes in total.
+Validate DomeADB Event DomeADB_logevent_brakeDisengaged Topic Byte Size
+	[Documentation]    Validate the DomeADB_logevent_brakeDisengaged topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13106,8 +12688,8 @@ Validate DomeADB Event DomeADB_logevent_speedLimitReached Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeADB Event DomeADB_logevent_speedLimitReached Topic Columns
-	[Documentation]    Validate the DomeADB_logevent_speedLimitReached topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeADB Event DomeADB_logevent_brakeDisengaged Topic Columns
+	[Documentation]    Validate the DomeADB_logevent_brakeDisengaged topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13119,8 +12701,8 @@ Validate DomeADB Event DomeADB_logevent_speedLimitReached Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeADB Event DomeADB_logevent_accelerationLimitReached Topic Byte Size
-	[Documentation]    Validate the DomeADB_logevent_accelerationLimitReached topic is less than 65536 bytes in total.
+Validate DomeADB Event DomeADB_logevent_speedLimitReached Topic Byte Size
+	[Documentation]    Validate the DomeADB_logevent_speedLimitReached topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13144,8 +12726,8 @@ Validate DomeADB Event DomeADB_logevent_accelerationLimitReached Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeADB Event DomeADB_logevent_accelerationLimitReached Topic Columns
-	[Documentation]    Validate the DomeADB_logevent_accelerationLimitReached topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeADB Event DomeADB_logevent_speedLimitReached Topic Columns
+	[Documentation]    Validate the DomeADB_logevent_speedLimitReached topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13157,8 +12739,8 @@ Validate DomeADB Event DomeADB_logevent_accelerationLimitReached Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeADB Event DomeADB_logevent_speedLimitSubsided Topic Byte Size
-	[Documentation]    Validate the DomeADB_logevent_speedLimitSubsided topic is less than 65536 bytes in total.
+Validate DomeADB Event DomeADB_logevent_accelerationLimitReached Topic Byte Size
+	[Documentation]    Validate the DomeADB_logevent_accelerationLimitReached topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13182,8 +12764,8 @@ Validate DomeADB Event DomeADB_logevent_speedLimitSubsided Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeADB Event DomeADB_logevent_speedLimitSubsided Topic Columns
-	[Documentation]    Validate the DomeADB_logevent_speedLimitSubsided topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeADB Event DomeADB_logevent_accelerationLimitReached Topic Columns
+	[Documentation]    Validate the DomeADB_logevent_accelerationLimitReached topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13195,8 +12777,8 @@ Validate DomeADB Event DomeADB_logevent_speedLimitSubsided Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeADB Event DomeADB_logevent_accelerationLimitSubsided Topic Byte Size
-	[Documentation]    Validate the DomeADB_logevent_accelerationLimitSubsided topic is less than 65536 bytes in total.
+Validate DomeADB Event DomeADB_logevent_speedLimitSubsided Topic Byte Size
+	[Documentation]    Validate the DomeADB_logevent_speedLimitSubsided topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13220,8 +12802,8 @@ Validate DomeADB Event DomeADB_logevent_accelerationLimitSubsided Topic Byte Siz
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeADB Event DomeADB_logevent_accelerationLimitSubsided Topic Columns
-	[Documentation]    Validate the DomeADB_logevent_accelerationLimitSubsided topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeADB Event DomeADB_logevent_speedLimitSubsided Topic Columns
+	[Documentation]    Validate the DomeADB_logevent_speedLimitSubsided topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13233,8 +12815,8 @@ Validate DomeADB Event DomeADB_logevent_accelerationLimitSubsided Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeADB Event DomeADB_logevent_echoResponse Topic Byte Size
-	[Documentation]    Validate the DomeADB_logevent_echoResponse topic is less than 65536 bytes in total.
+Validate DomeADB Event DomeADB_logevent_accelerationLimitSubsided Topic Byte Size
+	[Documentation]    Validate the DomeADB_logevent_accelerationLimitSubsided topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13258,8 +12840,8 @@ Validate DomeADB Event DomeADB_logevent_echoResponse Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeADB Event DomeADB_logevent_echoResponse Topic Columns
-	[Documentation]    Validate the DomeADB_logevent_echoResponse topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeADB Event DomeADB_logevent_accelerationLimitSubsided Topic Columns
+	[Documentation]    Validate the DomeADB_logevent_accelerationLimitSubsided topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13271,8 +12853,8 @@ Validate DomeADB Event DomeADB_logevent_echoResponse Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeADB Event DomeADB_logevent_motionModeChanged Topic Byte Size
-	[Documentation]    Validate the DomeADB_logevent_motionModeChanged topic is less than 65536 bytes in total.
+Validate DomeADB Event DomeADB_logevent_echoResponse Topic Byte Size
+	[Documentation]    Validate the DomeADB_logevent_echoResponse topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13296,13 +12878,51 @@ Validate DomeADB Event DomeADB_logevent_motionModeChanged Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeADB Event DomeADB_logevent_motionModeChanged Topic Columns
-	[Documentation]    Validate the DomeADB_logevent_motionModeChanged topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeADB Event DomeADB_logevent_echoResponse Topic Columns
+	[Documentation]    Validate the DomeADB_logevent_echoResponse topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[18]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[18]/item/Count" -v . -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate DomeADB Event DomeADB_logevent_motionModeChanged Topic Byte Size
+	[Documentation]    Validate the DomeADB_logevent_motionModeChanged topic is less than 65536 bytes in total.
+	[Tags]    smoke    DomeADB
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[19]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[19]/item/Count" -v . -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[19]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate DomeADB Event DomeADB_logevent_motionModeChanged Topic Columns
+	[Documentation]    Validate the DomeADB_logevent_motionModeChanged topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    DomeADB
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[19]/item)" -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[19]/item/Count" -v . -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -13499,8 +13119,8 @@ Validate DomeAPS Event DomeAPS_logevent_stateChanged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeAPS Event DomeAPS_logevent_driveEnabled Topic Byte Size
-	[Documentation]    Validate the DomeAPS_logevent_driveEnabled topic is less than 65536 bytes in total.
+Validate DomeAPS Event DomeAPS_logevent_detailedState Topic Byte Size
+	[Documentation]    Validate the DomeAPS_logevent_detailedState topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13524,8 +13144,8 @@ Validate DomeAPS Event DomeAPS_logevent_driveEnabled Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeAPS Event DomeAPS_logevent_driveEnabled Topic Columns
-	[Documentation]    Validate the DomeAPS_logevent_driveEnabled topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeAPS Event DomeAPS_logevent_detailedState Topic Columns
+	[Documentation]    Validate the DomeAPS_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13537,8 +13157,8 @@ Validate DomeAPS Event DomeAPS_logevent_driveEnabled Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeAPS Event DomeAPS_logevent_driveDisabled Topic Byte Size
-	[Documentation]    Validate the DomeAPS_logevent_driveDisabled topic is less than 65536 bytes in total.
+Validate DomeAPS Event DomeAPS_logevent_driveEnabled Topic Byte Size
+	[Documentation]    Validate the DomeAPS_logevent_driveEnabled topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13562,8 +13182,8 @@ Validate DomeAPS Event DomeAPS_logevent_driveDisabled Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeAPS Event DomeAPS_logevent_driveDisabled Topic Columns
-	[Documentation]    Validate the DomeAPS_logevent_driveDisabled topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeAPS Event DomeAPS_logevent_driveEnabled Topic Columns
+	[Documentation]    Validate the DomeAPS_logevent_driveEnabled topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13575,8 +13195,8 @@ Validate DomeAPS Event DomeAPS_logevent_driveDisabled Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeAPS Event DomeAPS_logevent_driveReady Topic Byte Size
-	[Documentation]    Validate the DomeAPS_logevent_driveReady topic is less than 65536 bytes in total.
+Validate DomeAPS Event DomeAPS_logevent_driveDisabled Topic Byte Size
+	[Documentation]    Validate the DomeAPS_logevent_driveDisabled topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13600,8 +13220,8 @@ Validate DomeAPS Event DomeAPS_logevent_driveReady Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeAPS Event DomeAPS_logevent_driveReady Topic Columns
-	[Documentation]    Validate the DomeAPS_logevent_driveReady topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeAPS Event DomeAPS_logevent_driveDisabled Topic Columns
+	[Documentation]    Validate the DomeAPS_logevent_driveDisabled topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13613,8 +13233,8 @@ Validate DomeAPS Event DomeAPS_logevent_driveReady Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeAPS Event DomeAPS_logevent_driveFault Topic Byte Size
-	[Documentation]    Validate the DomeAPS_logevent_driveFault topic is less than 65536 bytes in total.
+Validate DomeAPS Event DomeAPS_logevent_driveReady Topic Byte Size
+	[Documentation]    Validate the DomeAPS_logevent_driveReady topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13638,8 +13258,8 @@ Validate DomeAPS Event DomeAPS_logevent_driveFault Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeAPS Event DomeAPS_logevent_driveFault Topic Columns
-	[Documentation]    Validate the DomeAPS_logevent_driveFault topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeAPS Event DomeAPS_logevent_driveReady Topic Columns
+	[Documentation]    Validate the DomeAPS_logevent_driveReady topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13651,8 +13271,8 @@ Validate DomeAPS Event DomeAPS_logevent_driveFault Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeAPS Event DomeAPS_logevent_movementEnabled Topic Byte Size
-	[Documentation]    Validate the DomeAPS_logevent_movementEnabled topic is less than 65536 bytes in total.
+Validate DomeAPS Event DomeAPS_logevent_driveFault Topic Byte Size
+	[Documentation]    Validate the DomeAPS_logevent_driveFault topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13676,8 +13296,8 @@ Validate DomeAPS Event DomeAPS_logevent_movementEnabled Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeAPS Event DomeAPS_logevent_movementEnabled Topic Columns
-	[Documentation]    Validate the DomeAPS_logevent_movementEnabled topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeAPS Event DomeAPS_logevent_driveFault Topic Columns
+	[Documentation]    Validate the DomeAPS_logevent_driveFault topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13689,8 +13309,8 @@ Validate DomeAPS Event DomeAPS_logevent_movementEnabled Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeAPS Event DomeAPS_logevent_movementPrevented Topic Byte Size
-	[Documentation]    Validate the DomeAPS_logevent_movementPrevented topic is less than 65536 bytes in total.
+Validate DomeAPS Event DomeAPS_logevent_movementEnabled Topic Byte Size
+	[Documentation]    Validate the DomeAPS_logevent_movementEnabled topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13714,8 +13334,8 @@ Validate DomeAPS Event DomeAPS_logevent_movementPrevented Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeAPS Event DomeAPS_logevent_movementPrevented Topic Columns
-	[Documentation]    Validate the DomeAPS_logevent_movementPrevented topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeAPS Event DomeAPS_logevent_movementEnabled Topic Columns
+	[Documentation]    Validate the DomeAPS_logevent_movementEnabled topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13727,8 +13347,8 @@ Validate DomeAPS Event DomeAPS_logevent_movementPrevented Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeAPS Event DomeAPS_logevent_lockingPinEngaged Topic Byte Size
-	[Documentation]    Validate the DomeAPS_logevent_lockingPinEngaged topic is less than 65536 bytes in total.
+Validate DomeAPS Event DomeAPS_logevent_movementPrevented Topic Byte Size
+	[Documentation]    Validate the DomeAPS_logevent_movementPrevented topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13752,8 +13372,8 @@ Validate DomeAPS Event DomeAPS_logevent_lockingPinEngaged Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeAPS Event DomeAPS_logevent_lockingPinEngaged Topic Columns
-	[Documentation]    Validate the DomeAPS_logevent_lockingPinEngaged topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeAPS Event DomeAPS_logevent_movementPrevented Topic Columns
+	[Documentation]    Validate the DomeAPS_logevent_movementPrevented topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13765,8 +13385,8 @@ Validate DomeAPS Event DomeAPS_logevent_lockingPinEngaged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeAPS Event DomeAPS_logevent_lockingPinDisengaged Topic Byte Size
-	[Documentation]    Validate the DomeAPS_logevent_lockingPinDisengaged topic is less than 65536 bytes in total.
+Validate DomeAPS Event DomeAPS_logevent_lockingPinEngaged Topic Byte Size
+	[Documentation]    Validate the DomeAPS_logevent_lockingPinEngaged topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13790,8 +13410,8 @@ Validate DomeAPS Event DomeAPS_logevent_lockingPinDisengaged Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeAPS Event DomeAPS_logevent_lockingPinDisengaged Topic Columns
-	[Documentation]    Validate the DomeAPS_logevent_lockingPinDisengaged topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeAPS Event DomeAPS_logevent_lockingPinEngaged Topic Columns
+	[Documentation]    Validate the DomeAPS_logevent_lockingPinEngaged topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13803,8 +13423,8 @@ Validate DomeAPS Event DomeAPS_logevent_lockingPinDisengaged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeAPS Event DomeAPS_logevent_lockingPinFloating Topic Byte Size
-	[Documentation]    Validate the DomeAPS_logevent_lockingPinFloating topic is less than 65536 bytes in total.
+Validate DomeAPS Event DomeAPS_logevent_lockingPinDisengaged Topic Byte Size
+	[Documentation]    Validate the DomeAPS_logevent_lockingPinDisengaged topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13828,8 +13448,8 @@ Validate DomeAPS Event DomeAPS_logevent_lockingPinFloating Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeAPS Event DomeAPS_logevent_lockingPinFloating Topic Columns
-	[Documentation]    Validate the DomeAPS_logevent_lockingPinFloating topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeAPS Event DomeAPS_logevent_lockingPinDisengaged Topic Columns
+	[Documentation]    Validate the DomeAPS_logevent_lockingPinDisengaged topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13841,8 +13461,8 @@ Validate DomeAPS Event DomeAPS_logevent_lockingPinFloating Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeAPS Event DomeAPS_logevent_centralLockingPinEngaged Topic Byte Size
-	[Documentation]    Validate the DomeAPS_logevent_centralLockingPinEngaged topic is less than 65536 bytes in total.
+Validate DomeAPS Event DomeAPS_logevent_lockingPinFloating Topic Byte Size
+	[Documentation]    Validate the DomeAPS_logevent_lockingPinFloating topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13866,8 +13486,8 @@ Validate DomeAPS Event DomeAPS_logevent_centralLockingPinEngaged Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeAPS Event DomeAPS_logevent_centralLockingPinEngaged Topic Columns
-	[Documentation]    Validate the DomeAPS_logevent_centralLockingPinEngaged topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeAPS Event DomeAPS_logevent_lockingPinFloating Topic Columns
+	[Documentation]    Validate the DomeAPS_logevent_lockingPinFloating topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13879,8 +13499,8 @@ Validate DomeAPS Event DomeAPS_logevent_centralLockingPinEngaged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeAPS Event DomeAPS_logevent_lockingPinHomed Topic Byte Size
-	[Documentation]    Validate the DomeAPS_logevent_lockingPinHomed topic is less than 65536 bytes in total.
+Validate DomeAPS Event DomeAPS_logevent_centralLockingPinEngaged Topic Byte Size
+	[Documentation]    Validate the DomeAPS_logevent_centralLockingPinEngaged topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13904,8 +13524,8 @@ Validate DomeAPS Event DomeAPS_logevent_lockingPinHomed Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeAPS Event DomeAPS_logevent_lockingPinHomed Topic Columns
-	[Documentation]    Validate the DomeAPS_logevent_lockingPinHomed topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeAPS Event DomeAPS_logevent_centralLockingPinEngaged Topic Columns
+	[Documentation]    Validate the DomeAPS_logevent_centralLockingPinEngaged topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13917,8 +13537,8 @@ Validate DomeAPS Event DomeAPS_logevent_lockingPinHomed Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeAPS Event DomeAPS_logevent_centralLockingPinDisengaged Topic Byte Size
-	[Documentation]    Validate the DomeAPS_logevent_centralLockingPinDisengaged topic is less than 65536 bytes in total.
+Validate DomeAPS Event DomeAPS_logevent_lockingPinHomed Topic Byte Size
+	[Documentation]    Validate the DomeAPS_logevent_lockingPinHomed topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13942,8 +13562,8 @@ Validate DomeAPS Event DomeAPS_logevent_centralLockingPinDisengaged Topic Byte S
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeAPS Event DomeAPS_logevent_centralLockingPinDisengaged Topic Columns
-	[Documentation]    Validate the DomeAPS_logevent_centralLockingPinDisengaged topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeAPS Event DomeAPS_logevent_lockingPinHomed Topic Columns
+	[Documentation]    Validate the DomeAPS_logevent_lockingPinHomed topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13955,8 +13575,8 @@ Validate DomeAPS Event DomeAPS_logevent_centralLockingPinDisengaged Topic Column
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeAPS Event DomeAPS_logevent_centralLockingPinHomed Topic Byte Size
-	[Documentation]    Validate the DomeAPS_logevent_centralLockingPinHomed topic is less than 65536 bytes in total.
+Validate DomeAPS Event DomeAPS_logevent_centralLockingPinDisengaged Topic Byte Size
+	[Documentation]    Validate the DomeAPS_logevent_centralLockingPinDisengaged topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13980,8 +13600,8 @@ Validate DomeAPS Event DomeAPS_logevent_centralLockingPinHomed Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeAPS Event DomeAPS_logevent_centralLockingPinHomed Topic Columns
-	[Documentation]    Validate the DomeAPS_logevent_centralLockingPinHomed topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeAPS Event DomeAPS_logevent_centralLockingPinDisengaged Topic Columns
+	[Documentation]    Validate the DomeAPS_logevent_centralLockingPinDisengaged topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13993,8 +13613,8 @@ Validate DomeAPS Event DomeAPS_logevent_centralLockingPinHomed Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeAPS Event DomeAPS_logevent_centralLockingPinFloating Topic Byte Size
-	[Documentation]    Validate the DomeAPS_logevent_centralLockingPinFloating topic is less than 65536 bytes in total.
+Validate DomeAPS Event DomeAPS_logevent_centralLockingPinHomed Topic Byte Size
+	[Documentation]    Validate the DomeAPS_logevent_centralLockingPinHomed topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14018,8 +13638,8 @@ Validate DomeAPS Event DomeAPS_logevent_centralLockingPinFloating Topic Byte Siz
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeAPS Event DomeAPS_logevent_centralLockingPinFloating Topic Columns
-	[Documentation]    Validate the DomeAPS_logevent_centralLockingPinFloating topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeAPS Event DomeAPS_logevent_centralLockingPinHomed Topic Columns
+	[Documentation]    Validate the DomeAPS_logevent_centralLockingPinHomed topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14031,8 +13651,8 @@ Validate DomeAPS Event DomeAPS_logevent_centralLockingPinFloating Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeAPS Event DomeAPS_logevent_brakeEngaged Topic Byte Size
-	[Documentation]    Validate the DomeAPS_logevent_brakeEngaged topic is less than 65536 bytes in total.
+Validate DomeAPS Event DomeAPS_logevent_centralLockingPinFloating Topic Byte Size
+	[Documentation]    Validate the DomeAPS_logevent_centralLockingPinFloating topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14056,8 +13676,8 @@ Validate DomeAPS Event DomeAPS_logevent_brakeEngaged Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeAPS Event DomeAPS_logevent_brakeEngaged Topic Columns
-	[Documentation]    Validate the DomeAPS_logevent_brakeEngaged topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeAPS Event DomeAPS_logevent_centralLockingPinFloating Topic Columns
+	[Documentation]    Validate the DomeAPS_logevent_centralLockingPinFloating topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14069,8 +13689,8 @@ Validate DomeAPS Event DomeAPS_logevent_brakeEngaged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeAPS Event DomeAPS_logevent_brakeDisengaged Topic Byte Size
-	[Documentation]    Validate the DomeAPS_logevent_brakeDisengaged topic is less than 65536 bytes in total.
+Validate DomeAPS Event DomeAPS_logevent_brakeEngaged Topic Byte Size
+	[Documentation]    Validate the DomeAPS_logevent_brakeEngaged topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14094,8 +13714,8 @@ Validate DomeAPS Event DomeAPS_logevent_brakeDisengaged Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeAPS Event DomeAPS_logevent_brakeDisengaged Topic Columns
-	[Documentation]    Validate the DomeAPS_logevent_brakeDisengaged topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeAPS Event DomeAPS_logevent_brakeEngaged Topic Columns
+	[Documentation]    Validate the DomeAPS_logevent_brakeEngaged topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14107,8 +13727,8 @@ Validate DomeAPS Event DomeAPS_logevent_brakeDisengaged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeAPS Event DomeAPS_logevent_echoResponse Topic Byte Size
-	[Documentation]    Validate the DomeAPS_logevent_echoResponse topic is less than 65536 bytes in total.
+Validate DomeAPS Event DomeAPS_logevent_brakeDisengaged Topic Byte Size
+	[Documentation]    Validate the DomeAPS_logevent_brakeDisengaged topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14132,8 +13752,8 @@ Validate DomeAPS Event DomeAPS_logevent_echoResponse Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeAPS Event DomeAPS_logevent_echoResponse Topic Columns
-	[Documentation]    Validate the DomeAPS_logevent_echoResponse topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeAPS Event DomeAPS_logevent_brakeDisengaged Topic Columns
+	[Documentation]    Validate the DomeAPS_logevent_brakeDisengaged topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14145,8 +13765,8 @@ Validate DomeAPS Event DomeAPS_logevent_echoResponse Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeAPS Event DomeAPS_logevent_apsSubsystemError Topic Byte Size
-	[Documentation]    Validate the DomeAPS_logevent_apsSubsystemError topic is less than 65536 bytes in total.
+Validate DomeAPS Event DomeAPS_logevent_echoResponse Topic Byte Size
+	[Documentation]    Validate the DomeAPS_logevent_echoResponse topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14170,13 +13790,51 @@ Validate DomeAPS Event DomeAPS_logevent_apsSubsystemError Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeAPS Event DomeAPS_logevent_apsSubsystemError Topic Columns
-	[Documentation]    Validate the DomeAPS_logevent_apsSubsystemError topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeAPS Event DomeAPS_logevent_echoResponse Topic Columns
+	[Documentation]    Validate the DomeAPS_logevent_echoResponse topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[19]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[19]/item/Count" -v . -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate DomeAPS Event DomeAPS_logevent_apsSubsystemError Topic Byte Size
+	[Documentation]    Validate the DomeAPS_logevent_apsSubsystemError topic is less than 65536 bytes in total.
+	[Tags]    smoke    DomeAPS
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[20]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[20]/item/Count" -v . -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[20]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate DomeAPS Event DomeAPS_logevent_apsSubsystemError Topic Columns
+	[Documentation]    Validate the DomeAPS_logevent_apsSubsystemError topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    DomeAPS
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[20]/item)" -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[20]/item/Count" -v . -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -14335,8 +13993,8 @@ Validate DomeLouvers Event DomeLouvers_logevent_stateChanged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeLouvers Event DomeLouvers_logevent_driveEnabled Topic Byte Size
-	[Documentation]    Validate the DomeLouvers_logevent_driveEnabled topic is less than 65536 bytes in total.
+Validate DomeLouvers Event DomeLouvers_logevent_detailedState Topic Byte Size
+	[Documentation]    Validate the DomeLouvers_logevent_detailedState topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14360,8 +14018,8 @@ Validate DomeLouvers Event DomeLouvers_logevent_driveEnabled Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeLouvers Event DomeLouvers_logevent_driveEnabled Topic Columns
-	[Documentation]    Validate the DomeLouvers_logevent_driveEnabled topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeLouvers Event DomeLouvers_logevent_detailedState Topic Columns
+	[Documentation]    Validate the DomeLouvers_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14373,8 +14031,8 @@ Validate DomeLouvers Event DomeLouvers_logevent_driveEnabled Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeLouvers Event DomeLouvers_logevent_driveDisabled Topic Byte Size
-	[Documentation]    Validate the DomeLouvers_logevent_driveDisabled topic is less than 65536 bytes in total.
+Validate DomeLouvers Event DomeLouvers_logevent_driveEnabled Topic Byte Size
+	[Documentation]    Validate the DomeLouvers_logevent_driveEnabled topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14398,8 +14056,8 @@ Validate DomeLouvers Event DomeLouvers_logevent_driveDisabled Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeLouvers Event DomeLouvers_logevent_driveDisabled Topic Columns
-	[Documentation]    Validate the DomeLouvers_logevent_driveDisabled topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeLouvers Event DomeLouvers_logevent_driveEnabled Topic Columns
+	[Documentation]    Validate the DomeLouvers_logevent_driveEnabled topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14411,8 +14069,8 @@ Validate DomeLouvers Event DomeLouvers_logevent_driveDisabled Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeLouvers Event DomeLouvers_logevent_driveReady Topic Byte Size
-	[Documentation]    Validate the DomeLouvers_logevent_driveReady topic is less than 65536 bytes in total.
+Validate DomeLouvers Event DomeLouvers_logevent_driveDisabled Topic Byte Size
+	[Documentation]    Validate the DomeLouvers_logevent_driveDisabled topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14436,8 +14094,8 @@ Validate DomeLouvers Event DomeLouvers_logevent_driveReady Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeLouvers Event DomeLouvers_logevent_driveReady Topic Columns
-	[Documentation]    Validate the DomeLouvers_logevent_driveReady topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeLouvers Event DomeLouvers_logevent_driveDisabled Topic Columns
+	[Documentation]    Validate the DomeLouvers_logevent_driveDisabled topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14449,8 +14107,8 @@ Validate DomeLouvers Event DomeLouvers_logevent_driveReady Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeLouvers Event DomeLouvers_logevent_driveOverTemp Topic Byte Size
-	[Documentation]    Validate the DomeLouvers_logevent_driveOverTemp topic is less than 65536 bytes in total.
+Validate DomeLouvers Event DomeLouvers_logevent_driveReady Topic Byte Size
+	[Documentation]    Validate the DomeLouvers_logevent_driveReady topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14474,8 +14132,8 @@ Validate DomeLouvers Event DomeLouvers_logevent_driveOverTemp Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeLouvers Event DomeLouvers_logevent_driveOverTemp Topic Columns
-	[Documentation]    Validate the DomeLouvers_logevent_driveOverTemp topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeLouvers Event DomeLouvers_logevent_driveReady Topic Columns
+	[Documentation]    Validate the DomeLouvers_logevent_driveReady topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14487,8 +14145,8 @@ Validate DomeLouvers Event DomeLouvers_logevent_driveOverTemp Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeLouvers Event DomeLouvers_logevent_driveFault Topic Byte Size
-	[Documentation]    Validate the DomeLouvers_logevent_driveFault topic is less than 65536 bytes in total.
+Validate DomeLouvers Event DomeLouvers_logevent_driveOverTemp Topic Byte Size
+	[Documentation]    Validate the DomeLouvers_logevent_driveOverTemp topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14512,8 +14170,8 @@ Validate DomeLouvers Event DomeLouvers_logevent_driveFault Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeLouvers Event DomeLouvers_logevent_driveFault Topic Columns
-	[Documentation]    Validate the DomeLouvers_logevent_driveFault topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeLouvers Event DomeLouvers_logevent_driveOverTemp Topic Columns
+	[Documentation]    Validate the DomeLouvers_logevent_driveOverTemp topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14525,8 +14183,8 @@ Validate DomeLouvers Event DomeLouvers_logevent_driveFault Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeLouvers Event DomeLouvers_logevent_movementEnabled Topic Byte Size
-	[Documentation]    Validate the DomeLouvers_logevent_movementEnabled topic is less than 65536 bytes in total.
+Validate DomeLouvers Event DomeLouvers_logevent_driveFault Topic Byte Size
+	[Documentation]    Validate the DomeLouvers_logevent_driveFault topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14550,8 +14208,8 @@ Validate DomeLouvers Event DomeLouvers_logevent_movementEnabled Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeLouvers Event DomeLouvers_logevent_movementEnabled Topic Columns
-	[Documentation]    Validate the DomeLouvers_logevent_movementEnabled topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeLouvers Event DomeLouvers_logevent_driveFault Topic Columns
+	[Documentation]    Validate the DomeLouvers_logevent_driveFault topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14563,8 +14221,8 @@ Validate DomeLouvers Event DomeLouvers_logevent_movementEnabled Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeLouvers Event DomeLouvers_logevent_movementPrevented Topic Byte Size
-	[Documentation]    Validate the DomeLouvers_logevent_movementPrevented topic is less than 65536 bytes in total.
+Validate DomeLouvers Event DomeLouvers_logevent_movementEnabled Topic Byte Size
+	[Documentation]    Validate the DomeLouvers_logevent_movementEnabled topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14588,8 +14246,8 @@ Validate DomeLouvers Event DomeLouvers_logevent_movementPrevented Topic Byte Siz
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeLouvers Event DomeLouvers_logevent_movementPrevented Topic Columns
-	[Documentation]    Validate the DomeLouvers_logevent_movementPrevented topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeLouvers Event DomeLouvers_logevent_movementEnabled Topic Columns
+	[Documentation]    Validate the DomeLouvers_logevent_movementEnabled topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14601,8 +14259,8 @@ Validate DomeLouvers Event DomeLouvers_logevent_movementPrevented Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeLouvers Event DomeLouvers_logevent_echoResponse Topic Byte Size
-	[Documentation]    Validate the DomeLouvers_logevent_echoResponse topic is less than 65536 bytes in total.
+Validate DomeLouvers Event DomeLouvers_logevent_movementPrevented Topic Byte Size
+	[Documentation]    Validate the DomeLouvers_logevent_movementPrevented topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14626,8 +14284,8 @@ Validate DomeLouvers Event DomeLouvers_logevent_echoResponse Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeLouvers Event DomeLouvers_logevent_echoResponse Topic Columns
-	[Documentation]    Validate the DomeLouvers_logevent_echoResponse topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeLouvers Event DomeLouvers_logevent_movementPrevented Topic Columns
+	[Documentation]    Validate the DomeLouvers_logevent_movementPrevented topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14639,8 +14297,8 @@ Validate DomeLouvers Event DomeLouvers_logevent_echoResponse Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeLouvers Event DomeLouvers_logevent_subsystemError Topic Byte Size
-	[Documentation]    Validate the DomeLouvers_logevent_subsystemError topic is less than 65536 bytes in total.
+Validate DomeLouvers Event DomeLouvers_logevent_echoResponse Topic Byte Size
+	[Documentation]    Validate the DomeLouvers_logevent_echoResponse topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14664,13 +14322,51 @@ Validate DomeLouvers Event DomeLouvers_logevent_subsystemError Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeLouvers Event DomeLouvers_logevent_subsystemError Topic Columns
-	[Documentation]    Validate the DomeLouvers_logevent_subsystemError topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeLouvers Event DomeLouvers_logevent_echoResponse Topic Columns
+	[Documentation]    Validate the DomeLouvers_logevent_echoResponse topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/Count" -v . -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate DomeLouvers Event DomeLouvers_logevent_subsystemError Topic Byte Size
+	[Documentation]    Validate the DomeLouvers_logevent_subsystemError topic is less than 65536 bytes in total.
+	[Tags]    smoke    DomeLouvers
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[11]/item/Count" -v . -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[11]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate DomeLouvers Event DomeLouvers_logevent_subsystemError Topic Columns
+	[Documentation]    Validate the DomeLouvers_logevent_subsystemError topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    DomeLouvers
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[11]/item/Count" -v . -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -14905,8 +14601,8 @@ Validate DomeLWS Event DomeLWS_logevent_stateChanged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeLWS Event DomeLWS_logevent_driveEnabled Topic Byte Size
-	[Documentation]    Validate the DomeLWS_logevent_driveEnabled topic is less than 65536 bytes in total.
+Validate DomeLWS Event DomeLWS_logevent_detailedState Topic Byte Size
+	[Documentation]    Validate the DomeLWS_logevent_detailedState topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14930,8 +14626,8 @@ Validate DomeLWS Event DomeLWS_logevent_driveEnabled Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeLWS Event DomeLWS_logevent_driveEnabled Topic Columns
-	[Documentation]    Validate the DomeLWS_logevent_driveEnabled topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeLWS Event DomeLWS_logevent_detailedState Topic Columns
+	[Documentation]    Validate the DomeLWS_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14943,8 +14639,8 @@ Validate DomeLWS Event DomeLWS_logevent_driveEnabled Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeLWS Event DomeLWS_logevent_driveDisabled Topic Byte Size
-	[Documentation]    Validate the DomeLWS_logevent_driveDisabled topic is less than 65536 bytes in total.
+Validate DomeLWS Event DomeLWS_logevent_driveEnabled Topic Byte Size
+	[Documentation]    Validate the DomeLWS_logevent_driveEnabled topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14968,8 +14664,8 @@ Validate DomeLWS Event DomeLWS_logevent_driveDisabled Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeLWS Event DomeLWS_logevent_driveDisabled Topic Columns
-	[Documentation]    Validate the DomeLWS_logevent_driveDisabled topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeLWS Event DomeLWS_logevent_driveEnabled Topic Columns
+	[Documentation]    Validate the DomeLWS_logevent_driveEnabled topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14981,8 +14677,8 @@ Validate DomeLWS Event DomeLWS_logevent_driveDisabled Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeLWS Event DomeLWS_logevent_driveReady Topic Byte Size
-	[Documentation]    Validate the DomeLWS_logevent_driveReady topic is less than 65536 bytes in total.
+Validate DomeLWS Event DomeLWS_logevent_driveDisabled Topic Byte Size
+	[Documentation]    Validate the DomeLWS_logevent_driveDisabled topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15006,8 +14702,8 @@ Validate DomeLWS Event DomeLWS_logevent_driveReady Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeLWS Event DomeLWS_logevent_driveReady Topic Columns
-	[Documentation]    Validate the DomeLWS_logevent_driveReady topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeLWS Event DomeLWS_logevent_driveDisabled Topic Columns
+	[Documentation]    Validate the DomeLWS_logevent_driveDisabled topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15019,8 +14715,8 @@ Validate DomeLWS Event DomeLWS_logevent_driveReady Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeLWS Event DomeLWS_logevent_driveOverTemp Topic Byte Size
-	[Documentation]    Validate the DomeLWS_logevent_driveOverTemp topic is less than 65536 bytes in total.
+Validate DomeLWS Event DomeLWS_logevent_driveReady Topic Byte Size
+	[Documentation]    Validate the DomeLWS_logevent_driveReady topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15044,8 +14740,8 @@ Validate DomeLWS Event DomeLWS_logevent_driveOverTemp Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeLWS Event DomeLWS_logevent_driveOverTemp Topic Columns
-	[Documentation]    Validate the DomeLWS_logevent_driveOverTemp topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeLWS Event DomeLWS_logevent_driveReady Topic Columns
+	[Documentation]    Validate the DomeLWS_logevent_driveReady topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15057,8 +14753,8 @@ Validate DomeLWS Event DomeLWS_logevent_driveOverTemp Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeLWS Event DomeLWS_logevent_driveFault Topic Byte Size
-	[Documentation]    Validate the DomeLWS_logevent_driveFault topic is less than 65536 bytes in total.
+Validate DomeLWS Event DomeLWS_logevent_driveOverTemp Topic Byte Size
+	[Documentation]    Validate the DomeLWS_logevent_driveOverTemp topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15082,8 +14778,8 @@ Validate DomeLWS Event DomeLWS_logevent_driveFault Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeLWS Event DomeLWS_logevent_driveFault Topic Columns
-	[Documentation]    Validate the DomeLWS_logevent_driveFault topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeLWS Event DomeLWS_logevent_driveOverTemp Topic Columns
+	[Documentation]    Validate the DomeLWS_logevent_driveOverTemp topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15095,8 +14791,8 @@ Validate DomeLWS Event DomeLWS_logevent_driveFault Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeLWS Event DomeLWS_logevent_movementEnabled Topic Byte Size
-	[Documentation]    Validate the DomeLWS_logevent_movementEnabled topic is less than 65536 bytes in total.
+Validate DomeLWS Event DomeLWS_logevent_driveFault Topic Byte Size
+	[Documentation]    Validate the DomeLWS_logevent_driveFault topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15120,8 +14816,8 @@ Validate DomeLWS Event DomeLWS_logevent_movementEnabled Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeLWS Event DomeLWS_logevent_movementEnabled Topic Columns
-	[Documentation]    Validate the DomeLWS_logevent_movementEnabled topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeLWS Event DomeLWS_logevent_driveFault Topic Columns
+	[Documentation]    Validate the DomeLWS_logevent_driveFault topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15133,8 +14829,8 @@ Validate DomeLWS Event DomeLWS_logevent_movementEnabled Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeLWS Event DomeLWS_logevent_movementPrevented Topic Byte Size
-	[Documentation]    Validate the DomeLWS_logevent_movementPrevented topic is less than 65536 bytes in total.
+Validate DomeLWS Event DomeLWS_logevent_movementEnabled Topic Byte Size
+	[Documentation]    Validate the DomeLWS_logevent_movementEnabled topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15158,8 +14854,8 @@ Validate DomeLWS Event DomeLWS_logevent_movementPrevented Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeLWS Event DomeLWS_logevent_movementPrevented Topic Columns
-	[Documentation]    Validate the DomeLWS_logevent_movementPrevented topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeLWS Event DomeLWS_logevent_movementEnabled Topic Columns
+	[Documentation]    Validate the DomeLWS_logevent_movementEnabled topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15171,8 +14867,8 @@ Validate DomeLWS Event DomeLWS_logevent_movementPrevented Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeLWS Event DomeLWS_logevent_lockingPinDisengaged Topic Byte Size
-	[Documentation]    Validate the DomeLWS_logevent_lockingPinDisengaged topic is less than 65536 bytes in total.
+Validate DomeLWS Event DomeLWS_logevent_movementPrevented Topic Byte Size
+	[Documentation]    Validate the DomeLWS_logevent_movementPrevented topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15196,8 +14892,8 @@ Validate DomeLWS Event DomeLWS_logevent_lockingPinDisengaged Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeLWS Event DomeLWS_logevent_lockingPinDisengaged Topic Columns
-	[Documentation]    Validate the DomeLWS_logevent_lockingPinDisengaged topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeLWS Event DomeLWS_logevent_movementPrevented Topic Columns
+	[Documentation]    Validate the DomeLWS_logevent_movementPrevented topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15209,8 +14905,8 @@ Validate DomeLWS Event DomeLWS_logevent_lockingPinDisengaged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeLWS Event DomeLWS_logevent_LockingPinEngaged Topic Byte Size
-	[Documentation]    Validate the DomeLWS_logevent_LockingPinEngaged topic is less than 65536 bytes in total.
+Validate DomeLWS Event DomeLWS_logevent_lockingPinDisengaged Topic Byte Size
+	[Documentation]    Validate the DomeLWS_logevent_lockingPinDisengaged topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15234,8 +14930,8 @@ Validate DomeLWS Event DomeLWS_logevent_LockingPinEngaged Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeLWS Event DomeLWS_logevent_LockingPinEngaged Topic Columns
-	[Documentation]    Validate the DomeLWS_logevent_LockingPinEngaged topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeLWS Event DomeLWS_logevent_lockingPinDisengaged Topic Columns
+	[Documentation]    Validate the DomeLWS_logevent_lockingPinDisengaged topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15247,8 +14943,8 @@ Validate DomeLWS Event DomeLWS_logevent_LockingPinEngaged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeLWS Event DomeLWS_logevent_lockingPinHomed Topic Byte Size
-	[Documentation]    Validate the DomeLWS_logevent_lockingPinHomed topic is less than 65536 bytes in total.
+Validate DomeLWS Event DomeLWS_logevent_LockingPinEngaged Topic Byte Size
+	[Documentation]    Validate the DomeLWS_logevent_LockingPinEngaged topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15272,8 +14968,8 @@ Validate DomeLWS Event DomeLWS_logevent_lockingPinHomed Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeLWS Event DomeLWS_logevent_lockingPinHomed Topic Columns
-	[Documentation]    Validate the DomeLWS_logevent_lockingPinHomed topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeLWS Event DomeLWS_logevent_LockingPinEngaged Topic Columns
+	[Documentation]    Validate the DomeLWS_logevent_LockingPinEngaged topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15285,8 +14981,8 @@ Validate DomeLWS Event DomeLWS_logevent_lockingPinHomed Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeLWS Event DomeLWS_logevent_lockingPinFloating Topic Byte Size
-	[Documentation]    Validate the DomeLWS_logevent_lockingPinFloating topic is less than 65536 bytes in total.
+Validate DomeLWS Event DomeLWS_logevent_lockingPinHomed Topic Byte Size
+	[Documentation]    Validate the DomeLWS_logevent_lockingPinHomed topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15310,8 +15006,8 @@ Validate DomeLWS Event DomeLWS_logevent_lockingPinFloating Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeLWS Event DomeLWS_logevent_lockingPinFloating Topic Columns
-	[Documentation]    Validate the DomeLWS_logevent_lockingPinFloating topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeLWS Event DomeLWS_logevent_lockingPinHomed Topic Columns
+	[Documentation]    Validate the DomeLWS_logevent_lockingPinHomed topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15323,8 +15019,8 @@ Validate DomeLWS Event DomeLWS_logevent_lockingPinFloating Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeLWS Event DomeLWS_logevent_brakeEngaged Topic Byte Size
-	[Documentation]    Validate the DomeLWS_logevent_brakeEngaged topic is less than 65536 bytes in total.
+Validate DomeLWS Event DomeLWS_logevent_lockingPinFloating Topic Byte Size
+	[Documentation]    Validate the DomeLWS_logevent_lockingPinFloating topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15348,8 +15044,8 @@ Validate DomeLWS Event DomeLWS_logevent_brakeEngaged Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeLWS Event DomeLWS_logevent_brakeEngaged Topic Columns
-	[Documentation]    Validate the DomeLWS_logevent_brakeEngaged topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeLWS Event DomeLWS_logevent_lockingPinFloating Topic Columns
+	[Documentation]    Validate the DomeLWS_logevent_lockingPinFloating topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15361,8 +15057,8 @@ Validate DomeLWS Event DomeLWS_logevent_brakeEngaged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeLWS Event DomeLWS_logevent_brakeDisengaged Topic Byte Size
-	[Documentation]    Validate the DomeLWS_logevent_brakeDisengaged topic is less than 65536 bytes in total.
+Validate DomeLWS Event DomeLWS_logevent_brakeEngaged Topic Byte Size
+	[Documentation]    Validate the DomeLWS_logevent_brakeEngaged topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15386,8 +15082,8 @@ Validate DomeLWS Event DomeLWS_logevent_brakeDisengaged Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeLWS Event DomeLWS_logevent_brakeDisengaged Topic Columns
-	[Documentation]    Validate the DomeLWS_logevent_brakeDisengaged topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeLWS Event DomeLWS_logevent_brakeEngaged Topic Columns
+	[Documentation]    Validate the DomeLWS_logevent_brakeEngaged topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15399,8 +15095,8 @@ Validate DomeLWS Event DomeLWS_logevent_brakeDisengaged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeLWS Event DomeLWS_logevent_speedLimitReached Topic Byte Size
-	[Documentation]    Validate the DomeLWS_logevent_speedLimitReached topic is less than 65536 bytes in total.
+Validate DomeLWS Event DomeLWS_logevent_brakeDisengaged Topic Byte Size
+	[Documentation]    Validate the DomeLWS_logevent_brakeDisengaged topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15424,8 +15120,8 @@ Validate DomeLWS Event DomeLWS_logevent_speedLimitReached Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeLWS Event DomeLWS_logevent_speedLimitReached Topic Columns
-	[Documentation]    Validate the DomeLWS_logevent_speedLimitReached topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeLWS Event DomeLWS_logevent_brakeDisengaged Topic Columns
+	[Documentation]    Validate the DomeLWS_logevent_brakeDisengaged topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15437,8 +15133,8 @@ Validate DomeLWS Event DomeLWS_logevent_speedLimitReached Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeLWS Event DomeLWS_logevent_accelerationLimitReached Topic Byte Size
-	[Documentation]    Validate the DomeLWS_logevent_accelerationLimitReached topic is less than 65536 bytes in total.
+Validate DomeLWS Event DomeLWS_logevent_speedLimitReached Topic Byte Size
+	[Documentation]    Validate the DomeLWS_logevent_speedLimitReached topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15462,8 +15158,8 @@ Validate DomeLWS Event DomeLWS_logevent_accelerationLimitReached Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeLWS Event DomeLWS_logevent_accelerationLimitReached Topic Columns
-	[Documentation]    Validate the DomeLWS_logevent_accelerationLimitReached topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeLWS Event DomeLWS_logevent_speedLimitReached Topic Columns
+	[Documentation]    Validate the DomeLWS_logevent_speedLimitReached topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15475,8 +15171,8 @@ Validate DomeLWS Event DomeLWS_logevent_accelerationLimitReached Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeLWS Event DomeLWS_logevent_speedLimitSubsided Topic Byte Size
-	[Documentation]    Validate the DomeLWS_logevent_speedLimitSubsided topic is less than 65536 bytes in total.
+Validate DomeLWS Event DomeLWS_logevent_accelerationLimitReached Topic Byte Size
+	[Documentation]    Validate the DomeLWS_logevent_accelerationLimitReached topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15500,8 +15196,8 @@ Validate DomeLWS Event DomeLWS_logevent_speedLimitSubsided Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeLWS Event DomeLWS_logevent_speedLimitSubsided Topic Columns
-	[Documentation]    Validate the DomeLWS_logevent_speedLimitSubsided topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeLWS Event DomeLWS_logevent_accelerationLimitReached Topic Columns
+	[Documentation]    Validate the DomeLWS_logevent_accelerationLimitReached topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15513,8 +15209,8 @@ Validate DomeLWS Event DomeLWS_logevent_speedLimitSubsided Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeLWS Event DomeLWS_logevent_accelerationLimitSubsided Topic Byte Size
-	[Documentation]    Validate the DomeLWS_logevent_accelerationLimitSubsided topic is less than 65536 bytes in total.
+Validate DomeLWS Event DomeLWS_logevent_speedLimitSubsided Topic Byte Size
+	[Documentation]    Validate the DomeLWS_logevent_speedLimitSubsided topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15538,8 +15234,8 @@ Validate DomeLWS Event DomeLWS_logevent_accelerationLimitSubsided Topic Byte Siz
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeLWS Event DomeLWS_logevent_accelerationLimitSubsided Topic Columns
-	[Documentation]    Validate the DomeLWS_logevent_accelerationLimitSubsided topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeLWS Event DomeLWS_logevent_speedLimitSubsided Topic Columns
+	[Documentation]    Validate the DomeLWS_logevent_speedLimitSubsided topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15551,8 +15247,8 @@ Validate DomeLWS Event DomeLWS_logevent_accelerationLimitSubsided Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeLWS Event DomeLWS_logevent_echoResponse Topic Byte Size
-	[Documentation]    Validate the DomeLWS_logevent_echoResponse topic is less than 65536 bytes in total.
+Validate DomeLWS Event DomeLWS_logevent_accelerationLimitSubsided Topic Byte Size
+	[Documentation]    Validate the DomeLWS_logevent_accelerationLimitSubsided topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15576,8 +15272,8 @@ Validate DomeLWS Event DomeLWS_logevent_echoResponse Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeLWS Event DomeLWS_logevent_echoResponse Topic Columns
-	[Documentation]    Validate the DomeLWS_logevent_echoResponse topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeLWS Event DomeLWS_logevent_accelerationLimitSubsided Topic Columns
+	[Documentation]    Validate the DomeLWS_logevent_accelerationLimitSubsided topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15589,8 +15285,8 @@ Validate DomeLWS Event DomeLWS_logevent_echoResponse Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeLWS Event DomeLWS_logevent_motionModeChanged Topic Byte Size
-	[Documentation]    Validate the DomeLWS_logevent_motionModeChanged topic is less than 65536 bytes in total.
+Validate DomeLWS Event DomeLWS_logevent_echoResponse Topic Byte Size
+	[Documentation]    Validate the DomeLWS_logevent_echoResponse topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15614,8 +15310,8 @@ Validate DomeLWS Event DomeLWS_logevent_motionModeChanged Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeLWS Event DomeLWS_logevent_motionModeChanged Topic Columns
-	[Documentation]    Validate the DomeLWS_logevent_motionModeChanged topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeLWS Event DomeLWS_logevent_echoResponse Topic Columns
+	[Documentation]    Validate the DomeLWS_logevent_echoResponse topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15627,8 +15323,8 @@ Validate DomeLWS Event DomeLWS_logevent_motionModeChanged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeLWS Event DomeLWS_logevent_subsystemError Topic Byte Size
-	[Documentation]    Validate the DomeLWS_logevent_subsystemError topic is less than 65536 bytes in total.
+Validate DomeLWS Event DomeLWS_logevent_motionModeChanged Topic Byte Size
+	[Documentation]    Validate the DomeLWS_logevent_motionModeChanged topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15652,13 +15348,51 @@ Validate DomeLWS Event DomeLWS_logevent_subsystemError Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeLWS Event DomeLWS_logevent_subsystemError Topic Columns
-	[Documentation]    Validate the DomeLWS_logevent_subsystemError topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeLWS Event DomeLWS_logevent_motionModeChanged Topic Columns
+	[Documentation]    Validate the DomeLWS_logevent_motionModeChanged topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[21]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[21]/item/Count" -v . -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate DomeLWS Event DomeLWS_logevent_subsystemError Topic Byte Size
+	[Documentation]    Validate the DomeLWS_logevent_subsystemError topic is less than 65536 bytes in total.
+	[Tags]    smoke    DomeLWS
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[22]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[22]/item/Count" -v . -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[22]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate DomeLWS Event DomeLWS_logevent_subsystemError Topic Columns
+	[Documentation]    Validate the DomeLWS_logevent_subsystemError topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    DomeLWS
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[22]/item)" -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[22]/item/Count" -v . -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -15779,8 +15513,8 @@ Validate DomeMONCS Event DomeMONCS_logevent_stateChanged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeMONCS Event DomeMONCS_logevent_echoResponse Topic Byte Size
-	[Documentation]    Validate the DomeMONCS_logevent_echoResponse topic is less than 65536 bytes in total.
+Validate DomeMONCS Event DomeMONCS_logevent_detailedState Topic Byte Size
+	[Documentation]    Validate the DomeMONCS_logevent_detailedState topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeMONCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15804,8 +15538,8 @@ Validate DomeMONCS Event DomeMONCS_logevent_echoResponse Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeMONCS Event DomeMONCS_logevent_echoResponse Topic Columns
-	[Documentation]    Validate the DomeMONCS_logevent_echoResponse topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeMONCS Event DomeMONCS_logevent_detailedState Topic Columns
+	[Documentation]    Validate the DomeMONCS_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeMONCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15817,8 +15551,8 @@ Validate DomeMONCS Event DomeMONCS_logevent_echoResponse Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeMONCS Event DomeMONCS_logevent_subsystemError Topic Byte Size
-	[Documentation]    Validate the DomeMONCS_logevent_subsystemError topic is less than 65536 bytes in total.
+Validate DomeMONCS Event DomeMONCS_logevent_echoResponse Topic Byte Size
+	[Documentation]    Validate the DomeMONCS_logevent_echoResponse topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeMONCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15842,8 +15576,8 @@ Validate DomeMONCS Event DomeMONCS_logevent_subsystemError Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeMONCS Event DomeMONCS_logevent_subsystemError Topic Columns
-	[Documentation]    Validate the DomeMONCS_logevent_subsystemError topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeMONCS Event DomeMONCS_logevent_echoResponse Topic Columns
+	[Documentation]    Validate the DomeMONCS_logevent_echoResponse topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeMONCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15855,8 +15589,8 @@ Validate DomeMONCS Event DomeMONCS_logevent_subsystemError Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeMONCS Event DomeMONCS_logevent_interlock Topic Byte Size
-	[Documentation]    Validate the DomeMONCS_logevent_interlock topic is less than 65536 bytes in total.
+Validate DomeMONCS Event DomeMONCS_logevent_subsystemError Topic Byte Size
+	[Documentation]    Validate the DomeMONCS_logevent_subsystemError topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeMONCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15880,13 +15614,51 @@ Validate DomeMONCS Event DomeMONCS_logevent_interlock Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeMONCS Event DomeMONCS_logevent_interlock Topic Columns
-	[Documentation]    Validate the DomeMONCS_logevent_interlock topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeMONCS Event DomeMONCS_logevent_subsystemError Topic Columns
+	[Documentation]    Validate the DomeMONCS_logevent_subsystemError topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeMONCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Events.xml
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate DomeMONCS Event DomeMONCS_logevent_interlock Topic Byte Size
+	[Documentation]    Validate the DomeMONCS_logevent_interlock topic is less than 65536 bytes in total.
+	[Tags]    smoke    DomeMONCS
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate DomeMONCS Event DomeMONCS_logevent_interlock Topic Columns
+	[Documentation]    Validate the DomeMONCS_logevent_interlock topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    DomeMONCS
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -16007,8 +15779,8 @@ Validate DomeTHCS Event DomeTHCS_logevent_stateChanged Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeTHCS Event DomeTHCS_logevent_movementEnabled Topic Byte Size
-	[Documentation]    Validate the DomeTHCS_logevent_movementEnabled topic is less than 65536 bytes in total.
+Validate DomeTHCS Event DomeTHCS_logevent_detailedState Topic Byte Size
+	[Documentation]    Validate the DomeTHCS_logevent_detailedState topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeTHCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16032,8 +15804,8 @@ Validate DomeTHCS Event DomeTHCS_logevent_movementEnabled Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeTHCS Event DomeTHCS_logevent_movementEnabled Topic Columns
-	[Documentation]    Validate the DomeTHCS_logevent_movementEnabled topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeTHCS Event DomeTHCS_logevent_detailedState Topic Columns
+	[Documentation]    Validate the DomeTHCS_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeTHCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16045,8 +15817,8 @@ Validate DomeTHCS Event DomeTHCS_logevent_movementEnabled Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeTHCS Event DomeTHCS_logevent_movementPrevented Topic Byte Size
-	[Documentation]    Validate the DomeTHCS_logevent_movementPrevented topic is less than 65536 bytes in total.
+Validate DomeTHCS Event DomeTHCS_logevent_movementEnabled Topic Byte Size
+	[Documentation]    Validate the DomeTHCS_logevent_movementEnabled topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeTHCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16070,8 +15842,8 @@ Validate DomeTHCS Event DomeTHCS_logevent_movementPrevented Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeTHCS Event DomeTHCS_logevent_movementPrevented Topic Columns
-	[Documentation]    Validate the DomeTHCS_logevent_movementPrevented topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeTHCS Event DomeTHCS_logevent_movementEnabled Topic Columns
+	[Documentation]    Validate the DomeTHCS_logevent_movementEnabled topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeTHCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16083,8 +15855,8 @@ Validate DomeTHCS Event DomeTHCS_logevent_movementPrevented Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeTHCS Event DomeTHCS_logevent_echoResponse Topic Byte Size
-	[Documentation]    Validate the DomeTHCS_logevent_echoResponse topic is less than 65536 bytes in total.
+Validate DomeTHCS Event DomeTHCS_logevent_movementPrevented Topic Byte Size
+	[Documentation]    Validate the DomeTHCS_logevent_movementPrevented topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeTHCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16108,8 +15880,8 @@ Validate DomeTHCS Event DomeTHCS_logevent_echoResponse Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeTHCS Event DomeTHCS_logevent_echoResponse Topic Columns
-	[Documentation]    Validate the DomeTHCS_logevent_echoResponse topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeTHCS Event DomeTHCS_logevent_movementPrevented Topic Columns
+	[Documentation]    Validate the DomeTHCS_logevent_movementPrevented topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeTHCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16121,8 +15893,8 @@ Validate DomeTHCS Event DomeTHCS_logevent_echoResponse Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate DomeTHCS Event DomeTHCS_logevent_subsystemError Topic Byte Size
-	[Documentation]    Validate the DomeTHCS_logevent_subsystemError topic is less than 65536 bytes in total.
+Validate DomeTHCS Event DomeTHCS_logevent_echoResponse Topic Byte Size
+	[Documentation]    Validate the DomeTHCS_logevent_echoResponse topic is less than 65536 bytes in total.
 	[Tags]    smoke    DomeTHCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16146,13 +15918,51 @@ Validate DomeTHCS Event DomeTHCS_logevent_subsystemError Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate DomeTHCS Event DomeTHCS_logevent_subsystemError Topic Columns
-	[Documentation]    Validate the DomeTHCS_logevent_subsystemError topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate DomeTHCS Event DomeTHCS_logevent_echoResponse Topic Columns
+	[Documentation]    Validate the DomeTHCS_logevent_echoResponse topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    DomeTHCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Events.xml
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate DomeTHCS Event DomeTHCS_logevent_subsystemError Topic Byte Size
+	[Documentation]    Validate the DomeTHCS_logevent_subsystemError topic is less than 65536 bytes in total.
+	[Tags]    smoke    DomeTHCS
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/Count" -v . -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate DomeTHCS Event DomeTHCS_logevent_subsystemError Topic Columns
+	[Documentation]    Validate the DomeTHCS_logevent_subsystemError topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    DomeTHCS
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/Count" -v . -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -19465,6 +19275,82 @@ Validate LinearStage Command LinearStage_command_stop Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
+Validate LinearStage Event LinearStage_logevent_detailedState Topic Byte Size
+	[Documentation]    Validate the LinearStage_logevent_detailedState topic is less than 65536 bytes in total.
+	[Tags]    smoke    LinearStage
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[1]/item/Count" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[1]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate LinearStage Event LinearStage_logevent_detailedState Topic Columns
+	[Documentation]    Validate the LinearStage_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    LinearStage
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[1]/item/Count" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate LinearStage Event LinearStage_logevent_heartbeat Topic Byte Size
+	[Documentation]    Validate the LinearStage_logevent_heartbeat topic is less than 65536 bytes in total.
+	[Tags]    smoke    LinearStage
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/Count" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate LinearStage Event LinearStage_logevent_heartbeat Topic Columns
+	[Documentation]    Validate the LinearStage_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    LinearStage
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/Count" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
 Validate LinearStage Telemetry LinearStage_position Topic Byte Size
 	[Documentation]    Validate the LinearStage_position topic is less than 65536 bytes in total.
 	[Tags]    smoke    LinearStage
@@ -19497,6 +19383,766 @@ Validate LinearStage Telemetry LinearStage_position Topic Columns
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Telemetry.xml
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/Count" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate MTAOS Command MTAOS_command_measureAlignment Topic Byte Size
+	[Documentation]    Validate the MTAOS_command_measureAlignment topic is less than 65536 bytes in total.
+	[Tags]    smoke    MTAOS
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate MTAOS Command MTAOS_command_measureAlignment Topic Columns
+	[Documentation]    Validate the MTAOS_command_measureAlignment topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    MTAOS
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate MTAOS Command MTAOS_command_applyAlignmentCorrection Topic Byte Size
+	[Documentation]    Validate the MTAOS_command_applyAlignmentCorrection topic is less than 65536 bytes in total.
+	[Tags]    smoke    MTAOS
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[2]/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate MTAOS Command MTAOS_command_applyAlignmentCorrection Topic Columns
+	[Documentation]    Validate the MTAOS_command_applyAlignmentCorrection topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    MTAOS
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[2]/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate MTAOS Command MTAOS_command_resetCorrection Topic Byte Size
+	[Documentation]    Validate the MTAOS_command_resetCorrection topic is less than 65536 bytes in total.
+	[Tags]    smoke    MTAOS
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[3]/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[3]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate MTAOS Command MTAOS_command_resetCorrection Topic Columns
+	[Documentation]    Validate the MTAOS_command_resetCorrection topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    MTAOS
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[3]/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate MTAOS Command MTAOS_command_processCalibrationProducts Topic Byte Size
+	[Documentation]    Validate the MTAOS_command_processCalibrationProducts topic is less than 65536 bytes in total.
+	[Tags]    smoke    MTAOS
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[4]/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate MTAOS Command MTAOS_command_processCalibrationProducts Topic Columns
+	[Documentation]    Validate the MTAOS_command_processCalibrationProducts topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    MTAOS
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[4]/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate MTAOS Command MTAOS_command_processWavefrontError Topic Byte Size
+	[Documentation]    Validate the MTAOS_command_processWavefrontError topic is less than 65536 bytes in total.
+	[Tags]    smoke    MTAOS
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[5]/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate MTAOS Command MTAOS_command_processWavefrontError Topic Columns
+	[Documentation]    Validate the MTAOS_command_processWavefrontError topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    MTAOS
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[5]/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate MTAOS Command MTAOS_command_processIntraExtraWavefrontError Topic Byte Size
+	[Documentation]    Validate the MTAOS_command_processIntraExtraWavefrontError topic is less than 65536 bytes in total.
+	[Tags]    smoke    MTAOS
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[6]/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[6]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate MTAOS Command MTAOS_command_processIntraExtraWavefrontError Topic Columns
+	[Documentation]    Validate the MTAOS_command_processIntraExtraWavefrontError topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    MTAOS
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[6]/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate MTAOS Command MTAOS_command_processShWavefrontError Topic Byte Size
+	[Documentation]    Validate the MTAOS_command_processShWavefrontError topic is less than 65536 bytes in total.
+	[Tags]    smoke    MTAOS
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[7]/item)" -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[7]/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[7]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate MTAOS Command MTAOS_command_processShWavefrontError Topic Columns
+	[Documentation]    Validate the MTAOS_command_processShWavefrontError topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    MTAOS
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[7]/item)" -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[7]/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate MTAOS Command MTAOS_command_issueSubsystemCorrections Topic Byte Size
+	[Documentation]    Validate the MTAOS_command_issueSubsystemCorrections topic is less than 65536 bytes in total.
+	[Tags]    smoke    MTAOS
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[8]/item)" -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[8]/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[8]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate MTAOS Command MTAOS_command_issueSubsystemCorrections Topic Columns
+	[Documentation]    Validate the MTAOS_command_issueSubsystemCorrections topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    MTAOS
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[8]/item)" -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[8]/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate MTAOS Event MTAOS_logevent_heartbeat Topic Byte Size
+	[Documentation]    Validate the MTAOS_logevent_heartbeat topic is less than 65536 bytes in total.
+	[Tags]    smoke    MTAOS
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[1]/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[1]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate MTAOS Event MTAOS_logevent_heartbeat Topic Columns
+	[Documentation]    Validate the MTAOS_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    MTAOS
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[1]/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate MTAOS Event MTAOS_logevent_noEnoughZernikeTerm Topic Byte Size
+	[Documentation]    Validate the MTAOS_logevent_noEnoughZernikeTerm topic is less than 65536 bytes in total.
+	[Tags]    smoke    MTAOS
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate MTAOS Event MTAOS_logevent_noEnoughZernikeTerm Topic Columns
+	[Documentation]    Validate the MTAOS_logevent_noEnoughZernikeTerm topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    MTAOS
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate MTAOS Event MTAOS_logevent_degreeOfFreedom Topic Byte Size
+	[Documentation]    Validate the MTAOS_logevent_degreeOfFreedom topic is less than 65536 bytes in total.
+	[Tags]    smoke    MTAOS
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate MTAOS Event MTAOS_logevent_degreeOfFreedom Topic Columns
+	[Documentation]    Validate the MTAOS_logevent_degreeOfFreedom topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    MTAOS
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate MTAOS Event MTAOS_logevent_wavefrontError Topic Byte Size
+	[Documentation]    Validate the MTAOS_logevent_wavefrontError topic is less than 65536 bytes in total.
+	[Tags]    smoke    MTAOS
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate MTAOS Event MTAOS_logevent_wavefrontError Topic Columns
+	[Documentation]    Validate the MTAOS_logevent_wavefrontError topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    MTAOS
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate MTAOS Event MTAOS_logevent_normalTargetWfsList Topic Byte Size
+	[Documentation]    Validate the MTAOS_logevent_normalTargetWfsList topic is less than 65536 bytes in total.
+	[Tags]    smoke    MTAOS
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate MTAOS Event MTAOS_logevent_normalTargetWfsList Topic Columns
+	[Documentation]    Validate the MTAOS_logevent_normalTargetWfsList topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    MTAOS
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate MTAOS Event MTAOS_logevent_comcamTargetWfsList Topic Byte Size
+	[Documentation]    Validate the MTAOS_logevent_comcamTargetWfsList topic is less than 65536 bytes in total.
+	[Tags]    smoke    MTAOS
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate MTAOS Event MTAOS_logevent_comcamTargetWfsList Topic Columns
+	[Documentation]    Validate the MTAOS_logevent_comcamTargetWfsList topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    MTAOS
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate MTAOS Event MTAOS_logevent_famTargetWfsList Topic Byte Size
+	[Documentation]    Validate the MTAOS_logevent_famTargetWfsList topic is less than 65536 bytes in total.
+	[Tags]    smoke    MTAOS
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate MTAOS Event MTAOS_logevent_famTargetWfsList Topic Columns
+	[Documentation]    Validate the MTAOS_logevent_famTargetWfsList topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    MTAOS
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate MTAOS Event MTAOS_logevent_sensorPssnList Topic Byte Size
+	[Documentation]    Validate the MTAOS_logevent_sensorPssnList topic is less than 65536 bytes in total.
+	[Tags]    smoke    MTAOS
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate MTAOS Event MTAOS_logevent_sensorPssnList Topic Columns
+	[Documentation]    Validate the MTAOS_logevent_sensorPssnList topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    MTAOS
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate MTAOS Event MTAOS_logevent_simParamList Topic Byte Size
+	[Documentation]    Validate the MTAOS_logevent_simParamList topic is less than 65536 bytes in total.
+	[Tags]    smoke    MTAOS
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate MTAOS Event MTAOS_logevent_simParamList Topic Columns
+	[Documentation]    Validate the MTAOS_logevent_simParamList topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    MTAOS
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate MTAOS Event MTAOS_logevent_imageReady Topic Byte Size
+	[Documentation]    Validate the MTAOS_logevent_imageReady topic is less than 65536 bytes in total.
+	[Tags]    smoke    MTAOS
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate MTAOS Event MTAOS_logevent_imageReady Topic Columns
+	[Documentation]    Validate the MTAOS_logevent_imageReady topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    MTAOS
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate MTAOS Telemetry MTAOS_wepDuration Topic Byte Size
+	[Documentation]    Validate the MTAOS_wepDuration topic is less than 65536 bytes in total.
+	[Tags]    smoke    MTAOS
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/MTAOS/MTAOS_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate MTAOS Telemetry MTAOS_wepDuration Topic Columns
+	[Documentation]    Validate the MTAOS_wepDuration topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    MTAOS
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/MTAOS/MTAOS_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate MTAOS Telemetry MTAOS_ofcDuration Topic Byte Size
+	[Documentation]    Validate the MTAOS_ofcDuration topic is less than 65536 bytes in total.
+	[Tags]    smoke    MTAOS
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/MTAOS/MTAOS_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[2]/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate MTAOS Telemetry MTAOS_ofcDuration Topic Columns
+	[Documentation]    Validate the MTAOS_ofcDuration topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    MTAOS
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/MTAOS/MTAOS_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[2]/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Telemetry.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -40093,6 +40739,120 @@ Validate TunableLaser Event TunableLaser_logevent_laserInstabilityFlag Topic Col
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/TunableLaser/TunableLaser_Events.xml
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[1]/item/Count" -v . -n ${folder}/sal_interfaces/TunableLaser/TunableLaser_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate TunableLaser Event TunableLaser_logevent_detailedState Topic Byte Size
+	[Documentation]    Validate the TunableLaser_logevent_detailedState topic is less than 65536 bytes in total.
+	[Tags]    smoke    TunableLaser
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/TunableLaser/TunableLaser_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/Count" -v . -n ${folder}/sal_interfaces/TunableLaser/TunableLaser_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/TunableLaser/TunableLaser_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate TunableLaser Event TunableLaser_logevent_detailedState Topic Columns
+	[Documentation]    Validate the TunableLaser_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    TunableLaser
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/TunableLaser/TunableLaser_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/Count" -v . -n ${folder}/sal_interfaces/TunableLaser/TunableLaser_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate TunableLaser Event TunableLaser_logevent_heartbeat Topic Byte Size
+	[Documentation]    Validate the TunableLaser_logevent_heartbeat topic is less than 65536 bytes in total.
+	[Tags]    smoke    TunableLaser
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/TunableLaser/TunableLaser_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/Count" -v . -n ${folder}/sal_interfaces/TunableLaser/TunableLaser_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/TunableLaser/TunableLaser_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate TunableLaser Event TunableLaser_logevent_heartbeat Topic Columns
+	[Documentation]    Validate the TunableLaser_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    TunableLaser
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/TunableLaser/TunableLaser_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/Count" -v . -n ${folder}/sal_interfaces/TunableLaser/TunableLaser_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate TunableLaser Event TunableLaser_logevent_wavelengthChanged Topic Byte Size
+	[Documentation]    Validate the TunableLaser_logevent_wavelengthChanged topic is less than 65536 bytes in total.
+	[Tags]    smoke    TunableLaser
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/TunableLaser/TunableLaser_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/TunableLaser/TunableLaser_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/TunableLaser/TunableLaser_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate TunableLaser Event TunableLaser_logevent_wavelengthChanged Topic Columns
+	[Documentation]    Validate the TunableLaser_logevent_wavelengthChanged topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Tags]    smoke    TunableLaser
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/TunableLaser/TunableLaser_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/TunableLaser/TunableLaser_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}

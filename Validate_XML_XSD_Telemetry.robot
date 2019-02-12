@@ -200,6 +200,12 @@ Validate LinearStage Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   LinearStage_Telemetry.xml - valid
 
+Validate MTAOS Telemetry XML file
+	[Tags]    smoke    MTAOS
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/MTAOS/MTAOS_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   MTAOS_Telemetry.xml - valid
+
 Validate MTArchiver Telemetry XML file
 	[Tags]    smoke    MTArchiver
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/MTArchiver/MTArchiver_Telemetry.xml

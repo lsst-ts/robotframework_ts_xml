@@ -736,10 +736,42 @@ Validate LinearStage Commands XML Counts
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
+Validate LinearStage Events XML Counts
+	[Documentation]    Validate the LinearStage Events XML count.
+	[Tags]    smoke    LinearStage
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
 Validate LinearStage Telemetry XML Counts
 	[Documentation]    Validate the LinearStage Telemetry XML count.
 	[Tags]    smoke    LinearStage
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
+Validate MTAOS Commands XML Counts
+	[Documentation]    Validate the MTAOS Commands XML count.
+	[Tags]    smoke    MTAOS
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
+Validate MTAOS Events XML Counts
+	[Documentation]    Validate the MTAOS Events XML count.
+	[Tags]    smoke    MTAOS
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
+Validate MTAOS Telemetry XML Counts
+	[Documentation]    Validate the MTAOS Telemetry XML count.
+	[Tags]    smoke    MTAOS
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,

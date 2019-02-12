@@ -212,6 +212,18 @@ Validate HVAC Events XML file
 	Log    ${output}
 	Should Contain    ${output}   HVAC_Events.xml - valid
 
+Validate LinearStage Events XML file
+	[Tags]    smoke    LinearStage
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   LinearStage_Events.xml - valid
+
+Validate MTAOS Events XML file
+	[Tags]    smoke    MTAOS
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   MTAOS_Events.xml - valid
+
 Validate MTArchiver Events XML file
 	[Tags]    smoke    MTArchiver
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/MTArchiver/MTArchiver_Events.xml
