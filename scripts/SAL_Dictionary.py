@@ -85,19 +85,9 @@ for csc in xml_common.subsystems:
 
 	# Mark test cases with Jira tickets
 	if csc == "MTTCS":
-		skipped="    TSS-1795"
-	elif csc == "OCS":
-		skipped="    TSS-1792"
-	elif csc == "Sequencer":
-		skipped="    TSS-1793"
+		skipped="    DM-17357"
 	elif csc == "ATTCS":
-		skipped="    TSS-2978"
-	elif csc == "MTTCS":
-		skipped="    TSS-1795"
-	elif csc == "Dome":
-		skipped="    TSS-1778"
-	elif csc == "ATMCS":
-		skipped="    TSS-3089"
+		skipped="    DM-17353"
 	elif csc == "Environment":
 		skipped="    skipped"
 	else:

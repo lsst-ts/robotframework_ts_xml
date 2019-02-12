@@ -237,7 +237,7 @@ Validate Rotator Commands XML file
 	Should Contain    ${output}   Rotator_Commands.xml - valid
 
 Validate Script Commands XML file
-	[Tags]    smoke    Script    TSS-3331
+	[Tags]    smoke    Script
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/Script/Script_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   Script_Commands.xml - valid

@@ -188,14 +188,14 @@ Validate ATHexapod Generics Element
 
 Validate ATMCS Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
-	[Tags]    smoke    ATMCS    TSS-3089
+	[Tags]    smoke    ATMCS
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    ATMCS
 	Should Contain    ${cscs}    ${csc}
 
 Validate ATMCS Generics Element
 	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
-	[Tags]    smoke    ATMCS    TSS-3089
+	[Tags]    smoke    ATMCS
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='ATMCS']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    ATMCS has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
@@ -244,14 +244,14 @@ Validate ATSpectrograph Generics Element
 
 Validate ATTCS Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
-	[Tags]    smoke    ATTCS    TSS-2978
+	[Tags]    smoke    ATTCS    DM-17353
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    ATTCS
 	Should Contain    ${cscs}    ${csc}
 
 Validate ATTCS Generics Element
 	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
-	[Tags]    smoke    ATTCS    TSS-2978
+	[Tags]    smoke    ATTCS    DM-17353
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='ATTCS']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    ATTCS has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
@@ -328,14 +328,14 @@ Validate DIMM Generics Element
 
 Validate Dome Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
-	[Tags]    smoke    Dome    TSS-1778
+	[Tags]    smoke    Dome
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    Dome
 	Should Contain    ${cscs}    ${csc}
 
 Validate Dome Generics Element
 	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
-	[Tags]    smoke    Dome    TSS-1778
+	[Tags]    smoke    Dome
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='Dome']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    Dome has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
@@ -748,14 +748,14 @@ Validate MTOFC Generics Element
 
 Validate MTTCS Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
-	[Tags]    smoke    MTTCS    TSS-1795
+	[Tags]    smoke    MTTCS    DM-17357
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    MTTCS
 	Should Contain    ${cscs}    ${csc}
 
 Validate MTTCS Generics Element
 	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
-	[Tags]    smoke    MTTCS    TSS-1795
+	[Tags]    smoke    MTTCS    DM-17357
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='MTTCS']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    MTTCS has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
@@ -790,14 +790,14 @@ Validate MTVMS Generics Element
 
 Validate OCS Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
-	[Tags]    smoke    OCS    TSS-1792
+	[Tags]    smoke    OCS
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    OCS
 	Should Contain    ${cscs}    ${csc}
 
 Validate OCS Generics Element
 	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
-	[Tags]    smoke    OCS    TSS-1792
+	[Tags]    smoke    OCS
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='OCS']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    OCS has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
@@ -888,14 +888,14 @@ Validate ScriptQueue Generics Element
 
 Validate Sequencer Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
-	[Tags]    smoke    Sequencer    TSS-1793
+	[Tags]    smoke    Sequencer
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    Sequencer
 	Should Contain    ${cscs}    ${csc}
 
 Validate Sequencer Generics Element
 	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
-	[Tags]    smoke    Sequencer    TSS-1793
+	[Tags]    smoke    Sequencer
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='Sequencer']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    Sequencer has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes

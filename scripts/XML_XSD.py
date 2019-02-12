@@ -32,23 +32,10 @@ for topictype in ["Commands", "Events", "Telemetry"]:
 
 		# Mark test cases with Jira tickets
 		skipped=com_skipped=event_skipped=enum_skipped=""
-		if (subsystem == "Test" and topictype == "Telemetry"):
-			telem_skipped="    TSS-3224"
-			skipped=com_skipped=event_skipped=""
-		elif (subsystem == "MTMount" and topictype == "Telemetry"):
-			telem_skipped="    TSS-3286"
-			skipped=com_skipped=event_skipped=""
-		elif (subsystem == "Script" and topictype == "Commands"):
-			telem_skipped="    TSS-3331"
-			skipped=com_skipped=event_skipped=""
-		elif (subsystem == "Script" and topictype == "Events"):
-			telem_skipped="    TSS-3332"
-			skipped=com_skipped=event_skipped=""
+		if (subsystem == "test" and topictype == "test"):
+			skipped=com_skipped=event_skipped=telem_skipped=""
 		else:
-			skipped=""
-			com_skipped=""
-			event_skipped=""
-			telem_skipped=""
+			skipped=com_skipped=event_skipped=telem_skipped=""
 
 		# Validate each XML
 		for xml in xmls:

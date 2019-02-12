@@ -19427,8 +19427,8 @@ Validate MTAOS Command MTAOS_command_measureAlignment Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTAOS Command MTAOS_command_applyAlignmentCorrection Topic Byte Size
-	[Documentation]    Validate the MTAOS_command_applyAlignmentCorrection topic is less than 65536 bytes in total.
+Validate MTAOS Command MTAOS_command_issueAlignmentCorrection Topic Byte Size
+	[Documentation]    Validate the MTAOS_command_issueAlignmentCorrection topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTAOS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19452,8 +19452,8 @@ Validate MTAOS Command MTAOS_command_applyAlignmentCorrection Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTAOS Command MTAOS_command_applyAlignmentCorrection Topic Columns
-	[Documentation]    Validate the MTAOS_command_applyAlignmentCorrection topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate MTAOS Command MTAOS_command_issueAlignmentCorrection Topic Columns
+	[Documentation]    Validate the MTAOS_command_issueAlignmentCorrection topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    MTAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19465,8 +19465,8 @@ Validate MTAOS Command MTAOS_command_applyAlignmentCorrection Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTAOS Command MTAOS_command_resetCorrection Topic Byte Size
-	[Documentation]    Validate the MTAOS_command_resetCorrection topic is less than 65536 bytes in total.
+Validate MTAOS Command MTAOS_command_resetWavefrontCorrection Topic Byte Size
+	[Documentation]    Validate the MTAOS_command_resetWavefrontCorrection topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTAOS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19490,8 +19490,8 @@ Validate MTAOS Command MTAOS_command_resetCorrection Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTAOS Command MTAOS_command_resetCorrection Topic Columns
-	[Documentation]    Validate the MTAOS_command_resetCorrection topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate MTAOS Command MTAOS_command_resetWavefrontCorrection Topic Columns
+	[Documentation]    Validate the MTAOS_command_resetWavefrontCorrection topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    MTAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19503,8 +19503,8 @@ Validate MTAOS Command MTAOS_command_resetCorrection Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTAOS Command MTAOS_command_processCalibrationProducts Topic Byte Size
-	[Documentation]    Validate the MTAOS_command_processCalibrationProducts topic is less than 65536 bytes in total.
+Validate MTAOS Command MTAOS_command_issueWavefrontCorrection Topic Byte Size
+	[Documentation]    Validate the MTAOS_command_issueWavefrontCorrection topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTAOS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19528,8 +19528,8 @@ Validate MTAOS Command MTAOS_command_processCalibrationProducts Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTAOS Command MTAOS_command_processCalibrationProducts Topic Columns
-	[Documentation]    Validate the MTAOS_command_processCalibrationProducts topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate MTAOS Command MTAOS_command_issueWavefrontCorrection Topic Columns
+	[Documentation]    Validate the MTAOS_command_issueWavefrontCorrection topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    MTAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19541,8 +19541,8 @@ Validate MTAOS Command MTAOS_command_processCalibrationProducts Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTAOS Command MTAOS_command_processWavefrontError Topic Byte Size
-	[Documentation]    Validate the MTAOS_command_processWavefrontError topic is less than 65536 bytes in total.
+Validate MTAOS Command MTAOS_command_processCalibrationProducts Topic Byte Size
+	[Documentation]    Validate the MTAOS_command_processCalibrationProducts topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTAOS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19566,8 +19566,8 @@ Validate MTAOS Command MTAOS_command_processWavefrontError Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTAOS Command MTAOS_command_processWavefrontError Topic Columns
-	[Documentation]    Validate the MTAOS_command_processWavefrontError topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate MTAOS Command MTAOS_command_processCalibrationProducts Topic Columns
+	[Documentation]    Validate the MTAOS_command_processCalibrationProducts topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    MTAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19579,8 +19579,8 @@ Validate MTAOS Command MTAOS_command_processWavefrontError Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTAOS Command MTAOS_command_processIntraExtraWavefrontError Topic Byte Size
-	[Documentation]    Validate the MTAOS_command_processIntraExtraWavefrontError topic is less than 65536 bytes in total.
+Validate MTAOS Command MTAOS_command_processWavefrontError Topic Byte Size
+	[Documentation]    Validate the MTAOS_command_processWavefrontError topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTAOS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19604,8 +19604,8 @@ Validate MTAOS Command MTAOS_command_processIntraExtraWavefrontError Topic Byte 
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTAOS Command MTAOS_command_processIntraExtraWavefrontError Topic Columns
-	[Documentation]    Validate the MTAOS_command_processIntraExtraWavefrontError topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate MTAOS Command MTAOS_command_processWavefrontError Topic Columns
+	[Documentation]    Validate the MTAOS_command_processWavefrontError topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    MTAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19617,8 +19617,8 @@ Validate MTAOS Command MTAOS_command_processIntraExtraWavefrontError Topic Colum
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTAOS Command MTAOS_command_processShWavefrontError Topic Byte Size
-	[Documentation]    Validate the MTAOS_command_processShWavefrontError topic is less than 65536 bytes in total.
+Validate MTAOS Command MTAOS_command_processIntraExtraWavefrontError Topic Byte Size
+	[Documentation]    Validate the MTAOS_command_processIntraExtraWavefrontError topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTAOS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19642,8 +19642,8 @@ Validate MTAOS Command MTAOS_command_processShWavefrontError Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTAOS Command MTAOS_command_processShWavefrontError Topic Columns
-	[Documentation]    Validate the MTAOS_command_processShWavefrontError topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate MTAOS Command MTAOS_command_processIntraExtraWavefrontError Topic Columns
+	[Documentation]    Validate the MTAOS_command_processIntraExtraWavefrontError topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    MTAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19655,8 +19655,8 @@ Validate MTAOS Command MTAOS_command_processShWavefrontError Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTAOS Command MTAOS_command_issueSubsystemCorrections Topic Byte Size
-	[Documentation]    Validate the MTAOS_command_issueSubsystemCorrections topic is less than 65536 bytes in total.
+Validate MTAOS Command MTAOS_command_processShWavefrontError Topic Byte Size
+	[Documentation]    Validate the MTAOS_command_processShWavefrontError topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTAOS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19680,8 +19680,8 @@ Validate MTAOS Command MTAOS_command_issueSubsystemCorrections Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTAOS Command MTAOS_command_issueSubsystemCorrections Topic Columns
-	[Documentation]    Validate the MTAOS_command_issueSubsystemCorrections topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate MTAOS Command MTAOS_command_processShWavefrontError Topic Columns
+	[Documentation]    Validate the MTAOS_command_processShWavefrontError topic has less than 4096 total arguments, each representing a column in the EFD.s
 	[Tags]    smoke    MTAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22228,7 +22228,7 @@ Validate MTCamera Event MTCamera_logevent_imageReadoutParameters Topic Byte Size
 
 Validate MTCamera Event MTCamera_logevent_imageReadoutParameters Topic Columns
 	[Documentation]    Validate the MTCamera_logevent_imageReadoutParameters topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    MTCamera	TSS-119    #TSEIA-119
+	[Tags]    smoke    MTCamera	TSEIA-119
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[33]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -26484,7 +26484,7 @@ Validate MTM1M3 Event MTM1M3_logevent_forceActuatorWarning Topic Byte Size
 
 Validate MTM1M3 Event MTM1M3_logevent_forceActuatorWarning Topic Columns
 	[Documentation]    Validate the MTM1M3_logevent_forceActuatorWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    MTM1M3	TSS-2992
+	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[28]/item)" -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Events.xml
@@ -39290,7 +39290,7 @@ Validate ScriptQueue Command ScriptQueue_command_stopScripts Topic Byte Size
 
 Validate ScriptQueue Command ScriptQueue_command_stopScripts Topic Columns
 	[Documentation]    Validate the ScriptQueue_command_stopScripts topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    ScriptQueue	TSS-3326
+	[Tags]    smoke    ScriptQueue
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[9]/item)" -n ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Commands.xml
@@ -39442,7 +39442,7 @@ Validate ScriptQueue Event ScriptQueue_logevent_queue Topic Byte Size
 
 Validate ScriptQueue Event ScriptQueue_logevent_queue Topic Columns
 	[Documentation]    Validate the ScriptQueue_logevent_queue topic has less than 4096 total arguments, each representing a column in the EFD.s
-	[Tags]    smoke    ScriptQueue	TSS-3326
+	[Tags]    smoke    ScriptQueue
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Events.xml
