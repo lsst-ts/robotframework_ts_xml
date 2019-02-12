@@ -39,6 +39,10 @@ for subsystem in xml_common.subsystems:
 			mysql_skipped=""
 		elif subsystem == "PointingComponent" and messageType == "Telemetry":
 			mysql_skipped="    TSS-3370"
+		elif subsystem == "MTPtg" and messageType == "Telemetry":
+			mysql_skipped="    TPC-153"
+		elif subsystem == "ATPtg" and messageType == "Telemetry":
+			mysql_skipped="    TPC-153"
 		else:
 			mysql_skipped=""
 			idl_skipped=""

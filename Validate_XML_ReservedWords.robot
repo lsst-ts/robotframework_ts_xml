@@ -563,7 +563,7 @@ Validate ATPtg Telemetry EFDB_Name Values Do Not Use IDL Reserved words
 
 Validate ATPtg Telemetry EFDB_Name Values Do Not Use MySQL Reserved Words
 	[Documentation]    Validate the ATPtg Telemetry <EFDB_Name> tags do not contain MySQL Reserved Words.
-	[Tags]    smoke    ATPtg
+	[Tags]    smoke    ATPtg    TPC-153
 	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/ATPtg/ATPtg_Telemetry.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
 	Log    ${output}
@@ -2083,7 +2083,7 @@ Validate MTPtg Telemetry EFDB_Name Values Do Not Use IDL Reserved words
 
 Validate MTPtg Telemetry EFDB_Name Values Do Not Use MySQL Reserved Words
 	[Documentation]    Validate the MTPtg Telemetry <EFDB_Name> tags do not contain MySQL Reserved Words.
-	[Tags]    smoke    MTPtg
+	[Tags]    smoke    MTPtg    TPC-153
 	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/MTPtg/MTPtg_Telemetry.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
 	Log    ${output}
