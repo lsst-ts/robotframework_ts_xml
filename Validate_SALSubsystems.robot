@@ -23,7 +23,7 @@ Validate Number of Defined CSCs
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml |sort |wc -l |sed -e 's/ //g'
 	Log    ${output}
-	Should Be Equal As Integers    ${output}    66
+	Should Be Equal As Integers    ${output}    68
 
 Validate SAL Dictionary Does Not Contain Duplicates
 	[Documentation]    Validate the SALSubsystems.xml file does not have any duplicate entries.
@@ -226,6 +226,20 @@ Validate ATPneumatics Generics Element
 	[Tags]    smoke    ATPneumatics
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='ATPneumatics']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    ATPneumatics has Generics: ${output}
+	Should Be Equal As Strings    ${output}    yes
+
+Validate ATPtg Is Defined
+	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
+	[Tags]    smoke    ATPtg
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    ATPtg
+	Should Contain    ${cscs}    ${csc}
+
+Validate ATPtg Generics Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
+	[Tags]    smoke    ATPtg
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='ATPtg']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ATPtg has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
 Validate ATSpectrograph Is Defined
@@ -744,6 +758,20 @@ Validate MTOFC Generics Element
 	[Tags]    smoke    MTOFC
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='MTOFC']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    MTOFC has Generics: ${output}
+	Should Be Equal As Strings    ${output}    yes
+
+Validate MTPtg Is Defined
+	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
+	[Tags]    smoke    MTPtg
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    MTPtg
+	Should Contain    ${cscs}    ${csc}
+
+Validate MTPtg Generics Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
+	[Tags]    smoke    MTPtg
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='MTPtg']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    MTPtg has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
 Validate MTTCS Is Defined
