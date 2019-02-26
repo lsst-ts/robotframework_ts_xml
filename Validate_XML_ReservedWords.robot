@@ -563,7 +563,7 @@ Validate ATPtg Telemetry EFDB_Name Values Do Not Use IDL Reserved words
 
 Validate ATPtg Telemetry EFDB_Name Values Do Not Use MySQL Reserved Words
 	[Documentation]    Validate the ATPtg Telemetry <EFDB_Name> tags do not contain MySQL Reserved Words.
-	[Tags]    smoke    ATPtg    TPC-153
+	[Tags]    smoke    ATPtg
 	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/ATPtg/ATPtg_Telemetry.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
 	Log    ${output}
@@ -2083,7 +2083,7 @@ Validate MTPtg Telemetry EFDB_Name Values Do Not Use IDL Reserved words
 
 Validate MTPtg Telemetry EFDB_Name Values Do Not Use MySQL Reserved Words
 	[Documentation]    Validate the MTPtg Telemetry <EFDB_Name> tags do not contain MySQL Reserved Words.
-	[Tags]    smoke    MTPtg    TPC-153
+	[Tags]    smoke    MTPtg
 	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/MTPtg/MTPtg_Telemetry.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
 	Log    ${output}
@@ -2307,7 +2307,7 @@ Validate PointingComponent Telemetry EFDB_Name Values Do Not Use IDL Reserved wo
 
 Validate PointingComponent Telemetry EFDB_Name Values Do Not Use MySQL Reserved Words
 	[Documentation]    Validate the PointingComponent Telemetry <EFDB_Name> tags do not contain MySQL Reserved Words.
-	[Tags]    smoke    PointingComponent    TSS-3370
+	[Tags]    smoke    PointingComponent    DM-17868
 	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
 	Log    ${output}
