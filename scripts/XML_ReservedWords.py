@@ -37,8 +37,6 @@ for subsystem in xml_common.subsystems:
 		# Mark test cases with Jira tickets
 		if subsystem == "test" and messageType == "test":
 			mysql_skipped=""
-		elif subsystem == "PointingComponent" and messageType == "Telemetry":
-			mysql_skipped="    DM-17868"
 		else:
 			mysql_skipped=""
 			idl_skipped=""
