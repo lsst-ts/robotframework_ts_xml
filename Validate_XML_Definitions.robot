@@ -603,6 +603,27 @@ Validate FiberSpectrograph Telemetry
 	Log    ${output}
 	Should Contain    ${output}   FiberSpectrograph_Telemetry.xml - valid
 
+Validate GenericCamera Commands
+	[Documentation]    Validate the GenericCamera Commands XML file.
+	[Tags]    smoke    GenericCamera
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/GenericCamera/GenericCamera_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   GenericCamera_Commands.xml - valid
+
+Validate GenericCamera Events
+	[Documentation]    Validate the GenericCamera Events XML file.
+	[Tags]    smoke    GenericCamera
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/GenericCamera/GenericCamera_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   GenericCamera_Events.xml - valid
+
+Validate GenericCamera Telemetry
+	[Documentation]    Validate the GenericCamera Telemetry XML file.
+	[Tags]    smoke    GenericCamera
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/GenericCamera/GenericCamera_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   GenericCamera_Telemetry.xml - valid
+
 Validate IOTA Events
 	[Documentation]    Validate the IOTA Events XML file.
 	[Tags]    smoke    IOTA

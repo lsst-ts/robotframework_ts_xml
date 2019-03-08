@@ -5,7 +5,7 @@ Suite Setup    Run Keywords    Run Keyword If    "${ContInt}"=="true"    Set Sui
 ...			   long    long long    octet    short    string    unsigned int    unsigned long    unsigned short    unsigned long long
 Library    OperatingSystem
 Library    String
-Resource    Global_Vars.robot
+Resource    ${CURDIR}${/}Global_Vars.robot
 
 *** Variables ***
 ${xml}    xml

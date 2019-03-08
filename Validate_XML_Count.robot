@@ -688,6 +688,30 @@ Validate FiberSpectrograph Telemetry XML Counts
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
+Validate GenericCamera Commands XML Counts
+	[Documentation]    Validate the GenericCamera Commands XML count.
+	[Tags]    smoke    GenericCamera
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Count" -v . -n ${folder}/sal_interfaces/GenericCamera/GenericCamera_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
+Validate GenericCamera Events XML Counts
+	[Documentation]    Validate the GenericCamera Events XML count.
+	[Tags]    smoke    GenericCamera
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/GenericCamera/GenericCamera_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
+Validate GenericCamera Telemetry XML Counts
+	[Documentation]    Validate the GenericCamera Telemetry XML count.
+	[Tags]    smoke    GenericCamera
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/GenericCamera/GenericCamera_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
 Validate IOTA Events XML Counts
 	[Documentation]    Validate the IOTA Events XML count.
 	[Tags]    smoke    IOTA

@@ -182,6 +182,12 @@ Validate FiberSpectrograph Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   FiberSpectrograph_Telemetry.xml - valid
 
+Validate GenericCamera Telemetry XML file
+	[Tags]    smoke    GenericCamera
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/GenericCamera/GenericCamera_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   GenericCamera_Telemetry.xml - valid
+
 Validate IOTA Telemetry XML file
 	[Tags]    smoke    IOTA
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/IOTA/IOTA_Telemetry.xml

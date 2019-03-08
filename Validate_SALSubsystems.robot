@@ -8,7 +8,7 @@ Resource    Global_Vars.robot
 
 *** Variables ***
 ${xml}    xml
-@{cscs}    ATSpectrograph    LinearStage    MTMount    MTArchiver    ATArchiver    ATAOS    ATBuilding    DIMM    ATDome    ATDomeTrajectory    ATEEC    ATMCS    ATPneumatics    ATHeaderService    ATHexapod    ATMonochromator    ATWhiteLight    ATCamera    ATThermoelectricCooler    ATTCS    ATPtg    AOCLC    IOTA    MTGuider    MTCalCS    MTPtg    ATCalCS    EFDTransformationServer    Electrometer    EAS    LOVE    MTLaserTracker    MTCamera    CatchupArchiver    CBP    DomeADB    DomeAPS    DomeLWS    DomeLouvers    DomeMONCS    DomeTHCS    Dome    EFD    Environment    MTHeaderService    Hexapod    HVAC    TunableLaser    MTM1M3    MTAOS    MTM2    MTVMS    PointingComponent    OCS    PromptProcessing    Rotator    Scheduler    Script    ScriptQueue    FiberSpectrograph    Sequencer    SummitFacility    MTOFC    MTWEP    MTTCS    MTDomeTrajectory    MTEEC    Test
+@{cscs}    ATSpectrograph    LinearStage    MTMount    MTArchiver    ATArchiver    ATAOS    ATBuilding    DIMM    ATDome    ATDomeTrajectory    ATEEC    ATMCS    ATPneumatics    ATHeaderService    ATHexapod    ATMonochromator    ATWhiteLight    ATCamera    ATThermoelectricCooler    ATTCS    ATPtg    AOCLC    IOTA    MTGuider    MTCalCS    MTPtg    ATCalCS    EFDTransformationServer    Electrometer    EAS    LOVE    MTLaserTracker    MTCamera    CatchupArchiver    CBP    DomeADB    DomeAPS    DomeLWS    DomeLouvers    DomeMONCS    DomeTHCS    Dome    EFD    Environment    MTHeaderService    Hexapod    HVAC    TunableLaser    MTM1M3    MTAOS    MTM2    MTVMS    PointingComponent    OCS    PromptProcessing    Rotator    Scheduler    Script    ScriptQueue    FiberSpectrograph    Sequencer    SummitFacility    MTOFC    MTWEP    MTTCS    MTDomeTrajectory    MTEEC    GenericCamera    Test
 
 *** Test Cases ***
 Validate SALSubsystems.xml
@@ -23,7 +23,7 @@ Validate Number of Defined CSCs
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml |sort |wc -l |sed -e 's/ //g'
 	Log    ${output}
-	Should Be Equal As Integers    ${output}    68
+	Should Be Equal As Integers    ${output}    69
 
 Validate SAL Dictionary Does Not Contain Duplicates
 	[Documentation]    Validate the SALSubsystems.xml file does not have any duplicate entries.
@@ -506,6 +506,20 @@ Validate FiberSpectrograph Generics Element
 	[Tags]    smoke    FiberSpectrograph
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='FiberSpectrograph']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    FiberSpectrograph has Generics: ${output}
+	Should Be Equal As Strings    ${output}    yes
+
+Validate GenericCamera Is Defined
+	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
+	[Tags]    smoke    GenericCamera
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    GenericCamera
+	Should Contain    ${cscs}    ${csc}
+
+Validate GenericCamera Generics Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
+	[Tags]    smoke    GenericCamera
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='GenericCamera']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    GenericCamera has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
 Validate IOTA Is Defined

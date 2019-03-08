@@ -15,7 +15,7 @@ subsystems = [	'AOCLC', 'ATAOS', 'ATArchiver', 'ATBuilding', 'ATCalCS', 'ATCamer
 				'ATThermoelectricCooler', 'ATWhiteLight', 'CatchupArchiver', 'CBP', 'DIMM', 
 				'Dome', 'DomeADB', 'DomeAPS', 'DomeLouvers', 'DomeLWS', 'DomeMONCS', 'DomeTHCS', 
 				'EAS', 'EFD', 'EFDTransformationServer', 'Electrometer', 'FiberSpectrograph', 
-				'IOTA', 'Hexapod', 'HVAC', 'LinearStage', 'LOVE',
+				'GenericCamera', 'IOTA', 'Hexapod', 'HVAC', 'LinearStage', 'LOVE',
 				'MTAOS', 'MTArchiver', 'MTCalCS', 'MTCamera', 'MTDomeTrajectory', 'MTEEC', 'MTGuider', 
 				'MTHeaderService', 'MTLaserTracker', 'MTM1M3', 'MTM2', 'MTMount', 'MTOFC', 'MTPtg', 'MTTCS', 'MTWEP', 'MTVMS', 
 				'OCS', 'PointingComponent', 'PromptProcessing', 'Rotator', 'Scheduler',
