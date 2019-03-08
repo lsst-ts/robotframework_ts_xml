@@ -200,6 +200,12 @@ Validate FiberSpectrograph Events XML file
 	Log    ${output}
 	Should Contain    ${output}   FiberSpectrograph_Events.xml - valid
 
+Validate GenericCamera Events XML file
+	[Tags]    smoke    GenericCamera
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/GenericCamera/GenericCamera_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   GenericCamera_Events.xml - valid
+
 Validate IOTA Events XML file
 	[Tags]    smoke    IOTA
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/IOTA/IOTA_Events.xml

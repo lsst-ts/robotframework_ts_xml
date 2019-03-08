@@ -551,6 +551,24 @@ Validate FiberSpectrograph_Commands.xml Does Not Contain Generic Commands
 	:FOR    ${generic}    IN    @{GenericCommands}
 	\    Run Keyword And Continue On Failure    Test Commands    ${commands}    FiberSpectrograph_command_${generic}
 
+Validate GenericCamera_Events.xml Does Not Contain Generic Events
+	[Documentation]    Validate the GenericCamera_Events.xml does not contain Generic Events.
+	[Tags]    smoke    
+	Comment    Get the CSC Events.
+	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/GenericCamera/GenericCamera_Events.xml
+	Log    ${events}
+	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    GenericCamera_logevent_${item}
+	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    GenericCamera_logevent_${item}
+
+Validate GenericCamera_Commands.xml Does Not Contain Generic Commands
+	[Documentation]    Validate the GenericCamera_Commands.xml does not contain Generic Commands.
+	[Tags]    smoke    
+	Comment    Get the CSC Commands.
+	${commands}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/GenericCamera/GenericCamera_Commands.xml
+	:FOR    ${generic}    IN    @{GenericCommands}
+	\    Run Keyword And Continue On Failure    Test Commands    ${commands}    GenericCamera_command_${generic}
+
 Validate IOTA_Events.xml Does Not Contain Generic Events
 	[Documentation]    Validate the IOTA_Events.xml does not contain Generic Events.
 	[Tags]    smoke    

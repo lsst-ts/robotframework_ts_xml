@@ -152,6 +152,12 @@ Validate FiberSpectrograph Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   FiberSpectrograph_Commands.xml - valid
 
+Validate GenericCamera Commands XML file
+	[Tags]    smoke    GenericCamera
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/GenericCamera/GenericCamera_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   GenericCamera_Commands.xml - valid
+
 Validate Hexapod Commands XML file
 	[Tags]    smoke    Hexapod
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/Hexapod/Hexapod_Commands.xml
