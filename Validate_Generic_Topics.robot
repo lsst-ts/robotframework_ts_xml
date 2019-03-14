@@ -533,6 +533,16 @@ Validate Electrometer_Commands.xml Does Not Contain Generic Commands
 	:FOR    ${generic}    IN    @{GenericCommands}
 	\    Run Keyword And Continue On Failure    Test Commands    ${commands}    Electrometer_command_${generic}
 
+Validate Environment_Events.xml Does Not Contain Generic Events
+	[Documentation]    Validate the Environment_Events.xml does not contain Generic Events.
+	[Tags]    smoke    
+	Comment    Get the CSC Events.
+	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/Environment/Environment_Events.xml
+	Log    ${events}
+	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    Environment_logevent_${item}
+	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    Environment_logevent_${item}
+
 Validate FiberSpectrograph_Events.xml Does Not Contain Generic Events
 	[Documentation]    Validate the FiberSpectrograph_Events.xml does not contain Generic Events.
 	[Tags]    smoke    
