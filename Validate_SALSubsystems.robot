@@ -494,6 +494,20 @@ Validate Electrometer Generics Element
 	Log    Electrometer has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
+Validate Environment Is Defined
+	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
+	[Tags]    smoke    Environment
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    Environment
+	Should Contain    ${cscs}    ${csc}
+
+Validate Environment Generics Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
+	[Tags]    smoke    Environment
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='Environment']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    Environment has Generics: ${output}
+	Should Be Equal As Strings    ${output}    yes
+
 Validate FiberSpectrograph Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
 	[Tags]    smoke    FiberSpectrograph

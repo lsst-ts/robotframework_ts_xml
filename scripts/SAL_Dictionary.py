@@ -59,8 +59,7 @@ file.write("\tShould Contain    ${output}   " + sal_dict_file + " - valid\n")
 file.write("\n")
 
 # Ensure expected number of CSCs. This will catch when CSCs are added or removed.
-# ...The plus 1 accounts for the Environment CSC, which is temporary, testing only placeholder.
-csc_count = len(xml_common.subsystems) + 1
+csc_count = len(xml_common.subsystems)
 file.write("Validate Number of Defined CSCs\n")
 file.write("\t[Documentation]    Validate the number of defined CSCs matches expectation. This test will catch when a CSC is added or removed.\n")
 file.write("\t[Tags]    smoke\n")
@@ -88,8 +87,6 @@ for csc in xml_common.subsystems:
 		skipped="    DM-17357"
 	elif csc == "ATTCS":
 		skipped="    DM-17353"
-	elif csc == "Environment":
-		skipped="    skipped"
 	else:
 		skipped=""
 

@@ -176,6 +176,12 @@ Validate EFDTransformationServer Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   EFDTransformationServer_Telemetry.xml - valid
 
+Validate Environment Telemetry XML file
+	[Tags]    smoke    Environment
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/Environment/Environment_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   Environment_Telemetry.xml - valid
+
 Validate FiberSpectrograph Telemetry XML file
 	[Tags]    smoke    FiberSpectrograph
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Telemetry.xml

@@ -194,6 +194,12 @@ Validate Electrometer Events XML file
 	Log    ${output}
 	Should Contain    ${output}   Electrometer_Events.xml - valid
 
+Validate Environment Events XML file
+	[Tags]    smoke    Environment
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/Environment/Environment_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   Environment_Events.xml - valid
+
 Validate FiberSpectrograph Events XML file
 	[Tags]    smoke    FiberSpectrograph
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
