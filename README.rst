@@ -1,21 +1,50 @@
+============================
+RobotFramework TS_XML Readme
+============================
+
+
 Before installing Robotframework
 ================================
+
 Install Java
 ------------
-	Open a terminal window
-	check version of java installed
-	java -version
-	if it asks to install, say yes
-	else java version should be v1.6 or higher
 
-	add the following to your .bash_profile
-	export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
+Open a terminal window
+check version of java installed
+
+.. code:: bash
+	
+   java -version
+	
+if it asks to install, say yes
+else java version should be v1.6 or higher
+add the following to your .bash_profile
+
+.. code:: bash
+
+   export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Home
+
+
+Install XML Starlet
+-------------------
+
+Use the package manager of your distribution to install xmlstarlet.
+
+.. note:: On centos run the following to make sure that xml program is found during test execution.
+
+   .. code:: bash
+   
+      sudo cp /usr/bin/xmlstarlet /usr/bin/xml
 
 
 Installing RobotFramework and Libraries
 =======================================
 Robot Framework is a GitHub project.  Navigate to the following website for installation instructions.
 https://github.com/robotframework/robotframework
+
+Install Robot Framework using pip inside of a virtualenv.
+
+>>> pip install robotframework
 
 It is assumed that all Repositories are stored locally in a trunk/ directory off the home folder, i.e. $HOME/trunk
 
@@ -33,80 +62,92 @@ LSST QA makes heavy use of the SSHLibrary.  This must be installed for the tests
 Follow the instructions for installing SSHLibrary at
 https://github.com/robotframework/SSHLibrary
 
+Install using pip in the same virtualenv.
+
+>> pip install robotframework-sshlibrary
+
 
 Searching for Additional Libraries
 ------------------------------------
-Other RobotFramework libraries:
+Other RobotFramework libraries
 These are not required at this time, but may be useful in the future.
 
-Library listing:
-http://robotframework.org/#libraries
+:Library listing: http://robotframework.org/#libraries
 
 HTTPLibrary
 -----------
-homepage:
-https://github.com/peritus/robotframework-httplibrary
-git repo:
-git clone https://github.com/peritus/robotframework-httplibrary.git
+:homepage: https://github.com/peritus/robotframework-httplibrary
+
+:git repo: https://github.com/peritus/robotframework-httplibrary.git
 
 RequestsLibrary
 ---------------
-homepage:
-https://github.com/bulkan/robotframework-requests
-git repo:
-git://github.com/bulkan/robotframework-requests.git
+:homepage: https://github.com/bulkan/robotframework-requests
+
+:git repo: git://github.com/bulkan/robotframework-requests.git
 
 
 Use pip to upgrade installed packages:
 -----------------------------------------
-sudo pip install --upgrade <package_name>
-i.e.: 
-> sudo pip install -U robotframework
-OR
-> sudo pip install -U robotframework-SSHLibrary
+.. code:: bash
+
+   sudo pip install -U robotframework
+   sudo pip install -U robotframework-SSHLibrary
 
 
-Python installed versions
-=========================
-Pip can return all of the installed versions by:
-> pip freeze
+List Installed Packages
+=======================
+Pip can return all of the installed versions by running:
+
+>>> pip list
 
 
 Running RobotFramework Tests
 ============================
 To actually run the regression tests you will also need:
+
 1.  UNIX utilities such as awk, sed, cut, grep, head, and tail.
 2.  Create the <project>_Vars.txt in $HOME/bin
 
 The <project>_Vars.txt file is a variables file for the server you are wishing to run against and your current environment.
+
 Below is a template for the XML_Vars.txt that can be copied and edited appropriately:
 
 
+.. code::
 
-#  Arguments file for testing the XML
-#  Output directory
--d /Users/rbovill/Reports/junk/XML_Regression
+   #  Arguments file for testing the XML
+   #  Output directory
+   -d /Users/rbovill/Reports/junk/XML_Regression
 
-#  Specify tags to NOT run
--e skipped
--e TSS*
+   #  Specify tags to NOT run
+   -e skipped
 
-# Specify non-critical failures
---noncritical TSS
+   # Specify non-critical failures
+   --noncritical TSS*
+   --noncritical TSEIA* #Skips known issue(s)
+   --noncritical DM*
 
-# Dry run mode
-#--dryrun
+   # Dry run mode
+   #--dryrun
 
-#  Redefine default variables
---variable version:3.2.0
-####
+   #  Redefine default variables
+   --variable version:3.2.0
+   ####
 
 
 
-Sample command line to run individual automated test suites
-===========================================================
+Test Workflow
+-------------
 Navigate to $HOME/trunk/robotframework_ts_xml (location of robotframework_ts_xml from checked out git repo).
-> robot -A /path/to/XML_Vars.txt Validate_XML_Definitions.robot
+
+.. code:: bash
+
+   cd scripts
+   export XML_HOME=/path/to/xml/git/repo
+   ./master.sh
+   cd ..
+   robot -A /path/to/XML_Vars.txt -A XML_Validation.list
 
 
 
