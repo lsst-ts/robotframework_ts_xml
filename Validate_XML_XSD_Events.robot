@@ -296,6 +296,12 @@ Validate MTM1M3 Events XML file
 	Log    ${output}
 	Should Contain    ${output}   MTM1M3_Events.xml - valid
 
+Validate MTM1M3TS Events XML file
+	[Tags]    smoke    MTM1M3TS
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/MTM1M3TS/MTM1M3TS_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   MTM1M3TS_Events.xml - valid
+
 Validate MTM2 Events XML file
 	[Tags]    smoke    MTM2
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/MTM2/MTM2_Events.xml
@@ -308,12 +314,6 @@ Validate MTMount Events XML file
 	Log    ${output}
 	Should Contain    ${output}   MTMount_Events.xml - valid
 
-Validate MTOFC Events XML file
-	[Tags]    smoke    MTOFC
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/MTOFC/MTOFC_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   MTOFC_Events.xml - valid
-
 Validate MTPtg Events XML file
 	[Tags]    smoke    MTPtg
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/MTPtg/MTPtg_Events.xml
@@ -325,12 +325,6 @@ Validate MTTCS Events XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   MTTCS_Events.xml - valid
-
-Validate MTWEP Events XML file
-	[Tags]    smoke    MTWEP
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/MTWEP/MTWEP_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   MTWEP_Events.xml - valid
 
 Validate MTVMS Events XML file
 	[Tags]    smoke    MTVMS
