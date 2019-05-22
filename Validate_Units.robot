@@ -24,7 +24,8 @@ Validate ATAOS Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -42,7 +43,8 @@ Validate ATAOS Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -60,7 +62,8 @@ Validate ATAOS Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -78,7 +81,8 @@ Validate ATArchiver Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -96,7 +100,8 @@ Validate ATArchiver Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -114,7 +119,8 @@ Validate ATArchiver Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -132,7 +138,8 @@ Validate ATBuilding Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -150,7 +157,8 @@ Validate ATBuilding Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -168,7 +176,8 @@ Validate ATCalCS Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -186,7 +195,8 @@ Validate ATCalCS Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -204,7 +214,8 @@ Validate ATCamera Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -222,7 +233,8 @@ Validate ATCamera Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -240,7 +252,8 @@ Validate ATCamera Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -258,7 +271,8 @@ Validate ATDome Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -276,7 +290,8 @@ Validate ATDome Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -294,7 +309,8 @@ Validate ATDome Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -312,7 +328,8 @@ Validate ATDomeTrajectory Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -330,7 +347,8 @@ Validate ATEEC Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -348,7 +366,8 @@ Validate ATEEC Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -366,7 +385,8 @@ Validate ATHeaderService Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -384,7 +404,8 @@ Validate ATHexapod Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -402,7 +423,8 @@ Validate ATHexapod Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -420,7 +442,8 @@ Validate ATHexapod Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -438,7 +461,8 @@ Validate ATMCS Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -456,7 +480,8 @@ Validate ATMCS Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -474,7 +499,8 @@ Validate ATMCS Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -492,7 +518,8 @@ Validate ATMonochromator Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -510,7 +537,8 @@ Validate ATMonochromator Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -528,7 +556,8 @@ Validate ATMonochromator Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -546,7 +575,8 @@ Validate ATPneumatics Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -564,7 +594,8 @@ Validate ATPneumatics Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -582,7 +613,8 @@ Validate ATPneumatics Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -600,7 +632,8 @@ Validate ATPtg Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -618,7 +651,8 @@ Validate ATPtg Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -636,7 +670,8 @@ Validate ATPtg Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -654,7 +689,8 @@ Validate ATSpectrograph Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -672,7 +708,8 @@ Validate ATSpectrograph Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -690,7 +727,8 @@ Validate ATSpectrograph Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -708,7 +746,8 @@ Validate ATTCS Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -726,7 +765,8 @@ Validate ATTCS Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -744,7 +784,8 @@ Validate ATTCS Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -762,7 +803,8 @@ Validate ATThermoelectricCooler Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -780,7 +822,8 @@ Validate ATThermoelectricCooler Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -798,7 +841,8 @@ Validate ATThermoelectricCooler Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -816,7 +860,8 @@ Validate ATWhiteLight Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -834,7 +879,8 @@ Validate ATWhiteLight Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -852,7 +898,8 @@ Validate ATWhiteLight Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -870,7 +917,8 @@ Validate CatchupArchiver Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -888,7 +936,8 @@ Validate CatchupArchiver Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -906,7 +955,8 @@ Validate CBP Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -924,7 +974,8 @@ Validate CBP Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -942,7 +993,8 @@ Validate DIMM Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -960,7 +1012,8 @@ Validate DIMM Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -978,7 +1031,8 @@ Validate Dome Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -996,7 +1050,8 @@ Validate Dome Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1014,7 +1069,8 @@ Validate Dome Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1032,7 +1088,8 @@ Validate DomeADB Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1050,7 +1107,8 @@ Validate DomeADB Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1068,7 +1126,8 @@ Validate DomeADB Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1086,7 +1145,8 @@ Validate DomeAPS Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1104,7 +1164,8 @@ Validate DomeAPS Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1122,7 +1183,8 @@ Validate DomeAPS Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1140,7 +1202,8 @@ Validate DomeLouvers Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1158,7 +1221,8 @@ Validate DomeLouvers Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1176,7 +1240,8 @@ Validate DomeLouvers Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1194,7 +1259,8 @@ Validate DomeLWS Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1212,7 +1278,8 @@ Validate DomeLWS Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1230,7 +1297,8 @@ Validate DomeLWS Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1248,7 +1316,8 @@ Validate DomeMONCS Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1266,7 +1335,8 @@ Validate DomeMONCS Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1284,7 +1354,8 @@ Validate DomeMONCS Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1302,7 +1373,8 @@ Validate DomeTHCS Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1320,7 +1392,8 @@ Validate DomeTHCS Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1338,7 +1411,8 @@ Validate DomeTHCS Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1356,7 +1430,8 @@ Validate EAS Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1374,7 +1449,8 @@ Validate EAS Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1392,7 +1468,8 @@ Validate EFD Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1410,7 +1487,8 @@ Validate EFD Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1428,7 +1506,8 @@ Validate EFDTransformationServer Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1446,7 +1525,8 @@ Validate EFDTransformationServer Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1464,7 +1544,8 @@ Validate Electrometer Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1482,7 +1563,8 @@ Validate Electrometer Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1500,7 +1582,8 @@ Validate Environment Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1518,7 +1601,8 @@ Validate Environment Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1536,7 +1620,8 @@ Validate FiberSpectrograph Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1554,7 +1639,8 @@ Validate FiberSpectrograph Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1572,7 +1658,8 @@ Validate FiberSpectrograph Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1590,7 +1677,8 @@ Validate GenericCamera Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1608,7 +1696,8 @@ Validate GenericCamera Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1626,7 +1715,8 @@ Validate GenericCamera Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1644,7 +1734,8 @@ Validate IOTA Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1662,7 +1753,8 @@ Validate IOTA Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1680,7 +1772,8 @@ Validate Hexapod Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1698,7 +1791,8 @@ Validate Hexapod Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1716,7 +1810,8 @@ Validate Hexapod Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1734,7 +1829,8 @@ Validate HVAC Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1752,7 +1848,8 @@ Validate HVAC Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1770,7 +1867,8 @@ Validate HVAC Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1788,7 +1886,8 @@ Validate LinearStage Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1806,7 +1905,8 @@ Validate LinearStage Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1824,7 +1924,8 @@ Validate LinearStage Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1842,7 +1943,8 @@ Validate MTAOS Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1860,7 +1962,8 @@ Validate MTAOS Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1878,7 +1981,8 @@ Validate MTAOS Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1896,7 +2000,8 @@ Validate MTArchiver Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1914,7 +2019,8 @@ Validate MTArchiver Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1932,7 +2038,8 @@ Validate MTCalCS Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1950,7 +2057,8 @@ Validate MTCalCS Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1968,7 +2076,8 @@ Validate MTCamera Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -1986,7 +2095,8 @@ Validate MTCamera Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2004,7 +2114,8 @@ Validate MTCamera Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2022,7 +2133,8 @@ Validate MTDomeTrajectory Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2040,7 +2152,8 @@ Validate MTDomeTrajectory Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2058,7 +2171,8 @@ Validate MTEEC Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2076,7 +2190,8 @@ Validate MTEEC Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2094,7 +2209,8 @@ Validate MTGuider Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2112,7 +2228,8 @@ Validate MTGuider Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2130,7 +2247,8 @@ Validate MTHeaderService Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2148,7 +2266,8 @@ Validate MTLaserTracker Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2166,7 +2285,8 @@ Validate MTLaserTracker Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2184,7 +2304,8 @@ Validate MTM1M3 Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2202,7 +2323,8 @@ Validate MTM1M3 Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2220,7 +2342,8 @@ Validate MTM1M3 Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2238,7 +2361,8 @@ Validate MTM1M3TS Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2256,7 +2380,8 @@ Validate MTM1M3TS Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2274,7 +2399,8 @@ Validate MTM1M3TS Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2292,7 +2418,8 @@ Validate MTM2 Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2310,7 +2437,8 @@ Validate MTM2 Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2328,7 +2456,8 @@ Validate MTM2 Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2346,7 +2475,8 @@ Validate MTMount Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2364,7 +2494,8 @@ Validate MTMount Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2382,7 +2513,8 @@ Validate MTMount Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2400,7 +2532,8 @@ Validate MTPtg Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2418,7 +2551,8 @@ Validate MTPtg Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2436,7 +2570,8 @@ Validate MTPtg Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2454,7 +2589,8 @@ Validate MTTCS Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2472,7 +2608,8 @@ Validate MTTCS Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2490,7 +2627,8 @@ Validate MTTCS Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2508,7 +2646,8 @@ Validate MTVMS Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2526,7 +2665,8 @@ Validate MTVMS Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2544,7 +2684,8 @@ Validate MTVMS Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2562,7 +2703,8 @@ Validate OCS Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2580,7 +2722,8 @@ Validate OCS Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2598,7 +2741,8 @@ Validate OCS Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2616,7 +2760,8 @@ Validate PointingComponent Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2634,7 +2779,8 @@ Validate PointingComponent Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2652,7 +2798,8 @@ Validate PointingComponent Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2670,7 +2817,8 @@ Validate PromptProcessing Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2688,7 +2836,8 @@ Validate PromptProcessing Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2706,7 +2855,8 @@ Validate Rotator Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2724,7 +2874,8 @@ Validate Rotator Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2742,7 +2893,8 @@ Validate Rotator Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2760,7 +2912,8 @@ Validate Scheduler Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2778,7 +2931,8 @@ Validate Scheduler Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2796,7 +2950,8 @@ Validate Script Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2814,7 +2969,8 @@ Validate Script Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2832,7 +2988,8 @@ Validate ScriptQueue Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2850,7 +3007,8 @@ Validate ScriptQueue Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2868,7 +3026,8 @@ Validate Sequencer Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2886,7 +3045,8 @@ Validate Sequencer Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2904,7 +3064,8 @@ Validate Sequencer Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2922,7 +3083,8 @@ Validate SummitFacility Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2940,7 +3102,8 @@ Validate SummitFacility Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2958,7 +3121,8 @@ Validate Test Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2976,7 +3140,8 @@ Validate Test Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -2994,7 +3159,8 @@ Validate Test Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -3012,7 +3178,8 @@ Validate TunableLaser Commands XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -3030,7 +3197,8 @@ Validate TunableLaser Events XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
@@ -3048,7 +3216,8 @@ Validate TunableLaser Telemetry XML Unit types
 	@{units}=    Split String    ${output}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Unit_Validator.Check Unit    ${unit}
+	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is dimensionless
+	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
 	\   Log    ${output}
 	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 
