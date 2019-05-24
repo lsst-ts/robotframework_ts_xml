@@ -35,7 +35,7 @@ Validate ATAOS Command ATAOS_command_enableCorrection Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATAOS Command ATAOS_command_enableCorrection Topic Columns
-	[Documentation]    Validate the ATAOS_command_enableCorrection topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATAOS_command_enableCorrection topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -73,7 +73,7 @@ Validate ATAOS Command ATAOS_command_disableCorrection Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATAOS Command ATAOS_command_disableCorrection Topic Columns
-	[Documentation]    Validate the ATAOS_command_disableCorrection topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATAOS_command_disableCorrection topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -111,7 +111,7 @@ Validate ATAOS Command ATAOS_command_applyCorrection Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATAOS Command ATAOS_command_applyCorrection Topic Columns
-	[Documentation]    Validate the ATAOS_command_applyCorrection topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATAOS_command_applyCorrection topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -149,7 +149,7 @@ Validate ATAOS Command ATAOS_command_applyFocusOffset Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATAOS Command ATAOS_command_applyFocusOffset Topic Columns
-	[Documentation]    Validate the ATAOS_command_applyFocusOffset topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATAOS_command_applyFocusOffset topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -187,7 +187,7 @@ Validate ATAOS Command ATAOS_command_setFocus Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATAOS Command ATAOS_command_setFocus Topic Columns
-	[Documentation]    Validate the ATAOS_command_setFocus topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATAOS_command_setFocus topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -225,7 +225,7 @@ Validate ATAOS Event ATAOS_logevent_heartbeat Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATAOS Event ATAOS_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the ATAOS_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATAOS_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -263,7 +263,7 @@ Validate ATAOS Event ATAOS_logevent_detailedState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATAOS Event ATAOS_logevent_detailedState Topic Columns
-	[Documentation]    Validate the ATAOS_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATAOS_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -301,7 +301,7 @@ Validate ATAOS Event ATAOS_logevent_correctionEnabled Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATAOS Event ATAOS_logevent_correctionEnabled Topic Columns
-	[Documentation]    Validate the ATAOS_logevent_correctionEnabled topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATAOS_logevent_correctionEnabled topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -339,7 +339,7 @@ Validate ATAOS Event ATAOS_logevent_newFocusValue Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATAOS Event ATAOS_logevent_newFocusValue Topic Columns
-	[Documentation]    Validate the ATAOS_logevent_newFocusValue topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATAOS_logevent_newFocusValue topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -377,7 +377,7 @@ Validate ATAOS Event ATAOS_logevent_m1CorrectionStarted Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATAOS Event ATAOS_logevent_m1CorrectionStarted Topic Columns
-	[Documentation]    Validate the ATAOS_logevent_m1CorrectionStarted topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATAOS_logevent_m1CorrectionStarted topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -415,7 +415,7 @@ Validate ATAOS Event ATAOS_logevent_m1CorrectionCompleted Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATAOS Event ATAOS_logevent_m1CorrectionCompleted Topic Columns
-	[Documentation]    Validate the ATAOS_logevent_m1CorrectionCompleted topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATAOS_logevent_m1CorrectionCompleted topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -453,7 +453,7 @@ Validate ATAOS Event ATAOS_logevent_m2CorrectionStarted Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATAOS Event ATAOS_logevent_m2CorrectionStarted Topic Columns
-	[Documentation]    Validate the ATAOS_logevent_m2CorrectionStarted topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATAOS_logevent_m2CorrectionStarted topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -491,7 +491,7 @@ Validate ATAOS Event ATAOS_logevent_m2CorrectionCompleted Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATAOS Event ATAOS_logevent_m2CorrectionCompleted Topic Columns
-	[Documentation]    Validate the ATAOS_logevent_m2CorrectionCompleted topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATAOS_logevent_m2CorrectionCompleted topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -529,7 +529,7 @@ Validate ATAOS Event ATAOS_logevent_hexapodCorrectionStarted Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATAOS Event ATAOS_logevent_hexapodCorrectionStarted Topic Columns
-	[Documentation]    Validate the ATAOS_logevent_hexapodCorrectionStarted topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATAOS_logevent_hexapodCorrectionStarted topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -567,7 +567,7 @@ Validate ATAOS Event ATAOS_logevent_hexapodCorrectionCompleted Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATAOS Event ATAOS_logevent_hexapodCorrectionCompleted Topic Columns
-	[Documentation]    Validate the ATAOS_logevent_hexapodCorrectionCompleted topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATAOS_logevent_hexapodCorrectionCompleted topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -605,7 +605,7 @@ Validate ATAOS Event ATAOS_logevent_focusCorrectionStarted Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATAOS Event ATAOS_logevent_focusCorrectionStarted Topic Columns
-	[Documentation]    Validate the ATAOS_logevent_focusCorrectionStarted topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATAOS_logevent_focusCorrectionStarted topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -643,7 +643,7 @@ Validate ATAOS Event ATAOS_logevent_focusCorrectionCompleted Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATAOS Event ATAOS_logevent_focusCorrectionCompleted Topic Columns
-	[Documentation]    Validate the ATAOS_logevent_focusCorrectionCompleted topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATAOS_logevent_focusCorrectionCompleted topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -681,7 +681,7 @@ Validate ATAOS Telemetry ATAOS_timestamp Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATAOS Telemetry ATAOS_timestamp Topic Columns
-	[Documentation]    Validate the ATAOS_timestamp topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATAOS_timestamp topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -719,7 +719,7 @@ Validate ATArchiver Command ATArchiver_command_resetFromFault Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATArchiver Command ATArchiver_command_resetFromFault Topic Columns
-	[Documentation]    Validate the ATArchiver_command_resetFromFault topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATArchiver_command_resetFromFault topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -757,7 +757,7 @@ Validate ATArchiver Event ATArchiver_logevent_archiverEntityStartup Topic Byte S
 	Should Be True    ${result} < ${65536}
 
 Validate ATArchiver Event ATArchiver_logevent_archiverEntityStartup Topic Columns
-	[Documentation]    Validate the ATArchiver_logevent_archiverEntityStartup topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATArchiver_logevent_archiverEntityStartup topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -795,7 +795,7 @@ Validate ATArchiver Event ATArchiver_logevent_archiverEntitySummaryState Topic B
 	Should Be True    ${result} < ${65536}
 
 Validate ATArchiver Event ATArchiver_logevent_archiverEntitySummaryState Topic Columns
-	[Documentation]    Validate the ATArchiver_logevent_archiverEntitySummaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATArchiver_logevent_archiverEntitySummaryState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -833,7 +833,7 @@ Validate ATArchiver Event ATArchiver_logevent_archiverEntityShutdown Topic Byte 
 	Should Be True    ${result} < ${65536}
 
 Validate ATArchiver Event ATArchiver_logevent_archiverEntityShutdown Topic Columns
-	[Documentation]    Validate the ATArchiver_logevent_archiverEntityShutdown topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATArchiver_logevent_archiverEntityShutdown topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -871,7 +871,7 @@ Validate ATArchiver Event ATArchiver_logevent_settingsApplied Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATArchiver Event ATArchiver_logevent_settingsApplied Topic Columns
-	[Documentation]    Validate the ATArchiver_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATArchiver_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -909,7 +909,7 @@ Validate ATArchiver Event ATArchiver_logevent_processingStatus Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATArchiver Event ATArchiver_logevent_processingStatus Topic Columns
-	[Documentation]    Validate the ATArchiver_logevent_processingStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATArchiver_logevent_processingStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -947,7 +947,7 @@ Validate ATArchiver Telemetry ATArchiver_sequencerHeartbeat Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATArchiver Telemetry ATArchiver_sequencerHeartbeat Topic Columns
-	[Documentation]    Validate the ATArchiver_sequencerHeartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATArchiver_sequencerHeartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -985,7 +985,7 @@ Validate ATBuilding Event ATBuilding_logevent_detailedState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATBuilding Event ATBuilding_logevent_detailedState Topic Columns
-	[Documentation]    Validate the ATBuilding_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATBuilding_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATBuilding
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1023,7 +1023,7 @@ Validate ATBuilding Event ATBuilding_logevent_internalCommand Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATBuilding Event ATBuilding_logevent_internalCommand Topic Columns
-	[Documentation]    Validate the ATBuilding_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATBuilding_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATBuilding
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1061,7 +1061,7 @@ Validate ATBuilding Event ATBuilding_logevent_heartbeat Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATBuilding Event ATBuilding_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the ATBuilding_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATBuilding_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATBuilding
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1099,7 +1099,7 @@ Validate ATBuilding Event ATBuilding_logevent_loopTimeOutOfRange Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATBuilding Event ATBuilding_logevent_loopTimeOutOfRange Topic Columns
-	[Documentation]    Validate the ATBuilding_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATBuilding_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATBuilding
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1137,7 +1137,7 @@ Validate ATBuilding Event ATBuilding_logevent_rejectedCommand Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATBuilding Event ATBuilding_logevent_rejectedCommand Topic Columns
-	[Documentation]    Validate the ATBuilding_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATBuilding_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATBuilding
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1175,7 +1175,7 @@ Validate ATBuilding Telemetry ATBuilding_timestamp Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATBuilding Telemetry ATBuilding_timestamp Topic Columns
-	[Documentation]    Validate the ATBuilding_timestamp topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATBuilding_timestamp topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATBuilding
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1213,7 +1213,7 @@ Validate ATBuilding Telemetry ATBuilding_loopTime Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATBuilding Telemetry ATBuilding_loopTime Topic Columns
-	[Documentation]    Validate the ATBuilding_loopTime topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATBuilding_loopTime topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATBuilding
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1251,7 +1251,7 @@ Validate ATCalCS Event ATCalCS_logevent_detailedState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATCalCS Event ATCalCS_logevent_detailedState Topic Columns
-	[Documentation]    Validate the ATCalCS_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCalCS_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCalCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1289,7 +1289,7 @@ Validate ATCalCS Event ATCalCS_logevent_internalCommand Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATCalCS Event ATCalCS_logevent_internalCommand Topic Columns
-	[Documentation]    Validate the ATCalCS_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCalCS_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCalCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1327,7 +1327,7 @@ Validate ATCalCS Event ATCalCS_logevent_heartbeat Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATCalCS Event ATCalCS_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the ATCalCS_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCalCS_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCalCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1365,7 +1365,7 @@ Validate ATCalCS Event ATCalCS_logevent_loopTimeOutOfRange Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATCalCS Event ATCalCS_logevent_loopTimeOutOfRange Topic Columns
-	[Documentation]    Validate the ATCalCS_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCalCS_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCalCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1403,7 +1403,7 @@ Validate ATCalCS Event ATCalCS_logevent_rejectedCommand Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATCalCS Event ATCalCS_logevent_rejectedCommand Topic Columns
-	[Documentation]    Validate the ATCalCS_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCalCS_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCalCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1441,7 +1441,7 @@ Validate ATCalCS Telemetry ATCalCS_timestamp Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATCalCS Telemetry ATCalCS_timestamp Topic Columns
-	[Documentation]    Validate the ATCalCS_timestamp topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCalCS_timestamp topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCalCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1479,7 +1479,7 @@ Validate ATCalCS Telemetry ATCalCS_loopTime Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATCalCS Telemetry ATCalCS_loopTime Topic Columns
-	[Documentation]    Validate the ATCalCS_loopTime topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCalCS_loopTime topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCalCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1517,7 +1517,7 @@ Validate ATCamera Command ATCamera_command_discardRows Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATCamera Command ATCamera_command_discardRows Topic Columns
-	[Documentation]    Validate the ATCamera_command_discardRows topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCamera_command_discardRows topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1555,7 +1555,7 @@ Validate ATCamera Command ATCamera_command_startImage Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATCamera Command ATCamera_command_startImage Topic Columns
-	[Documentation]    Validate the ATCamera_command_startImage topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCamera_command_startImage topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1593,7 +1593,7 @@ Validate ATCamera Command ATCamera_command_disableCalibration Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATCamera Command ATCamera_command_disableCalibration Topic Columns
-	[Documentation]    Validate the ATCamera_command_disableCalibration topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCamera_command_disableCalibration topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1631,7 +1631,7 @@ Validate ATCamera Command ATCamera_command_initGuiders Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATCamera Command ATCamera_command_initGuiders Topic Columns
-	[Documentation]    Validate the ATCamera_command_initGuiders topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCamera_command_initGuiders topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1669,7 +1669,7 @@ Validate ATCamera Command ATCamera_command_enableCalibration Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATCamera Command ATCamera_command_enableCalibration Topic Columns
-	[Documentation]    Validate the ATCamera_command_enableCalibration topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCamera_command_enableCalibration topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1707,7 +1707,7 @@ Validate ATCamera Command ATCamera_command_initImage Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATCamera Command ATCamera_command_initImage Topic Columns
-	[Documentation]    Validate the ATCamera_command_initImage topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCamera_command_initImage topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1745,7 +1745,7 @@ Validate ATCamera Command ATCamera_command_endImage Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATCamera Command ATCamera_command_endImage Topic Columns
-	[Documentation]    Validate the ATCamera_command_endImage topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCamera_command_endImage topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1783,7 +1783,7 @@ Validate ATCamera Command ATCamera_command_clear Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATCamera Command ATCamera_command_clear Topic Columns
-	[Documentation]    Validate the ATCamera_command_clear topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCamera_command_clear topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1821,7 +1821,7 @@ Validate ATCamera Command ATCamera_command_takeImages Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATCamera Command ATCamera_command_takeImages Topic Columns
-	[Documentation]    Validate the ATCamera_command_takeImages topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCamera_command_takeImages topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1859,7 +1859,7 @@ Validate ATCamera Event ATCamera_logevent_offlineDetailedState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATCamera Event ATCamera_logevent_offlineDetailedState Topic Columns
-	[Documentation]    Validate the ATCamera_logevent_offlineDetailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCamera_logevent_offlineDetailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1897,7 +1897,7 @@ Validate ATCamera Event ATCamera_logevent_endReadout Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATCamera Event ATCamera_logevent_endReadout Topic Columns
-	[Documentation]    Validate the ATCamera_logevent_endReadout topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCamera_logevent_endReadout topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1935,7 +1935,7 @@ Validate ATCamera Event ATCamera_logevent_endTakeImage Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATCamera Event ATCamera_logevent_endTakeImage Topic Columns
-	[Documentation]    Validate the ATCamera_logevent_endTakeImage topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCamera_logevent_endTakeImage topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -1973,7 +1973,7 @@ Validate ATCamera Event ATCamera_logevent_imageReadinessDetailedState Topic Byte
 	Should Be True    ${result} < ${65536}
 
 Validate ATCamera Event ATCamera_logevent_imageReadinessDetailedState Topic Columns
-	[Documentation]    Validate the ATCamera_logevent_imageReadinessDetailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCamera_logevent_imageReadinessDetailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -2011,7 +2011,7 @@ Validate ATCamera Event ATCamera_logevent_notReadyToTakeImage Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATCamera Event ATCamera_logevent_notReadyToTakeImage Topic Columns
-	[Documentation]    Validate the ATCamera_logevent_notReadyToTakeImage topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCamera_logevent_notReadyToTakeImage topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -2049,7 +2049,7 @@ Validate ATCamera Event ATCamera_logevent_startShutterClose Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATCamera Event ATCamera_logevent_startShutterClose Topic Columns
-	[Documentation]    Validate the ATCamera_logevent_startShutterClose topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCamera_logevent_startShutterClose topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -2087,7 +2087,7 @@ Validate ATCamera Event ATCamera_logevent_endShutterClose Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATCamera Event ATCamera_logevent_endShutterClose Topic Columns
-	[Documentation]    Validate the ATCamera_logevent_endShutterClose topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCamera_logevent_endShutterClose topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -2125,7 +2125,7 @@ Validate ATCamera Event ATCamera_logevent_endOfImageTelemetry Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATCamera Event ATCamera_logevent_endOfImageTelemetry Topic Columns
-	[Documentation]    Validate the ATCamera_logevent_endOfImageTelemetry topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCamera_logevent_endOfImageTelemetry topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -2163,7 +2163,7 @@ Validate ATCamera Event ATCamera_logevent_calibrationDetailedState Topic Byte Si
 	Should Be True    ${result} < ${65536}
 
 Validate ATCamera Event ATCamera_logevent_calibrationDetailedState Topic Columns
-	[Documentation]    Validate the ATCamera_logevent_calibrationDetailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCamera_logevent_calibrationDetailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -2201,7 +2201,7 @@ Validate ATCamera Event ATCamera_logevent_shutterDetailedState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATCamera Event ATCamera_logevent_shutterDetailedState Topic Columns
-	[Documentation]    Validate the ATCamera_logevent_shutterDetailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCamera_logevent_shutterDetailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -2239,7 +2239,7 @@ Validate ATCamera Event ATCamera_logevent_readyToTakeImage Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATCamera Event ATCamera_logevent_readyToTakeImage Topic Columns
-	[Documentation]    Validate the ATCamera_logevent_readyToTakeImage topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCamera_logevent_readyToTakeImage topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -2277,7 +2277,7 @@ Validate ATCamera Event ATCamera_logevent_ccsCommandState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATCamera Event ATCamera_logevent_ccsCommandState Topic Columns
-	[Documentation]    Validate the ATCamera_logevent_ccsCommandState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCamera_logevent_ccsCommandState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -2315,7 +2315,7 @@ Validate ATCamera Event ATCamera_logevent_prepareToTakeImage Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATCamera Event ATCamera_logevent_prepareToTakeImage Topic Columns
-	[Documentation]    Validate the ATCamera_logevent_prepareToTakeImage topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCamera_logevent_prepareToTakeImage topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -2353,7 +2353,7 @@ Validate ATCamera Event ATCamera_logevent_endShutterOpen Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATCamera Event ATCamera_logevent_endShutterOpen Topic Columns
-	[Documentation]    Validate the ATCamera_logevent_endShutterOpen topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCamera_logevent_endShutterOpen topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -2391,7 +2391,7 @@ Validate ATCamera Event ATCamera_logevent_startIntegration Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATCamera Event ATCamera_logevent_startIntegration Topic Columns
-	[Documentation]    Validate the ATCamera_logevent_startIntegration topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCamera_logevent_startIntegration topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -2429,7 +2429,7 @@ Validate ATCamera Event ATCamera_logevent_startShutterOpen Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATCamera Event ATCamera_logevent_startShutterOpen Topic Columns
-	[Documentation]    Validate the ATCamera_logevent_startShutterOpen topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCamera_logevent_startShutterOpen topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -2467,7 +2467,7 @@ Validate ATCamera Event ATCamera_logevent_raftsDetailedState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATCamera Event ATCamera_logevent_raftsDetailedState Topic Columns
-	[Documentation]    Validate the ATCamera_logevent_raftsDetailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCamera_logevent_raftsDetailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -2505,7 +2505,7 @@ Validate ATCamera Event ATCamera_logevent_startReadout Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATCamera Event ATCamera_logevent_startReadout Topic Columns
-	[Documentation]    Validate the ATCamera_logevent_startReadout topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCamera_logevent_startReadout topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -2543,7 +2543,7 @@ Validate ATCamera Event ATCamera_logevent_shutterMotionProfile Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATCamera Event ATCamera_logevent_shutterMotionProfile Topic Columns
-	[Documentation]    Validate the ATCamera_logevent_shutterMotionProfile topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCamera_logevent_shutterMotionProfile topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -2581,7 +2581,7 @@ Validate ATCamera Event ATCamera_logevent_imageReadoutParameters Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATCamera Event ATCamera_logevent_imageReadoutParameters Topic Columns
-	[Documentation]    Validate the ATCamera_logevent_imageReadoutParameters topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCamera_logevent_imageReadoutParameters topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -2619,7 +2619,7 @@ Validate ATCamera Event ATCamera_logevent_settingsApplied Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATCamera Event ATCamera_logevent_settingsApplied Topic Columns
-	[Documentation]    Validate the ATCamera_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCamera_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -2657,7 +2657,7 @@ Validate ATCamera Event ATCamera_logevent_bonnShutterSettingsApplied Topic Byte 
 	Should Be True    ${result} < ${65536}
 
 Validate ATCamera Event ATCamera_logevent_bonnShutterSettingsApplied Topic Columns
-	[Documentation]    Validate the ATCamera_logevent_bonnShutterSettingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCamera_logevent_bonnShutterSettingsApplied topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -2695,7 +2695,7 @@ Validate ATCamera Event ATCamera_logevent_wrebSettingsApplied Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATCamera Event ATCamera_logevent_wrebSettingsApplied Topic Columns
-	[Documentation]    Validate the ATCamera_logevent_wrebSettingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCamera_logevent_wrebSettingsApplied topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -2733,7 +2733,7 @@ Validate ATCamera Telemetry ATCamera_heartbeat Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATCamera Telemetry ATCamera_heartbeat Topic Columns
-	[Documentation]    Validate the ATCamera_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCamera_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -2771,7 +2771,7 @@ Validate ATCamera Telemetry ATCamera_wreb Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATCamera Telemetry ATCamera_wreb Topic Columns
-	[Documentation]    Validate the ATCamera_wreb topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCamera_wreb topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -2809,7 +2809,7 @@ Validate ATCamera Telemetry ATCamera_bonnShutter Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATCamera Telemetry ATCamera_bonnShutter Topic Columns
-	[Documentation]    Validate the ATCamera_bonnShutter topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCamera_bonnShutter topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -2847,7 +2847,7 @@ Validate ATCamera Telemetry ATCamera_wrebPower Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATCamera Telemetry ATCamera_wrebPower Topic Columns
-	[Documentation]    Validate the ATCamera_wrebPower topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATCamera_wrebPower topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -2885,7 +2885,7 @@ Validate ATDome Command ATDome_command_moveAzimuth Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATDome Command ATDome_command_moveAzimuth Topic Columns
-	[Documentation]    Validate the ATDome_command_moveAzimuth topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATDome_command_moveAzimuth topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -2923,7 +2923,7 @@ Validate ATDome Command ATDome_command_closeShutter Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATDome Command ATDome_command_closeShutter Topic Columns
-	[Documentation]    Validate the ATDome_command_closeShutter topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATDome_command_closeShutter topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -2961,7 +2961,7 @@ Validate ATDome Command ATDome_command_openShutter Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATDome Command ATDome_command_openShutter Topic Columns
-	[Documentation]    Validate the ATDome_command_openShutter topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATDome_command_openShutter topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -2999,7 +2999,7 @@ Validate ATDome Command ATDome_command_stopMotion Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATDome Command ATDome_command_stopMotion Topic Columns
-	[Documentation]    Validate the ATDome_command_stopMotion topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATDome_command_stopMotion topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3037,7 +3037,7 @@ Validate ATDome Command ATDome_command_homeAzimuth Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATDome Command ATDome_command_homeAzimuth Topic Columns
-	[Documentation]    Validate the ATDome_command_homeAzimuth topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATDome_command_homeAzimuth topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3075,7 +3075,7 @@ Validate ATDome Command ATDome_command_moveShutterDropoutDoor Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATDome Command ATDome_command_moveShutterDropoutDoor Topic Columns
-	[Documentation]    Validate the ATDome_command_moveShutterDropoutDoor topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATDome_command_moveShutterDropoutDoor topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3113,7 +3113,7 @@ Validate ATDome Command ATDome_command_moveShutterMainDoor Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATDome Command ATDome_command_moveShutterMainDoor Topic Columns
-	[Documentation]    Validate the ATDome_command_moveShutterMainDoor topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATDome_command_moveShutterMainDoor topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3151,7 +3151,7 @@ Validate ATDome Event ATDome_logevent_heartbeat Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATDome Event ATDome_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the ATDome_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATDome_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3189,7 +3189,7 @@ Validate ATDome Event ATDome_logevent_azimuthCommandedState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATDome Event ATDome_logevent_azimuthCommandedState Topic Columns
-	[Documentation]    Validate the ATDome_logevent_azimuthCommandedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATDome_logevent_azimuthCommandedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3227,7 +3227,7 @@ Validate ATDome Event ATDome_logevent_azimuthState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATDome Event ATDome_logevent_azimuthState Topic Columns
-	[Documentation]    Validate the ATDome_logevent_azimuthState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATDome_logevent_azimuthState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3265,7 +3265,7 @@ Validate ATDome Event ATDome_logevent_dropoutDoorCommandedState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATDome Event ATDome_logevent_dropoutDoorCommandedState Topic Columns
-	[Documentation]    Validate the ATDome_logevent_dropoutDoorCommandedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATDome_logevent_dropoutDoorCommandedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3303,7 +3303,7 @@ Validate ATDome Event ATDome_logevent_dropoutDoorState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATDome Event ATDome_logevent_dropoutDoorState Topic Columns
-	[Documentation]    Validate the ATDome_logevent_dropoutDoorState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATDome_logevent_dropoutDoorState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3341,7 +3341,7 @@ Validate ATDome Event ATDome_logevent_mainDoorCommandedState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATDome Event ATDome_logevent_mainDoorCommandedState Topic Columns
-	[Documentation]    Validate the ATDome_logevent_mainDoorCommandedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATDome_logevent_mainDoorCommandedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3379,7 +3379,7 @@ Validate ATDome Event ATDome_logevent_mainDoorState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATDome Event ATDome_logevent_mainDoorState Topic Columns
-	[Documentation]    Validate the ATDome_logevent_mainDoorState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATDome_logevent_mainDoorState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3417,7 +3417,7 @@ Validate ATDome Event ATDome_logevent_azimuthInPosition Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATDome Event ATDome_logevent_azimuthInPosition Topic Columns
-	[Documentation]    Validate the ATDome_logevent_azimuthInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATDome_logevent_azimuthInPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3455,7 +3455,7 @@ Validate ATDome Event ATDome_logevent_shutterInPosition Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATDome Event ATDome_logevent_shutterInPosition Topic Columns
-	[Documentation]    Validate the ATDome_logevent_shutterInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATDome_logevent_shutterInPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3493,7 +3493,7 @@ Validate ATDome Event ATDome_logevent_allAxesInPosition Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATDome Event ATDome_logevent_allAxesInPosition Topic Columns
-	[Documentation]    Validate the ATDome_logevent_allAxesInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATDome_logevent_allAxesInPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3531,7 +3531,7 @@ Validate ATDome Event ATDome_logevent_emergencyStop Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATDome Event ATDome_logevent_emergencyStop Topic Columns
-	[Documentation]    Validate the ATDome_logevent_emergencyStop topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATDome_logevent_emergencyStop topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3569,7 +3569,7 @@ Validate ATDome Event ATDome_logevent_scbLink Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATDome Event ATDome_logevent_scbLink Topic Columns
-	[Documentation]    Validate the ATDome_logevent_scbLink topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATDome_logevent_scbLink topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3607,7 +3607,7 @@ Validate ATDome Event ATDome_logevent_settingsAppliedDomeController Topic Byte S
 	Should Be True    ${result} < ${65536}
 
 Validate ATDome Event ATDome_logevent_settingsAppliedDomeController Topic Columns
-	[Documentation]    Validate the ATDome_logevent_settingsAppliedDomeController topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATDome_logevent_settingsAppliedDomeController topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3645,7 +3645,7 @@ Validate ATDome Event ATDome_logevent_settingsAppliedDomeTcp Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATDome Event ATDome_logevent_settingsAppliedDomeTcp Topic Columns
-	[Documentation]    Validate the ATDome_logevent_settingsAppliedDomeTcp topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATDome_logevent_settingsAppliedDomeTcp topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3683,7 +3683,7 @@ Validate ATDome Telemetry ATDome_position Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATDome Telemetry ATDome_position Topic Columns
-	[Documentation]    Validate the ATDome_position topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATDome_position topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATDome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3721,7 +3721,7 @@ Validate ATDomeTrajectory Event ATDomeTrajectory_logevent_heartbeat Topic Byte S
 	Should Be True    ${result} < ${65536}
 
 Validate ATDomeTrajectory Event ATDomeTrajectory_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the ATDomeTrajectory_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATDomeTrajectory_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATDomeTrajectory
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3759,7 +3759,7 @@ Validate ATDomeTrajectory Event ATDomeTrajectory_logevent_settingsApplied Topic 
 	Should Be True    ${result} < ${65536}
 
 Validate ATDomeTrajectory Event ATDomeTrajectory_logevent_settingsApplied Topic Columns
-	[Documentation]    Validate the ATDomeTrajectory_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATDomeTrajectory_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATDomeTrajectory
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3797,7 +3797,7 @@ Validate ATEEC Command ATEEC_command_setToDayTime Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATEEC Command ATEEC_command_setToDayTime Topic Columns
-	[Documentation]    Validate the ATEEC_command_setToDayTime topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATEEC_command_setToDayTime topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATEEC
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3835,7 +3835,7 @@ Validate ATEEC Command ATEEC_command_setToNightTime Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATEEC Command ATEEC_command_setToNightTime Topic Columns
-	[Documentation]    Validate the ATEEC_command_setToNightTime topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATEEC_command_setToNightTime topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATEEC
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3873,7 +3873,7 @@ Validate ATEEC Command ATEEC_command_disableControl Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATEEC Command ATEEC_command_disableControl Topic Columns
-	[Documentation]    Validate the ATEEC_command_disableControl topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATEEC_command_disableControl topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATEEC
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3911,7 +3911,7 @@ Validate ATEEC Command ATEEC_command_applyTemperatureSetpoint Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATEEC Command ATEEC_command_applyTemperatureSetpoint Topic Columns
-	[Documentation]    Validate the ATEEC_command_applyTemperatureSetpoint topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATEEC_command_applyTemperatureSetpoint topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATEEC
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3949,7 +3949,7 @@ Validate ATEEC Event ATEEC_logevent_detailedState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATEEC Event ATEEC_logevent_detailedState Topic Columns
-	[Documentation]    Validate the ATEEC_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATEEC_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATEEC
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -3987,7 +3987,7 @@ Validate ATEEC Event ATEEC_logevent_heartbeat Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATEEC Event ATEEC_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the ATEEC_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATEEC_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATEEC
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4025,7 +4025,7 @@ Validate ATHeaderService Event ATHeaderService_logevent_heartbeat Topic Byte Siz
 	Should Be True    ${result} < ${65536}
 
 Validate ATHeaderService Event ATHeaderService_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the ATHeaderService_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATHeaderService_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATHeaderService
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4063,7 +4063,7 @@ Validate ATHeaderService Event ATHeaderService_logevent_rejectedCommand Topic By
 	Should Be True    ${result} < ${65536}
 
 Validate ATHeaderService Event ATHeaderService_logevent_rejectedCommand Topic Columns
-	[Documentation]    Validate the ATHeaderService_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATHeaderService_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATHeaderService
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4101,7 +4101,7 @@ Validate ATHeaderService Event ATHeaderService_logevent_largeFileObjectAvailable
 	Should Be True    ${result} < ${65536}
 
 Validate ATHeaderService Event ATHeaderService_logevent_largeFileObjectAvailable Topic Columns
-	[Documentation]    Validate the ATHeaderService_logevent_largeFileObjectAvailable topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATHeaderService_logevent_largeFileObjectAvailable topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATHeaderService
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4139,7 +4139,7 @@ Validate ATHeaderService Event ATHeaderService_logevent_settingsApplied Topic By
 	Should Be True    ${result} < ${65536}
 
 Validate ATHeaderService Event ATHeaderService_logevent_settingsApplied Topic Columns
-	[Documentation]    Validate the ATHeaderService_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATHeaderService_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATHeaderService
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4177,7 +4177,7 @@ Validate ATHexapod Command ATHexapod_command_applyPositionLimits Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATHexapod Command ATHexapod_command_applyPositionLimits Topic Columns
-	[Documentation]    Validate the ATHexapod_command_applyPositionLimits topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATHexapod_command_applyPositionLimits topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATHexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4215,7 +4215,7 @@ Validate ATHexapod Command ATHexapod_command_moveToPosition Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATHexapod Command ATHexapod_command_moveToPosition Topic Columns
-	[Documentation]    Validate the ATHexapod_command_moveToPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATHexapod_command_moveToPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATHexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4253,7 +4253,7 @@ Validate ATHexapod Command ATHexapod_command_setMaxSystemSpeeds Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATHexapod Command ATHexapod_command_setMaxSystemSpeeds Topic Columns
-	[Documentation]    Validate the ATHexapod_command_setMaxSystemSpeeds topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATHexapod_command_setMaxSystemSpeeds topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATHexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4291,7 +4291,7 @@ Validate ATHexapod Command ATHexapod_command_applyPositionOffset Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATHexapod Command ATHexapod_command_applyPositionOffset Topic Columns
-	[Documentation]    Validate the ATHexapod_command_applyPositionOffset topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATHexapod_command_applyPositionOffset topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATHexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4329,7 +4329,7 @@ Validate ATHexapod Command ATHexapod_command_stopAllAxes Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATHexapod Command ATHexapod_command_stopAllAxes Topic Columns
-	[Documentation]    Validate the ATHexapod_command_stopAllAxes topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATHexapod_command_stopAllAxes topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATHexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4367,7 +4367,7 @@ Validate ATHexapod Command ATHexapod_command_pivot Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATHexapod Command ATHexapod_command_pivot Topic Columns
-	[Documentation]    Validate the ATHexapod_command_pivot topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATHexapod_command_pivot topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATHexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4405,7 +4405,7 @@ Validate ATHexapod Event ATHexapod_logevent_inPosition Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATHexapod Event ATHexapod_logevent_inPosition Topic Columns
-	[Documentation]    Validate the ATHexapod_logevent_inPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATHexapod_logevent_inPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATHexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4443,7 +4443,7 @@ Validate ATHexapod Event ATHexapod_logevent_heartbeat Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATHexapod Event ATHexapod_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the ATHexapod_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATHexapod_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATHexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4481,7 +4481,7 @@ Validate ATHexapod Event ATHexapod_logevent_detailedState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATHexapod Event ATHexapod_logevent_detailedState Topic Columns
-	[Documentation]    Validate the ATHexapod_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATHexapod_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATHexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4519,7 +4519,7 @@ Validate ATHexapod Event ATHexapod_logevent_settingsAppliedPositionLimits Topic 
 	Should Be True    ${result} < ${65536}
 
 Validate ATHexapod Event ATHexapod_logevent_settingsAppliedPositionLimits Topic Columns
-	[Documentation]    Validate the ATHexapod_logevent_settingsAppliedPositionLimits topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATHexapod_logevent_settingsAppliedPositionLimits topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATHexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4557,7 +4557,7 @@ Validate ATHexapod Event ATHexapod_logevent_settingsAppliedVelocities Topic Byte
 	Should Be True    ${result} < ${65536}
 
 Validate ATHexapod Event ATHexapod_logevent_settingsAppliedVelocities Topic Columns
-	[Documentation]    Validate the ATHexapod_logevent_settingsAppliedVelocities topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATHexapod_logevent_settingsAppliedVelocities topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATHexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4595,7 +4595,7 @@ Validate ATHexapod Event ATHexapod_logevent_settingsAppliedPivot Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATHexapod Event ATHexapod_logevent_settingsAppliedPivot Topic Columns
-	[Documentation]    Validate the ATHexapod_logevent_settingsAppliedPivot topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATHexapod_logevent_settingsAppliedPivot topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATHexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4633,7 +4633,7 @@ Validate ATHexapod Event ATHexapod_logevent_positionUpdate Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATHexapod Event ATHexapod_logevent_positionUpdate Topic Columns
-	[Documentation]    Validate the ATHexapod_logevent_positionUpdate topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATHexapod_logevent_positionUpdate topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATHexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4671,7 +4671,7 @@ Validate ATHexapod Event ATHexapod_logevent_settingsAppliedTcp Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATHexapod Event ATHexapod_logevent_settingsAppliedTcp Topic Columns
-	[Documentation]    Validate the ATHexapod_logevent_settingsAppliedTcp topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATHexapod_logevent_settingsAppliedTcp topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATHexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4709,7 +4709,7 @@ Validate ATHexapod Event ATHexapod_logevent_readyForCommand Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATHexapod Event ATHexapod_logevent_readyForCommand Topic Columns
-	[Documentation]    Validate the ATHexapod_logevent_readyForCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATHexapod_logevent_readyForCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATHexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4747,7 +4747,7 @@ Validate ATHexapod Telemetry ATHexapod_positionStatus Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATHexapod Telemetry ATHexapod_positionStatus Topic Columns
-	[Documentation]    Validate the ATHexapod_positionStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATHexapod_positionStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATHexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4785,7 +4785,7 @@ Validate ATMCS Command ATMCS_command_startTracking Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Command ATMCS_command_startTracking Topic Columns
-	[Documentation]    Validate the ATMCS_command_startTracking topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_command_startTracking topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4823,7 +4823,7 @@ Validate ATMCS Command ATMCS_command_trackTarget Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Command ATMCS_command_trackTarget Topic Columns
-	[Documentation]    Validate the ATMCS_command_trackTarget topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_command_trackTarget topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4861,7 +4861,7 @@ Validate ATMCS Command ATMCS_command_setInstrumentPort Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Command ATMCS_command_setInstrumentPort Topic Columns
-	[Documentation]    Validate the ATMCS_command_setInstrumentPort topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_command_setInstrumentPort topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4899,7 +4899,7 @@ Validate ATMCS Command ATMCS_command_stopTracking Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Command ATMCS_command_stopTracking Topic Columns
-	[Documentation]    Validate the ATMCS_command_stopTracking topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_command_stopTracking topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4937,7 +4937,7 @@ Validate ATMCS Event ATMCS_logevent_detailedState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Event ATMCS_logevent_detailedState Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4975,7 +4975,7 @@ Validate ATMCS Event ATMCS_logevent_heartbeat Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Event ATMCS_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5013,7 +5013,7 @@ Validate ATMCS Event ATMCS_logevent_atMountState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Event ATMCS_logevent_atMountState Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_atMountState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_logevent_atMountState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5051,7 +5051,7 @@ Validate ATMCS Event ATMCS_logevent_m3State Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Event ATMCS_logevent_m3State Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_m3State topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_logevent_m3State topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5089,7 +5089,7 @@ Validate ATMCS Event ATMCS_logevent_m3PortSelected Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Event ATMCS_logevent_m3PortSelected Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_m3PortSelected topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_logevent_m3PortSelected topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5127,7 +5127,7 @@ Validate ATMCS Event ATMCS_logevent_target Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Event ATMCS_logevent_target Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_target topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_logevent_target topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5165,7 +5165,7 @@ Validate ATMCS Event ATMCS_logevent_elevationInPosition Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Event ATMCS_logevent_elevationInPosition Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_elevationInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_logevent_elevationInPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5203,7 +5203,7 @@ Validate ATMCS Event ATMCS_logevent_azimuthInPosition Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Event ATMCS_logevent_azimuthInPosition Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_azimuthInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_logevent_azimuthInPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5241,7 +5241,7 @@ Validate ATMCS Event ATMCS_logevent_nasmyth1RotatorInPosition Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Event ATMCS_logevent_nasmyth1RotatorInPosition Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_nasmyth1RotatorInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_logevent_nasmyth1RotatorInPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5279,7 +5279,7 @@ Validate ATMCS Event ATMCS_logevent_nasmyth2RotatorInPosition Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Event ATMCS_logevent_nasmyth2RotatorInPosition Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_nasmyth2RotatorInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_logevent_nasmyth2RotatorInPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5317,7 +5317,7 @@ Validate ATMCS Event ATMCS_logevent_m3InPosition Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Event ATMCS_logevent_m3InPosition Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_m3InPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_logevent_m3InPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5355,7 +5355,7 @@ Validate ATMCS Event ATMCS_logevent_allAxesInPosition Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Event ATMCS_logevent_allAxesInPosition Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_allAxesInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_logevent_allAxesInPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5393,7 +5393,7 @@ Validate ATMCS Event ATMCS_logevent_azimuthToppleBlockCCW Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Event ATMCS_logevent_azimuthToppleBlockCCW Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_azimuthToppleBlockCCW topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_logevent_azimuthToppleBlockCCW topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5431,7 +5431,7 @@ Validate ATMCS Event ATMCS_logevent_azimuthToppleBlockCW Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Event ATMCS_logevent_azimuthToppleBlockCW Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_azimuthToppleBlockCW topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_logevent_azimuthToppleBlockCW topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5469,7 +5469,7 @@ Validate ATMCS Event ATMCS_logevent_m3RotatorDetentSwitches Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Event ATMCS_logevent_m3RotatorDetentSwitches Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_m3RotatorDetentSwitches topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_logevent_m3RotatorDetentSwitches topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5507,7 +5507,7 @@ Validate ATMCS Event ATMCS_logevent_elevationLimitSwitchLower Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Event ATMCS_logevent_elevationLimitSwitchLower Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_elevationLimitSwitchLower topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_logevent_elevationLimitSwitchLower topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5545,7 +5545,7 @@ Validate ATMCS Event ATMCS_logevent_elevationLimitSwitchUpper Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Event ATMCS_logevent_elevationLimitSwitchUpper Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_elevationLimitSwitchUpper topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_logevent_elevationLimitSwitchUpper topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5583,7 +5583,7 @@ Validate ATMCS Event ATMCS_logevent_azimuthLimitSwitchCCW Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Event ATMCS_logevent_azimuthLimitSwitchCCW Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_azimuthLimitSwitchCCW topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_logevent_azimuthLimitSwitchCCW topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5621,7 +5621,7 @@ Validate ATMCS Event ATMCS_logevent_azimuthLimitSwitchCW Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Event ATMCS_logevent_azimuthLimitSwitchCW Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_azimuthLimitSwitchCW topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_logevent_azimuthLimitSwitchCW topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5659,7 +5659,7 @@ Validate ATMCS Event ATMCS_logevent_nasmyth1LimitSwitchCCW Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Event ATMCS_logevent_nasmyth1LimitSwitchCCW Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_nasmyth1LimitSwitchCCW topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_logevent_nasmyth1LimitSwitchCCW topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5697,7 +5697,7 @@ Validate ATMCS Event ATMCS_logevent_nasmyth1LimitSwitchCW Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Event ATMCS_logevent_nasmyth1LimitSwitchCW Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_nasmyth1LimitSwitchCW topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_logevent_nasmyth1LimitSwitchCW topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5735,7 +5735,7 @@ Validate ATMCS Event ATMCS_logevent_nasmyth2LimitSwitchCCW Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Event ATMCS_logevent_nasmyth2LimitSwitchCCW Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_nasmyth2LimitSwitchCCW topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_logevent_nasmyth2LimitSwitchCCW topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5773,7 +5773,7 @@ Validate ATMCS Event ATMCS_logevent_nasmyth2LimitSwitchCW Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Event ATMCS_logevent_nasmyth2LimitSwitchCW Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_nasmyth2LimitSwitchCW topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_logevent_nasmyth2LimitSwitchCW topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5811,7 +5811,7 @@ Validate ATMCS Event ATMCS_logevent_m3RotatorLimitSwitchCCW Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Event ATMCS_logevent_m3RotatorLimitSwitchCCW Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_m3RotatorLimitSwitchCCW topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_logevent_m3RotatorLimitSwitchCCW topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5849,7 +5849,7 @@ Validate ATMCS Event ATMCS_logevent_m3RotatorLimitSwitchCW Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Event ATMCS_logevent_m3RotatorLimitSwitchCW Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_m3RotatorLimitSwitchCW topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_logevent_m3RotatorLimitSwitchCW topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5887,7 +5887,7 @@ Validate ATMCS Event ATMCS_logevent_elevationDriveStatus Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Event ATMCS_logevent_elevationDriveStatus Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_elevationDriveStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_logevent_elevationDriveStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5925,7 +5925,7 @@ Validate ATMCS Event ATMCS_logevent_azimuthDrive1Status Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Event ATMCS_logevent_azimuthDrive1Status Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_azimuthDrive1Status topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_logevent_azimuthDrive1Status topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5963,7 +5963,7 @@ Validate ATMCS Event ATMCS_logevent_azimuthDrive2Status Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Event ATMCS_logevent_azimuthDrive2Status Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_azimuthDrive2Status topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_logevent_azimuthDrive2Status topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6001,7 +6001,7 @@ Validate ATMCS Event ATMCS_logevent_nasmyth1DriveStatus Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Event ATMCS_logevent_nasmyth1DriveStatus Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_nasmyth1DriveStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_logevent_nasmyth1DriveStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6039,7 +6039,7 @@ Validate ATMCS Event ATMCS_logevent_nasmyth2DriveStatus Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Event ATMCS_logevent_nasmyth2DriveStatus Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_nasmyth2DriveStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_logevent_nasmyth2DriveStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6077,7 +6077,7 @@ Validate ATMCS Event ATMCS_logevent_m3DriveStatus Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Event ATMCS_logevent_m3DriveStatus Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_m3DriveStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_logevent_m3DriveStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6115,7 +6115,7 @@ Validate ATMCS Event ATMCS_logevent_elevationBrake Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Event ATMCS_logevent_elevationBrake Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_elevationBrake topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_logevent_elevationBrake topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6153,7 +6153,7 @@ Validate ATMCS Event ATMCS_logevent_azimuthBrake1 Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Event ATMCS_logevent_azimuthBrake1 Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_azimuthBrake1 topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_logevent_azimuthBrake1 topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6191,7 +6191,7 @@ Validate ATMCS Event ATMCS_logevent_azimuthBrake2 Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Event ATMCS_logevent_azimuthBrake2 Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_azimuthBrake2 topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_logevent_azimuthBrake2 topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6229,7 +6229,7 @@ Validate ATMCS Event ATMCS_logevent_nasmyth1Brake Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Event ATMCS_logevent_nasmyth1Brake Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_nasmyth1Brake topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_logevent_nasmyth1Brake topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6267,7 +6267,7 @@ Validate ATMCS Event ATMCS_logevent_nasmyth2Brake Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Event ATMCS_logevent_nasmyth2Brake Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_nasmyth2Brake topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_logevent_nasmyth2Brake topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6305,7 +6305,7 @@ Validate ATMCS Telemetry ATMCS_mountEncoders Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Telemetry ATMCS_mountEncoders Topic Columns
-	[Documentation]    Validate the ATMCS_mountEncoders topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_mountEncoders topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6343,7 +6343,7 @@ Validate ATMCS Telemetry ATMCS_torqueDemand Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Telemetry ATMCS_torqueDemand Topic Columns
-	[Documentation]    Validate the ATMCS_torqueDemand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_torqueDemand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6381,7 +6381,7 @@ Validate ATMCS Telemetry ATMCS_measuredTorque Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Telemetry ATMCS_measuredTorque Topic Columns
-	[Documentation]    Validate the ATMCS_measuredTorque topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_measuredTorque topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6419,7 +6419,7 @@ Validate ATMCS Telemetry ATMCS_measuredMotorVelocity Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Telemetry ATMCS_measuredMotorVelocity Topic Columns
-	[Documentation]    Validate the ATMCS_measuredMotorVelocity topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_measuredMotorVelocity topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6457,7 +6457,7 @@ Validate ATMCS Telemetry ATMCS_mountMotorEncoders Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMCS Telemetry ATMCS_mountMotorEncoders Topic Columns
-	[Documentation]    Validate the ATMCS_mountMotorEncoders topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMCS_mountMotorEncoders topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6495,7 +6495,7 @@ Validate ATMonochromator Command ATMonochromator_command_changeWavelength Topic 
 	Should Be True    ${result} < ${65536}
 
 Validate ATMonochromator Command ATMonochromator_command_changeWavelength Topic Columns
-	[Documentation]    Validate the ATMonochromator_command_changeWavelength topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMonochromator_command_changeWavelength topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMonochromator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6533,7 +6533,7 @@ Validate ATMonochromator Command ATMonochromator_command_calibrateWavelength Top
 	Should Be True    ${result} < ${65536}
 
 Validate ATMonochromator Command ATMonochromator_command_calibrateWavelength Topic Columns
-	[Documentation]    Validate the ATMonochromator_command_calibrateWavelength topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMonochromator_command_calibrateWavelength topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMonochromator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6571,7 +6571,7 @@ Validate ATMonochromator Command ATMonochromator_command_power Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMonochromator Command ATMonochromator_command_power Topic Columns
-	[Documentation]    Validate the ATMonochromator_command_power topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMonochromator_command_power topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMonochromator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6609,7 +6609,7 @@ Validate ATMonochromator Command ATMonochromator_command_selectGrating Topic Byt
 	Should Be True    ${result} < ${65536}
 
 Validate ATMonochromator Command ATMonochromator_command_selectGrating Topic Columns
-	[Documentation]    Validate the ATMonochromator_command_selectGrating topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMonochromator_command_selectGrating topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMonochromator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6647,7 +6647,7 @@ Validate ATMonochromator Command ATMonochromator_command_changeSlitWidth Topic B
 	Should Be True    ${result} < ${65536}
 
 Validate ATMonochromator Command ATMonochromator_command_changeSlitWidth Topic Columns
-	[Documentation]    Validate the ATMonochromator_command_changeSlitWidth topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMonochromator_command_changeSlitWidth topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMonochromator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6685,7 +6685,7 @@ Validate ATMonochromator Command ATMonochromator_command_updateMonochromatorSetu
 	Should Be True    ${result} < ${65536}
 
 Validate ATMonochromator Command ATMonochromator_command_updateMonochromatorSetup Topic Columns
-	[Documentation]    Validate the ATMonochromator_command_updateMonochromatorSetup topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMonochromator_command_updateMonochromatorSetup topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMonochromator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6723,7 +6723,7 @@ Validate ATMonochromator Event ATMonochromator_logevent_internalCommand Topic By
 	Should Be True    ${result} < ${65536}
 
 Validate ATMonochromator Event ATMonochromator_logevent_internalCommand Topic Columns
-	[Documentation]    Validate the ATMonochromator_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMonochromator_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMonochromator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6761,7 +6761,7 @@ Validate ATMonochromator Event ATMonochromator_logevent_heartbeat Topic Byte Siz
 	Should Be True    ${result} < ${65536}
 
 Validate ATMonochromator Event ATMonochromator_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the ATMonochromator_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMonochromator_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMonochromator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6799,7 +6799,7 @@ Validate ATMonochromator Event ATMonochromator_logevent_loopTimeOutOfRange Topic
 	Should Be True    ${result} < ${65536}
 
 Validate ATMonochromator Event ATMonochromator_logevent_loopTimeOutOfRange Topic Columns
-	[Documentation]    Validate the ATMonochromator_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMonochromator_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMonochromator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6837,7 +6837,7 @@ Validate ATMonochromator Event ATMonochromator_logevent_detailedState Topic Byte
 	Should Be True    ${result} < ${65536}
 
 Validate ATMonochromator Event ATMonochromator_logevent_detailedState Topic Columns
-	[Documentation]    Validate the ATMonochromator_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMonochromator_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMonochromator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6875,7 +6875,7 @@ Validate ATMonochromator Event ATMonochromator_logevent_rejectedCommand Topic By
 	Should Be True    ${result} < ${65536}
 
 Validate ATMonochromator Event ATMonochromator_logevent_rejectedCommand Topic Columns
-	[Documentation]    Validate the ATMonochromator_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMonochromator_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMonochromator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6913,7 +6913,7 @@ Validate ATMonochromator Event ATMonochromator_logevent_settingsAppliedMonoCommu
 	Should Be True    ${result} < ${65536}
 
 Validate ATMonochromator Event ATMonochromator_logevent_settingsAppliedMonoCommunication Topic Columns
-	[Documentation]    Validate the ATMonochromator_logevent_settingsAppliedMonoCommunication topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMonochromator_logevent_settingsAppliedMonoCommunication topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMonochromator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6951,7 +6951,7 @@ Validate ATMonochromator Event ATMonochromator_logevent_selectedGrating Topic By
 	Should Be True    ${result} < ${65536}
 
 Validate ATMonochromator Event ATMonochromator_logevent_selectedGrating Topic Columns
-	[Documentation]    Validate the ATMonochromator_logevent_selectedGrating topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMonochromator_logevent_selectedGrating topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMonochromator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -6989,7 +6989,7 @@ Validate ATMonochromator Event ATMonochromator_logevent_wavelength Topic Byte Si
 	Should Be True    ${result} < ${65536}
 
 Validate ATMonochromator Event ATMonochromator_logevent_wavelength Topic Columns
-	[Documentation]    Validate the ATMonochromator_logevent_wavelength topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMonochromator_logevent_wavelength topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMonochromator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7027,7 +7027,7 @@ Validate ATMonochromator Event ATMonochromator_logevent_slitWidth Topic Byte Siz
 	Should Be True    ${result} < ${65536}
 
 Validate ATMonochromator Event ATMonochromator_logevent_slitWidth Topic Columns
-	[Documentation]    Validate the ATMonochromator_logevent_slitWidth topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMonochromator_logevent_slitWidth topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMonochromator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7065,7 +7065,7 @@ Validate ATMonochromator Event ATMonochromator_logevent_inPosition Topic Byte Si
 	Should Be True    ${result} < ${65536}
 
 Validate ATMonochromator Event ATMonochromator_logevent_inPosition Topic Columns
-	[Documentation]    Validate the ATMonochromator_logevent_inPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMonochromator_logevent_inPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMonochromator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7103,7 +7103,7 @@ Validate ATMonochromator Event ATMonochromator_logevent_monochromatorConnected T
 	Should Be True    ${result} < ${65536}
 
 Validate ATMonochromator Event ATMonochromator_logevent_monochromatorConnected Topic Columns
-	[Documentation]    Validate the ATMonochromator_logevent_monochromatorConnected topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMonochromator_logevent_monochromatorConnected topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMonochromator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7141,7 +7141,7 @@ Validate ATMonochromator Event ATMonochromator_logevent_settingsAppliedMonoHeart
 	Should Be True    ${result} < ${65536}
 
 Validate ATMonochromator Event ATMonochromator_logevent_settingsAppliedMonoHeartbeat Topic Columns
-	[Documentation]    Validate the ATMonochromator_logevent_settingsAppliedMonoHeartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMonochromator_logevent_settingsAppliedMonoHeartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMonochromator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7179,7 +7179,7 @@ Validate ATMonochromator Event ATMonochromator_logevent_settingsAppliedLoop Topi
 	Should Be True    ${result} < ${65536}
 
 Validate ATMonochromator Event ATMonochromator_logevent_settingsAppliedLoop Topic Columns
-	[Documentation]    Validate the ATMonochromator_logevent_settingsAppliedLoop topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMonochromator_logevent_settingsAppliedLoop topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMonochromator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7217,7 +7217,7 @@ Validate ATMonochromator Event ATMonochromator_logevent_settingsAppliedMonochrom
 	Should Be True    ${result} < ${65536}
 
 Validate ATMonochromator Event ATMonochromator_logevent_settingsAppliedMonochromatorRanges Topic Columns
-	[Documentation]    Validate the ATMonochromator_logevent_settingsAppliedMonochromatorRanges topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMonochromator_logevent_settingsAppliedMonochromatorRanges topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMonochromator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7255,7 +7255,7 @@ Validate ATMonochromator Telemetry ATMonochromator_timestamp Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMonochromator Telemetry ATMonochromator_timestamp Topic Columns
-	[Documentation]    Validate the ATMonochromator_timestamp topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMonochromator_timestamp topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMonochromator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7293,7 +7293,7 @@ Validate ATMonochromator Telemetry ATMonochromator_loopTime Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATMonochromator Telemetry ATMonochromator_loopTime Topic Columns
-	[Documentation]    Validate the ATMonochromator_loopTime topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATMonochromator_loopTime topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMonochromator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7331,7 +7331,7 @@ Validate ATPneumatics Command ATPneumatics_command_openMasterAirSupply Topic Byt
 	Should Be True    ${result} < ${65536}
 
 Validate ATPneumatics Command ATPneumatics_command_openMasterAirSupply Topic Columns
-	[Documentation]    Validate the ATPneumatics_command_openMasterAirSupply topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPneumatics_command_openMasterAirSupply topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7369,7 +7369,7 @@ Validate ATPneumatics Command ATPneumatics_command_m1SetPressure Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPneumatics Command ATPneumatics_command_m1SetPressure Topic Columns
-	[Documentation]    Validate the ATPneumatics_command_m1SetPressure topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPneumatics_command_m1SetPressure topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7407,7 +7407,7 @@ Validate ATPneumatics Command ATPneumatics_command_m2SetPressure Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPneumatics Command ATPneumatics_command_m2SetPressure Topic Columns
-	[Documentation]    Validate the ATPneumatics_command_m2SetPressure topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPneumatics_command_m2SetPressure topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7445,7 +7445,7 @@ Validate ATPneumatics Command ATPneumatics_command_openM1CellVents Topic Byte Si
 	Should Be True    ${result} < ${65536}
 
 Validate ATPneumatics Command ATPneumatics_command_openM1CellVents Topic Columns
-	[Documentation]    Validate the ATPneumatics_command_openM1CellVents topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPneumatics_command_openM1CellVents topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7483,7 +7483,7 @@ Validate ATPneumatics Command ATPneumatics_command_openM1Cover Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPneumatics Command ATPneumatics_command_openM1Cover Topic Columns
-	[Documentation]    Validate the ATPneumatics_command_openM1Cover topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPneumatics_command_openM1Cover topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7521,7 +7521,7 @@ Validate ATPneumatics Command ATPneumatics_command_openInstrumentAirValve Topic 
 	Should Be True    ${result} < ${65536}
 
 Validate ATPneumatics Command ATPneumatics_command_openInstrumentAirValve Topic Columns
-	[Documentation]    Validate the ATPneumatics_command_openInstrumentAirValve topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPneumatics_command_openInstrumentAirValve topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7559,7 +7559,7 @@ Validate ATPneumatics Command ATPneumatics_command_closeInstrumentAirValve Topic
 	Should Be True    ${result} < ${65536}
 
 Validate ATPneumatics Command ATPneumatics_command_closeInstrumentAirValve Topic Columns
-	[Documentation]    Validate the ATPneumatics_command_closeInstrumentAirValve topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPneumatics_command_closeInstrumentAirValve topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7597,7 +7597,7 @@ Validate ATPneumatics Command ATPneumatics_command_closeMasterAirSupply Topic By
 	Should Be True    ${result} < ${65536}
 
 Validate ATPneumatics Command ATPneumatics_command_closeMasterAirSupply Topic Columns
-	[Documentation]    Validate the ATPneumatics_command_closeMasterAirSupply topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPneumatics_command_closeMasterAirSupply topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7635,7 +7635,7 @@ Validate ATPneumatics Command ATPneumatics_command_closeM1Cover Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPneumatics Command ATPneumatics_command_closeM1Cover Topic Columns
-	[Documentation]    Validate the ATPneumatics_command_closeM1Cover topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPneumatics_command_closeM1Cover topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7673,7 +7673,7 @@ Validate ATPneumatics Command ATPneumatics_command_m2OpenAirValve Topic Byte Siz
 	Should Be True    ${result} < ${65536}
 
 Validate ATPneumatics Command ATPneumatics_command_m2OpenAirValve Topic Columns
-	[Documentation]    Validate the ATPneumatics_command_m2OpenAirValve topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPneumatics_command_m2OpenAirValve topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7711,7 +7711,7 @@ Validate ATPneumatics Command ATPneumatics_command_m2CloseAirValve Topic Byte Si
 	Should Be True    ${result} < ${65536}
 
 Validate ATPneumatics Command ATPneumatics_command_m2CloseAirValve Topic Columns
-	[Documentation]    Validate the ATPneumatics_command_m2CloseAirValve topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPneumatics_command_m2CloseAirValve topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7749,7 +7749,7 @@ Validate ATPneumatics Command ATPneumatics_command_m1CloseAirValve Topic Byte Si
 	Should Be True    ${result} < ${65536}
 
 Validate ATPneumatics Command ATPneumatics_command_m1CloseAirValve Topic Columns
-	[Documentation]    Validate the ATPneumatics_command_m1CloseAirValve topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPneumatics_command_m1CloseAirValve topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7787,7 +7787,7 @@ Validate ATPneumatics Command ATPneumatics_command_m1OpenAirValve Topic Byte Siz
 	Should Be True    ${result} < ${65536}
 
 Validate ATPneumatics Command ATPneumatics_command_m1OpenAirValve Topic Columns
-	[Documentation]    Validate the ATPneumatics_command_m1OpenAirValve topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPneumatics_command_m1OpenAirValve topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7825,7 +7825,7 @@ Validate ATPneumatics Command ATPneumatics_command_closeM1CellVents Topic Byte S
 	Should Be True    ${result} < ${65536}
 
 Validate ATPneumatics Command ATPneumatics_command_closeM1CellVents Topic Columns
-	[Documentation]    Validate the ATPneumatics_command_closeM1CellVents topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPneumatics_command_closeM1CellVents topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7863,7 +7863,7 @@ Validate ATPneumatics Event ATPneumatics_logevent_heartbeat Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPneumatics Event ATPneumatics_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the ATPneumatics_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPneumatics_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7901,7 +7901,7 @@ Validate ATPneumatics Event ATPneumatics_logevent_m1CoverLimitSwitches Topic Byt
 	Should Be True    ${result} < ${65536}
 
 Validate ATPneumatics Event ATPneumatics_logevent_m1CoverLimitSwitches Topic Columns
-	[Documentation]    Validate the ATPneumatics_logevent_m1CoverLimitSwitches topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPneumatics_logevent_m1CoverLimitSwitches topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7939,7 +7939,7 @@ Validate ATPneumatics Event ATPneumatics_logevent_m1VentsLimitSwitches Topic Byt
 	Should Be True    ${result} < ${65536}
 
 Validate ATPneumatics Event ATPneumatics_logevent_m1VentsLimitSwitches Topic Columns
-	[Documentation]    Validate the ATPneumatics_logevent_m1VentsLimitSwitches topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPneumatics_logevent_m1VentsLimitSwitches topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -7977,7 +7977,7 @@ Validate ATPneumatics Event ATPneumatics_logevent_powerStatus Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPneumatics Event ATPneumatics_logevent_powerStatus Topic Columns
-	[Documentation]    Validate the ATPneumatics_logevent_powerStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPneumatics_logevent_powerStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8015,7 +8015,7 @@ Validate ATPneumatics Event ATPneumatics_logevent_eStop Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPneumatics Event ATPneumatics_logevent_eStop Topic Columns
-	[Documentation]    Validate the ATPneumatics_logevent_eStop topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPneumatics_logevent_eStop topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8053,7 +8053,7 @@ Validate ATPneumatics Event ATPneumatics_logevent_m1CoverState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPneumatics Event ATPneumatics_logevent_m1CoverState Topic Columns
-	[Documentation]    Validate the ATPneumatics_logevent_m1CoverState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPneumatics_logevent_m1CoverState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8091,7 +8091,7 @@ Validate ATPneumatics Event ATPneumatics_logevent_m1State Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPneumatics Event ATPneumatics_logevent_m1State Topic Columns
-	[Documentation]    Validate the ATPneumatics_logevent_m1State topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPneumatics_logevent_m1State topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8129,7 +8129,7 @@ Validate ATPneumatics Event ATPneumatics_logevent_m2State Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPneumatics Event ATPneumatics_logevent_m2State Topic Columns
-	[Documentation]    Validate the ATPneumatics_logevent_m2State topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPneumatics_logevent_m2State topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8167,7 +8167,7 @@ Validate ATPneumatics Event ATPneumatics_logevent_instrumentState Topic Byte Siz
 	Should Be True    ${result} < ${65536}
 
 Validate ATPneumatics Event ATPneumatics_logevent_instrumentState Topic Columns
-	[Documentation]    Validate the ATPneumatics_logevent_instrumentState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPneumatics_logevent_instrumentState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8205,7 +8205,7 @@ Validate ATPneumatics Event ATPneumatics_logevent_cellVentsState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPneumatics Event ATPneumatics_logevent_cellVentsState Topic Columns
-	[Documentation]    Validate the ATPneumatics_logevent_cellVentsState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPneumatics_logevent_cellVentsState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8243,7 +8243,7 @@ Validate ATPneumatics Event ATPneumatics_logevent_mainValveState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPneumatics Event ATPneumatics_logevent_mainValveState Topic Columns
-	[Documentation]    Validate the ATPneumatics_logevent_mainValveState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPneumatics_logevent_mainValveState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8281,7 +8281,7 @@ Validate ATPneumatics Event ATPneumatics_logevent_m1VentsPosition Topic Byte Siz
 	Should Be True    ${result} < ${65536}
 
 Validate ATPneumatics Event ATPneumatics_logevent_m1VentsPosition Topic Columns
-	[Documentation]    Validate the ATPneumatics_logevent_m1VentsPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPneumatics_logevent_m1VentsPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8319,7 +8319,7 @@ Validate ATPneumatics Event ATPneumatics_logevent_m1SetPressure Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPneumatics Event ATPneumatics_logevent_m1SetPressure Topic Columns
-	[Documentation]    Validate the ATPneumatics_logevent_m1SetPressure topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPneumatics_logevent_m1SetPressure topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8357,7 +8357,7 @@ Validate ATPneumatics Event ATPneumatics_logevent_m2SetPressure Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPneumatics Event ATPneumatics_logevent_m2SetPressure Topic Columns
-	[Documentation]    Validate the ATPneumatics_logevent_m2SetPressure topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPneumatics_logevent_m2SetPressure topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8395,7 +8395,7 @@ Validate ATPneumatics Telemetry ATPneumatics_m1AirPressure Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPneumatics Telemetry ATPneumatics_m1AirPressure Topic Columns
-	[Documentation]    Validate the ATPneumatics_m1AirPressure topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPneumatics_m1AirPressure topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8433,7 +8433,7 @@ Validate ATPneumatics Telemetry ATPneumatics_m2AirPressure Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPneumatics Telemetry ATPneumatics_m2AirPressure Topic Columns
-	[Documentation]    Validate the ATPneumatics_m2AirPressure topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPneumatics_m2AirPressure topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8471,7 +8471,7 @@ Validate ATPneumatics Telemetry ATPneumatics_mainAirSourcePressure Topic Byte Si
 	Should Be True    ${result} < ${65536}
 
 Validate ATPneumatics Telemetry ATPneumatics_mainAirSourcePressure Topic Columns
-	[Documentation]    Validate the ATPneumatics_mainAirSourcePressure topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPneumatics_mainAirSourcePressure topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8509,7 +8509,7 @@ Validate ATPneumatics Telemetry ATPneumatics_loadCell Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPneumatics Telemetry ATPneumatics_loadCell Topic Columns
-	[Documentation]    Validate the ATPneumatics_loadCell topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPneumatics_loadCell topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPneumatics
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8547,7 +8547,7 @@ Validate ATPtg Command ATPtg_command_pointCloseFile Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Command ATPtg_command_pointCloseFile Topic Columns
-	[Documentation]    Validate the ATPtg_command_pointCloseFile topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_command_pointCloseFile topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8585,7 +8585,7 @@ Validate ATPtg Command ATPtg_command_poriginAbsorb Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Command ATPtg_command_poriginAbsorb Topic Columns
-	[Documentation]    Validate the ATPtg_command_poriginAbsorb topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_command_poriginAbsorb topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8623,7 +8623,7 @@ Validate ATPtg Command ATPtg_command_guideClear Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Command ATPtg_command_guideClear Topic Columns
-	[Documentation]    Validate the ATPtg_command_guideClear topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_command_guideClear topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8661,7 +8661,7 @@ Validate ATPtg Command ATPtg_command_collOffset Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Command ATPtg_command_collOffset Topic Columns
-	[Documentation]    Validate the ATPtg_command_collOffset topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_command_collOffset topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8699,7 +8699,7 @@ Validate ATPtg Command ATPtg_command_rotOffset Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Command ATPtg_command_rotOffset Topic Columns
-	[Documentation]    Validate the ATPtg_command_rotOffset topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_command_rotOffset topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8737,7 +8737,7 @@ Validate ATPtg Command ATPtg_command_clearCollOffset Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Command ATPtg_command_clearCollOffset Topic Columns
-	[Documentation]    Validate the ATPtg_command_clearCollOffset topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_command_clearCollOffset topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8775,7 +8775,7 @@ Validate ATPtg Command ATPtg_command_poriginXY Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Command ATPtg_command_poriginXY Topic Columns
-	[Documentation]    Validate the ATPtg_command_poriginXY topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_command_poriginXY topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8813,7 +8813,7 @@ Validate ATPtg Command ATPtg_command_iersUpdate Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Command ATPtg_command_iersUpdate Topic Columns
-	[Documentation]    Validate the ATPtg_command_iersUpdate topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_command_iersUpdate topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8851,7 +8851,7 @@ Validate ATPtg Command ATPtg_command_offsetRADec Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Command ATPtg_command_offsetRADec Topic Columns
-	[Documentation]    Validate the ATPtg_command_offsetRADec topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_command_offsetRADec topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8889,7 +8889,7 @@ Validate ATPtg Command ATPtg_command_pointAddData Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Command ATPtg_command_pointAddData Topic Columns
-	[Documentation]    Validate the ATPtg_command_pointAddData topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_command_pointAddData topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8927,7 +8927,7 @@ Validate ATPtg Command ATPtg_command_guideControl Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Command ATPtg_command_guideControl Topic Columns
-	[Documentation]    Validate the ATPtg_command_guideControl topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_command_guideControl topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -8965,7 +8965,7 @@ Validate ATPtg Command ATPtg_command_offsetAbsorb Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Command ATPtg_command_offsetAbsorb Topic Columns
-	[Documentation]    Validate the ATPtg_command_offsetAbsorb topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_command_offsetAbsorb topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -9003,7 +9003,7 @@ Validate ATPtg Command ATPtg_command_ephemTarget Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Command ATPtg_command_ephemTarget Topic Columns
-	[Documentation]    Validate the ATPtg_command_ephemTarget topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_command_ephemTarget topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -9041,7 +9041,7 @@ Validate ATPtg Command ATPtg_command_wavelength Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Command ATPtg_command_wavelength Topic Columns
-	[Documentation]    Validate the ATPtg_command_wavelength topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_command_wavelength topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -9079,7 +9079,7 @@ Validate ATPtg Command ATPtg_command_pointLoadModel Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Command ATPtg_command_pointLoadModel Topic Columns
-	[Documentation]    Validate the ATPtg_command_pointLoadModel topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_command_pointLoadModel topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -9117,7 +9117,7 @@ Validate ATPtg Command ATPtg_command_azCurrentWrap Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Command ATPtg_command_azCurrentWrap Topic Columns
-	[Documentation]    Validate the ATPtg_command_azCurrentWrap topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_command_azCurrentWrap topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -9155,7 +9155,7 @@ Validate ATPtg Command ATPtg_command_debugLevel Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Command ATPtg_command_debugLevel Topic Columns
-	[Documentation]    Validate the ATPtg_command_debugLevel topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_command_debugLevel topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -9193,7 +9193,7 @@ Validate ATPtg Command ATPtg_command_raDecTarget Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Command ATPtg_command_raDecTarget Topic Columns
-	[Documentation]    Validate the ATPtg_command_raDecTarget topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_command_raDecTarget topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -9231,7 +9231,7 @@ Validate ATPtg Command ATPtg_command_offsetPA Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Command ATPtg_command_offsetPA Topic Columns
-	[Documentation]    Validate the ATPtg_command_offsetPA topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_command_offsetPA topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -9269,7 +9269,7 @@ Validate ATPtg Command ATPtg_command_rotCurrentWrap Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Command ATPtg_command_rotCurrentWrap Topic Columns
-	[Documentation]    Validate the ATPtg_command_rotCurrentWrap topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_command_rotCurrentWrap topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -9307,7 +9307,7 @@ Validate ATPtg Command ATPtg_command_poriginOffset Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Command ATPtg_command_poriginOffset Topic Columns
-	[Documentation]    Validate the ATPtg_command_poriginOffset topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_command_poriginOffset topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -9345,7 +9345,7 @@ Validate ATPtg Command ATPtg_command_offsetClear Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Command ATPtg_command_offsetClear Topic Columns
-	[Documentation]    Validate the ATPtg_command_offsetClear topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_command_offsetClear topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -9383,7 +9383,7 @@ Validate ATPtg Command ATPtg_command_offsetAzEl Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Command ATPtg_command_offsetAzEl Topic Columns
-	[Documentation]    Validate the ATPtg_command_offsetAzEl topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_command_offsetAzEl topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -9421,7 +9421,7 @@ Validate ATPtg Command ATPtg_command_setAccessMode Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Command ATPtg_command_setAccessMode Topic Columns
-	[Documentation]    Validate the ATPtg_command_setAccessMode topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_command_setAccessMode topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -9459,7 +9459,7 @@ Validate ATPtg Command ATPtg_command_azElTarget Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Command ATPtg_command_azElTarget Topic Columns
-	[Documentation]    Validate the ATPtg_command_azElTarget topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_command_azElTarget topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -9497,7 +9497,7 @@ Validate ATPtg Command ATPtg_command_copyTarget Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Command ATPtg_command_copyTarget Topic Columns
-	[Documentation]    Validate the ATPtg_command_copyTarget topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_command_copyTarget topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -9535,7 +9535,7 @@ Validate ATPtg Command ATPtg_command_planetTarget Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Command ATPtg_command_planetTarget Topic Columns
-	[Documentation]    Validate the ATPtg_command_planetTarget topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_command_planetTarget topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -9573,7 +9573,7 @@ Validate ATPtg Command ATPtg_command_pointNewFile Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Command ATPtg_command_pointNewFile Topic Columns
-	[Documentation]    Validate the ATPtg_command_pointNewFile topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_command_pointNewFile topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -9611,7 +9611,7 @@ Validate ATPtg Command ATPtg_command_poriginClear Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Command ATPtg_command_poriginClear Topic Columns
-	[Documentation]    Validate the ATPtg_command_poriginClear topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_command_poriginClear topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -9649,7 +9649,7 @@ Validate ATPtg Command ATPtg_command_focusName Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Command ATPtg_command_focusName Topic Columns
-	[Documentation]    Validate the ATPtg_command_focusName topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_command_focusName topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -9687,7 +9687,7 @@ Validate ATPtg Command ATPtg_command_amLimitSet Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Command ATPtg_command_amLimitSet Topic Columns
-	[Documentation]    Validate the ATPtg_command_amLimitSet topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_command_amLimitSet topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -9725,7 +9725,7 @@ Validate ATPtg Command ATPtg_command_guideAutoclear Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Command ATPtg_command_guideAutoclear Topic Columns
-	[Documentation]    Validate the ATPtg_command_guideAutoclear topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_command_guideAutoclear topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -9763,7 +9763,7 @@ Validate ATPtg Command ATPtg_command_stopTracking Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Command ATPtg_command_stopTracking Topic Columns
-	[Documentation]    Validate the ATPtg_command_stopTracking topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_command_stopTracking topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -9801,7 +9801,7 @@ Validate ATPtg Event ATPtg_logevent_focusNameSelected Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Event ATPtg_logevent_focusNameSelected Topic Columns
-	[Documentation]    Validate the ATPtg_logevent_focusNameSelected topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_logevent_focusNameSelected topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -9839,7 +9839,7 @@ Validate ATPtg Event ATPtg_logevent_settingsApplied Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Event ATPtg_logevent_settingsApplied Topic Columns
-	[Documentation]    Validate the ATPtg_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -9877,7 +9877,7 @@ Validate ATPtg Event ATPtg_logevent_sunProximityWarning Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Event ATPtg_logevent_sunProximityWarning Topic Columns
-	[Documentation]    Validate the ATPtg_logevent_sunProximityWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_logevent_sunProximityWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -9915,7 +9915,7 @@ Validate ATPtg Event ATPtg_logevent_detailedState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Event ATPtg_logevent_detailedState Topic Columns
-	[Documentation]    Validate the ATPtg_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -9953,7 +9953,7 @@ Validate ATPtg Event ATPtg_logevent_mountGuideMode Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Event ATPtg_logevent_mountGuideMode Topic Columns
-	[Documentation]    Validate the ATPtg_logevent_mountGuideMode topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_logevent_mountGuideMode topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -9991,7 +9991,7 @@ Validate ATPtg Event ATPtg_logevent_azWrapWarning Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Event ATPtg_logevent_azWrapWarning Topic Columns
-	[Documentation]    Validate the ATPtg_logevent_azWrapWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_logevent_azWrapWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -10029,7 +10029,7 @@ Validate ATPtg Event ATPtg_logevent_wavelength Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Event ATPtg_logevent_wavelength Topic Columns
-	[Documentation]    Validate the ATPtg_logevent_wavelength topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_logevent_wavelength topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -10067,7 +10067,7 @@ Validate ATPtg Event ATPtg_logevent_inPositionEl Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Event ATPtg_logevent_inPositionEl Topic Columns
-	[Documentation]    Validate the ATPtg_logevent_inPositionEl topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_logevent_inPositionEl topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -10105,7 +10105,7 @@ Validate ATPtg Event ATPtg_logevent_inBlindSpot Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Event ATPtg_logevent_inBlindSpot Topic Columns
-	[Documentation]    Validate the ATPtg_logevent_inBlindSpot topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_logevent_inBlindSpot topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -10143,7 +10143,7 @@ Validate ATPtg Event ATPtg_logevent_blindSpotWarning Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Event ATPtg_logevent_blindSpotWarning Topic Columns
-	[Documentation]    Validate the ATPtg_logevent_blindSpotWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_logevent_blindSpotWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -10181,7 +10181,7 @@ Validate ATPtg Event ATPtg_logevent_axesTrackMode Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Event ATPtg_logevent_axesTrackMode Topic Columns
-	[Documentation]    Validate the ATPtg_logevent_axesTrackMode topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_logevent_axesTrackMode topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -10219,7 +10219,7 @@ Validate ATPtg Event ATPtg_logevent_objectSetWarning Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Event ATPtg_logevent_objectSetWarning Topic Columns
-	[Documentation]    Validate the ATPtg_logevent_objectSetWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_logevent_objectSetWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -10257,7 +10257,7 @@ Validate ATPtg Event ATPtg_logevent_pointingModel Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Event ATPtg_logevent_pointingModel Topic Columns
-	[Documentation]    Validate the ATPtg_logevent_pointingModel topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_logevent_pointingModel topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -10295,7 +10295,7 @@ Validate ATPtg Event ATPtg_logevent_airmassWarning Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Event ATPtg_logevent_airmassWarning Topic Columns
-	[Documentation]    Validate the ATPtg_logevent_airmassWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_logevent_airmassWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -10333,7 +10333,7 @@ Validate ATPtg Event ATPtg_logevent_weatherDataInvalid Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Event ATPtg_logevent_weatherDataInvalid Topic Columns
-	[Documentation]    Validate the ATPtg_logevent_weatherDataInvalid topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_logevent_weatherDataInvalid topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -10371,7 +10371,7 @@ Validate ATPtg Event ATPtg_logevent_focusNameInconsistentWarning Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Event ATPtg_logevent_focusNameInconsistentWarning Topic Columns
-	[Documentation]    Validate the ATPtg_logevent_focusNameInconsistentWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_logevent_focusNameInconsistentWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -10409,7 +10409,7 @@ Validate ATPtg Event ATPtg_logevent_currentTarget Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Event ATPtg_logevent_currentTarget Topic Columns
-	[Documentation]    Validate the ATPtg_logevent_currentTarget topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_logevent_currentTarget topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -10447,7 +10447,7 @@ Validate ATPtg Event ATPtg_logevent_iersOutOfDate Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Event ATPtg_logevent_iersOutOfDate Topic Columns
-	[Documentation]    Validate the ATPtg_logevent_iersOutOfDate topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_logevent_iersOutOfDate topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -10485,7 +10485,7 @@ Validate ATPtg Event ATPtg_logevent_weatherDataApplied Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Event ATPtg_logevent_weatherDataApplied Topic Columns
-	[Documentation]    Validate the ATPtg_logevent_weatherDataApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_logevent_weatherDataApplied topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -10523,7 +10523,7 @@ Validate ATPtg Event ATPtg_logevent_currentDebugLevel Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Event ATPtg_logevent_currentDebugLevel Topic Columns
-	[Documentation]    Validate the ATPtg_logevent_currentDebugLevel topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_logevent_currentDebugLevel topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -10561,7 +10561,7 @@ Validate ATPtg Event ATPtg_logevent_nextTarget Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Event ATPtg_logevent_nextTarget Topic Columns
-	[Documentation]    Validate the ATPtg_logevent_nextTarget topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_logevent_nextTarget topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -10599,7 +10599,7 @@ Validate ATPtg Event ATPtg_logevent_mountDataWarning Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Event ATPtg_logevent_mountDataWarning Topic Columns
-	[Documentation]    Validate the ATPtg_logevent_mountDataWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_logevent_mountDataWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -10637,7 +10637,7 @@ Validate ATPtg Event ATPtg_logevent_accessMode Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Event ATPtg_logevent_accessMode Topic Columns
-	[Documentation]    Validate the ATPtg_logevent_accessMode topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_logevent_accessMode topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -10675,7 +10675,7 @@ Validate ATPtg Event ATPtg_logevent_rotWrapWarning Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Event ATPtg_logevent_rotWrapWarning Topic Columns
-	[Documentation]    Validate the ATPtg_logevent_rotWrapWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_logevent_rotWrapWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -10713,7 +10713,7 @@ Validate ATPtg Event ATPtg_logevent_inPosition Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Event ATPtg_logevent_inPosition Topic Columns
-	[Documentation]    Validate the ATPtg_logevent_inPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_logevent_inPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -10751,7 +10751,7 @@ Validate ATPtg Event ATPtg_logevent_inPositionRot Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Event ATPtg_logevent_inPositionRot Topic Columns
-	[Documentation]    Validate the ATPtg_logevent_inPositionRot topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_logevent_inPositionRot topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -10789,7 +10789,7 @@ Validate ATPtg Event ATPtg_logevent_inPositionAz Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Event ATPtg_logevent_inPositionAz Topic Columns
-	[Documentation]    Validate the ATPtg_logevent_inPositionAz topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_logevent_inPositionAz topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -10827,7 +10827,7 @@ Validate ATPtg Event ATPtg_logevent_iers Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Event ATPtg_logevent_iers Topic Columns
-	[Documentation]    Validate the ATPtg_logevent_iers topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_logevent_iers topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -10865,7 +10865,7 @@ Validate ATPtg Event ATPtg_logevent_prospectiveTarget Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Event ATPtg_logevent_prospectiveTarget Topic Columns
-	[Documentation]    Validate the ATPtg_logevent_prospectiveTarget topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_logevent_prospectiveTarget topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -10903,7 +10903,7 @@ Validate ATPtg Event ATPtg_logevent_moonProximityWarning Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Event ATPtg_logevent_moonProximityWarning Topic Columns
-	[Documentation]    Validate the ATPtg_logevent_moonProximityWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_logevent_moonProximityWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -10941,7 +10941,7 @@ Validate ATPtg Event ATPtg_logevent_trackPosting Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Event ATPtg_logevent_trackPosting Topic Columns
-	[Documentation]    Validate the ATPtg_logevent_trackPosting topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_logevent_trackPosting topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -10979,7 +10979,7 @@ Validate ATPtg Event ATPtg_logevent_ptgAzCurrentWrap Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Event ATPtg_logevent_ptgAzCurrentWrap Topic Columns
-	[Documentation]    Validate the ATPtg_logevent_ptgAzCurrentWrap topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_logevent_ptgAzCurrentWrap topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -11017,7 +11017,7 @@ Validate ATPtg Event ATPtg_logevent_ptgRotCurrentWrap Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Event ATPtg_logevent_ptgRotCurrentWrap Topic Columns
-	[Documentation]    Validate the ATPtg_logevent_ptgRotCurrentWrap topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_logevent_ptgRotCurrentWrap topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -11055,7 +11055,7 @@ Validate ATPtg Telemetry ATPtg_prospectiveTargetStatus Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Telemetry ATPtg_prospectiveTargetStatus Topic Columns
-	[Documentation]    Validate the ATPtg_prospectiveTargetStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_prospectiveTargetStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -11093,7 +11093,7 @@ Validate ATPtg Telemetry ATPtg_nextTargetStatus Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Telemetry ATPtg_nextTargetStatus Topic Columns
-	[Documentation]    Validate the ATPtg_nextTargetStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_nextTargetStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -11131,7 +11131,7 @@ Validate ATPtg Telemetry ATPtg_currentTimesToLimits Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Telemetry ATPtg_currentTimesToLimits Topic Columns
-	[Documentation]    Validate the ATPtg_currentTimesToLimits topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_currentTimesToLimits topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -11169,7 +11169,7 @@ Validate ATPtg Telemetry ATPtg_currentTargetStatus Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Telemetry ATPtg_currentTargetStatus Topic Columns
-	[Documentation]    Validate the ATPtg_currentTargetStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_currentTargetStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -11207,7 +11207,7 @@ Validate ATPtg Telemetry ATPtg_guidingAndOffsets Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Telemetry ATPtg_guidingAndOffsets Topic Columns
-	[Documentation]    Validate the ATPtg_guidingAndOffsets topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_guidingAndOffsets topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -11245,7 +11245,7 @@ Validate ATPtg Telemetry ATPtg_prospectiveTimesToLimits Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Telemetry ATPtg_prospectiveTimesToLimits Topic Columns
-	[Documentation]    Validate the ATPtg_prospectiveTimesToLimits topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_prospectiveTimesToLimits topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -11283,7 +11283,7 @@ Validate ATPtg Telemetry ATPtg_timeAndDate Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Telemetry ATPtg_timeAndDate Topic Columns
-	[Documentation]    Validate the ATPtg_timeAndDate topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_timeAndDate topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -11321,7 +11321,7 @@ Validate ATPtg Telemetry ATPtg_mountStatus Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Telemetry ATPtg_mountStatus Topic Columns
-	[Documentation]    Validate the ATPtg_mountStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_mountStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -11359,7 +11359,7 @@ Validate ATPtg Telemetry ATPtg_nextTimesToLimits Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATPtg Telemetry ATPtg_nextTimesToLimits Topic Columns
-	[Documentation]    Validate the ATPtg_nextTimesToLimits topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATPtg_nextTimesToLimits topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -11397,7 +11397,7 @@ Validate ATSpectrograph Command ATSpectrograph_command_changeFilter Topic Byte S
 	Should Be True    ${result} < ${65536}
 
 Validate ATSpectrograph Command ATSpectrograph_command_changeFilter Topic Columns
-	[Documentation]    Validate the ATSpectrograph_command_changeFilter topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATSpectrograph_command_changeFilter topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -11435,7 +11435,7 @@ Validate ATSpectrograph Command ATSpectrograph_command_changeDisperser Topic Byt
 	Should Be True    ${result} < ${65536}
 
 Validate ATSpectrograph Command ATSpectrograph_command_changeDisperser Topic Columns
-	[Documentation]    Validate the ATSpectrograph_command_changeDisperser topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATSpectrograph_command_changeDisperser topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -11473,7 +11473,7 @@ Validate ATSpectrograph Command ATSpectrograph_command_moveLinearStage Topic Byt
 	Should Be True    ${result} < ${65536}
 
 Validate ATSpectrograph Command ATSpectrograph_command_moveLinearStage Topic Columns
-	[Documentation]    Validate the ATSpectrograph_command_moveLinearStage topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATSpectrograph_command_moveLinearStage topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -11511,7 +11511,7 @@ Validate ATSpectrograph Command ATSpectrograph_command_homeLinearStage Topic Byt
 	Should Be True    ${result} < ${65536}
 
 Validate ATSpectrograph Command ATSpectrograph_command_homeLinearStage Topic Columns
-	[Documentation]    Validate the ATSpectrograph_command_homeLinearStage topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATSpectrograph_command_homeLinearStage topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -11549,7 +11549,7 @@ Validate ATSpectrograph Command ATSpectrograph_command_stopAllAxes Topic Byte Si
 	Should Be True    ${result} < ${65536}
 
 Validate ATSpectrograph Command ATSpectrograph_command_stopAllAxes Topic Columns
-	[Documentation]    Validate the ATSpectrograph_command_stopAllAxes topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATSpectrograph_command_stopAllAxes topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -11587,7 +11587,7 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_detailedState Topic Byte S
 	Should Be True    ${result} < ${65536}
 
 Validate ATSpectrograph Event ATSpectrograph_logevent_detailedState Topic Columns
-	[Documentation]    Validate the ATSpectrograph_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATSpectrograph_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -11625,7 +11625,7 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_heartbeat Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATSpectrograph Event ATSpectrograph_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the ATSpectrograph_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATSpectrograph_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -11663,7 +11663,7 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_internalCommand Topic Byte
 	Should Be True    ${result} < ${65536}
 
 Validate ATSpectrograph Event ATSpectrograph_logevent_internalCommand Topic Columns
-	[Documentation]    Validate the ATSpectrograph_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATSpectrograph_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -11701,7 +11701,7 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_loopTimeOutOfRange Topic B
 	Should Be True    ${result} < ${65536}
 
 Validate ATSpectrograph Event ATSpectrograph_logevent_loopTimeOutOfRange Topic Columns
-	[Documentation]    Validate the ATSpectrograph_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATSpectrograph_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -11739,7 +11739,7 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_rejectedCommand Topic Byte
 	Should Be True    ${result} < ${65536}
 
 Validate ATSpectrograph Event ATSpectrograph_logevent_rejectedCommand Topic Columns
-	[Documentation]    Validate the ATSpectrograph_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATSpectrograph_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -11777,7 +11777,7 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_timeout Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATSpectrograph Event ATSpectrograph_logevent_timeout Topic Columns
-	[Documentation]    Validate the ATSpectrograph_logevent_timeout topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATSpectrograph_logevent_timeout topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -11815,7 +11815,7 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_filterInPosition Topic Byt
 	Should Be True    ${result} < ${65536}
 
 Validate ATSpectrograph Event ATSpectrograph_logevent_filterInPosition Topic Columns
-	[Documentation]    Validate the ATSpectrograph_logevent_filterInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATSpectrograph_logevent_filterInPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -11853,7 +11853,7 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_reportedFilterPosition Top
 	Should Be True    ${result} < ${65536}
 
 Validate ATSpectrograph Event ATSpectrograph_logevent_reportedFilterPosition Topic Columns
-	[Documentation]    Validate the ATSpectrograph_logevent_reportedFilterPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATSpectrograph_logevent_reportedFilterPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -11891,7 +11891,7 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_reportedDisperserPosition 
 	Should Be True    ${result} < ${65536}
 
 Validate ATSpectrograph Event ATSpectrograph_logevent_reportedDisperserPosition Topic Columns
-	[Documentation]    Validate the ATSpectrograph_logevent_reportedDisperserPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATSpectrograph_logevent_reportedDisperserPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -11929,7 +11929,7 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_disperserInPosition Topic 
 	Should Be True    ${result} < ${65536}
 
 Validate ATSpectrograph Event ATSpectrograph_logevent_disperserInPosition Topic Columns
-	[Documentation]    Validate the ATSpectrograph_logevent_disperserInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATSpectrograph_logevent_disperserInPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -11967,7 +11967,7 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_linearStageInPosition Topi
 	Should Be True    ${result} < ${65536}
 
 Validate ATSpectrograph Event ATSpectrograph_logevent_linearStageInPosition Topic Columns
-	[Documentation]    Validate the ATSpectrograph_logevent_linearStageInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATSpectrograph_logevent_linearStageInPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12005,7 +12005,7 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_reportedLinearStagePositio
 	Should Be True    ${result} < ${65536}
 
 Validate ATSpectrograph Event ATSpectrograph_logevent_reportedLinearStagePosition Topic Columns
-	[Documentation]    Validate the ATSpectrograph_logevent_reportedLinearStagePosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATSpectrograph_logevent_reportedLinearStagePosition topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12043,7 +12043,7 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_lsState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATSpectrograph Event ATSpectrograph_logevent_lsState Topic Columns
-	[Documentation]    Validate the ATSpectrograph_logevent_lsState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATSpectrograph_logevent_lsState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12081,7 +12081,7 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_fwState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATSpectrograph Event ATSpectrograph_logevent_fwState Topic Columns
-	[Documentation]    Validate the ATSpectrograph_logevent_fwState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATSpectrograph_logevent_fwState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12119,7 +12119,7 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_gwState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATSpectrograph Event ATSpectrograph_logevent_gwState Topic Columns
-	[Documentation]    Validate the ATSpectrograph_logevent_gwState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATSpectrograph_logevent_gwState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12157,7 +12157,7 @@ Validate ATSpectrograph Event ATSpectrograph_logevent_settingsApplied Topic Byte
 	Should Be True    ${result} < ${65536}
 
 Validate ATSpectrograph Event ATSpectrograph_logevent_settingsApplied Topic Columns
-	[Documentation]    Validate the ATSpectrograph_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATSpectrograph_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12195,7 +12195,7 @@ Validate ATSpectrograph Telemetry ATSpectrograph_timestamp Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATSpectrograph Telemetry ATSpectrograph_timestamp Topic Columns
-	[Documentation]    Validate the ATSpectrograph_timestamp topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATSpectrograph_timestamp topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12233,7 +12233,7 @@ Validate ATSpectrograph Telemetry ATSpectrograph_loopTime Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATSpectrograph Telemetry ATSpectrograph_loopTime Topic Columns
-	[Documentation]    Validate the ATSpectrograph_loopTime topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATSpectrograph_loopTime topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12271,7 +12271,7 @@ Validate ATTCS Command ATTCS_command_target Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATTCS Command ATTCS_command_target Topic Columns
-	[Documentation]    Validate the ATTCS_command_target topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATTCS_command_target topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12309,7 +12309,7 @@ Validate ATTCS Command ATTCS_command_offset Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATTCS Command ATTCS_command_offset Topic Columns
-	[Documentation]    Validate the ATTCS_command_offset topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATTCS_command_offset topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12347,7 +12347,7 @@ Validate ATTCS Command ATTCS_command_spectrographSetup Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATTCS Command ATTCS_command_spectrographSetup Topic Columns
-	[Documentation]    Validate the ATTCS_command_spectrographSetup topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATTCS_command_spectrographSetup topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12385,7 +12385,7 @@ Validate ATTCS Event ATTCS_logevent_detailedState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATTCS Event ATTCS_logevent_detailedState Topic Columns
-	[Documentation]    Validate the ATTCS_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATTCS_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12423,7 +12423,7 @@ Validate ATTCS Event ATTCS_logevent_spectrographInPosition Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATTCS Event ATTCS_logevent_spectrographInPosition Topic Columns
-	[Documentation]    Validate the ATTCS_logevent_spectrographInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATTCS_logevent_spectrographInPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12461,7 +12461,7 @@ Validate ATTCS Event ATTCS_logevent_telescopeInPosition Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATTCS Event ATTCS_logevent_telescopeInPosition Topic Columns
-	[Documentation]    Validate the ATTCS_logevent_telescopeInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATTCS_logevent_telescopeInPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12499,7 +12499,7 @@ Validate ATTCS Event ATTCS_logevent_rejectedCommand Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATTCS Event ATTCS_logevent_rejectedCommand Topic Columns
-	[Documentation]    Validate the ATTCS_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATTCS_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12537,7 +12537,7 @@ Validate ATTCS Event ATTCS_logevent_internalCommand Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATTCS Event ATTCS_logevent_internalCommand Topic Columns
-	[Documentation]    Validate the ATTCS_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATTCS_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12575,7 +12575,7 @@ Validate ATTCS Event ATTCS_logevent_heartbeat Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATTCS Event ATTCS_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the ATTCS_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATTCS_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12613,7 +12613,7 @@ Validate ATTCS Event ATTCS_logevent_loopTimeOutOfRange Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATTCS Event ATTCS_logevent_loopTimeOutOfRange Topic Columns
-	[Documentation]    Validate the ATTCS_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATTCS_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12651,7 +12651,7 @@ Validate ATTCS Event ATTCS_logevent_settingsApplied_Example Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATTCS Event ATTCS_logevent_settingsApplied_Example Topic Columns
-	[Documentation]    Validate the ATTCS_logevent_settingsApplied_Example topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATTCS_logevent_settingsApplied_Example topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12689,7 +12689,7 @@ Validate ATTCS Telemetry ATTCS_loopTime Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATTCS Telemetry ATTCS_loopTime Topic Columns
-	[Documentation]    Validate the ATTCS_loopTime topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATTCS_loopTime topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12727,7 +12727,7 @@ Validate ATTCS Telemetry ATTCS_timestamp Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATTCS Telemetry ATTCS_timestamp Topic Columns
-	[Documentation]    Validate the ATTCS_timestamp topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATTCS_timestamp topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12765,7 +12765,7 @@ Validate ATThermoelectricCooler Command ATThermoelectricCooler_command_setTemper
 	Should Be True    ${result} < ${65536}
 
 Validate ATThermoelectricCooler Command ATThermoelectricCooler_command_setTemperature Topic Columns
-	[Documentation]    Validate the ATThermoelectricCooler_command_setTemperature topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATThermoelectricCooler_command_setTemperature topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATThermoelectricCooler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12803,7 +12803,7 @@ Validate ATThermoelectricCooler Command ATThermoelectricCooler_command_powerChil
 	Should Be True    ${result} < ${65536}
 
 Validate ATThermoelectricCooler Command ATThermoelectricCooler_command_powerChillerOn Topic Columns
-	[Documentation]    Validate the ATThermoelectricCooler_command_powerChillerOn topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATThermoelectricCooler_command_powerChillerOn topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATThermoelectricCooler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12841,7 +12841,7 @@ Validate ATThermoelectricCooler Command ATThermoelectricCooler_command_powerChil
 	Should Be True    ${result} < ${65536}
 
 Validate ATThermoelectricCooler Command ATThermoelectricCooler_command_powerChillerOff Topic Columns
-	[Documentation]    Validate the ATThermoelectricCooler_command_powerChillerOff topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATThermoelectricCooler_command_powerChillerOff topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATThermoelectricCooler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12879,7 +12879,7 @@ Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_detailedSt
 	Should Be True    ${result} < ${65536}
 
 Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_detailedState Topic Columns
-	[Documentation]    Validate the ATThermoelectricCooler_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATThermoelectricCooler_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATThermoelectricCooler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12917,7 +12917,7 @@ Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_internalCo
 	Should Be True    ${result} < ${65536}
 
 Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_internalCommand Topic Columns
-	[Documentation]    Validate the ATThermoelectricCooler_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATThermoelectricCooler_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATThermoelectricCooler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12955,7 +12955,7 @@ Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_heartbeat 
 	Should Be True    ${result} < ${65536}
 
 Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the ATThermoelectricCooler_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATThermoelectricCooler_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATThermoelectricCooler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -12993,7 +12993,7 @@ Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_loopTimeOu
 	Should Be True    ${result} < ${65536}
 
 Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_loopTimeOutOfRange Topic Columns
-	[Documentation]    Validate the ATThermoelectricCooler_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATThermoelectricCooler_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATThermoelectricCooler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13031,7 +13031,7 @@ Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_rejectedCo
 	Should Be True    ${result} < ${65536}
 
 Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_rejectedCommand Topic Columns
-	[Documentation]    Validate the ATThermoelectricCooler_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATThermoelectricCooler_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATThermoelectricCooler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13069,7 +13069,7 @@ Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_deviceErro
 	Should Be True    ${result} < ${65536}
 
 Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_deviceErrorCode Topic Columns
-	[Documentation]    Validate the ATThermoelectricCooler_logevent_deviceErrorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATThermoelectricCooler_logevent_deviceErrorCode topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATThermoelectricCooler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13107,7 +13107,7 @@ Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_hardwareWa
 	Should Be True    ${result} < ${65536}
 
 Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_hardwareWarning Topic Columns
-	[Documentation]    Validate the ATThermoelectricCooler_logevent_hardwareWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATThermoelectricCooler_logevent_hardwareWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATThermoelectricCooler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13145,7 +13145,7 @@ Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_temperatur
 	Should Be True    ${result} < ${65536}
 
 Validate ATThermoelectricCooler Event ATThermoelectricCooler_logevent_temperatureReached Topic Columns
-	[Documentation]    Validate the ATThermoelectricCooler_logevent_temperatureReached topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATThermoelectricCooler_logevent_temperatureReached topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATThermoelectricCooler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13183,7 +13183,7 @@ Validate ATThermoelectricCooler Telemetry ATThermoelectricCooler_timestamp Topic
 	Should Be True    ${result} < ${65536}
 
 Validate ATThermoelectricCooler Telemetry ATThermoelectricCooler_timestamp Topic Columns
-	[Documentation]    Validate the ATThermoelectricCooler_timestamp topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATThermoelectricCooler_timestamp topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATThermoelectricCooler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13221,7 +13221,7 @@ Validate ATThermoelectricCooler Telemetry ATThermoelectricCooler_loopTime Topic 
 	Should Be True    ${result} < ${65536}
 
 Validate ATThermoelectricCooler Telemetry ATThermoelectricCooler_loopTime Topic Columns
-	[Documentation]    Validate the ATThermoelectricCooler_loopTime topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATThermoelectricCooler_loopTime topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATThermoelectricCooler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13259,7 +13259,7 @@ Validate ATThermoelectricCooler Telemetry ATThermoelectricCooler_fansSpeed Topic
 	Should Be True    ${result} < ${65536}
 
 Validate ATThermoelectricCooler Telemetry ATThermoelectricCooler_fansSpeed Topic Columns
-	[Documentation]    Validate the ATThermoelectricCooler_fansSpeed topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATThermoelectricCooler_fansSpeed topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATThermoelectricCooler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13297,7 +13297,7 @@ Validate ATThermoelectricCooler Telemetry ATThermoelectricCooler_unitUpTime Topi
 	Should Be True    ${result} < ${65536}
 
 Validate ATThermoelectricCooler Telemetry ATThermoelectricCooler_unitUpTime Topic Columns
-	[Documentation]    Validate the ATThermoelectricCooler_unitUpTime topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATThermoelectricCooler_unitUpTime topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATThermoelectricCooler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13335,7 +13335,7 @@ Validate ATThermoelectricCooler Telemetry ATThermoelectricCooler_temperatureSens
 	Should Be True    ${result} < ${65536}
 
 Validate ATThermoelectricCooler Telemetry ATThermoelectricCooler_temperatureSensors Topic Columns
-	[Documentation]    Validate the ATThermoelectricCooler_temperatureSensors topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATThermoelectricCooler_temperatureSensors topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATThermoelectricCooler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13373,7 +13373,7 @@ Validate ATThermoelectricCooler Telemetry ATThermoelectricCooler_processFlow Top
 	Should Be True    ${result} < ${65536}
 
 Validate ATThermoelectricCooler Telemetry ATThermoelectricCooler_processFlow Topic Columns
-	[Documentation]    Validate the ATThermoelectricCooler_processFlow topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATThermoelectricCooler_processFlow topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATThermoelectricCooler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13411,7 +13411,7 @@ Validate ATWhiteLight Command ATWhiteLight_command_powerLightOn Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATWhiteLight Command ATWhiteLight_command_powerLightOn Topic Columns
-	[Documentation]    Validate the ATWhiteLight_command_powerLightOn topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATWhiteLight_command_powerLightOn topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATWhiteLight
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13449,7 +13449,7 @@ Validate ATWhiteLight Command ATWhiteLight_command_powerLightOff Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATWhiteLight Command ATWhiteLight_command_powerLightOff Topic Columns
-	[Documentation]    Validate the ATWhiteLight_command_powerLightOff topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATWhiteLight_command_powerLightOff topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATWhiteLight
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13487,7 +13487,7 @@ Validate ATWhiteLight Command ATWhiteLight_command_emergencyPowerLightOff Topic 
 	Should Be True    ${result} < ${65536}
 
 Validate ATWhiteLight Command ATWhiteLight_command_emergencyPowerLightOff Topic Columns
-	[Documentation]    Validate the ATWhiteLight_command_emergencyPowerLightOff topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATWhiteLight_command_emergencyPowerLightOff topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATWhiteLight
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13525,7 +13525,7 @@ Validate ATWhiteLight Command ATWhiteLight_command_setLightPower Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATWhiteLight Command ATWhiteLight_command_setLightPower Topic Columns
-	[Documentation]    Validate the ATWhiteLight_command_setLightPower topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATWhiteLight_command_setLightPower topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATWhiteLight
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13563,7 +13563,7 @@ Validate ATWhiteLight Command ATWhiteLight_command_setChillerTemperature Topic B
 	Should Be True    ${result} < ${65536}
 
 Validate ATWhiteLight Command ATWhiteLight_command_setChillerTemperature Topic Columns
-	[Documentation]    Validate the ATWhiteLight_command_setChillerTemperature topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATWhiteLight_command_setChillerTemperature topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATWhiteLight
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13575,8 +13575,8 @@ Validate ATWhiteLight Command ATWhiteLight_command_setChillerTemperature Topic C
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATWhiteLight Command ATWhiteLight_command_powerChillerOn Topic Byte Size
-	[Documentation]    Validate the ATWhiteLight_command_powerChillerOn topic is less than 65536 bytes in total.
+Validate ATWhiteLight Command ATWhiteLight_command_startCooling Topic Byte Size
+	[Documentation]    Validate the ATWhiteLight_command_startCooling topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATWhiteLight
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13600,8 +13600,8 @@ Validate ATWhiteLight Command ATWhiteLight_command_powerChillerOn Topic Byte Siz
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATWhiteLight Command ATWhiteLight_command_powerChillerOn Topic Columns
-	[Documentation]    Validate the ATWhiteLight_command_powerChillerOn topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATWhiteLight Command ATWhiteLight_command_startCooling Topic Columns
+	[Documentation]    Validate the ATWhiteLight_command_startCooling topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATWhiteLight
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13613,8 +13613,8 @@ Validate ATWhiteLight Command ATWhiteLight_command_powerChillerOn Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATWhiteLight Command ATWhiteLight_command_powerChillerOff Topic Byte Size
-	[Documentation]    Validate the ATWhiteLight_command_powerChillerOff topic is less than 65536 bytes in total.
+Validate ATWhiteLight Command ATWhiteLight_command_stopCooling Topic Byte Size
+	[Documentation]    Validate the ATWhiteLight_command_stopCooling topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATWhiteLight
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13638,8 +13638,8 @@ Validate ATWhiteLight Command ATWhiteLight_command_powerChillerOff Topic Byte Si
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATWhiteLight Command ATWhiteLight_command_powerChillerOff Topic Columns
-	[Documentation]    Validate the ATWhiteLight_command_powerChillerOff topic has less than 4096 total arguments, each representing a column in the EFD.s
+Validate ATWhiteLight Command ATWhiteLight_command_stopCooling Topic Columns
+	[Documentation]    Validate the ATWhiteLight_command_stopCooling topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATWhiteLight
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13677,7 +13677,7 @@ Validate ATWhiteLight Event ATWhiteLight_logevent_heartbeat Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATWhiteLight Event ATWhiteLight_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the ATWhiteLight_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATWhiteLight_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATWhiteLight
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13715,7 +13715,7 @@ Validate ATWhiteLight Event ATWhiteLight_logevent_loopTimeOutOfRange Topic Byte 
 	Should Be True    ${result} < ${65536}
 
 Validate ATWhiteLight Event ATWhiteLight_logevent_loopTimeOutOfRange Topic Columns
-	[Documentation]    Validate the ATWhiteLight_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATWhiteLight_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATWhiteLight
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13753,7 +13753,7 @@ Validate ATWhiteLight Event ATWhiteLight_logevent_rejectedCommand Topic Byte Siz
 	Should Be True    ${result} < ${65536}
 
 Validate ATWhiteLight Event ATWhiteLight_logevent_rejectedCommand Topic Columns
-	[Documentation]    Validate the ATWhiteLight_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATWhiteLight_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATWhiteLight
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13791,12 +13791,88 @@ Validate ATWhiteLight Event ATWhiteLight_logevent_whiteLightStatus Topic Byte Si
 	Should Be True    ${result} < ${65536}
 
 Validate ATWhiteLight Event ATWhiteLight_logevent_whiteLightStatus Topic Columns
-	[Documentation]    Validate the ATWhiteLight_logevent_whiteLightStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATWhiteLight_logevent_whiteLightStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATWhiteLight
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Events.xml
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate ATWhiteLight Event ATWhiteLight_logevent_chillerWarning Topic Byte Size
+	[Documentation]    Validate the ATWhiteLight_logevent_chillerWarning topic is less than 65536 bytes in total.
+	[Tags]    smoke    ATWhiteLight
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate ATWhiteLight Event ATWhiteLight_logevent_chillerWarning Topic Columns
+	[Documentation]    Validate the ATWhiteLight_logevent_chillerWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
+	[Tags]    smoke    ATWhiteLight
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate ATWhiteLight Event ATWhiteLight_logevent_chillerTempReached Topic Byte Size
+	[Documentation]    Validate the ATWhiteLight_logevent_chillerTempReached topic is less than 65536 bytes in total.
+	[Tags]    smoke    ATWhiteLight
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/Count" -v . -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate ATWhiteLight Event ATWhiteLight_logevent_chillerTempReached Topic Columns
+	[Documentation]    Validate the ATWhiteLight_logevent_chillerTempReached topic has less than 4096 total arguments, each representing a column in the EFDs.
+	[Tags]    smoke    ATWhiteLight
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/Count" -v . -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -13829,7 +13905,7 @@ Validate ATWhiteLight Telemetry ATWhiteLight_timestamp Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATWhiteLight Telemetry ATWhiteLight_timestamp Topic Columns
-	[Documentation]    Validate the ATWhiteLight_timestamp topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATWhiteLight_timestamp topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATWhiteLight
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13867,7 +13943,7 @@ Validate ATWhiteLight Telemetry ATWhiteLight_loopTime Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATWhiteLight Telemetry ATWhiteLight_loopTime Topic Columns
-	[Documentation]    Validate the ATWhiteLight_loopTime topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATWhiteLight_loopTime topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATWhiteLight
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13905,7 +13981,7 @@ Validate ATWhiteLight Telemetry ATWhiteLight_bulbHours Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATWhiteLight Telemetry ATWhiteLight_bulbHours Topic Columns
-	[Documentation]    Validate the ATWhiteLight_bulbHours topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATWhiteLight_bulbHours topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATWhiteLight
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -13943,12 +14019,240 @@ Validate ATWhiteLight Telemetry ATWhiteLight_bulbWattHours Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ATWhiteLight Telemetry ATWhiteLight_bulbWattHours Topic Columns
-	[Documentation]    Validate the ATWhiteLight_bulbWattHours topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ATWhiteLight_bulbWattHours topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATWhiteLight
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[4]/item)" -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Telemetry.xml
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[4]/item/Count" -v . -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate ATWhiteLight Telemetry ATWhiteLight_chillerFansSpeed Topic Byte Size
+	[Documentation]    Validate the ATWhiteLight_chillerFansSpeed topic is less than 65536 bytes in total.
+	[Tags]    smoke    ATWhiteLight
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[5]/item)" -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[5]/item/Count" -v . -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate ATWhiteLight Telemetry ATWhiteLight_chillerFansSpeed Topic Columns
+	[Documentation]    Validate the ATWhiteLight_chillerFansSpeed topic has less than 4096 total arguments, each representing a column in the EFDs.
+	[Tags]    smoke    ATWhiteLight
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[5]/item)" -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[5]/item/Count" -v . -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate ATWhiteLight Telemetry ATWhiteLight_chillerUpTime Topic Byte Size
+	[Documentation]    Validate the ATWhiteLight_chillerUpTime topic is less than 65536 bytes in total.
+	[Tags]    smoke    ATWhiteLight
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[6]/item)" -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[6]/item/Count" -v . -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[6]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate ATWhiteLight Telemetry ATWhiteLight_chillerUpTime Topic Columns
+	[Documentation]    Validate the ATWhiteLight_chillerUpTime topic has less than 4096 total arguments, each representing a column in the EFDs.
+	[Tags]    smoke    ATWhiteLight
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[6]/item)" -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[6]/item/Count" -v . -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate ATWhiteLight Telemetry ATWhiteLight_chillerTempSensors Topic Byte Size
+	[Documentation]    Validate the ATWhiteLight_chillerTempSensors topic is less than 65536 bytes in total.
+	[Tags]    smoke    ATWhiteLight
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[7]/item)" -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[7]/item/Count" -v . -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[7]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate ATWhiteLight Telemetry ATWhiteLight_chillerTempSensors Topic Columns
+	[Documentation]    Validate the ATWhiteLight_chillerTempSensors topic has less than 4096 total arguments, each representing a column in the EFDs.
+	[Tags]    smoke    ATWhiteLight
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[7]/item)" -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[7]/item/Count" -v . -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate ATWhiteLight Telemetry ATWhiteLight_chillerProcessFlow Topic Byte Size
+	[Documentation]    Validate the ATWhiteLight_chillerProcessFlow topic is less than 65536 bytes in total.
+	[Tags]    smoke    ATWhiteLight
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[8]/item)" -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[8]/item/Count" -v . -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[8]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate ATWhiteLight Telemetry ATWhiteLight_chillerProcessFlow Topic Columns
+	[Documentation]    Validate the ATWhiteLight_chillerProcessFlow topic has less than 4096 total arguments, each representing a column in the EFDs.
+	[Tags]    smoke    ATWhiteLight
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[8]/item)" -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[8]/item/Count" -v . -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate ATWhiteLight Telemetry ATWhiteLight_chillerTECBankCurrent Topic Byte Size
+	[Documentation]    Validate the ATWhiteLight_chillerTECBankCurrent topic is less than 65536 bytes in total.
+	[Tags]    smoke    ATWhiteLight
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[9]/item)" -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[9]/item/Count" -v . -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[9]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate ATWhiteLight Telemetry ATWhiteLight_chillerTECBankCurrent Topic Columns
+	[Documentation]    Validate the ATWhiteLight_chillerTECBankCurrent topic has less than 4096 total arguments, each representing a column in the EFDs.
+	[Tags]    smoke    ATWhiteLight
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[9]/item)" -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[9]/item/Count" -v . -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate ATWhiteLight Telemetry ATWhiteLight_chillerTEDriveLevel Topic Byte Size
+	[Documentation]    Validate the ATWhiteLight_chillerTEDriveLevel topic is less than 65536 bytes in total.
+	[Tags]    smoke    ATWhiteLight
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[10]/item)" -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[10]/item/Count" -v . -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[10]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate ATWhiteLight Telemetry ATWhiteLight_chillerTEDriveLevel Topic Columns
+	[Documentation]    Validate the ATWhiteLight_chillerTEDriveLevel topic has less than 4096 total arguments, each representing a column in the EFDs.
+	[Tags]    smoke    ATWhiteLight
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[10]/item)" -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[10]/item/Count" -v . -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Telemetry.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -13981,7 +14285,7 @@ Validate CatchupArchiver Event CatchupArchiver_logevent_catchuparchiverEntitySta
 	Should Be True    ${result} < ${65536}
 
 Validate CatchupArchiver Event CatchupArchiver_logevent_catchuparchiverEntityStartup Topic Columns
-	[Documentation]    Validate the CatchupArchiver_logevent_catchuparchiverEntityStartup topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the CatchupArchiver_logevent_catchuparchiverEntityStartup topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    CatchupArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14019,7 +14323,7 @@ Validate CatchupArchiver Event CatchupArchiver_logevent_settingsApplied Topic By
 	Should Be True    ${result} < ${65536}
 
 Validate CatchupArchiver Event CatchupArchiver_logevent_settingsApplied Topic Columns
-	[Documentation]    Validate the CatchupArchiver_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the CatchupArchiver_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    CatchupArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14057,7 +14361,7 @@ Validate CatchupArchiver Event CatchupArchiver_logevent_catchuparchiverEntitySum
 	Should Be True    ${result} < ${65536}
 
 Validate CatchupArchiver Event CatchupArchiver_logevent_catchuparchiverEntitySummaryState Topic Columns
-	[Documentation]    Validate the CatchupArchiver_logevent_catchuparchiverEntitySummaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the CatchupArchiver_logevent_catchuparchiverEntitySummaryState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    CatchupArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14095,7 +14399,7 @@ Validate CatchupArchiver Event CatchupArchiver_logevent_catchuparchiverEntityShu
 	Should Be True    ${result} < ${65536}
 
 Validate CatchupArchiver Event CatchupArchiver_logevent_catchuparchiverEntityShutdown Topic Columns
-	[Documentation]    Validate the CatchupArchiver_logevent_catchuparchiverEntityShutdown topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the CatchupArchiver_logevent_catchuparchiverEntityShutdown topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    CatchupArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14133,7 +14437,7 @@ Validate CatchupArchiver Telemetry CatchupArchiver_sequencerHeartbeat Topic Byte
 	Should Be True    ${result} < ${65536}
 
 Validate CatchupArchiver Telemetry CatchupArchiver_sequencerHeartbeat Topic Columns
-	[Documentation]    Validate the CatchupArchiver_sequencerHeartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the CatchupArchiver_sequencerHeartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    CatchupArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14171,7 +14475,7 @@ Validate CBP Command CBP_command_clearFault Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate CBP Command CBP_command_clearFault Topic Columns
-	[Documentation]    Validate the CBP_command_clearFault topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the CBP_command_clearFault topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    CBP
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14209,7 +14513,7 @@ Validate CBP Command CBP_command_moveAzimuth Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate CBP Command CBP_command_moveAzimuth Topic Columns
-	[Documentation]    Validate the CBP_command_moveAzimuth topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the CBP_command_moveAzimuth topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    CBP
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14247,7 +14551,7 @@ Validate CBP Command CBP_command_moveAltitude Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate CBP Command CBP_command_moveAltitude Topic Columns
-	[Documentation]    Validate the CBP_command_moveAltitude topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the CBP_command_moveAltitude topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    CBP
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14285,7 +14589,7 @@ Validate CBP Command CBP_command_changeMask Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate CBP Command CBP_command_changeMask Topic Columns
-	[Documentation]    Validate the CBP_command_changeMask topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the CBP_command_changeMask topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    CBP
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14323,7 +14627,7 @@ Validate CBP Command CBP_command_setFocus Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate CBP Command CBP_command_setFocus Topic Columns
-	[Documentation]    Validate the CBP_command_setFocus topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the CBP_command_setFocus topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    CBP
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14361,7 +14665,7 @@ Validate CBP Command CBP_command_park Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate CBP Command CBP_command_park Topic Columns
-	[Documentation]    Validate the CBP_command_park topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the CBP_command_park topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    CBP
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14399,7 +14703,7 @@ Validate CBP Telemetry CBP_status Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate CBP Telemetry CBP_status Topic Columns
-	[Documentation]    Validate the CBP_status topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the CBP_status topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    CBP
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14437,7 +14741,7 @@ Validate CBP Telemetry CBP_mask Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate CBP Telemetry CBP_mask Topic Columns
-	[Documentation]    Validate the CBP_mask topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the CBP_mask topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    CBP
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14475,7 +14779,7 @@ Validate CBP Telemetry CBP_azimuth Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate CBP Telemetry CBP_azimuth Topic Columns
-	[Documentation]    Validate the CBP_azimuth topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the CBP_azimuth topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    CBP
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14513,7 +14817,7 @@ Validate CBP Telemetry CBP_altitude Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate CBP Telemetry CBP_altitude Topic Columns
-	[Documentation]    Validate the CBP_altitude topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the CBP_altitude topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    CBP
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14551,7 +14855,7 @@ Validate CBP Telemetry CBP_focus Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate CBP Telemetry CBP_focus Topic Columns
-	[Documentation]    Validate the CBP_focus topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the CBP_focus topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    CBP
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14589,7 +14893,7 @@ Validate CBP Telemetry CBP_parked Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate CBP Telemetry CBP_parked Topic Columns
-	[Documentation]    Validate the CBP_parked topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the CBP_parked topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    CBP
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14627,7 +14931,7 @@ Validate DIMM Event DIMM_logevent_detailedState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DIMM Event DIMM_logevent_detailedState Topic Columns
-	[Documentation]    Validate the DIMM_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DIMM_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DIMM
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14665,7 +14969,7 @@ Validate DIMM Event DIMM_logevent_internalCommand Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DIMM Event DIMM_logevent_internalCommand Topic Columns
-	[Documentation]    Validate the DIMM_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DIMM_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DIMM
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14703,7 +15007,7 @@ Validate DIMM Event DIMM_logevent_heartbeat Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DIMM Event DIMM_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the DIMM_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DIMM_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DIMM
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14741,7 +15045,7 @@ Validate DIMM Event DIMM_logevent_loopTimeOutOfRange Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DIMM Event DIMM_logevent_loopTimeOutOfRange Topic Columns
-	[Documentation]    Validate the DIMM_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DIMM_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DIMM
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14779,7 +15083,7 @@ Validate DIMM Event DIMM_logevent_dimmMeasurement Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DIMM Event DIMM_logevent_dimmMeasurement Topic Columns
-	[Documentation]    Validate the DIMM_logevent_dimmMeasurement topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DIMM_logevent_dimmMeasurement topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DIMM
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14817,7 +15121,7 @@ Validate DIMM Event DIMM_logevent_dimmData Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DIMM Event DIMM_logevent_dimmData Topic Columns
-	[Documentation]    Validate the DIMM_logevent_dimmData topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DIMM_logevent_dimmData topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DIMM
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14855,7 +15159,7 @@ Validate DIMM Telemetry DIMM_timestamp Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DIMM Telemetry DIMM_timestamp Topic Columns
-	[Documentation]    Validate the DIMM_timestamp topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DIMM_timestamp topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DIMM
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14893,7 +15197,7 @@ Validate DIMM Telemetry DIMM_loopTime Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DIMM Telemetry DIMM_loopTime Topic Columns
-	[Documentation]    Validate the DIMM_loopTime topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DIMM_loopTime topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DIMM
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14931,7 +15235,7 @@ Validate DIMM Telemetry DIMM_status Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DIMM Telemetry DIMM_status Topic Columns
-	[Documentation]    Validate the DIMM_status topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DIMM_status topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DIMM
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -14969,7 +15273,7 @@ Validate Dome Command Dome_command_crawl Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Dome Command Dome_command_crawl Topic Columns
-	[Documentation]    Validate the Dome_command_crawl topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Dome_command_crawl topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Dome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15007,7 +15311,7 @@ Validate Dome Command Dome_command_move Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Dome Command Dome_command_move Topic Columns
-	[Documentation]    Validate the Dome_command_move topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Dome_command_move topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Dome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15045,7 +15349,7 @@ Validate Dome Command Dome_command_park Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Dome Command Dome_command_park Topic Columns
-	[Documentation]    Validate the Dome_command_park topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Dome_command_park topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Dome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15083,7 +15387,7 @@ Validate Dome Command Dome_command_setLouvers Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Dome Command Dome_command_setLouvers Topic Columns
-	[Documentation]    Validate the Dome_command_setLouvers topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Dome_command_setLouvers topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Dome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15121,7 +15425,7 @@ Validate Dome Command Dome_command_closeShutter Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Dome Command Dome_command_closeShutter Topic Columns
-	[Documentation]    Validate the Dome_command_closeShutter topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Dome_command_closeShutter topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Dome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15159,7 +15463,7 @@ Validate Dome Command Dome_command_openShutter Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Dome Command Dome_command_openShutter Topic Columns
-	[Documentation]    Validate the Dome_command_openShutter topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Dome_command_openShutter topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Dome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15197,7 +15501,7 @@ Validate Dome Command Dome_command_stopShutter Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Dome Command Dome_command_stopShutter Topic Columns
-	[Documentation]    Validate the Dome_command_stopShutter topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Dome_command_stopShutter topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Dome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15235,7 +15539,7 @@ Validate Dome Event Dome_logevent_stateChanged Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Dome Event Dome_logevent_stateChanged Topic Columns
-	[Documentation]    Validate the Dome_logevent_stateChanged topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Dome_logevent_stateChanged topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Dome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15273,7 +15577,7 @@ Validate Dome Event Dome_logevent_detailedState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Dome Event Dome_logevent_detailedState Topic Columns
-	[Documentation]    Validate the Dome_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Dome_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Dome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15311,7 +15615,7 @@ Validate Dome Telemetry Dome_summary Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Dome Telemetry Dome_summary Topic Columns
-	[Documentation]    Validate the Dome_summary topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Dome_summary topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Dome
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15349,7 +15653,7 @@ Validate DomeADB Command DomeADB_command_crawl Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeADB Command DomeADB_command_crawl Topic Columns
-	[Documentation]    Validate the DomeADB_command_crawl topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeADB_command_crawl topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15387,7 +15691,7 @@ Validate DomeADB Command DomeADB_command_move Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeADB Command DomeADB_command_move Topic Columns
-	[Documentation]    Validate the DomeADB_command_move topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeADB_command_move topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15425,7 +15729,7 @@ Validate DomeADB Command DomeADB_command_velocityMove Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeADB Command DomeADB_command_velocityMove Topic Columns
-	[Documentation]    Validate the DomeADB_command_velocityMove topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeADB_command_velocityMove topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15463,7 +15767,7 @@ Validate DomeADB Command DomeADB_command_echo Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeADB Command DomeADB_command_echo Topic Columns
-	[Documentation]    Validate the DomeADB_command_echo topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeADB_command_echo topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15501,7 +15805,7 @@ Validate DomeADB Event DomeADB_logevent_stateChanged Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeADB Event DomeADB_logevent_stateChanged Topic Columns
-	[Documentation]    Validate the DomeADB_logevent_stateChanged topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeADB_logevent_stateChanged topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15539,7 +15843,7 @@ Validate DomeADB Event DomeADB_logevent_detailedState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeADB Event DomeADB_logevent_detailedState Topic Columns
-	[Documentation]    Validate the DomeADB_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeADB_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15577,7 +15881,7 @@ Validate DomeADB Event DomeADB_logevent_driveEnabled Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeADB Event DomeADB_logevent_driveEnabled Topic Columns
-	[Documentation]    Validate the DomeADB_logevent_driveEnabled topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeADB_logevent_driveEnabled topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15615,7 +15919,7 @@ Validate DomeADB Event DomeADB_logevent_driveDisabled Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeADB Event DomeADB_logevent_driveDisabled Topic Columns
-	[Documentation]    Validate the DomeADB_logevent_driveDisabled topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeADB_logevent_driveDisabled topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15653,7 +15957,7 @@ Validate DomeADB Event DomeADB_logevent_driveReady Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeADB Event DomeADB_logevent_driveReady Topic Columns
-	[Documentation]    Validate the DomeADB_logevent_driveReady topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeADB_logevent_driveReady topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15691,7 +15995,7 @@ Validate DomeADB Event DomeADB_logevent_driveOverTemp Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeADB Event DomeADB_logevent_driveOverTemp Topic Columns
-	[Documentation]    Validate the DomeADB_logevent_driveOverTemp topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeADB_logevent_driveOverTemp topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15729,7 +16033,7 @@ Validate DomeADB Event DomeADB_logevent_driveDriveFault Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeADB Event DomeADB_logevent_driveDriveFault Topic Columns
-	[Documentation]    Validate the DomeADB_logevent_driveDriveFault topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeADB_logevent_driveDriveFault topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15767,7 +16071,7 @@ Validate DomeADB Event DomeADB_logevent_rotationEnabled Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeADB Event DomeADB_logevent_rotationEnabled Topic Columns
-	[Documentation]    Validate the DomeADB_logevent_rotationEnabled topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeADB_logevent_rotationEnabled topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15805,7 +16109,7 @@ Validate DomeADB Event DomeADB_logevent_rotationPrevented Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeADB Event DomeADB_logevent_rotationPrevented Topic Columns
-	[Documentation]    Validate the DomeADB_logevent_rotationPrevented topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeADB_logevent_rotationPrevented topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15843,7 +16147,7 @@ Validate DomeADB Event DomeADB_logevent_lockingPinEngaged Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeADB Event DomeADB_logevent_lockingPinEngaged Topic Columns
-	[Documentation]    Validate the DomeADB_logevent_lockingPinEngaged topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeADB_logevent_lockingPinEngaged topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15881,7 +16185,7 @@ Validate DomeADB Event DomeADB_logevent_lockingPinDisengaged Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeADB Event DomeADB_logevent_lockingPinDisengaged Topic Columns
-	[Documentation]    Validate the DomeADB_logevent_lockingPinDisengaged topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeADB_logevent_lockingPinDisengaged topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15919,7 +16223,7 @@ Validate DomeADB Event DomeADB_logevent_brakeEngaged Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeADB Event DomeADB_logevent_brakeEngaged Topic Columns
-	[Documentation]    Validate the DomeADB_logevent_brakeEngaged topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeADB_logevent_brakeEngaged topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15957,7 +16261,7 @@ Validate DomeADB Event DomeADB_logevent_brakeDisengaged Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeADB Event DomeADB_logevent_brakeDisengaged Topic Columns
-	[Documentation]    Validate the DomeADB_logevent_brakeDisengaged topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeADB_logevent_brakeDisengaged topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -15995,7 +16299,7 @@ Validate DomeADB Event DomeADB_logevent_speedLimitReached Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeADB Event DomeADB_logevent_speedLimitReached Topic Columns
-	[Documentation]    Validate the DomeADB_logevent_speedLimitReached topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeADB_logevent_speedLimitReached topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16033,7 +16337,7 @@ Validate DomeADB Event DomeADB_logevent_accelerationLimitReached Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeADB Event DomeADB_logevent_accelerationLimitReached Topic Columns
-	[Documentation]    Validate the DomeADB_logevent_accelerationLimitReached topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeADB_logevent_accelerationLimitReached topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16071,7 +16375,7 @@ Validate DomeADB Event DomeADB_logevent_speedLimitSubsided Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeADB Event DomeADB_logevent_speedLimitSubsided Topic Columns
-	[Documentation]    Validate the DomeADB_logevent_speedLimitSubsided topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeADB_logevent_speedLimitSubsided topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16109,7 +16413,7 @@ Validate DomeADB Event DomeADB_logevent_accelerationLimitSubsided Topic Byte Siz
 	Should Be True    ${result} < ${65536}
 
 Validate DomeADB Event DomeADB_logevent_accelerationLimitSubsided Topic Columns
-	[Documentation]    Validate the DomeADB_logevent_accelerationLimitSubsided topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeADB_logevent_accelerationLimitSubsided topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16147,7 +16451,7 @@ Validate DomeADB Event DomeADB_logevent_echoResponse Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeADB Event DomeADB_logevent_echoResponse Topic Columns
-	[Documentation]    Validate the DomeADB_logevent_echoResponse topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeADB_logevent_echoResponse topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16185,7 +16489,7 @@ Validate DomeADB Event DomeADB_logevent_motionModeChanged Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeADB Event DomeADB_logevent_motionModeChanged Topic Columns
-	[Documentation]    Validate the DomeADB_logevent_motionModeChanged topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeADB_logevent_motionModeChanged topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16223,7 +16527,7 @@ Validate DomeADB Telemetry DomeADB_status Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeADB Telemetry DomeADB_status Topic Columns
-	[Documentation]    Validate the DomeADB_status topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeADB_status topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeADB
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16261,7 +16565,7 @@ Validate DomeAPS Command DomeAPS_command_close Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeAPS Command DomeAPS_command_close Topic Columns
-	[Documentation]    Validate the DomeAPS_command_close topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeAPS_command_close topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16299,7 +16603,7 @@ Validate DomeAPS Command DomeAPS_command_open Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeAPS Command DomeAPS_command_open Topic Columns
-	[Documentation]    Validate the DomeAPS_command_open topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeAPS_command_open topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16337,7 +16641,7 @@ Validate DomeAPS Command DomeAPS_command_echo Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeAPS Command DomeAPS_command_echo Topic Columns
-	[Documentation]    Validate the DomeAPS_command_echo topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeAPS_command_echo topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16375,7 +16679,7 @@ Validate DomeAPS Event DomeAPS_logevent_stateChanged Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeAPS Event DomeAPS_logevent_stateChanged Topic Columns
-	[Documentation]    Validate the DomeAPS_logevent_stateChanged topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeAPS_logevent_stateChanged topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16413,7 +16717,7 @@ Validate DomeAPS Event DomeAPS_logevent_detailedState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeAPS Event DomeAPS_logevent_detailedState Topic Columns
-	[Documentation]    Validate the DomeAPS_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeAPS_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16451,7 +16755,7 @@ Validate DomeAPS Event DomeAPS_logevent_driveEnabled Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeAPS Event DomeAPS_logevent_driveEnabled Topic Columns
-	[Documentation]    Validate the DomeAPS_logevent_driveEnabled topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeAPS_logevent_driveEnabled topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16489,7 +16793,7 @@ Validate DomeAPS Event DomeAPS_logevent_driveDisabled Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeAPS Event DomeAPS_logevent_driveDisabled Topic Columns
-	[Documentation]    Validate the DomeAPS_logevent_driveDisabled topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeAPS_logevent_driveDisabled topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16527,7 +16831,7 @@ Validate DomeAPS Event DomeAPS_logevent_driveReady Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeAPS Event DomeAPS_logevent_driveReady Topic Columns
-	[Documentation]    Validate the DomeAPS_logevent_driveReady topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeAPS_logevent_driveReady topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16565,7 +16869,7 @@ Validate DomeAPS Event DomeAPS_logevent_driveFault Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeAPS Event DomeAPS_logevent_driveFault Topic Columns
-	[Documentation]    Validate the DomeAPS_logevent_driveFault topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeAPS_logevent_driveFault topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16603,7 +16907,7 @@ Validate DomeAPS Event DomeAPS_logevent_movementEnabled Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeAPS Event DomeAPS_logevent_movementEnabled Topic Columns
-	[Documentation]    Validate the DomeAPS_logevent_movementEnabled topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeAPS_logevent_movementEnabled topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16641,7 +16945,7 @@ Validate DomeAPS Event DomeAPS_logevent_movementPrevented Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeAPS Event DomeAPS_logevent_movementPrevented Topic Columns
-	[Documentation]    Validate the DomeAPS_logevent_movementPrevented topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeAPS_logevent_movementPrevented topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16679,7 +16983,7 @@ Validate DomeAPS Event DomeAPS_logevent_lockingPinEngaged Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeAPS Event DomeAPS_logevent_lockingPinEngaged Topic Columns
-	[Documentation]    Validate the DomeAPS_logevent_lockingPinEngaged topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeAPS_logevent_lockingPinEngaged topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16717,7 +17021,7 @@ Validate DomeAPS Event DomeAPS_logevent_lockingPinDisengaged Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeAPS Event DomeAPS_logevent_lockingPinDisengaged Topic Columns
-	[Documentation]    Validate the DomeAPS_logevent_lockingPinDisengaged topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeAPS_logevent_lockingPinDisengaged topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16755,7 +17059,7 @@ Validate DomeAPS Event DomeAPS_logevent_lockingPinFloating Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeAPS Event DomeAPS_logevent_lockingPinFloating Topic Columns
-	[Documentation]    Validate the DomeAPS_logevent_lockingPinFloating topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeAPS_logevent_lockingPinFloating topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16793,7 +17097,7 @@ Validate DomeAPS Event DomeAPS_logevent_centralLockingPinEngaged Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeAPS Event DomeAPS_logevent_centralLockingPinEngaged Topic Columns
-	[Documentation]    Validate the DomeAPS_logevent_centralLockingPinEngaged topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeAPS_logevent_centralLockingPinEngaged topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16831,7 +17135,7 @@ Validate DomeAPS Event DomeAPS_logevent_lockingPinHomed Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeAPS Event DomeAPS_logevent_lockingPinHomed Topic Columns
-	[Documentation]    Validate the DomeAPS_logevent_lockingPinHomed topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeAPS_logevent_lockingPinHomed topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16869,7 +17173,7 @@ Validate DomeAPS Event DomeAPS_logevent_centralLockingPinDisengaged Topic Byte S
 	Should Be True    ${result} < ${65536}
 
 Validate DomeAPS Event DomeAPS_logevent_centralLockingPinDisengaged Topic Columns
-	[Documentation]    Validate the DomeAPS_logevent_centralLockingPinDisengaged topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeAPS_logevent_centralLockingPinDisengaged topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16907,7 +17211,7 @@ Validate DomeAPS Event DomeAPS_logevent_centralLockingPinHomed Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeAPS Event DomeAPS_logevent_centralLockingPinHomed Topic Columns
-	[Documentation]    Validate the DomeAPS_logevent_centralLockingPinHomed topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeAPS_logevent_centralLockingPinHomed topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16945,7 +17249,7 @@ Validate DomeAPS Event DomeAPS_logevent_centralLockingPinFloating Topic Byte Siz
 	Should Be True    ${result} < ${65536}
 
 Validate DomeAPS Event DomeAPS_logevent_centralLockingPinFloating Topic Columns
-	[Documentation]    Validate the DomeAPS_logevent_centralLockingPinFloating topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeAPS_logevent_centralLockingPinFloating topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -16983,7 +17287,7 @@ Validate DomeAPS Event DomeAPS_logevent_brakeEngaged Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeAPS Event DomeAPS_logevent_brakeEngaged Topic Columns
-	[Documentation]    Validate the DomeAPS_logevent_brakeEngaged topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeAPS_logevent_brakeEngaged topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17021,7 +17325,7 @@ Validate DomeAPS Event DomeAPS_logevent_brakeDisengaged Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeAPS Event DomeAPS_logevent_brakeDisengaged Topic Columns
-	[Documentation]    Validate the DomeAPS_logevent_brakeDisengaged topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeAPS_logevent_brakeDisengaged topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17059,7 +17363,7 @@ Validate DomeAPS Event DomeAPS_logevent_echoResponse Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeAPS Event DomeAPS_logevent_echoResponse Topic Columns
-	[Documentation]    Validate the DomeAPS_logevent_echoResponse topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeAPS_logevent_echoResponse topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17097,7 +17401,7 @@ Validate DomeAPS Event DomeAPS_logevent_apsSubsystemError Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeAPS Event DomeAPS_logevent_apsSubsystemError Topic Columns
-	[Documentation]    Validate the DomeAPS_logevent_apsSubsystemError topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeAPS_logevent_apsSubsystemError topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17135,7 +17439,7 @@ Validate DomeAPS Telemetry DomeAPS_status Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeAPS Telemetry DomeAPS_status Topic Columns
-	[Documentation]    Validate the DomeAPS_status topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeAPS_status topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeAPS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17173,7 +17477,7 @@ Validate DomeLouvers Command DomeLouvers_command_setPosition Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeLouvers Command DomeLouvers_command_setPosition Topic Columns
-	[Documentation]    Validate the DomeLouvers_command_setPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeLouvers_command_setPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17211,7 +17515,7 @@ Validate DomeLouvers Command DomeLouvers_command_echo Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeLouvers Command DomeLouvers_command_echo Topic Columns
-	[Documentation]    Validate the DomeLouvers_command_echo topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeLouvers_command_echo topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17249,7 +17553,7 @@ Validate DomeLouvers Event DomeLouvers_logevent_stateChanged Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeLouvers Event DomeLouvers_logevent_stateChanged Topic Columns
-	[Documentation]    Validate the DomeLouvers_logevent_stateChanged topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeLouvers_logevent_stateChanged topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17287,7 +17591,7 @@ Validate DomeLouvers Event DomeLouvers_logevent_detailedState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeLouvers Event DomeLouvers_logevent_detailedState Topic Columns
-	[Documentation]    Validate the DomeLouvers_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeLouvers_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17325,7 +17629,7 @@ Validate DomeLouvers Event DomeLouvers_logevent_driveEnabled Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeLouvers Event DomeLouvers_logevent_driveEnabled Topic Columns
-	[Documentation]    Validate the DomeLouvers_logevent_driveEnabled topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeLouvers_logevent_driveEnabled topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17363,7 +17667,7 @@ Validate DomeLouvers Event DomeLouvers_logevent_driveDisabled Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeLouvers Event DomeLouvers_logevent_driveDisabled Topic Columns
-	[Documentation]    Validate the DomeLouvers_logevent_driveDisabled topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeLouvers_logevent_driveDisabled topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17401,7 +17705,7 @@ Validate DomeLouvers Event DomeLouvers_logevent_driveReady Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeLouvers Event DomeLouvers_logevent_driveReady Topic Columns
-	[Documentation]    Validate the DomeLouvers_logevent_driveReady topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeLouvers_logevent_driveReady topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17439,7 +17743,7 @@ Validate DomeLouvers Event DomeLouvers_logevent_driveOverTemp Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeLouvers Event DomeLouvers_logevent_driveOverTemp Topic Columns
-	[Documentation]    Validate the DomeLouvers_logevent_driveOverTemp topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeLouvers_logevent_driveOverTemp topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17477,7 +17781,7 @@ Validate DomeLouvers Event DomeLouvers_logevent_driveFault Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeLouvers Event DomeLouvers_logevent_driveFault Topic Columns
-	[Documentation]    Validate the DomeLouvers_logevent_driveFault topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeLouvers_logevent_driveFault topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17515,7 +17819,7 @@ Validate DomeLouvers Event DomeLouvers_logevent_movementEnabled Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeLouvers Event DomeLouvers_logevent_movementEnabled Topic Columns
-	[Documentation]    Validate the DomeLouvers_logevent_movementEnabled topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeLouvers_logevent_movementEnabled topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17553,7 +17857,7 @@ Validate DomeLouvers Event DomeLouvers_logevent_movementPrevented Topic Byte Siz
 	Should Be True    ${result} < ${65536}
 
 Validate DomeLouvers Event DomeLouvers_logevent_movementPrevented Topic Columns
-	[Documentation]    Validate the DomeLouvers_logevent_movementPrevented topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeLouvers_logevent_movementPrevented topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17591,7 +17895,7 @@ Validate DomeLouvers Event DomeLouvers_logevent_echoResponse Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeLouvers Event DomeLouvers_logevent_echoResponse Topic Columns
-	[Documentation]    Validate the DomeLouvers_logevent_echoResponse topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeLouvers_logevent_echoResponse topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17629,7 +17933,7 @@ Validate DomeLouvers Event DomeLouvers_logevent_subsystemError Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeLouvers Event DomeLouvers_logevent_subsystemError Topic Columns
-	[Documentation]    Validate the DomeLouvers_logevent_subsystemError topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeLouvers_logevent_subsystemError topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17667,7 +17971,7 @@ Validate DomeLouvers Telemetry DomeLouvers_status Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeLouvers Telemetry DomeLouvers_status Topic Columns
-	[Documentation]    Validate the DomeLouvers_status topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeLouvers_status topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeLouvers
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17705,7 +18009,7 @@ Validate DomeLWS Command DomeLWS_command_crawlLWS Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeLWS Command DomeLWS_command_crawlLWS Topic Columns
-	[Documentation]    Validate the DomeLWS_command_crawlLWS topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeLWS_command_crawlLWS topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17743,7 +18047,7 @@ Validate DomeLWS Command DomeLWS_command_moveLWS Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeLWS Command DomeLWS_command_moveLWS Topic Columns
-	[Documentation]    Validate the DomeLWS_command_moveLWS topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeLWS_command_moveLWS topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17781,7 +18085,7 @@ Validate DomeLWS Command DomeLWS_command_velocityMoveLWS Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeLWS Command DomeLWS_command_velocityMoveLWS Topic Columns
-	[Documentation]    Validate the DomeLWS_command_velocityMoveLWS topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeLWS_command_velocityMoveLWS topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17819,7 +18123,7 @@ Validate DomeLWS Command DomeLWS_command_echoLWS Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeLWS Command DomeLWS_command_echoLWS Topic Columns
-	[Documentation]    Validate the DomeLWS_command_echoLWS topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeLWS_command_echoLWS topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17857,7 +18161,7 @@ Validate DomeLWS Event DomeLWS_logevent_stateChanged Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeLWS Event DomeLWS_logevent_stateChanged Topic Columns
-	[Documentation]    Validate the DomeLWS_logevent_stateChanged topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeLWS_logevent_stateChanged topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17895,7 +18199,7 @@ Validate DomeLWS Event DomeLWS_logevent_detailedState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeLWS Event DomeLWS_logevent_detailedState Topic Columns
-	[Documentation]    Validate the DomeLWS_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeLWS_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17933,7 +18237,7 @@ Validate DomeLWS Event DomeLWS_logevent_driveEnabled Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeLWS Event DomeLWS_logevent_driveEnabled Topic Columns
-	[Documentation]    Validate the DomeLWS_logevent_driveEnabled topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeLWS_logevent_driveEnabled topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17971,7 +18275,7 @@ Validate DomeLWS Event DomeLWS_logevent_driveDisabled Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeLWS Event DomeLWS_logevent_driveDisabled Topic Columns
-	[Documentation]    Validate the DomeLWS_logevent_driveDisabled topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeLWS_logevent_driveDisabled topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -18009,7 +18313,7 @@ Validate DomeLWS Event DomeLWS_logevent_driveReady Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeLWS Event DomeLWS_logevent_driveReady Topic Columns
-	[Documentation]    Validate the DomeLWS_logevent_driveReady topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeLWS_logevent_driveReady topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -18047,7 +18351,7 @@ Validate DomeLWS Event DomeLWS_logevent_driveOverTemp Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeLWS Event DomeLWS_logevent_driveOverTemp Topic Columns
-	[Documentation]    Validate the DomeLWS_logevent_driveOverTemp topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeLWS_logevent_driveOverTemp topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -18085,7 +18389,7 @@ Validate DomeLWS Event DomeLWS_logevent_driveFault Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeLWS Event DomeLWS_logevent_driveFault Topic Columns
-	[Documentation]    Validate the DomeLWS_logevent_driveFault topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeLWS_logevent_driveFault topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -18123,7 +18427,7 @@ Validate DomeLWS Event DomeLWS_logevent_movementEnabled Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeLWS Event DomeLWS_logevent_movementEnabled Topic Columns
-	[Documentation]    Validate the DomeLWS_logevent_movementEnabled topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeLWS_logevent_movementEnabled topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -18161,7 +18465,7 @@ Validate DomeLWS Event DomeLWS_logevent_movementPrevented Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeLWS Event DomeLWS_logevent_movementPrevented Topic Columns
-	[Documentation]    Validate the DomeLWS_logevent_movementPrevented topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeLWS_logevent_movementPrevented topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -18199,7 +18503,7 @@ Validate DomeLWS Event DomeLWS_logevent_lockingPinDisengaged Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeLWS Event DomeLWS_logevent_lockingPinDisengaged Topic Columns
-	[Documentation]    Validate the DomeLWS_logevent_lockingPinDisengaged topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeLWS_logevent_lockingPinDisengaged topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -18237,7 +18541,7 @@ Validate DomeLWS Event DomeLWS_logevent_LockingPinEngaged Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeLWS Event DomeLWS_logevent_LockingPinEngaged Topic Columns
-	[Documentation]    Validate the DomeLWS_logevent_LockingPinEngaged topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeLWS_logevent_LockingPinEngaged topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -18275,7 +18579,7 @@ Validate DomeLWS Event DomeLWS_logevent_lockingPinHomed Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeLWS Event DomeLWS_logevent_lockingPinHomed Topic Columns
-	[Documentation]    Validate the DomeLWS_logevent_lockingPinHomed topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeLWS_logevent_lockingPinHomed topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -18313,7 +18617,7 @@ Validate DomeLWS Event DomeLWS_logevent_lockingPinFloating Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeLWS Event DomeLWS_logevent_lockingPinFloating Topic Columns
-	[Documentation]    Validate the DomeLWS_logevent_lockingPinFloating topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeLWS_logevent_lockingPinFloating topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -18351,7 +18655,7 @@ Validate DomeLWS Event DomeLWS_logevent_brakeEngaged Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeLWS Event DomeLWS_logevent_brakeEngaged Topic Columns
-	[Documentation]    Validate the DomeLWS_logevent_brakeEngaged topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeLWS_logevent_brakeEngaged topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -18389,7 +18693,7 @@ Validate DomeLWS Event DomeLWS_logevent_brakeDisengaged Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeLWS Event DomeLWS_logevent_brakeDisengaged Topic Columns
-	[Documentation]    Validate the DomeLWS_logevent_brakeDisengaged topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeLWS_logevent_brakeDisengaged topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -18427,7 +18731,7 @@ Validate DomeLWS Event DomeLWS_logevent_speedLimitReached Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeLWS Event DomeLWS_logevent_speedLimitReached Topic Columns
-	[Documentation]    Validate the DomeLWS_logevent_speedLimitReached topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeLWS_logevent_speedLimitReached topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -18465,7 +18769,7 @@ Validate DomeLWS Event DomeLWS_logevent_accelerationLimitReached Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeLWS Event DomeLWS_logevent_accelerationLimitReached Topic Columns
-	[Documentation]    Validate the DomeLWS_logevent_accelerationLimitReached topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeLWS_logevent_accelerationLimitReached topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -18503,7 +18807,7 @@ Validate DomeLWS Event DomeLWS_logevent_speedLimitSubsided Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeLWS Event DomeLWS_logevent_speedLimitSubsided Topic Columns
-	[Documentation]    Validate the DomeLWS_logevent_speedLimitSubsided topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeLWS_logevent_speedLimitSubsided topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -18541,7 +18845,7 @@ Validate DomeLWS Event DomeLWS_logevent_accelerationLimitSubsided Topic Byte Siz
 	Should Be True    ${result} < ${65536}
 
 Validate DomeLWS Event DomeLWS_logevent_accelerationLimitSubsided Topic Columns
-	[Documentation]    Validate the DomeLWS_logevent_accelerationLimitSubsided topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeLWS_logevent_accelerationLimitSubsided topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -18579,7 +18883,7 @@ Validate DomeLWS Event DomeLWS_logevent_echoResponse Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeLWS Event DomeLWS_logevent_echoResponse Topic Columns
-	[Documentation]    Validate the DomeLWS_logevent_echoResponse topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeLWS_logevent_echoResponse topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -18617,7 +18921,7 @@ Validate DomeLWS Event DomeLWS_logevent_motionModeChanged Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeLWS Event DomeLWS_logevent_motionModeChanged Topic Columns
-	[Documentation]    Validate the DomeLWS_logevent_motionModeChanged topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeLWS_logevent_motionModeChanged topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -18655,7 +18959,7 @@ Validate DomeLWS Event DomeLWS_logevent_subsystemError Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeLWS Event DomeLWS_logevent_subsystemError Topic Columns
-	[Documentation]    Validate the DomeLWS_logevent_subsystemError topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeLWS_logevent_subsystemError topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -18693,7 +18997,7 @@ Validate DomeLWS Telemetry DomeLWS_status Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeLWS Telemetry DomeLWS_status Topic Columns
-	[Documentation]    Validate the DomeLWS_status topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeLWS_status topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeLWS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -18731,7 +19035,7 @@ Validate DomeMONCS Command DomeMONCS_command_echo Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeMONCS Command DomeMONCS_command_echo Topic Columns
-	[Documentation]    Validate the DomeMONCS_command_echo topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeMONCS_command_echo topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeMONCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -18769,7 +19073,7 @@ Validate DomeMONCS Event DomeMONCS_logevent_stateChanged Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeMONCS Event DomeMONCS_logevent_stateChanged Topic Columns
-	[Documentation]    Validate the DomeMONCS_logevent_stateChanged topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeMONCS_logevent_stateChanged topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeMONCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -18807,7 +19111,7 @@ Validate DomeMONCS Event DomeMONCS_logevent_detailedState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeMONCS Event DomeMONCS_logevent_detailedState Topic Columns
-	[Documentation]    Validate the DomeMONCS_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeMONCS_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeMONCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -18845,7 +19149,7 @@ Validate DomeMONCS Event DomeMONCS_logevent_echoResponse Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeMONCS Event DomeMONCS_logevent_echoResponse Topic Columns
-	[Documentation]    Validate the DomeMONCS_logevent_echoResponse topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeMONCS_logevent_echoResponse topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeMONCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -18883,7 +19187,7 @@ Validate DomeMONCS Event DomeMONCS_logevent_subsystemError Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeMONCS Event DomeMONCS_logevent_subsystemError Topic Columns
-	[Documentation]    Validate the DomeMONCS_logevent_subsystemError topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeMONCS_logevent_subsystemError topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeMONCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -18921,7 +19225,7 @@ Validate DomeMONCS Event DomeMONCS_logevent_interlock Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeMONCS Event DomeMONCS_logevent_interlock Topic Columns
-	[Documentation]    Validate the DomeMONCS_logevent_interlock topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeMONCS_logevent_interlock topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeMONCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -18959,7 +19263,7 @@ Validate DomeMONCS Telemetry DomeMONCS_status Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeMONCS Telemetry DomeMONCS_status Topic Columns
-	[Documentation]    Validate the DomeMONCS_status topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeMONCS_status topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeMONCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -18997,7 +19301,7 @@ Validate DomeTHCS Command DomeTHCS_command_echo Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeTHCS Command DomeTHCS_command_echo Topic Columns
-	[Documentation]    Validate the DomeTHCS_command_echo topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeTHCS_command_echo topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeTHCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19035,7 +19339,7 @@ Validate DomeTHCS Event DomeTHCS_logevent_stateChanged Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeTHCS Event DomeTHCS_logevent_stateChanged Topic Columns
-	[Documentation]    Validate the DomeTHCS_logevent_stateChanged topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeTHCS_logevent_stateChanged topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeTHCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19073,7 +19377,7 @@ Validate DomeTHCS Event DomeTHCS_logevent_detailedState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeTHCS Event DomeTHCS_logevent_detailedState Topic Columns
-	[Documentation]    Validate the DomeTHCS_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeTHCS_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeTHCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19111,7 +19415,7 @@ Validate DomeTHCS Event DomeTHCS_logevent_movementEnabled Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeTHCS Event DomeTHCS_logevent_movementEnabled Topic Columns
-	[Documentation]    Validate the DomeTHCS_logevent_movementEnabled topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeTHCS_logevent_movementEnabled topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeTHCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19149,7 +19453,7 @@ Validate DomeTHCS Event DomeTHCS_logevent_movementPrevented Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeTHCS Event DomeTHCS_logevent_movementPrevented Topic Columns
-	[Documentation]    Validate the DomeTHCS_logevent_movementPrevented topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeTHCS_logevent_movementPrevented topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeTHCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19187,7 +19491,7 @@ Validate DomeTHCS Event DomeTHCS_logevent_echoResponse Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeTHCS Event DomeTHCS_logevent_echoResponse Topic Columns
-	[Documentation]    Validate the DomeTHCS_logevent_echoResponse topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeTHCS_logevent_echoResponse topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeTHCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19225,7 +19529,7 @@ Validate DomeTHCS Event DomeTHCS_logevent_subsystemError Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeTHCS Event DomeTHCS_logevent_subsystemError Topic Columns
-	[Documentation]    Validate the DomeTHCS_logevent_subsystemError topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeTHCS_logevent_subsystemError topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeTHCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19263,7 +19567,7 @@ Validate DomeTHCS Telemetry DomeTHCS_status Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate DomeTHCS Telemetry DomeTHCS_status Topic Columns
-	[Documentation]    Validate the DomeTHCS_status topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the DomeTHCS_status topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    DomeTHCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19301,7 +19605,7 @@ Validate EAS Event EAS_logevent_detailedState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate EAS Event EAS_logevent_detailedState Topic Columns
-	[Documentation]    Validate the EAS_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the EAS_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    EAS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19339,7 +19643,7 @@ Validate EAS Event EAS_logevent_internalCommand Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate EAS Event EAS_logevent_internalCommand Topic Columns
-	[Documentation]    Validate the EAS_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the EAS_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    EAS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19377,7 +19681,7 @@ Validate EAS Event EAS_logevent_heartbeat Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate EAS Event EAS_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the EAS_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the EAS_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    EAS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19415,7 +19719,7 @@ Validate EAS Event EAS_logevent_loopTimeOutOfRange Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate EAS Event EAS_logevent_loopTimeOutOfRange Topic Columns
-	[Documentation]    Validate the EAS_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the EAS_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    EAS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19453,7 +19757,7 @@ Validate EAS Event EAS_logevent_rejectedCommand Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate EAS Event EAS_logevent_rejectedCommand Topic Columns
-	[Documentation]    Validate the EAS_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the EAS_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    EAS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19491,7 +19795,7 @@ Validate EAS Telemetry EAS_timestamp Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate EAS Telemetry EAS_timestamp Topic Columns
-	[Documentation]    Validate the EAS_timestamp topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the EAS_timestamp topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    EAS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19529,7 +19833,7 @@ Validate EAS Telemetry EAS_loopTime Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate EAS Telemetry EAS_loopTime Topic Columns
-	[Documentation]    Validate the EAS_loopTime topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the EAS_loopTime topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    EAS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19567,7 +19871,7 @@ Validate EFD Event EFD_logevent_largeFileObjectAvailable Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate EFD Event EFD_logevent_largeFileObjectAvailable Topic Columns
-	[Documentation]    Validate the EFD_logevent_largeFileObjectAvailable topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the EFD_logevent_largeFileObjectAvailable topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    EFD
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19605,7 +19909,7 @@ Validate EFD Telemetry EFD_Summary Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate EFD Telemetry EFD_Summary Topic Columns
-	[Documentation]    Validate the EFD_Summary topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the EFD_Summary topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    EFD
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19643,7 +19947,7 @@ Validate EFDTransformationServer Event EFDTransformationServer_logevent_detailed
 	Should Be True    ${result} < ${65536}
 
 Validate EFDTransformationServer Event EFDTransformationServer_logevent_detailedState Topic Columns
-	[Documentation]    Validate the EFDTransformationServer_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the EFDTransformationServer_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    EFDTransformationServer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19681,7 +19985,7 @@ Validate EFDTransformationServer Event EFDTransformationServer_logevent_internal
 	Should Be True    ${result} < ${65536}
 
 Validate EFDTransformationServer Event EFDTransformationServer_logevent_internalCommand Topic Columns
-	[Documentation]    Validate the EFDTransformationServer_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the EFDTransformationServer_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    EFDTransformationServer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19719,7 +20023,7 @@ Validate EFDTransformationServer Event EFDTransformationServer_logevent_heartbea
 	Should Be True    ${result} < ${65536}
 
 Validate EFDTransformationServer Event EFDTransformationServer_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the EFDTransformationServer_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the EFDTransformationServer_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    EFDTransformationServer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19757,7 +20061,7 @@ Validate EFDTransformationServer Event EFDTransformationServer_logevent_loopTime
 	Should Be True    ${result} < ${65536}
 
 Validate EFDTransformationServer Event EFDTransformationServer_logevent_loopTimeOutOfRange Topic Columns
-	[Documentation]    Validate the EFDTransformationServer_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the EFDTransformationServer_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    EFDTransformationServer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19795,7 +20099,7 @@ Validate EFDTransformationServer Event EFDTransformationServer_logevent_rejected
 	Should Be True    ${result} < ${65536}
 
 Validate EFDTransformationServer Event EFDTransformationServer_logevent_rejectedCommand Topic Columns
-	[Documentation]    Validate the EFDTransformationServer_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the EFDTransformationServer_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    EFDTransformationServer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19833,7 +20137,7 @@ Validate EFDTransformationServer Telemetry EFDTransformationServer_timestamp Top
 	Should Be True    ${result} < ${65536}
 
 Validate EFDTransformationServer Telemetry EFDTransformationServer_timestamp Topic Columns
-	[Documentation]    Validate the EFDTransformationServer_timestamp topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the EFDTransformationServer_timestamp topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    EFDTransformationServer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19871,7 +20175,7 @@ Validate EFDTransformationServer Telemetry EFDTransformationServer_loopTime Topi
 	Should Be True    ${result} < ${65536}
 
 Validate EFDTransformationServer Telemetry EFDTransformationServer_loopTime Topic Columns
-	[Documentation]    Validate the EFDTransformationServer_loopTime topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the EFDTransformationServer_loopTime topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    EFDTransformationServer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19909,7 +20213,7 @@ Validate Electrometer Command Electrometer_command_performZeroCalib Topic Byte S
 	Should Be True    ${result} < ${65536}
 
 Validate Electrometer Command Electrometer_command_performZeroCalib Topic Columns
-	[Documentation]    Validate the Electrometer_command_performZeroCalib topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Electrometer_command_performZeroCalib topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Electrometer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19947,7 +20251,7 @@ Validate Electrometer Command Electrometer_command_setDigitalFilter Topic Byte S
 	Should Be True    ${result} < ${65536}
 
 Validate Electrometer Command Electrometer_command_setDigitalFilter Topic Columns
-	[Documentation]    Validate the Electrometer_command_setDigitalFilter topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Electrometer_command_setDigitalFilter topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Electrometer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -19985,7 +20289,7 @@ Validate Electrometer Command Electrometer_command_setIntegrationTime Topic Byte
 	Should Be True    ${result} < ${65536}
 
 Validate Electrometer Command Electrometer_command_setIntegrationTime Topic Columns
-	[Documentation]    Validate the Electrometer_command_setIntegrationTime topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Electrometer_command_setIntegrationTime topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Electrometer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -20023,7 +20327,7 @@ Validate Electrometer Command Electrometer_command_setMode Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Electrometer Command Electrometer_command_setMode Topic Columns
-	[Documentation]    Validate the Electrometer_command_setMode topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Electrometer_command_setMode topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Electrometer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -20061,7 +20365,7 @@ Validate Electrometer Command Electrometer_command_setRange Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Electrometer Command Electrometer_command_setRange Topic Columns
-	[Documentation]    Validate the Electrometer_command_setRange topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Electrometer_command_setRange topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Electrometer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -20099,7 +20403,7 @@ Validate Electrometer Command Electrometer_command_startScan Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Electrometer Command Electrometer_command_startScan Topic Columns
-	[Documentation]    Validate the Electrometer_command_startScan topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Electrometer_command_startScan topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Electrometer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -20137,7 +20441,7 @@ Validate Electrometer Command Electrometer_command_startScanDt Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Electrometer Command Electrometer_command_startScanDt Topic Columns
-	[Documentation]    Validate the Electrometer_command_startScanDt topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Electrometer_command_startScanDt topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Electrometer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -20175,7 +20479,7 @@ Validate Electrometer Command Electrometer_command_stopScan Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Electrometer Command Electrometer_command_stopScan Topic Columns
-	[Documentation]    Validate the Electrometer_command_stopScan topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Electrometer_command_stopScan topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Electrometer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -20213,7 +20517,7 @@ Validate Electrometer Event Electrometer_logevent_detailedState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Electrometer Event Electrometer_logevent_detailedState Topic Columns
-	[Documentation]    Validate the Electrometer_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Electrometer_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Electrometer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -20251,7 +20555,7 @@ Validate Electrometer Event Electrometer_logevent_digitalFilterChange Topic Byte
 	Should Be True    ${result} < ${65536}
 
 Validate Electrometer Event Electrometer_logevent_digitalFilterChange Topic Columns
-	[Documentation]    Validate the Electrometer_logevent_digitalFilterChange topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Electrometer_logevent_digitalFilterChange topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Electrometer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -20289,7 +20593,7 @@ Validate Electrometer Event Electrometer_logevent_heartbeat Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Electrometer Event Electrometer_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the Electrometer_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Electrometer_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Electrometer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -20327,7 +20631,7 @@ Validate Electrometer Event Electrometer_logevent_integrationTime Topic Byte Siz
 	Should Be True    ${result} < ${65536}
 
 Validate Electrometer Event Electrometer_logevent_integrationTime Topic Columns
-	[Documentation]    Validate the Electrometer_logevent_integrationTime topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Electrometer_logevent_integrationTime topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Electrometer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -20365,7 +20669,7 @@ Validate Electrometer Event Electrometer_logevent_intensity Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Electrometer Event Electrometer_logevent_intensity Topic Columns
-	[Documentation]    Validate the Electrometer_logevent_intensity topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Electrometer_logevent_intensity topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Electrometer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -20403,7 +20707,7 @@ Validate Electrometer Event Electrometer_logevent_largeFileObjectAvailable Topic
 	Should Be True    ${result} < ${65536}
 
 Validate Electrometer Event Electrometer_logevent_largeFileObjectAvailable Topic Columns
-	[Documentation]    Validate the Electrometer_logevent_largeFileObjectAvailable topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Electrometer_logevent_largeFileObjectAvailable topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Electrometer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -20441,7 +20745,7 @@ Validate Electrometer Event Electrometer_logevent_measureRange Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Electrometer Event Electrometer_logevent_measureRange Topic Columns
-	[Documentation]    Validate the Electrometer_logevent_measureRange topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Electrometer_logevent_measureRange topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Electrometer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -20479,7 +20783,7 @@ Validate Electrometer Event Electrometer_logevent_measureType Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Electrometer Event Electrometer_logevent_measureType Topic Columns
-	[Documentation]    Validate the Electrometer_logevent_measureType topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Electrometer_logevent_measureType topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Electrometer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -20517,7 +20821,7 @@ Validate Electrometer Event Electrometer_logevent_settingsAppliedReadSets Topic 
 	Should Be True    ${result} < ${65536}
 
 Validate Electrometer Event Electrometer_logevent_settingsAppliedReadSets Topic Columns
-	[Documentation]    Validate the Electrometer_logevent_settingsAppliedReadSets topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Electrometer_logevent_settingsAppliedReadSets topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Electrometer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -20555,7 +20859,7 @@ Validate Electrometer Event Electrometer_logevent_settingsAppliedSerConf Topic B
 	Should Be True    ${result} < ${65536}
 
 Validate Electrometer Event Electrometer_logevent_settingsAppliedSerConf Topic Columns
-	[Documentation]    Validate the Electrometer_logevent_settingsAppliedSerConf topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Electrometer_logevent_settingsAppliedSerConf topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Electrometer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -20593,7 +20897,7 @@ Validate Electrometer Event Electrometer_logevent_deviceErrorCode Topic Byte Siz
 	Should Be True    ${result} < ${65536}
 
 Validate Electrometer Event Electrometer_logevent_deviceErrorCode Topic Columns
-	[Documentation]    Validate the Electrometer_logevent_deviceErrorCode topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Electrometer_logevent_deviceErrorCode topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Electrometer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -20631,7 +20935,7 @@ Validate Environment Event Environment_logevent_heartbeat Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Environment Event Environment_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the Environment_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Environment_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Environment
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -20669,7 +20973,7 @@ Validate Environment Telemetry Environment_weather Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Environment Telemetry Environment_weather Topic Columns
-	[Documentation]    Validate the Environment_weather topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Environment_weather topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Environment
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -20707,7 +21011,7 @@ Validate Environment Telemetry Environment_windDirection Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Environment Telemetry Environment_windDirection Topic Columns
-	[Documentation]    Validate the Environment_windDirection topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Environment_windDirection topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Environment
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -20745,7 +21049,7 @@ Validate Environment Telemetry Environment_windGustDirection Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Environment Telemetry Environment_windGustDirection Topic Columns
-	[Documentation]    Validate the Environment_windGustDirection topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Environment_windGustDirection topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Environment
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -20783,7 +21087,7 @@ Validate Environment Telemetry Environment_windSpeed Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Environment Telemetry Environment_windSpeed Topic Columns
-	[Documentation]    Validate the Environment_windSpeed topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Environment_windSpeed topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Environment
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -20821,7 +21125,7 @@ Validate Environment Telemetry Environment_airTemperature Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Environment Telemetry Environment_airTemperature Topic Columns
-	[Documentation]    Validate the Environment_airTemperature topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Environment_airTemperature topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Environment
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -20859,7 +21163,7 @@ Validate Environment Telemetry Environment_relativeHumidity Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Environment Telemetry Environment_relativeHumidity Topic Columns
-	[Documentation]    Validate the Environment_relativeHumidity topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Environment_relativeHumidity topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Environment
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -20897,7 +21201,7 @@ Validate Environment Telemetry Environment_dewPoint Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Environment Telemetry Environment_dewPoint Topic Columns
-	[Documentation]    Validate the Environment_dewPoint topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Environment_dewPoint topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Environment
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -20935,7 +21239,7 @@ Validate Environment Telemetry Environment_snowDepth Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Environment Telemetry Environment_snowDepth Topic Columns
-	[Documentation]    Validate the Environment_snowDepth topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Environment_snowDepth topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Environment
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -20973,7 +21277,7 @@ Validate Environment Telemetry Environment_solarNetRadiation Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Environment Telemetry Environment_solarNetRadiation Topic Columns
-	[Documentation]    Validate the Environment_solarNetRadiation topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Environment_solarNetRadiation topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Environment
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -21011,7 +21315,7 @@ Validate Environment Telemetry Environment_airPressure Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Environment Telemetry Environment_airPressure Topic Columns
-	[Documentation]    Validate the Environment_airPressure topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Environment_airPressure topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Environment
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -21049,7 +21353,7 @@ Validate Environment Telemetry Environment_precipitation Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Environment Telemetry Environment_precipitation Topic Columns
-	[Documentation]    Validate the Environment_precipitation topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Environment_precipitation topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Environment
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -21087,7 +21391,7 @@ Validate Environment Telemetry Environment_soilTemperature Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Environment Telemetry Environment_soilTemperature Topic Columns
-	[Documentation]    Validate the Environment_soilTemperature topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Environment_soilTemperature topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Environment
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -21125,7 +21429,7 @@ Validate FiberSpectrograph Command FiberSpectrograph_command_captureSpectImage T
 	Should Be True    ${result} < ${65536}
 
 Validate FiberSpectrograph Command FiberSpectrograph_command_captureSpectImage Topic Columns
-	[Documentation]    Validate the FiberSpectrograph_command_captureSpectImage topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the FiberSpectrograph_command_captureSpectImage topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    FiberSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -21163,7 +21467,7 @@ Validate FiberSpectrograph Event FiberSpectrograph_logevent_largeFileObjectAvail
 	Should Be True    ${result} < ${65536}
 
 Validate FiberSpectrograph Event FiberSpectrograph_logevent_largeFileObjectAvailable Topic Columns
-	[Documentation]    Validate the FiberSpectrograph_logevent_largeFileObjectAvailable topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the FiberSpectrograph_logevent_largeFileObjectAvailable topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    FiberSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -21201,7 +21505,7 @@ Validate FiberSpectrograph Event FiberSpectrograph_logevent_detailedState Topic 
 	Should Be True    ${result} < ${65536}
 
 Validate FiberSpectrograph Event FiberSpectrograph_logevent_detailedState Topic Columns
-	[Documentation]    Validate the FiberSpectrograph_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the FiberSpectrograph_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    FiberSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -21239,7 +21543,7 @@ Validate FiberSpectrograph Event FiberSpectrograph_logevent_measuredSpectrum Top
 	Should Be True    ${result} < ${65536}
 
 Validate FiberSpectrograph Event FiberSpectrograph_logevent_measuredSpectrum Topic Columns
-	[Documentation]    Validate the FiberSpectrograph_logevent_measuredSpectrum topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the FiberSpectrograph_logevent_measuredSpectrum topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    FiberSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -21277,7 +21581,7 @@ Validate FiberSpectrograph Event FiberSpectrograph_logevent_timeout Topic Byte S
 	Should Be True    ${result} < ${65536}
 
 Validate FiberSpectrograph Event FiberSpectrograph_logevent_timeout Topic Columns
-	[Documentation]    Validate the FiberSpectrograph_logevent_timeout topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the FiberSpectrograph_logevent_timeout topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    FiberSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -21315,7 +21619,7 @@ Validate FiberSpectrograph Event FiberSpectrograph_logevent_rejectedCommand Topi
 	Should Be True    ${result} < ${65536}
 
 Validate FiberSpectrograph Event FiberSpectrograph_logevent_rejectedCommand Topic Columns
-	[Documentation]    Validate the FiberSpectrograph_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the FiberSpectrograph_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    FiberSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -21353,7 +21657,7 @@ Validate FiberSpectrograph Event FiberSpectrograph_logevent_loopTimeOutOfRange T
 	Should Be True    ${result} < ${65536}
 
 Validate FiberSpectrograph Event FiberSpectrograph_logevent_loopTimeOutOfRange Topic Columns
-	[Documentation]    Validate the FiberSpectrograph_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the FiberSpectrograph_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    FiberSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -21391,7 +21695,7 @@ Validate FiberSpectrograph Event FiberSpectrograph_logevent_internalCommand Topi
 	Should Be True    ${result} < ${65536}
 
 Validate FiberSpectrograph Event FiberSpectrograph_logevent_internalCommand Topic Columns
-	[Documentation]    Validate the FiberSpectrograph_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the FiberSpectrograph_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    FiberSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -21429,7 +21733,7 @@ Validate FiberSpectrograph Event FiberSpectrograph_logevent_heartbeat Topic Byte
 	Should Be True    ${result} < ${65536}
 
 Validate FiberSpectrograph Event FiberSpectrograph_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the FiberSpectrograph_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the FiberSpectrograph_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    FiberSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -21467,7 +21771,7 @@ Validate FiberSpectrograph Telemetry FiberSpectrograph_spectTemperature Topic By
 	Should Be True    ${result} < ${65536}
 
 Validate FiberSpectrograph Telemetry FiberSpectrograph_spectTemperature Topic Columns
-	[Documentation]    Validate the FiberSpectrograph_spectTemperature topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the FiberSpectrograph_spectTemperature topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    FiberSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -21505,7 +21809,7 @@ Validate FiberSpectrograph Telemetry FiberSpectrograph_loopTime_ms Topic Byte Si
 	Should Be True    ${result} < ${65536}
 
 Validate FiberSpectrograph Telemetry FiberSpectrograph_loopTime_ms Topic Columns
-	[Documentation]    Validate the FiberSpectrograph_loopTime_ms topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the FiberSpectrograph_loopTime_ms topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    FiberSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -21543,7 +21847,7 @@ Validate FiberSpectrograph Telemetry FiberSpectrograph_timestamp Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate FiberSpectrograph Telemetry FiberSpectrograph_timestamp Topic Columns
-	[Documentation]    Validate the FiberSpectrograph_timestamp topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the FiberSpectrograph_timestamp topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    FiberSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -21581,7 +21885,7 @@ Validate GenericCamera Command GenericCamera_command_setROI Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate GenericCamera Command GenericCamera_command_setROI Topic Columns
-	[Documentation]    Validate the GenericCamera_command_setROI topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the GenericCamera_command_setROI topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    GenericCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -21619,7 +21923,7 @@ Validate GenericCamera Command GenericCamera_command_setFullFrame Topic Byte Siz
 	Should Be True    ${result} < ${65536}
 
 Validate GenericCamera Command GenericCamera_command_setFullFrame Topic Columns
-	[Documentation]    Validate the GenericCamera_command_setFullFrame topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the GenericCamera_command_setFullFrame topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    GenericCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -21657,7 +21961,7 @@ Validate GenericCamera Command GenericCamera_command_startLiveView Topic Byte Si
 	Should Be True    ${result} < ${65536}
 
 Validate GenericCamera Command GenericCamera_command_startLiveView Topic Columns
-	[Documentation]    Validate the GenericCamera_command_startLiveView topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the GenericCamera_command_startLiveView topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    GenericCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -21695,7 +21999,7 @@ Validate GenericCamera Command GenericCamera_command_stopLiveView Topic Byte Siz
 	Should Be True    ${result} < ${65536}
 
 Validate GenericCamera Command GenericCamera_command_stopLiveView Topic Columns
-	[Documentation]    Validate the GenericCamera_command_stopLiveView topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the GenericCamera_command_stopLiveView topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    GenericCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -21733,7 +22037,7 @@ Validate GenericCamera Command GenericCamera_command_takeImages Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate GenericCamera Command GenericCamera_command_takeImages Topic Columns
-	[Documentation]    Validate the GenericCamera_command_takeImages topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the GenericCamera_command_takeImages topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    GenericCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -21771,7 +22075,7 @@ Validate GenericCamera Event GenericCamera_logevent_heartbeat Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate GenericCamera Event GenericCamera_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the GenericCamera_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the GenericCamera_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    GenericCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -21809,7 +22113,7 @@ Validate GenericCamera Event GenericCamera_logevent_cameraInfo Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate GenericCamera Event GenericCamera_logevent_cameraInfo Topic Columns
-	[Documentation]    Validate the GenericCamera_logevent_cameraInfo topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the GenericCamera_logevent_cameraInfo topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    GenericCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -21847,7 +22151,7 @@ Validate GenericCamera Event GenericCamera_logevent_cameraSpecificProperty Topic
 	Should Be True    ${result} < ${65536}
 
 Validate GenericCamera Event GenericCamera_logevent_cameraSpecificProperty Topic Columns
-	[Documentation]    Validate the GenericCamera_logevent_cameraSpecificProperty topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the GenericCamera_logevent_cameraSpecificProperty topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    GenericCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -21885,7 +22189,7 @@ Validate GenericCamera Event GenericCamera_logevent_roi Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate GenericCamera Event GenericCamera_logevent_roi Topic Columns
-	[Documentation]    Validate the GenericCamera_logevent_roi topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the GenericCamera_logevent_roi topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    GenericCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -21923,7 +22227,7 @@ Validate GenericCamera Event GenericCamera_logevent_startLiveView Topic Byte Siz
 	Should Be True    ${result} < ${65536}
 
 Validate GenericCamera Event GenericCamera_logevent_startLiveView Topic Columns
-	[Documentation]    Validate the GenericCamera_logevent_startLiveView topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the GenericCamera_logevent_startLiveView topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    GenericCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -21961,7 +22265,7 @@ Validate GenericCamera Event GenericCamera_logevent_endLiveView Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate GenericCamera Event GenericCamera_logevent_endLiveView Topic Columns
-	[Documentation]    Validate the GenericCamera_logevent_endLiveView topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the GenericCamera_logevent_endLiveView topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    GenericCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -21999,7 +22303,7 @@ Validate GenericCamera Event GenericCamera_logevent_startTakeImage Topic Byte Si
 	Should Be True    ${result} < ${65536}
 
 Validate GenericCamera Event GenericCamera_logevent_startTakeImage Topic Columns
-	[Documentation]    Validate the GenericCamera_logevent_startTakeImage topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the GenericCamera_logevent_startTakeImage topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    GenericCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22037,7 +22341,7 @@ Validate GenericCamera Event GenericCamera_logevent_startShutterOpen Topic Byte 
 	Should Be True    ${result} < ${65536}
 
 Validate GenericCamera Event GenericCamera_logevent_startShutterOpen Topic Columns
-	[Documentation]    Validate the GenericCamera_logevent_startShutterOpen topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the GenericCamera_logevent_startShutterOpen topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    GenericCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22075,7 +22379,7 @@ Validate GenericCamera Event GenericCamera_logevent_endShutterOpen Topic Byte Si
 	Should Be True    ${result} < ${65536}
 
 Validate GenericCamera Event GenericCamera_logevent_endShutterOpen Topic Columns
-	[Documentation]    Validate the GenericCamera_logevent_endShutterOpen topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the GenericCamera_logevent_endShutterOpen topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    GenericCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22113,7 +22417,7 @@ Validate GenericCamera Event GenericCamera_logevent_startIntegration Topic Byte 
 	Should Be True    ${result} < ${65536}
 
 Validate GenericCamera Event GenericCamera_logevent_startIntegration Topic Columns
-	[Documentation]    Validate the GenericCamera_logevent_startIntegration topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the GenericCamera_logevent_startIntegration topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    GenericCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22151,7 +22455,7 @@ Validate GenericCamera Event GenericCamera_logevent_endIntegration Topic Byte Si
 	Should Be True    ${result} < ${65536}
 
 Validate GenericCamera Event GenericCamera_logevent_endIntegration Topic Columns
-	[Documentation]    Validate the GenericCamera_logevent_endIntegration topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the GenericCamera_logevent_endIntegration topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    GenericCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22189,7 +22493,7 @@ Validate GenericCamera Event GenericCamera_logevent_startShutterClose Topic Byte
 	Should Be True    ${result} < ${65536}
 
 Validate GenericCamera Event GenericCamera_logevent_startShutterClose Topic Columns
-	[Documentation]    Validate the GenericCamera_logevent_startShutterClose topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the GenericCamera_logevent_startShutterClose topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    GenericCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22227,7 +22531,7 @@ Validate GenericCamera Event GenericCamera_logevent_endShutterClose Topic Byte S
 	Should Be True    ${result} < ${65536}
 
 Validate GenericCamera Event GenericCamera_logevent_endShutterClose Topic Columns
-	[Documentation]    Validate the GenericCamera_logevent_endShutterClose topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the GenericCamera_logevent_endShutterClose topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    GenericCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22265,7 +22569,7 @@ Validate GenericCamera Event GenericCamera_logevent_startReadout Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate GenericCamera Event GenericCamera_logevent_startReadout Topic Columns
-	[Documentation]    Validate the GenericCamera_logevent_startReadout topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the GenericCamera_logevent_startReadout topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    GenericCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22303,7 +22607,7 @@ Validate GenericCamera Event GenericCamera_logevent_endReadout Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate GenericCamera Event GenericCamera_logevent_endReadout Topic Columns
-	[Documentation]    Validate the GenericCamera_logevent_endReadout topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the GenericCamera_logevent_endReadout topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    GenericCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22341,7 +22645,7 @@ Validate GenericCamera Event GenericCamera_logevent_endTakeImage Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate GenericCamera Event GenericCamera_logevent_endTakeImage Topic Columns
-	[Documentation]    Validate the GenericCamera_logevent_endTakeImage topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the GenericCamera_logevent_endTakeImage topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    GenericCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22379,7 +22683,7 @@ Validate GenericCamera Telemetry GenericCamera_temperature Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate GenericCamera Telemetry GenericCamera_temperature Topic Columns
-	[Documentation]    Validate the GenericCamera_temperature topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the GenericCamera_temperature topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    GenericCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22417,7 +22721,7 @@ Validate IOTA Event IOTA_logevent_detailedState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate IOTA Event IOTA_logevent_detailedState Topic Columns
-	[Documentation]    Validate the IOTA_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the IOTA_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    IOTA
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22455,7 +22759,7 @@ Validate IOTA Event IOTA_logevent_internalCommand Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate IOTA Event IOTA_logevent_internalCommand Topic Columns
-	[Documentation]    Validate the IOTA_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the IOTA_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    IOTA
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22493,7 +22797,7 @@ Validate IOTA Event IOTA_logevent_heartbeat Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate IOTA Event IOTA_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the IOTA_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the IOTA_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    IOTA
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22531,7 +22835,7 @@ Validate IOTA Event IOTA_logevent_loopTimeOutOfRange Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate IOTA Event IOTA_logevent_loopTimeOutOfRange Topic Columns
-	[Documentation]    Validate the IOTA_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the IOTA_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    IOTA
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22569,7 +22873,7 @@ Validate IOTA Event IOTA_logevent_rejectedCommand Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate IOTA Event IOTA_logevent_rejectedCommand Topic Columns
-	[Documentation]    Validate the IOTA_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the IOTA_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    IOTA
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22607,7 +22911,7 @@ Validate IOTA Telemetry IOTA_timestamp Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate IOTA Telemetry IOTA_timestamp Topic Columns
-	[Documentation]    Validate the IOTA_timestamp topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the IOTA_timestamp topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    IOTA
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22645,7 +22949,7 @@ Validate IOTA Telemetry IOTA_loopTime Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate IOTA Telemetry IOTA_loopTime Topic Columns
-	[Documentation]    Validate the IOTA_loopTime topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the IOTA_loopTime topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    IOTA
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22683,7 +22987,7 @@ Validate Hexapod Command Hexapod_command_configureAcceleration Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Hexapod Command Hexapod_command_configureAcceleration Topic Columns
-	[Documentation]    Validate the Hexapod_command_configureAcceleration topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Hexapod_command_configureAcceleration topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Hexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22721,7 +23025,7 @@ Validate Hexapod Command Hexapod_command_configureLimits Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Hexapod Command Hexapod_command_configureLimits Topic Columns
-	[Documentation]    Validate the Hexapod_command_configureLimits topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Hexapod_command_configureLimits topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Hexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22759,7 +23063,7 @@ Validate Hexapod Command Hexapod_command_configureElevationRawLUT Topic Byte Siz
 	Should Be True    ${result} < ${65536}
 
 Validate Hexapod Command Hexapod_command_configureElevationRawLUT Topic Columns
-	[Documentation]    Validate the Hexapod_command_configureElevationRawLUT topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Hexapod_command_configureElevationRawLUT topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Hexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22797,7 +23101,7 @@ Validate Hexapod Command Hexapod_command_move Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Hexapod Command Hexapod_command_move Topic Columns
-	[Documentation]    Validate the Hexapod_command_move topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Hexapod_command_move topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Hexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22835,7 +23139,7 @@ Validate Hexapod Command Hexapod_command_positionSet Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Hexapod Command Hexapod_command_positionSet Topic Columns
-	[Documentation]    Validate the Hexapod_command_positionSet topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Hexapod_command_positionSet topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Hexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22873,7 +23177,7 @@ Validate Hexapod Command Hexapod_command_configureVelocity Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Hexapod Command Hexapod_command_configureVelocity Topic Columns
-	[Documentation]    Validate the Hexapod_command_configureVelocity topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Hexapod_command_configureVelocity topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Hexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22911,7 +23215,7 @@ Validate Hexapod Command Hexapod_command_offset Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Hexapod Command Hexapod_command_offset Topic Columns
-	[Documentation]    Validate the Hexapod_command_offset topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Hexapod_command_offset topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Hexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22949,7 +23253,7 @@ Validate Hexapod Command Hexapod_command_pivot Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Hexapod Command Hexapod_command_pivot Topic Columns
-	[Documentation]    Validate the Hexapod_command_pivot topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Hexapod_command_pivot topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Hexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -22987,7 +23291,7 @@ Validate Hexapod Command Hexapod_command_clearError Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Hexapod Command Hexapod_command_clearError Topic Columns
-	[Documentation]    Validate the Hexapod_command_clearError topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Hexapod_command_clearError topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Hexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23025,7 +23329,7 @@ Validate Hexapod Command Hexapod_command_test Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Hexapod Command Hexapod_command_test Topic Columns
-	[Documentation]    Validate the Hexapod_command_test topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Hexapod_command_test topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Hexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23063,7 +23367,7 @@ Validate Hexapod Command Hexapod_command_configureAzimuthRawLUT Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Hexapod Command Hexapod_command_configureAzimuthRawLUT Topic Columns
-	[Documentation]    Validate the Hexapod_command_configureAzimuthRawLUT topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Hexapod_command_configureAzimuthRawLUT topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Hexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23101,7 +23405,7 @@ Validate Hexapod Command Hexapod_command_configureTemperatureRawLUT Topic Byte S
 	Should Be True    ${result} < ${65536}
 
 Validate Hexapod Command Hexapod_command_configureTemperatureRawLUT Topic Columns
-	[Documentation]    Validate the Hexapod_command_configureTemperatureRawLUT topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Hexapod_command_configureTemperatureRawLUT topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Hexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23139,7 +23443,7 @@ Validate Hexapod Command Hexapod_command_moveLUT Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Hexapod Command Hexapod_command_moveLUT Topic Columns
-	[Documentation]    Validate the Hexapod_command_moveLUT topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Hexapod_command_moveLUT topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Hexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23177,7 +23481,7 @@ Validate Hexapod Event Hexapod_logevent_interlock Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Hexapod Event Hexapod_logevent_interlock Topic Columns
-	[Documentation]    Validate the Hexapod_logevent_interlock topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Hexapod_logevent_interlock topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Hexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23215,7 +23519,7 @@ Validate Hexapod Event Hexapod_logevent_inPosition Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Hexapod Event Hexapod_logevent_inPosition Topic Columns
-	[Documentation]    Validate the Hexapod_logevent_inPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Hexapod_logevent_inPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Hexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23253,7 +23557,7 @@ Validate Hexapod Event Hexapod_logevent_deviceError Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Hexapod Event Hexapod_logevent_deviceError Topic Columns
-	[Documentation]    Validate the Hexapod_logevent_deviceError topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Hexapod_logevent_deviceError topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Hexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23291,7 +23595,7 @@ Validate Hexapod Event Hexapod_logevent_settingsApplied Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Hexapod Event Hexapod_logevent_settingsApplied Topic Columns
-	[Documentation]    Validate the Hexapod_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Hexapod_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Hexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23329,7 +23633,7 @@ Validate Hexapod Event Hexapod_logevent_rejectedCommand Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Hexapod Event Hexapod_logevent_rejectedCommand Topic Columns
-	[Documentation]    Validate the Hexapod_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Hexapod_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Hexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23367,7 +23671,7 @@ Validate Hexapod Event Hexapod_logevent_commandableByDDS Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Hexapod Event Hexapod_logevent_commandableByDDS Topic Columns
-	[Documentation]    Validate the Hexapod_logevent_commandableByDDS topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Hexapod_logevent_commandableByDDS topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Hexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23405,7 +23709,7 @@ Validate Hexapod Telemetry Hexapod_Actuators Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Hexapod Telemetry Hexapod_Actuators Topic Columns
-	[Documentation]    Validate the Hexapod_Actuators topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Hexapod_Actuators topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Hexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23443,7 +23747,7 @@ Validate Hexapod Telemetry Hexapod_Application Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Hexapod Telemetry Hexapod_Application Topic Columns
-	[Documentation]    Validate the Hexapod_Application topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Hexapod_Application topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Hexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23481,7 +23785,7 @@ Validate Hexapod Telemetry Hexapod_Electrical Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Hexapod Telemetry Hexapod_Electrical Topic Columns
-	[Documentation]    Validate the Hexapod_Electrical topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Hexapod_Electrical topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Hexapod
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23519,7 +23823,7 @@ Validate HVAC Command HVAC_command_setHvacConfiguration Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate HVAC Command HVAC_command_setHvacConfiguration Topic Columns
-	[Documentation]    Validate the HVAC_command_setHvacConfiguration topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the HVAC_command_setHvacConfiguration topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    HVAC
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23557,7 +23861,7 @@ Validate HVAC Event HVAC_logevent_detailedState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate HVAC Event HVAC_logevent_detailedState Topic Columns
-	[Documentation]    Validate the HVAC_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the HVAC_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    HVAC
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23595,7 +23899,7 @@ Validate HVAC Event HVAC_logevent_heartbeat Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate HVAC Event HVAC_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the HVAC_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the HVAC_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    HVAC
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23633,7 +23937,7 @@ Validate HVAC Telemetry HVAC_lowerAHUStatus Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate HVAC Telemetry HVAC_lowerAHUStatus Topic Columns
-	[Documentation]    Validate the HVAC_lowerAHUStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the HVAC_lowerAHUStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    HVAC
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23671,7 +23975,7 @@ Validate HVAC Telemetry HVAC_lowerChillerStatus Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate HVAC Telemetry HVAC_lowerChillerStatus Topic Columns
-	[Documentation]    Validate the HVAC_lowerChillerStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the HVAC_lowerChillerStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    HVAC
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23709,7 +24013,7 @@ Validate HVAC Telemetry HVAC_whiteRoomAHU Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate HVAC Telemetry HVAC_whiteRoomAHU Topic Columns
-	[Documentation]    Validate the HVAC_whiteRoomAHU topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the HVAC_whiteRoomAHU topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    HVAC
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23747,7 +24051,7 @@ Validate LinearStage Command LinearStage_command_moveRelative Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate LinearStage Command LinearStage_command_moveRelative Topic Columns
-	[Documentation]    Validate the LinearStage_command_moveRelative topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the LinearStage_command_moveRelative topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23785,7 +24089,7 @@ Validate LinearStage Command LinearStage_command_moveAbsolute Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate LinearStage Command LinearStage_command_moveAbsolute Topic Columns
-	[Documentation]    Validate the LinearStage_command_moveAbsolute topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the LinearStage_command_moveAbsolute topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23823,7 +24127,7 @@ Validate LinearStage Command LinearStage_command_getHome Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate LinearStage Command LinearStage_command_getHome Topic Columns
-	[Documentation]    Validate the LinearStage_command_getHome topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the LinearStage_command_getHome topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23861,7 +24165,7 @@ Validate LinearStage Command LinearStage_command_stop Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate LinearStage Command LinearStage_command_stop Topic Columns
-	[Documentation]    Validate the LinearStage_command_stop topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the LinearStage_command_stop topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23899,7 +24203,7 @@ Validate LinearStage Event LinearStage_logevent_detailedState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate LinearStage Event LinearStage_logevent_detailedState Topic Columns
-	[Documentation]    Validate the LinearStage_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the LinearStage_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23937,7 +24241,7 @@ Validate LinearStage Event LinearStage_logevent_heartbeat Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate LinearStage Event LinearStage_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the LinearStage_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the LinearStage_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -23975,7 +24279,7 @@ Validate LinearStage Telemetry LinearStage_position Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate LinearStage Telemetry LinearStage_position Topic Columns
-	[Documentation]    Validate the LinearStage_position topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the LinearStage_position topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    LinearStage
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24013,7 +24317,7 @@ Validate MTAOS Command MTAOS_command_measureAlignment Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTAOS Command MTAOS_command_measureAlignment Topic Columns
-	[Documentation]    Validate the MTAOS_command_measureAlignment topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTAOS_command_measureAlignment topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24051,7 +24355,7 @@ Validate MTAOS Command MTAOS_command_issueAlignmentCorrection Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTAOS Command MTAOS_command_issueAlignmentCorrection Topic Columns
-	[Documentation]    Validate the MTAOS_command_issueAlignmentCorrection topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTAOS_command_issueAlignmentCorrection topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24089,7 +24393,7 @@ Validate MTAOS Command MTAOS_command_resetWavefrontCorrection Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTAOS Command MTAOS_command_resetWavefrontCorrection Topic Columns
-	[Documentation]    Validate the MTAOS_command_resetWavefrontCorrection topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTAOS_command_resetWavefrontCorrection topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24127,7 +24431,7 @@ Validate MTAOS Command MTAOS_command_issueWavefrontCorrection Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTAOS Command MTAOS_command_issueWavefrontCorrection Topic Columns
-	[Documentation]    Validate the MTAOS_command_issueWavefrontCorrection topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTAOS_command_issueWavefrontCorrection topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24165,7 +24469,7 @@ Validate MTAOS Command MTAOS_command_processCalibrationProducts Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTAOS Command MTAOS_command_processCalibrationProducts Topic Columns
-	[Documentation]    Validate the MTAOS_command_processCalibrationProducts topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTAOS_command_processCalibrationProducts topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24203,7 +24507,7 @@ Validate MTAOS Command MTAOS_command_processWavefrontError Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTAOS Command MTAOS_command_processWavefrontError Topic Columns
-	[Documentation]    Validate the MTAOS_command_processWavefrontError topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTAOS_command_processWavefrontError topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24241,7 +24545,7 @@ Validate MTAOS Command MTAOS_command_processIntraExtraWavefrontError Topic Byte 
 	Should Be True    ${result} < ${65536}
 
 Validate MTAOS Command MTAOS_command_processIntraExtraWavefrontError Topic Columns
-	[Documentation]    Validate the MTAOS_command_processIntraExtraWavefrontError topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTAOS_command_processIntraExtraWavefrontError topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24279,7 +24583,7 @@ Validate MTAOS Command MTAOS_command_processShWavefrontError Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTAOS Command MTAOS_command_processShWavefrontError Topic Columns
-	[Documentation]    Validate the MTAOS_command_processShWavefrontError topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTAOS_command_processShWavefrontError topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24317,7 +24621,7 @@ Validate MTAOS Event MTAOS_logevent_heartbeat Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTAOS Event MTAOS_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the MTAOS_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTAOS_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24355,7 +24659,7 @@ Validate MTAOS Event MTAOS_logevent_wavefrontError Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTAOS Event MTAOS_logevent_wavefrontError Topic Columns
-	[Documentation]    Validate the MTAOS_logevent_wavefrontError topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTAOS_logevent_wavefrontError topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24393,7 +24697,7 @@ Validate MTAOS Event MTAOS_logevent_rejectedWavefrontError Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTAOS Event MTAOS_logevent_rejectedWavefrontError Topic Columns
-	[Documentation]    Validate the MTAOS_logevent_rejectedWavefrontError topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTAOS_logevent_rejectedWavefrontError topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24431,7 +24735,7 @@ Validate MTAOS Event MTAOS_logevent_degreeOfFreedom Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTAOS Event MTAOS_logevent_degreeOfFreedom Topic Columns
-	[Documentation]    Validate the MTAOS_logevent_degreeOfFreedom topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTAOS_logevent_degreeOfFreedom topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24469,7 +24773,7 @@ Validate MTAOS Event MTAOS_logevent_rejectedDegreeOfFreedom Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTAOS Event MTAOS_logevent_rejectedDegreeOfFreedom Topic Columns
-	[Documentation]    Validate the MTAOS_logevent_rejectedDegreeOfFreedom topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTAOS_logevent_rejectedDegreeOfFreedom topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24507,7 +24811,7 @@ Validate MTAOS Event MTAOS_logevent_cameraHexapodCorrection Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTAOS Event MTAOS_logevent_cameraHexapodCorrection Topic Columns
-	[Documentation]    Validate the MTAOS_logevent_cameraHexapodCorrection topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTAOS_logevent_cameraHexapodCorrection topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24545,7 +24849,7 @@ Validate MTAOS Event MTAOS_logevent_rejectedCameraHexapodCorrection Topic Byte S
 	Should Be True    ${result} < ${65536}
 
 Validate MTAOS Event MTAOS_logevent_rejectedCameraHexapodCorrection Topic Columns
-	[Documentation]    Validate the MTAOS_logevent_rejectedCameraHexapodCorrection topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTAOS_logevent_rejectedCameraHexapodCorrection topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24583,7 +24887,7 @@ Validate MTAOS Event MTAOS_logevent_m1m3Correction Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTAOS Event MTAOS_logevent_m1m3Correction Topic Columns
-	[Documentation]    Validate the MTAOS_logevent_m1m3Correction topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTAOS_logevent_m1m3Correction topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24621,7 +24925,7 @@ Validate MTAOS Event MTAOS_logevent_rejectedM1M3Correction Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTAOS Event MTAOS_logevent_rejectedM1M3Correction Topic Columns
-	[Documentation]    Validate the MTAOS_logevent_rejectedM1M3Correction topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTAOS_logevent_rejectedM1M3Correction topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24659,7 +24963,7 @@ Validate MTAOS Event MTAOS_logevent_m2Correction Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTAOS Event MTAOS_logevent_m2Correction Topic Columns
-	[Documentation]    Validate the MTAOS_logevent_m2Correction topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTAOS_logevent_m2Correction topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24697,7 +25001,7 @@ Validate MTAOS Event MTAOS_logevent_rejectedM2Correction Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTAOS Event MTAOS_logevent_rejectedM2Correction Topic Columns
-	[Documentation]    Validate the MTAOS_logevent_rejectedM2Correction topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTAOS_logevent_rejectedM2Correction topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24735,7 +25039,7 @@ Validate MTAOS Event MTAOS_logevent_m2HexapodCorrection Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTAOS Event MTAOS_logevent_m2HexapodCorrection Topic Columns
-	[Documentation]    Validate the MTAOS_logevent_m2HexapodCorrection topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTAOS_logevent_m2HexapodCorrection topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24773,7 +25077,7 @@ Validate MTAOS Event MTAOS_logevent_rejectedM2HexapodCorrection Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTAOS Event MTAOS_logevent_rejectedM2HexapodCorrection Topic Columns
-	[Documentation]    Validate the MTAOS_logevent_rejectedM2HexapodCorrection topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTAOS_logevent_rejectedM2HexapodCorrection topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24811,7 +25115,7 @@ Validate MTAOS Event MTAOS_logevent_wepWarning Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTAOS Event MTAOS_logevent_wepWarning Topic Columns
-	[Documentation]    Validate the MTAOS_logevent_wepWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTAOS_logevent_wepWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24849,7 +25153,7 @@ Validate MTAOS Event MTAOS_logevent_ofcWarning Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTAOS Event MTAOS_logevent_ofcWarning Topic Columns
-	[Documentation]    Validate the MTAOS_logevent_ofcWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTAOS_logevent_ofcWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24887,7 +25191,7 @@ Validate MTAOS Telemetry MTAOS_wepDuration Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTAOS Telemetry MTAOS_wepDuration Topic Columns
-	[Documentation]    Validate the MTAOS_wepDuration topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTAOS_wepDuration topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24925,7 +25229,7 @@ Validate MTAOS Telemetry MTAOS_ofcDuration Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTAOS Telemetry MTAOS_ofcDuration Topic Columns
-	[Documentation]    Validate the MTAOS_ofcDuration topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTAOS_ofcDuration topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTAOS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24963,7 +25267,7 @@ Validate MTArchiver Event MTArchiver_logevent_mtArchiverEntityShutdown Topic Byt
 	Should Be True    ${result} < ${65536}
 
 Validate MTArchiver Event MTArchiver_logevent_mtArchiverEntityShutdown Topic Columns
-	[Documentation]    Validate the MTArchiver_logevent_mtArchiverEntityShutdown topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTArchiver_logevent_mtArchiverEntityShutdown topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25001,7 +25305,7 @@ Validate MTArchiver Event MTArchiver_logevent_mtArchiverEntityStartup Topic Byte
 	Should Be True    ${result} < ${65536}
 
 Validate MTArchiver Event MTArchiver_logevent_mtArchiverEntityStartup Topic Columns
-	[Documentation]    Validate the MTArchiver_logevent_mtArchiverEntityStartup topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTArchiver_logevent_mtArchiverEntityStartup topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25039,7 +25343,7 @@ Validate MTArchiver Event MTArchiver_logevent_mtArchiverEntitySummaryState Topic
 	Should Be True    ${result} < ${65536}
 
 Validate MTArchiver Event MTArchiver_logevent_mtArchiverEntitySummaryState Topic Columns
-	[Documentation]    Validate the MTArchiver_logevent_mtArchiverEntitySummaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTArchiver_logevent_mtArchiverEntitySummaryState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25077,7 +25381,7 @@ Validate MTArchiver Event MTArchiver_logevent_settingsApplied Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTArchiver Event MTArchiver_logevent_settingsApplied Topic Columns
-	[Documentation]    Validate the MTArchiver_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTArchiver_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25115,7 +25419,7 @@ Validate MTArchiver Telemetry MTArchiver_sequencerHeartbeat Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTArchiver Telemetry MTArchiver_sequencerHeartbeat Topic Columns
-	[Documentation]    Validate the MTArchiver_sequencerHeartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTArchiver_sequencerHeartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25153,7 +25457,7 @@ Validate MTCalCS Event MTCalCS_logevent_detailedState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCalCS Event MTCalCS_logevent_detailedState Topic Columns
-	[Documentation]    Validate the MTCalCS_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCalCS_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCalCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25191,7 +25495,7 @@ Validate MTCalCS Event MTCalCS_logevent_internalCommand Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCalCS Event MTCalCS_logevent_internalCommand Topic Columns
-	[Documentation]    Validate the MTCalCS_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCalCS_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCalCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25229,7 +25533,7 @@ Validate MTCalCS Event MTCalCS_logevent_heartbeat Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCalCS Event MTCalCS_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the MTCalCS_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCalCS_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCalCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25267,7 +25571,7 @@ Validate MTCalCS Event MTCalCS_logevent_loopTimeOutOfRange Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCalCS Event MTCalCS_logevent_loopTimeOutOfRange Topic Columns
-	[Documentation]    Validate the MTCalCS_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCalCS_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCalCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25305,7 +25609,7 @@ Validate MTCalCS Event MTCalCS_logevent_rejectedCommand Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCalCS Event MTCalCS_logevent_rejectedCommand Topic Columns
-	[Documentation]    Validate the MTCalCS_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCalCS_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCalCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25343,7 +25647,7 @@ Validate MTCalCS Telemetry MTCalCS_timestamp Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCalCS Telemetry MTCalCS_timestamp Topic Columns
-	[Documentation]    Validate the MTCalCS_timestamp topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCalCS_timestamp topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCalCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25381,7 +25685,7 @@ Validate MTCalCS Telemetry MTCalCS_loopTime Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCalCS Telemetry MTCalCS_loopTime Topic Columns
-	[Documentation]    Validate the MTCalCS_loopTime topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCalCS_loopTime topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCalCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25419,7 +25723,7 @@ Validate MTCamera Command MTCamera_command_discardRows Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Command MTCamera_command_discardRows Topic Columns
-	[Documentation]    Validate the MTCamera_command_discardRows topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_command_discardRows topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25457,7 +25761,7 @@ Validate MTCamera Command MTCamera_command_startImage Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Command MTCamera_command_startImage Topic Columns
-	[Documentation]    Validate the MTCamera_command_startImage topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_command_startImage topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25495,7 +25799,7 @@ Validate MTCamera Command MTCamera_command_disableCalibration Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Command MTCamera_command_disableCalibration Topic Columns
-	[Documentation]    Validate the MTCamera_command_disableCalibration topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_command_disableCalibration topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25533,7 +25837,7 @@ Validate MTCamera Command MTCamera_command_initGuiders Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Command MTCamera_command_initGuiders Topic Columns
-	[Documentation]    Validate the MTCamera_command_initGuiders topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_command_initGuiders topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25571,7 +25875,7 @@ Validate MTCamera Command MTCamera_command_enableCalibration Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Command MTCamera_command_enableCalibration Topic Columns
-	[Documentation]    Validate the MTCamera_command_enableCalibration topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_command_enableCalibration topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25609,7 +25913,7 @@ Validate MTCamera Command MTCamera_command_initImage Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Command MTCamera_command_initImage Topic Columns
-	[Documentation]    Validate the MTCamera_command_initImage topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_command_initImage topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25647,7 +25951,7 @@ Validate MTCamera Command MTCamera_command_endImage Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Command MTCamera_command_endImage Topic Columns
-	[Documentation]    Validate the MTCamera_command_endImage topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_command_endImage topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25685,7 +25989,7 @@ Validate MTCamera Command MTCamera_command_setFilter Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Command MTCamera_command_setFilter Topic Columns
-	[Documentation]    Validate the MTCamera_command_setFilter topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_command_setFilter topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25723,7 +26027,7 @@ Validate MTCamera Command MTCamera_command_clear Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Command MTCamera_command_clear Topic Columns
-	[Documentation]    Validate the MTCamera_command_clear topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_command_clear topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25761,7 +26065,7 @@ Validate MTCamera Command MTCamera_command_takeImages Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Command MTCamera_command_takeImages Topic Columns
-	[Documentation]    Validate the MTCamera_command_takeImages topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_command_takeImages topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25799,7 +26103,7 @@ Validate MTCamera Event MTCamera_logevent_offlineDetailedState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Event MTCamera_logevent_offlineDetailedState Topic Columns
-	[Documentation]    Validate the MTCamera_logevent_offlineDetailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_logevent_offlineDetailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25837,7 +26141,7 @@ Validate MTCamera Event MTCamera_logevent_endReadout Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Event MTCamera_logevent_endReadout Topic Columns
-	[Documentation]    Validate the MTCamera_logevent_endReadout topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_logevent_endReadout topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25875,7 +26179,7 @@ Validate MTCamera Event MTCamera_logevent_endTakeImage Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Event MTCamera_logevent_endTakeImage Topic Columns
-	[Documentation]    Validate the MTCamera_logevent_endTakeImage topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_logevent_endTakeImage topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25913,7 +26217,7 @@ Validate MTCamera Event MTCamera_logevent_imageReadinessDetailedState Topic Byte
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Event MTCamera_logevent_imageReadinessDetailedState Topic Columns
-	[Documentation]    Validate the MTCamera_logevent_imageReadinessDetailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_logevent_imageReadinessDetailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25951,7 +26255,7 @@ Validate MTCamera Event MTCamera_logevent_startSetFilter Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Event MTCamera_logevent_startSetFilter Topic Columns
-	[Documentation]    Validate the MTCamera_logevent_startSetFilter topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_logevent_startSetFilter topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -25989,7 +26293,7 @@ Validate MTCamera Event MTCamera_logevent_startUnloadFilter Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Event MTCamera_logevent_startUnloadFilter Topic Columns
-	[Documentation]    Validate the MTCamera_logevent_startUnloadFilter topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_logevent_startUnloadFilter topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26027,7 +26331,7 @@ Validate MTCamera Event MTCamera_logevent_notReadyToTakeImage Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Event MTCamera_logevent_notReadyToTakeImage Topic Columns
-	[Documentation]    Validate the MTCamera_logevent_notReadyToTakeImage topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_logevent_notReadyToTakeImage topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26065,7 +26369,7 @@ Validate MTCamera Event MTCamera_logevent_startShutterClose Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Event MTCamera_logevent_startShutterClose Topic Columns
-	[Documentation]    Validate the MTCamera_logevent_startShutterClose topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_logevent_startShutterClose topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26103,7 +26407,7 @@ Validate MTCamera Event MTCamera_logevent_endInitializeGuider Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Event MTCamera_logevent_endInitializeGuider Topic Columns
-	[Documentation]    Validate the MTCamera_logevent_endInitializeGuider topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_logevent_endInitializeGuider topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26141,7 +26445,7 @@ Validate MTCamera Event MTCamera_logevent_endShutterClose Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Event MTCamera_logevent_endShutterClose Topic Columns
-	[Documentation]    Validate the MTCamera_logevent_endShutterClose topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_logevent_endShutterClose topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26179,7 +26483,7 @@ Validate MTCamera Event MTCamera_logevent_endOfImageTelemetry Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Event MTCamera_logevent_endOfImageTelemetry Topic Columns
-	[Documentation]    Validate the MTCamera_logevent_endOfImageTelemetry topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_logevent_endOfImageTelemetry topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26217,7 +26521,7 @@ Validate MTCamera Event MTCamera_logevent_endUnloadFilter Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Event MTCamera_logevent_endUnloadFilter Topic Columns
-	[Documentation]    Validate the MTCamera_logevent_endUnloadFilter topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_logevent_endUnloadFilter topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26255,7 +26559,7 @@ Validate MTCamera Event MTCamera_logevent_calibrationDetailedState Topic Byte Si
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Event MTCamera_logevent_calibrationDetailedState Topic Columns
-	[Documentation]    Validate the MTCamera_logevent_calibrationDetailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_logevent_calibrationDetailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26293,7 +26597,7 @@ Validate MTCamera Event MTCamera_logevent_endRotateCarousel Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Event MTCamera_logevent_endRotateCarousel Topic Columns
-	[Documentation]    Validate the MTCamera_logevent_endRotateCarousel topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_logevent_endRotateCarousel topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26331,7 +26635,7 @@ Validate MTCamera Event MTCamera_logevent_startLoadFilter Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Event MTCamera_logevent_startLoadFilter Topic Columns
-	[Documentation]    Validate the MTCamera_logevent_startLoadFilter topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_logevent_startLoadFilter topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26369,7 +26673,7 @@ Validate MTCamera Event MTCamera_logevent_filterChangerDetailedState Topic Byte 
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Event MTCamera_logevent_filterChangerDetailedState Topic Columns
-	[Documentation]    Validate the MTCamera_logevent_filterChangerDetailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_logevent_filterChangerDetailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26407,7 +26711,7 @@ Validate MTCamera Event MTCamera_logevent_shutterDetailedState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Event MTCamera_logevent_shutterDetailedState Topic Columns
-	[Documentation]    Validate the MTCamera_logevent_shutterDetailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_logevent_shutterDetailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26445,7 +26749,7 @@ Validate MTCamera Event MTCamera_logevent_readyToTakeImage Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Event MTCamera_logevent_readyToTakeImage Topic Columns
-	[Documentation]    Validate the MTCamera_logevent_readyToTakeImage topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_logevent_readyToTakeImage topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26483,7 +26787,7 @@ Validate MTCamera Event MTCamera_logevent_ccsCommandState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Event MTCamera_logevent_ccsCommandState Topic Columns
-	[Documentation]    Validate the MTCamera_logevent_ccsCommandState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_logevent_ccsCommandState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26521,7 +26825,7 @@ Validate MTCamera Event MTCamera_logevent_prepareToTakeImage Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Event MTCamera_logevent_prepareToTakeImage Topic Columns
-	[Documentation]    Validate the MTCamera_logevent_prepareToTakeImage topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_logevent_prepareToTakeImage topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26559,7 +26863,7 @@ Validate MTCamera Event MTCamera_logevent_ccsConfigured Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Event MTCamera_logevent_ccsConfigured Topic Columns
-	[Documentation]    Validate the MTCamera_logevent_ccsConfigured topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_logevent_ccsConfigured topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26597,7 +26901,7 @@ Validate MTCamera Event MTCamera_logevent_endLoadFilter Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Event MTCamera_logevent_endLoadFilter Topic Columns
-	[Documentation]    Validate the MTCamera_logevent_endLoadFilter topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_logevent_endLoadFilter topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26635,7 +26939,7 @@ Validate MTCamera Event MTCamera_logevent_endShutterOpen Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Event MTCamera_logevent_endShutterOpen Topic Columns
-	[Documentation]    Validate the MTCamera_logevent_endShutterOpen topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_logevent_endShutterOpen topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26673,7 +26977,7 @@ Validate MTCamera Event MTCamera_logevent_startIntegration Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Event MTCamera_logevent_startIntegration Topic Columns
-	[Documentation]    Validate the MTCamera_logevent_startIntegration topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_logevent_startIntegration topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26711,7 +27015,7 @@ Validate MTCamera Event MTCamera_logevent_endInitializeImage Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Event MTCamera_logevent_endInitializeImage Topic Columns
-	[Documentation]    Validate the MTCamera_logevent_endInitializeImage topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_logevent_endInitializeImage topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26749,7 +27053,7 @@ Validate MTCamera Event MTCamera_logevent_settingsApplied Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Event MTCamera_logevent_settingsApplied Topic Columns
-	[Documentation]    Validate the MTCamera_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26787,7 +27091,7 @@ Validate MTCamera Event MTCamera_logevent_endSetFilter Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Event MTCamera_logevent_endSetFilter Topic Columns
-	[Documentation]    Validate the MTCamera_logevent_endSetFilter topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_logevent_endSetFilter topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26825,7 +27129,7 @@ Validate MTCamera Event MTCamera_logevent_startShutterOpen Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Event MTCamera_logevent_startShutterOpen Topic Columns
-	[Documentation]    Validate the MTCamera_logevent_startShutterOpen topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_logevent_startShutterOpen topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26863,7 +27167,7 @@ Validate MTCamera Event MTCamera_logevent_raftsDetailedState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Event MTCamera_logevent_raftsDetailedState Topic Columns
-	[Documentation]    Validate the MTCamera_logevent_raftsDetailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_logevent_raftsDetailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26901,7 +27205,7 @@ Validate MTCamera Event MTCamera_logevent_availableFilters Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Event MTCamera_logevent_availableFilters Topic Columns
-	[Documentation]    Validate the MTCamera_logevent_availableFilters topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_logevent_availableFilters topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26939,7 +27243,7 @@ Validate MTCamera Event MTCamera_logevent_startReadout Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Event MTCamera_logevent_startReadout Topic Columns
-	[Documentation]    Validate the MTCamera_logevent_startReadout topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_logevent_startReadout topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -26977,7 +27281,7 @@ Validate MTCamera Event MTCamera_logevent_startRotateCarousel Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Event MTCamera_logevent_startRotateCarousel Topic Columns
-	[Documentation]    Validate the MTCamera_logevent_startRotateCarousel topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_logevent_startRotateCarousel topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27015,7 +27319,7 @@ Validate MTCamera Event MTCamera_logevent_imageReadoutParameters Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Event MTCamera_logevent_imageReadoutParameters Topic Columns
-	[Documentation]    Validate the MTCamera_logevent_imageReadoutParameters topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_logevent_imageReadoutParameters topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera	TSEIA-119
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27053,7 +27357,7 @@ Validate MTCamera Telemetry MTCamera_shutter Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Telemetry MTCamera_shutter Topic Columns
-	[Documentation]    Validate the MTCamera_shutter topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_shutter topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27091,7 +27395,7 @@ Validate MTCamera Telemetry MTCamera_prot Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Telemetry MTCamera_prot Topic Columns
-	[Documentation]    Validate the MTCamera_prot topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_prot topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27129,7 +27433,7 @@ Validate MTCamera Telemetry MTCamera_filter Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Telemetry MTCamera_filter Topic Columns
-	[Documentation]    Validate the MTCamera_filter topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_filter topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27167,7 +27471,7 @@ Validate MTCamera Telemetry MTCamera_heartbeat Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Telemetry MTCamera_heartbeat Topic Columns
-	[Documentation]    Validate the MTCamera_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27205,7 +27509,7 @@ Validate MTCamera Telemetry MTCamera_was Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Telemetry MTCamera_was Topic Columns
-	[Documentation]    Validate the MTCamera_was topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_was topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27243,7 +27547,7 @@ Validate MTCamera Telemetry MTCamera_ccs Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Telemetry MTCamera_ccs Topic Columns
-	[Documentation]    Validate the MTCamera_ccs topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_ccs topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27281,7 +27585,7 @@ Validate MTCamera Telemetry MTCamera_clusterEncoder Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Telemetry MTCamera_clusterEncoder Topic Columns
-	[Documentation]    Validate the MTCamera_clusterEncoder topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_clusterEncoder topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27319,7 +27623,7 @@ Validate MTCamera Telemetry MTCamera_cyro Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Telemetry MTCamera_cyro Topic Columns
-	[Documentation]    Validate the MTCamera_cyro topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_cyro topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27357,7 +27661,7 @@ Validate MTCamera Telemetry MTCamera_purge Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Telemetry MTCamera_purge Topic Columns
-	[Documentation]    Validate the MTCamera_purge topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_purge topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27395,7 +27699,7 @@ Validate MTCamera Telemetry MTCamera_wds Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Telemetry MTCamera_wds Topic Columns
-	[Documentation]    Validate the MTCamera_wds topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_wds topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27433,7 +27737,7 @@ Validate MTCamera Telemetry MTCamera_gds Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Telemetry MTCamera_gds Topic Columns
-	[Documentation]    Validate the MTCamera_gds topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_gds topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27471,7 +27775,7 @@ Validate MTCamera Telemetry MTCamera_sds Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Telemetry MTCamera_sds Topic Columns
-	[Documentation]    Validate the MTCamera_sds topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_sds topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27509,7 +27813,7 @@ Validate MTCamera Telemetry MTCamera_gas Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Telemetry MTCamera_gas Topic Columns
-	[Documentation]    Validate the MTCamera_gas topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_gas topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27547,7 +27851,7 @@ Validate MTCamera Telemetry MTCamera_pcms Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Telemetry MTCamera_pcms Topic Columns
-	[Documentation]    Validate the MTCamera_pcms topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_pcms topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27585,7 +27889,7 @@ Validate MTCamera Telemetry MTCamera_sas Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Telemetry MTCamera_sas Topic Columns
-	[Documentation]    Validate the MTCamera_sas topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_sas topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27623,7 +27927,7 @@ Validate MTCamera Telemetry MTCamera_cold Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTCamera Telemetry MTCamera_cold Topic Columns
-	[Documentation]    Validate the MTCamera_cold topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTCamera_cold topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTCamera
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27661,7 +27965,7 @@ Validate MTDomeTrajectory Event MTDomeTrajectory_logevent_detailedState Topic By
 	Should Be True    ${result} < ${65536}
 
 Validate MTDomeTrajectory Event MTDomeTrajectory_logevent_detailedState Topic Columns
-	[Documentation]    Validate the MTDomeTrajectory_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTDomeTrajectory_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTDomeTrajectory
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27699,7 +28003,7 @@ Validate MTDomeTrajectory Event MTDomeTrajectory_logevent_internalCommand Topic 
 	Should Be True    ${result} < ${65536}
 
 Validate MTDomeTrajectory Event MTDomeTrajectory_logevent_internalCommand Topic Columns
-	[Documentation]    Validate the MTDomeTrajectory_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTDomeTrajectory_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTDomeTrajectory
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27737,7 +28041,7 @@ Validate MTDomeTrajectory Event MTDomeTrajectory_logevent_heartbeat Topic Byte S
 	Should Be True    ${result} < ${65536}
 
 Validate MTDomeTrajectory Event MTDomeTrajectory_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the MTDomeTrajectory_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTDomeTrajectory_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTDomeTrajectory
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27775,7 +28079,7 @@ Validate MTDomeTrajectory Event MTDomeTrajectory_logevent_loopTimeOutOfRange Top
 	Should Be True    ${result} < ${65536}
 
 Validate MTDomeTrajectory Event MTDomeTrajectory_logevent_loopTimeOutOfRange Topic Columns
-	[Documentation]    Validate the MTDomeTrajectory_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTDomeTrajectory_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTDomeTrajectory
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27813,7 +28117,7 @@ Validate MTDomeTrajectory Event MTDomeTrajectory_logevent_rejectedCommand Topic 
 	Should Be True    ${result} < ${65536}
 
 Validate MTDomeTrajectory Event MTDomeTrajectory_logevent_rejectedCommand Topic Columns
-	[Documentation]    Validate the MTDomeTrajectory_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTDomeTrajectory_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTDomeTrajectory
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27851,7 +28155,7 @@ Validate MTDomeTrajectory Event MTDomeTrajectory_logevent_allClear Topic Byte Si
 	Should Be True    ${result} < ${65536}
 
 Validate MTDomeTrajectory Event MTDomeTrajectory_logevent_allClear Topic Columns
-	[Documentation]    Validate the MTDomeTrajectory_logevent_allClear topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTDomeTrajectory_logevent_allClear topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTDomeTrajectory
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27889,7 +28193,7 @@ Validate MTDomeTrajectory Telemetry MTDomeTrajectory_timestamp Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTDomeTrajectory Telemetry MTDomeTrajectory_timestamp Topic Columns
-	[Documentation]    Validate the MTDomeTrajectory_timestamp topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTDomeTrajectory_timestamp topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTDomeTrajectory
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27927,7 +28231,7 @@ Validate MTDomeTrajectory Telemetry MTDomeTrajectory_loopTime Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTDomeTrajectory Telemetry MTDomeTrajectory_loopTime Topic Columns
-	[Documentation]    Validate the MTDomeTrajectory_loopTime topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTDomeTrajectory_loopTime topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTDomeTrajectory
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -27965,7 +28269,7 @@ Validate MTEEC Command MTEEC_command_setToDayTime Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTEEC Command MTEEC_command_setToDayTime Topic Columns
-	[Documentation]    Validate the MTEEC_command_setToDayTime topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTEEC_command_setToDayTime topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTEEC
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -28003,7 +28307,7 @@ Validate MTEEC Command MTEEC_command_setToNightTime Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTEEC Command MTEEC_command_setToNightTime Topic Columns
-	[Documentation]    Validate the MTEEC_command_setToNightTime topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTEEC_command_setToNightTime topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTEEC
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -28041,7 +28345,7 @@ Validate MTEEC Command MTEEC_command_disableControl Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTEEC Command MTEEC_command_disableControl Topic Columns
-	[Documentation]    Validate the MTEEC_command_disableControl topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTEEC_command_disableControl topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTEEC
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -28079,7 +28383,7 @@ Validate MTEEC Command MTEEC_command_applyTemperatureSetpoint Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTEEC Command MTEEC_command_applyTemperatureSetpoint Topic Columns
-	[Documentation]    Validate the MTEEC_command_applyTemperatureSetpoint topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTEEC_command_applyTemperatureSetpoint topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTEEC
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -28117,7 +28421,7 @@ Validate MTEEC Event MTEEC_logevent_detailedState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTEEC Event MTEEC_logevent_detailedState Topic Columns
-	[Documentation]    Validate the MTEEC_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTEEC_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTEEC
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -28155,7 +28459,7 @@ Validate MTEEC Event MTEEC_logevent_heartbeat Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTEEC Event MTEEC_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the MTEEC_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTEEC_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTEEC
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -28193,7 +28497,7 @@ Validate MTGuider Event MTGuider_logevent_detailedState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTGuider Event MTGuider_logevent_detailedState Topic Columns
-	[Documentation]    Validate the MTGuider_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTGuider_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTGuider
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -28231,7 +28535,7 @@ Validate MTGuider Event MTGuider_logevent_internalCommand Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTGuider Event MTGuider_logevent_internalCommand Topic Columns
-	[Documentation]    Validate the MTGuider_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTGuider_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTGuider
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -28269,7 +28573,7 @@ Validate MTGuider Event MTGuider_logevent_heartbeat Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTGuider Event MTGuider_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the MTGuider_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTGuider_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTGuider
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -28307,7 +28611,7 @@ Validate MTGuider Event MTGuider_logevent_loopTimeOutOfRange Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTGuider Event MTGuider_logevent_loopTimeOutOfRange Topic Columns
-	[Documentation]    Validate the MTGuider_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTGuider_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTGuider
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -28345,7 +28649,7 @@ Validate MTGuider Event MTGuider_logevent_rejectedCommand Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTGuider Event MTGuider_logevent_rejectedCommand Topic Columns
-	[Documentation]    Validate the MTGuider_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTGuider_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTGuider
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -28383,7 +28687,7 @@ Validate MTGuider Telemetry MTGuider_timestamp Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTGuider Telemetry MTGuider_timestamp Topic Columns
-	[Documentation]    Validate the MTGuider_timestamp topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTGuider_timestamp topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTGuider
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -28421,7 +28725,7 @@ Validate MTGuider Telemetry MTGuider_loopTime Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTGuider Telemetry MTGuider_loopTime Topic Columns
-	[Documentation]    Validate the MTGuider_loopTime topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTGuider_loopTime topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTGuider
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -28459,7 +28763,7 @@ Validate MTHeaderService Event MTHeaderService_logevent_heartbeat Topic Byte Siz
 	Should Be True    ${result} < ${65536}
 
 Validate MTHeaderService Event MTHeaderService_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the MTHeaderService_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTHeaderService_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTHeaderService
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -28497,7 +28801,7 @@ Validate MTHeaderService Event MTHeaderService_logevent_rejectedCommand Topic By
 	Should Be True    ${result} < ${65536}
 
 Validate MTHeaderService Event MTHeaderService_logevent_rejectedCommand Topic Columns
-	[Documentation]    Validate the MTHeaderService_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTHeaderService_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTHeaderService
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -28535,7 +28839,7 @@ Validate MTHeaderService Event MTHeaderService_logevent_largeFileObjectAvailable
 	Should Be True    ${result} < ${65536}
 
 Validate MTHeaderService Event MTHeaderService_logevent_largeFileObjectAvailable Topic Columns
-	[Documentation]    Validate the MTHeaderService_logevent_largeFileObjectAvailable topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTHeaderService_logevent_largeFileObjectAvailable topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTHeaderService
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -28573,7 +28877,7 @@ Validate MTHeaderService Event MTHeaderService_logevent_settingsApplied Topic By
 	Should Be True    ${result} < ${65536}
 
 Validate MTHeaderService Event MTHeaderService_logevent_settingsApplied Topic Columns
-	[Documentation]    Validate the MTHeaderService_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTHeaderService_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTHeaderService
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -28611,7 +28915,7 @@ Validate MTLaserTracker Event MTLaserTracker_logevent_detailedState Topic Byte S
 	Should Be True    ${result} < ${65536}
 
 Validate MTLaserTracker Event MTLaserTracker_logevent_detailedState Topic Columns
-	[Documentation]    Validate the MTLaserTracker_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTLaserTracker_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTLaserTracker
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -28649,7 +28953,7 @@ Validate MTLaserTracker Event MTLaserTracker_logevent_internalCommand Topic Byte
 	Should Be True    ${result} < ${65536}
 
 Validate MTLaserTracker Event MTLaserTracker_logevent_internalCommand Topic Columns
-	[Documentation]    Validate the MTLaserTracker_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTLaserTracker_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTLaserTracker
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -28687,7 +28991,7 @@ Validate MTLaserTracker Event MTLaserTracker_logevent_heartbeat Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTLaserTracker Event MTLaserTracker_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the MTLaserTracker_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTLaserTracker_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTLaserTracker
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -28725,7 +29029,7 @@ Validate MTLaserTracker Event MTLaserTracker_logevent_loopTimeOutOfRange Topic B
 	Should Be True    ${result} < ${65536}
 
 Validate MTLaserTracker Event MTLaserTracker_logevent_loopTimeOutOfRange Topic Columns
-	[Documentation]    Validate the MTLaserTracker_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTLaserTracker_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTLaserTracker
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -28763,7 +29067,7 @@ Validate MTLaserTracker Event MTLaserTracker_logevent_rejectedCommand Topic Byte
 	Should Be True    ${result} < ${65536}
 
 Validate MTLaserTracker Event MTLaserTracker_logevent_rejectedCommand Topic Columns
-	[Documentation]    Validate the MTLaserTracker_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTLaserTracker_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTLaserTracker
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -28801,7 +29105,7 @@ Validate MTLaserTracker Telemetry MTLaserTracker_timestamp Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTLaserTracker Telemetry MTLaserTracker_timestamp Topic Columns
-	[Documentation]    Validate the MTLaserTracker_timestamp topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTLaserTracker_timestamp topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTLaserTracker
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -28839,7 +29143,7 @@ Validate MTLaserTracker Telemetry MTLaserTracker_loopTime Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTLaserTracker Telemetry MTLaserTracker_loopTime Topic Columns
-	[Documentation]    Validate the MTLaserTracker_loopTime topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTLaserTracker_loopTime topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTLaserTracker
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -28877,7 +29181,7 @@ Validate MTM1M3 Command MTM1M3_command_abortRaiseM1M3 Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Command MTM1M3_command_abortRaiseM1M3 Topic Columns
-	[Documentation]    Validate the MTM1M3_command_abortRaiseM1M3 topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_command_abortRaiseM1M3 topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -28915,7 +29219,7 @@ Validate MTM1M3 Command MTM1M3_command_applyAberrationForces Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Command MTM1M3_command_applyAberrationForces Topic Columns
-	[Documentation]    Validate the MTM1M3_command_applyAberrationForces topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_command_applyAberrationForces topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -28953,7 +29257,7 @@ Validate MTM1M3 Command MTM1M3_command_applyAberrationForcesByBendingModes Topic
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Command MTM1M3_command_applyAberrationForcesByBendingModes Topic Columns
-	[Documentation]    Validate the MTM1M3_command_applyAberrationForcesByBendingModes topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_command_applyAberrationForcesByBendingModes topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -28991,7 +29295,7 @@ Validate MTM1M3 Command MTM1M3_command_applyActiveOpticForces Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Command MTM1M3_command_applyActiveOpticForces Topic Columns
-	[Documentation]    Validate the MTM1M3_command_applyActiveOpticForces topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_command_applyActiveOpticForces topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -29029,7 +29333,7 @@ Validate MTM1M3 Command MTM1M3_command_applyActiveOpticForcesByBendingModes Topi
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Command MTM1M3_command_applyActiveOpticForcesByBendingModes Topic Columns
-	[Documentation]    Validate the MTM1M3_command_applyActiveOpticForcesByBendingModes topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_command_applyActiveOpticForcesByBendingModes topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -29067,7 +29371,7 @@ Validate MTM1M3 Command MTM1M3_command_applyOffsetForces Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Command MTM1M3_command_applyOffsetForces Topic Columns
-	[Documentation]    Validate the MTM1M3_command_applyOffsetForces topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_command_applyOffsetForces topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -29105,7 +29409,7 @@ Validate MTM1M3 Command MTM1M3_command_applyOffsetForcesByMirrorForce Topic Byte
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Command MTM1M3_command_applyOffsetForcesByMirrorForce Topic Columns
-	[Documentation]    Validate the MTM1M3_command_applyOffsetForcesByMirrorForce topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_command_applyOffsetForcesByMirrorForce topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -29143,7 +29447,7 @@ Validate MTM1M3 Command MTM1M3_command_clearAberrationForces Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Command MTM1M3_command_clearAberrationForces Topic Columns
-	[Documentation]    Validate the MTM1M3_command_clearAberrationForces topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_command_clearAberrationForces topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -29181,7 +29485,7 @@ Validate MTM1M3 Command MTM1M3_command_clearActiveOpticForces Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Command MTM1M3_command_clearActiveOpticForces Topic Columns
-	[Documentation]    Validate the MTM1M3_command_clearActiveOpticForces topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_command_clearActiveOpticForces topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -29219,7 +29523,7 @@ Validate MTM1M3 Command MTM1M3_command_clearOffsetForces Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Command MTM1M3_command_clearOffsetForces Topic Columns
-	[Documentation]    Validate the MTM1M3_command_clearOffsetForces topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_command_clearOffsetForces topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -29257,7 +29561,7 @@ Validate MTM1M3 Command MTM1M3_command_disableHardpointChase Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Command MTM1M3_command_disableHardpointChase Topic Columns
-	[Documentation]    Validate the MTM1M3_command_disableHardpointChase topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_command_disableHardpointChase topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -29295,7 +29599,7 @@ Validate MTM1M3 Command MTM1M3_command_disableHardpointCorrections Topic Byte Si
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Command MTM1M3_command_disableHardpointCorrections Topic Columns
-	[Documentation]    Validate the MTM1M3_command_disableHardpointCorrections topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_command_disableHardpointCorrections topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -29333,7 +29637,7 @@ Validate MTM1M3 Command MTM1M3_command_enableHardpointChase Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Command MTM1M3_command_enableHardpointChase Topic Columns
-	[Documentation]    Validate the MTM1M3_command_enableHardpointChase topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_command_enableHardpointChase topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -29371,7 +29675,7 @@ Validate MTM1M3 Command MTM1M3_command_enableHardpointCorrections Topic Byte Siz
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Command MTM1M3_command_enableHardpointCorrections Topic Columns
-	[Documentation]    Validate the MTM1M3_command_enableHardpointCorrections topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_command_enableHardpointCorrections topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -29409,7 +29713,7 @@ Validate MTM1M3 Command MTM1M3_command_enterEngineering Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Command MTM1M3_command_enterEngineering Topic Columns
-	[Documentation]    Validate the MTM1M3_command_enterEngineering topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_command_enterEngineering topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -29447,7 +29751,7 @@ Validate MTM1M3 Command MTM1M3_command_exitEngineering Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Command MTM1M3_command_exitEngineering Topic Columns
-	[Documentation]    Validate the MTM1M3_command_exitEngineering topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_command_exitEngineering topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -29485,7 +29789,7 @@ Validate MTM1M3 Command MTM1M3_command_lowerM1M3 Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Command MTM1M3_command_lowerM1M3 Topic Columns
-	[Documentation]    Validate the MTM1M3_command_lowerM1M3 topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_command_lowerM1M3 topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -29523,7 +29827,7 @@ Validate MTM1M3 Command MTM1M3_command_modbusTransmit Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Command MTM1M3_command_modbusTransmit Topic Columns
-	[Documentation]    Validate the MTM1M3_command_modbusTransmit topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_command_modbusTransmit topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -29561,7 +29865,7 @@ Validate MTM1M3 Command MTM1M3_command_moveHardpointActuators Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Command MTM1M3_command_moveHardpointActuators Topic Columns
-	[Documentation]    Validate the MTM1M3_command_moveHardpointActuators topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_command_moveHardpointActuators topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -29599,7 +29903,7 @@ Validate MTM1M3 Command MTM1M3_command_positionM1M3 Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Command MTM1M3_command_positionM1M3 Topic Columns
-	[Documentation]    Validate the MTM1M3_command_positionM1M3 topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_command_positionM1M3 topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -29637,7 +29941,7 @@ Validate MTM1M3 Command MTM1M3_command_programILC Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Command MTM1M3_command_programILC Topic Columns
-	[Documentation]    Validate the MTM1M3_command_programILC topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_command_programILC topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -29675,7 +29979,7 @@ Validate MTM1M3 Command MTM1M3_command_raiseM1M3 Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Command MTM1M3_command_raiseM1M3 Topic Columns
-	[Documentation]    Validate the MTM1M3_command_raiseM1M3 topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_command_raiseM1M3 topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -29713,7 +30017,7 @@ Validate MTM1M3 Command MTM1M3_command_resetPID Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Command MTM1M3_command_resetPID Topic Columns
-	[Documentation]    Validate the MTM1M3_command_resetPID topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_command_resetPID topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -29751,7 +30055,7 @@ Validate MTM1M3 Command MTM1M3_command_shutdown Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Command MTM1M3_command_shutdown Topic Columns
-	[Documentation]    Validate the MTM1M3_command_shutdown topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_command_shutdown topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -29789,7 +30093,7 @@ Validate MTM1M3 Command MTM1M3_command_stopHardpointMotion Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Command MTM1M3_command_stopHardpointMotion Topic Columns
-	[Documentation]    Validate the MTM1M3_command_stopHardpointMotion topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_command_stopHardpointMotion topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -29827,7 +30131,7 @@ Validate MTM1M3 Command MTM1M3_command_testAir Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Command MTM1M3_command_testAir Topic Columns
-	[Documentation]    Validate the MTM1M3_command_testAir topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_command_testAir topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -29865,7 +30169,7 @@ Validate MTM1M3 Command MTM1M3_command_testForceActuator Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Command MTM1M3_command_testForceActuator Topic Columns
-	[Documentation]    Validate the MTM1M3_command_testForceActuator topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_command_testForceActuator topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -29903,7 +30207,7 @@ Validate MTM1M3 Command MTM1M3_command_testHardpoint Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Command MTM1M3_command_testHardpoint Topic Columns
-	[Documentation]    Validate the MTM1M3_command_testHardpoint topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_command_testHardpoint topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -29941,7 +30245,7 @@ Validate MTM1M3 Command MTM1M3_command_translateM1M3 Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Command MTM1M3_command_translateM1M3 Topic Columns
-	[Documentation]    Validate the MTM1M3_command_translateM1M3 topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_command_translateM1M3 topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -29979,7 +30283,7 @@ Validate MTM1M3 Command MTM1M3_command_turnAirOff Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Command MTM1M3_command_turnAirOff Topic Columns
-	[Documentation]    Validate the MTM1M3_command_turnAirOff topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_command_turnAirOff topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -30017,7 +30321,7 @@ Validate MTM1M3 Command MTM1M3_command_turnAirOn Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Command MTM1M3_command_turnAirOn Topic Columns
-	[Documentation]    Validate the MTM1M3_command_turnAirOn topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_command_turnAirOn topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -30055,7 +30359,7 @@ Validate MTM1M3 Command MTM1M3_command_turnLightsOff Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Command MTM1M3_command_turnLightsOff Topic Columns
-	[Documentation]    Validate the MTM1M3_command_turnLightsOff topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_command_turnLightsOff topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -30093,7 +30397,7 @@ Validate MTM1M3 Command MTM1M3_command_turnLightsOn Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Command MTM1M3_command_turnLightsOn Topic Columns
-	[Documentation]    Validate the MTM1M3_command_turnLightsOn topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_command_turnLightsOn topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -30131,7 +30435,7 @@ Validate MTM1M3 Command MTM1M3_command_turnPowerOff Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Command MTM1M3_command_turnPowerOff Topic Columns
-	[Documentation]    Validate the MTM1M3_command_turnPowerOff topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_command_turnPowerOff topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -30169,7 +30473,7 @@ Validate MTM1M3 Command MTM1M3_command_turnPowerOn Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Command MTM1M3_command_turnPowerOn Topic Columns
-	[Documentation]    Validate the MTM1M3_command_turnPowerOn topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_command_turnPowerOn topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -30207,7 +30511,7 @@ Validate MTM1M3 Command MTM1M3_command_updatePID Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Command MTM1M3_command_updatePID Topic Columns
-	[Documentation]    Validate the MTM1M3_command_updatePID topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_command_updatePID topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -30245,7 +30549,7 @@ Validate MTM1M3 Event MTM1M3_logevent_accelerometerWarning Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_accelerometerWarning Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_accelerometerWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_accelerometerWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -30283,7 +30587,7 @@ Validate MTM1M3 Event MTM1M3_logevent_airSupplyStatus Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_airSupplyStatus Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_airSupplyStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_airSupplyStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -30321,7 +30625,7 @@ Validate MTM1M3 Event MTM1M3_logevent_airSupplyWarning Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_airSupplyWarning Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_airSupplyWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_airSupplyWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -30359,7 +30663,7 @@ Validate MTM1M3 Event MTM1M3_logevent_appliedAberrationForces Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_appliedAberrationForces Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_appliedAberrationForces topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_appliedAberrationForces topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -30397,7 +30701,7 @@ Validate MTM1M3 Event MTM1M3_logevent_appliedAccelerationForces Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_appliedAccelerationForces Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_appliedAccelerationForces topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_appliedAccelerationForces topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -30435,7 +30739,7 @@ Validate MTM1M3 Event MTM1M3_logevent_appliedActiveOpticForces Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_appliedActiveOpticForces Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_appliedActiveOpticForces topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_appliedActiveOpticForces topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -30473,7 +30777,7 @@ Validate MTM1M3 Event MTM1M3_logevent_appliedAzimuthForces Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_appliedAzimuthForces Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_appliedAzimuthForces topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_appliedAzimuthForces topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -30511,7 +30815,7 @@ Validate MTM1M3 Event MTM1M3_logevent_appliedBalanceForces Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_appliedBalanceForces Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_appliedBalanceForces topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_appliedBalanceForces topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -30549,7 +30853,7 @@ Validate MTM1M3 Event MTM1M3_logevent_appliedCylinderForces Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_appliedCylinderForces Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_appliedCylinderForces topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_appliedCylinderForces topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -30587,7 +30891,7 @@ Validate MTM1M3 Event MTM1M3_logevent_appliedElevationForces Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_appliedElevationForces Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_appliedElevationForces topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_appliedElevationForces topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -30625,7 +30929,7 @@ Validate MTM1M3 Event MTM1M3_logevent_appliedForces Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_appliedForces Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_appliedForces topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_appliedForces topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -30663,7 +30967,7 @@ Validate MTM1M3 Event MTM1M3_logevent_appliedHardpointSteps Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_appliedHardpointSteps Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_appliedHardpointSteps topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_appliedHardpointSteps topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -30701,7 +31005,7 @@ Validate MTM1M3 Event MTM1M3_logevent_appliedOffsetForces Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_appliedOffsetForces Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_appliedOffsetForces topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_appliedOffsetForces topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -30739,7 +31043,7 @@ Validate MTM1M3 Event MTM1M3_logevent_appliedStaticForces Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_appliedStaticForces Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_appliedStaticForces topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_appliedStaticForces topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -30777,7 +31081,7 @@ Validate MTM1M3 Event MTM1M3_logevent_appliedThermalForces Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_appliedThermalForces Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_appliedThermalForces topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_appliedThermalForces topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -30815,7 +31119,7 @@ Validate MTM1M3 Event MTM1M3_logevent_appliedVelocityForces Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_appliedVelocityForces Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_appliedVelocityForces topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_appliedVelocityForces topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -30853,7 +31157,7 @@ Validate MTM1M3 Event MTM1M3_logevent_cellLightStatus Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_cellLightStatus Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_cellLightStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_cellLightStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -30891,7 +31195,7 @@ Validate MTM1M3 Event MTM1M3_logevent_cellLightWarning Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_cellLightWarning Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_cellLightWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_cellLightWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -30929,7 +31233,7 @@ Validate MTM1M3 Event MTM1M3_logevent_detailedState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_detailedState Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -30967,7 +31271,7 @@ Validate MTM1M3 Event MTM1M3_logevent_displacementSensorWarning Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_displacementSensorWarning Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_displacementSensorWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_displacementSensorWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -31005,7 +31309,7 @@ Validate MTM1M3 Event MTM1M3_logevent_forceActuatorBackupCalibrationInfo Topic B
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_forceActuatorBackupCalibrationInfo Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_forceActuatorBackupCalibrationInfo topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_forceActuatorBackupCalibrationInfo topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -31043,7 +31347,7 @@ Validate MTM1M3 Event MTM1M3_logevent_forceActuatorILCInfo Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_forceActuatorILCInfo Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_forceActuatorILCInfo topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_forceActuatorILCInfo topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -31081,7 +31385,7 @@ Validate MTM1M3 Event MTM1M3_logevent_forceActuatorIdInfo Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_forceActuatorIdInfo Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_forceActuatorIdInfo topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_forceActuatorIdInfo topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -31119,7 +31423,7 @@ Validate MTM1M3 Event MTM1M3_logevent_forceActuatorMainCalibrationInfo Topic Byt
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_forceActuatorMainCalibrationInfo Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_forceActuatorMainCalibrationInfo topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_forceActuatorMainCalibrationInfo topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -31157,7 +31461,7 @@ Validate MTM1M3 Event MTM1M3_logevent_forceActuatorMezzanineCalibrationInfo Topi
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_forceActuatorMezzanineCalibrationInfo Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_forceActuatorMezzanineCalibrationInfo topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_forceActuatorMezzanineCalibrationInfo topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -31195,7 +31499,7 @@ Validate MTM1M3 Event MTM1M3_logevent_forceActuatorPositionInfo Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_forceActuatorPositionInfo Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_forceActuatorPositionInfo topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_forceActuatorPositionInfo topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -31233,7 +31537,7 @@ Validate MTM1M3 Event MTM1M3_logevent_forceActuatorState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_forceActuatorState Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_forceActuatorState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_forceActuatorState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -31271,7 +31575,7 @@ Validate MTM1M3 Event MTM1M3_logevent_forceActuatorWarning Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_forceActuatorWarning Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_forceActuatorWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_forceActuatorWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -31309,7 +31613,7 @@ Validate MTM1M3 Event MTM1M3_logevent_gyroWarning Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_gyroWarning Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_gyroWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_gyroWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -31347,7 +31651,7 @@ Validate MTM1M3 Event MTM1M3_logevent_hardpointActuatorInfo Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_hardpointActuatorInfo Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_hardpointActuatorInfo topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_hardpointActuatorInfo topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -31385,7 +31689,7 @@ Validate MTM1M3 Event MTM1M3_logevent_hardpointActuatorState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_hardpointActuatorState Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_hardpointActuatorState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_hardpointActuatorState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -31423,7 +31727,7 @@ Validate MTM1M3 Event MTM1M3_logevent_hardpointActuatorWarning Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_hardpointActuatorWarning Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_hardpointActuatorWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_hardpointActuatorWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -31461,7 +31765,7 @@ Validate MTM1M3 Event MTM1M3_logevent_hardpointMonitorInfo Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_hardpointMonitorInfo Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_hardpointMonitorInfo topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_hardpointMonitorInfo topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -31499,7 +31803,7 @@ Validate MTM1M3 Event MTM1M3_logevent_hardpointMonitorState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_hardpointMonitorState Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_hardpointMonitorState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_hardpointMonitorState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -31537,7 +31841,7 @@ Validate MTM1M3 Event MTM1M3_logevent_hardpointMonitorWarning Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_hardpointMonitorWarning Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_hardpointMonitorWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_hardpointMonitorWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -31575,7 +31879,7 @@ Validate MTM1M3 Event MTM1M3_logevent_inclinometerSensorWarning Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_inclinometerSensorWarning Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_inclinometerSensorWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_inclinometerSensorWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -31613,7 +31917,7 @@ Validate MTM1M3 Event MTM1M3_logevent_interlockStatus Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_interlockStatus Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_interlockStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_interlockStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -31651,7 +31955,7 @@ Validate MTM1M3 Event MTM1M3_logevent_interlockWarning Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_interlockWarning Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_interlockWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_interlockWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -31689,7 +31993,7 @@ Validate MTM1M3 Event MTM1M3_logevent_modbusResponse Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_modbusResponse Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_modbusResponse topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_modbusResponse topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -31727,7 +32031,7 @@ Validate MTM1M3 Event MTM1M3_logevent_modbusWarning Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_modbusWarning Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_modbusWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_modbusWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -31765,7 +32069,7 @@ Validate MTM1M3 Event MTM1M3_logevent_pidInfo Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_pidInfo Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_pidInfo topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_pidInfo topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -31803,7 +32107,7 @@ Validate MTM1M3 Event MTM1M3_logevent_powerStatus Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_powerStatus Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_powerStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_powerStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -31841,7 +32145,7 @@ Validate MTM1M3 Event MTM1M3_logevent_powerWarning Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_powerWarning Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_powerWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_powerWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -31879,7 +32183,7 @@ Validate MTM1M3 Event MTM1M3_logevent_rejectedAberrationForces Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_rejectedAberrationForces Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_rejectedAberrationForces topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_rejectedAberrationForces topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -31917,7 +32221,7 @@ Validate MTM1M3 Event MTM1M3_logevent_rejectedAccelerationForces Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_rejectedAccelerationForces Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_rejectedAccelerationForces topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_rejectedAccelerationForces topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -31955,7 +32259,7 @@ Validate MTM1M3 Event MTM1M3_logevent_rejectedActiveOpticForces Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_rejectedActiveOpticForces Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_rejectedActiveOpticForces topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_rejectedActiveOpticForces topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -31993,7 +32297,7 @@ Validate MTM1M3 Event MTM1M3_logevent_rejectedAzimuthForces Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_rejectedAzimuthForces Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_rejectedAzimuthForces topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_rejectedAzimuthForces topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -32031,7 +32335,7 @@ Validate MTM1M3 Event MTM1M3_logevent_rejectedBalanceForces Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_rejectedBalanceForces Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_rejectedBalanceForces topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_rejectedBalanceForces topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -32069,7 +32373,7 @@ Validate MTM1M3 Event MTM1M3_logevent_rejectedCylinderForces Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_rejectedCylinderForces Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_rejectedCylinderForces topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_rejectedCylinderForces topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -32107,7 +32411,7 @@ Validate MTM1M3 Event MTM1M3_logevent_rejectedElevationForces Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_rejectedElevationForces Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_rejectedElevationForces topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_rejectedElevationForces topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -32145,7 +32449,7 @@ Validate MTM1M3 Event MTM1M3_logevent_rejectedForces Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_rejectedForces Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_rejectedForces topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_rejectedForces topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -32183,7 +32487,7 @@ Validate MTM1M3 Event MTM1M3_logevent_rejectedOffsetForces Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_rejectedOffsetForces Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_rejectedOffsetForces topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_rejectedOffsetForces topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -32221,7 +32525,7 @@ Validate MTM1M3 Event MTM1M3_logevent_rejectedStaticForces Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_rejectedStaticForces Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_rejectedStaticForces topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_rejectedStaticForces topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -32259,7 +32563,7 @@ Validate MTM1M3 Event MTM1M3_logevent_rejectedThermalForces Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_rejectedThermalForces Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_rejectedThermalForces topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_rejectedThermalForces topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -32297,7 +32601,7 @@ Validate MTM1M3 Event MTM1M3_logevent_rejectedVelocityForces Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Event MTM1M3_logevent_rejectedVelocityForces Topic Columns
-	[Documentation]    Validate the MTM1M3_logevent_rejectedVelocityForces topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_logevent_rejectedVelocityForces topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -32335,7 +32639,7 @@ Validate MTM1M3 Telemetry MTM1M3_accelerometerData Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Telemetry MTM1M3_accelerometerData Topic Columns
-	[Documentation]    Validate the MTM1M3_accelerometerData topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_accelerometerData topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -32373,7 +32677,7 @@ Validate MTM1M3 Telemetry MTM1M3_forceActuatorData Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Telemetry MTM1M3_forceActuatorData Topic Columns
-	[Documentation]    Validate the MTM1M3_forceActuatorData topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_forceActuatorData topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -32411,7 +32715,7 @@ Validate MTM1M3 Telemetry MTM1M3_forceActuatorPressure Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Telemetry MTM1M3_forceActuatorPressure Topic Columns
-	[Documentation]    Validate the MTM1M3_forceActuatorPressure topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_forceActuatorPressure topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -32449,7 +32753,7 @@ Validate MTM1M3 Telemetry MTM1M3_gyroData Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Telemetry MTM1M3_gyroData Topic Columns
-	[Documentation]    Validate the MTM1M3_gyroData topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_gyroData topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -32487,7 +32791,7 @@ Validate MTM1M3 Telemetry MTM1M3_hardpointActuatorData Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Telemetry MTM1M3_hardpointActuatorData Topic Columns
-	[Documentation]    Validate the MTM1M3_hardpointActuatorData topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_hardpointActuatorData topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -32525,7 +32829,7 @@ Validate MTM1M3 Telemetry MTM1M3_hardpointMonitorData Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Telemetry MTM1M3_hardpointMonitorData Topic Columns
-	[Documentation]    Validate the MTM1M3_hardpointMonitorData topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_hardpointMonitorData topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -32563,7 +32867,7 @@ Validate MTM1M3 Telemetry MTM1M3_imsData Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Telemetry MTM1M3_imsData Topic Columns
-	[Documentation]    Validate the MTM1M3_imsData topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_imsData topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -32601,7 +32905,7 @@ Validate MTM1M3 Telemetry MTM1M3_inclinometerData Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Telemetry MTM1M3_inclinometerData Topic Columns
-	[Documentation]    Validate the MTM1M3_inclinometerData topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_inclinometerData topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -32639,7 +32943,7 @@ Validate MTM1M3 Telemetry MTM1M3_outerLoopData Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Telemetry MTM1M3_outerLoopData Topic Columns
-	[Documentation]    Validate the MTM1M3_outerLoopData topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_outerLoopData topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -32677,7 +32981,7 @@ Validate MTM1M3 Telemetry MTM1M3_pidData Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Telemetry MTM1M3_pidData Topic Columns
-	[Documentation]    Validate the MTM1M3_pidData topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_pidData topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -32715,7 +33019,7 @@ Validate MTM1M3 Telemetry MTM1M3_powerData Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3 Telemetry MTM1M3_powerData Topic Columns
-	[Documentation]    Validate the MTM1M3_powerData topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3_powerData topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -32753,7 +33057,7 @@ Validate MTM1M3TS Command MTM1M3TS_command_applySetpoint Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3TS Command MTM1M3TS_command_applySetpoint Topic Columns
-	[Documentation]    Validate the MTM1M3TS_command_applySetpoint topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3TS_command_applySetpoint topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3TS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -32791,7 +33095,7 @@ Validate MTM1M3TS Command MTM1M3TS_command_shutdown Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3TS Command MTM1M3TS_command_shutdown Topic Columns
-	[Documentation]    Validate the MTM1M3TS_command_shutdown topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3TS_command_shutdown topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3TS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -32829,7 +33133,7 @@ Validate MTM1M3TS Event MTM1M3TS_logevent_appliedSetpoint Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3TS Event MTM1M3TS_logevent_appliedSetpoint Topic Columns
-	[Documentation]    Validate the MTM1M3TS_logevent_appliedSetpoint topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3TS_logevent_appliedSetpoint topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3TS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -32867,7 +33171,7 @@ Validate MTM1M3TS Event MTM1M3TS_logevent_detailedState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3TS Event MTM1M3TS_logevent_detailedState Topic Columns
-	[Documentation]    Validate the MTM1M3TS_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3TS_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3TS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -32905,7 +33209,7 @@ Validate MTM1M3TS Telemetry MTM1M3TS_thermalData Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM1M3TS Telemetry MTM1M3TS_thermalData Topic Columns
-	[Documentation]    Validate the MTM1M3TS_thermalData topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM1M3TS_thermalData topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM1M3TS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -32943,7 +33247,7 @@ Validate MTM2 Command MTM2_command_applyBendingMode Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM2 Command MTM2_command_applyBendingMode Topic Columns
-	[Documentation]    Validate the MTM2_command_applyBendingMode topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM2_command_applyBendingMode topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM2
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -32981,7 +33285,7 @@ Validate MTM2 Command MTM2_command_applyForce Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM2 Command MTM2_command_applyForce Topic Columns
-	[Documentation]    Validate the MTM2_command_applyForce topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM2_command_applyForce topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM2
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -33019,7 +33323,7 @@ Validate MTM2 Command MTM2_command_setCorrectionMode Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM2 Command MTM2_command_setCorrectionMode Topic Columns
-	[Documentation]    Validate the MTM2_command_setCorrectionMode topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM2_command_setCorrectionMode topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM2
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -33057,7 +33361,7 @@ Validate MTM2 Command MTM2_command_positionMirror Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM2 Command MTM2_command_positionMirror Topic Columns
-	[Documentation]    Validate the MTM2_command_positionMirror topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM2_command_positionMirror topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM2
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -33095,7 +33399,7 @@ Validate MTM2 Command MTM2_command_moveAxialActuator Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM2 Command MTM2_command_moveAxialActuator Topic Columns
-	[Documentation]    Validate the MTM2_command_moveAxialActuator topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM2_command_moveAxialActuator topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM2
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -33133,7 +33437,7 @@ Validate MTM2 Event MTM2_logevent_m2FaultState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM2 Event MTM2_logevent_m2FaultState Topic Columns
-	[Documentation]    Validate the MTM2_logevent_m2FaultState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM2_logevent_m2FaultState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM2
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -33171,7 +33475,7 @@ Validate MTM2 Event MTM2_logevent_m2AssemblyInPosition Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM2 Event MTM2_logevent_m2AssemblyInPosition Topic Columns
-	[Documentation]    Validate the MTM2_logevent_m2AssemblyInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM2_logevent_m2AssemblyInPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM2
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -33209,7 +33513,7 @@ Validate MTM2 Telemetry MTM2_mirrorPositionMeasured Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM2 Telemetry MTM2_mirrorPositionMeasured Topic Columns
-	[Documentation]    Validate the MTM2_mirrorPositionMeasured topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM2_mirrorPositionMeasured topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM2
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -33247,7 +33551,7 @@ Validate MTM2 Telemetry MTM2_axialForcesMeasured Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM2 Telemetry MTM2_axialForcesMeasured Topic Columns
-	[Documentation]    Validate the MTM2_axialForcesMeasured topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM2_axialForcesMeasured topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM2
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -33285,7 +33589,7 @@ Validate MTM2 Telemetry MTM2_tangentForcesMeasured Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM2 Telemetry MTM2_tangentForcesMeasured Topic Columns
-	[Documentation]    Validate the MTM2_tangentForcesMeasured topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM2_tangentForcesMeasured topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM2
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -33323,7 +33627,7 @@ Validate MTM2 Telemetry MTM2_zenithAngleMeasured Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM2 Telemetry MTM2_zenithAngleMeasured Topic Columns
-	[Documentation]    Validate the MTM2_zenithAngleMeasured topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM2_zenithAngleMeasured topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM2
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -33361,7 +33665,7 @@ Validate MTM2 Telemetry MTM2_axialActuatorAbsolutePositionSteps Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM2 Telemetry MTM2_axialActuatorAbsolutePositionSteps Topic Columns
-	[Documentation]    Validate the MTM2_axialActuatorAbsolutePositionSteps topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM2_axialActuatorAbsolutePositionSteps topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM2
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -33399,7 +33703,7 @@ Validate MTM2 Telemetry MTM2_tangentActuatorAbsolutePositionSteps Topic Byte Siz
 	Should Be True    ${result} < ${65536}
 
 Validate MTM2 Telemetry MTM2_tangentActuatorAbsolutePositionSteps Topic Columns
-	[Documentation]    Validate the MTM2_tangentActuatorAbsolutePositionSteps topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM2_tangentActuatorAbsolutePositionSteps topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM2
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -33437,7 +33741,7 @@ Validate MTM2 Telemetry MTM2_axialActuatorPositionAbsoluteEncoderPositionMeasure
 	Should Be True    ${result} < ${65536}
 
 Validate MTM2 Telemetry MTM2_axialActuatorPositionAbsoluteEncoderPositionMeasured Topic Columns
-	[Documentation]    Validate the MTM2_axialActuatorPositionAbsoluteEncoderPositionMeasured topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM2_axialActuatorPositionAbsoluteEncoderPositionMeasured topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM2
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -33475,7 +33779,7 @@ Validate MTM2 Telemetry MTM2_tangentActuatorPositionAbsoluteEncoderPositionMeasu
 	Should Be True    ${result} < ${65536}
 
 Validate MTM2 Telemetry MTM2_tangentActuatorPositionAbsoluteEncoderPositionMeasured Topic Columns
-	[Documentation]    Validate the MTM2_tangentActuatorPositionAbsoluteEncoderPositionMeasured topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM2_tangentActuatorPositionAbsoluteEncoderPositionMeasured topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM2
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -33513,7 +33817,7 @@ Validate MTM2 Telemetry MTM2_powerStatus Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM2 Telemetry MTM2_powerStatus Topic Columns
-	[Documentation]    Validate the MTM2_powerStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM2_powerStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM2
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -33551,7 +33855,7 @@ Validate MTM2 Telemetry MTM2_temperaturesMeasured Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM2 Telemetry MTM2_temperaturesMeasured Topic Columns
-	[Documentation]    Validate the MTM2_temperaturesMeasured topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM2_temperaturesMeasured topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM2
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -33589,7 +33893,7 @@ Validate MTM2 Telemetry MTM2_rawDisplacement Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM2 Telemetry MTM2_rawDisplacement Topic Columns
-	[Documentation]    Validate the MTM2_rawDisplacement topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM2_rawDisplacement topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM2
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -33627,7 +33931,7 @@ Validate MTM2 Telemetry MTM2_stepVectorUpdate Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM2 Telemetry MTM2_stepVectorUpdate Topic Columns
-	[Documentation]    Validate the MTM2_stepVectorUpdate topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM2_stepVectorUpdate topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM2
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -33665,7 +33969,7 @@ Validate MTM2 Telemetry MTM2_targetForces Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM2 Telemetry MTM2_targetForces Topic Columns
-	[Documentation]    Validate the MTM2_targetForces topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM2_targetForces topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM2
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -33703,7 +34007,7 @@ Validate MTM2 Telemetry MTM2_systemStatus Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM2 Telemetry MTM2_systemStatus Topic Columns
-	[Documentation]    Validate the MTM2_systemStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM2_systemStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM2
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -33741,7 +34045,7 @@ Validate MTM2 Telemetry MTM2_rawTelemetry Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM2 Telemetry MTM2_rawTelemetry Topic Columns
-	[Documentation]    Validate the MTM2_rawTelemetry topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM2_rawTelemetry topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM2
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -33779,7 +34083,7 @@ Validate MTM2 Telemetry MTM2_actuatorLimitSwitches Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTM2 Telemetry MTM2_actuatorLimitSwitches Topic Columns
-	[Documentation]    Validate the MTM2_actuatorLimitSwitches topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTM2_actuatorLimitSwitches topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTM2
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -33817,7 +34121,7 @@ Validate MTMount Command MTMount_command_closeMirrorCover Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Command MTMount_command_closeMirrorCover Topic Columns
-	[Documentation]    Validate the MTMount_command_closeMirrorCover topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_command_closeMirrorCover topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -33855,7 +34159,7 @@ Validate MTMount Command MTMount_command_configure Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Command MTMount_command_configure Topic Columns
-	[Documentation]    Validate the MTMount_command_configure topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_command_configure topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -33893,7 +34197,7 @@ Validate MTMount Command MTMount_command_disableCamWrap Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Command MTMount_command_disableCamWrap Topic Columns
-	[Documentation]    Validate the MTMount_command_disableCamWrap topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_command_disableCamWrap topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -33931,7 +34235,7 @@ Validate MTMount Command MTMount_command_enableCamWrap Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Command MTMount_command_enableCamWrap Topic Columns
-	[Documentation]    Validate the MTMount_command_enableCamWrap topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_command_enableCamWrap topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -33969,7 +34273,7 @@ Validate MTMount Command MTMount_command_moveToTarget Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Command MTMount_command_moveToTarget Topic Columns
-	[Documentation]    Validate the MTMount_command_moveToTarget topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_command_moveToTarget topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -34007,7 +34311,7 @@ Validate MTMount Command MTMount_command_openMirrorCover Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Command MTMount_command_openMirrorCover Topic Columns
-	[Documentation]    Validate the MTMount_command_openMirrorCover topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_command_openMirrorCover topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -34045,7 +34349,7 @@ Validate MTMount Command MTMount_command_trackTarget Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Command MTMount_command_trackTarget Topic Columns
-	[Documentation]    Validate the MTMount_command_trackTarget topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_command_trackTarget topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -34083,7 +34387,7 @@ Validate MTMount Command MTMount_command_clearerror Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Command MTMount_command_clearerror Topic Columns
-	[Documentation]    Validate the MTMount_command_clearerror topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_command_clearerror topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -34121,7 +34425,7 @@ Validate MTMount Event MTMount_logevent_mountState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Event MTMount_logevent_mountState Topic Columns
-	[Documentation]    Validate the MTMount_logevent_mountState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_logevent_mountState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -34159,7 +34463,7 @@ Validate MTMount Event MTMount_logevent_mountWarning Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Event MTMount_logevent_mountWarning Topic Columns
-	[Documentation]    Validate the MTMount_logevent_mountWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_logevent_mountWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -34197,7 +34501,7 @@ Validate MTMount Event MTMount_logevent_mountError Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Event MTMount_logevent_mountError Topic Columns
-	[Documentation]    Validate the MTMount_logevent_mountError topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_logevent_mountError topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -34235,7 +34539,7 @@ Validate MTMount Event MTMount_logevent_mountInPosition Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Event MTMount_logevent_mountInPosition Topic Columns
-	[Documentation]    Validate the MTMount_logevent_mountInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_logevent_mountInPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -34273,7 +34577,7 @@ Validate MTMount Telemetry MTMount_Auxliary_Cabinet_Azimuth Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Telemetry MTMount_Auxliary_Cabinet_Azimuth Topic Columns
-	[Documentation]    Validate the MTMount_Auxliary_Cabinet_Azimuth topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_Auxliary_Cabinet_Azimuth topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -34311,7 +34615,7 @@ Validate MTMount Telemetry MTMount_General Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Telemetry MTMount_General Topic Columns
-	[Documentation]    Validate the MTMount_General topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_General topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -34349,7 +34653,7 @@ Validate MTMount Telemetry MTMount_Azimuth_Cable_Wrap Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Telemetry MTMount_Azimuth_Cable_Wrap Topic Columns
-	[Documentation]    Validate the MTMount_Azimuth_Cable_Wrap topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_Azimuth_Cable_Wrap topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -34387,7 +34691,7 @@ Validate MTMount Telemetry MTMount_Azimuth Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Telemetry MTMount_Azimuth Topic Columns
-	[Documentation]    Validate the MTMount_Azimuth topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_Azimuth topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -34425,7 +34729,7 @@ Validate MTMount Telemetry MTMount_Azimuth_Drives Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Telemetry MTMount_Azimuth_Drives Topic Columns
-	[Documentation]    Validate the MTMount_Azimuth_Drives topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_Azimuth_Drives topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -34463,7 +34767,7 @@ Validate MTMount Telemetry MTMount_Azimuth_Drives_Thermal Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Telemetry MTMount_Azimuth_Drives_Thermal Topic Columns
-	[Documentation]    Validate the MTMount_Azimuth_Drives_Thermal topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_Azimuth_Drives_Thermal topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -34501,7 +34805,7 @@ Validate MTMount Telemetry MTMount_OSS Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Telemetry MTMount_OSS Topic Columns
-	[Documentation]    Validate the MTMount_OSS topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_OSS topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -34539,7 +34843,7 @@ Validate MTMount Telemetry MTMount_OSS2 Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Telemetry MTMount_OSS2 Topic Columns
-	[Documentation]    Validate the MTMount_OSS2 topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_OSS2 topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -34577,7 +34881,7 @@ Validate MTMount Telemetry MTMount_OSS4 Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Telemetry MTMount_OSS4 Topic Columns
-	[Documentation]    Validate the MTMount_OSS4 topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_OSS4 topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -34615,7 +34919,7 @@ Validate MTMount Telemetry MTMount_OSS5 Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Telemetry MTMount_OSS5 Topic Columns
-	[Documentation]    Validate the MTMount_OSS5 topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_OSS5 topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -34653,7 +34957,7 @@ Validate MTMount Telemetry MTMount_OSS6 Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Telemetry MTMount_OSS6 Topic Columns
-	[Documentation]    Validate the MTMount_OSS6 topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_OSS6 topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -34691,7 +34995,7 @@ Validate MTMount Telemetry MTMount_Main_Power_Supply Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Telemetry MTMount_Main_Power_Supply Topic Columns
-	[Documentation]    Validate the MTMount_Main_Power_Supply topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_Main_Power_Supply topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -34729,7 +35033,7 @@ Validate MTMount Telemetry MTMount_Encoder_EIB Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Telemetry MTMount_Encoder_EIB Topic Columns
-	[Documentation]    Validate the MTMount_Encoder_EIB topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_Encoder_EIB topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -34767,7 +35071,7 @@ Validate MTMount Telemetry MTMount_Balancing_Drives Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Telemetry MTMount_Balancing_Drives Topic Columns
-	[Documentation]    Validate the MTMount_Balancing_Drives topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_Balancing_Drives topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -34805,7 +35109,7 @@ Validate MTMount Telemetry MTMount_Balancing Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Telemetry MTMount_Balancing Topic Columns
-	[Documentation]    Validate the MTMount_Balancing topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_Balancing topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -34843,7 +35147,7 @@ Validate MTMount Telemetry MTMount_Elevation Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Telemetry MTMount_Elevation Topic Columns
-	[Documentation]    Validate the MTMount_Elevation topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_Elevation topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -34881,7 +35185,7 @@ Validate MTMount Telemetry MTMount_Elevation_Drives Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Telemetry MTMount_Elevation_Drives Topic Columns
-	[Documentation]    Validate the MTMount_Elevation_Drives topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_Elevation_Drives topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -34919,7 +35223,7 @@ Validate MTMount Telemetry MTMount_Locking_Pins Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Telemetry MTMount_Locking_Pins Topic Columns
-	[Documentation]    Validate the MTMount_Locking_Pins topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_Locking_Pins topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -34957,7 +35261,7 @@ Validate MTMount Telemetry MTMount_Camera_Cable_Wrap Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Telemetry MTMount_Camera_Cable_Wrap Topic Columns
-	[Documentation]    Validate the MTMount_Camera_Cable_Wrap topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_Camera_Cable_Wrap topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -34995,7 +35299,7 @@ Validate MTMount Telemetry MTMount_Deployable_Platforms Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Telemetry MTMount_Deployable_Platforms Topic Columns
-	[Documentation]    Validate the MTMount_Deployable_Platforms topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_Deployable_Platforms topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -35033,7 +35337,7 @@ Validate MTMount Telemetry MTMount_Elevation_Drives_Thermal Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Telemetry MTMount_Elevation_Drives_Thermal Topic Columns
-	[Documentation]    Validate the MTMount_Elevation_Drives_Thermal topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_Elevation_Drives_Thermal topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -35071,7 +35375,7 @@ Validate MTMount Telemetry MTMount_Mirror_Cover Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Telemetry MTMount_Mirror_Cover Topic Columns
-	[Documentation]    Validate the MTMount_Mirror_Cover topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_Mirror_Cover topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -35109,7 +35413,7 @@ Validate MTMount Telemetry MTMount_Mount_Control_Main_Cabinet Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Telemetry MTMount_Mount_Control_Main_Cabinet Topic Columns
-	[Documentation]    Validate the MTMount_Mount_Control_Main_Cabinet topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_Mount_Control_Main_Cabinet topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -35147,7 +35451,7 @@ Validate MTMount Telemetry MTMount_Top_End_Chiller Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Telemetry MTMount_Top_End_Chiller Topic Columns
-	[Documentation]    Validate the MTMount_Top_End_Chiller topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_Top_End_Chiller topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -35185,7 +35489,7 @@ Validate MTMount Telemetry MTMount_Mirror_Cover_Locks Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Telemetry MTMount_Mirror_Cover_Locks Topic Columns
-	[Documentation]    Validate the MTMount_Mirror_Cover_Locks topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_Mirror_Cover_Locks topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -35223,7 +35527,7 @@ Validate MTMount Telemetry MTMount_Main_Power_Supply_Cabinet Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Telemetry MTMount_Main_Power_Supply_Cabinet Topic Columns
-	[Documentation]    Validate the MTMount_Main_Power_Supply_Cabinet topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_Main_Power_Supply_Cabinet topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -35261,7 +35565,7 @@ Validate MTMount Telemetry MTMount_Auxiliary_Boxes Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Telemetry MTMount_Auxiliary_Boxes Topic Columns
-	[Documentation]    Validate the MTMount_Auxiliary_Boxes topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_Auxiliary_Boxes topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -35299,7 +35603,7 @@ Validate MTMount Telemetry MTMount_Compressed_Air Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Telemetry MTMount_Compressed_Air Topic Columns
-	[Documentation]    Validate the MTMount_Compressed_Air topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_Compressed_Air topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -35337,7 +35641,7 @@ Validate MTMount Telemetry MTMount_Cooling Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Telemetry MTMount_Cooling Topic Columns
-	[Documentation]    Validate the MTMount_Cooling topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_Cooling topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -35375,7 +35679,7 @@ Validate MTMount Telemetry MTMount_Dynalene_Cooling Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Telemetry MTMount_Dynalene_Cooling Topic Columns
-	[Documentation]    Validate the MTMount_Dynalene_Cooling topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_Dynalene_Cooling topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -35413,7 +35717,7 @@ Validate MTMount Telemetry MTMount_General_Purpose_Glycol_Water Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Telemetry MTMount_General_Purpose_Glycol_Water Topic Columns
-	[Documentation]    Validate the MTMount_General_Purpose_Glycol_Water topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_General_Purpose_Glycol_Water topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -35451,7 +35755,7 @@ Validate MTMount Telemetry MTMount_Safety_System Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTMount Telemetry MTMount_Safety_System Topic Columns
-	[Documentation]    Validate the MTMount_Safety_System topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTMount_Safety_System topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTMount
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -35489,7 +35793,7 @@ Validate MTPtg Command MTPtg_command_pointCloseFile Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Command MTPtg_command_pointCloseFile Topic Columns
-	[Documentation]    Validate the MTPtg_command_pointCloseFile topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_command_pointCloseFile topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -35527,7 +35831,7 @@ Validate MTPtg Command MTPtg_command_poriginAbsorb Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Command MTPtg_command_poriginAbsorb Topic Columns
-	[Documentation]    Validate the MTPtg_command_poriginAbsorb topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_command_poriginAbsorb topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -35565,7 +35869,7 @@ Validate MTPtg Command MTPtg_command_guideClear Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Command MTPtg_command_guideClear Topic Columns
-	[Documentation]    Validate the MTPtg_command_guideClear topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_command_guideClear topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -35603,7 +35907,7 @@ Validate MTPtg Command MTPtg_command_collOffset Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Command MTPtg_command_collOffset Topic Columns
-	[Documentation]    Validate the MTPtg_command_collOffset topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_command_collOffset topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -35641,7 +35945,7 @@ Validate MTPtg Command MTPtg_command_rotOffset Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Command MTPtg_command_rotOffset Topic Columns
-	[Documentation]    Validate the MTPtg_command_rotOffset topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_command_rotOffset topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -35679,7 +35983,7 @@ Validate MTPtg Command MTPtg_command_clearCollOffset Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Command MTPtg_command_clearCollOffset Topic Columns
-	[Documentation]    Validate the MTPtg_command_clearCollOffset topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_command_clearCollOffset topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -35717,7 +36021,7 @@ Validate MTPtg Command MTPtg_command_poriginXY Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Command MTPtg_command_poriginXY Topic Columns
-	[Documentation]    Validate the MTPtg_command_poriginXY topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_command_poriginXY topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -35755,7 +36059,7 @@ Validate MTPtg Command MTPtg_command_iersUpdate Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Command MTPtg_command_iersUpdate Topic Columns
-	[Documentation]    Validate the MTPtg_command_iersUpdate topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_command_iersUpdate topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -35793,7 +36097,7 @@ Validate MTPtg Command MTPtg_command_offsetRADec Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Command MTPtg_command_offsetRADec Topic Columns
-	[Documentation]    Validate the MTPtg_command_offsetRADec topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_command_offsetRADec topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -35831,7 +36135,7 @@ Validate MTPtg Command MTPtg_command_pointAddData Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Command MTPtg_command_pointAddData Topic Columns
-	[Documentation]    Validate the MTPtg_command_pointAddData topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_command_pointAddData topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -35869,7 +36173,7 @@ Validate MTPtg Command MTPtg_command_guideControl Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Command MTPtg_command_guideControl Topic Columns
-	[Documentation]    Validate the MTPtg_command_guideControl topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_command_guideControl topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -35907,7 +36211,7 @@ Validate MTPtg Command MTPtg_command_offsetAbsorb Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Command MTPtg_command_offsetAbsorb Topic Columns
-	[Documentation]    Validate the MTPtg_command_offsetAbsorb topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_command_offsetAbsorb topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -35945,7 +36249,7 @@ Validate MTPtg Command MTPtg_command_ephemTarget Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Command MTPtg_command_ephemTarget Topic Columns
-	[Documentation]    Validate the MTPtg_command_ephemTarget topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_command_ephemTarget topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -35983,7 +36287,7 @@ Validate MTPtg Command MTPtg_command_wavelength Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Command MTPtg_command_wavelength Topic Columns
-	[Documentation]    Validate the MTPtg_command_wavelength topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_command_wavelength topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -36021,7 +36325,7 @@ Validate MTPtg Command MTPtg_command_pointLoadModel Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Command MTPtg_command_pointLoadModel Topic Columns
-	[Documentation]    Validate the MTPtg_command_pointLoadModel topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_command_pointLoadModel topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -36059,7 +36363,7 @@ Validate MTPtg Command MTPtg_command_azCurrentWrap Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Command MTPtg_command_azCurrentWrap Topic Columns
-	[Documentation]    Validate the MTPtg_command_azCurrentWrap topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_command_azCurrentWrap topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -36097,7 +36401,7 @@ Validate MTPtg Command MTPtg_command_debugLevel Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Command MTPtg_command_debugLevel Topic Columns
-	[Documentation]    Validate the MTPtg_command_debugLevel topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_command_debugLevel topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -36135,7 +36439,7 @@ Validate MTPtg Command MTPtg_command_raDecTarget Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Command MTPtg_command_raDecTarget Topic Columns
-	[Documentation]    Validate the MTPtg_command_raDecTarget topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_command_raDecTarget topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -36173,7 +36477,7 @@ Validate MTPtg Command MTPtg_command_offsetPA Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Command MTPtg_command_offsetPA Topic Columns
-	[Documentation]    Validate the MTPtg_command_offsetPA topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_command_offsetPA topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -36211,7 +36515,7 @@ Validate MTPtg Command MTPtg_command_rotCurrentWrap Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Command MTPtg_command_rotCurrentWrap Topic Columns
-	[Documentation]    Validate the MTPtg_command_rotCurrentWrap topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_command_rotCurrentWrap topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -36249,7 +36553,7 @@ Validate MTPtg Command MTPtg_command_poriginOffset Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Command MTPtg_command_poriginOffset Topic Columns
-	[Documentation]    Validate the MTPtg_command_poriginOffset topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_command_poriginOffset topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -36287,7 +36591,7 @@ Validate MTPtg Command MTPtg_command_offsetClear Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Command MTPtg_command_offsetClear Topic Columns
-	[Documentation]    Validate the MTPtg_command_offsetClear topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_command_offsetClear topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -36325,7 +36629,7 @@ Validate MTPtg Command MTPtg_command_offsetAzEl Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Command MTPtg_command_offsetAzEl Topic Columns
-	[Documentation]    Validate the MTPtg_command_offsetAzEl topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_command_offsetAzEl topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -36363,7 +36667,7 @@ Validate MTPtg Command MTPtg_command_setAccessMode Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Command MTPtg_command_setAccessMode Topic Columns
-	[Documentation]    Validate the MTPtg_command_setAccessMode topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_command_setAccessMode topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -36401,7 +36705,7 @@ Validate MTPtg Command MTPtg_command_azElTarget Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Command MTPtg_command_azElTarget Topic Columns
-	[Documentation]    Validate the MTPtg_command_azElTarget topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_command_azElTarget topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -36439,7 +36743,7 @@ Validate MTPtg Command MTPtg_command_copyTarget Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Command MTPtg_command_copyTarget Topic Columns
-	[Documentation]    Validate the MTPtg_command_copyTarget topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_command_copyTarget topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -36477,7 +36781,7 @@ Validate MTPtg Command MTPtg_command_planetTarget Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Command MTPtg_command_planetTarget Topic Columns
-	[Documentation]    Validate the MTPtg_command_planetTarget topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_command_planetTarget topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -36515,7 +36819,7 @@ Validate MTPtg Command MTPtg_command_pointNewFile Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Command MTPtg_command_pointNewFile Topic Columns
-	[Documentation]    Validate the MTPtg_command_pointNewFile topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_command_pointNewFile topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -36553,7 +36857,7 @@ Validate MTPtg Command MTPtg_command_poriginClear Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Command MTPtg_command_poriginClear Topic Columns
-	[Documentation]    Validate the MTPtg_command_poriginClear topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_command_poriginClear topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -36591,7 +36895,7 @@ Validate MTPtg Command MTPtg_command_focusName Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Command MTPtg_command_focusName Topic Columns
-	[Documentation]    Validate the MTPtg_command_focusName topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_command_focusName topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -36629,7 +36933,7 @@ Validate MTPtg Command MTPtg_command_amLimitSet Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Command MTPtg_command_amLimitSet Topic Columns
-	[Documentation]    Validate the MTPtg_command_amLimitSet topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_command_amLimitSet topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -36667,7 +36971,7 @@ Validate MTPtg Command MTPtg_command_guideAutoclear Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Command MTPtg_command_guideAutoclear Topic Columns
-	[Documentation]    Validate the MTPtg_command_guideAutoclear topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_command_guideAutoclear topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -36705,7 +37009,7 @@ Validate MTPtg Command MTPtg_command_stopTracking Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Command MTPtg_command_stopTracking Topic Columns
-	[Documentation]    Validate the MTPtg_command_stopTracking topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_command_stopTracking topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -36743,7 +37047,7 @@ Validate MTPtg Event MTPtg_logevent_focusNameSelected Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Event MTPtg_logevent_focusNameSelected Topic Columns
-	[Documentation]    Validate the MTPtg_logevent_focusNameSelected topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_logevent_focusNameSelected topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -36781,7 +37085,7 @@ Validate MTPtg Event MTPtg_logevent_settingsApplied Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Event MTPtg_logevent_settingsApplied Topic Columns
-	[Documentation]    Validate the MTPtg_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -36819,7 +37123,7 @@ Validate MTPtg Event MTPtg_logevent_sunProximityWarning Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Event MTPtg_logevent_sunProximityWarning Topic Columns
-	[Documentation]    Validate the MTPtg_logevent_sunProximityWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_logevent_sunProximityWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -36857,7 +37161,7 @@ Validate MTPtg Event MTPtg_logevent_detailedState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Event MTPtg_logevent_detailedState Topic Columns
-	[Documentation]    Validate the MTPtg_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -36895,7 +37199,7 @@ Validate MTPtg Event MTPtg_logevent_mountGuideMode Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Event MTPtg_logevent_mountGuideMode Topic Columns
-	[Documentation]    Validate the MTPtg_logevent_mountGuideMode topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_logevent_mountGuideMode topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -36933,7 +37237,7 @@ Validate MTPtg Event MTPtg_logevent_azWrapWarning Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Event MTPtg_logevent_azWrapWarning Topic Columns
-	[Documentation]    Validate the MTPtg_logevent_azWrapWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_logevent_azWrapWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -36971,7 +37275,7 @@ Validate MTPtg Event MTPtg_logevent_wavelength Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Event MTPtg_logevent_wavelength Topic Columns
-	[Documentation]    Validate the MTPtg_logevent_wavelength topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_logevent_wavelength topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -37009,7 +37313,7 @@ Validate MTPtg Event MTPtg_logevent_inPositionEl Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Event MTPtg_logevent_inPositionEl Topic Columns
-	[Documentation]    Validate the MTPtg_logevent_inPositionEl topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_logevent_inPositionEl topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -37047,7 +37351,7 @@ Validate MTPtg Event MTPtg_logevent_inBlindSpot Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Event MTPtg_logevent_inBlindSpot Topic Columns
-	[Documentation]    Validate the MTPtg_logevent_inBlindSpot topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_logevent_inBlindSpot topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -37085,7 +37389,7 @@ Validate MTPtg Event MTPtg_logevent_blindSpotWarning Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Event MTPtg_logevent_blindSpotWarning Topic Columns
-	[Documentation]    Validate the MTPtg_logevent_blindSpotWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_logevent_blindSpotWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -37123,7 +37427,7 @@ Validate MTPtg Event MTPtg_logevent_axesTrackMode Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Event MTPtg_logevent_axesTrackMode Topic Columns
-	[Documentation]    Validate the MTPtg_logevent_axesTrackMode topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_logevent_axesTrackMode topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -37161,7 +37465,7 @@ Validate MTPtg Event MTPtg_logevent_objectSetWarning Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Event MTPtg_logevent_objectSetWarning Topic Columns
-	[Documentation]    Validate the MTPtg_logevent_objectSetWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_logevent_objectSetWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -37199,7 +37503,7 @@ Validate MTPtg Event MTPtg_logevent_pointingModel Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Event MTPtg_logevent_pointingModel Topic Columns
-	[Documentation]    Validate the MTPtg_logevent_pointingModel topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_logevent_pointingModel topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -37237,7 +37541,7 @@ Validate MTPtg Event MTPtg_logevent_airmassWarning Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Event MTPtg_logevent_airmassWarning Topic Columns
-	[Documentation]    Validate the MTPtg_logevent_airmassWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_logevent_airmassWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -37275,7 +37579,7 @@ Validate MTPtg Event MTPtg_logevent_weatherDataInvalid Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Event MTPtg_logevent_weatherDataInvalid Topic Columns
-	[Documentation]    Validate the MTPtg_logevent_weatherDataInvalid topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_logevent_weatherDataInvalid topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -37313,7 +37617,7 @@ Validate MTPtg Event MTPtg_logevent_focusNameInconsistentWarning Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Event MTPtg_logevent_focusNameInconsistentWarning Topic Columns
-	[Documentation]    Validate the MTPtg_logevent_focusNameInconsistentWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_logevent_focusNameInconsistentWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -37351,7 +37655,7 @@ Validate MTPtg Event MTPtg_logevent_currentTarget Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Event MTPtg_logevent_currentTarget Topic Columns
-	[Documentation]    Validate the MTPtg_logevent_currentTarget topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_logevent_currentTarget topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -37389,7 +37693,7 @@ Validate MTPtg Event MTPtg_logevent_iersOutOfDate Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Event MTPtg_logevent_iersOutOfDate Topic Columns
-	[Documentation]    Validate the MTPtg_logevent_iersOutOfDate topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_logevent_iersOutOfDate topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -37427,7 +37731,7 @@ Validate MTPtg Event MTPtg_logevent_weatherDataApplied Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Event MTPtg_logevent_weatherDataApplied Topic Columns
-	[Documentation]    Validate the MTPtg_logevent_weatherDataApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_logevent_weatherDataApplied topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -37465,7 +37769,7 @@ Validate MTPtg Event MTPtg_logevent_currentDebugLevel Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Event MTPtg_logevent_currentDebugLevel Topic Columns
-	[Documentation]    Validate the MTPtg_logevent_currentDebugLevel topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_logevent_currentDebugLevel topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -37503,7 +37807,7 @@ Validate MTPtg Event MTPtg_logevent_nextTarget Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Event MTPtg_logevent_nextTarget Topic Columns
-	[Documentation]    Validate the MTPtg_logevent_nextTarget topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_logevent_nextTarget topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -37541,7 +37845,7 @@ Validate MTPtg Event MTPtg_logevent_mountDataWarning Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Event MTPtg_logevent_mountDataWarning Topic Columns
-	[Documentation]    Validate the MTPtg_logevent_mountDataWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_logevent_mountDataWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -37579,7 +37883,7 @@ Validate MTPtg Event MTPtg_logevent_accessMode Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Event MTPtg_logevent_accessMode Topic Columns
-	[Documentation]    Validate the MTPtg_logevent_accessMode topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_logevent_accessMode topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -37617,7 +37921,7 @@ Validate MTPtg Event MTPtg_logevent_rotWrapWarning Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Event MTPtg_logevent_rotWrapWarning Topic Columns
-	[Documentation]    Validate the MTPtg_logevent_rotWrapWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_logevent_rotWrapWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -37655,7 +37959,7 @@ Validate MTPtg Event MTPtg_logevent_inPosition Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Event MTPtg_logevent_inPosition Topic Columns
-	[Documentation]    Validate the MTPtg_logevent_inPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_logevent_inPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -37693,7 +37997,7 @@ Validate MTPtg Event MTPtg_logevent_inPositionRot Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Event MTPtg_logevent_inPositionRot Topic Columns
-	[Documentation]    Validate the MTPtg_logevent_inPositionRot topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_logevent_inPositionRot topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -37731,7 +38035,7 @@ Validate MTPtg Event MTPtg_logevent_inPositionAz Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Event MTPtg_logevent_inPositionAz Topic Columns
-	[Documentation]    Validate the MTPtg_logevent_inPositionAz topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_logevent_inPositionAz topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -37769,7 +38073,7 @@ Validate MTPtg Event MTPtg_logevent_iers Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Event MTPtg_logevent_iers Topic Columns
-	[Documentation]    Validate the MTPtg_logevent_iers topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_logevent_iers topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -37807,7 +38111,7 @@ Validate MTPtg Event MTPtg_logevent_prospectiveTarget Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Event MTPtg_logevent_prospectiveTarget Topic Columns
-	[Documentation]    Validate the MTPtg_logevent_prospectiveTarget topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_logevent_prospectiveTarget topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -37845,7 +38149,7 @@ Validate MTPtg Event MTPtg_logevent_moonProximityWarning Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Event MTPtg_logevent_moonProximityWarning Topic Columns
-	[Documentation]    Validate the MTPtg_logevent_moonProximityWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_logevent_moonProximityWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -37883,7 +38187,7 @@ Validate MTPtg Event MTPtg_logevent_trackPosting Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Event MTPtg_logevent_trackPosting Topic Columns
-	[Documentation]    Validate the MTPtg_logevent_trackPosting topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_logevent_trackPosting topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -37921,7 +38225,7 @@ Validate MTPtg Event MTPtg_logevent_ptgAzCurrentWrap Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Event MTPtg_logevent_ptgAzCurrentWrap Topic Columns
-	[Documentation]    Validate the MTPtg_logevent_ptgAzCurrentWrap topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_logevent_ptgAzCurrentWrap topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -37959,7 +38263,7 @@ Validate MTPtg Event MTPtg_logevent_ptgRotCurrentWrap Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Event MTPtg_logevent_ptgRotCurrentWrap Topic Columns
-	[Documentation]    Validate the MTPtg_logevent_ptgRotCurrentWrap topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_logevent_ptgRotCurrentWrap topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -37997,7 +38301,7 @@ Validate MTPtg Telemetry MTPtg_prospectiveTargetStatus Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Telemetry MTPtg_prospectiveTargetStatus Topic Columns
-	[Documentation]    Validate the MTPtg_prospectiveTargetStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_prospectiveTargetStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -38035,7 +38339,7 @@ Validate MTPtg Telemetry MTPtg_nextTargetStatus Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Telemetry MTPtg_nextTargetStatus Topic Columns
-	[Documentation]    Validate the MTPtg_nextTargetStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_nextTargetStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -38073,7 +38377,7 @@ Validate MTPtg Telemetry MTPtg_currentTimesToLimits Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Telemetry MTPtg_currentTimesToLimits Topic Columns
-	[Documentation]    Validate the MTPtg_currentTimesToLimits topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_currentTimesToLimits topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -38111,7 +38415,7 @@ Validate MTPtg Telemetry MTPtg_currentTargetStatus Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Telemetry MTPtg_currentTargetStatus Topic Columns
-	[Documentation]    Validate the MTPtg_currentTargetStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_currentTargetStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -38149,7 +38453,7 @@ Validate MTPtg Telemetry MTPtg_guidingAndOffsets Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Telemetry MTPtg_guidingAndOffsets Topic Columns
-	[Documentation]    Validate the MTPtg_guidingAndOffsets topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_guidingAndOffsets topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -38187,7 +38491,7 @@ Validate MTPtg Telemetry MTPtg_prospectiveTimesToLimits Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Telemetry MTPtg_prospectiveTimesToLimits Topic Columns
-	[Documentation]    Validate the MTPtg_prospectiveTimesToLimits topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_prospectiveTimesToLimits topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -38225,7 +38529,7 @@ Validate MTPtg Telemetry MTPtg_timeAndDate Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Telemetry MTPtg_timeAndDate Topic Columns
-	[Documentation]    Validate the MTPtg_timeAndDate topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_timeAndDate topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -38263,7 +38567,7 @@ Validate MTPtg Telemetry MTPtg_mountStatus Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Telemetry MTPtg_mountStatus Topic Columns
-	[Documentation]    Validate the MTPtg_mountStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_mountStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -38301,7 +38605,7 @@ Validate MTPtg Telemetry MTPtg_nextTimesToLimits Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTPtg Telemetry MTPtg_nextTimesToLimits Topic Columns
-	[Documentation]    Validate the MTPtg_nextTimesToLimits topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTPtg_nextTimesToLimits topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTPtg
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -38339,7 +38643,7 @@ Validate MTTCS Command MTTCS_command_wfpCalculate Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTTCS Command MTTCS_command_wfpCalculate Topic Columns
-	[Documentation]    Validate the MTTCS_command_wfpCalculate topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTTCS_command_wfpCalculate topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -38377,7 +38681,7 @@ Validate MTTCS Command MTTCS_command_wfpSimulate Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTTCS Command MTTCS_command_wfpSimulate Topic Columns
-	[Documentation]    Validate the MTTCS_command_wfpSimulate topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTTCS_command_wfpSimulate topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -38415,7 +38719,7 @@ Validate MTTCS Command MTTCS_command_filterChangeRequest Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTTCS Command MTTCS_command_filterChangeRequest Topic Columns
-	[Documentation]    Validate the MTTCS_command_filterChangeRequest topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTTCS_command_filterChangeRequest topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -38453,7 +38757,7 @@ Validate MTTCS Command MTTCS_command_stopMotion Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTTCS Command MTTCS_command_stopMotion Topic Columns
-	[Documentation]    Validate the MTTCS_command_stopMotion topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTTCS_command_stopMotion topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -38491,7 +38795,7 @@ Validate MTTCS Command MTTCS_command_target Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTTCS Command MTTCS_command_target Topic Columns
-	[Documentation]    Validate the MTTCS_command_target topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTTCS_command_target topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -38529,7 +38833,7 @@ Validate MTTCS Event MTTCS_logevent_wfpDataReady Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTTCS Event MTTCS_logevent_wfpDataReady Topic Columns
-	[Documentation]    Validate the MTTCS_logevent_wfpDataReady topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTTCS_logevent_wfpDataReady topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -38567,7 +38871,7 @@ Validate MTTCS Event MTTCS_logevent_zemaxError Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTTCS Event MTTCS_logevent_zemaxError Topic Columns
-	[Documentation]    Validate the MTTCS_logevent_zemaxError topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTTCS_logevent_zemaxError topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -38605,7 +38909,7 @@ Validate MTTCS Event MTTCS_logevent_internalCommand Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTTCS Event MTTCS_logevent_internalCommand Topic Columns
-	[Documentation]    Validate the MTTCS_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTTCS_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -38643,7 +38947,7 @@ Validate MTTCS Event MTTCS_logevent_detailedState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTTCS Event MTTCS_logevent_detailedState Topic Columns
-	[Documentation]    Validate the MTTCS_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTTCS_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -38681,7 +38985,7 @@ Validate MTTCS Event MTTCS_logevent_heartbeat Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTTCS Event MTTCS_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the MTTCS_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTTCS_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -38719,7 +39023,7 @@ Validate MTTCS Event MTTCS_logevent_loopTimeOutOfRange Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTTCS Event MTTCS_logevent_loopTimeOutOfRange Topic Columns
-	[Documentation]    Validate the MTTCS_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTTCS_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -38757,7 +39061,7 @@ Validate MTTCS Event MTTCS_logevent_rejectedCommand Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTTCS Event MTTCS_logevent_rejectedCommand Topic Columns
-	[Documentation]    Validate the MTTCS_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTTCS_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -38795,7 +39099,7 @@ Validate MTTCS Event MTTCS_logevent_heartbeatIn Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTTCS Event MTTCS_logevent_heartbeatIn Topic Columns
-	[Documentation]    Validate the MTTCS_logevent_heartbeatIn topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTTCS_logevent_heartbeatIn topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -38833,7 +39137,7 @@ Validate MTTCS Event MTTCS_logevent_filterChangeInPosition Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTTCS Event MTTCS_logevent_filterChangeInPosition Topic Columns
-	[Documentation]    Validate the MTTCS_logevent_filterChangeInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTTCS_logevent_filterChangeInPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -38871,7 +39175,7 @@ Validate MTTCS Event MTTCS_logevent_targetInPosition Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTTCS Event MTTCS_logevent_targetInPosition Topic Columns
-	[Documentation]    Validate the MTTCS_logevent_targetInPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTTCS_logevent_targetInPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -38909,7 +39213,7 @@ Validate MTTCS Event MTTCS_logevent_settingsApplied Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTTCS Event MTTCS_logevent_settingsApplied Topic Columns
-	[Documentation]    Validate the MTTCS_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTTCS_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -38947,7 +39251,7 @@ Validate MTTCS Telemetry MTTCS_kernelPointingModel Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTTCS Telemetry MTTCS_kernelPointingModel Topic Columns
-	[Documentation]    Validate the MTTCS_kernelPointingModel topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTTCS_kernelPointingModel topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -38985,7 +39289,7 @@ Validate MTTCS Telemetry MTTCS_aOCS Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTTCS Telemetry MTTCS_aOCS Topic Columns
-	[Documentation]    Validate the MTTCS_aOCS topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTTCS_aOCS topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -39023,7 +39327,7 @@ Validate MTTCS Telemetry MTTCS_kernelTimeKeeper Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTTCS Telemetry MTTCS_kernelTimeKeeper Topic Columns
-	[Documentation]    Validate the MTTCS_kernelTimeKeeper topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTTCS_kernelTimeKeeper topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -39061,7 +39365,7 @@ Validate MTTCS Telemetry MTTCS_kernelSite Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTTCS Telemetry MTTCS_kernelSite Topic Columns
-	[Documentation]    Validate the MTTCS_kernelSite topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTTCS_kernelSite topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -39099,7 +39403,7 @@ Validate MTTCS Telemetry MTTCS_kernelTarget Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTTCS Telemetry MTTCS_kernelTarget Topic Columns
-	[Documentation]    Validate the MTTCS_kernelTarget topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTTCS_kernelTarget topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -39137,7 +39441,7 @@ Validate MTTCS Telemetry MTTCS_kernelPointingControl Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTTCS Telemetry MTTCS_kernelPointingControl Topic Columns
-	[Documentation]    Validate the MTTCS_kernelPointingControl topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTTCS_kernelPointingControl topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -39175,7 +39479,7 @@ Validate MTTCS Telemetry MTTCS_kernelTrackRefSys Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTTCS Telemetry MTTCS_kernelTrackRefSys Topic Columns
-	[Documentation]    Validate the MTTCS_kernelTrackRefSys topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTTCS_kernelTrackRefSys topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -39213,7 +39517,7 @@ Validate MTTCS Telemetry MTTCS_zEMAX Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTTCS Telemetry MTTCS_zEMAX Topic Columns
-	[Documentation]    Validate the MTTCS_zEMAX topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTTCS_zEMAX topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -39251,7 +39555,7 @@ Validate MTTCS Telemetry MTTCS_kernelPointingLog Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTTCS Telemetry MTTCS_kernelPointingLog Topic Columns
-	[Documentation]    Validate the MTTCS_kernelPointingLog topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTTCS_kernelPointingLog topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -39289,7 +39593,7 @@ Validate MTTCS Telemetry MTTCS_kernelDawdleFilter Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTTCS Telemetry MTTCS_kernelDawdleFilter Topic Columns
-	[Documentation]    Validate the MTTCS_kernelDawdleFilter topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTTCS_kernelDawdleFilter topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -39327,7 +39631,7 @@ Validate MTTCS Telemetry MTTCS_kernelOpticsVt Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTTCS Telemetry MTTCS_kernelOpticsVt Topic Columns
-	[Documentation]    Validate the MTTCS_kernelOpticsVt topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTTCS_kernelOpticsVt topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -39365,7 +39669,7 @@ Validate MTTCS Telemetry MTTCS_wEP Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTTCS Telemetry MTTCS_wEP Topic Columns
-	[Documentation]    Validate the MTTCS_wEP topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTTCS_wEP topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -39403,7 +39707,7 @@ Validate MTTCS Telemetry MTTCS_kernelTrackingTarget Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTTCS Telemetry MTTCS_kernelTrackingTarget Topic Columns
-	[Documentation]    Validate the MTTCS_kernelTrackingTarget topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTTCS_kernelTrackingTarget topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -39441,7 +39745,7 @@ Validate MTTCS Telemetry MTTCS_kernelFK5Target Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTTCS Telemetry MTTCS_kernelFK5Target Topic Columns
-	[Documentation]    Validate the MTTCS_kernelFK5Target topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTTCS_kernelFK5Target topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -39479,7 +39783,7 @@ Validate MTTCS Telemetry MTTCS_loopTime Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTTCS Telemetry MTTCS_loopTime Topic Columns
-	[Documentation]    Validate the MTTCS_loopTime topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTTCS_loopTime topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -39517,7 +39821,7 @@ Validate MTTCS Telemetry MTTCS_timestamp Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTTCS Telemetry MTTCS_timestamp Topic Columns
-	[Documentation]    Validate the MTTCS_timestamp topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTTCS_timestamp topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -39555,7 +39859,7 @@ Validate MTVMS Command MTVMS_command_shutdown Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTVMS Command MTVMS_command_shutdown Topic Columns
-	[Documentation]    Validate the MTVMS_command_shutdown topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTVMS_command_shutdown topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTVMS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -39593,7 +39897,7 @@ Validate MTVMS Event MTVMS_logevent_settingsApplied Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTVMS Event MTVMS_logevent_settingsApplied Topic Columns
-	[Documentation]    Validate the MTVMS_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTVMS_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTVMS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -39631,7 +39935,7 @@ Validate MTVMS Event MTVMS_logevent_acquisitionRate Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTVMS Event MTVMS_logevent_acquisitionRate Topic Columns
-	[Documentation]    Validate the MTVMS_logevent_acquisitionRate topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTVMS_logevent_acquisitionRate topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTVMS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -39669,7 +39973,7 @@ Validate MTVMS Telemetry MTVMS_M1M3 Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTVMS Telemetry MTVMS_M1M3 Topic Columns
-	[Documentation]    Validate the MTVMS_M1M3 topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTVMS_M1M3 topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTVMS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -39707,7 +40011,7 @@ Validate MTVMS Telemetry MTVMS_TMA Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTVMS Telemetry MTVMS_TMA Topic Columns
-	[Documentation]    Validate the MTVMS_TMA topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTVMS_TMA topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTVMS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -39745,7 +40049,7 @@ Validate MTVMS Telemetry MTVMS_M2 Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTVMS Telemetry MTVMS_M2 Topic Columns
-	[Documentation]    Validate the MTVMS_M2 topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTVMS_M2 topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTVMS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -39783,7 +40087,7 @@ Validate MTVMS Telemetry MTVMS_cameraRotator Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate MTVMS Telemetry MTVMS_cameraRotator Topic Columns
-	[Documentation]    Validate the MTVMS_cameraRotator topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the MTVMS_cameraRotator topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTVMS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -39821,7 +40125,7 @@ Validate OCS Command OCS_command_sequence Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate OCS Command OCS_command_sequence Topic Columns
-	[Documentation]    Validate the OCS_command_sequence topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the OCS_command_sequence topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    OCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -39859,7 +40163,7 @@ Validate OCS Command OCS_command_script Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate OCS Command OCS_command_script Topic Columns
-	[Documentation]    Validate the OCS_command_script topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the OCS_command_script topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    OCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -39897,7 +40201,7 @@ Validate OCS Event OCS_logevent_oCSEntitySummaryState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate OCS Event OCS_logevent_oCSEntitySummaryState Topic Columns
-	[Documentation]    Validate the OCS_logevent_oCSEntitySummaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the OCS_logevent_oCSEntitySummaryState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    OCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -39935,7 +40239,7 @@ Validate OCS Event OCS_logevent_oCSEntityStartup Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate OCS Event OCS_logevent_oCSEntityStartup Topic Columns
-	[Documentation]    Validate the OCS_logevent_oCSEntityStartup topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the OCS_logevent_oCSEntityStartup topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    OCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -39973,7 +40277,7 @@ Validate OCS Event OCS_logevent_oCSEntityShutdown Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate OCS Event OCS_logevent_oCSEntityShutdown Topic Columns
-	[Documentation]    Validate the OCS_logevent_oCSEntityShutdown topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the OCS_logevent_oCSEntityShutdown topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    OCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40011,7 +40315,7 @@ Validate OCS Event OCS_logevent_oCSCommandIssued Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate OCS Event OCS_logevent_oCSCommandIssued Topic Columns
-	[Documentation]    Validate the OCS_logevent_oCSCommandIssued topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the OCS_logevent_oCSCommandIssued topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    OCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40049,7 +40353,7 @@ Validate OCS Event OCS_logevent_oCSCommandStatus Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate OCS Event OCS_logevent_oCSCommandStatus Topic Columns
-	[Documentation]    Validate the OCS_logevent_oCSCommandStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the OCS_logevent_oCSCommandStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    OCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40087,7 +40391,7 @@ Validate OCS Event OCS_logevent_oCSCurrentScript Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate OCS Event OCS_logevent_oCSCurrentScript Topic Columns
-	[Documentation]    Validate the OCS_logevent_oCSCurrentScript topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the OCS_logevent_oCSCurrentScript topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    OCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40125,7 +40429,7 @@ Validate OCS Event OCS_logevent_oCSNextScript Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate OCS Event OCS_logevent_oCSNextScript Topic Columns
-	[Documentation]    Validate the OCS_logevent_oCSNextScript topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the OCS_logevent_oCSNextScript topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    OCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40163,7 +40467,7 @@ Validate OCS Event OCS_logevent_oCSScriptStart Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate OCS Event OCS_logevent_oCSScriptStart Topic Columns
-	[Documentation]    Validate the OCS_logevent_oCSScriptStart topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the OCS_logevent_oCSScriptStart topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    OCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40201,7 +40505,7 @@ Validate OCS Event OCS_logevent_oCSScriptEnd Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate OCS Event OCS_logevent_oCSScriptEnd Topic Columns
-	[Documentation]    Validate the OCS_logevent_oCSScriptEnd topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the OCS_logevent_oCSScriptEnd topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    OCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40239,7 +40543,7 @@ Validate OCS Event OCS_logevent_oCSScriptError Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate OCS Event OCS_logevent_oCSScriptError Topic Columns
-	[Documentation]    Validate the OCS_logevent_oCSScriptError topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the OCS_logevent_oCSScriptError topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    OCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40277,7 +40581,7 @@ Validate OCS Event OCS_logevent_oCSScriptEntititesInUse Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate OCS Event OCS_logevent_oCSScriptEntititesInUse Topic Columns
-	[Documentation]    Validate the OCS_logevent_oCSScriptEntititesInUse topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the OCS_logevent_oCSScriptEntititesInUse topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    OCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40315,7 +40619,7 @@ Validate OCS Telemetry OCS_sequencerHeartbeat Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate OCS Telemetry OCS_sequencerHeartbeat Topic Columns
-	[Documentation]    Validate the OCS_sequencerHeartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the OCS_sequencerHeartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    OCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40353,7 +40657,7 @@ Validate PointingComponent Command PointingComponent_command_pointCloseFile Topi
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Command PointingComponent_command_pointCloseFile Topic Columns
-	[Documentation]    Validate the PointingComponent_command_pointCloseFile topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_command_pointCloseFile topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40391,7 +40695,7 @@ Validate PointingComponent Command PointingComponent_command_poriginAbsorb Topic
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Command PointingComponent_command_poriginAbsorb Topic Columns
-	[Documentation]    Validate the PointingComponent_command_poriginAbsorb topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_command_poriginAbsorb topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40429,7 +40733,7 @@ Validate PointingComponent Command PointingComponent_command_guideClear Topic By
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Command PointingComponent_command_guideClear Topic Columns
-	[Documentation]    Validate the PointingComponent_command_guideClear topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_command_guideClear topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40467,7 +40771,7 @@ Validate PointingComponent Command PointingComponent_command_collOffset Topic By
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Command PointingComponent_command_collOffset Topic Columns
-	[Documentation]    Validate the PointingComponent_command_collOffset topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_command_collOffset topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40505,7 +40809,7 @@ Validate PointingComponent Command PointingComponent_command_rotOffset Topic Byt
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Command PointingComponent_command_rotOffset Topic Columns
-	[Documentation]    Validate the PointingComponent_command_rotOffset topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_command_rotOffset topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40543,7 +40847,7 @@ Validate PointingComponent Command PointingComponent_command_clearCollOffset Top
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Command PointingComponent_command_clearCollOffset Topic Columns
-	[Documentation]    Validate the PointingComponent_command_clearCollOffset topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_command_clearCollOffset topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40581,7 +40885,7 @@ Validate PointingComponent Command PointingComponent_command_poriginXY Topic Byt
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Command PointingComponent_command_poriginXY Topic Columns
-	[Documentation]    Validate the PointingComponent_command_poriginXY topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_command_poriginXY topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40619,7 +40923,7 @@ Validate PointingComponent Command PointingComponent_command_iersUpdate Topic By
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Command PointingComponent_command_iersUpdate Topic Columns
-	[Documentation]    Validate the PointingComponent_command_iersUpdate topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_command_iersUpdate topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40657,7 +40961,7 @@ Validate PointingComponent Command PointingComponent_command_stop Topic Byte Siz
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Command PointingComponent_command_stop Topic Columns
-	[Documentation]    Validate the PointingComponent_command_stop topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_command_stop topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40695,7 +40999,7 @@ Validate PointingComponent Command PointingComponent_command_offsetRADec Topic B
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Command PointingComponent_command_offsetRADec Topic Columns
-	[Documentation]    Validate the PointingComponent_command_offsetRADec topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_command_offsetRADec topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40733,7 +41037,7 @@ Validate PointingComponent Command PointingComponent_command_pointAddData Topic 
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Command PointingComponent_command_pointAddData Topic Columns
-	[Documentation]    Validate the PointingComponent_command_pointAddData topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_command_pointAddData topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40771,7 +41075,7 @@ Validate PointingComponent Command PointingComponent_command_guideControl Topic 
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Command PointingComponent_command_guideControl Topic Columns
-	[Documentation]    Validate the PointingComponent_command_guideControl topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_command_guideControl topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40809,7 +41113,7 @@ Validate PointingComponent Command PointingComponent_command_offsetAbsorb Topic 
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Command PointingComponent_command_offsetAbsorb Topic Columns
-	[Documentation]    Validate the PointingComponent_command_offsetAbsorb topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_command_offsetAbsorb topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40847,7 +41151,7 @@ Validate PointingComponent Command PointingComponent_command_ephemTarget Topic B
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Command PointingComponent_command_ephemTarget Topic Columns
-	[Documentation]    Validate the PointingComponent_command_ephemTarget topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_command_ephemTarget topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40885,7 +41189,7 @@ Validate PointingComponent Command PointingComponent_command_wavelength Topic By
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Command PointingComponent_command_wavelength Topic Columns
-	[Documentation]    Validate the PointingComponent_command_wavelength topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_command_wavelength topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40923,7 +41227,7 @@ Validate PointingComponent Command PointingComponent_command_pointLoadModel Topi
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Command PointingComponent_command_pointLoadModel Topic Columns
-	[Documentation]    Validate the PointingComponent_command_pointLoadModel topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_command_pointLoadModel topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40961,7 +41265,7 @@ Validate PointingComponent Command PointingComponent_command_azCurrentWrap Topic
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Command PointingComponent_command_azCurrentWrap Topic Columns
-	[Documentation]    Validate the PointingComponent_command_azCurrentWrap topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_command_azCurrentWrap topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40999,7 +41303,7 @@ Validate PointingComponent Command PointingComponent_command_debugLevel Topic By
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Command PointingComponent_command_debugLevel Topic Columns
-	[Documentation]    Validate the PointingComponent_command_debugLevel topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_command_debugLevel topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41037,7 +41341,7 @@ Validate PointingComponent Command PointingComponent_command_raDecTarget Topic B
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Command PointingComponent_command_raDecTarget Topic Columns
-	[Documentation]    Validate the PointingComponent_command_raDecTarget topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_command_raDecTarget topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41075,7 +41379,7 @@ Validate PointingComponent Command PointingComponent_command_offsetPA Topic Byte
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Command PointingComponent_command_offsetPA Topic Columns
-	[Documentation]    Validate the PointingComponent_command_offsetPA topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_command_offsetPA topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41113,7 +41417,7 @@ Validate PointingComponent Command PointingComponent_command_rotCurrentWrap Topi
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Command PointingComponent_command_rotCurrentWrap Topic Columns
-	[Documentation]    Validate the PointingComponent_command_rotCurrentWrap topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_command_rotCurrentWrap topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41151,7 +41455,7 @@ Validate PointingComponent Command PointingComponent_command_poriginOffset Topic
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Command PointingComponent_command_poriginOffset Topic Columns
-	[Documentation]    Validate the PointingComponent_command_poriginOffset topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_command_poriginOffset topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41189,7 +41493,7 @@ Validate PointingComponent Command PointingComponent_command_offsetClear Topic B
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Command PointingComponent_command_offsetClear Topic Columns
-	[Documentation]    Validate the PointingComponent_command_offsetClear topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_command_offsetClear topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41227,7 +41531,7 @@ Validate PointingComponent Command PointingComponent_command_offsetAzEl Topic By
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Command PointingComponent_command_offsetAzEl Topic Columns
-	[Documentation]    Validate the PointingComponent_command_offsetAzEl topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_command_offsetAzEl topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41265,7 +41569,7 @@ Validate PointingComponent Command PointingComponent_command_setAccessMode Topic
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Command PointingComponent_command_setAccessMode Topic Columns
-	[Documentation]    Validate the PointingComponent_command_setAccessMode topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_command_setAccessMode topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41303,7 +41607,7 @@ Validate PointingComponent Command PointingComponent_command_azElTarget Topic By
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Command PointingComponent_command_azElTarget Topic Columns
-	[Documentation]    Validate the PointingComponent_command_azElTarget topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_command_azElTarget topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41341,7 +41645,7 @@ Validate PointingComponent Command PointingComponent_command_copyTarget Topic By
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Command PointingComponent_command_copyTarget Topic Columns
-	[Documentation]    Validate the PointingComponent_command_copyTarget topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_command_copyTarget topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41379,7 +41683,7 @@ Validate PointingComponent Command PointingComponent_command_planetTarget Topic 
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Command PointingComponent_command_planetTarget Topic Columns
-	[Documentation]    Validate the PointingComponent_command_planetTarget topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_command_planetTarget topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41417,7 +41721,7 @@ Validate PointingComponent Command PointingComponent_command_pointNewFile Topic 
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Command PointingComponent_command_pointNewFile Topic Columns
-	[Documentation]    Validate the PointingComponent_command_pointNewFile topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_command_pointNewFile topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41455,7 +41759,7 @@ Validate PointingComponent Command PointingComponent_command_poriginClear Topic 
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Command PointingComponent_command_poriginClear Topic Columns
-	[Documentation]    Validate the PointingComponent_command_poriginClear topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_command_poriginClear topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41493,7 +41797,7 @@ Validate PointingComponent Command PointingComponent_command_focusName Topic Byt
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Command PointingComponent_command_focusName Topic Columns
-	[Documentation]    Validate the PointingComponent_command_focusName topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_command_focusName topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41531,7 +41835,7 @@ Validate PointingComponent Command PointingComponent_command_amLimitSet Topic By
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Command PointingComponent_command_amLimitSet Topic Columns
-	[Documentation]    Validate the PointingComponent_command_amLimitSet topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_command_amLimitSet topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41569,7 +41873,7 @@ Validate PointingComponent Command PointingComponent_command_guideAutoclear Topi
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Command PointingComponent_command_guideAutoclear Topic Columns
-	[Documentation]    Validate the PointingComponent_command_guideAutoclear topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_command_guideAutoclear topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41607,7 +41911,7 @@ Validate PointingComponent Event PointingComponent_logevent_focusNameSelected To
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Event PointingComponent_logevent_focusNameSelected Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_focusNameSelected topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_logevent_focusNameSelected topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41645,7 +41949,7 @@ Validate PointingComponent Event PointingComponent_logevent_settingsApplied Topi
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Event PointingComponent_logevent_settingsApplied Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41683,7 +41987,7 @@ Validate PointingComponent Event PointingComponent_logevent_sunProximityWarning 
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Event PointingComponent_logevent_sunProximityWarning Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_sunProximityWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_logevent_sunProximityWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41721,7 +42025,7 @@ Validate PointingComponent Event PointingComponent_logevent_detailedState Topic 
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Event PointingComponent_logevent_detailedState Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41759,7 +42063,7 @@ Validate PointingComponent Event PointingComponent_logevent_mountGuideMode Topic
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Event PointingComponent_logevent_mountGuideMode Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_mountGuideMode topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_logevent_mountGuideMode topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41797,7 +42101,7 @@ Validate PointingComponent Event PointingComponent_logevent_azWrapWarning Topic 
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Event PointingComponent_logevent_azWrapWarning Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_azWrapWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_logevent_azWrapWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41835,7 +42139,7 @@ Validate PointingComponent Event PointingComponent_logevent_wavelength Topic Byt
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Event PointingComponent_logevent_wavelength Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_wavelength topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_logevent_wavelength topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41873,7 +42177,7 @@ Validate PointingComponent Event PointingComponent_logevent_inPositionEl Topic B
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Event PointingComponent_logevent_inPositionEl Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_inPositionEl topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_logevent_inPositionEl topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41911,7 +42215,7 @@ Validate PointingComponent Event PointingComponent_logevent_inBlindSpot Topic By
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Event PointingComponent_logevent_inBlindSpot Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_inBlindSpot topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_logevent_inBlindSpot topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41949,7 +42253,7 @@ Validate PointingComponent Event PointingComponent_logevent_blindSpotWarning Top
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Event PointingComponent_logevent_blindSpotWarning Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_blindSpotWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_logevent_blindSpotWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41987,7 +42291,7 @@ Validate PointingComponent Event PointingComponent_logevent_axesTrackMode Topic 
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Event PointingComponent_logevent_axesTrackMode Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_axesTrackMode topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_logevent_axesTrackMode topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -42025,7 +42329,7 @@ Validate PointingComponent Event PointingComponent_logevent_objectSetWarning Top
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Event PointingComponent_logevent_objectSetWarning Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_objectSetWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_logevent_objectSetWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -42063,7 +42367,7 @@ Validate PointingComponent Event PointingComponent_logevent_pointingModel Topic 
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Event PointingComponent_logevent_pointingModel Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_pointingModel topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_logevent_pointingModel topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -42101,7 +42405,7 @@ Validate PointingComponent Event PointingComponent_logevent_airmassWarning Topic
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Event PointingComponent_logevent_airmassWarning Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_airmassWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_logevent_airmassWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -42139,7 +42443,7 @@ Validate PointingComponent Event PointingComponent_logevent_weatherDataInvalid T
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Event PointingComponent_logevent_weatherDataInvalid Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_weatherDataInvalid topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_logevent_weatherDataInvalid topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -42177,7 +42481,7 @@ Validate PointingComponent Event PointingComponent_logevent_focusNameInconsisten
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Event PointingComponent_logevent_focusNameInconsistentWarning Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_focusNameInconsistentWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_logevent_focusNameInconsistentWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -42215,7 +42519,7 @@ Validate PointingComponent Event PointingComponent_logevent_currentTarget Topic 
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Event PointingComponent_logevent_currentTarget Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_currentTarget topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_logevent_currentTarget topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -42253,7 +42557,7 @@ Validate PointingComponent Event PointingComponent_logevent_azWrapAlarm Topic By
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Event PointingComponent_logevent_azWrapAlarm Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_azWrapAlarm topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_logevent_azWrapAlarm topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -42291,7 +42595,7 @@ Validate PointingComponent Event PointingComponent_logevent_iersOutOfDate Topic 
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Event PointingComponent_logevent_iersOutOfDate Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_iersOutOfDate topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_logevent_iersOutOfDate topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -42329,7 +42633,7 @@ Validate PointingComponent Event PointingComponent_logevent_weatherDataApplied T
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Event PointingComponent_logevent_weatherDataApplied Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_weatherDataApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_logevent_weatherDataApplied topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -42367,7 +42671,7 @@ Validate PointingComponent Event PointingComponent_logevent_currentDebugLevel To
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Event PointingComponent_logevent_currentDebugLevel Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_currentDebugLevel topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_logevent_currentDebugLevel topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -42405,7 +42709,7 @@ Validate PointingComponent Event PointingComponent_logevent_nextTarget Topic Byt
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Event PointingComponent_logevent_nextTarget Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_nextTarget topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_logevent_nextTarget topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -42443,7 +42747,7 @@ Validate PointingComponent Event PointingComponent_logevent_mountDataWarning Top
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Event PointingComponent_logevent_mountDataWarning Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_mountDataWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_logevent_mountDataWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -42481,7 +42785,7 @@ Validate PointingComponent Event PointingComponent_logevent_accessMode Topic Byt
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Event PointingComponent_logevent_accessMode Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_accessMode topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_logevent_accessMode topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -42519,7 +42823,7 @@ Validate PointingComponent Event PointingComponent_logevent_rotWrapWarning Topic
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Event PointingComponent_logevent_rotWrapWarning Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_rotWrapWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_logevent_rotWrapWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -42557,7 +42861,7 @@ Validate PointingComponent Event PointingComponent_logevent_inPosition Topic Byt
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Event PointingComponent_logevent_inPosition Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_inPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_logevent_inPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -42595,7 +42899,7 @@ Validate PointingComponent Event PointingComponent_logevent_inPositionRot Topic 
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Event PointingComponent_logevent_inPositionRot Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_inPositionRot topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_logevent_inPositionRot topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -42633,7 +42937,7 @@ Validate PointingComponent Event PointingComponent_logevent_inPositionAz Topic B
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Event PointingComponent_logevent_inPositionAz Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_inPositionAz topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_logevent_inPositionAz topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -42671,7 +42975,7 @@ Validate PointingComponent Event PointingComponent_logevent_iers Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Event PointingComponent_logevent_iers Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_iers topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_logevent_iers topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -42709,7 +43013,7 @@ Validate PointingComponent Event PointingComponent_logevent_prospectiveTarget To
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Event PointingComponent_logevent_prospectiveTarget Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_prospectiveTarget topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_logevent_prospectiveTarget topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -42747,7 +43051,7 @@ Validate PointingComponent Event PointingComponent_logevent_moonProximityWarning
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Event PointingComponent_logevent_moonProximityWarning Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_moonProximityWarning topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_logevent_moonProximityWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -42785,7 +43089,7 @@ Validate PointingComponent Telemetry PointingComponent_prospectiveTargetStatus T
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Telemetry PointingComponent_prospectiveTargetStatus Topic Columns
-	[Documentation]    Validate the PointingComponent_prospectiveTargetStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_prospectiveTargetStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -42823,7 +43127,7 @@ Validate PointingComponent Telemetry PointingComponent_currentTimesToLimits Topi
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Telemetry PointingComponent_currentTimesToLimits Topic Columns
-	[Documentation]    Validate the PointingComponent_currentTimesToLimits topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_currentTimesToLimits topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -42861,7 +43165,7 @@ Validate PointingComponent Telemetry PointingComponent_currentTargetStatus Topic
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Telemetry PointingComponent_currentTargetStatus Topic Columns
-	[Documentation]    Validate the PointingComponent_currentTargetStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_currentTargetStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -42899,7 +43203,7 @@ Validate PointingComponent Telemetry PointingComponent_guidingAndOffsets Topic B
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Telemetry PointingComponent_guidingAndOffsets Topic Columns
-	[Documentation]    Validate the PointingComponent_guidingAndOffsets topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_guidingAndOffsets topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -42937,7 +43241,7 @@ Validate PointingComponent Telemetry PointingComponent_prospectiveTimesToLimits 
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Telemetry PointingComponent_prospectiveTimesToLimits Topic Columns
-	[Documentation]    Validate the PointingComponent_prospectiveTimesToLimits topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_prospectiveTimesToLimits topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -42975,7 +43279,7 @@ Validate PointingComponent Telemetry PointingComponent_nextTargetStatus Topic By
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Telemetry PointingComponent_nextTargetStatus Topic Columns
-	[Documentation]    Validate the PointingComponent_nextTargetStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_nextTargetStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -43013,7 +43317,7 @@ Validate PointingComponent Telemetry PointingComponent_timeAndDate Topic Byte Si
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Telemetry PointingComponent_timeAndDate Topic Columns
-	[Documentation]    Validate the PointingComponent_timeAndDate topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_timeAndDate topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -43051,7 +43355,7 @@ Validate PointingComponent Telemetry PointingComponent_mountStatus Topic Byte Si
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Telemetry PointingComponent_mountStatus Topic Columns
-	[Documentation]    Validate the PointingComponent_mountStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_mountStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -43089,7 +43393,7 @@ Validate PointingComponent Telemetry PointingComponent_nextTimesToLimits Topic B
 	Should Be True    ${result} < ${65536}
 
 Validate PointingComponent Telemetry PointingComponent_nextTimesToLimits Topic Columns
-	[Documentation]    Validate the PointingComponent_nextTimesToLimits topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PointingComponent_nextTimesToLimits topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -43127,7 +43431,7 @@ Validate PromptProcessing Event PromptProcessing_logevent_entitySummaryState Top
 	Should Be True    ${result} < ${65536}
 
 Validate PromptProcessing Event PromptProcessing_logevent_entitySummaryState Topic Columns
-	[Documentation]    Validate the PromptProcessing_logevent_entitySummaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PromptProcessing_logevent_entitySummaryState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PromptProcessing
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -43165,7 +43469,7 @@ Validate PromptProcessing Event PromptProcessing_logevent_settingsApplied Topic 
 	Should Be True    ${result} < ${65536}
 
 Validate PromptProcessing Event PromptProcessing_logevent_settingsApplied Topic Columns
-	[Documentation]    Validate the PromptProcessing_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PromptProcessing_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PromptProcessing
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -43203,7 +43507,7 @@ Validate PromptProcessing Event PromptProcessing_logevent_entityStartup Topic By
 	Should Be True    ${result} < ${65536}
 
 Validate PromptProcessing Event PromptProcessing_logevent_entityStartup Topic Columns
-	[Documentation]    Validate the PromptProcessing_logevent_entityStartup topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PromptProcessing_logevent_entityStartup topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PromptProcessing
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -43241,7 +43545,7 @@ Validate PromptProcessing Event PromptProcessing_logevent_entityShutdown Topic B
 	Should Be True    ${result} < ${65536}
 
 Validate PromptProcessing Event PromptProcessing_logevent_entityShutdown Topic Columns
-	[Documentation]    Validate the PromptProcessing_logevent_entityShutdown topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PromptProcessing_logevent_entityShutdown topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PromptProcessing
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -43279,7 +43583,7 @@ Validate PromptProcessing Telemetry PromptProcessing_sequencerHeartbeat Topic By
 	Should Be True    ${result} < ${65536}
 
 Validate PromptProcessing Telemetry PromptProcessing_sequencerHeartbeat Topic Columns
-	[Documentation]    Validate the PromptProcessing_sequencerHeartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the PromptProcessing_sequencerHeartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PromptProcessing
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -43317,7 +43621,7 @@ Validate Rotator Command Rotator_command_configureAcceleration Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Rotator Command Rotator_command_configureAcceleration Topic Columns
-	[Documentation]    Validate the Rotator_command_configureAcceleration topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Rotator_command_configureAcceleration topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Rotator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -43355,7 +43659,7 @@ Validate Rotator Command Rotator_command_configureVelocity Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Rotator Command Rotator_command_configureVelocity Topic Columns
-	[Documentation]    Validate the Rotator_command_configureVelocity topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Rotator_command_configureVelocity topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Rotator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -43393,7 +43697,7 @@ Validate Rotator Command Rotator_command_move Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Rotator Command Rotator_command_move Topic Columns
-	[Documentation]    Validate the Rotator_command_move topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Rotator_command_move topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Rotator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -43431,7 +43735,7 @@ Validate Rotator Command Rotator_command_track Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Rotator Command Rotator_command_track Topic Columns
-	[Documentation]    Validate the Rotator_command_track topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Rotator_command_track topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Rotator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -43469,7 +43773,7 @@ Validate Rotator Command Rotator_command_test Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Rotator Command Rotator_command_test Topic Columns
-	[Documentation]    Validate the Rotator_command_test topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Rotator_command_test topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Rotator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -43507,7 +43811,7 @@ Validate Rotator Command Rotator_command_trackStart Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Rotator Command Rotator_command_trackStart Topic Columns
-	[Documentation]    Validate the Rotator_command_trackStart topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Rotator_command_trackStart topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Rotator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -43545,7 +43849,7 @@ Validate Rotator Command Rotator_command_clearError Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Rotator Command Rotator_command_clearError Topic Columns
-	[Documentation]    Validate the Rotator_command_clearError topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Rotator_command_clearError topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Rotator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -43583,7 +43887,7 @@ Validate Rotator Command Rotator_command_positionSet Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Rotator Command Rotator_command_positionSet Topic Columns
-	[Documentation]    Validate the Rotator_command_positionSet topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Rotator_command_positionSet topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Rotator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -43621,7 +43925,7 @@ Validate Rotator Command Rotator_command_moveConstantVelocity Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Rotator Command Rotator_command_moveConstantVelocity Topic Columns
-	[Documentation]    Validate the Rotator_command_moveConstantVelocity topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Rotator_command_moveConstantVelocity topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Rotator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -43659,7 +43963,7 @@ Validate Rotator Command Rotator_command_velocitySet Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Rotator Command Rotator_command_velocitySet Topic Columns
-	[Documentation]    Validate the Rotator_command_velocitySet topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Rotator_command_velocitySet topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Rotator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -43697,7 +44001,7 @@ Validate Rotator Event Rotator_logevent_interlock Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Rotator Event Rotator_logevent_interlock Topic Columns
-	[Documentation]    Validate the Rotator_logevent_interlock topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Rotator_logevent_interlock topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Rotator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -43735,7 +44039,7 @@ Validate Rotator Event Rotator_logevent_trackLost Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Rotator Event Rotator_logevent_trackLost Topic Columns
-	[Documentation]    Validate the Rotator_logevent_trackLost topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Rotator_logevent_trackLost topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Rotator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -43773,7 +44077,7 @@ Validate Rotator Event Rotator_logevent_tracking Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Rotator Event Rotator_logevent_tracking Topic Columns
-	[Documentation]    Validate the Rotator_logevent_tracking topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Rotator_logevent_tracking topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Rotator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -43811,7 +44115,7 @@ Validate Rotator Event Rotator_logevent_deviceError Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Rotator Event Rotator_logevent_deviceError Topic Columns
-	[Documentation]    Validate the Rotator_logevent_deviceError topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Rotator_logevent_deviceError topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Rotator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -43849,7 +44153,7 @@ Validate Rotator Event Rotator_logevent_inPosition Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Rotator Event Rotator_logevent_inPosition Topic Columns
-	[Documentation]    Validate the Rotator_logevent_inPosition topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Rotator_logevent_inPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Rotator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -43887,7 +44191,7 @@ Validate Rotator Event Rotator_logevent_settingsApplied Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Rotator Event Rotator_logevent_settingsApplied Topic Columns
-	[Documentation]    Validate the Rotator_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Rotator_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Rotator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -43925,7 +44229,7 @@ Validate Rotator Event Rotator_logevent_rejectedCommand Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Rotator Event Rotator_logevent_rejectedCommand Topic Columns
-	[Documentation]    Validate the Rotator_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Rotator_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Rotator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -43963,7 +44267,7 @@ Validate Rotator Event Rotator_logevent_commandableByDDS Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Rotator Event Rotator_logevent_commandableByDDS Topic Columns
-	[Documentation]    Validate the Rotator_logevent_commandableByDDS topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Rotator_logevent_commandableByDDS topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Rotator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -44001,7 +44305,7 @@ Validate Rotator Telemetry Rotator_Electrical Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Rotator Telemetry Rotator_Electrical Topic Columns
-	[Documentation]    Validate the Rotator_Electrical topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Rotator_Electrical topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Rotator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -44039,7 +44343,7 @@ Validate Rotator Telemetry Rotator_Application Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Rotator Telemetry Rotator_Application Topic Columns
-	[Documentation]    Validate the Rotator_Application topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Rotator_Application topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Rotator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -44077,7 +44381,7 @@ Validate Rotator Telemetry Rotator_Motors Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Rotator Telemetry Rotator_Motors Topic Columns
-	[Documentation]    Validate the Rotator_Motors topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Rotator_Motors topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Rotator
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -44115,7 +44419,7 @@ Validate Scheduler Event Scheduler_logevent_internalCommand Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Scheduler Event Scheduler_logevent_internalCommand Topic Columns
-	[Documentation]    Validate the Scheduler_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Scheduler_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -44153,7 +44457,7 @@ Validate Scheduler Event Scheduler_logevent_heartbeat Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Scheduler Event Scheduler_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the Scheduler_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Scheduler_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -44191,7 +44495,7 @@ Validate Scheduler Event Scheduler_logevent_loopTimeOutOfRange Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Scheduler Event Scheduler_logevent_loopTimeOutOfRange Topic Columns
-	[Documentation]    Validate the Scheduler_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Scheduler_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -44229,7 +44533,7 @@ Validate Scheduler Event Scheduler_logevent_rejectedCommand Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Scheduler Event Scheduler_logevent_rejectedCommand Topic Columns
-	[Documentation]    Validate the Scheduler_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Scheduler_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -44267,7 +44571,7 @@ Validate Scheduler Event Scheduler_logevent_settingsApplied Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Scheduler Event Scheduler_logevent_settingsApplied Topic Columns
-	[Documentation]    Validate the Scheduler_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Scheduler_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -44305,7 +44609,7 @@ Validate Scheduler Event Scheduler_logevent_target Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Scheduler Event Scheduler_logevent_target Topic Columns
-	[Documentation]    Validate the Scheduler_logevent_target topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Scheduler_logevent_target topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -44343,7 +44647,7 @@ Validate Scheduler Event Scheduler_logevent_invalidateTarget Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Scheduler Event Scheduler_logevent_invalidateTarget Topic Columns
-	[Documentation]    Validate the Scheduler_logevent_invalidateTarget topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Scheduler_logevent_invalidateTarget topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -44381,7 +44685,7 @@ Validate Scheduler Event Scheduler_logevent_needFilterSwap Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Scheduler Event Scheduler_logevent_needFilterSwap Topic Columns
-	[Documentation]    Validate the Scheduler_logevent_needFilterSwap topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Scheduler_logevent_needFilterSwap topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -44419,7 +44723,7 @@ Validate Scheduler Telemetry Scheduler_timestamp Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Scheduler Telemetry Scheduler_timestamp Topic Columns
-	[Documentation]    Validate the Scheduler_timestamp topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Scheduler_timestamp topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -44457,7 +44761,7 @@ Validate Scheduler Telemetry Scheduler_loopTimeMs Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Scheduler Telemetry Scheduler_loopTimeMs Topic Columns
-	[Documentation]    Validate the Scheduler_loopTimeMs topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Scheduler_loopTimeMs topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -44495,7 +44799,7 @@ Validate Scheduler Telemetry Scheduler_nightSummary Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Scheduler Telemetry Scheduler_nightSummary Topic Columns
-	[Documentation]    Validate the Scheduler_nightSummary topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Scheduler_nightSummary topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -44533,7 +44837,7 @@ Validate Scheduler Telemetry Scheduler_predictedSchedule Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Scheduler Telemetry Scheduler_predictedSchedule Topic Columns
-	[Documentation]    Validate the Scheduler_predictedSchedule topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Scheduler_predictedSchedule topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -44571,7 +44875,7 @@ Validate Scheduler Telemetry Scheduler_surveyTopology Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Scheduler Telemetry Scheduler_surveyTopology Topic Columns
-	[Documentation]    Validate the Scheduler_surveyTopology topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Scheduler_surveyTopology topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -44609,7 +44913,7 @@ Validate Scheduler Telemetry Scheduler_schedulerConfig Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Scheduler Telemetry Scheduler_schedulerConfig Topic Columns
-	[Documentation]    Validate the Scheduler_schedulerConfig topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Scheduler_schedulerConfig topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -44647,7 +44951,7 @@ Validate Scheduler Telemetry Scheduler_driverConfig Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Scheduler Telemetry Scheduler_driverConfig Topic Columns
-	[Documentation]    Validate the Scheduler_driverConfig topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Scheduler_driverConfig topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -44685,7 +44989,7 @@ Validate Scheduler Telemetry Scheduler_obsSiteConfig Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Scheduler Telemetry Scheduler_obsSiteConfig Topic Columns
-	[Documentation]    Validate the Scheduler_obsSiteConfig topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Scheduler_obsSiteConfig topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -44723,7 +45027,7 @@ Validate Scheduler Telemetry Scheduler_telescopeConfig Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Scheduler Telemetry Scheduler_telescopeConfig Topic Columns
-	[Documentation]    Validate the Scheduler_telescopeConfig topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Scheduler_telescopeConfig topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -44761,7 +45065,7 @@ Validate Scheduler Telemetry Scheduler_rotatorConfig Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Scheduler Telemetry Scheduler_rotatorConfig Topic Columns
-	[Documentation]    Validate the Scheduler_rotatorConfig topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Scheduler_rotatorConfig topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -44799,7 +45103,7 @@ Validate Scheduler Telemetry Scheduler_domeConfig Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Scheduler Telemetry Scheduler_domeConfig Topic Columns
-	[Documentation]    Validate the Scheduler_domeConfig topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Scheduler_domeConfig topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -44837,7 +45141,7 @@ Validate Scheduler Telemetry Scheduler_cameraConfig Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Scheduler Telemetry Scheduler_cameraConfig Topic Columns
-	[Documentation]    Validate the Scheduler_cameraConfig topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Scheduler_cameraConfig topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -44875,7 +45179,7 @@ Validate Scheduler Telemetry Scheduler_slewConfig Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Scheduler Telemetry Scheduler_slewConfig Topic Columns
-	[Documentation]    Validate the Scheduler_slewConfig topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Scheduler_slewConfig topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -44913,7 +45217,7 @@ Validate Scheduler Telemetry Scheduler_opticsLoopCorrConfig Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Scheduler Telemetry Scheduler_opticsLoopCorrConfig Topic Columns
-	[Documentation]    Validate the Scheduler_opticsLoopCorrConfig topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Scheduler_opticsLoopCorrConfig topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -44951,7 +45255,7 @@ Validate Scheduler Telemetry Scheduler_parkConfig Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Scheduler Telemetry Scheduler_parkConfig Topic Columns
-	[Documentation]    Validate the Scheduler_parkConfig topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Scheduler_parkConfig topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -44989,7 +45293,7 @@ Validate Scheduler Telemetry Scheduler_generalPropConfig Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Scheduler Telemetry Scheduler_generalPropConfig Topic Columns
-	[Documentation]    Validate the Scheduler_generalPropConfig topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Scheduler_generalPropConfig topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -45027,7 +45331,7 @@ Validate Scheduler Telemetry Scheduler_sequencePropConfig Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Scheduler Telemetry Scheduler_sequencePropConfig Topic Columns
-	[Documentation]    Validate the Scheduler_sequencePropConfig topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Scheduler_sequencePropConfig topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -45065,7 +45369,7 @@ Validate Scheduler Telemetry Scheduler_observatoryState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Scheduler Telemetry Scheduler_observatoryState Topic Columns
-	[Documentation]    Validate the Scheduler_observatoryState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Scheduler_observatoryState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -45103,7 +45407,7 @@ Validate Scheduler Telemetry Scheduler_observation Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Scheduler Telemetry Scheduler_observation Topic Columns
-	[Documentation]    Validate the Scheduler_observation topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Scheduler_observation topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -45141,7 +45445,7 @@ Validate Scheduler Telemetry Scheduler_interestedProposal Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Scheduler Telemetry Scheduler_interestedProposal Topic Columns
-	[Documentation]    Validate the Scheduler_interestedProposal topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Scheduler_interestedProposal topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -45179,7 +45483,7 @@ Validate Scheduler Telemetry Scheduler_timeHandler Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Scheduler Telemetry Scheduler_timeHandler Topic Columns
-	[Documentation]    Validate the Scheduler_timeHandler topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Scheduler_timeHandler topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -45217,7 +45521,7 @@ Validate Scheduler Telemetry Scheduler_bulkCloud Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Scheduler Telemetry Scheduler_bulkCloud Topic Columns
-	[Documentation]    Validate the Scheduler_bulkCloud topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Scheduler_bulkCloud topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -45255,7 +45559,7 @@ Validate Scheduler Telemetry Scheduler_cloudMap Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Scheduler Telemetry Scheduler_cloudMap Topic Columns
-	[Documentation]    Validate the Scheduler_cloudMap topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Scheduler_cloudMap topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -45293,7 +45597,7 @@ Validate Scheduler Telemetry Scheduler_seeing Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Scheduler Telemetry Scheduler_seeing Topic Columns
-	[Documentation]    Validate the Scheduler_seeing topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Scheduler_seeing topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -45331,7 +45635,7 @@ Validate Scheduler Telemetry Scheduler_wind Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Scheduler Telemetry Scheduler_wind Topic Columns
-	[Documentation]    Validate the Scheduler_wind topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Scheduler_wind topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -45369,7 +45673,7 @@ Validate Scheduler Telemetry Scheduler_temperature Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Scheduler Telemetry Scheduler_temperature Topic Columns
-	[Documentation]    Validate the Scheduler_temperature topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Scheduler_temperature topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -45407,7 +45711,7 @@ Validate Scheduler Telemetry Scheduler_skyBrightness Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Scheduler Telemetry Scheduler_skyBrightness Topic Columns
-	[Documentation]    Validate the Scheduler_skyBrightness topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Scheduler_skyBrightness topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -45445,7 +45749,7 @@ Validate Scheduler Telemetry Scheduler_photometricQuality Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Scheduler Telemetry Scheduler_photometricQuality Topic Columns
-	[Documentation]    Validate the Scheduler_photometricQuality topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Scheduler_photometricQuality topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -45483,7 +45787,7 @@ Validate Scheduler Telemetry Scheduler_avoidanceRegions Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Scheduler Telemetry Scheduler_avoidanceRegions Topic Columns
-	[Documentation]    Validate the Scheduler_avoidanceRegions topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Scheduler_avoidanceRegions topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -45521,7 +45825,7 @@ Validate Scheduler Telemetry Scheduler_downtime Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Scheduler Telemetry Scheduler_downtime Topic Columns
-	[Documentation]    Validate the Scheduler_downtime topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Scheduler_downtime topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -45559,7 +45863,7 @@ Validate Script Command Script_command_configure Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Script Command Script_command_configure Topic Columns
-	[Documentation]    Validate the Script_command_configure topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Script_command_configure topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Script
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -45597,7 +45901,7 @@ Validate Script Command Script_command_run Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Script Command Script_command_run Topic Columns
-	[Documentation]    Validate the Script_command_run topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Script_command_run topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Script
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -45635,7 +45939,7 @@ Validate Script Command Script_command_resume Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Script Command Script_command_resume Topic Columns
-	[Documentation]    Validate the Script_command_resume topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Script_command_resume topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Script
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -45673,7 +45977,7 @@ Validate Script Command Script_command_setLogLevel Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Script Command Script_command_setLogLevel Topic Columns
-	[Documentation]    Validate the Script_command_setLogLevel topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Script_command_setLogLevel topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Script
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -45711,7 +46015,7 @@ Validate Script Command Script_command_setCheckpoints Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Script Command Script_command_setCheckpoints Topic Columns
-	[Documentation]    Validate the Script_command_setCheckpoints topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Script_command_setCheckpoints topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Script
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -45749,7 +46053,7 @@ Validate Script Command Script_command_stop Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Script Command Script_command_stop Topic Columns
-	[Documentation]    Validate the Script_command_stop topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Script_command_stop topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Script
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -45787,7 +46091,7 @@ Validate Script Event Script_logevent_heartbeat Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Script Event Script_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the Script_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Script_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Script
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -45825,7 +46129,7 @@ Validate Script Event Script_logevent_checkpoints Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Script Event Script_logevent_checkpoints Topic Columns
-	[Documentation]    Validate the Script_logevent_checkpoints topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Script_logevent_checkpoints topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Script
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -45863,7 +46167,7 @@ Validate Script Event Script_logevent_logLevel Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Script Event Script_logevent_logLevel Topic Columns
-	[Documentation]    Validate the Script_logevent_logLevel topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Script_logevent_logLevel topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Script
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -45901,7 +46205,7 @@ Validate Script Event Script_logevent_logMessage Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Script Event Script_logevent_logMessage Topic Columns
-	[Documentation]    Validate the Script_logevent_logMessage topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Script_logevent_logMessage topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Script
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -45939,7 +46243,7 @@ Validate Script Event Script_logevent_description Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Script Event Script_logevent_description Topic Columns
-	[Documentation]    Validate the Script_logevent_description topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Script_logevent_description topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Script
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -45977,7 +46281,7 @@ Validate Script Event Script_logevent_metadata Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Script Event Script_logevent_metadata Topic Columns
-	[Documentation]    Validate the Script_logevent_metadata topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Script_logevent_metadata topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Script
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46015,7 +46319,7 @@ Validate Script Event Script_logevent_state Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Script Event Script_logevent_state Topic Columns
-	[Documentation]    Validate the Script_logevent_state topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Script_logevent_state topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Script
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46053,7 +46357,7 @@ Validate ScriptQueue Command ScriptQueue_command_showAvailableScripts Topic Byte
 	Should Be True    ${result} < ${65536}
 
 Validate ScriptQueue Command ScriptQueue_command_showAvailableScripts Topic Columns
-	[Documentation]    Validate the ScriptQueue_command_showAvailableScripts topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ScriptQueue_command_showAvailableScripts topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ScriptQueue
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46091,7 +46395,7 @@ Validate ScriptQueue Command ScriptQueue_command_showQueue Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ScriptQueue Command ScriptQueue_command_showQueue Topic Columns
-	[Documentation]    Validate the ScriptQueue_command_showQueue topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ScriptQueue_command_showQueue topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ScriptQueue
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46129,7 +46433,7 @@ Validate ScriptQueue Command ScriptQueue_command_showScript Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ScriptQueue Command ScriptQueue_command_showScript Topic Columns
-	[Documentation]    Validate the ScriptQueue_command_showScript topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ScriptQueue_command_showScript topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ScriptQueue
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46167,7 +46471,7 @@ Validate ScriptQueue Command ScriptQueue_command_pause Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ScriptQueue Command ScriptQueue_command_pause Topic Columns
-	[Documentation]    Validate the ScriptQueue_command_pause topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ScriptQueue_command_pause topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ScriptQueue
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46205,7 +46509,7 @@ Validate ScriptQueue Command ScriptQueue_command_resume Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ScriptQueue Command ScriptQueue_command_resume Topic Columns
-	[Documentation]    Validate the ScriptQueue_command_resume topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ScriptQueue_command_resume topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ScriptQueue
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46243,7 +46547,7 @@ Validate ScriptQueue Command ScriptQueue_command_add Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ScriptQueue Command ScriptQueue_command_add Topic Columns
-	[Documentation]    Validate the ScriptQueue_command_add topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ScriptQueue_command_add topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ScriptQueue
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46281,7 +46585,7 @@ Validate ScriptQueue Command ScriptQueue_command_move Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ScriptQueue Command ScriptQueue_command_move Topic Columns
-	[Documentation]    Validate the ScriptQueue_command_move topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ScriptQueue_command_move topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ScriptQueue
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46319,7 +46623,7 @@ Validate ScriptQueue Command ScriptQueue_command_requeue Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ScriptQueue Command ScriptQueue_command_requeue Topic Columns
-	[Documentation]    Validate the ScriptQueue_command_requeue topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ScriptQueue_command_requeue topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ScriptQueue
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46357,7 +46661,7 @@ Validate ScriptQueue Command ScriptQueue_command_stopScripts Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ScriptQueue Command ScriptQueue_command_stopScripts Topic Columns
-	[Documentation]    Validate the ScriptQueue_command_stopScripts topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ScriptQueue_command_stopScripts topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ScriptQueue
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46395,7 +46699,7 @@ Validate ScriptQueue Event ScriptQueue_logevent_heartbeat Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ScriptQueue Event ScriptQueue_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the ScriptQueue_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ScriptQueue_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ScriptQueue
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46433,7 +46737,7 @@ Validate ScriptQueue Event ScriptQueue_logevent_availableScripts Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ScriptQueue Event ScriptQueue_logevent_availableScripts Topic Columns
-	[Documentation]    Validate the ScriptQueue_logevent_availableScripts topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ScriptQueue_logevent_availableScripts topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ScriptQueue
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46471,7 +46775,7 @@ Validate ScriptQueue Event ScriptQueue_logevent_script Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ScriptQueue Event ScriptQueue_logevent_script Topic Columns
-	[Documentation]    Validate the ScriptQueue_logevent_script topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ScriptQueue_logevent_script topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ScriptQueue
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46509,7 +46813,7 @@ Validate ScriptQueue Event ScriptQueue_logevent_queue Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ScriptQueue Event ScriptQueue_logevent_queue Topic Columns
-	[Documentation]    Validate the ScriptQueue_logevent_queue topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ScriptQueue_logevent_queue topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ScriptQueue
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46547,7 +46851,7 @@ Validate ScriptQueue Event ScriptQueue_logevent_rootDirectories Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate ScriptQueue Event ScriptQueue_logevent_rootDirectories Topic Columns
-	[Documentation]    Validate the ScriptQueue_logevent_rootDirectories topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the ScriptQueue_logevent_rootDirectories topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ScriptQueue
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46585,7 +46889,7 @@ Validate Sequencer Command Sequencer_command_sequence Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Sequencer Command Sequencer_command_sequence Topic Columns
-	[Documentation]    Validate the Sequencer_command_sequence topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Sequencer_command_sequence topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Sequencer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46623,7 +46927,7 @@ Validate Sequencer Command Sequencer_command_script Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Sequencer Command Sequencer_command_script Topic Columns
-	[Documentation]    Validate the Sequencer_command_script topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Sequencer_command_script topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Sequencer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46661,7 +46965,7 @@ Validate Sequencer Event Sequencer_logevent_sequencerEntitySummaryState Topic By
 	Should Be True    ${result} < ${65536}
 
 Validate Sequencer Event Sequencer_logevent_sequencerEntitySummaryState Topic Columns
-	[Documentation]    Validate the Sequencer_logevent_sequencerEntitySummaryState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Sequencer_logevent_sequencerEntitySummaryState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Sequencer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46699,7 +47003,7 @@ Validate Sequencer Event Sequencer_logevent_sequencerEntityStartup Topic Byte Si
 	Should Be True    ${result} < ${65536}
 
 Validate Sequencer Event Sequencer_logevent_sequencerEntityStartup Topic Columns
-	[Documentation]    Validate the Sequencer_logevent_sequencerEntityStartup topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Sequencer_logevent_sequencerEntityStartup topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Sequencer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46737,7 +47041,7 @@ Validate Sequencer Event Sequencer_logevent_sequencerEntityShutdown Topic Byte S
 	Should Be True    ${result} < ${65536}
 
 Validate Sequencer Event Sequencer_logevent_sequencerEntityShutdown Topic Columns
-	[Documentation]    Validate the Sequencer_logevent_sequencerEntityShutdown topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Sequencer_logevent_sequencerEntityShutdown topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Sequencer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46775,7 +47079,7 @@ Validate Sequencer Event Sequencer_logevent_sequencerCommandIssued Topic Byte Si
 	Should Be True    ${result} < ${65536}
 
 Validate Sequencer Event Sequencer_logevent_sequencerCommandIssued Topic Columns
-	[Documentation]    Validate the Sequencer_logevent_sequencerCommandIssued topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Sequencer_logevent_sequencerCommandIssued topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Sequencer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46813,7 +47117,7 @@ Validate Sequencer Event Sequencer_logevent_sequencerCommandStatus Topic Byte Si
 	Should Be True    ${result} < ${65536}
 
 Validate Sequencer Event Sequencer_logevent_sequencerCommandStatus Topic Columns
-	[Documentation]    Validate the Sequencer_logevent_sequencerCommandStatus topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Sequencer_logevent_sequencerCommandStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Sequencer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46851,7 +47155,7 @@ Validate Sequencer Event Sequencer_logevent_sequencerCurrentScript Topic Byte Si
 	Should Be True    ${result} < ${65536}
 
 Validate Sequencer Event Sequencer_logevent_sequencerCurrentScript Topic Columns
-	[Documentation]    Validate the Sequencer_logevent_sequencerCurrentScript topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Sequencer_logevent_sequencerCurrentScript topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Sequencer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46889,7 +47193,7 @@ Validate Sequencer Event Sequencer_logevent_sequencerNextScript Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Sequencer Event Sequencer_logevent_sequencerNextScript Topic Columns
-	[Documentation]    Validate the Sequencer_logevent_sequencerNextScript topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Sequencer_logevent_sequencerNextScript topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Sequencer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46927,7 +47231,7 @@ Validate Sequencer Event Sequencer_logevent_sequencerScriptStart Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Sequencer Event Sequencer_logevent_sequencerScriptStart Topic Columns
-	[Documentation]    Validate the Sequencer_logevent_sequencerScriptStart topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Sequencer_logevent_sequencerScriptStart topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Sequencer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46965,7 +47269,7 @@ Validate Sequencer Event Sequencer_logevent_sequencerScriptEnd Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Sequencer Event Sequencer_logevent_sequencerScriptEnd Topic Columns
-	[Documentation]    Validate the Sequencer_logevent_sequencerScriptEnd topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Sequencer_logevent_sequencerScriptEnd topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Sequencer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -47003,7 +47307,7 @@ Validate Sequencer Event Sequencer_logevent_sequencerScriptError Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Sequencer Event Sequencer_logevent_sequencerScriptError Topic Columns
-	[Documentation]    Validate the Sequencer_logevent_sequencerScriptError topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Sequencer_logevent_sequencerScriptError topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Sequencer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -47041,7 +47345,7 @@ Validate Sequencer Event Sequencer_logevent_sequencerScriptEntititesInUse Topic 
 	Should Be True    ${result} < ${65536}
 
 Validate Sequencer Event Sequencer_logevent_sequencerScriptEntititesInUse Topic Columns
-	[Documentation]    Validate the Sequencer_logevent_sequencerScriptEntititesInUse topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Sequencer_logevent_sequencerScriptEntititesInUse topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Sequencer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -47079,7 +47383,7 @@ Validate Sequencer Telemetry Sequencer_sequencerHeartbeat Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Sequencer Telemetry Sequencer_sequencerHeartbeat Topic Columns
-	[Documentation]    Validate the Sequencer_sequencerHeartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Sequencer_sequencerHeartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Sequencer
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -47117,7 +47421,7 @@ Validate SummitFacility Event SummitFacility_logevent_internalCommand Topic Byte
 	Should Be True    ${result} < ${65536}
 
 Validate SummitFacility Event SummitFacility_logevent_internalCommand Topic Columns
-	[Documentation]    Validate the SummitFacility_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the SummitFacility_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    SummitFacility
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -47155,7 +47459,7 @@ Validate SummitFacility Event SummitFacility_logevent_heartbeat Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate SummitFacility Event SummitFacility_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the SummitFacility_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the SummitFacility_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    SummitFacility
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -47193,7 +47497,7 @@ Validate SummitFacility Event SummitFacility_logevent_loopTimeOutOfRange Topic B
 	Should Be True    ${result} < ${65536}
 
 Validate SummitFacility Event SummitFacility_logevent_loopTimeOutOfRange Topic Columns
-	[Documentation]    Validate the SummitFacility_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the SummitFacility_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    SummitFacility
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -47231,7 +47535,7 @@ Validate SummitFacility Event SummitFacility_logevent_rejectedCommand Topic Byte
 	Should Be True    ${result} < ${65536}
 
 Validate SummitFacility Event SummitFacility_logevent_rejectedCommand Topic Columns
-	[Documentation]    Validate the SummitFacility_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the SummitFacility_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    SummitFacility
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -47269,7 +47573,7 @@ Validate SummitFacility Telemetry SummitFacility_timestamp Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate SummitFacility Telemetry SummitFacility_timestamp Topic Columns
-	[Documentation]    Validate the SummitFacility_timestamp topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the SummitFacility_timestamp topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    SummitFacility
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -47307,7 +47611,7 @@ Validate SummitFacility Telemetry SummitFacility_loopTime Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate SummitFacility Telemetry SummitFacility_loopTime Topic Columns
-	[Documentation]    Validate the SummitFacility_loopTime topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the SummitFacility_loopTime topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    SummitFacility
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -47345,7 +47649,7 @@ Validate Test Command Test_command_setScalars Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Test Command Test_command_setScalars Topic Columns
-	[Documentation]    Validate the Test_command_setScalars topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Test_command_setScalars topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Test
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -47383,7 +47687,7 @@ Validate Test Command Test_command_setArrays Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Test Command Test_command_setArrays Topic Columns
-	[Documentation]    Validate the Test_command_setArrays topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Test_command_setArrays topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Test
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -47421,7 +47725,7 @@ Validate Test Command Test_command_fault Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Test Command Test_command_fault Topic Columns
-	[Documentation]    Validate the Test_command_fault topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Test_command_fault topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Test
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -47459,7 +47763,7 @@ Validate Test Command Test_command_wait Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Test Command Test_command_wait Topic Columns
-	[Documentation]    Validate the Test_command_wait topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Test_command_wait topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Test
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -47497,7 +47801,7 @@ Validate Test Event Test_logevent_heartbeat Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Test Event Test_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the Test_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Test_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Test
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -47535,7 +47839,7 @@ Validate Test Event Test_logevent_scalars Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Test Event Test_logevent_scalars Topic Columns
-	[Documentation]    Validate the Test_logevent_scalars topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Test_logevent_scalars topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Test
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -47573,7 +47877,7 @@ Validate Test Event Test_logevent_arrays Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Test Event Test_logevent_arrays Topic Columns
-	[Documentation]    Validate the Test_logevent_arrays topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Test_logevent_arrays topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Test
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -47611,7 +47915,7 @@ Validate Test Telemetry Test_scalars Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Test Telemetry Test_scalars Topic Columns
-	[Documentation]    Validate the Test_scalars topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Test_scalars topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Test
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -47649,7 +47953,7 @@ Validate Test Telemetry Test_arrays Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate Test Telemetry Test_arrays Topic Columns
-	[Documentation]    Validate the Test_arrays topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the Test_arrays topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Test
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -47687,7 +47991,7 @@ Validate TunableLaser Command TunableLaser_command_startPropagateLaser Topic Byt
 	Should Be True    ${result} < ${65536}
 
 Validate TunableLaser Command TunableLaser_command_startPropagateLaser Topic Columns
-	[Documentation]    Validate the TunableLaser_command_startPropagateLaser topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the TunableLaser_command_startPropagateLaser topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    TunableLaser
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -47725,7 +48029,7 @@ Validate TunableLaser Command TunableLaser_command_stopPropagateLaser Topic Byte
 	Should Be True    ${result} < ${65536}
 
 Validate TunableLaser Command TunableLaser_command_stopPropagateLaser Topic Columns
-	[Documentation]    Validate the TunableLaser_command_stopPropagateLaser topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the TunableLaser_command_stopPropagateLaser topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    TunableLaser
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -47763,7 +48067,7 @@ Validate TunableLaser Command TunableLaser_command_clearFaultState Topic Byte Si
 	Should Be True    ${result} < ${65536}
 
 Validate TunableLaser Command TunableLaser_command_clearFaultState Topic Columns
-	[Documentation]    Validate the TunableLaser_command_clearFaultState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the TunableLaser_command_clearFaultState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    TunableLaser
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -47801,7 +48105,7 @@ Validate TunableLaser Command TunableLaser_command_changeWavelength Topic Byte S
 	Should Be True    ${result} < ${65536}
 
 Validate TunableLaser Command TunableLaser_command_changeWavelength Topic Columns
-	[Documentation]    Validate the TunableLaser_command_changeWavelength topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the TunableLaser_command_changeWavelength topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    TunableLaser
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -47839,7 +48143,7 @@ Validate TunableLaser Event TunableLaser_logevent_laserInstabilityFlag Topic Byt
 	Should Be True    ${result} < ${65536}
 
 Validate TunableLaser Event TunableLaser_logevent_laserInstabilityFlag Topic Columns
-	[Documentation]    Validate the TunableLaser_logevent_laserInstabilityFlag topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the TunableLaser_logevent_laserInstabilityFlag topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    TunableLaser
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -47877,7 +48181,7 @@ Validate TunableLaser Event TunableLaser_logevent_detailedState Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate TunableLaser Event TunableLaser_logevent_detailedState Topic Columns
-	[Documentation]    Validate the TunableLaser_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the TunableLaser_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    TunableLaser
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -47915,7 +48219,7 @@ Validate TunableLaser Event TunableLaser_logevent_heartbeat Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate TunableLaser Event TunableLaser_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the TunableLaser_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the TunableLaser_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    TunableLaser
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -47953,7 +48257,7 @@ Validate TunableLaser Event TunableLaser_logevent_wavelengthChanged Topic Byte S
 	Should Be True    ${result} < ${65536}
 
 Validate TunableLaser Event TunableLaser_logevent_wavelengthChanged Topic Columns
-	[Documentation]    Validate the TunableLaser_logevent_wavelengthChanged topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the TunableLaser_logevent_wavelengthChanged topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    TunableLaser
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -47991,7 +48295,7 @@ Validate TunableLaser Telemetry TunableLaser_temperature Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate TunableLaser Telemetry TunableLaser_temperature Topic Columns
-	[Documentation]    Validate the TunableLaser_temperature topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the TunableLaser_temperature topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    TunableLaser
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -48029,7 +48333,7 @@ Validate TunableLaser Telemetry TunableLaser_wavelength Topic Byte Size
 	Should Be True    ${result} < ${65536}
 
 Validate TunableLaser Telemetry TunableLaser_wavelength Topic Columns
-	[Documentation]    Validate the TunableLaser_wavelength topic has less than 4096 total arguments, each representing a column in the EFD.s
+	[Documentation]    Validate the TunableLaser_wavelength topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    TunableLaser
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.

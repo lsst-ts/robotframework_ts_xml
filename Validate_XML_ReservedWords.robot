@@ -2355,7 +2355,7 @@ Validate PointingComponent Telemetry EFDB_Name Values Do Not Use IDL Reserved wo
 
 Validate PointingComponent Telemetry EFDB_Name Values Do Not Use MySQL Reserved Words
 	[Documentation]    Validate the PointingComponent Telemetry <EFDB_Name> tags do not contain MySQL Reserved Words.
-	[Tags]    smoke    PointingComponent    DM-17868
+	[Tags]    smoke    PointingComponent
 	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
 	Log    ${output}
