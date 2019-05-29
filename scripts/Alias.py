@@ -42,6 +42,6 @@ for subsystem in xml_common.subsystems:
 		file.write("\t[Tags]    smoke    " + xml_common.CapitalizeSubsystem(subsystem) + "\n")
 		file.write("\t${topic_name}=    Run    ${xml} sel -t -m \"//SAL" + messageType.rstrip('s') + "Set/SAL" + messageType.rstrip('s') + "/EFDB_Topic\" -v . -n ${folder}/sal_interfaces/" + subsystem + "/" + subsystem + "_" + messageType + ".xml |cut -d'_' -f 3-\n")
 		file.write("\t${alias}=    Run    ${xml} sel -t -m \"//SAL" + messageType.rstrip('s') + "Set/SAL" + messageType.rstrip('s') + "/Alias\" -v . -n ${folder}/sal_interfaces/" + subsystem + "/" + subsystem + "_" + messageType + ".xml\n")
-		file.write("\tLog Many    ${topic_name}    ${alias}}\n")
+		file.write("\tLog Many    ${topic_name}    ${alias}\n")
 		file.write("\tShould Match    ${topic_name}    ${alias}\n")
 		file.write("\n")
