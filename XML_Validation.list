@@ -12,6 +12,7 @@ Validate_XML_XSD_Events.robot
 Validate_XML_XSD_Telemetry.robot
 Validate_Attribute_Naming.robot
 Validate_Topic_Naming.robot
+Validate_Alias.robot
 Validate_XML_Count.robot
 Validate_XML_IDLTypes.robot
 Validate_XML_NoSpaces.robot
