@@ -46369,8 +46369,8 @@ Validate ScriptQueue Command ScriptQueue_command_showAvailableScripts Topic Colu
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ScriptQueue Command ScriptQueue_command_showQueue Topic Byte Size
-	[Documentation]    Validate the ScriptQueue_command_showQueue topic is less than 65536 bytes in total.
+Validate ScriptQueue Command ScriptQueue_command_showSchema Topic Byte Size
+	[Documentation]    Validate the ScriptQueue_command_showSchema topic is less than 65536 bytes in total.
 	[Tags]    smoke    ScriptQueue
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46394,8 +46394,8 @@ Validate ScriptQueue Command ScriptQueue_command_showQueue Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ScriptQueue Command ScriptQueue_command_showQueue Topic Columns
-	[Documentation]    Validate the ScriptQueue_command_showQueue topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ScriptQueue Command ScriptQueue_command_showSchema Topic Columns
+	[Documentation]    Validate the ScriptQueue_command_showSchema topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ScriptQueue
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46407,8 +46407,8 @@ Validate ScriptQueue Command ScriptQueue_command_showQueue Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ScriptQueue Command ScriptQueue_command_showScript Topic Byte Size
-	[Documentation]    Validate the ScriptQueue_command_showScript topic is less than 65536 bytes in total.
+Validate ScriptQueue Command ScriptQueue_command_showQueue Topic Byte Size
+	[Documentation]    Validate the ScriptQueue_command_showQueue topic is less than 65536 bytes in total.
 	[Tags]    smoke    ScriptQueue
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46432,8 +46432,8 @@ Validate ScriptQueue Command ScriptQueue_command_showScript Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ScriptQueue Command ScriptQueue_command_showScript Topic Columns
-	[Documentation]    Validate the ScriptQueue_command_showScript topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ScriptQueue Command ScriptQueue_command_showQueue Topic Columns
+	[Documentation]    Validate the ScriptQueue_command_showQueue topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ScriptQueue
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46445,8 +46445,8 @@ Validate ScriptQueue Command ScriptQueue_command_showScript Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ScriptQueue Command ScriptQueue_command_pause Topic Byte Size
-	[Documentation]    Validate the ScriptQueue_command_pause topic is less than 65536 bytes in total.
+Validate ScriptQueue Command ScriptQueue_command_showScript Topic Byte Size
+	[Documentation]    Validate the ScriptQueue_command_showScript topic is less than 65536 bytes in total.
 	[Tags]    smoke    ScriptQueue
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46470,8 +46470,8 @@ Validate ScriptQueue Command ScriptQueue_command_pause Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ScriptQueue Command ScriptQueue_command_pause Topic Columns
-	[Documentation]    Validate the ScriptQueue_command_pause topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ScriptQueue Command ScriptQueue_command_showScript Topic Columns
+	[Documentation]    Validate the ScriptQueue_command_showScript topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ScriptQueue
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46483,8 +46483,8 @@ Validate ScriptQueue Command ScriptQueue_command_pause Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ScriptQueue Command ScriptQueue_command_resume Topic Byte Size
-	[Documentation]    Validate the ScriptQueue_command_resume topic is less than 65536 bytes in total.
+Validate ScriptQueue Command ScriptQueue_command_pause Topic Byte Size
+	[Documentation]    Validate the ScriptQueue_command_pause topic is less than 65536 bytes in total.
 	[Tags]    smoke    ScriptQueue
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46508,8 +46508,8 @@ Validate ScriptQueue Command ScriptQueue_command_resume Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ScriptQueue Command ScriptQueue_command_resume Topic Columns
-	[Documentation]    Validate the ScriptQueue_command_resume topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ScriptQueue Command ScriptQueue_command_pause Topic Columns
+	[Documentation]    Validate the ScriptQueue_command_pause topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ScriptQueue
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46521,8 +46521,8 @@ Validate ScriptQueue Command ScriptQueue_command_resume Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ScriptQueue Command ScriptQueue_command_add Topic Byte Size
-	[Documentation]    Validate the ScriptQueue_command_add topic is less than 65536 bytes in total.
+Validate ScriptQueue Command ScriptQueue_command_resume Topic Byte Size
+	[Documentation]    Validate the ScriptQueue_command_resume topic is less than 65536 bytes in total.
 	[Tags]    smoke    ScriptQueue
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46546,8 +46546,8 @@ Validate ScriptQueue Command ScriptQueue_command_add Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ScriptQueue Command ScriptQueue_command_add Topic Columns
-	[Documentation]    Validate the ScriptQueue_command_add topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ScriptQueue Command ScriptQueue_command_resume Topic Columns
+	[Documentation]    Validate the ScriptQueue_command_resume topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ScriptQueue
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46559,8 +46559,8 @@ Validate ScriptQueue Command ScriptQueue_command_add Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ScriptQueue Command ScriptQueue_command_move Topic Byte Size
-	[Documentation]    Validate the ScriptQueue_command_move topic is less than 65536 bytes in total.
+Validate ScriptQueue Command ScriptQueue_command_add Topic Byte Size
+	[Documentation]    Validate the ScriptQueue_command_add topic is less than 65536 bytes in total.
 	[Tags]    smoke    ScriptQueue
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46584,8 +46584,8 @@ Validate ScriptQueue Command ScriptQueue_command_move Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ScriptQueue Command ScriptQueue_command_move Topic Columns
-	[Documentation]    Validate the ScriptQueue_command_move topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ScriptQueue Command ScriptQueue_command_add Topic Columns
+	[Documentation]    Validate the ScriptQueue_command_add topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ScriptQueue
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46597,8 +46597,8 @@ Validate ScriptQueue Command ScriptQueue_command_move Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ScriptQueue Command ScriptQueue_command_requeue Topic Byte Size
-	[Documentation]    Validate the ScriptQueue_command_requeue topic is less than 65536 bytes in total.
+Validate ScriptQueue Command ScriptQueue_command_move Topic Byte Size
+	[Documentation]    Validate the ScriptQueue_command_move topic is less than 65536 bytes in total.
 	[Tags]    smoke    ScriptQueue
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46622,8 +46622,8 @@ Validate ScriptQueue Command ScriptQueue_command_requeue Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ScriptQueue Command ScriptQueue_command_requeue Topic Columns
-	[Documentation]    Validate the ScriptQueue_command_requeue topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ScriptQueue Command ScriptQueue_command_move Topic Columns
+	[Documentation]    Validate the ScriptQueue_command_move topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ScriptQueue
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46635,8 +46635,8 @@ Validate ScriptQueue Command ScriptQueue_command_requeue Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ScriptQueue Command ScriptQueue_command_stopScripts Topic Byte Size
-	[Documentation]    Validate the ScriptQueue_command_stopScripts topic is less than 65536 bytes in total.
+Validate ScriptQueue Command ScriptQueue_command_requeue Topic Byte Size
+	[Documentation]    Validate the ScriptQueue_command_requeue topic is less than 65536 bytes in total.
 	[Tags]    smoke    ScriptQueue
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46660,13 +46660,51 @@ Validate ScriptQueue Command ScriptQueue_command_stopScripts Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ScriptQueue Command ScriptQueue_command_stopScripts Topic Columns
-	[Documentation]    Validate the ScriptQueue_command_stopScripts topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ScriptQueue Command ScriptQueue_command_requeue Topic Columns
+	[Documentation]    Validate the ScriptQueue_command_requeue topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ScriptQueue
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[9]/item)" -n ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Commands.xml
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[9]/item/Count" -v . -n ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate ScriptQueue Command ScriptQueue_command_stopScripts Topic Byte Size
+	[Documentation]    Validate the ScriptQueue_command_stopScripts topic is less than 65536 bytes in total.
+	[Tags]    smoke    ScriptQueue
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[10]/item)" -n ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[10]/item/Count" -v . -n ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[10]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate ScriptQueue Command ScriptQueue_command_stopScripts Topic Columns
+	[Documentation]    Validate the ScriptQueue_command_stopScripts topic has less than 4096 total arguments, each representing a column in the EFDs.
+	[Tags]    smoke    ScriptQueue
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[10]/item)" -n ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[10]/item/Count" -v . -n ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Commands.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -46749,8 +46787,8 @@ Validate ScriptQueue Event ScriptQueue_logevent_availableScripts Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ScriptQueue Event ScriptQueue_logevent_script Topic Byte Size
-	[Documentation]    Validate the ScriptQueue_logevent_script topic is less than 65536 bytes in total.
+Validate ScriptQueue Event ScriptQueue_logevent_configSchema Topic Byte Size
+	[Documentation]    Validate the ScriptQueue_logevent_configSchema topic is less than 65536 bytes in total.
 	[Tags]    smoke    ScriptQueue
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46774,8 +46812,8 @@ Validate ScriptQueue Event ScriptQueue_logevent_script Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ScriptQueue Event ScriptQueue_logevent_script Topic Columns
-	[Documentation]    Validate the ScriptQueue_logevent_script topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ScriptQueue Event ScriptQueue_logevent_configSchema Topic Columns
+	[Documentation]    Validate the ScriptQueue_logevent_configSchema topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ScriptQueue
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46787,8 +46825,8 @@ Validate ScriptQueue Event ScriptQueue_logevent_script Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ScriptQueue Event ScriptQueue_logevent_queue Topic Byte Size
-	[Documentation]    Validate the ScriptQueue_logevent_queue topic is less than 65536 bytes in total.
+Validate ScriptQueue Event ScriptQueue_logevent_script Topic Byte Size
+	[Documentation]    Validate the ScriptQueue_logevent_script topic is less than 65536 bytes in total.
 	[Tags]    smoke    ScriptQueue
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46812,8 +46850,8 @@ Validate ScriptQueue Event ScriptQueue_logevent_queue Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ScriptQueue Event ScriptQueue_logevent_queue Topic Columns
-	[Documentation]    Validate the ScriptQueue_logevent_queue topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ScriptQueue Event ScriptQueue_logevent_script Topic Columns
+	[Documentation]    Validate the ScriptQueue_logevent_script topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ScriptQueue
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46825,8 +46863,8 @@ Validate ScriptQueue Event ScriptQueue_logevent_queue Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ScriptQueue Event ScriptQueue_logevent_rootDirectories Topic Byte Size
-	[Documentation]    Validate the ScriptQueue_logevent_rootDirectories topic is less than 65536 bytes in total.
+Validate ScriptQueue Event ScriptQueue_logevent_queue Topic Byte Size
+	[Documentation]    Validate the ScriptQueue_logevent_queue topic is less than 65536 bytes in total.
 	[Tags]    smoke    ScriptQueue
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -46850,13 +46888,51 @@ Validate ScriptQueue Event ScriptQueue_logevent_rootDirectories Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ScriptQueue Event ScriptQueue_logevent_rootDirectories Topic Columns
-	[Documentation]    Validate the ScriptQueue_logevent_rootDirectories topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ScriptQueue Event ScriptQueue_logevent_queue Topic Columns
+	[Documentation]    Validate the ScriptQueue_logevent_queue topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ScriptQueue
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Events.xml
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate ScriptQueue Event ScriptQueue_logevent_rootDirectories Topic Byte Size
+	[Documentation]    Validate the ScriptQueue_logevent_rootDirectories topic is less than 65536 bytes in total.
+	[Tags]    smoke    ScriptQueue
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/Count" -v . -n ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate ScriptQueue Event ScriptQueue_logevent_rootDirectories Topic Columns
+	[Documentation]    Validate the ScriptQueue_logevent_rootDirectories topic has less than 4096 total arguments, each representing a column in the EFDs.
+	[Tags]    smoke    ScriptQueue
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/Count" -v . -n ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
