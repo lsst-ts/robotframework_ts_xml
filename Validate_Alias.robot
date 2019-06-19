@@ -3,7 +3,6 @@ Documentation    Validate the subsystem XML definition files contain an Alias va
 Test Setup    Run Keyword If    "${ContInt}"=="true"    Set Suite Variable    ${xml}    xmlstarlet
 Library    OperatingSystem
 Library    String
-Library    Unit_Validator
 Resource    Global_Vars.robot
 
 *** Variables ***
