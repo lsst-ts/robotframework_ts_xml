@@ -775,6 +775,24 @@ Validate MTM1M3_Commands.xml Does Not Contain Generic Commands
 	:FOR    ${generic}    IN    @{GenericCommands}
 	\    Run Keyword And Continue On Failure    Test Commands    ${commands}    MTM1M3_command_${generic}
 
+Validate MTM1M3TS_Events.xml Does Not Contain Generic Events
+	[Documentation]    Validate the MTM1M3TS_Events.xml does not contain Generic Events.
+	[Tags]    smoke    
+	Comment    Get the CSC Events.
+	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/MTM1M3TS/MTM1M3TS_Events.xml
+	Log    ${events}
+	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    MTM1M3TS_logevent_${item}
+	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    MTM1M3TS_logevent_${item}
+
+Validate MTM1M3TS_Commands.xml Does Not Contain Generic Commands
+	[Documentation]    Validate the MTM1M3TS_Commands.xml does not contain Generic Commands.
+	[Tags]    smoke    
+	Comment    Get the CSC Commands.
+	${commands}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/MTM1M3TS/MTM1M3TS_Commands.xml
+	:FOR    ${generic}    IN    @{GenericCommands}
+	\    Run Keyword And Continue On Failure    Test Commands    ${commands}    MTM1M3TS_command_${generic}
+
 Validate MTM2_Events.xml Does Not Contain Generic Events
 	[Documentation]    Validate the MTM2_Events.xml does not contain Generic Events.
 	[Tags]    smoke    
@@ -811,24 +829,6 @@ Validate MTMount_Commands.xml Does Not Contain Generic Commands
 	:FOR    ${generic}    IN    @{GenericCommands}
 	\    Run Keyword And Continue On Failure    Test Commands    ${commands}    MTMount_command_${generic}
 
-Validate MTOFC_Events.xml Does Not Contain Generic Events
-	[Documentation]    Validate the MTOFC_Events.xml does not contain Generic Events.
-	[Tags]    smoke    
-	Comment    Get the CSC Events.
-	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/MTOFC/MTOFC_Events.xml
-	Log    ${events}
-	:FOR    ${item}    IN    @{GenericEvents}
-	\    Log Many    ${events}    MTOFC_logevent_${item}
-	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    MTOFC_logevent_${item}
-
-Validate MTOFC_Commands.xml Does Not Contain Generic Commands
-	[Documentation]    Validate the MTOFC_Commands.xml does not contain Generic Commands.
-	[Tags]    smoke    
-	Comment    Get the CSC Commands.
-	${commands}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/MTOFC/MTOFC_Commands.xml
-	:FOR    ${generic}    IN    @{GenericCommands}
-	\    Run Keyword And Continue On Failure    Test Commands    ${commands}    MTOFC_command_${generic}
-
 Validate MTPtg_Events.xml Does Not Contain Generic Events
 	[Documentation]    Validate the MTPtg_Events.xml does not contain Generic Events.
 	[Tags]    smoke    
@@ -864,16 +864,6 @@ Validate MTTCS_Commands.xml Does Not Contain Generic Commands
 	${commands}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Commands.xml
 	:FOR    ${generic}    IN    @{GenericCommands}
 	\    Run Keyword And Continue On Failure    Test Commands    ${commands}    MTTCS_command_${generic}
-
-Validate MTWEP_Events.xml Does Not Contain Generic Events
-	[Documentation]    Validate the MTWEP_Events.xml does not contain Generic Events.
-	[Tags]    smoke    
-	Comment    Get the CSC Events.
-	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/MTWEP/MTWEP_Events.xml
-	Log    ${events}
-	:FOR    ${item}    IN    @{GenericEvents}
-	\    Log Many    ${events}    MTWEP_logevent_${item}
-	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    MTWEP_logevent_${item}
 
 Validate MTVMS_Events.xml Does Not Contain Generic Events
 	[Documentation]    Validate the MTVMS_Events.xml does not contain Generic Events.

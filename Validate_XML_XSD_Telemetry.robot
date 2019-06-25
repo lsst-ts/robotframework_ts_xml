@@ -266,6 +266,12 @@ Validate MTM1M3 Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   MTM1M3_Telemetry.xml - valid
 
+Validate MTM1M3TS Telemetry XML file
+	[Tags]    smoke    MTM1M3TS
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/MTM1M3TS/MTM1M3TS_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   MTM1M3TS_Telemetry.xml - valid
+
 Validate MTM2 Telemetry XML file
 	[Tags]    smoke    MTM2
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/MTM2/MTM2_Telemetry.xml
@@ -278,12 +284,6 @@ Validate MTMount Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   MTMount_Telemetry.xml - valid
 
-Validate MTOFC Telemetry XML file
-	[Tags]    smoke    MTOFC
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/MTOFC/MTOFC_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   MTOFC_Telemetry.xml - valid
-
 Validate MTPtg Telemetry XML file
 	[Tags]    smoke    MTPtg
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/MTPtg/MTPtg_Telemetry.xml
@@ -295,12 +295,6 @@ Validate MTTCS Telemetry XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   MTTCS_Telemetry.xml - valid
-
-Validate MTWEP Telemetry XML file
-	[Tags]    smoke    MTWEP
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/MTWEP/MTWEP_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   MTWEP_Telemetry.xml - valid
 
 Validate MTVMS Telemetry XML file
 	[Tags]    smoke    MTVMS

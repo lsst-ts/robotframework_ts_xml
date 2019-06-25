@@ -8,7 +8,7 @@ Resource    Global_Vars.robot
 
 *** Variables ***
 ${xml}    xml
-@{cscs}    ATSpectrograph    LinearStage    MTMount    MTArchiver    ATArchiver    ATAOS    ATBuilding    DIMM    ATDome    ATDomeTrajectory    ATEEC    ATMCS    ATPneumatics    ATHeaderService    ATHexapod    ATMonochromator    ATWhiteLight    ATCamera    ATThermoelectricCooler    ATTCS    ATPtg    AOCLC    IOTA    MTGuider    MTCalCS    MTPtg    ATCalCS    EFDTransformationServer    Electrometer    EAS    LOVE    MTLaserTracker    MTCamera    CatchupArchiver    CBP    DomeADB    DomeAPS    DomeLWS    DomeLouvers    DomeMONCS    DomeTHCS    Dome    EFD    Environment    MTHeaderService    Hexapod    HVAC    TunableLaser    MTM1M3    MTAOS    MTM2    MTVMS    PointingComponent    OCS    PromptProcessing    Rotator    Scheduler    Script    ScriptQueue    FiberSpectrograph    Sequencer    SummitFacility    MTOFC    MTWEP    MTTCS    MTDomeTrajectory    MTEEC    GenericCamera    Test
+@{cscs}    ATSpectrograph    LinearStage    MTMount    MTArchiver    ATArchiver    ATAOS    ATBuilding    DIMM    ATDome    ATDomeTrajectory    ATEEC    ATMCS    ATPneumatics    ATHeaderService    ATHexapod    ATMonochromator    ATWhiteLight    ATCamera    ATThermoelectricCooler    ATTCS    ATPtg    IOTA    MTGuider    MTCalCS    MTPtg    ATCalCS    EFDTransformationServer    Electrometer    EAS    LOVE    MTLaserTracker    MTCamera    CatchupArchiver    CBP    DomeADB    DomeAPS    DomeLWS    DomeLouvers    DomeMONCS    DomeTHCS    Dome    EFD    Environment    MTHeaderService    Hexapod    HVAC    TunableLaser    MTM1M3    MTM1M3TS    MTAOS    MTM2    MTVMS    PointingComponent    OCS    PromptProcessing    Rotator    Scheduler    Script    ScriptQueue    FiberSpectrograph    Sequencer    SummitFacility    MTTCS    MTDomeTrajectory    MTEEC    GenericCamera    Test
 
 *** Test Cases ***
 Validate SALSubsystems.xml
@@ -23,7 +23,7 @@ Validate Number of Defined CSCs
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml |sort |wc -l |sed -e 's/ //g'
 	Log    ${output}
-	Should Be Equal As Integers    ${output}    69
+	Should Be Equal As Integers    ${output}    67
 
 Validate SAL Dictionary Does Not Contain Duplicates
 	[Documentation]    Validate the SALSubsystems.xml file does not have any duplicate entries.
@@ -31,20 +31,6 @@ Validate SAL Dictionary Does Not Contain Duplicates
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml |uniq -d
 	Log    ${output}
 	Should Be Empty    ${output}
-
-Validate AOCLC Is Defined
-	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
-	[Tags]    smoke    AOCLC
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    AOCLC
-	Should Contain    ${cscs}    ${csc}
-
-Validate AOCLC Generics Element
-	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
-	[Tags]    smoke    AOCLC
-	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='AOCLC']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
-	Log    AOCLC has Generics: ${output}
-	Should Be Equal As Strings    ${output}    yes
 
 Validate ATAOS Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
@@ -746,6 +732,20 @@ Validate MTM1M3 Generics Element
 	Log    MTM1M3 has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
+Validate MTM1M3TS Is Defined
+	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
+	[Tags]    smoke    MTM1M3TS
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    MTM1M3TS
+	Should Contain    ${cscs}    ${csc}
+
+Validate MTM1M3TS Generics Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
+	[Tags]    smoke    MTM1M3TS
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='MTM1M3TS']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    MTM1M3TS has Generics: ${output}
+	Should Be Equal As Strings    ${output}    yes
+
 Validate MTM2 Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
 	[Tags]    smoke    MTM2
@@ -774,20 +774,6 @@ Validate MTMount Generics Element
 	Log    MTMount has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
-Validate MTOFC Is Defined
-	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
-	[Tags]    smoke    MTOFC
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    MTOFC
-	Should Contain    ${cscs}    ${csc}
-
-Validate MTOFC Generics Element
-	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
-	[Tags]    smoke    MTOFC
-	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='MTOFC']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
-	Log    MTOFC has Generics: ${output}
-	Should Be Equal As Strings    ${output}    yes
-
 Validate MTPtg Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
 	[Tags]    smoke    MTPtg
@@ -814,20 +800,6 @@ Validate MTTCS Generics Element
 	[Tags]    smoke    MTTCS    DM-17357
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='MTTCS']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    MTTCS has Generics: ${output}
-	Should Be Equal As Strings    ${output}    yes
-
-Validate MTWEP Is Defined
-	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
-	[Tags]    smoke    MTWEP
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    MTWEP
-	Should Contain    ${cscs}    ${csc}
-
-Validate MTWEP Generics Element
-	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
-	[Tags]    smoke    MTWEP
-	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='MTWEP']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
-	Log    MTWEP has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
 Validate MTVMS Is Defined

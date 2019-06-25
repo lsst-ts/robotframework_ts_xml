@@ -200,6 +200,12 @@ Validate MTM1M3 Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   MTM1M3_Commands.xml - valid
 
+Validate MTM1M3TS Commands XML file
+	[Tags]    smoke    MTM1M3TS
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/MTM1M3TS/MTM1M3TS_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   MTM1M3TS_Commands.xml - valid
+
 Validate MTM2 Commands XML file
 	[Tags]    smoke    MTM2
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/MTM2/MTM2_Commands.xml
@@ -211,12 +217,6 @@ Validate MTMount Commands XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/MTMount/MTMount_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   MTMount_Commands.xml - valid
-
-Validate MTOFC Commands XML file
-	[Tags]    smoke    MTOFC
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/MTOFC/MTOFC_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   MTOFC_Commands.xml - valid
 
 Validate MTPtg Commands XML file
 	[Tags]    smoke    MTPtg

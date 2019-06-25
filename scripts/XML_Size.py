@@ -90,7 +90,7 @@ for subsystem in xml_common.subsystems:
 			file.write("\n")
 
 			file.write("Validate " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType.rstrip("s") + " " + topic.decode("utf-8") + " Topic Columns\n")
-			file.write("\t[Documentation]    Validate the " + topic.decode("utf-8") + " topic has less than 4096 total arguments, each representing a column in the EFD.s\n")
+			file.write("\t[Documentation]    Validate the " + topic.decode("utf-8") + " topic has less than 4096 total arguments, each representing a column in the EFDs.\n")
 			file.write("\t[Tags]    smoke    " + xml_common.CapitalizeSubsystem(subsystem) + col_skipped + "\n")
 			file.write("\t[Setup]    Set Test Variable    ${total}    ${0}\n")
 			file.write("\tComment    Get the Count of each argument for the topic.\n")
