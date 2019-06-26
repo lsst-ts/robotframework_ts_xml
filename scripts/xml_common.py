@@ -19,7 +19,7 @@ subsystems = [	'ATAOS', 'ATArchiver', 'ATBuilding', 'ATCalCS', 'ATCamera', 'ATDo
 				'MTAOS', 'MTArchiver', 'MTCalCS', 'MTCamera', 'MTDomeTrajectory', 'MTEEC', 'MTGuider', 
 				'MTHeaderService', 'MTLaserTracker', 'MTM1M3', 'MTM1M3TS', 'MTM2', 'MTMount', 'MTPtg', 'MTTCS', 'MTVMS', 
 				'OCS', 'PointingComponent', 'PromptProcessing', 'Rotator', 'Scheduler',
-				'Script', 'ScriptQueue', 'Sequencer', 'SummitFacility', 'Test', 'TunableLaser']
+				'Script', 'ScriptQueue', 'Sequencer', 'SummitFacility', 'Test', 'TunableLaser', 'Watcher' ]
 
 # =========
 # Functions

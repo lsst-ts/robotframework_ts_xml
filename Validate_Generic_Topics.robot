@@ -1057,6 +1057,24 @@ Validate TunableLaser_Commands.xml Does Not Contain Generic Commands
 	:FOR    ${generic}    IN    @{GenericCommands}
 	\    Run Keyword And Continue On Failure    Test Commands    ${commands}    TunableLaser_command_${generic}
 
+Validate Watcher_Events.xml Does Not Contain Generic Events
+	[Documentation]    Validate the Watcher_Events.xml does not contain Generic Events.
+	[Tags]    smoke    
+	Comment    Get the CSC Events.
+	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/Watcher/Watcher_Events.xml
+	Log    ${events}
+	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    Watcher_logevent_${item}
+	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    Watcher_logevent_${item}
+
+Validate Watcher_Commands.xml Does Not Contain Generic Commands
+	[Documentation]    Validate the Watcher_Commands.xml does not contain Generic Commands.
+	[Tags]    smoke    
+	Comment    Get the CSC Commands.
+	${commands}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/Watcher/Watcher_Commands.xml
+	:FOR    ${generic}    IN    @{GenericCommands}
+	\    Run Keyword And Continue On Failure    Test Commands    ${commands}    Watcher_command_${generic}
+
 *** Keywords ***
 Create the Generic Commands Array
 	[Tags]    smoke

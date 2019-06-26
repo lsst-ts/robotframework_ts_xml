@@ -1191,3 +1191,17 @@ Validate TunableLaser Telemetry
 	Log    ${output}
 	Should Contain    ${output}   TunableLaser_Telemetry.xml - valid
 
+Validate Watcher Commands
+	[Documentation]    Validate the Watcher Commands XML file.
+	[Tags]    smoke    Watcher
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/Watcher/Watcher_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   Watcher_Commands.xml - valid
+
+Validate Watcher Events
+	[Documentation]    Validate the Watcher Events XML file.
+	[Tags]    smoke    Watcher
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/Watcher/Watcher_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   Watcher_Events.xml - valid
+

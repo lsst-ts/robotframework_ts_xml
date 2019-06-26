@@ -897,3 +897,19 @@ Validate TunableLaser Events XML Topic Alisases
 	Log Many    ${topic_name}    ${alias}
 	Should Match    ${topic_name}    ${alias}
 
+Validate Watcher Commands XML Topic Alisases
+	[Documentation]    Validate the Watcher Commands XML Topic Alisases.
+	[Tags]    smoke    Watcher
+	${topic_name}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/Watcher/Watcher_Commands.xml |cut -d'_' -f 3-
+	${alias}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/Watcher/Watcher_Commands.xml
+	Log Many    ${topic_name}    ${alias}
+	Should Match    ${topic_name}    ${alias}
+
+Validate Watcher Events XML Topic Alisases
+	[Documentation]    Validate the Watcher Events XML Topic Alisases.
+	[Tags]    smoke    Watcher
+	${topic_name}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/Watcher/Watcher_Events.xml |cut -d'_' -f 3-
+	${alias}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/Watcher/Watcher_Events.xml
+	Log Many    ${topic_name}    ${alias}
+	Should Match    ${topic_name}    ${alias}
+
