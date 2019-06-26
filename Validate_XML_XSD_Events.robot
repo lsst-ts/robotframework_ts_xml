@@ -398,3 +398,9 @@ Validate TunableLaser Events XML file
 	Log    ${output}
 	Should Contain    ${output}   TunableLaser_Events.xml - valid
 
+Validate Watcher Events XML file
+	[Tags]    smoke    Watcher
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/Watcher/Watcher_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   Watcher_Events.xml - valid
+

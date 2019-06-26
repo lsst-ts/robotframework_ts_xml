@@ -2707,6 +2707,44 @@ Validate ATCamera Event ATCamera_logevent_wrebSettingsApplied Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
+Validate ATCamera Event ATCamera_logevent_softwareVersionsSettingsApplied Topic Byte Size
+	[Documentation]    Validate the ATCamera_logevent_softwareVersionsSettingsApplied topic is less than 65536 bytes in total.
+	[Tags]    smoke    ATCamera
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[24]/item)" -n ${folder}/sal_interfaces/ATCamera/ATCamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[24]/item/Count" -v . -n ${folder}/sal_interfaces/ATCamera/ATCamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[24]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATCamera/ATCamera_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate ATCamera Event ATCamera_logevent_softwareVersionsSettingsApplied Topic Columns
+	[Documentation]    Validate the ATCamera_logevent_softwareVersionsSettingsApplied topic has less than 4096 total arguments, each representing a column in the EFDs.
+	[Tags]    smoke    ATCamera
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[24]/item)" -n ${folder}/sal_interfaces/ATCamera/ATCamera_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[24]/item/Count" -v . -n ${folder}/sal_interfaces/ATCamera/ATCamera_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
 Validate ATCamera Telemetry ATCamera_heartbeat Topic Byte Size
 	[Documentation]    Validate the ATCamera_heartbeat topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATCamera
@@ -2853,6 +2891,44 @@ Validate ATCamera Telemetry ATCamera_wrebPower Topic Columns
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[4]/item)" -n ${folder}/sal_interfaces/ATCamera/ATCamera_Telemetry.xml
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[4]/item/Count" -v . -n ${folder}/sal_interfaces/ATCamera/ATCamera_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate ATCamera Telemetry ATCamera_vacuum Topic Byte Size
+	[Documentation]    Validate the ATCamera_vacuum topic is less than 65536 bytes in total.
+	[Tags]    smoke    ATCamera
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[5]/item)" -n ${folder}/sal_interfaces/ATCamera/ATCamera_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[5]/item/Count" -v . -n ${folder}/sal_interfaces/ATCamera/ATCamera_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATCamera/ATCamera_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate ATCamera Telemetry ATCamera_vacuum Topic Columns
+	[Documentation]    Validate the ATCamera_vacuum topic has less than 4096 total arguments, each representing a column in the EFDs.
+	[Tags]    smoke    ATCamera
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[5]/item)" -n ${folder}/sal_interfaces/ATCamera/ATCamera_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[5]/item/Count" -v . -n ${folder}/sal_interfaces/ATCamera/ATCamera_Telemetry.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -3999,8 +4075,8 @@ Validate ATEEC Event ATEEC_logevent_heartbeat Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATHeaderService Event ATHeaderService_logevent_heartbeat Topic Byte Size
-	[Documentation]    Validate the ATHeaderService_logevent_heartbeat topic is less than 65536 bytes in total.
+Validate ATHeaderService Event ATHeaderService_logevent_offlineDetailedState Topic Byte Size
+	[Documentation]    Validate the ATHeaderService_logevent_offlineDetailedState topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATHeaderService
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4024,8 +4100,8 @@ Validate ATHeaderService Event ATHeaderService_logevent_heartbeat Topic Byte Siz
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATHeaderService Event ATHeaderService_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the ATHeaderService_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ATHeaderService Event ATHeaderService_logevent_offlineDetailedState Topic Columns
+	[Documentation]    Validate the ATHeaderService_logevent_offlineDetailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATHeaderService
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4037,8 +4113,8 @@ Validate ATHeaderService Event ATHeaderService_logevent_heartbeat Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATHeaderService Event ATHeaderService_logevent_rejectedCommand Topic Byte Size
-	[Documentation]    Validate the ATHeaderService_logevent_rejectedCommand topic is less than 65536 bytes in total.
+Validate ATHeaderService Event ATHeaderService_logevent_heartbeat Topic Byte Size
+	[Documentation]    Validate the ATHeaderService_logevent_heartbeat topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATHeaderService
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4062,8 +4138,8 @@ Validate ATHeaderService Event ATHeaderService_logevent_rejectedCommand Topic By
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATHeaderService Event ATHeaderService_logevent_rejectedCommand Topic Columns
-	[Documentation]    Validate the ATHeaderService_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ATHeaderService Event ATHeaderService_logevent_heartbeat Topic Columns
+	[Documentation]    Validate the ATHeaderService_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATHeaderService
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4075,8 +4151,8 @@ Validate ATHeaderService Event ATHeaderService_logevent_rejectedCommand Topic Co
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATHeaderService Event ATHeaderService_logevent_largeFileObjectAvailable Topic Byte Size
-	[Documentation]    Validate the ATHeaderService_logevent_largeFileObjectAvailable topic is less than 65536 bytes in total.
+Validate ATHeaderService Event ATHeaderService_logevent_rejectedCommand Topic Byte Size
+	[Documentation]    Validate the ATHeaderService_logevent_rejectedCommand topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATHeaderService
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4100,8 +4176,8 @@ Validate ATHeaderService Event ATHeaderService_logevent_largeFileObjectAvailable
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATHeaderService Event ATHeaderService_logevent_largeFileObjectAvailable Topic Columns
-	[Documentation]    Validate the ATHeaderService_logevent_largeFileObjectAvailable topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ATHeaderService Event ATHeaderService_logevent_rejectedCommand Topic Columns
+	[Documentation]    Validate the ATHeaderService_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATHeaderService
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4113,8 +4189,8 @@ Validate ATHeaderService Event ATHeaderService_logevent_largeFileObjectAvailable
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATHeaderService Event ATHeaderService_logevent_settingsApplied Topic Byte Size
-	[Documentation]    Validate the ATHeaderService_logevent_settingsApplied topic is less than 65536 bytes in total.
+Validate ATHeaderService Event ATHeaderService_logevent_largeFileObjectAvailable Topic Byte Size
+	[Documentation]    Validate the ATHeaderService_logevent_largeFileObjectAvailable topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATHeaderService
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4138,13 +4214,51 @@ Validate ATHeaderService Event ATHeaderService_logevent_settingsApplied Topic By
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATHeaderService Event ATHeaderService_logevent_settingsApplied Topic Columns
-	[Documentation]    Validate the ATHeaderService_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ATHeaderService Event ATHeaderService_logevent_largeFileObjectAvailable Topic Columns
+	[Documentation]    Validate the ATHeaderService_logevent_largeFileObjectAvailable topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATHeaderService
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/ATHeaderService/ATHeaderService_Events.xml
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/ATHeaderService/ATHeaderService_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate ATHeaderService Event ATHeaderService_logevent_settingsApplied Topic Byte Size
+	[Documentation]    Validate the ATHeaderService_logevent_settingsApplied topic is less than 65536 bytes in total.
+	[Tags]    smoke    ATHeaderService
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/ATHeaderService/ATHeaderService_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/ATHeaderService/ATHeaderService_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATHeaderService/ATHeaderService_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate ATHeaderService Event ATHeaderService_logevent_settingsApplied Topic Columns
+	[Documentation]    Validate the ATHeaderService_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFDs.
+	[Tags]    smoke    ATHeaderService
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/ATHeaderService/ATHeaderService_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/ATHeaderService/ATHeaderService_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -48415,6 +48529,120 @@ Validate TunableLaser Telemetry TunableLaser_wavelength Topic Columns
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/TunableLaser/TunableLaser_Telemetry.xml
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[2]/item/Count" -v . -n ${folder}/sal_interfaces/TunableLaser/TunableLaser_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Watcher Command Watcher_command_acknowledge Topic Byte Size
+	[Documentation]    Validate the Watcher_command_acknowledge topic is less than 65536 bytes in total.
+	[Tags]    smoke    Watcher
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/Watcher/Watcher_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/Count" -v . -n ${folder}/sal_interfaces/Watcher/Watcher_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/Watcher/Watcher_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Watcher Command Watcher_command_acknowledge Topic Columns
+	[Documentation]    Validate the Watcher_command_acknowledge topic has less than 4096 total arguments, each representing a column in the EFDs.
+	[Tags]    smoke    Watcher
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[1]/item)" -n ${folder}/sal_interfaces/Watcher/Watcher_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[1]/item/Count" -v . -n ${folder}/sal_interfaces/Watcher/Watcher_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Watcher Event Watcher_logevent_heartbeat Topic Byte Size
+	[Documentation]    Validate the Watcher_logevent_heartbeat topic is less than 65536 bytes in total.
+	[Tags]    smoke    Watcher
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/Watcher/Watcher_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[1]/item/Count" -v . -n ${folder}/sal_interfaces/Watcher/Watcher_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[1]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/Watcher/Watcher_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Watcher Event Watcher_logevent_heartbeat Topic Columns
+	[Documentation]    Validate the Watcher_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
+	[Tags]    smoke    Watcher
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/Watcher/Watcher_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[1]/item/Count" -v . -n ${folder}/sal_interfaces/Watcher/Watcher_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate Watcher Event Watcher_logevent_alarm Topic Byte Size
+	[Documentation]    Validate the Watcher_logevent_alarm topic is less than 65536 bytes in total.
+	[Tags]    smoke    Watcher
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/Watcher/Watcher_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/Count" -v . -n ${folder}/sal_interfaces/Watcher/Watcher_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/Watcher/Watcher_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate Watcher Event Watcher_logevent_alarm Topic Columns
+	[Documentation]    Validate the Watcher_logevent_alarm topic has less than 4096 total arguments, each representing a column in the EFDs.
+	[Tags]    smoke    Watcher
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/Watcher/Watcher_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/Count" -v . -n ${folder}/sal_interfaces/Watcher/Watcher_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}

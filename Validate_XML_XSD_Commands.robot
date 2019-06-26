@@ -284,3 +284,9 @@ Validate TunableLaser Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   TunableLaser_Commands.xml - valid
 
+Validate Watcher Commands XML file
+	[Tags]    smoke    Watcher
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/Watcher/Watcher_Commands.xml
+	Log    ${output}
+	Should Contain    ${output}   Watcher_Commands.xml - valid
+

@@ -8,7 +8,7 @@ Resource    Global_Vars.robot
 
 *** Variables ***
 ${xml}    xml
-@{cscs}    ATSpectrograph    LinearStage    MTMount    MTArchiver    ATArchiver    ATAOS    ATBuilding    DIMM    ATDome    ATDomeTrajectory    ATEEC    ATMCS    ATPneumatics    ATHeaderService    ATHexapod    ATMonochromator    ATWhiteLight    ATCamera    ATThermoelectricCooler    ATTCS    ATPtg    IOTA    MTGuider    MTCalCS    MTPtg    ATCalCS    EFDTransformationServer    Electrometer    EAS    LOVE    MTLaserTracker    MTCamera    CatchupArchiver    CBP    DomeADB    DomeAPS    DomeLWS    DomeLouvers    DomeMONCS    DomeTHCS    Dome    EFD    Environment    MTHeaderService    Hexapod    HVAC    TunableLaser    MTM1M3    MTM1M3TS    MTAOS    MTM2    MTVMS    PointingComponent    OCS    PromptProcessing    Rotator    Scheduler    Script    ScriptQueue    FiberSpectrograph    Sequencer    SummitFacility    MTTCS    MTDomeTrajectory    MTEEC    GenericCamera    Test
+@{cscs}    ATSpectrograph    LinearStage    MTMount    MTArchiver    ATArchiver    ATAOS    ATBuilding    DIMM    ATDome    ATDomeTrajectory    ATEEC    ATMCS    ATPneumatics    ATHeaderService    ATHexapod    ATMonochromator    ATWhiteLight    ATCamera    ATThermoelectricCooler    ATTCS    ATPtg    IOTA    MTGuider    MTCalCS    MTPtg    ATCalCS    EFDTransformationServer    Electrometer    EAS    LOVE    MTLaserTracker    MTCamera    CatchupArchiver    CBP    DomeADB    DomeAPS    DomeLWS    DomeLouvers    DomeMONCS    DomeTHCS    Dome    EFD    Environment    MTHeaderService    Hexapod    HVAC    TunableLaser    MTM1M3    MTM1M3TS    MTAOS    MTM2    MTVMS    PointingComponent    OCS    PromptProcessing    Rotator    Scheduler    Script    ScriptQueue    FiberSpectrograph    Sequencer    SummitFacility    MTTCS    MTDomeTrajectory    MTEEC    GenericCamera    Test    Watcher
 
 *** Test Cases ***
 Validate SALSubsystems.xml
@@ -23,7 +23,7 @@ Validate Number of Defined CSCs
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml |sort |wc -l |sed -e 's/ //g'
 	Log    ${output}
-	Should Be Equal As Integers    ${output}    67
+	Should Be Equal As Integers    ${output}    68
 
 Validate SAL Dictionary Does Not Contain Duplicates
 	[Documentation]    Validate the SALSubsystems.xml file does not have any duplicate entries.
@@ -968,5 +968,19 @@ Validate TunableLaser Generics Element
 	[Tags]    smoke    TunableLaser
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='TunableLaser']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    TunableLaser has Generics: ${output}
+	Should Be Equal As Strings    ${output}    yes
+
+Validate Watcher Is Defined
+	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
+	[Tags]    smoke    Watcher
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    Watcher
+	Should Contain    ${cscs}    ${csc}
+
+Validate Watcher Generics Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
+	[Tags]    smoke    Watcher
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='Watcher']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    Watcher has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
