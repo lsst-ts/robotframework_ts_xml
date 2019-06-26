@@ -5,7 +5,7 @@ Resource    Global_Vars.robot
 
 *** Test Cases ***
 Validate XML Version File
-	[Documentation]    Validate the AXML Version file.
+	[Documentation]    Validate the XML Version file.
 	[Tags]    smoke
 	${output}=    Run    cat ${folder}/VERSION |tr -d '[:space:]'
 	Log Many    ${output}    ${version}
