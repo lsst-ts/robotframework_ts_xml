@@ -28,4 +28,6 @@ echo "Reserved Words tests..."; python3.6 XML_ReservedWords.py;
 echo "Topic Naming tests..."; python3.6 Topic_Naming.py; 
 echo "Topic Alias tests..."; python3.6 Alias.py; 
 echo "Attribute Naming tests..."; python3.6 Attribute_Naming.py; 
+echo "Attribute Unit tests..."; python3.6 Units.py;
+echo "Attribute Description tests..."; python3.6 Attribute_Description.py;
 echo "=======Done======="
