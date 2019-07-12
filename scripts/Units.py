@@ -48,7 +48,7 @@ for subsystem in xml_common.subsystems:
 		file.write("\t[Documentation]    Validate the " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType + " XML Units conform to standards.\n")
 		file.write("\t[Tags]    smoke    " + xml_common.CapitalizeSubsystem(subsystem) + "\n")
 		file.write("\t${output}=    Run    ${xml} sel -t -m \"//SAL" + messageType.rstrip('s') + "Set/SAL" + messageType.rstrip('s') + "/item/Units\" -v . -n ${folder}/sal_interfaces/" + subsystem + "/" + subsystem + "_" + messageType + ".xml |awk 'NF > 0' |uniq\n")
-		file.write("\t@{units}=    Split String    ${output}\n")
+		file.write("\t@{units}=    Split String    ${output}    ${\\n}\n")
 		file.write("\tLog    ${units}\n")
 		file.write("\t: FOR    ${unit}    IN    @{units}\n")
 		file.write("\t\   ${output}=    Run Keyword If    \"${unit}\" == \"unitless\"    Set Variable    Parameter is unitless\n")
