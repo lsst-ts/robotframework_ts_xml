@@ -8,7 +8,7 @@ Resource    Global_Vars.robot
 
 *** Variables ***
 ${xml}    xml
-@{cscs}    ATSpectrograph    LinearStage    MTMount    MTArchiver    ATArchiver    ATAOS    ATBuilding    DIMM    ATDome    ATDomeTrajectory    ATEEC    ATMCS    ATPneumatics    ATHeaderService    ATHexapod    ATMonochromator    ATWhiteLight    ATCamera    ATThermoelectricCooler    ATTCS    ATPtg    IOTA    MTGuider    MTCalCS    MTPtg    ATCalCS    EFDTransformationServer    Electrometer    EAS    LOVE    MTLaserTracker    MTCamera    CatchupArchiver    CBP    DomeADB    DomeAPS    DomeLWS    DomeLouvers    DomeMONCS    DomeTHCS    Dome    EFD    Environment    MTHeaderService    Hexapod    HVAC    TunableLaser    MTM1M3    MTM1M3TS    MTAOS    MTM2    MTVMS    PointingComponent    OCS    PromptProcessing    Rotator    Scheduler    Script    ScriptQueue    FiberSpectrograph    Sequencer    SummitFacility    MTTCS    MTDomeTrajectory    MTEEC    GenericCamera    Test    Watcher
+@{cscs}    ATSpectrograph    LinearStage    MTMount    MTArchiver    ATArchiver    ATAOS    ATBuilding    DIMM    ATDome    ATDomeTrajectory    ATEEC    ATMCS    ATPneumatics    ATHeaderService    ATHexapod    ATMonochromator    ATWhiteLight    ATCamera    ATThermoelectricCooler    ATTCS    ATPtg    IOTA    MTGuider    MTCalCS    MTPtg    ATCalCS    EFDTransformationServer    Electrometer    EAS    LOVE    MTLaserTracker    MTCamera    CatchupArchiver    CBP    Dome    EFD    Environment    MTHeaderService    Hexapod    HVAC    TunableLaser    MTM1M3    MTM1M3TS    MTAOS    MTM2    MTVMS    PointingComponent    OCS    PromptProcessing    Rotator    Scheduler    Script    ScriptQueue    FiberSpectrograph    Sequencer    SummitFacility    MTTCS    MTDomeTrajectory    MTEEC    GenericCamera    Test    Watcher
 
 *** Test Cases ***
 Validate SALSubsystems.xml
@@ -23,7 +23,7 @@ Validate Number of Defined CSCs
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml |sort |wc -l |sed -e 's/ //g'
 	Log    ${output}
-	Should Be Equal As Integers    ${output}    68
+	Should Be Equal As Integers    ${output}    62
 
 Validate SAL Dictionary Does Not Contain Duplicates
 	[Documentation]    Validate the SALSubsystems.xml file does not have any duplicate entries.
@@ -338,90 +338,6 @@ Validate Dome Generics Element
 	[Tags]    smoke    Dome
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='Dome']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    Dome has Generics: ${output}
-	Should Be Equal As Strings    ${output}    yes
-
-Validate DomeADB Is Defined
-	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
-	[Tags]    smoke    DomeADB
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    DomeADB
-	Should Contain    ${cscs}    ${csc}
-
-Validate DomeADB Generics Element
-	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
-	[Tags]    smoke    DomeADB
-	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='DomeADB']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
-	Log    DomeADB has Generics: ${output}
-	Should Be Equal As Strings    ${output}    yes
-
-Validate DomeAPS Is Defined
-	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
-	[Tags]    smoke    DomeAPS
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    DomeAPS
-	Should Contain    ${cscs}    ${csc}
-
-Validate DomeAPS Generics Element
-	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
-	[Tags]    smoke    DomeAPS
-	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='DomeAPS']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
-	Log    DomeAPS has Generics: ${output}
-	Should Be Equal As Strings    ${output}    yes
-
-Validate DomeLouvers Is Defined
-	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
-	[Tags]    smoke    DomeLouvers
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    DomeLouvers
-	Should Contain    ${cscs}    ${csc}
-
-Validate DomeLouvers Generics Element
-	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
-	[Tags]    smoke    DomeLouvers
-	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='DomeLouvers']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
-	Log    DomeLouvers has Generics: ${output}
-	Should Be Equal As Strings    ${output}    yes
-
-Validate DomeLWS Is Defined
-	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
-	[Tags]    smoke    DomeLWS
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    DomeLWS
-	Should Contain    ${cscs}    ${csc}
-
-Validate DomeLWS Generics Element
-	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
-	[Tags]    smoke    DomeLWS
-	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='DomeLWS']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
-	Log    DomeLWS has Generics: ${output}
-	Should Be Equal As Strings    ${output}    yes
-
-Validate DomeMONCS Is Defined
-	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
-	[Tags]    smoke    DomeMONCS
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    DomeMONCS
-	Should Contain    ${cscs}    ${csc}
-
-Validate DomeMONCS Generics Element
-	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
-	[Tags]    smoke    DomeMONCS
-	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='DomeMONCS']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
-	Log    DomeMONCS has Generics: ${output}
-	Should Be Equal As Strings    ${output}    yes
-
-Validate DomeTHCS Is Defined
-	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
-	[Tags]    smoke    DomeTHCS
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    DomeTHCS
-	Should Contain    ${cscs}    ${csc}
-
-Validate DomeTHCS Generics Element
-	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
-	[Tags]    smoke    DomeTHCS
-	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='DomeTHCS']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
-	Log    DomeTHCS has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
 Validate EAS Is Defined

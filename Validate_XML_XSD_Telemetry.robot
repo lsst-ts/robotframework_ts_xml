@@ -122,42 +122,6 @@ Validate Dome Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   Dome_Telemetry.xml - valid
 
-Validate DomeADB Telemetry XML file
-	[Tags]    smoke    DomeADB
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/DomeADB/DomeADB_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   DomeADB_Telemetry.xml - valid
-
-Validate DomeAPS Telemetry XML file
-	[Tags]    smoke    DomeAPS
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/DomeAPS/DomeAPS_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   DomeAPS_Telemetry.xml - valid
-
-Validate DomeLouvers Telemetry XML file
-	[Tags]    smoke    DomeLouvers
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   DomeLouvers_Telemetry.xml - valid
-
-Validate DomeLWS Telemetry XML file
-	[Tags]    smoke    DomeLWS
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/DomeLWS/DomeLWS_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   DomeLWS_Telemetry.xml - valid
-
-Validate DomeMONCS Telemetry XML file
-	[Tags]    smoke    DomeMONCS
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   DomeMONCS_Telemetry.xml - valid
-
-Validate DomeTHCS Telemetry XML file
-	[Tags]    smoke    DomeTHCS
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   DomeTHCS_Telemetry.xml - valid
-
 Validate EAS Telemetry XML file
 	[Tags]    smoke    EAS
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/EAS/EAS_Telemetry.xml

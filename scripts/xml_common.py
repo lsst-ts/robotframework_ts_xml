@@ -12,8 +12,7 @@ import os
 
 subsystems = [	'ATAOS', 'ATArchiver', 'ATBuilding', 'ATCalCS', 'ATCamera', 'ATDome', 'ATDomeTrajectory', 'ATEEC', 
 				'ATHeaderService', 'ATHexapod', 'ATMCS', 'ATMonochromator', 'ATPneumatics', 'ATPtg', 'ATSpectrograph', 'ATTCS', 
-				'ATThermoelectricCooler', 'ATWhiteLight', 'CatchupArchiver', 'CBP', 'DIMM', 
-				'Dome', 'DomeADB', 'DomeAPS', 'DomeLouvers', 'DomeLWS', 'DomeMONCS', 'DomeTHCS', 
+				'ATThermoelectricCooler', 'ATWhiteLight', 'CatchupArchiver', 'CBP', 'DIMM', 'Dome',
 				'EAS', 'EFD', 'EFDTransformationServer', 'Electrometer', 'Environment', 'FiberSpectrograph', 
 				'GenericCamera', 'IOTA', 'Hexapod', 'HVAC', 'LinearStage', 'LOVE',
 				'MTAOS', 'MTArchiver', 'MTCalCS', 'MTCamera', 'MTDomeTrajectory', 'MTEEC', 'MTGuider', 
