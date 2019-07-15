@@ -134,42 +134,6 @@ Validate Dome Events XML file
 	Log    ${output}
 	Should Contain    ${output}   Dome_Events.xml - valid
 
-Validate DomeADB Events XML file
-	[Tags]    smoke    DomeADB
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   DomeADB_Events.xml - valid
-
-Validate DomeAPS Events XML file
-	[Tags]    smoke    DomeAPS
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   DomeAPS_Events.xml - valid
-
-Validate DomeLouvers Events XML file
-	[Tags]    smoke    DomeLouvers
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   DomeLouvers_Events.xml - valid
-
-Validate DomeLWS Events XML file
-	[Tags]    smoke    DomeLWS
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   DomeLWS_Events.xml - valid
-
-Validate DomeMONCS Events XML file
-	[Tags]    smoke    DomeMONCS
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   DomeMONCS_Events.xml - valid
-
-Validate DomeTHCS Events XML file
-	[Tags]    smoke    DomeTHCS
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   DomeTHCS_Events.xml - valid
-
 Validate EAS Events XML file
 	[Tags]    smoke    EAS
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/EAS/EAS_Events.xml
@@ -397,4 +361,10 @@ Validate TunableLaser Events XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/TunableLaser/TunableLaser_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   TunableLaser_Events.xml - valid
+
+Validate Watcher Events XML file
+	[Tags]    smoke    Watcher
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/Watcher/Watcher_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   Watcher_Events.xml - valid
 

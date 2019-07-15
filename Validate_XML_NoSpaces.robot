@@ -1576,510 +1576,6 @@ Validate Dome Telemetry <EFDB_Name> element
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate DomeADB Commands <Subsystem> element
-	[Documentation]    Validate the DomeADB Commands <Subsystem> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeADB
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Subsystem" -v . -n ${folder}/sal_interfaces/DomeADB/DomeADB_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeADB Commands <EFDB_Topic> element
-	[Documentation]    Validate the DomeADB Commands <EFDB_Topic> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeADB
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/DomeADB/DomeADB_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeADB Commands <Alias> element
-	[Documentation]    Validate the DomeADB Commands <Alias> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeADB
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/DomeADB/DomeADB_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeADB Commands <EFDB_Name> element
-	[Documentation]    Validate the DomeADB Commands <EFDB_Name> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeADB
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/DomeADB/DomeADB_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeADB Events <Subsystem> element
-	[Documentation]    Validate the DomeADB Events <Subsystem> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeADB
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Subsystem" -v . -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeADB Events <EFDB_Topic> element
-	[Documentation]    Validate the DomeADB Events <EFDB_Topic> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeADB
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeADB Events <Alias> element
-	[Documentation]    Validate the DomeADB Events <Alias> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeADB
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeADB Events <EFDB_Name> element
-	[Documentation]    Validate the DomeADB Events <EFDB_Name> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeADB
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeADB Telemetry <Subsystem> element
-	[Documentation]    Validate the DomeADB Telemetry <Subsystem> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeADB
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Subsystem" -v . -n ${folder}/sal_interfaces/DomeADB/DomeADB_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeADB Telemetry <EFDB_Topic> element
-	[Documentation]    Validate the DomeADB Telemetry <EFDB_Topic> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeADB
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/EFDB_Topic" -v . -n ${folder}/sal_interfaces/DomeADB/DomeADB_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeADB Telemetry <Alias> element
-	[Documentation]    Validate the DomeADB Telemetry <Alias> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeADB
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/DomeADB/DomeADB_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeADB Telemetry <EFDB_Name> element
-	[Documentation]    Validate the DomeADB Telemetry <EFDB_Name> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeADB
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/DomeADB/DomeADB_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeAPS Commands <Subsystem> element
-	[Documentation]    Validate the DomeAPS Commands <Subsystem> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeAPS
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Subsystem" -v . -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeAPS Commands <EFDB_Topic> element
-	[Documentation]    Validate the DomeAPS Commands <EFDB_Topic> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeAPS
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeAPS Commands <Alias> element
-	[Documentation]    Validate the DomeAPS Commands <Alias> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeAPS
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeAPS Commands <EFDB_Name> element
-	[Documentation]    Validate the DomeAPS Commands <EFDB_Name> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeAPS
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeAPS Events <Subsystem> element
-	[Documentation]    Validate the DomeAPS Events <Subsystem> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeAPS
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Subsystem" -v . -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeAPS Events <EFDB_Topic> element
-	[Documentation]    Validate the DomeAPS Events <EFDB_Topic> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeAPS
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeAPS Events <Alias> element
-	[Documentation]    Validate the DomeAPS Events <Alias> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeAPS
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeAPS Events <EFDB_Name> element
-	[Documentation]    Validate the DomeAPS Events <EFDB_Name> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeAPS
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeAPS Telemetry <Subsystem> element
-	[Documentation]    Validate the DomeAPS Telemetry <Subsystem> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeAPS
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Subsystem" -v . -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeAPS Telemetry <EFDB_Topic> element
-	[Documentation]    Validate the DomeAPS Telemetry <EFDB_Topic> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeAPS
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/EFDB_Topic" -v . -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeAPS Telemetry <Alias> element
-	[Documentation]    Validate the DomeAPS Telemetry <Alias> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeAPS
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeAPS Telemetry <EFDB_Name> element
-	[Documentation]    Validate the DomeAPS Telemetry <EFDB_Name> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeAPS
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeLouvers Commands <Subsystem> element
-	[Documentation]    Validate the DomeLouvers Commands <Subsystem> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeLouvers
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Subsystem" -v . -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeLouvers Commands <EFDB_Topic> element
-	[Documentation]    Validate the DomeLouvers Commands <EFDB_Topic> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeLouvers
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeLouvers Commands <Alias> element
-	[Documentation]    Validate the DomeLouvers Commands <Alias> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeLouvers
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeLouvers Commands <EFDB_Name> element
-	[Documentation]    Validate the DomeLouvers Commands <EFDB_Name> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeLouvers
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeLouvers Events <Subsystem> element
-	[Documentation]    Validate the DomeLouvers Events <Subsystem> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeLouvers
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Subsystem" -v . -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeLouvers Events <EFDB_Topic> element
-	[Documentation]    Validate the DomeLouvers Events <EFDB_Topic> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeLouvers
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeLouvers Events <Alias> element
-	[Documentation]    Validate the DomeLouvers Events <Alias> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeLouvers
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeLouvers Events <EFDB_Name> element
-	[Documentation]    Validate the DomeLouvers Events <EFDB_Name> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeLouvers
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeLouvers Telemetry <Subsystem> element
-	[Documentation]    Validate the DomeLouvers Telemetry <Subsystem> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeLouvers
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Subsystem" -v . -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeLouvers Telemetry <EFDB_Topic> element
-	[Documentation]    Validate the DomeLouvers Telemetry <EFDB_Topic> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeLouvers
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/EFDB_Topic" -v . -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeLouvers Telemetry <Alias> element
-	[Documentation]    Validate the DomeLouvers Telemetry <Alias> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeLouvers
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeLouvers Telemetry <EFDB_Name> element
-	[Documentation]    Validate the DomeLouvers Telemetry <EFDB_Name> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeLouvers
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeLWS Commands <Subsystem> element
-	[Documentation]    Validate the DomeLWS Commands <Subsystem> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeLWS
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Subsystem" -v . -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeLWS Commands <EFDB_Topic> element
-	[Documentation]    Validate the DomeLWS Commands <EFDB_Topic> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeLWS
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeLWS Commands <Alias> element
-	[Documentation]    Validate the DomeLWS Commands <Alias> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeLWS
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeLWS Commands <EFDB_Name> element
-	[Documentation]    Validate the DomeLWS Commands <EFDB_Name> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeLWS
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeLWS Events <Subsystem> element
-	[Documentation]    Validate the DomeLWS Events <Subsystem> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeLWS
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Subsystem" -v . -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeLWS Events <EFDB_Topic> element
-	[Documentation]    Validate the DomeLWS Events <EFDB_Topic> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeLWS
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeLWS Events <Alias> element
-	[Documentation]    Validate the DomeLWS Events <Alias> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeLWS
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeLWS Events <EFDB_Name> element
-	[Documentation]    Validate the DomeLWS Events <EFDB_Name> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeLWS
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeLWS Telemetry <Subsystem> element
-	[Documentation]    Validate the DomeLWS Telemetry <Subsystem> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeLWS
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Subsystem" -v . -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeLWS Telemetry <EFDB_Topic> element
-	[Documentation]    Validate the DomeLWS Telemetry <EFDB_Topic> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeLWS
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/EFDB_Topic" -v . -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeLWS Telemetry <Alias> element
-	[Documentation]    Validate the DomeLWS Telemetry <Alias> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeLWS
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeLWS Telemetry <EFDB_Name> element
-	[Documentation]    Validate the DomeLWS Telemetry <EFDB_Name> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeLWS
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeMONCS Commands <Subsystem> element
-	[Documentation]    Validate the DomeMONCS Commands <Subsystem> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeMONCS
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Subsystem" -v . -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeMONCS Commands <EFDB_Topic> element
-	[Documentation]    Validate the DomeMONCS Commands <EFDB_Topic> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeMONCS
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeMONCS Commands <Alias> element
-	[Documentation]    Validate the DomeMONCS Commands <Alias> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeMONCS
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeMONCS Commands <EFDB_Name> element
-	[Documentation]    Validate the DomeMONCS Commands <EFDB_Name> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeMONCS
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeMONCS Events <Subsystem> element
-	[Documentation]    Validate the DomeMONCS Events <Subsystem> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeMONCS
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Subsystem" -v . -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeMONCS Events <EFDB_Topic> element
-	[Documentation]    Validate the DomeMONCS Events <EFDB_Topic> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeMONCS
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeMONCS Events <Alias> element
-	[Documentation]    Validate the DomeMONCS Events <Alias> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeMONCS
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeMONCS Events <EFDB_Name> element
-	[Documentation]    Validate the DomeMONCS Events <EFDB_Name> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeMONCS
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeMONCS Telemetry <Subsystem> element
-	[Documentation]    Validate the DomeMONCS Telemetry <Subsystem> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeMONCS
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Subsystem" -v . -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeMONCS Telemetry <EFDB_Topic> element
-	[Documentation]    Validate the DomeMONCS Telemetry <EFDB_Topic> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeMONCS
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/EFDB_Topic" -v . -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeMONCS Telemetry <Alias> element
-	[Documentation]    Validate the DomeMONCS Telemetry <Alias> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeMONCS
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeMONCS Telemetry <EFDB_Name> element
-	[Documentation]    Validate the DomeMONCS Telemetry <EFDB_Name> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeMONCS
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeTHCS Commands <Subsystem> element
-	[Documentation]    Validate the DomeTHCS Commands <Subsystem> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeTHCS
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Subsystem" -v . -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeTHCS Commands <EFDB_Topic> element
-	[Documentation]    Validate the DomeTHCS Commands <EFDB_Topic> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeTHCS
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeTHCS Commands <Alias> element
-	[Documentation]    Validate the DomeTHCS Commands <Alias> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeTHCS
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeTHCS Commands <EFDB_Name> element
-	[Documentation]    Validate the DomeTHCS Commands <EFDB_Name> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeTHCS
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeTHCS Events <Subsystem> element
-	[Documentation]    Validate the DomeTHCS Events <Subsystem> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeTHCS
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Subsystem" -v . -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeTHCS Events <EFDB_Topic> element
-	[Documentation]    Validate the DomeTHCS Events <EFDB_Topic> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeTHCS
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeTHCS Events <Alias> element
-	[Documentation]    Validate the DomeTHCS Events <Alias> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeTHCS
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeTHCS Events <EFDB_Name> element
-	[Documentation]    Validate the DomeTHCS Events <EFDB_Name> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeTHCS
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeTHCS Telemetry <Subsystem> element
-	[Documentation]    Validate the DomeTHCS Telemetry <Subsystem> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeTHCS
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Subsystem" -v . -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeTHCS Telemetry <EFDB_Topic> element
-	[Documentation]    Validate the DomeTHCS Telemetry <EFDB_Topic> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeTHCS
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/EFDB_Topic" -v . -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeTHCS Telemetry <Alias> element
-	[Documentation]    Validate the DomeTHCS Telemetry <Alias> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeTHCS
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate DomeTHCS Telemetry <EFDB_Name> element
-	[Documentation]    Validate the DomeTHCS Telemetry <EFDB_Name> elements do not contain embedded spaces.
-	[Tags]    smoke    DomeTHCS
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
 Validate EAS Events <Subsystem> element
 	[Documentation]    Validate the EAS Events <Subsystem> elements do not contain embedded spaces.
 	[Tags]    smoke    EAS
@@ -4737,6 +4233,62 @@ Validate TunableLaser Telemetry <EFDB_Name> element
 	[Documentation]    Validate the TunableLaser Telemetry <EFDB_Name> elements do not contain embedded spaces.
 	[Tags]    smoke    TunableLaser
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/TunableLaser/TunableLaser_Telemetry.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate Watcher Commands <Subsystem> element
+	[Documentation]    Validate the Watcher Commands <Subsystem> elements do not contain embedded spaces.
+	[Tags]    smoke    Watcher
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Subsystem" -v . -n ${folder}/sal_interfaces/Watcher/Watcher_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate Watcher Commands <EFDB_Topic> element
+	[Documentation]    Validate the Watcher Commands <EFDB_Topic> elements do not contain embedded spaces.
+	[Tags]    smoke    Watcher
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/Watcher/Watcher_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate Watcher Commands <Alias> element
+	[Documentation]    Validate the Watcher Commands <Alias> elements do not contain embedded spaces.
+	[Tags]    smoke    Watcher
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/Watcher/Watcher_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate Watcher Commands <EFDB_Name> element
+	[Documentation]    Validate the Watcher Commands <EFDB_Name> elements do not contain embedded spaces.
+	[Tags]    smoke    Watcher
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/Watcher/Watcher_Commands.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate Watcher Events <Subsystem> element
+	[Documentation]    Validate the Watcher Events <Subsystem> elements do not contain embedded spaces.
+	[Tags]    smoke    Watcher
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Subsystem" -v . -n ${folder}/sal_interfaces/Watcher/Watcher_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate Watcher Events <EFDB_Topic> element
+	[Documentation]    Validate the Watcher Events <EFDB_Topic> elements do not contain embedded spaces.
+	[Tags]    smoke    Watcher
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/Watcher/Watcher_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate Watcher Events <Alias> element
+	[Documentation]    Validate the Watcher Events <Alias> elements do not contain embedded spaces.
+	[Tags]    smoke    Watcher
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/Watcher/Watcher_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate Watcher Events <EFDB_Name> element
+	[Documentation]    Validate the Watcher Events <EFDB_Name> elements do not contain embedded spaces.
+	[Tags]    smoke    Watcher
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/Watcher/Watcher_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 

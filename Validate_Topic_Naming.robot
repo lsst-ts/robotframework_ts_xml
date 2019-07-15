@@ -513,168 +513,6 @@ Validate Dome Telemetry Topic Names
 	: FOR    ${item}    IN    @{topics}
 	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
 
-Validate DomeADB Commands Topic Names
-	[Documentation]    Validate the DomeADB Commands topic names conform to naming convention.
-	[Tags]    smoke    DomeADB    skipped
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/DomeADB/DomeADB_Commands.xml |sed -e 's/\\n/,/g'
-	Log    ${output}
-	@{topics}=    Split to Lines    ${output}
-	: FOR    ${item}    IN    @{topics}
-	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
-
-Validate DomeADB Events Topic Names
-	[Documentation]    Validate the DomeADB Events topic names conform to naming convention.
-	[Tags]    smoke    DomeADB    skipped
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml |sed -e 's/\\n/,/g'
-	Log    ${output}
-	@{topics}=    Split to Lines    ${output}
-	: FOR    ${item}    IN    @{topics}
-	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
-
-Validate DomeADB Telemetry Topic Names
-	[Documentation]    Validate the DomeADB Telemetry topic names conform to naming convention.
-	[Tags]    smoke    DomeADB    skipped
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/DomeADB/DomeADB_Telemetry.xml |sed -e 's/\\n/,/g'
-	Log    ${output}
-	@{topics}=    Split to Lines    ${output}
-	: FOR    ${item}    IN    @{topics}
-	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
-
-Validate DomeAPS Commands Topic Names
-	[Documentation]    Validate the DomeAPS Commands topic names conform to naming convention.
-	[Tags]    smoke    DomeAPS    skipped
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Commands.xml |sed -e 's/\\n/,/g'
-	Log    ${output}
-	@{topics}=    Split to Lines    ${output}
-	: FOR    ${item}    IN    @{topics}
-	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
-
-Validate DomeAPS Events Topic Names
-	[Documentation]    Validate the DomeAPS Events topic names conform to naming convention.
-	[Tags]    smoke    DomeAPS    skipped
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml |sed -e 's/\\n/,/g'
-	Log    ${output}
-	@{topics}=    Split to Lines    ${output}
-	: FOR    ${item}    IN    @{topics}
-	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
-
-Validate DomeAPS Telemetry Topic Names
-	[Documentation]    Validate the DomeAPS Telemetry topic names conform to naming convention.
-	[Tags]    smoke    DomeAPS    skipped
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Telemetry.xml |sed -e 's/\\n/,/g'
-	Log    ${output}
-	@{topics}=    Split to Lines    ${output}
-	: FOR    ${item}    IN    @{topics}
-	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
-
-Validate DomeLouvers Commands Topic Names
-	[Documentation]    Validate the DomeLouvers Commands topic names conform to naming convention.
-	[Tags]    smoke    DomeLouvers    skipped
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Commands.xml |sed -e 's/\\n/,/g'
-	Log    ${output}
-	@{topics}=    Split to Lines    ${output}
-	: FOR    ${item}    IN    @{topics}
-	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
-
-Validate DomeLouvers Events Topic Names
-	[Documentation]    Validate the DomeLouvers Events topic names conform to naming convention.
-	[Tags]    smoke    DomeLouvers    skipped
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml |sed -e 's/\\n/,/g'
-	Log    ${output}
-	@{topics}=    Split to Lines    ${output}
-	: FOR    ${item}    IN    @{topics}
-	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
-
-Validate DomeLouvers Telemetry Topic Names
-	[Documentation]    Validate the DomeLouvers Telemetry topic names conform to naming convention.
-	[Tags]    smoke    DomeLouvers    skipped
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Telemetry.xml |sed -e 's/\\n/,/g'
-	Log    ${output}
-	@{topics}=    Split to Lines    ${output}
-	: FOR    ${item}    IN    @{topics}
-	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
-
-Validate DomeLWS Commands Topic Names
-	[Documentation]    Validate the DomeLWS Commands topic names conform to naming convention.
-	[Tags]    smoke    DomeLWS    skipped
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Commands.xml |sed -e 's/\\n/,/g'
-	Log    ${output}
-	@{topics}=    Split to Lines    ${output}
-	: FOR    ${item}    IN    @{topics}
-	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
-
-Validate DomeLWS Events Topic Names
-	[Documentation]    Validate the DomeLWS Events topic names conform to naming convention.
-	[Tags]    smoke    DomeLWS    skipped
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml |sed -e 's/\\n/,/g'
-	Log    ${output}
-	@{topics}=    Split to Lines    ${output}
-	: FOR    ${item}    IN    @{topics}
-	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
-
-Validate DomeLWS Telemetry Topic Names
-	[Documentation]    Validate the DomeLWS Telemetry topic names conform to naming convention.
-	[Tags]    smoke    DomeLWS    skipped
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Telemetry.xml |sed -e 's/\\n/,/g'
-	Log    ${output}
-	@{topics}=    Split to Lines    ${output}
-	: FOR    ${item}    IN    @{topics}
-	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
-
-Validate DomeMONCS Commands Topic Names
-	[Documentation]    Validate the DomeMONCS Commands topic names conform to naming convention.
-	[Tags]    smoke    DomeMONCS    skipped
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Commands.xml |sed -e 's/\\n/,/g'
-	Log    ${output}
-	@{topics}=    Split to Lines    ${output}
-	: FOR    ${item}    IN    @{topics}
-	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
-
-Validate DomeMONCS Events Topic Names
-	[Documentation]    Validate the DomeMONCS Events topic names conform to naming convention.
-	[Tags]    smoke    DomeMONCS    skipped
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Events.xml |sed -e 's/\\n/,/g'
-	Log    ${output}
-	@{topics}=    Split to Lines    ${output}
-	: FOR    ${item}    IN    @{topics}
-	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
-
-Validate DomeMONCS Telemetry Topic Names
-	[Documentation]    Validate the DomeMONCS Telemetry topic names conform to naming convention.
-	[Tags]    smoke    DomeMONCS    skipped
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Telemetry.xml |sed -e 's/\\n/,/g'
-	Log    ${output}
-	@{topics}=    Split to Lines    ${output}
-	: FOR    ${item}    IN    @{topics}
-	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
-
-Validate DomeTHCS Commands Topic Names
-	[Documentation]    Validate the DomeTHCS Commands topic names conform to naming convention.
-	[Tags]    smoke    DomeTHCS    skipped
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Commands.xml |sed -e 's/\\n/,/g'
-	Log    ${output}
-	@{topics}=    Split to Lines    ${output}
-	: FOR    ${item}    IN    @{topics}
-	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
-
-Validate DomeTHCS Events Topic Names
-	[Documentation]    Validate the DomeTHCS Events topic names conform to naming convention.
-	[Tags]    smoke    DomeTHCS    skipped
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Events.xml |sed -e 's/\\n/,/g'
-	Log    ${output}
-	@{topics}=    Split to Lines    ${output}
-	: FOR    ${item}    IN    @{topics}
-	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
-
-Validate DomeTHCS Telemetry Topic Names
-	[Documentation]    Validate the DomeTHCS Telemetry topic names conform to naming convention.
-	[Tags]    smoke    DomeTHCS    skipped
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Telemetry.xml |sed -e 's/\\n/,/g'
-	Log    ${output}
-	@{topics}=    Split to Lines    ${output}
-	: FOR    ${item}    IN    @{topics}
-	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
-
 Validate EAS Events Topic Names
 	[Documentation]    Validate the EAS Events topic names conform to naming convention.
 	[Tags]    smoke    EAS    
@@ -1525,6 +1363,24 @@ Validate TunableLaser Telemetry Topic Names
 	[Documentation]    Validate the TunableLaser Telemetry topic names conform to naming convention.
 	[Tags]    smoke    TunableLaser    
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/TunableLaser/TunableLaser_Telemetry.xml |sed -e 's/\\n/,/g'
+	Log    ${output}
+	@{topics}=    Split to Lines    ${output}
+	: FOR    ${item}    IN    @{topics}
+	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
+
+Validate Watcher Commands Topic Names
+	[Documentation]    Validate the Watcher Commands topic names conform to naming convention.
+	[Tags]    smoke    Watcher    
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/Watcher/Watcher_Commands.xml |sed -e 's/\\n/,/g'
+	Log    ${output}
+	@{topics}=    Split to Lines    ${output}
+	: FOR    ${item}    IN    @{topics}
+	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
+
+Validate Watcher Events Topic Names
+	[Documentation]    Validate the Watcher Events topic names conform to naming convention.
+	[Tags]    smoke    Watcher    
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/Watcher/Watcher_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
 	: FOR    ${item}    IN    @{topics}

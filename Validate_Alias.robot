@@ -305,102 +305,6 @@ Validate Dome Events XML Topic Alisases
 	Log Many    ${topic_name}    ${alias}
 	Should Match    ${topic_name}    ${alias}
 
-Validate DomeADB Commands XML Topic Alisases
-	[Documentation]    Validate the DomeADB Commands XML Topic Alisases.
-	[Tags]    smoke    DomeADB
-	${topic_name}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/DomeADB/DomeADB_Commands.xml |cut -d'_' -f 3-
-	${alias}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/DomeADB/DomeADB_Commands.xml
-	Log Many    ${topic_name}    ${alias}
-	Should Match    ${topic_name}    ${alias}
-
-Validate DomeADB Events XML Topic Alisases
-	[Documentation]    Validate the DomeADB Events XML Topic Alisases.
-	[Tags]    smoke    DomeADB
-	${topic_name}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml |cut -d'_' -f 3-
-	${alias}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml
-	Log Many    ${topic_name}    ${alias}
-	Should Match    ${topic_name}    ${alias}
-
-Validate DomeAPS Commands XML Topic Alisases
-	[Documentation]    Validate the DomeAPS Commands XML Topic Alisases.
-	[Tags]    smoke    DomeAPS
-	${topic_name}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Commands.xml |cut -d'_' -f 3-
-	${alias}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Commands.xml
-	Log Many    ${topic_name}    ${alias}
-	Should Match    ${topic_name}    ${alias}
-
-Validate DomeAPS Events XML Topic Alisases
-	[Documentation]    Validate the DomeAPS Events XML Topic Alisases.
-	[Tags]    smoke    DomeAPS
-	${topic_name}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml |cut -d'_' -f 3-
-	${alias}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml
-	Log Many    ${topic_name}    ${alias}
-	Should Match    ${topic_name}    ${alias}
-
-Validate DomeLouvers Commands XML Topic Alisases
-	[Documentation]    Validate the DomeLouvers Commands XML Topic Alisases.
-	[Tags]    smoke    DomeLouvers
-	${topic_name}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Commands.xml |cut -d'_' -f 3-
-	${alias}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Commands.xml
-	Log Many    ${topic_name}    ${alias}
-	Should Match    ${topic_name}    ${alias}
-
-Validate DomeLouvers Events XML Topic Alisases
-	[Documentation]    Validate the DomeLouvers Events XML Topic Alisases.
-	[Tags]    smoke    DomeLouvers
-	${topic_name}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml |cut -d'_' -f 3-
-	${alias}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml
-	Log Many    ${topic_name}    ${alias}
-	Should Match    ${topic_name}    ${alias}
-
-Validate DomeLWS Commands XML Topic Alisases
-	[Documentation]    Validate the DomeLWS Commands XML Topic Alisases.
-	[Tags]    smoke    DomeLWS
-	${topic_name}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Commands.xml |cut -d'_' -f 3-
-	${alias}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Commands.xml
-	Log Many    ${topic_name}    ${alias}
-	Should Match    ${topic_name}    ${alias}
-
-Validate DomeLWS Events XML Topic Alisases
-	[Documentation]    Validate the DomeLWS Events XML Topic Alisases.
-	[Tags]    smoke    DomeLWS
-	${topic_name}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml |cut -d'_' -f 3-
-	${alias}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml
-	Log Many    ${topic_name}    ${alias}
-	Should Match    ${topic_name}    ${alias}
-
-Validate DomeMONCS Commands XML Topic Alisases
-	[Documentation]    Validate the DomeMONCS Commands XML Topic Alisases.
-	[Tags]    smoke    DomeMONCS
-	${topic_name}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Commands.xml |cut -d'_' -f 3-
-	${alias}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Commands.xml
-	Log Many    ${topic_name}    ${alias}
-	Should Match    ${topic_name}    ${alias}
-
-Validate DomeMONCS Events XML Topic Alisases
-	[Documentation]    Validate the DomeMONCS Events XML Topic Alisases.
-	[Tags]    smoke    DomeMONCS
-	${topic_name}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Events.xml |cut -d'_' -f 3-
-	${alias}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Events.xml
-	Log Many    ${topic_name}    ${alias}
-	Should Match    ${topic_name}    ${alias}
-
-Validate DomeTHCS Commands XML Topic Alisases
-	[Documentation]    Validate the DomeTHCS Commands XML Topic Alisases.
-	[Tags]    smoke    DomeTHCS
-	${topic_name}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Commands.xml |cut -d'_' -f 3-
-	${alias}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Commands.xml
-	Log Many    ${topic_name}    ${alias}
-	Should Match    ${topic_name}    ${alias}
-
-Validate DomeTHCS Events XML Topic Alisases
-	[Documentation]    Validate the DomeTHCS Events XML Topic Alisases.
-	[Tags]    smoke    DomeTHCS
-	${topic_name}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Events.xml |cut -d'_' -f 3-
-	${alias}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Events.xml
-	Log Many    ${topic_name}    ${alias}
-	Should Match    ${topic_name}    ${alias}
-
 Validate EAS Events XML Topic Alisases
 	[Documentation]    Validate the EAS Events XML Topic Alisases.
 	[Tags]    smoke    EAS
@@ -894,6 +798,22 @@ Validate TunableLaser Events XML Topic Alisases
 	[Tags]    smoke    TunableLaser
 	${topic_name}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/TunableLaser/TunableLaser_Events.xml |cut -d'_' -f 3-
 	${alias}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/TunableLaser/TunableLaser_Events.xml
+	Log Many    ${topic_name}    ${alias}
+	Should Match    ${topic_name}    ${alias}
+
+Validate Watcher Commands XML Topic Alisases
+	[Documentation]    Validate the Watcher Commands XML Topic Alisases.
+	[Tags]    smoke    Watcher
+	${topic_name}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/Watcher/Watcher_Commands.xml |cut -d'_' -f 3-
+	${alias}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/Watcher/Watcher_Commands.xml
+	Log Many    ${topic_name}    ${alias}
+	Should Match    ${topic_name}    ${alias}
+
+Validate Watcher Events XML Topic Alisases
+	[Documentation]    Validate the Watcher Events XML Topic Alisases.
+	[Tags]    smoke    Watcher
+	${topic_name}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/Watcher/Watcher_Events.xml |cut -d'_' -f 3-
+	${alias}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/Watcher/Watcher_Events.xml
 	Log Many    ${topic_name}    ${alias}
 	Should Match    ${topic_name}    ${alias}
 
