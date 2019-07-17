@@ -731,8 +731,8 @@ Validate ATArchiver Command ATArchiver_command_resetFromFault Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATArchiver Event ATArchiver_logevent_archiverEntityStartup Topic Byte Size
-	[Documentation]    Validate the ATArchiver_logevent_archiverEntityStartup topic is less than 65536 bytes in total.
+Validate ATArchiver Event ATArchiver_logevent_settingsApplied Topic Byte Size
+	[Documentation]    Validate the ATArchiver_logevent_settingsApplied topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATArchiver
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -756,8 +756,8 @@ Validate ATArchiver Event ATArchiver_logevent_archiverEntityStartup Topic Byte S
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATArchiver Event ATArchiver_logevent_archiverEntityStartup Topic Columns
-	[Documentation]    Validate the ATArchiver_logevent_archiverEntityStartup topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ATArchiver Event ATArchiver_logevent_settingsApplied Topic Columns
+	[Documentation]    Validate the ATArchiver_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -769,8 +769,8 @@ Validate ATArchiver Event ATArchiver_logevent_archiverEntityStartup Topic Column
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATArchiver Event ATArchiver_logevent_archiverEntitySummaryState Topic Byte Size
-	[Documentation]    Validate the ATArchiver_logevent_archiverEntitySummaryState topic is less than 65536 bytes in total.
+Validate ATArchiver Event ATArchiver_logevent_processingStatus Topic Byte Size
+	[Documentation]    Validate the ATArchiver_logevent_processingStatus topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATArchiver
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -794,127 +794,13 @@ Validate ATArchiver Event ATArchiver_logevent_archiverEntitySummaryState Topic B
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATArchiver Event ATArchiver_logevent_archiverEntitySummaryState Topic Columns
-	[Documentation]    Validate the ATArchiver_logevent_archiverEntitySummaryState topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    ATArchiver
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/ATArchiver/ATArchiver_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/Count" -v . -n ${folder}/sal_interfaces/ATArchiver/ATArchiver_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate ATArchiver Event ATArchiver_logevent_archiverEntityShutdown Topic Byte Size
-	[Documentation]    Validate the ATArchiver_logevent_archiverEntityShutdown topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATArchiver
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/ATArchiver/ATArchiver_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/Count" -v . -n ${folder}/sal_interfaces/ATArchiver/ATArchiver_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATArchiver/ATArchiver_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate ATArchiver Event ATArchiver_logevent_archiverEntityShutdown Topic Columns
-	[Documentation]    Validate the ATArchiver_logevent_archiverEntityShutdown topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    ATArchiver
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/ATArchiver/ATArchiver_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/Count" -v . -n ${folder}/sal_interfaces/ATArchiver/ATArchiver_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate ATArchiver Event ATArchiver_logevent_settingsApplied Topic Byte Size
-	[Documentation]    Validate the ATArchiver_logevent_settingsApplied topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATArchiver
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/ATArchiver/ATArchiver_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/ATArchiver/ATArchiver_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATArchiver/ATArchiver_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate ATArchiver Event ATArchiver_logevent_settingsApplied Topic Columns
-	[Documentation]    Validate the ATArchiver_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    ATArchiver
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/ATArchiver/ATArchiver_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/ATArchiver/ATArchiver_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate ATArchiver Event ATArchiver_logevent_processingStatus Topic Byte Size
-	[Documentation]    Validate the ATArchiver_logevent_processingStatus topic is less than 65536 bytes in total.
-	[Tags]    smoke    ATArchiver
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/ATArchiver/ATArchiver_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/ATArchiver/ATArchiver_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATArchiver/ATArchiver_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
 Validate ATArchiver Event ATArchiver_logevent_processingStatus Topic Columns
 	[Documentation]    Validate the ATArchiver_logevent_processingStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATArchiver
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/ATArchiver/ATArchiver_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/ATArchiver/ATArchiver_Events.xml
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/ATArchiver/ATArchiver_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/Count" -v . -n ${folder}/sal_interfaces/ATArchiver/ATArchiver_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
