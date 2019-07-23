@@ -353,7 +353,7 @@ Validate ATSpectrograph Telemetry Attribute Names
 
 Validate ATTCS Commands Attribute Names
 	[Documentation]    Validate the ATTCS Commands attribute names conform to naming convention.
-	[Tags]    smoke    ATTCS    DM-17353
+	[Tags]    smoke    ATTCS    
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/ATTCS/ATTCS_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -362,7 +362,7 @@ Validate ATTCS Commands Attribute Names
 
 Validate ATTCS Events Attribute Names
 	[Documentation]    Validate the ATTCS Events attribute names conform to naming convention.
-	[Tags]    smoke    ATTCS    DM-17353
+	[Tags]    smoke    ATTCS    
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/ATTCS/ATTCS_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -371,7 +371,7 @@ Validate ATTCS Events Attribute Names
 
 Validate ATTCS Telemetry Attribute Names
 	[Documentation]    Validate the ATTCS Telemetry attribute names conform to naming convention.
-	[Tags]    smoke    ATTCS    DM-17353
+	[Tags]    smoke    ATTCS    
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/ATTCS/ATTCS_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -1064,7 +1064,7 @@ Validate MTPtg Telemetry Attribute Names
 
 Validate MTTCS Commands Attribute Names
 	[Documentation]    Validate the MTTCS Commands attribute names conform to naming convention.
-	[Tags]    smoke    MTTCS    DM-17357
+	[Tags]    smoke    MTTCS    
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -1073,7 +1073,7 @@ Validate MTTCS Commands Attribute Names
 
 Validate MTTCS Events Attribute Names
 	[Documentation]    Validate the MTTCS Events attribute names conform to naming convention.
-	[Tags]    smoke    MTTCS    DM-17357
+	[Tags]    smoke    MTTCS    
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}
@@ -1082,7 +1082,7 @@ Validate MTTCS Events Attribute Names
 
 Validate MTTCS Telemetry Attribute Names
 	[Documentation]    Validate the MTTCS Telemetry attribute names conform to naming convention.
-	[Tags]    smoke    MTTCS    DM-17357
+	[Tags]    smoke    MTTCS    
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{attributes}=    Split to Lines    ${output}

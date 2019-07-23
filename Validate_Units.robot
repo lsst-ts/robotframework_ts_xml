@@ -22,7 +22,7 @@ Validate ATAOS Commands XML Unit types
 	[Documentation]    Validate the ATAOS Commands XML Units conform to standards.
 	[Tags]    smoke    ATAOS
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATAOS/ATAOS_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -43,7 +43,7 @@ Validate ATAOS Events XML Unit types
 	[Documentation]    Validate the ATAOS Events XML Units conform to standards.
 	[Tags]    smoke    ATAOS
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATAOS/ATAOS_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -64,7 +64,7 @@ Validate ATAOS Telemetry XML Unit types
 	[Documentation]    Validate the ATAOS Telemetry XML Units conform to standards.
 	[Tags]    smoke    ATAOS
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATAOS/ATAOS_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -85,7 +85,7 @@ Validate ATArchiver Commands XML Unit types
 	[Documentation]    Validate the ATArchiver Commands XML Units conform to standards.
 	[Tags]    smoke    ATArchiver
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATArchiver/ATArchiver_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -106,7 +106,7 @@ Validate ATArchiver Events XML Unit types
 	[Documentation]    Validate the ATArchiver Events XML Units conform to standards.
 	[Tags]    smoke    ATArchiver
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATArchiver/ATArchiver_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -127,7 +127,7 @@ Validate ATArchiver Telemetry XML Unit types
 	[Documentation]    Validate the ATArchiver Telemetry XML Units conform to standards.
 	[Tags]    smoke    ATArchiver
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATArchiver/ATArchiver_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -148,7 +148,7 @@ Validate ATBuilding Events XML Unit types
 	[Documentation]    Validate the ATBuilding Events XML Units conform to standards.
 	[Tags]    smoke    ATBuilding
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATBuilding/ATBuilding_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -169,7 +169,7 @@ Validate ATBuilding Telemetry XML Unit types
 	[Documentation]    Validate the ATBuilding Telemetry XML Units conform to standards.
 	[Tags]    smoke    ATBuilding
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATBuilding/ATBuilding_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -190,7 +190,7 @@ Validate ATCalCS Events XML Unit types
 	[Documentation]    Validate the ATCalCS Events XML Units conform to standards.
 	[Tags]    smoke    ATCalCS
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATCalCS/ATCalCS_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -211,7 +211,7 @@ Validate ATCalCS Telemetry XML Unit types
 	[Documentation]    Validate the ATCalCS Telemetry XML Units conform to standards.
 	[Tags]    smoke    ATCalCS
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATCalCS/ATCalCS_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -232,7 +232,7 @@ Validate ATCamera Commands XML Unit types
 	[Documentation]    Validate the ATCamera Commands XML Units conform to standards.
 	[Tags]    smoke    ATCamera
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATCamera/ATCamera_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -253,7 +253,7 @@ Validate ATCamera Events XML Unit types
 	[Documentation]    Validate the ATCamera Events XML Units conform to standards.
 	[Tags]    smoke    ATCamera
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATCamera/ATCamera_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -274,7 +274,7 @@ Validate ATCamera Telemetry XML Unit types
 	[Documentation]    Validate the ATCamera Telemetry XML Units conform to standards.
 	[Tags]    smoke    ATCamera
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATCamera/ATCamera_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -295,7 +295,7 @@ Validate ATDome Commands XML Unit types
 	[Documentation]    Validate the ATDome Commands XML Units conform to standards.
 	[Tags]    smoke    ATDome
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATDome/ATDome_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -316,7 +316,7 @@ Validate ATDome Events XML Unit types
 	[Documentation]    Validate the ATDome Events XML Units conform to standards.
 	[Tags]    smoke    ATDome
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATDome/ATDome_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -337,7 +337,7 @@ Validate ATDome Telemetry XML Unit types
 	[Documentation]    Validate the ATDome Telemetry XML Units conform to standards.
 	[Tags]    smoke    ATDome
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATDome/ATDome_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -358,7 +358,7 @@ Validate ATDomeTrajectory Events XML Unit types
 	[Documentation]    Validate the ATDomeTrajectory Events XML Units conform to standards.
 	[Tags]    smoke    ATDomeTrajectory
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATDomeTrajectory/ATDomeTrajectory_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -379,7 +379,7 @@ Validate ATEEC Commands XML Unit types
 	[Documentation]    Validate the ATEEC Commands XML Units conform to standards.
 	[Tags]    smoke    ATEEC
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATEEC/ATEEC_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -400,7 +400,7 @@ Validate ATEEC Events XML Unit types
 	[Documentation]    Validate the ATEEC Events XML Units conform to standards.
 	[Tags]    smoke    ATEEC
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATEEC/ATEEC_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -421,7 +421,7 @@ Validate ATHeaderService Events XML Unit types
 	[Documentation]    Validate the ATHeaderService Events XML Units conform to standards.
 	[Tags]    smoke    ATHeaderService
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATHeaderService/ATHeaderService_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -442,7 +442,7 @@ Validate ATHexapod Commands XML Unit types
 	[Documentation]    Validate the ATHexapod Commands XML Units conform to standards.
 	[Tags]    smoke    ATHexapod
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -463,7 +463,7 @@ Validate ATHexapod Events XML Unit types
 	[Documentation]    Validate the ATHexapod Events XML Units conform to standards.
 	[Tags]    smoke    ATHexapod
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -484,7 +484,7 @@ Validate ATHexapod Telemetry XML Unit types
 	[Documentation]    Validate the ATHexapod Telemetry XML Units conform to standards.
 	[Tags]    smoke    ATHexapod
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -505,7 +505,7 @@ Validate ATMCS Commands XML Unit types
 	[Documentation]    Validate the ATMCS Commands XML Units conform to standards.
 	[Tags]    smoke    ATMCS
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATMCS/ATMCS_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -526,7 +526,7 @@ Validate ATMCS Events XML Unit types
 	[Documentation]    Validate the ATMCS Events XML Units conform to standards.
 	[Tags]    smoke    ATMCS
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATMCS/ATMCS_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -547,7 +547,7 @@ Validate ATMCS Telemetry XML Unit types
 	[Documentation]    Validate the ATMCS Telemetry XML Units conform to standards.
 	[Tags]    smoke    ATMCS
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATMCS/ATMCS_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -568,7 +568,7 @@ Validate ATMonochromator Commands XML Unit types
 	[Documentation]    Validate the ATMonochromator Commands XML Units conform to standards.
 	[Tags]    smoke    ATMonochromator
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATMonochromator/ATMonochromator_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -589,7 +589,7 @@ Validate ATMonochromator Events XML Unit types
 	[Documentation]    Validate the ATMonochromator Events XML Units conform to standards.
 	[Tags]    smoke    ATMonochromator
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATMonochromator/ATMonochromator_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -610,7 +610,7 @@ Validate ATMonochromator Telemetry XML Unit types
 	[Documentation]    Validate the ATMonochromator Telemetry XML Units conform to standards.
 	[Tags]    smoke    ATMonochromator
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATMonochromator/ATMonochromator_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -631,7 +631,7 @@ Validate ATPneumatics Commands XML Unit types
 	[Documentation]    Validate the ATPneumatics Commands XML Units conform to standards.
 	[Tags]    smoke    ATPneumatics
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATPneumatics/ATPneumatics_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -652,7 +652,7 @@ Validate ATPneumatics Events XML Unit types
 	[Documentation]    Validate the ATPneumatics Events XML Units conform to standards.
 	[Tags]    smoke    ATPneumatics
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATPneumatics/ATPneumatics_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -673,7 +673,7 @@ Validate ATPneumatics Telemetry XML Unit types
 	[Documentation]    Validate the ATPneumatics Telemetry XML Units conform to standards.
 	[Tags]    smoke    ATPneumatics
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATPneumatics/ATPneumatics_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -694,7 +694,7 @@ Validate ATPtg Commands XML Unit types
 	[Documentation]    Validate the ATPtg Commands XML Units conform to standards.
 	[Tags]    smoke    ATPtg
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATPtg/ATPtg_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -715,7 +715,7 @@ Validate ATPtg Events XML Unit types
 	[Documentation]    Validate the ATPtg Events XML Units conform to standards.
 	[Tags]    smoke    ATPtg
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATPtg/ATPtg_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -736,7 +736,7 @@ Validate ATPtg Telemetry XML Unit types
 	[Documentation]    Validate the ATPtg Telemetry XML Units conform to standards.
 	[Tags]    smoke    ATPtg
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATPtg/ATPtg_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -757,7 +757,7 @@ Validate ATSpectrograph Commands XML Unit types
 	[Documentation]    Validate the ATSpectrograph Commands XML Units conform to standards.
 	[Tags]    smoke    ATSpectrograph
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATSpectrograph/ATSpectrograph_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -778,7 +778,7 @@ Validate ATSpectrograph Events XML Unit types
 	[Documentation]    Validate the ATSpectrograph Events XML Units conform to standards.
 	[Tags]    smoke    ATSpectrograph
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATSpectrograph/ATSpectrograph_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -799,7 +799,7 @@ Validate ATSpectrograph Telemetry XML Unit types
 	[Documentation]    Validate the ATSpectrograph Telemetry XML Units conform to standards.
 	[Tags]    smoke    ATSpectrograph
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATSpectrograph/ATSpectrograph_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -820,7 +820,7 @@ Validate ATTCS Commands XML Unit types
 	[Documentation]    Validate the ATTCS Commands XML Units conform to standards.
 	[Tags]    smoke    ATTCS
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATTCS/ATTCS_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -841,7 +841,7 @@ Validate ATTCS Events XML Unit types
 	[Documentation]    Validate the ATTCS Events XML Units conform to standards.
 	[Tags]    smoke    ATTCS
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATTCS/ATTCS_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -862,7 +862,7 @@ Validate ATTCS Telemetry XML Unit types
 	[Documentation]    Validate the ATTCS Telemetry XML Units conform to standards.
 	[Tags]    smoke    ATTCS
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATTCS/ATTCS_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -883,7 +883,7 @@ Validate ATThermoelectricCooler Commands XML Unit types
 	[Documentation]    Validate the ATThermoelectricCooler Commands XML Units conform to standards.
 	[Tags]    smoke    ATThermoelectricCooler
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATThermoelectricCooler/ATThermoelectricCooler_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -904,7 +904,7 @@ Validate ATThermoelectricCooler Events XML Unit types
 	[Documentation]    Validate the ATThermoelectricCooler Events XML Units conform to standards.
 	[Tags]    smoke    ATThermoelectricCooler
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATThermoelectricCooler/ATThermoelectricCooler_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -925,7 +925,7 @@ Validate ATThermoelectricCooler Telemetry XML Unit types
 	[Documentation]    Validate the ATThermoelectricCooler Telemetry XML Units conform to standards.
 	[Tags]    smoke    ATThermoelectricCooler
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATThermoelectricCooler/ATThermoelectricCooler_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -946,7 +946,7 @@ Validate ATWhiteLight Commands XML Unit types
 	[Documentation]    Validate the ATWhiteLight Commands XML Units conform to standards.
 	[Tags]    smoke    ATWhiteLight
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -967,7 +967,7 @@ Validate ATWhiteLight Events XML Unit types
 	[Documentation]    Validate the ATWhiteLight Events XML Units conform to standards.
 	[Tags]    smoke    ATWhiteLight
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -988,7 +988,7 @@ Validate ATWhiteLight Telemetry XML Unit types
 	[Documentation]    Validate the ATWhiteLight Telemetry XML Units conform to standards.
 	[Tags]    smoke    ATWhiteLight
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -1009,7 +1009,7 @@ Validate CatchupArchiver Events XML Unit types
 	[Documentation]    Validate the CatchupArchiver Events XML Units conform to standards.
 	[Tags]    smoke    CatchupArchiver
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -1030,7 +1030,7 @@ Validate CatchupArchiver Telemetry XML Unit types
 	[Documentation]    Validate the CatchupArchiver Telemetry XML Units conform to standards.
 	[Tags]    smoke    CatchupArchiver
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -1051,7 +1051,7 @@ Validate CBP Commands XML Unit types
 	[Documentation]    Validate the CBP Commands XML Units conform to standards.
 	[Tags]    smoke    CBP
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/CBP/CBP_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -1072,7 +1072,7 @@ Validate CBP Telemetry XML Unit types
 	[Documentation]    Validate the CBP Telemetry XML Units conform to standards.
 	[Tags]    smoke    CBP
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/CBP/CBP_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -1093,7 +1093,7 @@ Validate DIMM Events XML Unit types
 	[Documentation]    Validate the DIMM Events XML Units conform to standards.
 	[Tags]    smoke    DIMM
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/DIMM/DIMM_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -1114,7 +1114,7 @@ Validate DIMM Telemetry XML Unit types
 	[Documentation]    Validate the DIMM Telemetry XML Units conform to standards.
 	[Tags]    smoke    DIMM
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/DIMM/DIMM_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -1135,7 +1135,7 @@ Validate Dome Commands XML Unit types
 	[Documentation]    Validate the Dome Commands XML Units conform to standards.
 	[Tags]    smoke    Dome
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/Dome/Dome_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -1156,7 +1156,7 @@ Validate Dome Events XML Unit types
 	[Documentation]    Validate the Dome Events XML Units conform to standards.
 	[Tags]    smoke    Dome
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/Dome/Dome_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -1177,385 +1177,7 @@ Validate Dome Telemetry XML Unit types
 	[Documentation]    Validate the Dome Telemetry XML Units conform to standards.
 	[Tags]    smoke    Dome
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/Dome/Dome_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
-	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-
-Validate DomeADB Commands XML Units
-	[Documentation]    Validate the DomeADB Commands XML Units.
-	[Tags]    smoke    DomeADB
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/DomeADB/DomeADB_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate DomeADB Commands XML Unit types
-	[Documentation]    Validate the DomeADB Commands XML Units conform to standards.
-	[Tags]    smoke    DomeADB
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/DomeADB/DomeADB_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
-	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-
-Validate DomeADB Events XML Units
-	[Documentation]    Validate the DomeADB Events XML Units.
-	[Tags]    smoke    DomeADB
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate DomeADB Events XML Unit types
-	[Documentation]    Validate the DomeADB Events XML Units conform to standards.
-	[Tags]    smoke    DomeADB
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
-	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-
-Validate DomeADB Telemetry XML Units
-	[Documentation]    Validate the DomeADB Telemetry XML Units.
-	[Tags]    smoke    DomeADB
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/DomeADB/DomeADB_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate DomeADB Telemetry XML Unit types
-	[Documentation]    Validate the DomeADB Telemetry XML Units conform to standards.
-	[Tags]    smoke    DomeADB
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/DomeADB/DomeADB_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
-	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-
-Validate DomeAPS Commands XML Units
-	[Documentation]    Validate the DomeAPS Commands XML Units.
-	[Tags]    smoke    DomeAPS
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate DomeAPS Commands XML Unit types
-	[Documentation]    Validate the DomeAPS Commands XML Units conform to standards.
-	[Tags]    smoke    DomeAPS
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
-	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-
-Validate DomeAPS Events XML Units
-	[Documentation]    Validate the DomeAPS Events XML Units.
-	[Tags]    smoke    DomeAPS
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate DomeAPS Events XML Unit types
-	[Documentation]    Validate the DomeAPS Events XML Units conform to standards.
-	[Tags]    smoke    DomeAPS
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
-	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-
-Validate DomeAPS Telemetry XML Units
-	[Documentation]    Validate the DomeAPS Telemetry XML Units.
-	[Tags]    smoke    DomeAPS
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate DomeAPS Telemetry XML Unit types
-	[Documentation]    Validate the DomeAPS Telemetry XML Units conform to standards.
-	[Tags]    smoke    DomeAPS
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
-	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-
-Validate DomeLouvers Commands XML Units
-	[Documentation]    Validate the DomeLouvers Commands XML Units.
-	[Tags]    smoke    DomeLouvers
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate DomeLouvers Commands XML Unit types
-	[Documentation]    Validate the DomeLouvers Commands XML Units conform to standards.
-	[Tags]    smoke    DomeLouvers
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
-	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-
-Validate DomeLouvers Events XML Units
-	[Documentation]    Validate the DomeLouvers Events XML Units.
-	[Tags]    smoke    DomeLouvers
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate DomeLouvers Events XML Unit types
-	[Documentation]    Validate the DomeLouvers Events XML Units conform to standards.
-	[Tags]    smoke    DomeLouvers
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
-	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-
-Validate DomeLouvers Telemetry XML Units
-	[Documentation]    Validate the DomeLouvers Telemetry XML Units.
-	[Tags]    smoke    DomeLouvers
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate DomeLouvers Telemetry XML Unit types
-	[Documentation]    Validate the DomeLouvers Telemetry XML Units conform to standards.
-	[Tags]    smoke    DomeLouvers
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
-	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-
-Validate DomeLWS Commands XML Units
-	[Documentation]    Validate the DomeLWS Commands XML Units.
-	[Tags]    smoke    DomeLWS
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate DomeLWS Commands XML Unit types
-	[Documentation]    Validate the DomeLWS Commands XML Units conform to standards.
-	[Tags]    smoke    DomeLWS
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
-	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-
-Validate DomeLWS Events XML Units
-	[Documentation]    Validate the DomeLWS Events XML Units.
-	[Tags]    smoke    DomeLWS
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate DomeLWS Events XML Unit types
-	[Documentation]    Validate the DomeLWS Events XML Units conform to standards.
-	[Tags]    smoke    DomeLWS
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
-	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-
-Validate DomeLWS Telemetry XML Units
-	[Documentation]    Validate the DomeLWS Telemetry XML Units.
-	[Tags]    smoke    DomeLWS
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate DomeLWS Telemetry XML Unit types
-	[Documentation]    Validate the DomeLWS Telemetry XML Units conform to standards.
-	[Tags]    smoke    DomeLWS
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
-	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-
-Validate DomeMONCS Commands XML Units
-	[Documentation]    Validate the DomeMONCS Commands XML Units.
-	[Tags]    smoke    DomeMONCS
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate DomeMONCS Commands XML Unit types
-	[Documentation]    Validate the DomeMONCS Commands XML Units conform to standards.
-	[Tags]    smoke    DomeMONCS
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
-	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-
-Validate DomeMONCS Events XML Units
-	[Documentation]    Validate the DomeMONCS Events XML Units.
-	[Tags]    smoke    DomeMONCS
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate DomeMONCS Events XML Unit types
-	[Documentation]    Validate the DomeMONCS Events XML Units conform to standards.
-	[Tags]    smoke    DomeMONCS
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
-	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-
-Validate DomeMONCS Telemetry XML Units
-	[Documentation]    Validate the DomeMONCS Telemetry XML Units.
-	[Tags]    smoke    DomeMONCS
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate DomeMONCS Telemetry XML Unit types
-	[Documentation]    Validate the DomeMONCS Telemetry XML Units conform to standards.
-	[Tags]    smoke    DomeMONCS
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
-	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-
-Validate DomeTHCS Commands XML Units
-	[Documentation]    Validate the DomeTHCS Commands XML Units.
-	[Tags]    smoke    DomeTHCS
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate DomeTHCS Commands XML Unit types
-	[Documentation]    Validate the DomeTHCS Commands XML Units conform to standards.
-	[Tags]    smoke    DomeTHCS
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
-	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-
-Validate DomeTHCS Events XML Units
-	[Documentation]    Validate the DomeTHCS Events XML Units.
-	[Tags]    smoke    DomeTHCS
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate DomeTHCS Events XML Unit types
-	[Documentation]    Validate the DomeTHCS Events XML Units conform to standards.
-	[Tags]    smoke    DomeTHCS
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
-	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-
-Validate DomeTHCS Telemetry XML Units
-	[Documentation]    Validate the DomeTHCS Telemetry XML Units.
-	[Tags]    smoke    DomeTHCS
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate DomeTHCS Telemetry XML Unit types
-	[Documentation]    Validate the DomeTHCS Telemetry XML Units conform to standards.
-	[Tags]    smoke    DomeTHCS
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -1576,7 +1198,7 @@ Validate EAS Events XML Unit types
 	[Documentation]    Validate the EAS Events XML Units conform to standards.
 	[Tags]    smoke    EAS
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/EAS/EAS_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -1597,7 +1219,7 @@ Validate EAS Telemetry XML Unit types
 	[Documentation]    Validate the EAS Telemetry XML Units conform to standards.
 	[Tags]    smoke    EAS
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/EAS/EAS_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -1618,7 +1240,7 @@ Validate EFD Events XML Unit types
 	[Documentation]    Validate the EFD Events XML Units conform to standards.
 	[Tags]    smoke    EFD
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/EFD/EFD_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -1639,7 +1261,7 @@ Validate EFD Telemetry XML Unit types
 	[Documentation]    Validate the EFD Telemetry XML Units conform to standards.
 	[Tags]    smoke    EFD
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/EFD/EFD_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -1660,7 +1282,7 @@ Validate EFDTransformationServer Events XML Unit types
 	[Documentation]    Validate the EFDTransformationServer Events XML Units conform to standards.
 	[Tags]    smoke    EFDTransformationServer
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/EFDTransformationServer/EFDTransformationServer_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -1681,7 +1303,7 @@ Validate EFDTransformationServer Telemetry XML Unit types
 	[Documentation]    Validate the EFDTransformationServer Telemetry XML Units conform to standards.
 	[Tags]    smoke    EFDTransformationServer
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/EFDTransformationServer/EFDTransformationServer_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -1702,7 +1324,7 @@ Validate Electrometer Commands XML Unit types
 	[Documentation]    Validate the Electrometer Commands XML Units conform to standards.
 	[Tags]    smoke    Electrometer
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/Electrometer/Electrometer_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -1723,7 +1345,7 @@ Validate Electrometer Events XML Unit types
 	[Documentation]    Validate the Electrometer Events XML Units conform to standards.
 	[Tags]    smoke    Electrometer
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/Electrometer/Electrometer_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -1744,7 +1366,7 @@ Validate Environment Events XML Unit types
 	[Documentation]    Validate the Environment Events XML Units conform to standards.
 	[Tags]    smoke    Environment
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/Environment/Environment_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -1765,7 +1387,7 @@ Validate Environment Telemetry XML Unit types
 	[Documentation]    Validate the Environment Telemetry XML Units conform to standards.
 	[Tags]    smoke    Environment
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/Environment/Environment_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -1786,7 +1408,7 @@ Validate FiberSpectrograph Commands XML Unit types
 	[Documentation]    Validate the FiberSpectrograph Commands XML Units conform to standards.
 	[Tags]    smoke    FiberSpectrograph
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -1807,7 +1429,7 @@ Validate FiberSpectrograph Events XML Unit types
 	[Documentation]    Validate the FiberSpectrograph Events XML Units conform to standards.
 	[Tags]    smoke    FiberSpectrograph
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -1828,7 +1450,7 @@ Validate FiberSpectrograph Telemetry XML Unit types
 	[Documentation]    Validate the FiberSpectrograph Telemetry XML Units conform to standards.
 	[Tags]    smoke    FiberSpectrograph
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -1849,7 +1471,7 @@ Validate GenericCamera Commands XML Unit types
 	[Documentation]    Validate the GenericCamera Commands XML Units conform to standards.
 	[Tags]    smoke    GenericCamera
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/GenericCamera/GenericCamera_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -1870,7 +1492,7 @@ Validate GenericCamera Events XML Unit types
 	[Documentation]    Validate the GenericCamera Events XML Units conform to standards.
 	[Tags]    smoke    GenericCamera
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/GenericCamera/GenericCamera_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -1891,7 +1513,7 @@ Validate GenericCamera Telemetry XML Unit types
 	[Documentation]    Validate the GenericCamera Telemetry XML Units conform to standards.
 	[Tags]    smoke    GenericCamera
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/GenericCamera/GenericCamera_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -1912,7 +1534,7 @@ Validate IOTA Events XML Unit types
 	[Documentation]    Validate the IOTA Events XML Units conform to standards.
 	[Tags]    smoke    IOTA
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/IOTA/IOTA_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -1933,7 +1555,7 @@ Validate IOTA Telemetry XML Unit types
 	[Documentation]    Validate the IOTA Telemetry XML Units conform to standards.
 	[Tags]    smoke    IOTA
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/IOTA/IOTA_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -1954,7 +1576,7 @@ Validate Hexapod Commands XML Unit types
 	[Documentation]    Validate the Hexapod Commands XML Units conform to standards.
 	[Tags]    smoke    Hexapod
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/Hexapod/Hexapod_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -1975,7 +1597,7 @@ Validate Hexapod Events XML Unit types
 	[Documentation]    Validate the Hexapod Events XML Units conform to standards.
 	[Tags]    smoke    Hexapod
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/Hexapod/Hexapod_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -1996,7 +1618,7 @@ Validate Hexapod Telemetry XML Unit types
 	[Documentation]    Validate the Hexapod Telemetry XML Units conform to standards.
 	[Tags]    smoke    Hexapod
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/Hexapod/Hexapod_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2017,7 +1639,7 @@ Validate HVAC Commands XML Unit types
 	[Documentation]    Validate the HVAC Commands XML Units conform to standards.
 	[Tags]    smoke    HVAC
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/HVAC/HVAC_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2038,7 +1660,7 @@ Validate HVAC Events XML Unit types
 	[Documentation]    Validate the HVAC Events XML Units conform to standards.
 	[Tags]    smoke    HVAC
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/HVAC/HVAC_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2059,7 +1681,7 @@ Validate HVAC Telemetry XML Unit types
 	[Documentation]    Validate the HVAC Telemetry XML Units conform to standards.
 	[Tags]    smoke    HVAC
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/HVAC/HVAC_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2080,7 +1702,7 @@ Validate LinearStage Commands XML Unit types
 	[Documentation]    Validate the LinearStage Commands XML Units conform to standards.
 	[Tags]    smoke    LinearStage
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2101,7 +1723,7 @@ Validate LinearStage Events XML Unit types
 	[Documentation]    Validate the LinearStage Events XML Units conform to standards.
 	[Tags]    smoke    LinearStage
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2122,7 +1744,7 @@ Validate LinearStage Telemetry XML Unit types
 	[Documentation]    Validate the LinearStage Telemetry XML Units conform to standards.
 	[Tags]    smoke    LinearStage
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2143,7 +1765,7 @@ Validate MTAOS Commands XML Unit types
 	[Documentation]    Validate the MTAOS Commands XML Units conform to standards.
 	[Tags]    smoke    MTAOS
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2164,7 +1786,7 @@ Validate MTAOS Events XML Unit types
 	[Documentation]    Validate the MTAOS Events XML Units conform to standards.
 	[Tags]    smoke    MTAOS
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2185,7 +1807,7 @@ Validate MTAOS Telemetry XML Unit types
 	[Documentation]    Validate the MTAOS Telemetry XML Units conform to standards.
 	[Tags]    smoke    MTAOS
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2206,7 +1828,7 @@ Validate MTArchiver Events XML Unit types
 	[Documentation]    Validate the MTArchiver Events XML Units conform to standards.
 	[Tags]    smoke    MTArchiver
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTArchiver/MTArchiver_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2227,7 +1849,7 @@ Validate MTArchiver Telemetry XML Unit types
 	[Documentation]    Validate the MTArchiver Telemetry XML Units conform to standards.
 	[Tags]    smoke    MTArchiver
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTArchiver/MTArchiver_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2248,7 +1870,7 @@ Validate MTCalCS Events XML Unit types
 	[Documentation]    Validate the MTCalCS Events XML Units conform to standards.
 	[Tags]    smoke    MTCalCS
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTCalCS/MTCalCS_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2269,7 +1891,7 @@ Validate MTCalCS Telemetry XML Unit types
 	[Documentation]    Validate the MTCalCS Telemetry XML Units conform to standards.
 	[Tags]    smoke    MTCalCS
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTCalCS/MTCalCS_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2290,7 +1912,7 @@ Validate MTCamera Commands XML Unit types
 	[Documentation]    Validate the MTCamera Commands XML Units conform to standards.
 	[Tags]    smoke    MTCamera
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/MTCamera/MTCamera_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2311,7 +1933,7 @@ Validate MTCamera Events XML Unit types
 	[Documentation]    Validate the MTCamera Events XML Units conform to standards.
 	[Tags]    smoke    MTCamera
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2332,7 +1954,7 @@ Validate MTCamera Telemetry XML Unit types
 	[Documentation]    Validate the MTCamera Telemetry XML Units conform to standards.
 	[Tags]    smoke    MTCamera
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2353,7 +1975,7 @@ Validate MTDomeTrajectory Events XML Unit types
 	[Documentation]    Validate the MTDomeTrajectory Events XML Units conform to standards.
 	[Tags]    smoke    MTDomeTrajectory
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTDomeTrajectory/MTDomeTrajectory_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2374,7 +1996,7 @@ Validate MTDomeTrajectory Telemetry XML Unit types
 	[Documentation]    Validate the MTDomeTrajectory Telemetry XML Units conform to standards.
 	[Tags]    smoke    MTDomeTrajectory
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTDomeTrajectory/MTDomeTrajectory_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2395,7 +2017,7 @@ Validate MTEEC Commands XML Unit types
 	[Documentation]    Validate the MTEEC Commands XML Units conform to standards.
 	[Tags]    smoke    MTEEC
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/MTEEC/MTEEC_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2416,7 +2038,7 @@ Validate MTEEC Events XML Unit types
 	[Documentation]    Validate the MTEEC Events XML Units conform to standards.
 	[Tags]    smoke    MTEEC
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTEEC/MTEEC_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2437,7 +2059,7 @@ Validate MTGuider Events XML Unit types
 	[Documentation]    Validate the MTGuider Events XML Units conform to standards.
 	[Tags]    smoke    MTGuider
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTGuider/MTGuider_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2458,7 +2080,7 @@ Validate MTGuider Telemetry XML Unit types
 	[Documentation]    Validate the MTGuider Telemetry XML Units conform to standards.
 	[Tags]    smoke    MTGuider
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTGuider/MTGuider_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2479,7 +2101,7 @@ Validate MTHeaderService Events XML Unit types
 	[Documentation]    Validate the MTHeaderService Events XML Units conform to standards.
 	[Tags]    smoke    MTHeaderService
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2500,7 +2122,7 @@ Validate MTLaserTracker Events XML Unit types
 	[Documentation]    Validate the MTLaserTracker Events XML Units conform to standards.
 	[Tags]    smoke    MTLaserTracker
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTLaserTracker/MTLaserTracker_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2521,7 +2143,7 @@ Validate MTLaserTracker Telemetry XML Unit types
 	[Documentation]    Validate the MTLaserTracker Telemetry XML Units conform to standards.
 	[Tags]    smoke    MTLaserTracker
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTLaserTracker/MTLaserTracker_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2542,7 +2164,7 @@ Validate MTM1M3 Commands XML Unit types
 	[Documentation]    Validate the MTM1M3 Commands XML Units conform to standards.
 	[Tags]    smoke    MTM1M3
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2563,7 +2185,7 @@ Validate MTM1M3 Events XML Unit types
 	[Documentation]    Validate the MTM1M3 Events XML Units conform to standards.
 	[Tags]    smoke    MTM1M3
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2584,7 +2206,7 @@ Validate MTM1M3 Telemetry XML Unit types
 	[Documentation]    Validate the MTM1M3 Telemetry XML Units conform to standards.
 	[Tags]    smoke    MTM1M3
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2605,7 +2227,7 @@ Validate MTM1M3TS Commands XML Unit types
 	[Documentation]    Validate the MTM1M3TS Commands XML Units conform to standards.
 	[Tags]    smoke    MTM1M3TS
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/MTM1M3TS/MTM1M3TS_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2626,7 +2248,7 @@ Validate MTM1M3TS Events XML Unit types
 	[Documentation]    Validate the MTM1M3TS Events XML Units conform to standards.
 	[Tags]    smoke    MTM1M3TS
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTM1M3TS/MTM1M3TS_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2647,7 +2269,7 @@ Validate MTM1M3TS Telemetry XML Unit types
 	[Documentation]    Validate the MTM1M3TS Telemetry XML Units conform to standards.
 	[Tags]    smoke    MTM1M3TS
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTM1M3TS/MTM1M3TS_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2668,7 +2290,7 @@ Validate MTM2 Commands XML Unit types
 	[Documentation]    Validate the MTM2 Commands XML Units conform to standards.
 	[Tags]    smoke    MTM2
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/MTM2/MTM2_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2689,7 +2311,7 @@ Validate MTM2 Events XML Unit types
 	[Documentation]    Validate the MTM2 Events XML Units conform to standards.
 	[Tags]    smoke    MTM2
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTM2/MTM2_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2710,7 +2332,7 @@ Validate MTM2 Telemetry XML Unit types
 	[Documentation]    Validate the MTM2 Telemetry XML Units conform to standards.
 	[Tags]    smoke    MTM2
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTM2/MTM2_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2731,7 +2353,7 @@ Validate MTMount Commands XML Unit types
 	[Documentation]    Validate the MTMount Commands XML Units conform to standards.
 	[Tags]    smoke    MTMount
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2752,7 +2374,7 @@ Validate MTMount Events XML Unit types
 	[Documentation]    Validate the MTMount Events XML Units conform to standards.
 	[Tags]    smoke    MTMount
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2773,7 +2395,7 @@ Validate MTMount Telemetry XML Unit types
 	[Documentation]    Validate the MTMount Telemetry XML Units conform to standards.
 	[Tags]    smoke    MTMount
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2794,7 +2416,7 @@ Validate MTPtg Commands XML Unit types
 	[Documentation]    Validate the MTPtg Commands XML Units conform to standards.
 	[Tags]    smoke    MTPtg
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/MTPtg/MTPtg_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2815,7 +2437,7 @@ Validate MTPtg Events XML Unit types
 	[Documentation]    Validate the MTPtg Events XML Units conform to standards.
 	[Tags]    smoke    MTPtg
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTPtg/MTPtg_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2836,7 +2458,7 @@ Validate MTPtg Telemetry XML Unit types
 	[Documentation]    Validate the MTPtg Telemetry XML Units conform to standards.
 	[Tags]    smoke    MTPtg
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTPtg/MTPtg_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2857,7 +2479,7 @@ Validate MTTCS Commands XML Unit types
 	[Documentation]    Validate the MTTCS Commands XML Units conform to standards.
 	[Tags]    smoke    MTTCS
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2878,7 +2500,7 @@ Validate MTTCS Events XML Unit types
 	[Documentation]    Validate the MTTCS Events XML Units conform to standards.
 	[Tags]    smoke    MTTCS
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2899,7 +2521,7 @@ Validate MTTCS Telemetry XML Unit types
 	[Documentation]    Validate the MTTCS Telemetry XML Units conform to standards.
 	[Tags]    smoke    MTTCS
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2920,7 +2542,7 @@ Validate MTVMS Commands XML Unit types
 	[Documentation]    Validate the MTVMS Commands XML Units conform to standards.
 	[Tags]    smoke    MTVMS
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/MTVMS/MTVMS_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2941,7 +2563,7 @@ Validate MTVMS Events XML Unit types
 	[Documentation]    Validate the MTVMS Events XML Units conform to standards.
 	[Tags]    smoke    MTVMS
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTVMS/MTVMS_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2962,7 +2584,7 @@ Validate MTVMS Telemetry XML Unit types
 	[Documentation]    Validate the MTVMS Telemetry XML Units conform to standards.
 	[Tags]    smoke    MTVMS
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTVMS/MTVMS_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -2983,7 +2605,7 @@ Validate OCS Commands XML Unit types
 	[Documentation]    Validate the OCS Commands XML Units conform to standards.
 	[Tags]    smoke    OCS
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/OCS/OCS_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -3004,7 +2626,7 @@ Validate OCS Events XML Unit types
 	[Documentation]    Validate the OCS Events XML Units conform to standards.
 	[Tags]    smoke    OCS
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/OCS/OCS_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -3025,7 +2647,7 @@ Validate OCS Telemetry XML Unit types
 	[Documentation]    Validate the OCS Telemetry XML Units conform to standards.
 	[Tags]    smoke    OCS
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/OCS/OCS_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -3046,7 +2668,7 @@ Validate PointingComponent Commands XML Unit types
 	[Documentation]    Validate the PointingComponent Commands XML Units conform to standards.
 	[Tags]    smoke    PointingComponent
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -3067,7 +2689,7 @@ Validate PointingComponent Events XML Unit types
 	[Documentation]    Validate the PointingComponent Events XML Units conform to standards.
 	[Tags]    smoke    PointingComponent
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -3088,7 +2710,7 @@ Validate PointingComponent Telemetry XML Unit types
 	[Documentation]    Validate the PointingComponent Telemetry XML Units conform to standards.
 	[Tags]    smoke    PointingComponent
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -3109,7 +2731,7 @@ Validate PromptProcessing Events XML Unit types
 	[Documentation]    Validate the PromptProcessing Events XML Units conform to standards.
 	[Tags]    smoke    PromptProcessing
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -3130,7 +2752,7 @@ Validate PromptProcessing Telemetry XML Unit types
 	[Documentation]    Validate the PromptProcessing Telemetry XML Units conform to standards.
 	[Tags]    smoke    PromptProcessing
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -3151,7 +2773,7 @@ Validate Rotator Commands XML Unit types
 	[Documentation]    Validate the Rotator Commands XML Units conform to standards.
 	[Tags]    smoke    Rotator
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/Rotator/Rotator_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -3172,7 +2794,7 @@ Validate Rotator Events XML Unit types
 	[Documentation]    Validate the Rotator Events XML Units conform to standards.
 	[Tags]    smoke    Rotator
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/Rotator/Rotator_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -3193,7 +2815,7 @@ Validate Rotator Telemetry XML Unit types
 	[Documentation]    Validate the Rotator Telemetry XML Units conform to standards.
 	[Tags]    smoke    Rotator
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/Rotator/Rotator_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -3214,7 +2836,7 @@ Validate Scheduler Events XML Unit types
 	[Documentation]    Validate the Scheduler Events XML Units conform to standards.
 	[Tags]    smoke    Scheduler
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/Scheduler/Scheduler_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -3235,7 +2857,7 @@ Validate Scheduler Telemetry XML Unit types
 	[Documentation]    Validate the Scheduler Telemetry XML Units conform to standards.
 	[Tags]    smoke    Scheduler
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/Scheduler/Scheduler_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -3256,7 +2878,7 @@ Validate Script Commands XML Unit types
 	[Documentation]    Validate the Script Commands XML Units conform to standards.
 	[Tags]    smoke    Script
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/Script/Script_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -3277,7 +2899,7 @@ Validate Script Events XML Unit types
 	[Documentation]    Validate the Script Events XML Units conform to standards.
 	[Tags]    smoke    Script
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/Script/Script_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -3298,7 +2920,7 @@ Validate ScriptQueue Commands XML Unit types
 	[Documentation]    Validate the ScriptQueue Commands XML Units conform to standards.
 	[Tags]    smoke    ScriptQueue
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -3319,7 +2941,7 @@ Validate ScriptQueue Events XML Unit types
 	[Documentation]    Validate the ScriptQueue Events XML Units conform to standards.
 	[Tags]    smoke    ScriptQueue
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -3340,7 +2962,7 @@ Validate Sequencer Commands XML Unit types
 	[Documentation]    Validate the Sequencer Commands XML Units conform to standards.
 	[Tags]    smoke    Sequencer
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/Sequencer/Sequencer_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -3361,7 +2983,7 @@ Validate Sequencer Events XML Unit types
 	[Documentation]    Validate the Sequencer Events XML Units conform to standards.
 	[Tags]    smoke    Sequencer
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/Sequencer/Sequencer_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -3382,7 +3004,7 @@ Validate Sequencer Telemetry XML Unit types
 	[Documentation]    Validate the Sequencer Telemetry XML Units conform to standards.
 	[Tags]    smoke    Sequencer
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/Sequencer/Sequencer_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -3403,7 +3025,7 @@ Validate SummitFacility Events XML Unit types
 	[Documentation]    Validate the SummitFacility Events XML Units conform to standards.
 	[Tags]    smoke    SummitFacility
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -3424,7 +3046,7 @@ Validate SummitFacility Telemetry XML Unit types
 	[Documentation]    Validate the SummitFacility Telemetry XML Units conform to standards.
 	[Tags]    smoke    SummitFacility
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -3445,7 +3067,7 @@ Validate Test Commands XML Unit types
 	[Documentation]    Validate the Test Commands XML Units conform to standards.
 	[Tags]    smoke    Test
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/Test/Test_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -3466,7 +3088,7 @@ Validate Test Events XML Unit types
 	[Documentation]    Validate the Test Events XML Units conform to standards.
 	[Tags]    smoke    Test
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/Test/Test_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -3487,7 +3109,7 @@ Validate Test Telemetry XML Unit types
 	[Documentation]    Validate the Test Telemetry XML Units conform to standards.
 	[Tags]    smoke    Test
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/Test/Test_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -3508,7 +3130,7 @@ Validate TunableLaser Commands XML Unit types
 	[Documentation]    Validate the TunableLaser Commands XML Units conform to standards.
 	[Tags]    smoke    TunableLaser
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/TunableLaser/TunableLaser_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -3529,7 +3151,7 @@ Validate TunableLaser Events XML Unit types
 	[Documentation]    Validate the TunableLaser Events XML Units conform to standards.
 	[Tags]    smoke    TunableLaser
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/TunableLaser/TunableLaser_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -3550,7 +3172,7 @@ Validate TunableLaser Telemetry XML Unit types
 	[Documentation]    Validate the TunableLaser Telemetry XML Units conform to standards.
 	[Tags]    smoke    TunableLaser
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/TunableLaser/TunableLaser_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -3571,7 +3193,7 @@ Validate Watcher Commands XML Unit types
 	[Documentation]    Validate the Watcher Commands XML Units conform to standards.
 	[Tags]    smoke    Watcher
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/Watcher/Watcher_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
@@ -3592,7 +3214,7 @@ Validate Watcher Events XML Unit types
 	[Documentation]    Validate the Watcher Events XML Units conform to standards.
 	[Tags]    smoke    Watcher
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/Watcher/Watcher_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}
+	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	: FOR    ${unit}    IN    @{units}
 	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
