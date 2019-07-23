@@ -244,14 +244,14 @@ Validate ATSpectrograph Generics Element
 
 Validate ATTCS Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
-	[Tags]    smoke    ATTCS    DM-17353
+	[Tags]    smoke    ATTCS
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    ATTCS
 	Should Contain    ${cscs}    ${csc}
 
 Validate ATTCS Generics Element
 	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
-	[Tags]    smoke    ATTCS    DM-17353
+	[Tags]    smoke    ATTCS
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='ATTCS']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    ATTCS has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
@@ -706,14 +706,14 @@ Validate MTPtg Generics Element
 
 Validate MTTCS Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
-	[Tags]    smoke    MTTCS    DM-17357
+	[Tags]    smoke    MTTCS
 	Comment    Define CSC.
 	Set Test Variable    ${csc}    MTTCS
 	Should Contain    ${cscs}    ${csc}
 
 Validate MTTCS Generics Element
 	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
-	[Tags]    smoke    MTTCS    DM-17357
+	[Tags]    smoke    MTTCS
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='MTTCS']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    MTTCS has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes

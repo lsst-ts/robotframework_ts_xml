@@ -457,150 +457,6 @@ Validate Dome Telemetry Attribute Descriptions
 	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
 	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
 
-Validate DomeADB Commands Attribute Descriptions
-	[Documentation]    Validate the DomeADB Commands attribute descriptions are populated.
-	[Tags]    smoke    DomeADB    
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Description" -v . -n ${folder}/sal_interfaces/DomeADB/DomeADB_Commands.xml |sed -e 's/^[ \t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\n/|/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
-	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
-
-Validate DomeADB Events Attribute Descriptions
-	[Documentation]    Validate the DomeADB Events attribute descriptions are populated.
-	[Tags]    smoke    DomeADB    
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Description" -v . -n ${folder}/sal_interfaces/DomeADB/DomeADB_Events.xml |sed -e 's/^[ \t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\n/|/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
-	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
-
-Validate DomeADB Telemetry Attribute Descriptions
-	[Documentation]    Validate the DomeADB Telemetry attribute descriptions are populated.
-	[Tags]    smoke    DomeADB    
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Description" -v . -n ${folder}/sal_interfaces/DomeADB/DomeADB_Telemetry.xml |sed -e 's/^[ \t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\n/|/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
-	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
-
-Validate DomeAPS Commands Attribute Descriptions
-	[Documentation]    Validate the DomeAPS Commands attribute descriptions are populated.
-	[Tags]    smoke    DomeAPS    
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Description" -v . -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Commands.xml |sed -e 's/^[ \t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\n/|/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
-	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
-
-Validate DomeAPS Events Attribute Descriptions
-	[Documentation]    Validate the DomeAPS Events attribute descriptions are populated.
-	[Tags]    smoke    DomeAPS    
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Description" -v . -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Events.xml |sed -e 's/^[ \t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\n/|/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
-	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
-
-Validate DomeAPS Telemetry Attribute Descriptions
-	[Documentation]    Validate the DomeAPS Telemetry attribute descriptions are populated.
-	[Tags]    smoke    DomeAPS    
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Description" -v . -n ${folder}/sal_interfaces/DomeAPS/DomeAPS_Telemetry.xml |sed -e 's/^[ \t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\n/|/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
-	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
-
-Validate DomeLouvers Commands Attribute Descriptions
-	[Documentation]    Validate the DomeLouvers Commands attribute descriptions are populated.
-	[Tags]    smoke    DomeLouvers    
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Description" -v . -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Commands.xml |sed -e 's/^[ \t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\n/|/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
-	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
-
-Validate DomeLouvers Events Attribute Descriptions
-	[Documentation]    Validate the DomeLouvers Events attribute descriptions are populated.
-	[Tags]    smoke    DomeLouvers    
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Description" -v . -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Events.xml |sed -e 's/^[ \t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\n/|/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
-	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
-
-Validate DomeLouvers Telemetry Attribute Descriptions
-	[Documentation]    Validate the DomeLouvers Telemetry attribute descriptions are populated.
-	[Tags]    smoke    DomeLouvers    
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Description" -v . -n ${folder}/sal_interfaces/DomeLouvers/DomeLouvers_Telemetry.xml |sed -e 's/^[ \t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\n/|/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
-	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
-
-Validate DomeLWS Commands Attribute Descriptions
-	[Documentation]    Validate the DomeLWS Commands attribute descriptions are populated.
-	[Tags]    smoke    DomeLWS    
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Description" -v . -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Commands.xml |sed -e 's/^[ \t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\n/|/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
-	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
-
-Validate DomeLWS Events Attribute Descriptions
-	[Documentation]    Validate the DomeLWS Events attribute descriptions are populated.
-	[Tags]    smoke    DomeLWS    
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Description" -v . -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Events.xml |sed -e 's/^[ \t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\n/|/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
-	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
-
-Validate DomeLWS Telemetry Attribute Descriptions
-	[Documentation]    Validate the DomeLWS Telemetry attribute descriptions are populated.
-	[Tags]    smoke    DomeLWS    
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Description" -v . -n ${folder}/sal_interfaces/DomeLWS/DomeLWS_Telemetry.xml |sed -e 's/^[ \t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\n/|/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
-	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
-
-Validate DomeMONCS Commands Attribute Descriptions
-	[Documentation]    Validate the DomeMONCS Commands attribute descriptions are populated.
-	[Tags]    smoke    DomeMONCS    
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Description" -v . -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Commands.xml |sed -e 's/^[ \t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\n/|/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
-	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
-
-Validate DomeMONCS Events Attribute Descriptions
-	[Documentation]    Validate the DomeMONCS Events attribute descriptions are populated.
-	[Tags]    smoke    DomeMONCS    
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Description" -v . -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Events.xml |sed -e 's/^[ \t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\n/|/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
-	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
-
-Validate DomeMONCS Telemetry Attribute Descriptions
-	[Documentation]    Validate the DomeMONCS Telemetry attribute descriptions are populated.
-	[Tags]    smoke    DomeMONCS    
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Description" -v . -n ${folder}/sal_interfaces/DomeMONCS/DomeMONCS_Telemetry.xml |sed -e 's/^[ \t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\n/|/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
-	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
-
-Validate DomeTHCS Commands Attribute Descriptions
-	[Documentation]    Validate the DomeTHCS Commands attribute descriptions are populated.
-	[Tags]    smoke    DomeTHCS    
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Description" -v . -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Commands.xml |sed -e 's/^[ \t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\n/|/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
-	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
-
-Validate DomeTHCS Events Attribute Descriptions
-	[Documentation]    Validate the DomeTHCS Events attribute descriptions are populated.
-	[Tags]    smoke    DomeTHCS    
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Description" -v . -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Events.xml |sed -e 's/^[ \t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\n/|/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
-	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
-
-Validate DomeTHCS Telemetry Attribute Descriptions
-	[Documentation]    Validate the DomeTHCS Telemetry attribute descriptions are populated.
-	[Tags]    smoke    DomeTHCS    
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Description" -v . -n ${folder}/sal_interfaces/DomeTHCS/DomeTHCS_Telemetry.xml |sed -e 's/^[ \t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\n/|/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
-	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
-
 Validate EAS Events Attribute Descriptions
 	[Documentation]    Validate the EAS Events attribute descriptions are populated.
 	[Tags]    smoke    EAS    
@@ -1357,6 +1213,22 @@ Validate TunableLaser Telemetry Attribute Descriptions
 	[Documentation]    Validate the TunableLaser Telemetry attribute descriptions are populated.
 	[Tags]    smoke    TunableLaser    
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Description" -v . -n ${folder}/sal_interfaces/TunableLaser/TunableLaser_Telemetry.xml |sed -e 's/^[ \t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\n/|/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
+	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
+
+Validate Watcher Commands Attribute Descriptions
+	[Documentation]    Validate the Watcher Commands attribute descriptions are populated.
+	[Tags]    smoke    Watcher    
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Description" -v . -n ${folder}/sal_interfaces/Watcher/Watcher_Commands.xml |sed -e 's/^[ \t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\n/|/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
+	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
+
+Validate Watcher Events Attribute Descriptions
+	[Documentation]    Validate the Watcher Events attribute descriptions are populated.
+	[Tags]    smoke    Watcher    
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Description" -v . -n ${folder}/sal_interfaces/Watcher/Watcher_Events.xml |sed -e 's/^[ \t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\n/|/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
 	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False

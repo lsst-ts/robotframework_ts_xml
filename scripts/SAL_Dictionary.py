@@ -83,10 +83,8 @@ for csc in xml_common.subsystems:
 	index += 1
 
 	# Mark test cases with Jira tickets
-	if csc == "MTTCS":
-		skipped="    DM-17357"
-	elif csc == "ATTCS":
-		skipped="    DM-17353"
+	if csc == "na":
+		skipped=""
 	else:
 		skipped=""
 

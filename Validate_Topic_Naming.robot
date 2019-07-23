@@ -353,7 +353,7 @@ Validate ATSpectrograph Telemetry Topic Names
 
 Validate ATTCS Commands Topic Names
 	[Documentation]    Validate the ATTCS Commands topic names conform to naming convention.
-	[Tags]    smoke    ATTCS    DM-17353
+	[Tags]    smoke    ATTCS    
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/ATTCS/ATTCS_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -362,7 +362,7 @@ Validate ATTCS Commands Topic Names
 
 Validate ATTCS Events Topic Names
 	[Documentation]    Validate the ATTCS Events topic names conform to naming convention.
-	[Tags]    smoke    ATTCS    DM-17353
+	[Tags]    smoke    ATTCS    
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/ATTCS/ATTCS_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -371,7 +371,7 @@ Validate ATTCS Events Topic Names
 
 Validate ATTCS Telemetry Topic Names
 	[Documentation]    Validate the ATTCS Telemetry topic names conform to naming convention.
-	[Tags]    smoke    ATTCS    DM-17353
+	[Tags]    smoke    ATTCS    
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/ATTCS/ATTCS_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -1064,7 +1064,7 @@ Validate MTPtg Telemetry Topic Names
 
 Validate MTTCS Commands Topic Names
 	[Documentation]    Validate the MTTCS Commands topic names conform to naming convention.
-	[Tags]    smoke    MTTCS    DM-17357
+	[Tags]    smoke    MTTCS    
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Commands.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -1073,7 +1073,7 @@ Validate MTTCS Commands Topic Names
 
 Validate MTTCS Events Topic Names
 	[Documentation]    Validate the MTTCS Events topic names conform to naming convention.
-	[Tags]    smoke    MTTCS    DM-17357
+	[Tags]    smoke    MTTCS    
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
@@ -1082,7 +1082,7 @@ Validate MTTCS Events Topic Names
 
 Validate MTTCS Telemetry Topic Names
 	[Documentation]    Validate the MTTCS Telemetry topic names conform to naming convention.
-	[Tags]    smoke    MTTCS    DM-17357
+	[Tags]    smoke    MTTCS    
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/Alias" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
