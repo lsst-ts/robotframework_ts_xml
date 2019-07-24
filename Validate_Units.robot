@@ -3,7 +3,7 @@ Documentation    Validate the subsystem XML definition files contain a valid Uni
 Test Setup    Run Keyword If    "${ContInt}"=="true"    Set Suite Variable    ${xml}    xmlstarlet
 Library    OperatingSystem
 Library    String
-Library    Unit_Validator
+Library    ${EXECDIR}${/}Unit_Validator.py
 Resource    Global_Vars.robot
 
 *** Variables ***
@@ -24,12 +24,13 @@ Validate ATAOS Commands XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATAOS/ATAOS_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATAOS Events XML Units
 	[Documentation]    Validate the ATAOS Events XML Units.
@@ -45,12 +46,13 @@ Validate ATAOS Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATAOS/ATAOS_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATAOS Telemetry XML Units
 	[Documentation]    Validate the ATAOS Telemetry XML Units.
@@ -66,12 +68,13 @@ Validate ATAOS Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATAOS/ATAOS_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATArchiver Commands XML Units
 	[Documentation]    Validate the ATArchiver Commands XML Units.
@@ -87,12 +90,13 @@ Validate ATArchiver Commands XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATArchiver/ATArchiver_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATArchiver Events XML Units
 	[Documentation]    Validate the ATArchiver Events XML Units.
@@ -108,12 +112,13 @@ Validate ATArchiver Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATArchiver/ATArchiver_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATArchiver Telemetry XML Units
 	[Documentation]    Validate the ATArchiver Telemetry XML Units.
@@ -129,12 +134,13 @@ Validate ATArchiver Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATArchiver/ATArchiver_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATBuilding Events XML Units
 	[Documentation]    Validate the ATBuilding Events XML Units.
@@ -150,12 +156,13 @@ Validate ATBuilding Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATBuilding/ATBuilding_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATBuilding Telemetry XML Units
 	[Documentation]    Validate the ATBuilding Telemetry XML Units.
@@ -171,12 +178,13 @@ Validate ATBuilding Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATBuilding/ATBuilding_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATCalCS Events XML Units
 	[Documentation]    Validate the ATCalCS Events XML Units.
@@ -192,12 +200,13 @@ Validate ATCalCS Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATCalCS/ATCalCS_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATCalCS Telemetry XML Units
 	[Documentation]    Validate the ATCalCS Telemetry XML Units.
@@ -213,12 +222,13 @@ Validate ATCalCS Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATCalCS/ATCalCS_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATCamera Commands XML Units
 	[Documentation]    Validate the ATCamera Commands XML Units.
@@ -234,12 +244,13 @@ Validate ATCamera Commands XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATCamera/ATCamera_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATCamera Events XML Units
 	[Documentation]    Validate the ATCamera Events XML Units.
@@ -255,12 +266,13 @@ Validate ATCamera Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATCamera/ATCamera_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATCamera Telemetry XML Units
 	[Documentation]    Validate the ATCamera Telemetry XML Units.
@@ -276,12 +288,13 @@ Validate ATCamera Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATCamera/ATCamera_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATDome Commands XML Units
 	[Documentation]    Validate the ATDome Commands XML Units.
@@ -297,12 +310,13 @@ Validate ATDome Commands XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATDome/ATDome_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATDome Events XML Units
 	[Documentation]    Validate the ATDome Events XML Units.
@@ -318,12 +332,13 @@ Validate ATDome Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATDome/ATDome_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATDome Telemetry XML Units
 	[Documentation]    Validate the ATDome Telemetry XML Units.
@@ -339,12 +354,13 @@ Validate ATDome Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATDome/ATDome_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATDomeTrajectory Events XML Units
 	[Documentation]    Validate the ATDomeTrajectory Events XML Units.
@@ -360,12 +376,13 @@ Validate ATDomeTrajectory Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATDomeTrajectory/ATDomeTrajectory_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATEEC Commands XML Units
 	[Documentation]    Validate the ATEEC Commands XML Units.
@@ -381,12 +398,13 @@ Validate ATEEC Commands XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATEEC/ATEEC_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATEEC Events XML Units
 	[Documentation]    Validate the ATEEC Events XML Units.
@@ -402,12 +420,13 @@ Validate ATEEC Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATEEC/ATEEC_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATHeaderService Events XML Units
 	[Documentation]    Validate the ATHeaderService Events XML Units.
@@ -423,12 +442,13 @@ Validate ATHeaderService Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATHeaderService/ATHeaderService_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATHexapod Commands XML Units
 	[Documentation]    Validate the ATHexapod Commands XML Units.
@@ -444,12 +464,13 @@ Validate ATHexapod Commands XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATHexapod Events XML Units
 	[Documentation]    Validate the ATHexapod Events XML Units.
@@ -465,12 +486,13 @@ Validate ATHexapod Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATHexapod Telemetry XML Units
 	[Documentation]    Validate the ATHexapod Telemetry XML Units.
@@ -486,12 +508,13 @@ Validate ATHexapod Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATMCS Commands XML Units
 	[Documentation]    Validate the ATMCS Commands XML Units.
@@ -507,12 +530,13 @@ Validate ATMCS Commands XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATMCS/ATMCS_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATMCS Events XML Units
 	[Documentation]    Validate the ATMCS Events XML Units.
@@ -528,12 +552,13 @@ Validate ATMCS Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATMCS/ATMCS_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATMCS Telemetry XML Units
 	[Documentation]    Validate the ATMCS Telemetry XML Units.
@@ -549,12 +574,13 @@ Validate ATMCS Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATMCS/ATMCS_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATMonochromator Commands XML Units
 	[Documentation]    Validate the ATMonochromator Commands XML Units.
@@ -570,12 +596,13 @@ Validate ATMonochromator Commands XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATMonochromator/ATMonochromator_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATMonochromator Events XML Units
 	[Documentation]    Validate the ATMonochromator Events XML Units.
@@ -591,12 +618,13 @@ Validate ATMonochromator Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATMonochromator/ATMonochromator_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATMonochromator Telemetry XML Units
 	[Documentation]    Validate the ATMonochromator Telemetry XML Units.
@@ -612,12 +640,13 @@ Validate ATMonochromator Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATMonochromator/ATMonochromator_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATPneumatics Commands XML Units
 	[Documentation]    Validate the ATPneumatics Commands XML Units.
@@ -633,12 +662,13 @@ Validate ATPneumatics Commands XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATPneumatics/ATPneumatics_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATPneumatics Events XML Units
 	[Documentation]    Validate the ATPneumatics Events XML Units.
@@ -654,12 +684,13 @@ Validate ATPneumatics Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATPneumatics/ATPneumatics_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATPneumatics Telemetry XML Units
 	[Documentation]    Validate the ATPneumatics Telemetry XML Units.
@@ -675,12 +706,13 @@ Validate ATPneumatics Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATPneumatics/ATPneumatics_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATPtg Commands XML Units
 	[Documentation]    Validate the ATPtg Commands XML Units.
@@ -696,12 +728,13 @@ Validate ATPtg Commands XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATPtg/ATPtg_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATPtg Events XML Units
 	[Documentation]    Validate the ATPtg Events XML Units.
@@ -717,12 +750,13 @@ Validate ATPtg Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATPtg/ATPtg_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATPtg Telemetry XML Units
 	[Documentation]    Validate the ATPtg Telemetry XML Units.
@@ -738,12 +772,13 @@ Validate ATPtg Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATPtg/ATPtg_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATSpectrograph Commands XML Units
 	[Documentation]    Validate the ATSpectrograph Commands XML Units.
@@ -759,12 +794,13 @@ Validate ATSpectrograph Commands XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATSpectrograph/ATSpectrograph_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATSpectrograph Events XML Units
 	[Documentation]    Validate the ATSpectrograph Events XML Units.
@@ -780,12 +816,13 @@ Validate ATSpectrograph Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATSpectrograph/ATSpectrograph_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATSpectrograph Telemetry XML Units
 	[Documentation]    Validate the ATSpectrograph Telemetry XML Units.
@@ -801,12 +838,13 @@ Validate ATSpectrograph Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATSpectrograph/ATSpectrograph_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATTCS Commands XML Units
 	[Documentation]    Validate the ATTCS Commands XML Units.
@@ -822,12 +860,13 @@ Validate ATTCS Commands XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATTCS/ATTCS_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATTCS Events XML Units
 	[Documentation]    Validate the ATTCS Events XML Units.
@@ -843,12 +882,13 @@ Validate ATTCS Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATTCS/ATTCS_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATTCS Telemetry XML Units
 	[Documentation]    Validate the ATTCS Telemetry XML Units.
@@ -864,12 +904,13 @@ Validate ATTCS Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATTCS/ATTCS_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATThermoelectricCooler Commands XML Units
 	[Documentation]    Validate the ATThermoelectricCooler Commands XML Units.
@@ -885,12 +926,13 @@ Validate ATThermoelectricCooler Commands XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATThermoelectricCooler/ATThermoelectricCooler_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATThermoelectricCooler Events XML Units
 	[Documentation]    Validate the ATThermoelectricCooler Events XML Units.
@@ -906,12 +948,13 @@ Validate ATThermoelectricCooler Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATThermoelectricCooler/ATThermoelectricCooler_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATThermoelectricCooler Telemetry XML Units
 	[Documentation]    Validate the ATThermoelectricCooler Telemetry XML Units.
@@ -927,12 +970,13 @@ Validate ATThermoelectricCooler Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATThermoelectricCooler/ATThermoelectricCooler_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATWhiteLight Commands XML Units
 	[Documentation]    Validate the ATWhiteLight Commands XML Units.
@@ -948,12 +992,13 @@ Validate ATWhiteLight Commands XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATWhiteLight Events XML Units
 	[Documentation]    Validate the ATWhiteLight Events XML Units.
@@ -969,12 +1014,13 @@ Validate ATWhiteLight Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ATWhiteLight Telemetry XML Units
 	[Documentation]    Validate the ATWhiteLight Telemetry XML Units.
@@ -990,12 +1036,13 @@ Validate ATWhiteLight Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate CatchupArchiver Events XML Units
 	[Documentation]    Validate the CatchupArchiver Events XML Units.
@@ -1011,12 +1058,13 @@ Validate CatchupArchiver Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate CatchupArchiver Telemetry XML Units
 	[Documentation]    Validate the CatchupArchiver Telemetry XML Units.
@@ -1032,12 +1080,13 @@ Validate CatchupArchiver Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate CBP Commands XML Units
 	[Documentation]    Validate the CBP Commands XML Units.
@@ -1053,12 +1102,13 @@ Validate CBP Commands XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/CBP/CBP_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate CBP Telemetry XML Units
 	[Documentation]    Validate the CBP Telemetry XML Units.
@@ -1074,12 +1124,13 @@ Validate CBP Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/CBP/CBP_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate DIMM Events XML Units
 	[Documentation]    Validate the DIMM Events XML Units.
@@ -1095,12 +1146,13 @@ Validate DIMM Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/DIMM/DIMM_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate DIMM Telemetry XML Units
 	[Documentation]    Validate the DIMM Telemetry XML Units.
@@ -1116,12 +1168,13 @@ Validate DIMM Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/DIMM/DIMM_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate Dome Commands XML Units
 	[Documentation]    Validate the Dome Commands XML Units.
@@ -1137,12 +1190,13 @@ Validate Dome Commands XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/Dome/Dome_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate Dome Events XML Units
 	[Documentation]    Validate the Dome Events XML Units.
@@ -1158,12 +1212,13 @@ Validate Dome Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/Dome/Dome_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate Dome Telemetry XML Units
 	[Documentation]    Validate the Dome Telemetry XML Units.
@@ -1179,12 +1234,13 @@ Validate Dome Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/Dome/Dome_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate EAS Events XML Units
 	[Documentation]    Validate the EAS Events XML Units.
@@ -1200,12 +1256,13 @@ Validate EAS Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/EAS/EAS_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate EAS Telemetry XML Units
 	[Documentation]    Validate the EAS Telemetry XML Units.
@@ -1221,12 +1278,13 @@ Validate EAS Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/EAS/EAS_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate EFD Events XML Units
 	[Documentation]    Validate the EFD Events XML Units.
@@ -1242,12 +1300,13 @@ Validate EFD Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/EFD/EFD_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate EFD Telemetry XML Units
 	[Documentation]    Validate the EFD Telemetry XML Units.
@@ -1263,12 +1322,13 @@ Validate EFD Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/EFD/EFD_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate EFDTransformationServer Events XML Units
 	[Documentation]    Validate the EFDTransformationServer Events XML Units.
@@ -1284,12 +1344,13 @@ Validate EFDTransformationServer Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/EFDTransformationServer/EFDTransformationServer_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate EFDTransformationServer Telemetry XML Units
 	[Documentation]    Validate the EFDTransformationServer Telemetry XML Units.
@@ -1305,12 +1366,13 @@ Validate EFDTransformationServer Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/EFDTransformationServer/EFDTransformationServer_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate Electrometer Commands XML Units
 	[Documentation]    Validate the Electrometer Commands XML Units.
@@ -1326,12 +1388,13 @@ Validate Electrometer Commands XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/Electrometer/Electrometer_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate Electrometer Events XML Units
 	[Documentation]    Validate the Electrometer Events XML Units.
@@ -1347,12 +1410,13 @@ Validate Electrometer Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/Electrometer/Electrometer_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate Environment Events XML Units
 	[Documentation]    Validate the Environment Events XML Units.
@@ -1368,12 +1432,13 @@ Validate Environment Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/Environment/Environment_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate Environment Telemetry XML Units
 	[Documentation]    Validate the Environment Telemetry XML Units.
@@ -1389,12 +1454,13 @@ Validate Environment Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/Environment/Environment_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate FiberSpectrograph Commands XML Units
 	[Documentation]    Validate the FiberSpectrograph Commands XML Units.
@@ -1410,12 +1476,13 @@ Validate FiberSpectrograph Commands XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate FiberSpectrograph Events XML Units
 	[Documentation]    Validate the FiberSpectrograph Events XML Units.
@@ -1431,12 +1498,13 @@ Validate FiberSpectrograph Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate FiberSpectrograph Telemetry XML Units
 	[Documentation]    Validate the FiberSpectrograph Telemetry XML Units.
@@ -1452,12 +1520,13 @@ Validate FiberSpectrograph Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate GenericCamera Commands XML Units
 	[Documentation]    Validate the GenericCamera Commands XML Units.
@@ -1473,12 +1542,13 @@ Validate GenericCamera Commands XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/GenericCamera/GenericCamera_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate GenericCamera Events XML Units
 	[Documentation]    Validate the GenericCamera Events XML Units.
@@ -1494,12 +1564,13 @@ Validate GenericCamera Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/GenericCamera/GenericCamera_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate GenericCamera Telemetry XML Units
 	[Documentation]    Validate the GenericCamera Telemetry XML Units.
@@ -1515,12 +1586,13 @@ Validate GenericCamera Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/GenericCamera/GenericCamera_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate IOTA Events XML Units
 	[Documentation]    Validate the IOTA Events XML Units.
@@ -1536,12 +1608,13 @@ Validate IOTA Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/IOTA/IOTA_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate IOTA Telemetry XML Units
 	[Documentation]    Validate the IOTA Telemetry XML Units.
@@ -1557,12 +1630,13 @@ Validate IOTA Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/IOTA/IOTA_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate Hexapod Commands XML Units
 	[Documentation]    Validate the Hexapod Commands XML Units.
@@ -1578,12 +1652,13 @@ Validate Hexapod Commands XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/Hexapod/Hexapod_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate Hexapod Events XML Units
 	[Documentation]    Validate the Hexapod Events XML Units.
@@ -1599,12 +1674,13 @@ Validate Hexapod Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/Hexapod/Hexapod_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate Hexapod Telemetry XML Units
 	[Documentation]    Validate the Hexapod Telemetry XML Units.
@@ -1620,12 +1696,13 @@ Validate Hexapod Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/Hexapod/Hexapod_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate HVAC Commands XML Units
 	[Documentation]    Validate the HVAC Commands XML Units.
@@ -1641,12 +1718,13 @@ Validate HVAC Commands XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/HVAC/HVAC_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate HVAC Events XML Units
 	[Documentation]    Validate the HVAC Events XML Units.
@@ -1662,12 +1740,13 @@ Validate HVAC Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/HVAC/HVAC_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate HVAC Telemetry XML Units
 	[Documentation]    Validate the HVAC Telemetry XML Units.
@@ -1683,12 +1762,13 @@ Validate HVAC Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/HVAC/HVAC_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate LinearStage Commands XML Units
 	[Documentation]    Validate the LinearStage Commands XML Units.
@@ -1704,12 +1784,13 @@ Validate LinearStage Commands XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate LinearStage Events XML Units
 	[Documentation]    Validate the LinearStage Events XML Units.
@@ -1725,12 +1806,13 @@ Validate LinearStage Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate LinearStage Telemetry XML Units
 	[Documentation]    Validate the LinearStage Telemetry XML Units.
@@ -1746,12 +1828,13 @@ Validate LinearStage Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate MTAOS Commands XML Units
 	[Documentation]    Validate the MTAOS Commands XML Units.
@@ -1767,12 +1850,13 @@ Validate MTAOS Commands XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate MTAOS Events XML Units
 	[Documentation]    Validate the MTAOS Events XML Units.
@@ -1788,12 +1872,13 @@ Validate MTAOS Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate MTAOS Telemetry XML Units
 	[Documentation]    Validate the MTAOS Telemetry XML Units.
@@ -1809,12 +1894,13 @@ Validate MTAOS Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate MTArchiver Events XML Units
 	[Documentation]    Validate the MTArchiver Events XML Units.
@@ -1830,12 +1916,13 @@ Validate MTArchiver Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTArchiver/MTArchiver_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate MTArchiver Telemetry XML Units
 	[Documentation]    Validate the MTArchiver Telemetry XML Units.
@@ -1851,12 +1938,13 @@ Validate MTArchiver Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTArchiver/MTArchiver_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate MTCalCS Events XML Units
 	[Documentation]    Validate the MTCalCS Events XML Units.
@@ -1872,12 +1960,13 @@ Validate MTCalCS Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTCalCS/MTCalCS_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate MTCalCS Telemetry XML Units
 	[Documentation]    Validate the MTCalCS Telemetry XML Units.
@@ -1893,12 +1982,13 @@ Validate MTCalCS Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTCalCS/MTCalCS_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate MTCamera Commands XML Units
 	[Documentation]    Validate the MTCamera Commands XML Units.
@@ -1914,12 +2004,13 @@ Validate MTCamera Commands XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/MTCamera/MTCamera_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate MTCamera Events XML Units
 	[Documentation]    Validate the MTCamera Events XML Units.
@@ -1935,12 +2026,13 @@ Validate MTCamera Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate MTCamera Telemetry XML Units
 	[Documentation]    Validate the MTCamera Telemetry XML Units.
@@ -1956,12 +2048,13 @@ Validate MTCamera Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate MTDomeTrajectory Events XML Units
 	[Documentation]    Validate the MTDomeTrajectory Events XML Units.
@@ -1977,12 +2070,13 @@ Validate MTDomeTrajectory Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTDomeTrajectory/MTDomeTrajectory_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate MTDomeTrajectory Telemetry XML Units
 	[Documentation]    Validate the MTDomeTrajectory Telemetry XML Units.
@@ -1998,12 +2092,13 @@ Validate MTDomeTrajectory Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTDomeTrajectory/MTDomeTrajectory_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate MTEEC Commands XML Units
 	[Documentation]    Validate the MTEEC Commands XML Units.
@@ -2019,12 +2114,13 @@ Validate MTEEC Commands XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/MTEEC/MTEEC_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate MTEEC Events XML Units
 	[Documentation]    Validate the MTEEC Events XML Units.
@@ -2040,12 +2136,13 @@ Validate MTEEC Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTEEC/MTEEC_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate MTGuider Events XML Units
 	[Documentation]    Validate the MTGuider Events XML Units.
@@ -2061,12 +2158,13 @@ Validate MTGuider Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTGuider/MTGuider_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate MTGuider Telemetry XML Units
 	[Documentation]    Validate the MTGuider Telemetry XML Units.
@@ -2082,12 +2180,13 @@ Validate MTGuider Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTGuider/MTGuider_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate MTHeaderService Events XML Units
 	[Documentation]    Validate the MTHeaderService Events XML Units.
@@ -2103,12 +2202,13 @@ Validate MTHeaderService Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate MTLaserTracker Events XML Units
 	[Documentation]    Validate the MTLaserTracker Events XML Units.
@@ -2124,12 +2224,13 @@ Validate MTLaserTracker Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTLaserTracker/MTLaserTracker_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate MTLaserTracker Telemetry XML Units
 	[Documentation]    Validate the MTLaserTracker Telemetry XML Units.
@@ -2145,12 +2246,13 @@ Validate MTLaserTracker Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTLaserTracker/MTLaserTracker_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate MTM1M3 Commands XML Units
 	[Documentation]    Validate the MTM1M3 Commands XML Units.
@@ -2166,12 +2268,13 @@ Validate MTM1M3 Commands XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate MTM1M3 Events XML Units
 	[Documentation]    Validate the MTM1M3 Events XML Units.
@@ -2187,12 +2290,13 @@ Validate MTM1M3 Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate MTM1M3 Telemetry XML Units
 	[Documentation]    Validate the MTM1M3 Telemetry XML Units.
@@ -2208,12 +2312,13 @@ Validate MTM1M3 Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate MTM1M3TS Commands XML Units
 	[Documentation]    Validate the MTM1M3TS Commands XML Units.
@@ -2229,12 +2334,13 @@ Validate MTM1M3TS Commands XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/MTM1M3TS/MTM1M3TS_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate MTM1M3TS Events XML Units
 	[Documentation]    Validate the MTM1M3TS Events XML Units.
@@ -2250,12 +2356,13 @@ Validate MTM1M3TS Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTM1M3TS/MTM1M3TS_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate MTM1M3TS Telemetry XML Units
 	[Documentation]    Validate the MTM1M3TS Telemetry XML Units.
@@ -2271,12 +2378,13 @@ Validate MTM1M3TS Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTM1M3TS/MTM1M3TS_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate MTM2 Commands XML Units
 	[Documentation]    Validate the MTM2 Commands XML Units.
@@ -2292,12 +2400,13 @@ Validate MTM2 Commands XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/MTM2/MTM2_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate MTM2 Events XML Units
 	[Documentation]    Validate the MTM2 Events XML Units.
@@ -2313,12 +2422,13 @@ Validate MTM2 Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTM2/MTM2_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate MTM2 Telemetry XML Units
 	[Documentation]    Validate the MTM2 Telemetry XML Units.
@@ -2334,12 +2444,13 @@ Validate MTM2 Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTM2/MTM2_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate MTMount Commands XML Units
 	[Documentation]    Validate the MTMount Commands XML Units.
@@ -2355,12 +2466,13 @@ Validate MTMount Commands XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate MTMount Events XML Units
 	[Documentation]    Validate the MTMount Events XML Units.
@@ -2376,12 +2488,13 @@ Validate MTMount Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate MTMount Telemetry XML Units
 	[Documentation]    Validate the MTMount Telemetry XML Units.
@@ -2397,12 +2510,13 @@ Validate MTMount Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate MTPtg Commands XML Units
 	[Documentation]    Validate the MTPtg Commands XML Units.
@@ -2418,12 +2532,13 @@ Validate MTPtg Commands XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/MTPtg/MTPtg_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate MTPtg Events XML Units
 	[Documentation]    Validate the MTPtg Events XML Units.
@@ -2439,12 +2554,13 @@ Validate MTPtg Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTPtg/MTPtg_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate MTPtg Telemetry XML Units
 	[Documentation]    Validate the MTPtg Telemetry XML Units.
@@ -2460,12 +2576,13 @@ Validate MTPtg Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTPtg/MTPtg_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate MTTCS Commands XML Units
 	[Documentation]    Validate the MTTCS Commands XML Units.
@@ -2481,12 +2598,13 @@ Validate MTTCS Commands XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate MTTCS Events XML Units
 	[Documentation]    Validate the MTTCS Events XML Units.
@@ -2502,12 +2620,13 @@ Validate MTTCS Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate MTTCS Telemetry XML Units
 	[Documentation]    Validate the MTTCS Telemetry XML Units.
@@ -2523,12 +2642,13 @@ Validate MTTCS Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate MTVMS Commands XML Units
 	[Documentation]    Validate the MTVMS Commands XML Units.
@@ -2544,12 +2664,13 @@ Validate MTVMS Commands XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/MTVMS/MTVMS_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate MTVMS Events XML Units
 	[Documentation]    Validate the MTVMS Events XML Units.
@@ -2565,12 +2686,13 @@ Validate MTVMS Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTVMS/MTVMS_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate MTVMS Telemetry XML Units
 	[Documentation]    Validate the MTVMS Telemetry XML Units.
@@ -2586,12 +2708,13 @@ Validate MTVMS Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTVMS/MTVMS_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate OCS Commands XML Units
 	[Documentation]    Validate the OCS Commands XML Units.
@@ -2607,12 +2730,13 @@ Validate OCS Commands XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/OCS/OCS_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate OCS Events XML Units
 	[Documentation]    Validate the OCS Events XML Units.
@@ -2628,12 +2752,13 @@ Validate OCS Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/OCS/OCS_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate OCS Telemetry XML Units
 	[Documentation]    Validate the OCS Telemetry XML Units.
@@ -2649,12 +2774,13 @@ Validate OCS Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/OCS/OCS_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate PointingComponent Commands XML Units
 	[Documentation]    Validate the PointingComponent Commands XML Units.
@@ -2670,12 +2796,13 @@ Validate PointingComponent Commands XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate PointingComponent Events XML Units
 	[Documentation]    Validate the PointingComponent Events XML Units.
@@ -2691,12 +2818,13 @@ Validate PointingComponent Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate PointingComponent Telemetry XML Units
 	[Documentation]    Validate the PointingComponent Telemetry XML Units.
@@ -2712,12 +2840,13 @@ Validate PointingComponent Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate PromptProcessing Events XML Units
 	[Documentation]    Validate the PromptProcessing Events XML Units.
@@ -2733,12 +2862,13 @@ Validate PromptProcessing Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate PromptProcessing Telemetry XML Units
 	[Documentation]    Validate the PromptProcessing Telemetry XML Units.
@@ -2754,12 +2884,13 @@ Validate PromptProcessing Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/PromptProcessing/PromptProcessing_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate Rotator Commands XML Units
 	[Documentation]    Validate the Rotator Commands XML Units.
@@ -2775,12 +2906,13 @@ Validate Rotator Commands XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/Rotator/Rotator_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate Rotator Events XML Units
 	[Documentation]    Validate the Rotator Events XML Units.
@@ -2796,12 +2928,13 @@ Validate Rotator Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/Rotator/Rotator_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate Rotator Telemetry XML Units
 	[Documentation]    Validate the Rotator Telemetry XML Units.
@@ -2817,12 +2950,13 @@ Validate Rotator Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/Rotator/Rotator_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate Scheduler Events XML Units
 	[Documentation]    Validate the Scheduler Events XML Units.
@@ -2838,12 +2972,13 @@ Validate Scheduler Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/Scheduler/Scheduler_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate Scheduler Telemetry XML Units
 	[Documentation]    Validate the Scheduler Telemetry XML Units.
@@ -2859,12 +2994,13 @@ Validate Scheduler Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/Scheduler/Scheduler_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate Script Commands XML Units
 	[Documentation]    Validate the Script Commands XML Units.
@@ -2880,12 +3016,13 @@ Validate Script Commands XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/Script/Script_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate Script Events XML Units
 	[Documentation]    Validate the Script Events XML Units.
@@ -2901,12 +3038,13 @@ Validate Script Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/Script/Script_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ScriptQueue Commands XML Units
 	[Documentation]    Validate the ScriptQueue Commands XML Units.
@@ -2922,12 +3060,13 @@ Validate ScriptQueue Commands XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate ScriptQueue Events XML Units
 	[Documentation]    Validate the ScriptQueue Events XML Units.
@@ -2943,12 +3082,13 @@ Validate ScriptQueue Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate Sequencer Commands XML Units
 	[Documentation]    Validate the Sequencer Commands XML Units.
@@ -2964,12 +3104,13 @@ Validate Sequencer Commands XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/Sequencer/Sequencer_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate Sequencer Events XML Units
 	[Documentation]    Validate the Sequencer Events XML Units.
@@ -2985,12 +3126,13 @@ Validate Sequencer Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/Sequencer/Sequencer_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate Sequencer Telemetry XML Units
 	[Documentation]    Validate the Sequencer Telemetry XML Units.
@@ -3006,12 +3148,13 @@ Validate Sequencer Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/Sequencer/Sequencer_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate SummitFacility Events XML Units
 	[Documentation]    Validate the SummitFacility Events XML Units.
@@ -3027,12 +3170,13 @@ Validate SummitFacility Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate SummitFacility Telemetry XML Units
 	[Documentation]    Validate the SummitFacility Telemetry XML Units.
@@ -3048,12 +3192,13 @@ Validate SummitFacility Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate Test Commands XML Units
 	[Documentation]    Validate the Test Commands XML Units.
@@ -3069,12 +3214,13 @@ Validate Test Commands XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/Test/Test_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate Test Events XML Units
 	[Documentation]    Validate the Test Events XML Units.
@@ -3090,12 +3236,13 @@ Validate Test Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/Test/Test_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate Test Telemetry XML Units
 	[Documentation]    Validate the Test Telemetry XML Units.
@@ -3111,12 +3258,13 @@ Validate Test Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/Test/Test_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate TunableLaser Commands XML Units
 	[Documentation]    Validate the TunableLaser Commands XML Units.
@@ -3132,12 +3280,13 @@ Validate TunableLaser Commands XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/TunableLaser/TunableLaser_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate TunableLaser Events XML Units
 	[Documentation]    Validate the TunableLaser Events XML Units.
@@ -3153,12 +3302,13 @@ Validate TunableLaser Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/TunableLaser/TunableLaser_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate TunableLaser Telemetry XML Units
 	[Documentation]    Validate the TunableLaser Telemetry XML Units.
@@ -3174,12 +3324,13 @@ Validate TunableLaser Telemetry XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/TunableLaser/TunableLaser_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate Watcher Commands XML Units
 	[Documentation]    Validate the Watcher Commands XML Units.
@@ -3195,12 +3346,13 @@ Validate Watcher Commands XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/Watcher/Watcher_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
 Validate Watcher Events XML Units
 	[Documentation]    Validate the Watcher Events XML Units.
@@ -3216,10 +3368,11 @@ Validate Watcher Events XML Unit types
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/Watcher/Watcher_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
-	: FOR    ${unit}    IN    @{units}
-	\   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	\   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	\   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	\   Log    ${output}
-	\   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
 
