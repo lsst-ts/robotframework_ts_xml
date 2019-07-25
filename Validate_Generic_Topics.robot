@@ -85,16 +85,6 @@ Validate ATBuilding_Events.xml Does Not Contain Generic Events
 	\    Log Many    ${events}    ATBuilding_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    ATBuilding_logevent_${item}
 
-Validate ATCalCS_Events.xml Does Not Contain Generic Events
-	[Documentation]    Validate the ATCalCS_Events.xml does not contain Generic Events.
-	[Tags]    smoke    
-	Comment    Get the CSC Events.
-	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/ATCalCS/ATCalCS_Events.xml
-	Log    ${events}
-	:FOR    ${item}    IN    @{GenericEvents}
-	\    Log Many    ${events}    ATCalCS_logevent_${item}
-	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    ATCalCS_logevent_${item}
-
 Validate ATCamera_Events.xml Does Not Contain Generic Events
 	[Documentation]    Validate the ATCamera_Events.xml does not contain Generic Events.
 	[Tags]    smoke    
@@ -140,24 +130,6 @@ Validate ATDomeTrajectory_Events.xml Does Not Contain Generic Events
 	:FOR    ${item}    IN    @{GenericEvents}
 	\    Log Many    ${events}    ATDomeTrajectory_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    ATDomeTrajectory_logevent_${item}
-
-Validate ATEEC_Events.xml Does Not Contain Generic Events
-	[Documentation]    Validate the ATEEC_Events.xml does not contain Generic Events.
-	[Tags]    smoke    
-	Comment    Get the CSC Events.
-	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/ATEEC/ATEEC_Events.xml
-	Log    ${events}
-	:FOR    ${item}    IN    @{GenericEvents}
-	\    Log Many    ${events}    ATEEC_logevent_${item}
-	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    ATEEC_logevent_${item}
-
-Validate ATEEC_Commands.xml Does Not Contain Generic Commands
-	[Documentation]    Validate the ATEEC_Commands.xml does not contain Generic Commands.
-	[Tags]    smoke    
-	Comment    Get the CSC Commands.
-	${commands}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/ATEEC/ATEEC_Commands.xml
-	:FOR    ${generic}    IN    @{GenericCommands}
-	\    Run Keyword And Continue On Failure    Test Commands    ${commands}    ATEEC_command_${generic}
 
 Validate ATHeaderService_Events.xml Does Not Contain Generic Events
 	[Documentation]    Validate the ATHeaderService_Events.xml does not contain Generic Events.
@@ -563,16 +535,6 @@ Validate MTArchiver_Events.xml Does Not Contain Generic Events
 	\    Log Many    ${events}    MTArchiver_logevent_${item}
 	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    MTArchiver_logevent_${item}
 
-Validate MTCalCS_Events.xml Does Not Contain Generic Events
-	[Documentation]    Validate the MTCalCS_Events.xml does not contain Generic Events.
-	[Tags]    smoke    
-	Comment    Get the CSC Events.
-	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/MTCalCS/MTCalCS_Events.xml
-	Log    ${events}
-	:FOR    ${item}    IN    @{GenericEvents}
-	\    Log Many    ${events}    MTCalCS_logevent_${item}
-	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    MTCalCS_logevent_${item}
-
 Validate MTCamera_Events.xml Does Not Contain Generic Events
 	[Documentation]    Validate the MTCamera_Events.xml does not contain Generic Events.
 	[Tags]    smoke    
@@ -884,24 +846,6 @@ Validate ScriptQueue_Commands.xml Does Not Contain Generic Commands
 	${commands}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Commands.xml
 	:FOR    ${generic}    IN    @{GenericCommands}
 	\    Run Keyword And Continue On Failure    Test Commands    ${commands}    ScriptQueue_command_${generic}
-
-Validate Sequencer_Events.xml Does Not Contain Generic Events
-	[Documentation]    Validate the Sequencer_Events.xml does not contain Generic Events.
-	[Tags]    smoke    
-	Comment    Get the CSC Events.
-	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/Sequencer/Sequencer_Events.xml
-	Log    ${events}
-	:FOR    ${item}    IN    @{GenericEvents}
-	\    Log Many    ${events}    Sequencer_logevent_${item}
-	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    Sequencer_logevent_${item}
-
-Validate Sequencer_Commands.xml Does Not Contain Generic Commands
-	[Documentation]    Validate the Sequencer_Commands.xml does not contain Generic Commands.
-	[Tags]    smoke    
-	Comment    Get the CSC Commands.
-	${commands}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/Sequencer/Sequencer_Commands.xml
-	:FOR    ${generic}    IN    @{GenericCommands}
-	\    Run Keyword And Continue On Failure    Test Commands    ${commands}    Sequencer_command_${generic}
 
 Validate SummitFacility_Events.xml Does Not Contain Generic Events
 	[Documentation]    Validate the SummitFacility_Events.xml does not contain Generic Events.

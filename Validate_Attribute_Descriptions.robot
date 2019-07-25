@@ -73,22 +73,6 @@ Validate ATBuilding Telemetry Attribute Descriptions
 	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
 	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
 
-Validate ATCalCS Events Attribute Descriptions
-	[Documentation]    Validate the ATCalCS Events attribute descriptions are populated.
-	[Tags]    smoke    ATCalCS    
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Description" -v . -n ${folder}/sal_interfaces/ATCalCS/ATCalCS_Events.xml |sed -e 's/^[ \t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\n/|/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
-	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
-
-Validate ATCalCS Telemetry Attribute Descriptions
-	[Documentation]    Validate the ATCalCS Telemetry attribute descriptions are populated.
-	[Tags]    smoke    ATCalCS    
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Description" -v . -n ${folder}/sal_interfaces/ATCalCS/ATCalCS_Telemetry.xml |sed -e 's/^[ \t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\n/|/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
-	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
-
 Validate ATCamera Commands Attribute Descriptions
 	[Documentation]    Validate the ATCamera Commands attribute descriptions are populated.
 	[Tags]    smoke    ATCamera    
@@ -141,22 +125,6 @@ Validate ATDomeTrajectory Events Attribute Descriptions
 	[Documentation]    Validate the ATDomeTrajectory Events attribute descriptions are populated.
 	[Tags]    smoke    ATDomeTrajectory    
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Description" -v . -n ${folder}/sal_interfaces/ATDomeTrajectory/ATDomeTrajectory_Events.xml |sed -e 's/^[ \t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\n/|/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
-	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
-
-Validate ATEEC Commands Attribute Descriptions
-	[Documentation]    Validate the ATEEC Commands attribute descriptions are populated.
-	[Tags]    smoke    ATEEC    
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Description" -v . -n ${folder}/sal_interfaces/ATEEC/ATEEC_Commands.xml |sed -e 's/^[ \t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\n/|/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
-	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
-
-Validate ATEEC Events Attribute Descriptions
-	[Documentation]    Validate the ATEEC Events attribute descriptions are populated.
-	[Tags]    smoke    ATEEC    
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Description" -v . -n ${folder}/sal_interfaces/ATEEC/ATEEC_Events.xml |sed -e 's/^[ \t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\n/|/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
 	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
@@ -713,22 +681,6 @@ Validate MTArchiver Telemetry Attribute Descriptions
 	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
 	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
 
-Validate MTCalCS Events Attribute Descriptions
-	[Documentation]    Validate the MTCalCS Events attribute descriptions are populated.
-	[Tags]    smoke    MTCalCS    
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Description" -v . -n ${folder}/sal_interfaces/MTCalCS/MTCalCS_Events.xml |sed -e 's/^[ \t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\n/|/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
-	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
-
-Validate MTCalCS Telemetry Attribute Descriptions
-	[Documentation]    Validate the MTCalCS Telemetry attribute descriptions are populated.
-	[Tags]    smoke    MTCalCS    
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Description" -v . -n ${folder}/sal_interfaces/MTCalCS/MTCalCS_Telemetry.xml |sed -e 's/^[ \t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\n/|/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
-	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
-
 Validate MTCamera Commands Attribute Descriptions
 	[Documentation]    Validate the MTCamera Commands attribute descriptions are populated.
 	[Tags]    smoke    MTCamera    
@@ -1125,30 +1077,6 @@ Validate ScriptQueue Events Attribute Descriptions
 	[Documentation]    Validate the ScriptQueue Events attribute descriptions are populated.
 	[Tags]    smoke    ScriptQueue    
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Description" -v . -n ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Events.xml |sed -e 's/^[ \t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\n/|/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
-	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
-
-Validate Sequencer Commands Attribute Descriptions
-	[Documentation]    Validate the Sequencer Commands attribute descriptions are populated.
-	[Tags]    smoke    Sequencer    
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Description" -v . -n ${folder}/sal_interfaces/Sequencer/Sequencer_Commands.xml |sed -e 's/^[ \t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\n/|/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
-	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
-
-Validate Sequencer Events Attribute Descriptions
-	[Documentation]    Validate the Sequencer Events attribute descriptions are populated.
-	[Tags]    smoke    Sequencer    
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Description" -v . -n ${folder}/sal_interfaces/Sequencer/Sequencer_Events.xml |sed -e 's/^[ \t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\n/|/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
-	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
-
-Validate Sequencer Telemetry Attribute Descriptions
-	[Documentation]    Validate the Sequencer Telemetry attribute descriptions are populated.
-	[Tags]    smoke    Sequencer    
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Description" -v . -n ${folder}/sal_interfaces/Sequencer/Sequencer_Telemetry.xml |sed -e 's/^[ \t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\n/|/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
 	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False

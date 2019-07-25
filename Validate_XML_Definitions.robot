@@ -64,20 +64,6 @@ Validate ATBuilding Telemetry
 	Log    ${output}
 	Should Contain    ${output}   ATBuilding_Telemetry.xml - valid
 
-Validate ATCalCS Events
-	[Documentation]    Validate the ATCalCS Events XML file.
-	[Tags]    smoke    ATCalCS
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ATCalCS/ATCalCS_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   ATCalCS_Events.xml - valid
-
-Validate ATCalCS Telemetry
-	[Documentation]    Validate the ATCalCS Telemetry XML file.
-	[Tags]    smoke    ATCalCS
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ATCalCS/ATCalCS_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   ATCalCS_Telemetry.xml - valid
-
 Validate ATCamera Commands
 	[Documentation]    Validate the ATCamera Commands XML file.
 	[Tags]    smoke    ATCamera
@@ -126,20 +112,6 @@ Validate ATDomeTrajectory Events
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ATDomeTrajectory/ATDomeTrajectory_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   ATDomeTrajectory_Events.xml - valid
-
-Validate ATEEC Commands
-	[Documentation]    Validate the ATEEC Commands XML file.
-	[Tags]    smoke    ATEEC
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ATEEC/ATEEC_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   ATEEC_Commands.xml - valid
-
-Validate ATEEC Events
-	[Documentation]    Validate the ATEEC Events XML file.
-	[Tags]    smoke    ATEEC
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ATEEC/ATEEC_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   ATEEC_Events.xml - valid
 
 Validate ATHeaderService Events
 	[Documentation]    Validate the ATHeaderService Events XML file.
@@ -624,20 +596,6 @@ Validate MTArchiver Telemetry
 	Log    ${output}
 	Should Contain    ${output}   MTArchiver_Telemetry.xml - valid
 
-Validate MTCalCS Events
-	[Documentation]    Validate the MTCalCS Events XML file.
-	[Tags]    smoke    MTCalCS
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTCalCS/MTCalCS_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   MTCalCS_Events.xml - valid
-
-Validate MTCalCS Telemetry
-	[Documentation]    Validate the MTCalCS Telemetry XML file.
-	[Tags]    smoke    MTCalCS
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/MTCalCS/MTCalCS_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   MTCalCS_Telemetry.xml - valid
-
 Validate MTCamera Commands
 	[Documentation]    Validate the MTCamera Commands XML file.
 	[Tags]    smoke    MTCamera
@@ -987,27 +945,6 @@ Validate ScriptQueue Events
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   ScriptQueue_Events.xml - valid
-
-Validate Sequencer Commands
-	[Documentation]    Validate the Sequencer Commands XML file.
-	[Tags]    smoke    Sequencer
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/Sequencer/Sequencer_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   Sequencer_Commands.xml - valid
-
-Validate Sequencer Events
-	[Documentation]    Validate the Sequencer Events XML file.
-	[Tags]    smoke    Sequencer
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/Sequencer/Sequencer_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   Sequencer_Events.xml - valid
-
-Validate Sequencer Telemetry
-	[Documentation]    Validate the Sequencer Telemetry XML file.
-	[Tags]    smoke    Sequencer
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/Sequencer/Sequencer_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   Sequencer_Telemetry.xml - valid
 
 Validate SummitFacility Events
 	[Documentation]    Validate the SummitFacility Events XML file.
