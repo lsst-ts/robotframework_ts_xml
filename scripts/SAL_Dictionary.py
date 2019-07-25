@@ -38,12 +38,12 @@ try:
 except:
 	print("\tERROR: " + csc + "_Commands.xml" + " is not valid XML.")
 words = str(cscs).split()
-sorted_cscs = sorted(words)
+sorted_cscs = "    ".join(sorted(words))
 
 # Create the Variables table.
 file.write("*** Variables ***\n")
 file.write("${xml}    xml\n")
-file.write("@{cscs}    " + str(cscs) + "\n")
+file.write("@{cscs}    " + str(sorted_cscs) + "\n")
 file.write("\n")
 
 # Create Test Case table.

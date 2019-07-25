@@ -26,12 +26,6 @@ Validate ATBuilding Events XML file
 	Log    ${output}
 	Should Contain    ${output}   ATBuilding_Events.xml - valid
 
-Validate ATCalCS Events XML file
-	[Tags]    smoke    ATCalCS
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/ATCalCS/ATCalCS_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   ATCalCS_Events.xml - valid
-
 Validate ATCamera Events XML file
 	[Tags]    smoke    ATCamera
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/ATCamera/ATCamera_Events.xml
@@ -49,12 +43,6 @@ Validate ATDomeTrajectory Events XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/ATDomeTrajectory/ATDomeTrajectory_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   ATDomeTrajectory_Events.xml - valid
-
-Validate ATEEC Events XML file
-	[Tags]    smoke    ATEEC
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/ATEEC/ATEEC_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   ATEEC_Events.xml - valid
 
 Validate ATHeaderService Events XML file
 	[Tags]    smoke    ATHeaderService
@@ -212,12 +200,6 @@ Validate MTArchiver Events XML file
 	Log    ${output}
 	Should Contain    ${output}   MTArchiver_Events.xml - valid
 
-Validate MTCalCS Events XML file
-	[Tags]    smoke    MTCalCS
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/MTCalCS/MTCalCS_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   MTCalCS_Events.xml - valid
-
 Validate MTCamera Events XML file
 	[Tags]    smoke    MTCamera
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml
@@ -337,12 +319,6 @@ Validate ScriptQueue Events XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   ScriptQueue_Events.xml - valid
-
-Validate Sequencer Events XML file
-	[Tags]    smoke    Sequencer
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/Sequencer/Sequencer_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   Sequencer_Events.xml - valid
 
 Validate SummitFacility Events XML file
 	[Tags]    smoke    SummitFacility

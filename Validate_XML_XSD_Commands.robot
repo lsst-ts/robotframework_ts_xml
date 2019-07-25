@@ -32,12 +32,6 @@ Validate ATDome Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   ATDome_Commands.xml - valid
 
-Validate ATEEC Commands XML file
-	[Tags]    smoke    ATEEC
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/ATEEC/ATEEC_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   ATEEC_Commands.xml - valid
-
 Validate ATHexapod Commands XML file
 	[Tags]    smoke    ATHexapod
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/ATHexapod/ATHexapod_Commands.xml
@@ -229,12 +223,6 @@ Validate ScriptQueue Commands XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Commands.xml
 	Log    ${output}
 	Should Contain    ${output}   ScriptQueue_Commands.xml - valid
-
-Validate Sequencer Commands XML file
-	[Tags]    smoke    Sequencer
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/Sequencer/Sequencer_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   Sequencer_Commands.xml - valid
 
 Validate Test Commands XML file
 	[Tags]    smoke    Test

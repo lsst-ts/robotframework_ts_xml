@@ -49,14 +49,6 @@ Validate ATBuilding Events XML Topic Alisases
 	Log Many    ${topic_name}    ${alias}
 	Should Match    ${topic_name}    ${alias}
 
-Validate ATCalCS Events XML Topic Alisases
-	[Documentation]    Validate the ATCalCS Events XML Topic Alisases.
-	[Tags]    smoke    ATCalCS
-	${topic_name}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/ATCalCS/ATCalCS_Events.xml |cut -d'_' -f 3-
-	${alias}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/ATCalCS/ATCalCS_Events.xml
-	Log Many    ${topic_name}    ${alias}
-	Should Match    ${topic_name}    ${alias}
-
 Validate ATCamera Commands XML Topic Alisases
 	[Documentation]    Validate the ATCamera Commands XML Topic Alisases.
 	[Tags]    smoke    ATCamera
@@ -94,22 +86,6 @@ Validate ATDomeTrajectory Events XML Topic Alisases
 	[Tags]    smoke    ATDomeTrajectory
 	${topic_name}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/ATDomeTrajectory/ATDomeTrajectory_Events.xml |cut -d'_' -f 3-
 	${alias}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/ATDomeTrajectory/ATDomeTrajectory_Events.xml
-	Log Many    ${topic_name}    ${alias}
-	Should Match    ${topic_name}    ${alias}
-
-Validate ATEEC Commands XML Topic Alisases
-	[Documentation]    Validate the ATEEC Commands XML Topic Alisases.
-	[Tags]    smoke    ATEEC
-	${topic_name}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/ATEEC/ATEEC_Commands.xml |cut -d'_' -f 3-
-	${alias}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/ATEEC/ATEEC_Commands.xml
-	Log Many    ${topic_name}    ${alias}
-	Should Match    ${topic_name}    ${alias}
-
-Validate ATEEC Events XML Topic Alisases
-	[Documentation]    Validate the ATEEC Events XML Topic Alisases.
-	[Tags]    smoke    ATEEC
-	${topic_name}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/ATEEC/ATEEC_Events.xml |cut -d'_' -f 3-
-	${alias}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/ATEEC/ATEEC_Events.xml
 	Log Many    ${topic_name}    ${alias}
 	Should Match    ${topic_name}    ${alias}
 
@@ -465,14 +441,6 @@ Validate MTArchiver Events XML Topic Alisases
 	Log Many    ${topic_name}    ${alias}
 	Should Match    ${topic_name}    ${alias}
 
-Validate MTCalCS Events XML Topic Alisases
-	[Documentation]    Validate the MTCalCS Events XML Topic Alisases.
-	[Tags]    smoke    MTCalCS
-	${topic_name}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/MTCalCS/MTCalCS_Events.xml |cut -d'_' -f 3-
-	${alias}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/MTCalCS/MTCalCS_Events.xml
-	Log Many    ${topic_name}    ${alias}
-	Should Match    ${topic_name}    ${alias}
-
 Validate MTCamera Commands XML Topic Alisases
 	[Documentation]    Validate the MTCamera Commands XML Topic Alisases.
 	[Tags]    smoke    MTCamera
@@ -742,22 +710,6 @@ Validate ScriptQueue Events XML Topic Alisases
 	[Tags]    smoke    ScriptQueue
 	${topic_name}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Events.xml |cut -d'_' -f 3-
 	${alias}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Events.xml
-	Log Many    ${topic_name}    ${alias}
-	Should Match    ${topic_name}    ${alias}
-
-Validate Sequencer Commands XML Topic Alisases
-	[Documentation]    Validate the Sequencer Commands XML Topic Alisases.
-	[Tags]    smoke    Sequencer
-	${topic_name}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/Sequencer/Sequencer_Commands.xml |cut -d'_' -f 3-
-	${alias}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/Sequencer/Sequencer_Commands.xml
-	Log Many    ${topic_name}    ${alias}
-	Should Match    ${topic_name}    ${alias}
-
-Validate Sequencer Events XML Topic Alisases
-	[Documentation]    Validate the Sequencer Events XML Topic Alisases.
-	[Tags]    smoke    Sequencer
-	${topic_name}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/Sequencer/Sequencer_Events.xml |cut -d'_' -f 3-
-	${alias}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/Sequencer/Sequencer_Events.xml
 	Log Many    ${topic_name}    ${alias}
 	Should Match    ${topic_name}    ${alias}
 

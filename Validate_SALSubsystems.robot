@@ -8,7 +8,7 @@ Resource    Global_Vars.robot
 
 *** Variables ***
 ${xml}    xml
-@{cscs}    ATSpectrograph    LinearStage    MTMount    MTArchiver    ATArchiver    ATAOS    ATBuilding    DIMM    ATDome    ATDomeTrajectory    ATEEC    ATMCS    ATPneumatics    ATHeaderService    ATHexapod    ATMonochromator    ATWhiteLight    ATCamera    ATThermoelectricCooler    ATTCS    ATPtg    IOTA    MTGuider    MTCalCS    MTPtg    ATCalCS    EFDTransformationServer    Electrometer    EAS    LOVE    MTLaserTracker    MTCamera    CatchupArchiver    CBP    Dome    EFD    Environment    MTHeaderService    Hexapod    HVAC    TunableLaser    MTM1M3    MTM1M3TS    MTAOS    MTM2    MTVMS    PointingComponent    OCS    PromptProcessing    Rotator    Scheduler    Script    ScriptQueue    FiberSpectrograph    Sequencer    SummitFacility    MTTCS    MTDomeTrajectory    MTEEC    GenericCamera    Test    Watcher
+@{cscs}    ATAOS    ATArchiver    ATBuilding    ATCamera    ATDome    ATDomeTrajectory    ATHeaderService    ATHexapod    ATMCS    ATMonochromator    ATPneumatics    ATPtg    ATSpectrograph    ATTCS    ATThermoelectricCooler    ATWhiteLight    CBP    CatchupArchiver    DIMM    Dome    EAS    EFD    EFDTransformationServer    Electrometer    Environment    FiberSpectrograph    GenericCamera    HVAC    Hexapod    IOTA    LOVE    LinearStage    MTAOS    MTArchiver    MTCamera    MTDomeTrajectory    MTEEC    MTGuider    MTHeaderService    MTLaserTracker    MTM1M3    MTM1M3TS    MTM2    MTMount    MTPtg    MTTCS    MTVMS    OCS    PointingComponent    PromptProcessing    Rotator    Scheduler    Script    ScriptQueue    SummitFacility    Test    TunableLaser    Watcher
 
 *** Test Cases ***
 Validate SALSubsystems.xml
@@ -23,7 +23,7 @@ Validate Number of Defined CSCs
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml |sort |wc -l |sed -e 's/ //g'
 	Log    ${output}
-	Should Be Equal As Integers    ${output}    62
+	Should Be Equal As Integers    ${output}    58
 
 Validate SAL Dictionary Does Not Contain Duplicates
 	[Documentation]    Validate the SALSubsystems.xml file does not have any duplicate entries.
@@ -74,20 +74,6 @@ Validate ATBuilding Generics Element
 	Log    ATBuilding has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
-Validate ATCalCS Is Defined
-	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
-	[Tags]    smoke    ATCalCS
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    ATCalCS
-	Should Contain    ${cscs}    ${csc}
-
-Validate ATCalCS Generics Element
-	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
-	[Tags]    smoke    ATCalCS
-	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='ATCalCS']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
-	Log    ATCalCS has Generics: ${output}
-	Should Be Equal As Strings    ${output}    yes
-
 Validate ATCamera Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
 	[Tags]    smoke    ATCamera
@@ -128,20 +114,6 @@ Validate ATDomeTrajectory Generics Element
 	[Tags]    smoke    ATDomeTrajectory
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='ATDomeTrajectory']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    ATDomeTrajectory has Generics: ${output}
-	Should Be Equal As Strings    ${output}    yes
-
-Validate ATEEC Is Defined
-	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
-	[Tags]    smoke    ATEEC
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    ATEEC
-	Should Contain    ${cscs}    ${csc}
-
-Validate ATEEC Generics Element
-	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
-	[Tags]    smoke    ATEEC
-	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='ATEEC']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
-	Log    ATEEC has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
 Validate ATHeaderService Is Defined
@@ -536,20 +508,6 @@ Validate MTArchiver Generics Element
 	Log    MTArchiver has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
-Validate MTCalCS Is Defined
-	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
-	[Tags]    smoke    MTCalCS
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    MTCalCS
-	Should Contain    ${cscs}    ${csc}
-
-Validate MTCalCS Generics Element
-	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
-	[Tags]    smoke    MTCalCS
-	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='MTCalCS']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
-	Log    MTCalCS has Generics: ${output}
-	Should Be Equal As Strings    ${output}    yes
-
 Validate MTCamera Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
 	[Tags]    smoke    MTCamera
@@ -828,20 +786,6 @@ Validate ScriptQueue Generics Element
 	[Tags]    smoke    ScriptQueue
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='ScriptQueue']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    ScriptQueue has Generics: ${output}
-	Should Be Equal As Strings    ${output}    yes
-
-Validate Sequencer Is Defined
-	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
-	[Tags]    smoke    Sequencer
-	Comment    Define CSC.
-	Set Test Variable    ${csc}    Sequencer
-	Should Contain    ${cscs}    ${csc}
-
-Validate Sequencer Generics Element
-	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
-	[Tags]    smoke    Sequencer
-	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='Sequencer']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
-	Log    Sequencer has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
 Validate SummitFacility Is Defined
