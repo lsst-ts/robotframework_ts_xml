@@ -349,6 +349,16 @@ Validate Dome_Commands.xml Does Not Contain Generic Commands
 	:FOR    ${generic}    IN    @{GenericCommands}
 	\    Run Keyword And Continue On Failure    Test Commands    ${commands}    Dome_command_${generic}
 
+Validate DSM_Events.xml Does Not Contain Generic Events
+	[Documentation]    Validate the DSM_Events.xml does not contain Generic Events.
+	[Tags]    smoke    
+	Comment    Get the CSC Events.
+	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/DSM/DSM_Events.xml
+	Log    ${events}
+	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    DSM_logevent_${item}
+	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    DSM_logevent_${item}
+
 Validate EAS_Events.xml Does Not Contain Generic Events
 	[Documentation]    Validate the EAS_Events.xml does not contain Generic Events.
 	[Tags]    smoke    

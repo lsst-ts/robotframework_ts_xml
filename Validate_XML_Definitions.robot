@@ -372,6 +372,20 @@ Validate Dome Telemetry
 	Log    ${output}
 	Should Contain    ${output}   Dome_Telemetry.xml - valid
 
+Validate DSM Events
+	[Documentation]    Validate the DSM Events XML file.
+	[Tags]    smoke    DSM
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/DSM/DSM_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   DSM_Events.xml - valid
+
+Validate DSM Telemetry
+	[Documentation]    Validate the DSM Telemetry XML file.
+	[Tags]    smoke    DSM
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/DSM/DSM_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   DSM_Telemetry.xml - valid
+
 Validate EAS Events
 	[Documentation]    Validate the EAS Events XML file.
 	[Tags]    smoke    EAS

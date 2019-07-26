@@ -281,6 +281,14 @@ Validate Dome Events XML Topic Alisases
 	Log Many    ${topic_name}    ${alias}
 	Should Match    ${topic_name}    ${alias}
 
+Validate DSM Events XML Topic Alisases
+	[Documentation]    Validate the DSM Events XML Topic Alisases.
+	[Tags]    smoke    DSM
+	${topic_name}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/DSM/DSM_Events.xml |cut -d'_' -f 3-
+	${alias}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/DSM/DSM_Events.xml
+	Log Many    ${topic_name}    ${alias}
+	Should Match    ${topic_name}    ${alias}
+
 Validate EAS Events XML Topic Alisases
 	[Documentation]    Validate the EAS Events XML Topic Alisases.
 	[Tags]    smoke    EAS

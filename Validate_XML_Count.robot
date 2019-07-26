@@ -424,6 +424,22 @@ Validate Dome Telemetry XML Counts
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
+Validate DSM Events XML Counts
+	[Documentation]    Validate the DSM Events XML count.
+	[Tags]    smoke    DSM
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/DSM/DSM_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
+Validate DSM Telemetry XML Counts
+	[Documentation]    Validate the DSM Telemetry XML count.
+	[Tags]    smoke    DSM
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Count" -v . -n ${folder}/sal_interfaces/DSM/DSM_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
 Validate EAS Events XML Counts
 	[Documentation]    Validate the EAS Events XML count.
 	[Tags]    smoke    EAS
