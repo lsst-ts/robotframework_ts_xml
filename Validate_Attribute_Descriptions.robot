@@ -305,30 +305,6 @@ Validate ATTCS Telemetry Attribute Descriptions
 	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
 	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
 
-Validate ATThermoelectricCooler Commands Attribute Descriptions
-	[Documentation]    Validate the ATThermoelectricCooler Commands attribute descriptions are populated.
-	[Tags]    smoke    ATThermoelectricCooler    
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Description" -v . -n ${folder}/sal_interfaces/ATThermoelectricCooler/ATThermoelectricCooler_Commands.xml |sed -e 's/^[ \t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\n/|/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
-	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
-
-Validate ATThermoelectricCooler Events Attribute Descriptions
-	[Documentation]    Validate the ATThermoelectricCooler Events attribute descriptions are populated.
-	[Tags]    smoke    ATThermoelectricCooler    
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Description" -v . -n ${folder}/sal_interfaces/ATThermoelectricCooler/ATThermoelectricCooler_Events.xml |sed -e 's/^[ \t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\n/|/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
-	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
-
-Validate ATThermoelectricCooler Telemetry Attribute Descriptions
-	[Documentation]    Validate the ATThermoelectricCooler Telemetry attribute descriptions are populated.
-	[Tags]    smoke    ATThermoelectricCooler    
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Description" -v . -n ${folder}/sal_interfaces/ATThermoelectricCooler/ATThermoelectricCooler_Telemetry.xml |sed -e 's/^[ \t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\n/|/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
-	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
-
 Validate ATWhiteLight Commands Attribute Descriptions
 	[Documentation]    Validate the ATWhiteLight Commands attribute descriptions are populated.
 	[Tags]    smoke    ATWhiteLight    

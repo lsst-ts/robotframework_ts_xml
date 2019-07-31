@@ -267,24 +267,6 @@ Validate ATTCS_Commands.xml Does Not Contain Generic Commands
 	:FOR    ${generic}    IN    @{GenericCommands}
 	\    Run Keyword And Continue On Failure    Test Commands    ${commands}    ATTCS_command_${generic}
 
-Validate ATThermoelectricCooler_Events.xml Does Not Contain Generic Events
-	[Documentation]    Validate the ATThermoelectricCooler_Events.xml does not contain Generic Events.
-	[Tags]    smoke    
-	Comment    Get the CSC Events.
-	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/ATThermoelectricCooler/ATThermoelectricCooler_Events.xml
-	Log    ${events}
-	:FOR    ${item}    IN    @{GenericEvents}
-	\    Log Many    ${events}    ATThermoelectricCooler_logevent_${item}
-	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    ATThermoelectricCooler_logevent_${item}
-
-Validate ATThermoelectricCooler_Commands.xml Does Not Contain Generic Commands
-	[Documentation]    Validate the ATThermoelectricCooler_Commands.xml does not contain Generic Commands.
-	[Tags]    smoke    
-	Comment    Get the CSC Commands.
-	${commands}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/ATThermoelectricCooler/ATThermoelectricCooler_Commands.xml
-	:FOR    ${generic}    IN    @{GenericCommands}
-	\    Run Keyword And Continue On Failure    Test Commands    ${commands}    ATThermoelectricCooler_command_${generic}
-
 Validate ATWhiteLight_Events.xml Does Not Contain Generic Events
 	[Documentation]    Validate the ATWhiteLight_Events.xml does not contain Generic Events.
 	[Tags]    smoke    
