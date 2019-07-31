@@ -116,6 +116,12 @@ Validate Dome Events XML file
 	Log    ${output}
 	Should Contain    ${output}   Dome_Events.xml - valid
 
+Validate DSM Events XML file
+	[Tags]    smoke    DSM
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/DSM/DSM_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   DSM_Events.xml - valid
+
 Validate EAS Events XML file
 	[Tags]    smoke    EAS
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/EAS/EAS_Events.xml

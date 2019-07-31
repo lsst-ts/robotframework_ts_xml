@@ -450,6 +450,24 @@ Validate Dome Telemetry Attribute Names
 	: FOR    ${item}    IN    @{attributes}
 	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
 
+Validate DSM Events Attribute Names
+	[Documentation]    Validate the DSM Events attribute names conform to naming convention.
+	[Tags]    smoke    DSM    
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/DSM/DSM_Events.xml |sed -e 's/\\n/,/g'
+	Log    ${output}
+	@{attributes}=    Split to Lines    ${output}
+	: FOR    ${item}    IN    @{attributes}
+	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
+
+Validate DSM Telemetry Attribute Names
+	[Documentation]    Validate the DSM Telemetry attribute names conform to naming convention.
+	[Tags]    smoke    DSM    
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/DSM/DSM_Telemetry.xml |sed -e 's/\\n/,/g'
+	Log    ${output}
+	@{attributes}=    Split to Lines    ${output}
+	: FOR    ${item}    IN    @{attributes}
+	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
+
 Validate EAS Events Attribute Names
 	[Documentation]    Validate the EAS Events attribute names conform to naming convention.
 	[Tags]    smoke    EAS    

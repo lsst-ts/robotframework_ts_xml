@@ -1088,6 +1088,50 @@ Validate Dome Telemetry XML Unit types
 	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 	END
 
+Validate DSM Events XML Units
+	[Documentation]    Validate the DSM Events XML Units.
+	[Tags]    smoke    DSM
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/DSM/DSM_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
+	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
+
+Validate DSM Events XML Unit types
+	[Documentation]    Validate the DSM Events XML Units conform to standards.
+	[Tags]    smoke    DSM
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/DSM/DSM_Events.xml |awk 'NF > 0' |uniq
+	@{units}=    Split String    ${output}    ${\n}
+	Log    ${units}
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
+
+Validate DSM Telemetry XML Units
+	[Documentation]    Validate the DSM Telemetry XML Units.
+	[Tags]    smoke    DSM
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/DSM/DSM_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
+	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
+
+Validate DSM Telemetry XML Unit types
+	[Documentation]    Validate the DSM Telemetry XML Units conform to standards.
+	[Tags]    smoke    DSM
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/DSM/DSM_Telemetry.xml |awk 'NF > 0' |uniq
+	@{units}=    Split String    ${output}    ${\n}
+	Log    ${units}
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
+
 Validate EAS Events XML Units
 	[Documentation]    Validate the EAS Events XML Units.
 	[Tags]    smoke    EAS
