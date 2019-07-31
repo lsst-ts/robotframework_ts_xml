@@ -109,3 +109,11 @@ for csc in xml_common.subsystems:
 	file.write("\tLog    " + csc + " has Generics: ${output}\n")
 	file.write("\tShould Be Equal As Strings    ${output}    " + value + "\n")
 	file.write("\n")
+
+	file.write("Validate " + xml_common.CapitalizeSubsystem(csc) + " Simulator Element\n")
+	file.write("\t[Documentation]    Validate the " + sal_dict_file + " dictionary defines the <Simulator> element.\n")
+	file.write("\t[Tags]    smoke    " + csc + skipped + "\n")
+	file.write("\t${output}=    Run    ${xml} sel -t -m \"//SALSubsystems/Subsystem/Name[text()='" + xml_common.CapitalizeSubsystem(csc) + "']/..\" -c . -n ${folder}/sal_interfaces/" + sal_dict_file + "\n")
+	file.write("\tLog    ${output}\n")
+	file.write("\tShould Contain    ${output}    <Simulator\n")
+	file.write("\n")

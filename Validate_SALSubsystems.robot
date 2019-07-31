@@ -46,6 +46,13 @@ Validate ATAOS Generics Element
 	Log    ATAOS has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
+Validate ATAOS Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    ATAOS
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='ATAOS']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
+
 Validate ATArchiver Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
 	[Tags]    smoke    ATArchiver
@@ -59,6 +66,13 @@ Validate ATArchiver Generics Element
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='ATArchiver']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    ATArchiver has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
+
+Validate ATArchiver Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    ATArchiver
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='ATArchiver']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
 
 Validate ATBuilding Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
@@ -74,6 +88,13 @@ Validate ATBuilding Generics Element
 	Log    ATBuilding has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
+Validate ATBuilding Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    ATBuilding
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='ATBuilding']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
+
 Validate ATCamera Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
 	[Tags]    smoke    ATCamera
@@ -87,6 +108,13 @@ Validate ATCamera Generics Element
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='ATCamera']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    ATCamera has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
+
+Validate ATCamera Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    ATCamera
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='ATCamera']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
 
 Validate ATDome Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
@@ -102,6 +130,13 @@ Validate ATDome Generics Element
 	Log    ATDome has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
+Validate ATDome Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    ATDome
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='ATDome']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
+
 Validate ATDomeTrajectory Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
 	[Tags]    smoke    ATDomeTrajectory
@@ -115,6 +150,13 @@ Validate ATDomeTrajectory Generics Element
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='ATDomeTrajectory']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    ATDomeTrajectory has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
+
+Validate ATDomeTrajectory Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    ATDomeTrajectory
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='ATDomeTrajectory']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
 
 Validate ATHeaderService Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
@@ -130,6 +172,13 @@ Validate ATHeaderService Generics Element
 	Log    ATHeaderService has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
+Validate ATHeaderService Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    ATHeaderService
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='ATHeaderService']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
+
 Validate ATHexapod Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
 	[Tags]    smoke    ATHexapod
@@ -143,6 +192,13 @@ Validate ATHexapod Generics Element
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='ATHexapod']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    ATHexapod has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
+
+Validate ATHexapod Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    ATHexapod
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='ATHexapod']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
 
 Validate ATMCS Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
@@ -158,6 +214,13 @@ Validate ATMCS Generics Element
 	Log    ATMCS has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
+Validate ATMCS Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    ATMCS
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='ATMCS']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
+
 Validate ATMonochromator Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
 	[Tags]    smoke    ATMonochromator
@@ -171,6 +234,13 @@ Validate ATMonochromator Generics Element
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='ATMonochromator']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    ATMonochromator has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
+
+Validate ATMonochromator Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    ATMonochromator
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='ATMonochromator']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
 
 Validate ATPneumatics Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
@@ -186,6 +256,13 @@ Validate ATPneumatics Generics Element
 	Log    ATPneumatics has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
+Validate ATPneumatics Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    ATPneumatics
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='ATPneumatics']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
+
 Validate ATPtg Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
 	[Tags]    smoke    ATPtg
@@ -199,6 +276,13 @@ Validate ATPtg Generics Element
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='ATPtg']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    ATPtg has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
+
+Validate ATPtg Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    ATPtg
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='ATPtg']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
 
 Validate ATSpectrograph Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
@@ -214,6 +298,13 @@ Validate ATSpectrograph Generics Element
 	Log    ATSpectrograph has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
+Validate ATSpectrograph Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    ATSpectrograph
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='ATSpectrograph']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
+
 Validate ATTCS Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
 	[Tags]    smoke    ATTCS
@@ -227,6 +318,13 @@ Validate ATTCS Generics Element
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='ATTCS']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    ATTCS has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
+
+Validate ATTCS Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    ATTCS
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='ATTCS']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
 
 Validate ATWhiteLight Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
@@ -242,6 +340,13 @@ Validate ATWhiteLight Generics Element
 	Log    ATWhiteLight has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
+Validate ATWhiteLight Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    ATWhiteLight
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='ATWhiteLight']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
+
 Validate CatchupArchiver Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
 	[Tags]    smoke    CatchupArchiver
@@ -255,6 +360,13 @@ Validate CatchupArchiver Generics Element
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='CatchupArchiver']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    CatchupArchiver has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
+
+Validate CatchupArchiver Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    CatchupArchiver
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='CatchupArchiver']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
 
 Validate CBP Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
@@ -270,6 +382,13 @@ Validate CBP Generics Element
 	Log    CBP has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
+Validate CBP Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    CBP
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='CBP']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
+
 Validate DIMM Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
 	[Tags]    smoke    DIMM
@@ -283,6 +402,13 @@ Validate DIMM Generics Element
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='DIMM']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    DIMM has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
+
+Validate DIMM Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    DIMM
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='DIMM']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
 
 Validate Dome Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
@@ -298,6 +424,13 @@ Validate Dome Generics Element
 	Log    Dome has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
+Validate Dome Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    Dome
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='Dome']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
+
 Validate DSM Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
 	[Tags]    smoke    DSM
@@ -311,6 +444,13 @@ Validate DSM Generics Element
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='DSM']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    DSM has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
+
+Validate DSM Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    DSM
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='DSM']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
 
 Validate EAS Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
@@ -326,6 +466,13 @@ Validate EAS Generics Element
 	Log    EAS has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
+Validate EAS Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    EAS
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='EAS']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
+
 Validate EFD Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
 	[Tags]    smoke    EFD
@@ -339,6 +486,13 @@ Validate EFD Generics Element
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='EFD']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    EFD has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
+
+Validate EFD Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    EFD
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='EFD']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
 
 Validate EFDTransformationServer Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
@@ -354,6 +508,13 @@ Validate EFDTransformationServer Generics Element
 	Log    EFDTransformationServer has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
+Validate EFDTransformationServer Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    EFDTransformationServer
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='EFDTransformationServer']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
+
 Validate Electrometer Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
 	[Tags]    smoke    Electrometer
@@ -367,6 +528,13 @@ Validate Electrometer Generics Element
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='Electrometer']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    Electrometer has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
+
+Validate Electrometer Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    Electrometer
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='Electrometer']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
 
 Validate Environment Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
@@ -382,6 +550,13 @@ Validate Environment Generics Element
 	Log    Environment has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
+Validate Environment Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    Environment
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='Environment']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
+
 Validate FiberSpectrograph Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
 	[Tags]    smoke    FiberSpectrograph
@@ -395,6 +570,13 @@ Validate FiberSpectrograph Generics Element
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='FiberSpectrograph']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    FiberSpectrograph has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
+
+Validate FiberSpectrograph Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    FiberSpectrograph
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='FiberSpectrograph']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
 
 Validate GenericCamera Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
@@ -410,6 +592,13 @@ Validate GenericCamera Generics Element
 	Log    GenericCamera has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
+Validate GenericCamera Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    GenericCamera
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='GenericCamera']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
+
 Validate IOTA Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
 	[Tags]    smoke    IOTA
@@ -423,6 +612,13 @@ Validate IOTA Generics Element
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='IOTA']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    IOTA has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
+
+Validate IOTA Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    IOTA
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='IOTA']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
 
 Validate Hexapod Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
@@ -438,6 +634,13 @@ Validate Hexapod Generics Element
 	Log    Hexapod has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
+Validate Hexapod Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    Hexapod
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='Hexapod']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
+
 Validate HVAC Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
 	[Tags]    smoke    HVAC
@@ -451,6 +654,13 @@ Validate HVAC Generics Element
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='HVAC']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    HVAC has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
+
+Validate HVAC Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    HVAC
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='HVAC']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
 
 Validate LinearStage Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
@@ -466,6 +676,13 @@ Validate LinearStage Generics Element
 	Log    LinearStage has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
+Validate LinearStage Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    LinearStage
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='LinearStage']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
+
 Validate LOVE Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
 	[Tags]    smoke    LOVE
@@ -479,6 +696,13 @@ Validate LOVE Generics Element
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='LOVE']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    LOVE has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
+
+Validate LOVE Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    LOVE
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='LOVE']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
 
 Validate MTAOS Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
@@ -494,6 +718,13 @@ Validate MTAOS Generics Element
 	Log    MTAOS has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
+Validate MTAOS Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    MTAOS
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='MTAOS']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
+
 Validate MTArchiver Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
 	[Tags]    smoke    MTArchiver
@@ -507,6 +738,13 @@ Validate MTArchiver Generics Element
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='MTArchiver']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    MTArchiver has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
+
+Validate MTArchiver Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    MTArchiver
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='MTArchiver']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
 
 Validate MTCamera Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
@@ -522,6 +760,13 @@ Validate MTCamera Generics Element
 	Log    MTCamera has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
+Validate MTCamera Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    MTCamera
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='MTCamera']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
+
 Validate MTDomeTrajectory Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
 	[Tags]    smoke    MTDomeTrajectory
@@ -535,6 +780,13 @@ Validate MTDomeTrajectory Generics Element
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='MTDomeTrajectory']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    MTDomeTrajectory has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
+
+Validate MTDomeTrajectory Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    MTDomeTrajectory
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='MTDomeTrajectory']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
 
 Validate MTEEC Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
@@ -550,6 +802,13 @@ Validate MTEEC Generics Element
 	Log    MTEEC has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
+Validate MTEEC Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    MTEEC
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='MTEEC']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
+
 Validate MTGuider Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
 	[Tags]    smoke    MTGuider
@@ -563,6 +822,13 @@ Validate MTGuider Generics Element
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='MTGuider']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    MTGuider has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
+
+Validate MTGuider Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    MTGuider
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='MTGuider']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
 
 Validate MTHeaderService Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
@@ -578,6 +844,13 @@ Validate MTHeaderService Generics Element
 	Log    MTHeaderService has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
+Validate MTHeaderService Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    MTHeaderService
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='MTHeaderService']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
+
 Validate MTLaserTracker Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
 	[Tags]    smoke    MTLaserTracker
@@ -591,6 +864,13 @@ Validate MTLaserTracker Generics Element
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='MTLaserTracker']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    MTLaserTracker has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
+
+Validate MTLaserTracker Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    MTLaserTracker
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='MTLaserTracker']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
 
 Validate MTM1M3 Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
@@ -606,6 +886,13 @@ Validate MTM1M3 Generics Element
 	Log    MTM1M3 has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
+Validate MTM1M3 Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    MTM1M3
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='MTM1M3']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
+
 Validate MTM1M3TS Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
 	[Tags]    smoke    MTM1M3TS
@@ -619,6 +906,13 @@ Validate MTM1M3TS Generics Element
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='MTM1M3TS']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    MTM1M3TS has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
+
+Validate MTM1M3TS Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    MTM1M3TS
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='MTM1M3TS']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
 
 Validate MTM2 Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
@@ -634,6 +928,13 @@ Validate MTM2 Generics Element
 	Log    MTM2 has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
+Validate MTM2 Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    MTM2
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='MTM2']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
+
 Validate MTMount Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
 	[Tags]    smoke    MTMount
@@ -647,6 +948,13 @@ Validate MTMount Generics Element
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='MTMount']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    MTMount has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
+
+Validate MTMount Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    MTMount
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='MTMount']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
 
 Validate MTPtg Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
@@ -662,6 +970,13 @@ Validate MTPtg Generics Element
 	Log    MTPtg has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
+Validate MTPtg Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    MTPtg
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='MTPtg']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
+
 Validate MTTCS Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
 	[Tags]    smoke    MTTCS
@@ -675,6 +990,13 @@ Validate MTTCS Generics Element
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='MTTCS']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    MTTCS has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
+
+Validate MTTCS Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    MTTCS
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='MTTCS']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
 
 Validate MTVMS Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
@@ -690,6 +1012,13 @@ Validate MTVMS Generics Element
 	Log    MTVMS has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
+Validate MTVMS Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    MTVMS
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='MTVMS']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
+
 Validate OCS Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
 	[Tags]    smoke    OCS
@@ -703,6 +1032,13 @@ Validate OCS Generics Element
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='OCS']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    OCS has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
+
+Validate OCS Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    OCS
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='OCS']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
 
 Validate PointingComponent Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
@@ -718,6 +1054,13 @@ Validate PointingComponent Generics Element
 	Log    PointingComponent has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
+Validate PointingComponent Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    PointingComponent
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='PointingComponent']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
+
 Validate PromptProcessing Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
 	[Tags]    smoke    PromptProcessing
@@ -731,6 +1074,13 @@ Validate PromptProcessing Generics Element
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='PromptProcessing']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    PromptProcessing has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
+
+Validate PromptProcessing Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    PromptProcessing
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='PromptProcessing']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
 
 Validate Rotator Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
@@ -746,6 +1096,13 @@ Validate Rotator Generics Element
 	Log    Rotator has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
+Validate Rotator Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    Rotator
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='Rotator']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
+
 Validate Scheduler Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
 	[Tags]    smoke    Scheduler
@@ -759,6 +1116,13 @@ Validate Scheduler Generics Element
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='Scheduler']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    Scheduler has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
+
+Validate Scheduler Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    Scheduler
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='Scheduler']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
 
 Validate Script Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
@@ -774,6 +1138,13 @@ Validate Script Generics Element
 	Log    Script has Generics: ${output}
 	Should Be Equal As Strings    ${output}    no
 
+Validate Script Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    Script
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='Script']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
+
 Validate ScriptQueue Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
 	[Tags]    smoke    ScriptQueue
@@ -787,6 +1158,13 @@ Validate ScriptQueue Generics Element
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='ScriptQueue']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    ScriptQueue has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
+
+Validate ScriptQueue Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    ScriptQueue
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='ScriptQueue']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
 
 Validate SummitFacility Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
@@ -802,6 +1180,13 @@ Validate SummitFacility Generics Element
 	Log    SummitFacility has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
+Validate SummitFacility Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    SummitFacility
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='SummitFacility']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
+
 Validate Test Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
 	[Tags]    smoke    Test
@@ -815,6 +1200,13 @@ Validate Test Generics Element
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='Test']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    Test has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
+
+Validate Test Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    Test
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='Test']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
 
 Validate TunableLaser Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
@@ -830,6 +1222,13 @@ Validate TunableLaser Generics Element
 	Log    TunableLaser has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
+Validate TunableLaser Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    TunableLaser
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='TunableLaser']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
+
 Validate Watcher Is Defined
 	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
 	[Tags]    smoke    Watcher
@@ -843,4 +1242,11 @@ Validate Watcher Generics Element
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='Watcher']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    Watcher has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
+
+Validate Watcher Simulator Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.
+	[Tags]    smoke    Watcher
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='Watcher']/.." -c . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    ${output}
+	Should Contain    ${output}    <Simulator
 
