@@ -8,7 +8,7 @@ Resource    Global_Vars.robot
 
 *** Variables ***
 ${xml}    xml
-@{cscs}    ATAOS    ATArchiver    ATBuilding    ATCamera    ATDome    ATDomeTrajectory    ATHeaderService    ATHexapod    ATMCS    ATMonochromator    ATPneumatics    ATPtg    ATSpectrograph    ATTCS    ATThermoelectricCooler    ATWhiteLight    CBP    CatchupArchiver    DIMM    DSM    Dome    EAS    EFD    EFDTransformationServer    Electrometer    Environment    FiberSpectrograph    GenericCamera    HVAC    Hexapod    IOTA    LOVE    LinearStage    MTAOS    MTArchiver    MTCamera    MTDomeTrajectory    MTEEC    MTGuider    MTHeaderService    MTLaserTracker    MTM1M3    MTM1M3TS    MTM2    MTMount    MTPtg    MTTCS    MTVMS    OCS    PointingComponent    PromptProcessing    Rotator    Scheduler    Script    ScriptQueue    SummitFacility    Test    TunableLaser    Watcher
+@{cscs}    ATAOS    ATArchiver    ATBuilding    ATCamera    ATDome    ATDomeTrajectory    ATHeaderService    ATHexapod    ATMCS    ATMonochromator    ATPneumatics    ATPtg    ATSpectrograph    ATTCS    ATWhiteLight    CBP    CatchupArchiver    DIMM    DSM    Dome    EAS    EFD    EFDTransformationServer    Electrometer    Environment    FiberSpectrograph    GenericCamera    HVAC    Hexapod    IOTA    LOVE    LinearStage    MTAOS    MTArchiver    MTCamera    MTDomeTrajectory    MTEEC    MTGuider    MTHeaderService    MTLaserTracker    MTM1M3    MTM1M3TS    MTM2    MTMount    MTPtg    MTTCS    MTVMS    OCS    PointingComponent    PromptProcessing    Rotator    Scheduler    Script    ScriptQueue    SummitFacility    Test    TunableLaser    Watcher
 
 *** Test Cases ***
 Validate SALSubsystems.xml
