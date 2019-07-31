@@ -401,6 +401,22 @@ Validate Dome Telemetry Attribute Descriptions
 	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
 	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
 
+Validate DSM Events Attribute Descriptions
+	[Documentation]    Validate the DSM Events attribute descriptions are populated.
+	[Tags]    smoke    DSM    
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Description" -v . -n ${folder}/sal_interfaces/DSM/DSM_Events.xml |sed -e 's/^[ \t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\n/|/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
+	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
+
+Validate DSM Telemetry Attribute Descriptions
+	[Documentation]    Validate the DSM Telemetry attribute descriptions are populated.
+	[Tags]    smoke    DSM    
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Description" -v . -n ${folder}/sal_interfaces/DSM/DSM_Telemetry.xml |sed -e 's/^[ \t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\n/|/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
+	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
+
 Validate EAS Events Attribute Descriptions
 	[Documentation]    Validate the EAS Events attribute descriptions are populated.
 	[Tags]    smoke    EAS    

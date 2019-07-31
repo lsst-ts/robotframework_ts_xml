@@ -110,6 +110,12 @@ Validate Dome Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   Dome_Telemetry.xml - valid
 
+Validate DSM Telemetry XML file
+	[Tags]    smoke    DSM
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/DSM/DSM_Telemetry.xml
+	Log    ${output}
+	Should Contain    ${output}   DSM_Telemetry.xml - valid
+
 Validate EAS Telemetry XML file
 	[Tags]    smoke    EAS
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/EAS/EAS_Telemetry.xml

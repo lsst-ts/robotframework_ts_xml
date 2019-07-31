@@ -23,7 +23,7 @@ Validate Number of Defined CSCs
 	[Tags]    smoke
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml |sort |wc -l |sed -e 's/ //g'
 	Log    ${output}
-	Should Be Equal As Integers    ${output}    57
+	Should Be Equal As Integers    ${output}    58
 
 Validate SAL Dictionary Does Not Contain Duplicates
 	[Documentation]    Validate the SALSubsystems.xml file does not have any duplicate entries.
@@ -296,6 +296,20 @@ Validate Dome Generics Element
 	[Tags]    smoke    Dome
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='Dome']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    Dome has Generics: ${output}
+	Should Be Equal As Strings    ${output}    yes
+
+Validate DSM Is Defined
+	[Documentation]    Validate the SALSubsystems.xml dictionary contains the expected CSC.
+	[Tags]    smoke    DSM
+	Comment    Define CSC.
+	Set Test Variable    ${csc}    DSM
+	Should Contain    ${cscs}    ${csc}
+
+Validate DSM Generics Element
+	[Documentation]    Validate the SALSubsystems.xml dictionary correctly defines the <Generics> element.
+	[Tags]    smoke    DSM
+	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='DSM']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
+	Log    DSM has Generics: ${output}
 	Should Be Equal As Strings    ${output}    yes
 
 Validate EAS Is Defined
