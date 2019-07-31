@@ -80,12 +80,6 @@ Validate ATTCS Telemetry XML file
 	Log    ${output}
 	Should Contain    ${output}   ATTCS_Telemetry.xml - valid
 
-Validate ATThermoelectricCooler Telemetry XML file
-	[Tags]    smoke    ATThermoelectricCooler
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/ATThermoelectricCooler/ATThermoelectricCooler_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   ATThermoelectricCooler_Telemetry.xml - valid
-
 Validate ATWhiteLight Telemetry XML file
 	[Tags]    smoke    ATWhiteLight
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Telemetry.xml
@@ -115,12 +109,6 @@ Validate Dome Telemetry XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/Dome/Dome_Telemetry.xml
 	Log    ${output}
 	Should Contain    ${output}   Dome_Telemetry.xml - valid
-
-Validate DSM Telemetry XML file
-	[Tags]    smoke    DSM
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALTelemetrySet.xsd ${folder}/sal_interfaces/DSM/DSM_Telemetry.xml
-	Log    ${output}
-	Should Contain    ${output}   DSM_Telemetry.xml - valid
 
 Validate EAS Telemetry XML file
 	[Tags]    smoke    EAS

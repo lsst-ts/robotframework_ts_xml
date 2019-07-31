@@ -11,8 +11,8 @@ import os
 """Defines the array of Commandable SAL Components, or CSCs."""
 
 subsystems = [	'ATAOS', 'ATArchiver', 'ATBuilding', 'ATCamera', 'ATDome', 'ATDomeTrajectory', 'ATHeaderService', 
-				'ATHexapod', 'ATMCS', 'ATMonochromator', 'ATPneumatics', 'ATPtg', 'ATSpectrograph', 'ATTCS', 'ATThermoelectricCooler', 'ATWhiteLight', 
-				'CatchupArchiver', 'CBP', 'DIMM', 'Dome', 'DSM', 'EAS', 'EFD', 'EFDTransformationServer', 'Electrometer', 'Environment', 
+				'ATHexapod', 'ATMCS', 'ATMonochromator', 'ATPneumatics', 'ATPtg', 'ATSpectrograph', 'ATTCS', 'ATWhiteLight', 
+				'CatchupArchiver', 'CBP', 'DIMM', 'Dome', 'EAS', 'EFD', 'EFDTransformationServer', 'Electrometer', 'Environment', 
 				'FiberSpectrograph', 'GenericCamera', 'IOTA', 'Hexapod', 'HVAC', 'LinearStage', 'LOVE',
 				'MTAOS', 'MTArchiver', 'MTCamera', 'MTDomeTrajectory', 'MTEEC', 'MTGuider', 
 				'MTHeaderService', 'MTLaserTracker', 'MTM1M3', 'MTM1M3TS', 'MTM2', 'MTMount', 'MTPtg', 'MTTCS', 'MTVMS', 

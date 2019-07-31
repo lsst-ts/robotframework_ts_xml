@@ -824,72 +824,6 @@ Validate ATTCS Telemetry XML Unit types
 	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 	END
 
-Validate ATThermoelectricCooler Commands XML Units
-	[Documentation]    Validate the ATThermoelectricCooler Commands XML Units.
-	[Tags]    smoke    ATThermoelectricCooler
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATThermoelectricCooler/ATThermoelectricCooler_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate ATThermoelectricCooler Commands XML Unit types
-	[Documentation]    Validate the ATThermoelectricCooler Commands XML Units conform to standards.
-	[Tags]    smoke    ATThermoelectricCooler
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATThermoelectricCooler/ATThermoelectricCooler_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}    ${\n}
-	Log    ${units}
-	FOR    ${unit}    IN    @{units}
-	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	   Log    ${output}
-	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-	END
-
-Validate ATThermoelectricCooler Events XML Units
-	[Documentation]    Validate the ATThermoelectricCooler Events XML Units.
-	[Tags]    smoke    ATThermoelectricCooler
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATThermoelectricCooler/ATThermoelectricCooler_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate ATThermoelectricCooler Events XML Unit types
-	[Documentation]    Validate the ATThermoelectricCooler Events XML Units conform to standards.
-	[Tags]    smoke    ATThermoelectricCooler
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATThermoelectricCooler/ATThermoelectricCooler_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}    ${\n}
-	Log    ${units}
-	FOR    ${unit}    IN    @{units}
-	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	   Log    ${output}
-	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-	END
-
-Validate ATThermoelectricCooler Telemetry XML Units
-	[Documentation]    Validate the ATThermoelectricCooler Telemetry XML Units.
-	[Tags]    smoke    ATThermoelectricCooler
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATThermoelectricCooler/ATThermoelectricCooler_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate ATThermoelectricCooler Telemetry XML Unit types
-	[Documentation]    Validate the ATThermoelectricCooler Telemetry XML Units conform to standards.
-	[Tags]    smoke    ATThermoelectricCooler
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATThermoelectricCooler/ATThermoelectricCooler_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}    ${\n}
-	Log    ${units}
-	FOR    ${unit}    IN    @{units}
-	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	   Log    ${output}
-	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-	END
-
 Validate ATWhiteLight Commands XML Units
 	[Documentation]    Validate the ATWhiteLight Commands XML Units.
 	[Tags]    smoke    ATWhiteLight
@@ -1144,50 +1078,6 @@ Validate Dome Telemetry XML Unit types
 	[Documentation]    Validate the Dome Telemetry XML Units conform to standards.
 	[Tags]    smoke    Dome
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/Dome/Dome_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}    ${\n}
-	Log    ${units}
-	FOR    ${unit}    IN    @{units}
-	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	   Log    ${output}
-	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-	END
-
-Validate DSM Events XML Units
-	[Documentation]    Validate the DSM Events XML Units.
-	[Tags]    smoke    DSM
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/DSM/DSM_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate DSM Events XML Unit types
-	[Documentation]    Validate the DSM Events XML Units conform to standards.
-	[Tags]    smoke    DSM
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/DSM/DSM_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}    ${\n}
-	Log    ${units}
-	FOR    ${unit}    IN    @{units}
-	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	   Log    ${output}
-	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-	END
-
-Validate DSM Telemetry XML Units
-	[Documentation]    Validate the DSM Telemetry XML Units.
-	[Tags]    smoke    DSM
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/DSM/DSM_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate DSM Telemetry XML Unit types
-	[Documentation]    Validate the DSM Telemetry XML Units conform to standards.
-	[Tags]    smoke    DSM
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/DSM/DSM_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	FOR    ${unit}    IN    @{units}

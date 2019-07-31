@@ -74,12 +74,6 @@ Validate ATTCS Commands XML file
 	Log    ${output}
 	Should Contain    ${output}   ATTCS_Commands.xml - valid
 
-Validate ATThermoelectricCooler Commands XML file
-	[Tags]    smoke    ATThermoelectricCooler
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/ATThermoelectricCooler/ATThermoelectricCooler_Commands.xml
-	Log    ${output}
-	Should Contain    ${output}   ATThermoelectricCooler_Commands.xml - valid
-
 Validate ATWhiteLight Commands XML file
 	[Tags]    smoke    ATWhiteLight
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALCommandSet.xsd ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Commands.xml

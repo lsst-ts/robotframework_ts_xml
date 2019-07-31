@@ -209,22 +209,6 @@ Validate ATTCS Events XML Topic Alisases
 	Log Many    ${topic_name}    ${alias}
 	Should Match    ${topic_name}    ${alias}
 
-Validate ATThermoelectricCooler Commands XML Topic Alisases
-	[Documentation]    Validate the ATThermoelectricCooler Commands XML Topic Alisases.
-	[Tags]    smoke    ATThermoelectricCooler
-	${topic_name}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/EFDB_Topic" -v . -n ${folder}/sal_interfaces/ATThermoelectricCooler/ATThermoelectricCooler_Commands.xml |cut -d'_' -f 3-
-	${alias}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/Alias" -v . -n ${folder}/sal_interfaces/ATThermoelectricCooler/ATThermoelectricCooler_Commands.xml
-	Log Many    ${topic_name}    ${alias}
-	Should Match    ${topic_name}    ${alias}
-
-Validate ATThermoelectricCooler Events XML Topic Alisases
-	[Documentation]    Validate the ATThermoelectricCooler Events XML Topic Alisases.
-	[Tags]    smoke    ATThermoelectricCooler
-	${topic_name}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/ATThermoelectricCooler/ATThermoelectricCooler_Events.xml |cut -d'_' -f 3-
-	${alias}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/ATThermoelectricCooler/ATThermoelectricCooler_Events.xml
-	Log Many    ${topic_name}    ${alias}
-	Should Match    ${topic_name}    ${alias}
-
 Validate ATWhiteLight Commands XML Topic Alisases
 	[Documentation]    Validate the ATWhiteLight Commands XML Topic Alisases.
 	[Tags]    smoke    ATWhiteLight
@@ -278,14 +262,6 @@ Validate Dome Events XML Topic Alisases
 	[Tags]    smoke    Dome
 	${topic_name}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/Dome/Dome_Events.xml |cut -d'_' -f 3-
 	${alias}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/Dome/Dome_Events.xml
-	Log Many    ${topic_name}    ${alias}
-	Should Match    ${topic_name}    ${alias}
-
-Validate DSM Events XML Topic Alisases
-	[Documentation]    Validate the DSM Events XML Topic Alisases.
-	[Tags]    smoke    DSM
-	${topic_name}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/DSM/DSM_Events.xml |cut -d'_' -f 3-
-	${alias}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/DSM/DSM_Events.xml
 	Log Many    ${topic_name}    ${alias}
 	Should Match    ${topic_name}    ${alias}
 

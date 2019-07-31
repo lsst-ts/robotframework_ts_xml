@@ -92,12 +92,6 @@ Validate ATTCS Events XML file
 	Log    ${output}
 	Should Contain    ${output}   ATTCS_Events.xml - valid
 
-Validate ATThermoelectricCooler Events XML file
-	[Tags]    smoke    ATThermoelectricCooler
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/ATThermoelectricCooler/ATThermoelectricCooler_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   ATThermoelectricCooler_Events.xml - valid
-
 Validate ATWhiteLight Events XML file
 	[Tags]    smoke    ATWhiteLight
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Events.xml
@@ -121,12 +115,6 @@ Validate Dome Events XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/Dome/Dome_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   Dome_Events.xml - valid
-
-Validate DSM Events XML file
-	[Tags]    smoke    DSM
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/DSM/DSM_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   DSM_Events.xml - valid
 
 Validate EAS Events XML file
 	[Tags]    smoke    EAS
