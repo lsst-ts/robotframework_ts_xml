@@ -24063,8 +24063,8 @@ Validate MTGuider Event MTGuider_logevent_detailedState Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTGuider Event MTGuider_logevent_internalCommand Topic Byte Size
-	[Documentation]    Validate the MTGuider_logevent_internalCommand topic is less than 65536 bytes in total.
+Validate MTGuider Event MTGuider_logevent_heartbeat Topic Byte Size
+	[Documentation]    Validate the MTGuider_logevent_heartbeat topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTGuider
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24088,127 +24088,13 @@ Validate MTGuider Event MTGuider_logevent_internalCommand Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTGuider Event MTGuider_logevent_internalCommand Topic Columns
-	[Documentation]    Validate the MTGuider_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    MTGuider
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/MTGuider/MTGuider_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/Count" -v . -n ${folder}/sal_interfaces/MTGuider/MTGuider_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTGuider Event MTGuider_logevent_heartbeat Topic Byte Size
-	[Documentation]    Validate the MTGuider_logevent_heartbeat topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTGuider
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/MTGuider/MTGuider_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/Count" -v . -n ${folder}/sal_interfaces/MTGuider/MTGuider_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTGuider/MTGuider_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
 Validate MTGuider Event MTGuider_logevent_heartbeat Topic Columns
 	[Documentation]    Validate the MTGuider_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTGuider
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/MTGuider/MTGuider_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/Count" -v . -n ${folder}/sal_interfaces/MTGuider/MTGuider_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTGuider Event MTGuider_logevent_loopTimeOutOfRange Topic Byte Size
-	[Documentation]    Validate the MTGuider_logevent_loopTimeOutOfRange topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTGuider
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/MTGuider/MTGuider_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/MTGuider/MTGuider_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTGuider/MTGuider_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTGuider Event MTGuider_logevent_loopTimeOutOfRange Topic Columns
-	[Documentation]    Validate the MTGuider_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    MTGuider
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/MTGuider/MTGuider_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/MTGuider/MTGuider_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTGuider Event MTGuider_logevent_rejectedCommand Topic Byte Size
-	[Documentation]    Validate the MTGuider_logevent_rejectedCommand topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTGuider
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/MTGuider/MTGuider_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/MTGuider/MTGuider_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTGuider/MTGuider_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTGuider Event MTGuider_logevent_rejectedCommand Topic Columns
-	[Documentation]    Validate the MTGuider_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    MTGuider
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/MTGuider/MTGuider_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/MTGuider/MTGuider_Events.xml
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/MTGuider/MTGuider_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/Count" -v . -n ${folder}/sal_interfaces/MTGuider/MTGuider_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -24329,8 +24215,8 @@ Validate MTHeaderService Event MTHeaderService_logevent_heartbeat Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTHeaderService Event MTHeaderService_logevent_rejectedCommand Topic Byte Size
-	[Documentation]    Validate the MTHeaderService_logevent_rejectedCommand topic is less than 65536 bytes in total.
+Validate MTHeaderService Event MTHeaderService_logevent_largeFileObjectAvailable Topic Byte Size
+	[Documentation]    Validate the MTHeaderService_logevent_largeFileObjectAvailable topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTHeaderService
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24354,8 +24240,8 @@ Validate MTHeaderService Event MTHeaderService_logevent_rejectedCommand Topic By
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTHeaderService Event MTHeaderService_logevent_rejectedCommand Topic Columns
-	[Documentation]    Validate the MTHeaderService_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate MTHeaderService Event MTHeaderService_logevent_largeFileObjectAvailable Topic Columns
+	[Documentation]    Validate the MTHeaderService_logevent_largeFileObjectAvailable topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTHeaderService
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24367,8 +24253,8 @@ Validate MTHeaderService Event MTHeaderService_logevent_rejectedCommand Topic Co
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTHeaderService Event MTHeaderService_logevent_largeFileObjectAvailable Topic Byte Size
-	[Documentation]    Validate the MTHeaderService_logevent_largeFileObjectAvailable topic is less than 65536 bytes in total.
+Validate MTHeaderService Event MTHeaderService_logevent_settingsApplied Topic Byte Size
+	[Documentation]    Validate the MTHeaderService_logevent_settingsApplied topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTHeaderService
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24392,51 +24278,13 @@ Validate MTHeaderService Event MTHeaderService_logevent_largeFileObjectAvailable
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTHeaderService Event MTHeaderService_logevent_largeFileObjectAvailable Topic Columns
-	[Documentation]    Validate the MTHeaderService_logevent_largeFileObjectAvailable topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    MTHeaderService
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/Count" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTHeaderService Event MTHeaderService_logevent_settingsApplied Topic Byte Size
-	[Documentation]    Validate the MTHeaderService_logevent_settingsApplied topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTHeaderService
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
 Validate MTHeaderService Event MTHeaderService_logevent_settingsApplied Topic Columns
 	[Documentation]    Validate the MTHeaderService_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTHeaderService
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Events.xml
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/Count" -v . -n ${folder}/sal_interfaces/MTHeaderService/MTHeaderService_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -24481,8 +24329,8 @@ Validate MTLaserTracker Event MTLaserTracker_logevent_detailedState Topic Column
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTLaserTracker Event MTLaserTracker_logevent_internalCommand Topic Byte Size
-	[Documentation]    Validate the MTLaserTracker_logevent_internalCommand topic is less than 65536 bytes in total.
+Validate MTLaserTracker Event MTLaserTracker_logevent_heartbeat Topic Byte Size
+	[Documentation]    Validate the MTLaserTracker_logevent_heartbeat topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTLaserTracker
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -24506,127 +24354,13 @@ Validate MTLaserTracker Event MTLaserTracker_logevent_internalCommand Topic Byte
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTLaserTracker Event MTLaserTracker_logevent_internalCommand Topic Columns
-	[Documentation]    Validate the MTLaserTracker_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    MTLaserTracker
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/MTLaserTracker/MTLaserTracker_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/Count" -v . -n ${folder}/sal_interfaces/MTLaserTracker/MTLaserTracker_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTLaserTracker Event MTLaserTracker_logevent_heartbeat Topic Byte Size
-	[Documentation]    Validate the MTLaserTracker_logevent_heartbeat topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTLaserTracker
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/MTLaserTracker/MTLaserTracker_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/Count" -v . -n ${folder}/sal_interfaces/MTLaserTracker/MTLaserTracker_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTLaserTracker/MTLaserTracker_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
 Validate MTLaserTracker Event MTLaserTracker_logevent_heartbeat Topic Columns
 	[Documentation]    Validate the MTLaserTracker_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTLaserTracker
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/MTLaserTracker/MTLaserTracker_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/Count" -v . -n ${folder}/sal_interfaces/MTLaserTracker/MTLaserTracker_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTLaserTracker Event MTLaserTracker_logevent_loopTimeOutOfRange Topic Byte Size
-	[Documentation]    Validate the MTLaserTracker_logevent_loopTimeOutOfRange topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTLaserTracker
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/MTLaserTracker/MTLaserTracker_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/MTLaserTracker/MTLaserTracker_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTLaserTracker/MTLaserTracker_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTLaserTracker Event MTLaserTracker_logevent_loopTimeOutOfRange Topic Columns
-	[Documentation]    Validate the MTLaserTracker_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    MTLaserTracker
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/MTLaserTracker/MTLaserTracker_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/MTLaserTracker/MTLaserTracker_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTLaserTracker Event MTLaserTracker_logevent_rejectedCommand Topic Byte Size
-	[Documentation]    Validate the MTLaserTracker_logevent_rejectedCommand topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTLaserTracker
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/MTLaserTracker/MTLaserTracker_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/MTLaserTracker/MTLaserTracker_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTLaserTracker/MTLaserTracker_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTLaserTracker Event MTLaserTracker_logevent_rejectedCommand Topic Columns
-	[Documentation]    Validate the MTLaserTracker_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    MTLaserTracker
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/MTLaserTracker/MTLaserTracker_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/MTLaserTracker/MTLaserTracker_Events.xml
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/MTLaserTracker/MTLaserTracker_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/Count" -v . -n ${folder}/sal_interfaces/MTLaserTracker/MTLaserTracker_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -34171,8 +33905,8 @@ Validate MTPtg Telemetry MTPtg_nextTimesToLimits Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTTCS Command MTTCS_command_wfpCalculate Topic Byte Size
-	[Documentation]    Validate the MTTCS_command_wfpCalculate topic is less than 65536 bytes in total.
+Validate MTTCS Command MTTCS_command_toBeDeleted Topic Byte Size
+	[Documentation]    Validate the MTTCS_command_toBeDeleted topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTTCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -34196,8 +33930,8 @@ Validate MTTCS Command MTTCS_command_wfpCalculate Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTTCS Command MTTCS_command_wfpCalculate Topic Columns
-	[Documentation]    Validate the MTTCS_command_wfpCalculate topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate MTTCS Command MTTCS_command_toBeDeleted Topic Columns
+	[Documentation]    Validate the MTTCS_command_toBeDeleted topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -34209,160 +33943,8 @@ Validate MTTCS Command MTTCS_command_wfpCalculate Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTTCS Command MTTCS_command_wfpSimulate Topic Byte Size
-	[Documentation]    Validate the MTTCS_command_wfpSimulate topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[2]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTTCS Command MTTCS_command_wfpSimulate Topic Columns
-	[Documentation]    Validate the MTTCS_command_wfpSimulate topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[2]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTTCS Command MTTCS_command_filterChangeRequest Topic Byte Size
-	[Documentation]    Validate the MTTCS_command_filterChangeRequest topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[3]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[3]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTTCS Command MTTCS_command_filterChangeRequest Topic Columns
-	[Documentation]    Validate the MTTCS_command_filterChangeRequest topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[3]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTTCS Command MTTCS_command_stopMotion Topic Byte Size
-	[Documentation]    Validate the MTTCS_command_stopMotion topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[4]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTTCS Command MTTCS_command_stopMotion Topic Columns
-	[Documentation]    Validate the MTTCS_command_stopMotion topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[4]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTTCS Command MTTCS_command_target Topic Byte Size
-	[Documentation]    Validate the MTTCS_command_target topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[5]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTTCS Command MTTCS_command_target Topic Columns
-	[Documentation]    Validate the MTTCS_command_target topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[5]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTTCS Event MTTCS_logevent_wfpDataReady Topic Byte Size
-	[Documentation]    Validate the MTTCS_logevent_wfpDataReady topic is less than 65536 bytes in total.
+Validate MTTCS Event MTTCS_logevent_toBeDeleted Topic Byte Size
+	[Documentation]    Validate the MTTCS_logevent_toBeDeleted topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTTCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -34386,8 +33968,8 @@ Validate MTTCS Event MTTCS_logevent_wfpDataReady Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTTCS Event MTTCS_logevent_wfpDataReady Topic Columns
-	[Documentation]    Validate the MTTCS_logevent_wfpDataReady topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate MTTCS Event MTTCS_logevent_toBeDeleted Topic Columns
+	[Documentation]    Validate the MTTCS_logevent_toBeDeleted topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -34399,388 +33981,8 @@ Validate MTTCS Event MTTCS_logevent_wfpDataReady Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate MTTCS Event MTTCS_logevent_zemaxError Topic Byte Size
-	[Documentation]    Validate the MTTCS_logevent_zemaxError topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTTCS Event MTTCS_logevent_zemaxError Topic Columns
-	[Documentation]    Validate the MTTCS_logevent_zemaxError topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTTCS Event MTTCS_logevent_internalCommand Topic Byte Size
-	[Documentation]    Validate the MTTCS_logevent_internalCommand topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTTCS Event MTTCS_logevent_internalCommand Topic Columns
-	[Documentation]    Validate the MTTCS_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTTCS Event MTTCS_logevent_detailedState Topic Byte Size
-	[Documentation]    Validate the MTTCS_logevent_detailedState topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTTCS Event MTTCS_logevent_detailedState Topic Columns
-	[Documentation]    Validate the MTTCS_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTTCS Event MTTCS_logevent_heartbeat Topic Byte Size
-	[Documentation]    Validate the MTTCS_logevent_heartbeat topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTTCS Event MTTCS_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the MTTCS_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTTCS Event MTTCS_logevent_loopTimeOutOfRange Topic Byte Size
-	[Documentation]    Validate the MTTCS_logevent_loopTimeOutOfRange topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTTCS Event MTTCS_logevent_loopTimeOutOfRange Topic Columns
-	[Documentation]    Validate the MTTCS_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTTCS Event MTTCS_logevent_rejectedCommand Topic Byte Size
-	[Documentation]    Validate the MTTCS_logevent_rejectedCommand topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTTCS Event MTTCS_logevent_rejectedCommand Topic Columns
-	[Documentation]    Validate the MTTCS_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTTCS Event MTTCS_logevent_heartbeatIn Topic Byte Size
-	[Documentation]    Validate the MTTCS_logevent_heartbeatIn topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTTCS Event MTTCS_logevent_heartbeatIn Topic Columns
-	[Documentation]    Validate the MTTCS_logevent_heartbeatIn topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTTCS Event MTTCS_logevent_filterChangeInPosition Topic Byte Size
-	[Documentation]    Validate the MTTCS_logevent_filterChangeInPosition topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTTCS Event MTTCS_logevent_filterChangeInPosition Topic Columns
-	[Documentation]    Validate the MTTCS_logevent_filterChangeInPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTTCS Event MTTCS_logevent_targetInPosition Topic Byte Size
-	[Documentation]    Validate the MTTCS_logevent_targetInPosition topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTTCS Event MTTCS_logevent_targetInPosition Topic Columns
-	[Documentation]    Validate the MTTCS_logevent_targetInPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTTCS Event MTTCS_logevent_settingsApplied Topic Byte Size
-	[Documentation]    Validate the MTTCS_logevent_settingsApplied topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[11]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[11]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTTCS Event MTTCS_logevent_settingsApplied Topic Columns
-	[Documentation]    Validate the MTTCS_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[11]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTTCS Telemetry MTTCS_kernelPointingModel Topic Byte Size
-	[Documentation]    Validate the MTTCS_kernelPointingModel topic is less than 65536 bytes in total.
+Validate MTTCS Telemetry MTTCS_toBeDeleted Topic Byte Size
+	[Documentation]    Validate the MTTCS_toBeDeleted topic is less than 65536 bytes in total.
 	[Tags]    smoke    MTTCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -34804,583 +34006,13 @@ Validate MTTCS Telemetry MTTCS_kernelPointingModel Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate MTTCS Telemetry MTTCS_kernelPointingModel Topic Columns
-	[Documentation]    Validate the MTTCS_kernelPointingModel topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate MTTCS Telemetry MTTCS_toBeDeleted Topic Columns
+	[Documentation]    Validate the MTTCS_toBeDeleted topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    MTTCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTTCS Telemetry MTTCS_aOCS Topic Byte Size
-	[Documentation]    Validate the MTTCS_aOCS topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[2]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTTCS Telemetry MTTCS_aOCS Topic Columns
-	[Documentation]    Validate the MTTCS_aOCS topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[2]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTTCS Telemetry MTTCS_kernelTimeKeeper Topic Byte Size
-	[Documentation]    Validate the MTTCS_kernelTimeKeeper topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[3]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[3]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[3]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTTCS Telemetry MTTCS_kernelTimeKeeper Topic Columns
-	[Documentation]    Validate the MTTCS_kernelTimeKeeper topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[3]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[3]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTTCS Telemetry MTTCS_kernelSite Topic Byte Size
-	[Documentation]    Validate the MTTCS_kernelSite topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[4]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[4]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTTCS Telemetry MTTCS_kernelSite Topic Columns
-	[Documentation]    Validate the MTTCS_kernelSite topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[4]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[4]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTTCS Telemetry MTTCS_kernelTarget Topic Byte Size
-	[Documentation]    Validate the MTTCS_kernelTarget topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[5]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[5]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTTCS Telemetry MTTCS_kernelTarget Topic Columns
-	[Documentation]    Validate the MTTCS_kernelTarget topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[5]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[5]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTTCS Telemetry MTTCS_kernelPointingControl Topic Byte Size
-	[Documentation]    Validate the MTTCS_kernelPointingControl topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[6]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[6]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[6]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTTCS Telemetry MTTCS_kernelPointingControl Topic Columns
-	[Documentation]    Validate the MTTCS_kernelPointingControl topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[6]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[6]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTTCS Telemetry MTTCS_kernelTrackRefSys Topic Byte Size
-	[Documentation]    Validate the MTTCS_kernelTrackRefSys topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[7]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[7]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[7]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTTCS Telemetry MTTCS_kernelTrackRefSys Topic Columns
-	[Documentation]    Validate the MTTCS_kernelTrackRefSys topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[7]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[7]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTTCS Telemetry MTTCS_zEMAX Topic Byte Size
-	[Documentation]    Validate the MTTCS_zEMAX topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[8]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[8]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[8]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTTCS Telemetry MTTCS_zEMAX Topic Columns
-	[Documentation]    Validate the MTTCS_zEMAX topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[8]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[8]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTTCS Telemetry MTTCS_kernelPointingLog Topic Byte Size
-	[Documentation]    Validate the MTTCS_kernelPointingLog topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[9]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[9]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[9]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTTCS Telemetry MTTCS_kernelPointingLog Topic Columns
-	[Documentation]    Validate the MTTCS_kernelPointingLog topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[9]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[9]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTTCS Telemetry MTTCS_kernelDawdleFilter Topic Byte Size
-	[Documentation]    Validate the MTTCS_kernelDawdleFilter topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[10]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[10]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[10]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTTCS Telemetry MTTCS_kernelDawdleFilter Topic Columns
-	[Documentation]    Validate the MTTCS_kernelDawdleFilter topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[10]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[10]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTTCS Telemetry MTTCS_kernelOpticsVt Topic Byte Size
-	[Documentation]    Validate the MTTCS_kernelOpticsVt topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[11]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[11]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[11]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTTCS Telemetry MTTCS_kernelOpticsVt Topic Columns
-	[Documentation]    Validate the MTTCS_kernelOpticsVt topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[11]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[11]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTTCS Telemetry MTTCS_wEP Topic Byte Size
-	[Documentation]    Validate the MTTCS_wEP topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[12]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[12]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[12]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTTCS Telemetry MTTCS_wEP Topic Columns
-	[Documentation]    Validate the MTTCS_wEP topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[12]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[12]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTTCS Telemetry MTTCS_kernelTrackingTarget Topic Byte Size
-	[Documentation]    Validate the MTTCS_kernelTrackingTarget topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[13]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[13]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[13]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTTCS Telemetry MTTCS_kernelTrackingTarget Topic Columns
-	[Documentation]    Validate the MTTCS_kernelTrackingTarget topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[13]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[13]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTTCS Telemetry MTTCS_kernelFK5Target Topic Byte Size
-	[Documentation]    Validate the MTTCS_kernelFK5Target topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[14]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[14]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[14]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTTCS Telemetry MTTCS_kernelFK5Target Topic Columns
-	[Documentation]    Validate the MTTCS_kernelFK5Target topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[14]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[14]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTTCS Telemetry MTTCS_loopTime Topic Byte Size
-	[Documentation]    Validate the MTTCS_loopTime topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[15]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[15]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[15]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTTCS Telemetry MTTCS_loopTime Topic Columns
-	[Documentation]    Validate the MTTCS_loopTime topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[15]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[15]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate MTTCS Telemetry MTTCS_timestamp Topic Byte Size
-	[Documentation]    Validate the MTTCS_timestamp topic is less than 65536 bytes in total.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[16]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[16]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[16]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate MTTCS Telemetry MTTCS_timestamp Topic Columns
-	[Documentation]    Validate the MTTCS_timestamp topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    MTTCS
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[16]/item)" -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[16]/item/Count" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Telemetry.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -36185,8 +34817,8 @@ Validate OCS Telemetry OCS_sequencerHeartbeat Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate PointingComponent Command PointingComponent_command_pointCloseFile Topic Byte Size
-	[Documentation]    Validate the PointingComponent_command_pointCloseFile topic is less than 65536 bytes in total.
+Validate PointingComponent Command PointingComponent_command_toBeDeleted Topic Byte Size
+	[Documentation]    Validate the PointingComponent_command_toBeDeleted topic is less than 65536 bytes in total.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -36210,8 +34842,8 @@ Validate PointingComponent Command PointingComponent_command_pointCloseFile Topi
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate PointingComponent Command PointingComponent_command_pointCloseFile Topic Columns
-	[Documentation]    Validate the PointingComponent_command_pointCloseFile topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate PointingComponent Command PointingComponent_command_toBeDeleted Topic Columns
+	[Documentation]    Validate the PointingComponent_command_toBeDeleted topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -36223,1224 +34855,8 @@ Validate PointingComponent Command PointingComponent_command_pointCloseFile Topi
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate PointingComponent Command PointingComponent_command_poriginAbsorb Topic Byte Size
-	[Documentation]    Validate the PointingComponent_command_poriginAbsorb topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[2]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Command PointingComponent_command_poriginAbsorb Topic Columns
-	[Documentation]    Validate the PointingComponent_command_poriginAbsorb topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[2]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Command PointingComponent_command_guideClear Topic Byte Size
-	[Documentation]    Validate the PointingComponent_command_guideClear topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[3]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[3]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Command PointingComponent_command_guideClear Topic Columns
-	[Documentation]    Validate the PointingComponent_command_guideClear topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[3]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[3]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Command PointingComponent_command_collOffset Topic Byte Size
-	[Documentation]    Validate the PointingComponent_command_collOffset topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[4]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Command PointingComponent_command_collOffset Topic Columns
-	[Documentation]    Validate the PointingComponent_command_collOffset topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[4]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[4]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Command PointingComponent_command_rotOffset Topic Byte Size
-	[Documentation]    Validate the PointingComponent_command_rotOffset topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[5]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Command PointingComponent_command_rotOffset Topic Columns
-	[Documentation]    Validate the PointingComponent_command_rotOffset topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[5]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[5]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Command PointingComponent_command_clearCollOffset Topic Byte Size
-	[Documentation]    Validate the PointingComponent_command_clearCollOffset topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[6]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[6]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Command PointingComponent_command_clearCollOffset Topic Columns
-	[Documentation]    Validate the PointingComponent_command_clearCollOffset topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[6]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[6]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Command PointingComponent_command_poriginXY Topic Byte Size
-	[Documentation]    Validate the PointingComponent_command_poriginXY topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[7]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[7]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[7]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Command PointingComponent_command_poriginXY Topic Columns
-	[Documentation]    Validate the PointingComponent_command_poriginXY topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[7]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[7]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Command PointingComponent_command_iersUpdate Topic Byte Size
-	[Documentation]    Validate the PointingComponent_command_iersUpdate topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[8]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[8]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[8]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Command PointingComponent_command_iersUpdate Topic Columns
-	[Documentation]    Validate the PointingComponent_command_iersUpdate topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[8]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[8]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Command PointingComponent_command_stop Topic Byte Size
-	[Documentation]    Validate the PointingComponent_command_stop topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[9]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[9]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[9]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Command PointingComponent_command_stop Topic Columns
-	[Documentation]    Validate the PointingComponent_command_stop topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[9]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[9]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Command PointingComponent_command_offsetRADec Topic Byte Size
-	[Documentation]    Validate the PointingComponent_command_offsetRADec topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[10]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[10]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[10]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Command PointingComponent_command_offsetRADec Topic Columns
-	[Documentation]    Validate the PointingComponent_command_offsetRADec topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[10]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[10]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Command PointingComponent_command_pointAddData Topic Byte Size
-	[Documentation]    Validate the PointingComponent_command_pointAddData topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[11]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[11]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[11]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Command PointingComponent_command_pointAddData Topic Columns
-	[Documentation]    Validate the PointingComponent_command_pointAddData topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[11]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[11]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Command PointingComponent_command_guideControl Topic Byte Size
-	[Documentation]    Validate the PointingComponent_command_guideControl topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[12]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[12]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[12]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Command PointingComponent_command_guideControl Topic Columns
-	[Documentation]    Validate the PointingComponent_command_guideControl topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[12]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[12]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Command PointingComponent_command_offsetAbsorb Topic Byte Size
-	[Documentation]    Validate the PointingComponent_command_offsetAbsorb topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[13]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[13]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[13]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Command PointingComponent_command_offsetAbsorb Topic Columns
-	[Documentation]    Validate the PointingComponent_command_offsetAbsorb topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[13]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[13]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Command PointingComponent_command_ephemTarget Topic Byte Size
-	[Documentation]    Validate the PointingComponent_command_ephemTarget topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[14]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[14]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[14]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Command PointingComponent_command_ephemTarget Topic Columns
-	[Documentation]    Validate the PointingComponent_command_ephemTarget topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[14]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[14]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Command PointingComponent_command_wavelength Topic Byte Size
-	[Documentation]    Validate the PointingComponent_command_wavelength topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[15]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[15]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[15]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Command PointingComponent_command_wavelength Topic Columns
-	[Documentation]    Validate the PointingComponent_command_wavelength topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[15]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[15]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Command PointingComponent_command_pointLoadModel Topic Byte Size
-	[Documentation]    Validate the PointingComponent_command_pointLoadModel topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[16]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[16]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[16]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Command PointingComponent_command_pointLoadModel Topic Columns
-	[Documentation]    Validate the PointingComponent_command_pointLoadModel topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[16]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[16]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Command PointingComponent_command_azCurrentWrap Topic Byte Size
-	[Documentation]    Validate the PointingComponent_command_azCurrentWrap topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[17]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[17]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[17]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Command PointingComponent_command_azCurrentWrap Topic Columns
-	[Documentation]    Validate the PointingComponent_command_azCurrentWrap topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[17]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[17]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Command PointingComponent_command_debugLevel Topic Byte Size
-	[Documentation]    Validate the PointingComponent_command_debugLevel topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[18]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[18]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[18]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Command PointingComponent_command_debugLevel Topic Columns
-	[Documentation]    Validate the PointingComponent_command_debugLevel topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[18]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[18]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Command PointingComponent_command_raDecTarget Topic Byte Size
-	[Documentation]    Validate the PointingComponent_command_raDecTarget topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[19]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[19]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[19]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Command PointingComponent_command_raDecTarget Topic Columns
-	[Documentation]    Validate the PointingComponent_command_raDecTarget topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[19]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[19]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Command PointingComponent_command_offsetPA Topic Byte Size
-	[Documentation]    Validate the PointingComponent_command_offsetPA topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[20]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[20]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[20]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Command PointingComponent_command_offsetPA Topic Columns
-	[Documentation]    Validate the PointingComponent_command_offsetPA topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[20]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[20]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Command PointingComponent_command_rotCurrentWrap Topic Byte Size
-	[Documentation]    Validate the PointingComponent_command_rotCurrentWrap topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[21]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[21]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[21]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Command PointingComponent_command_rotCurrentWrap Topic Columns
-	[Documentation]    Validate the PointingComponent_command_rotCurrentWrap topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[21]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[21]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Command PointingComponent_command_poriginOffset Topic Byte Size
-	[Documentation]    Validate the PointingComponent_command_poriginOffset topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[22]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[22]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[22]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Command PointingComponent_command_poriginOffset Topic Columns
-	[Documentation]    Validate the PointingComponent_command_poriginOffset topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[22]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[22]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Command PointingComponent_command_offsetClear Topic Byte Size
-	[Documentation]    Validate the PointingComponent_command_offsetClear topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[23]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[23]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[23]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Command PointingComponent_command_offsetClear Topic Columns
-	[Documentation]    Validate the PointingComponent_command_offsetClear topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[23]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[23]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Command PointingComponent_command_offsetAzEl Topic Byte Size
-	[Documentation]    Validate the PointingComponent_command_offsetAzEl topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[24]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[24]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[24]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Command PointingComponent_command_offsetAzEl Topic Columns
-	[Documentation]    Validate the PointingComponent_command_offsetAzEl topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[24]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[24]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Command PointingComponent_command_setAccessMode Topic Byte Size
-	[Documentation]    Validate the PointingComponent_command_setAccessMode topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[25]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[25]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[25]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Command PointingComponent_command_setAccessMode Topic Columns
-	[Documentation]    Validate the PointingComponent_command_setAccessMode topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[25]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[25]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Command PointingComponent_command_azElTarget Topic Byte Size
-	[Documentation]    Validate the PointingComponent_command_azElTarget topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[26]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[26]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[26]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Command PointingComponent_command_azElTarget Topic Columns
-	[Documentation]    Validate the PointingComponent_command_azElTarget topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[26]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[26]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Command PointingComponent_command_copyTarget Topic Byte Size
-	[Documentation]    Validate the PointingComponent_command_copyTarget topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[27]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[27]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[27]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Command PointingComponent_command_copyTarget Topic Columns
-	[Documentation]    Validate the PointingComponent_command_copyTarget topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[27]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[27]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Command PointingComponent_command_planetTarget Topic Byte Size
-	[Documentation]    Validate the PointingComponent_command_planetTarget topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[28]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[28]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[28]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Command PointingComponent_command_planetTarget Topic Columns
-	[Documentation]    Validate the PointingComponent_command_planetTarget topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[28]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[28]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Command PointingComponent_command_pointNewFile Topic Byte Size
-	[Documentation]    Validate the PointingComponent_command_pointNewFile topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[29]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[29]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[29]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Command PointingComponent_command_pointNewFile Topic Columns
-	[Documentation]    Validate the PointingComponent_command_pointNewFile topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[29]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[29]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Command PointingComponent_command_poriginClear Topic Byte Size
-	[Documentation]    Validate the PointingComponent_command_poriginClear topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[30]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[30]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[30]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Command PointingComponent_command_poriginClear Topic Columns
-	[Documentation]    Validate the PointingComponent_command_poriginClear topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[30]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[30]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Command PointingComponent_command_focusName Topic Byte Size
-	[Documentation]    Validate the PointingComponent_command_focusName topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[31]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[31]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[31]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Command PointingComponent_command_focusName Topic Columns
-	[Documentation]    Validate the PointingComponent_command_focusName topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[31]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[31]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Command PointingComponent_command_amLimitSet Topic Byte Size
-	[Documentation]    Validate the PointingComponent_command_amLimitSet topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[32]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[32]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[32]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Command PointingComponent_command_amLimitSet Topic Columns
-	[Documentation]    Validate the PointingComponent_command_amLimitSet topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[32]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[32]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Command PointingComponent_command_guideAutoclear Topic Byte Size
-	[Documentation]    Validate the PointingComponent_command_guideAutoclear topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[33]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[33]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[33]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Command PointingComponent_command_guideAutoclear Topic Columns
-	[Documentation]    Validate the PointingComponent_command_guideAutoclear topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[33]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[33]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Event PointingComponent_logevent_focusNameSelected Topic Byte Size
-	[Documentation]    Validate the PointingComponent_logevent_focusNameSelected topic is less than 65536 bytes in total.
+Validate PointingComponent Event PointingComponent_logevent_toBeDeleted Topic Byte Size
+	[Documentation]    Validate the PointingComponent_logevent_toBeDeleted topic is less than 65536 bytes in total.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -37464,8 +34880,8 @@ Validate PointingComponent Event PointingComponent_logevent_focusNameSelected To
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate PointingComponent Event PointingComponent_logevent_focusNameSelected Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_focusNameSelected topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate PointingComponent Event PointingComponent_logevent_toBeDeleted Topic Columns
+	[Documentation]    Validate the PointingComponent_logevent_toBeDeleted topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -37477,1148 +34893,8 @@ Validate PointingComponent Event PointingComponent_logevent_focusNameSelected To
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate PointingComponent Event PointingComponent_logevent_settingsApplied Topic Byte Size
-	[Documentation]    Validate the PointingComponent_logevent_settingsApplied topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Event PointingComponent_logevent_settingsApplied Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Event PointingComponent_logevent_sunProximityWarning Topic Byte Size
-	[Documentation]    Validate the PointingComponent_logevent_sunProximityWarning topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Event PointingComponent_logevent_sunProximityWarning Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_sunProximityWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Event PointingComponent_logevent_detailedState Topic Byte Size
-	[Documentation]    Validate the PointingComponent_logevent_detailedState topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Event PointingComponent_logevent_detailedState Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Event PointingComponent_logevent_mountGuideMode Topic Byte Size
-	[Documentation]    Validate the PointingComponent_logevent_mountGuideMode topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Event PointingComponent_logevent_mountGuideMode Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_mountGuideMode topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Event PointingComponent_logevent_azWrapWarning Topic Byte Size
-	[Documentation]    Validate the PointingComponent_logevent_azWrapWarning topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Event PointingComponent_logevent_azWrapWarning Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_azWrapWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Event PointingComponent_logevent_wavelength Topic Byte Size
-	[Documentation]    Validate the PointingComponent_logevent_wavelength topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Event PointingComponent_logevent_wavelength Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_wavelength topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Event PointingComponent_logevent_inPositionEl Topic Byte Size
-	[Documentation]    Validate the PointingComponent_logevent_inPositionEl topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Event PointingComponent_logevent_inPositionEl Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_inPositionEl topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Event PointingComponent_logevent_inBlindSpot Topic Byte Size
-	[Documentation]    Validate the PointingComponent_logevent_inBlindSpot topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Event PointingComponent_logevent_inBlindSpot Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_inBlindSpot topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[9]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[9]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Event PointingComponent_logevent_blindSpotWarning Topic Byte Size
-	[Documentation]    Validate the PointingComponent_logevent_blindSpotWarning topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Event PointingComponent_logevent_blindSpotWarning Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_blindSpotWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[10]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[10]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Event PointingComponent_logevent_axesTrackMode Topic Byte Size
-	[Documentation]    Validate the PointingComponent_logevent_axesTrackMode topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[11]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[11]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Event PointingComponent_logevent_axesTrackMode Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_axesTrackMode topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[11]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[11]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Event PointingComponent_logevent_objectSetWarning Topic Byte Size
-	[Documentation]    Validate the PointingComponent_logevent_objectSetWarning topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[12]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[12]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[12]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Event PointingComponent_logevent_objectSetWarning Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_objectSetWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[12]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[12]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Event PointingComponent_logevent_pointingModel Topic Byte Size
-	[Documentation]    Validate the PointingComponent_logevent_pointingModel topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[13]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[13]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[13]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Event PointingComponent_logevent_pointingModel Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_pointingModel topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[13]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[13]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Event PointingComponent_logevent_airmassWarning Topic Byte Size
-	[Documentation]    Validate the PointingComponent_logevent_airmassWarning topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[14]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[14]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[14]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Event PointingComponent_logevent_airmassWarning Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_airmassWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[14]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[14]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Event PointingComponent_logevent_weatherDataInvalid Topic Byte Size
-	[Documentation]    Validate the PointingComponent_logevent_weatherDataInvalid topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[15]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[15]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[15]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Event PointingComponent_logevent_weatherDataInvalid Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_weatherDataInvalid topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[15]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[15]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Event PointingComponent_logevent_focusNameInconsistentWarning Topic Byte Size
-	[Documentation]    Validate the PointingComponent_logevent_focusNameInconsistentWarning topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[16]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[16]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[16]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Event PointingComponent_logevent_focusNameInconsistentWarning Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_focusNameInconsistentWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[16]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[16]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Event PointingComponent_logevent_currentTarget Topic Byte Size
-	[Documentation]    Validate the PointingComponent_logevent_currentTarget topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[17]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[17]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[17]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Event PointingComponent_logevent_currentTarget Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_currentTarget topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[17]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[17]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Event PointingComponent_logevent_azWrapAlarm Topic Byte Size
-	[Documentation]    Validate the PointingComponent_logevent_azWrapAlarm topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[18]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[18]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[18]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Event PointingComponent_logevent_azWrapAlarm Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_azWrapAlarm topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[18]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[18]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Event PointingComponent_logevent_iersOutOfDate Topic Byte Size
-	[Documentation]    Validate the PointingComponent_logevent_iersOutOfDate topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[19]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[19]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[19]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Event PointingComponent_logevent_iersOutOfDate Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_iersOutOfDate topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[19]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[19]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Event PointingComponent_logevent_weatherDataApplied Topic Byte Size
-	[Documentation]    Validate the PointingComponent_logevent_weatherDataApplied topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[20]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[20]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[20]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Event PointingComponent_logevent_weatherDataApplied Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_weatherDataApplied topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[20]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[20]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Event PointingComponent_logevent_currentDebugLevel Topic Byte Size
-	[Documentation]    Validate the PointingComponent_logevent_currentDebugLevel topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[21]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[21]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[21]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Event PointingComponent_logevent_currentDebugLevel Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_currentDebugLevel topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[21]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[21]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Event PointingComponent_logevent_nextTarget Topic Byte Size
-	[Documentation]    Validate the PointingComponent_logevent_nextTarget topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[22]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[22]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[22]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Event PointingComponent_logevent_nextTarget Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_nextTarget topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[22]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[22]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Event PointingComponent_logevent_mountDataWarning Topic Byte Size
-	[Documentation]    Validate the PointingComponent_logevent_mountDataWarning topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[23]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[23]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[23]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Event PointingComponent_logevent_mountDataWarning Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_mountDataWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[23]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[23]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Event PointingComponent_logevent_accessMode Topic Byte Size
-	[Documentation]    Validate the PointingComponent_logevent_accessMode topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[24]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[24]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[24]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Event PointingComponent_logevent_accessMode Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_accessMode topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[24]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[24]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Event PointingComponent_logevent_rotWrapWarning Topic Byte Size
-	[Documentation]    Validate the PointingComponent_logevent_rotWrapWarning topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[25]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[25]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[25]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Event PointingComponent_logevent_rotWrapWarning Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_rotWrapWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[25]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[25]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Event PointingComponent_logevent_inPosition Topic Byte Size
-	[Documentation]    Validate the PointingComponent_logevent_inPosition topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[26]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[26]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[26]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Event PointingComponent_logevent_inPosition Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_inPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[26]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[26]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Event PointingComponent_logevent_inPositionRot Topic Byte Size
-	[Documentation]    Validate the PointingComponent_logevent_inPositionRot topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[27]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[27]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[27]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Event PointingComponent_logevent_inPositionRot Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_inPositionRot topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[27]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[27]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Event PointingComponent_logevent_inPositionAz Topic Byte Size
-	[Documentation]    Validate the PointingComponent_logevent_inPositionAz topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[28]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[28]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[28]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Event PointingComponent_logevent_inPositionAz Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_inPositionAz topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[28]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[28]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Event PointingComponent_logevent_iers Topic Byte Size
-	[Documentation]    Validate the PointingComponent_logevent_iers topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[29]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[29]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[29]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Event PointingComponent_logevent_iers Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_iers topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[29]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[29]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Event PointingComponent_logevent_prospectiveTarget Topic Byte Size
-	[Documentation]    Validate the PointingComponent_logevent_prospectiveTarget topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[30]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[30]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[30]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Event PointingComponent_logevent_prospectiveTarget Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_prospectiveTarget topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[30]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[30]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Event PointingComponent_logevent_moonProximityWarning Topic Byte Size
-	[Documentation]    Validate the PointingComponent_logevent_moonProximityWarning topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[31]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[31]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[31]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Event PointingComponent_logevent_moonProximityWarning Topic Columns
-	[Documentation]    Validate the PointingComponent_logevent_moonProximityWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[31]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[31]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Telemetry PointingComponent_prospectiveTargetStatus Topic Byte Size
-	[Documentation]    Validate the PointingComponent_prospectiveTargetStatus topic is less than 65536 bytes in total.
+Validate PointingComponent Telemetry PointingComponent_toBeDeleted Topic Byte Size
+	[Documentation]    Validate the PointingComponent_toBeDeleted topic is less than 65536 bytes in total.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -38642,317 +34918,13 @@ Validate PointingComponent Telemetry PointingComponent_prospectiveTargetStatus T
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate PointingComponent Telemetry PointingComponent_prospectiveTargetStatus Topic Columns
-	[Documentation]    Validate the PointingComponent_prospectiveTargetStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate PointingComponent Telemetry PointingComponent_toBeDeleted Topic Columns
+	[Documentation]    Validate the PointingComponent_toBeDeleted topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    PointingComponent
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Telemetry PointingComponent_currentTimesToLimits Topic Byte Size
-	[Documentation]    Validate the PointingComponent_currentTimesToLimits topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[2]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Telemetry PointingComponent_currentTimesToLimits Topic Columns
-	[Documentation]    Validate the PointingComponent_currentTimesToLimits topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[2]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Telemetry PointingComponent_currentTargetStatus Topic Byte Size
-	[Documentation]    Validate the PointingComponent_currentTargetStatus topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[3]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[3]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[3]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Telemetry PointingComponent_currentTargetStatus Topic Columns
-	[Documentation]    Validate the PointingComponent_currentTargetStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[3]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[3]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Telemetry PointingComponent_guidingAndOffsets Topic Byte Size
-	[Documentation]    Validate the PointingComponent_guidingAndOffsets topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[4]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[4]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Telemetry PointingComponent_guidingAndOffsets Topic Columns
-	[Documentation]    Validate the PointingComponent_guidingAndOffsets topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[4]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[4]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Telemetry PointingComponent_prospectiveTimesToLimits Topic Byte Size
-	[Documentation]    Validate the PointingComponent_prospectiveTimesToLimits topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[5]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[5]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Telemetry PointingComponent_prospectiveTimesToLimits Topic Columns
-	[Documentation]    Validate the PointingComponent_prospectiveTimesToLimits topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[5]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[5]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Telemetry PointingComponent_nextTargetStatus Topic Byte Size
-	[Documentation]    Validate the PointingComponent_nextTargetStatus topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[6]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[6]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[6]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Telemetry PointingComponent_nextTargetStatus Topic Columns
-	[Documentation]    Validate the PointingComponent_nextTargetStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[6]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[6]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Telemetry PointingComponent_timeAndDate Topic Byte Size
-	[Documentation]    Validate the PointingComponent_timeAndDate topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[7]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[7]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[7]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Telemetry PointingComponent_timeAndDate Topic Columns
-	[Documentation]    Validate the PointingComponent_timeAndDate topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[7]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[7]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Telemetry PointingComponent_mountStatus Topic Byte Size
-	[Documentation]    Validate the PointingComponent_mountStatus topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[8]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[8]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[8]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Telemetry PointingComponent_mountStatus Topic Columns
-	[Documentation]    Validate the PointingComponent_mountStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[8]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[8]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate PointingComponent Telemetry PointingComponent_nextTimesToLimits Topic Byte Size
-	[Documentation]    Validate the PointingComponent_nextTimesToLimits topic is less than 65536 bytes in total.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[9]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[9]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[9]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate PointingComponent Telemetry PointingComponent_nextTimesToLimits Topic Columns
-	[Documentation]    Validate the PointingComponent_nextTimesToLimits topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    PointingComponent
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[9]/item)" -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[9]/item/Count" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -39947,8 +35919,8 @@ Validate Rotator Telemetry Rotator_Motors Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Event Scheduler_logevent_internalCommand Topic Byte Size
-	[Documentation]    Validate the Scheduler_logevent_internalCommand topic is less than 65536 bytes in total.
+Validate Scheduler Event Scheduler_logevent_heartbeat Topic Byte Size
+	[Documentation]    Validate the Scheduler_logevent_heartbeat topic is less than 65536 bytes in total.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -39972,8 +35944,8 @@ Validate Scheduler Event Scheduler_logevent_internalCommand Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Event Scheduler_logevent_internalCommand Topic Columns
-	[Documentation]    Validate the Scheduler_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate Scheduler Event Scheduler_logevent_heartbeat Topic Columns
+	[Documentation]    Validate the Scheduler_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -39985,8 +35957,8 @@ Validate Scheduler Event Scheduler_logevent_internalCommand Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Event Scheduler_logevent_heartbeat Topic Byte Size
-	[Documentation]    Validate the Scheduler_logevent_heartbeat topic is less than 65536 bytes in total.
+Validate Scheduler Event Scheduler_logevent_settingsApplied Topic Byte Size
+	[Documentation]    Validate the Scheduler_logevent_settingsApplied topic is less than 65536 bytes in total.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40010,8 +35982,8 @@ Validate Scheduler Event Scheduler_logevent_heartbeat Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Event Scheduler_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the Scheduler_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate Scheduler Event Scheduler_logevent_settingsApplied Topic Columns
+	[Documentation]    Validate the Scheduler_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40023,8 +35995,8 @@ Validate Scheduler Event Scheduler_logevent_heartbeat Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Event Scheduler_logevent_loopTimeOutOfRange Topic Byte Size
-	[Documentation]    Validate the Scheduler_logevent_loopTimeOutOfRange topic is less than 65536 bytes in total.
+Validate Scheduler Event Scheduler_logevent_target Topic Byte Size
+	[Documentation]    Validate the Scheduler_logevent_target topic is less than 65536 bytes in total.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40048,8 +36020,8 @@ Validate Scheduler Event Scheduler_logevent_loopTimeOutOfRange Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Event Scheduler_logevent_loopTimeOutOfRange Topic Columns
-	[Documentation]    Validate the Scheduler_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate Scheduler Event Scheduler_logevent_target Topic Columns
+	[Documentation]    Validate the Scheduler_logevent_target topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40061,8 +36033,8 @@ Validate Scheduler Event Scheduler_logevent_loopTimeOutOfRange Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Event Scheduler_logevent_rejectedCommand Topic Byte Size
-	[Documentation]    Validate the Scheduler_logevent_rejectedCommand topic is less than 65536 bytes in total.
+Validate Scheduler Event Scheduler_logevent_invalidateTarget Topic Byte Size
+	[Documentation]    Validate the Scheduler_logevent_invalidateTarget topic is less than 65536 bytes in total.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40086,8 +36058,8 @@ Validate Scheduler Event Scheduler_logevent_rejectedCommand Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Event Scheduler_logevent_rejectedCommand Topic Columns
-	[Documentation]    Validate the Scheduler_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate Scheduler Event Scheduler_logevent_invalidateTarget Topic Columns
+	[Documentation]    Validate the Scheduler_logevent_invalidateTarget topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40099,8 +36071,8 @@ Validate Scheduler Event Scheduler_logevent_rejectedCommand Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Event Scheduler_logevent_settingsApplied Topic Byte Size
-	[Documentation]    Validate the Scheduler_logevent_settingsApplied topic is less than 65536 bytes in total.
+Validate Scheduler Event Scheduler_logevent_needFilterSwap Topic Byte Size
+	[Documentation]    Validate the Scheduler_logevent_needFilterSwap topic is less than 65536 bytes in total.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40124,127 +36096,13 @@ Validate Scheduler Event Scheduler_logevent_settingsApplied Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Event Scheduler_logevent_settingsApplied Topic Columns
-	[Documentation]    Validate the Scheduler_logevent_settingsApplied topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    Scheduler
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/Scheduler/Scheduler_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/Scheduler/Scheduler_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate Scheduler Event Scheduler_logevent_target Topic Byte Size
-	[Documentation]    Validate the Scheduler_logevent_target topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/Scheduler/Scheduler_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/Count" -v . -n ${folder}/sal_interfaces/Scheduler/Scheduler_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/Scheduler/Scheduler_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate Scheduler Event Scheduler_logevent_target Topic Columns
-	[Documentation]    Validate the Scheduler_logevent_target topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    Scheduler
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[6]/item)" -n ${folder}/sal_interfaces/Scheduler/Scheduler_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[6]/item/Count" -v . -n ${folder}/sal_interfaces/Scheduler/Scheduler_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate Scheduler Event Scheduler_logevent_invalidateTarget Topic Byte Size
-	[Documentation]    Validate the Scheduler_logevent_invalidateTarget topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/Scheduler/Scheduler_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/Count" -v . -n ${folder}/sal_interfaces/Scheduler/Scheduler_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/Scheduler/Scheduler_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate Scheduler Event Scheduler_logevent_invalidateTarget Topic Columns
-	[Documentation]    Validate the Scheduler_logevent_invalidateTarget topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    Scheduler
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[7]/item)" -n ${folder}/sal_interfaces/Scheduler/Scheduler_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[7]/item/Count" -v . -n ${folder}/sal_interfaces/Scheduler/Scheduler_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate Scheduler Event Scheduler_logevent_needFilterSwap Topic Byte Size
-	[Documentation]    Validate the Scheduler_logevent_needFilterSwap topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/Scheduler/Scheduler_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/Count" -v . -n ${folder}/sal_interfaces/Scheduler/Scheduler_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/Scheduler/Scheduler_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
 Validate Scheduler Event Scheduler_logevent_needFilterSwap Topic Columns
 	[Documentation]    Validate the Scheduler_logevent_needFilterSwap topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[8]/item)" -n ${folder}/sal_interfaces/Scheduler/Scheduler_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[8]/item/Count" -v . -n ${folder}/sal_interfaces/Scheduler/Scheduler_Events.xml
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/Scheduler/Scheduler_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/Scheduler/Scheduler_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -40289,8 +36147,8 @@ Validate Scheduler Telemetry Scheduler_timestamp Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry Scheduler_loopTimeMs Topic Byte Size
-	[Documentation]    Validate the Scheduler_loopTimeMs topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry Scheduler_nightSummary Topic Byte Size
+	[Documentation]    Validate the Scheduler_nightSummary topic is less than 65536 bytes in total.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40314,8 +36172,8 @@ Validate Scheduler Telemetry Scheduler_loopTimeMs Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry Scheduler_loopTimeMs Topic Columns
-	[Documentation]    Validate the Scheduler_loopTimeMs topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate Scheduler Telemetry Scheduler_nightSummary Topic Columns
+	[Documentation]    Validate the Scheduler_nightSummary topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40327,8 +36185,8 @@ Validate Scheduler Telemetry Scheduler_loopTimeMs Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry Scheduler_nightSummary Topic Byte Size
-	[Documentation]    Validate the Scheduler_nightSummary topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry Scheduler_predictedSchedule Topic Byte Size
+	[Documentation]    Validate the Scheduler_predictedSchedule topic is less than 65536 bytes in total.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40352,8 +36210,8 @@ Validate Scheduler Telemetry Scheduler_nightSummary Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry Scheduler_nightSummary Topic Columns
-	[Documentation]    Validate the Scheduler_nightSummary topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate Scheduler Telemetry Scheduler_predictedSchedule Topic Columns
+	[Documentation]    Validate the Scheduler_predictedSchedule topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40365,8 +36223,8 @@ Validate Scheduler Telemetry Scheduler_nightSummary Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry Scheduler_predictedSchedule Topic Byte Size
-	[Documentation]    Validate the Scheduler_predictedSchedule topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry Scheduler_surveyTopology Topic Byte Size
+	[Documentation]    Validate the Scheduler_surveyTopology topic is less than 65536 bytes in total.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40390,8 +36248,8 @@ Validate Scheduler Telemetry Scheduler_predictedSchedule Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry Scheduler_predictedSchedule Topic Columns
-	[Documentation]    Validate the Scheduler_predictedSchedule topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate Scheduler Telemetry Scheduler_surveyTopology Topic Columns
+	[Documentation]    Validate the Scheduler_surveyTopology topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40403,8 +36261,8 @@ Validate Scheduler Telemetry Scheduler_predictedSchedule Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry Scheduler_surveyTopology Topic Byte Size
-	[Documentation]    Validate the Scheduler_surveyTopology topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry Scheduler_schedulerConfig Topic Byte Size
+	[Documentation]    Validate the Scheduler_schedulerConfig topic is less than 65536 bytes in total.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40428,8 +36286,8 @@ Validate Scheduler Telemetry Scheduler_surveyTopology Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry Scheduler_surveyTopology Topic Columns
-	[Documentation]    Validate the Scheduler_surveyTopology topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate Scheduler Telemetry Scheduler_schedulerConfig Topic Columns
+	[Documentation]    Validate the Scheduler_schedulerConfig topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40441,8 +36299,8 @@ Validate Scheduler Telemetry Scheduler_surveyTopology Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry Scheduler_schedulerConfig Topic Byte Size
-	[Documentation]    Validate the Scheduler_schedulerConfig topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry Scheduler_driverConfig Topic Byte Size
+	[Documentation]    Validate the Scheduler_driverConfig topic is less than 65536 bytes in total.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40466,8 +36324,8 @@ Validate Scheduler Telemetry Scheduler_schedulerConfig Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry Scheduler_schedulerConfig Topic Columns
-	[Documentation]    Validate the Scheduler_schedulerConfig topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate Scheduler Telemetry Scheduler_driverConfig Topic Columns
+	[Documentation]    Validate the Scheduler_driverConfig topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40479,8 +36337,8 @@ Validate Scheduler Telemetry Scheduler_schedulerConfig Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry Scheduler_driverConfig Topic Byte Size
-	[Documentation]    Validate the Scheduler_driverConfig topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry Scheduler_obsSiteConfig Topic Byte Size
+	[Documentation]    Validate the Scheduler_obsSiteConfig topic is less than 65536 bytes in total.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40504,8 +36362,8 @@ Validate Scheduler Telemetry Scheduler_driverConfig Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry Scheduler_driverConfig Topic Columns
-	[Documentation]    Validate the Scheduler_driverConfig topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate Scheduler Telemetry Scheduler_obsSiteConfig Topic Columns
+	[Documentation]    Validate the Scheduler_obsSiteConfig topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40517,8 +36375,8 @@ Validate Scheduler Telemetry Scheduler_driverConfig Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry Scheduler_obsSiteConfig Topic Byte Size
-	[Documentation]    Validate the Scheduler_obsSiteConfig topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry Scheduler_telescopeConfig Topic Byte Size
+	[Documentation]    Validate the Scheduler_telescopeConfig topic is less than 65536 bytes in total.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40542,8 +36400,8 @@ Validate Scheduler Telemetry Scheduler_obsSiteConfig Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry Scheduler_obsSiteConfig Topic Columns
-	[Documentation]    Validate the Scheduler_obsSiteConfig topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate Scheduler Telemetry Scheduler_telescopeConfig Topic Columns
+	[Documentation]    Validate the Scheduler_telescopeConfig topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40555,8 +36413,8 @@ Validate Scheduler Telemetry Scheduler_obsSiteConfig Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry Scheduler_telescopeConfig Topic Byte Size
-	[Documentation]    Validate the Scheduler_telescopeConfig topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry Scheduler_rotatorConfig Topic Byte Size
+	[Documentation]    Validate the Scheduler_rotatorConfig topic is less than 65536 bytes in total.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40580,8 +36438,8 @@ Validate Scheduler Telemetry Scheduler_telescopeConfig Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry Scheduler_telescopeConfig Topic Columns
-	[Documentation]    Validate the Scheduler_telescopeConfig topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate Scheduler Telemetry Scheduler_rotatorConfig Topic Columns
+	[Documentation]    Validate the Scheduler_rotatorConfig topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40593,8 +36451,8 @@ Validate Scheduler Telemetry Scheduler_telescopeConfig Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry Scheduler_rotatorConfig Topic Byte Size
-	[Documentation]    Validate the Scheduler_rotatorConfig topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry Scheduler_domeConfig Topic Byte Size
+	[Documentation]    Validate the Scheduler_domeConfig topic is less than 65536 bytes in total.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40618,8 +36476,8 @@ Validate Scheduler Telemetry Scheduler_rotatorConfig Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry Scheduler_rotatorConfig Topic Columns
-	[Documentation]    Validate the Scheduler_rotatorConfig topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate Scheduler Telemetry Scheduler_domeConfig Topic Columns
+	[Documentation]    Validate the Scheduler_domeConfig topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40631,8 +36489,8 @@ Validate Scheduler Telemetry Scheduler_rotatorConfig Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry Scheduler_domeConfig Topic Byte Size
-	[Documentation]    Validate the Scheduler_domeConfig topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry Scheduler_cameraConfig Topic Byte Size
+	[Documentation]    Validate the Scheduler_cameraConfig topic is less than 65536 bytes in total.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40656,8 +36514,8 @@ Validate Scheduler Telemetry Scheduler_domeConfig Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry Scheduler_domeConfig Topic Columns
-	[Documentation]    Validate the Scheduler_domeConfig topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate Scheduler Telemetry Scheduler_cameraConfig Topic Columns
+	[Documentation]    Validate the Scheduler_cameraConfig topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40669,8 +36527,8 @@ Validate Scheduler Telemetry Scheduler_domeConfig Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry Scheduler_cameraConfig Topic Byte Size
-	[Documentation]    Validate the Scheduler_cameraConfig topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry Scheduler_slewConfig Topic Byte Size
+	[Documentation]    Validate the Scheduler_slewConfig topic is less than 65536 bytes in total.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40694,8 +36552,8 @@ Validate Scheduler Telemetry Scheduler_cameraConfig Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry Scheduler_cameraConfig Topic Columns
-	[Documentation]    Validate the Scheduler_cameraConfig topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate Scheduler Telemetry Scheduler_slewConfig Topic Columns
+	[Documentation]    Validate the Scheduler_slewConfig topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40707,8 +36565,8 @@ Validate Scheduler Telemetry Scheduler_cameraConfig Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry Scheduler_slewConfig Topic Byte Size
-	[Documentation]    Validate the Scheduler_slewConfig topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry Scheduler_opticsLoopCorrConfig Topic Byte Size
+	[Documentation]    Validate the Scheduler_opticsLoopCorrConfig topic is less than 65536 bytes in total.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40732,8 +36590,8 @@ Validate Scheduler Telemetry Scheduler_slewConfig Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry Scheduler_slewConfig Topic Columns
-	[Documentation]    Validate the Scheduler_slewConfig topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate Scheduler Telemetry Scheduler_opticsLoopCorrConfig Topic Columns
+	[Documentation]    Validate the Scheduler_opticsLoopCorrConfig topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40745,8 +36603,8 @@ Validate Scheduler Telemetry Scheduler_slewConfig Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry Scheduler_opticsLoopCorrConfig Topic Byte Size
-	[Documentation]    Validate the Scheduler_opticsLoopCorrConfig topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry Scheduler_parkConfig Topic Byte Size
+	[Documentation]    Validate the Scheduler_parkConfig topic is less than 65536 bytes in total.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40770,8 +36628,8 @@ Validate Scheduler Telemetry Scheduler_opticsLoopCorrConfig Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry Scheduler_opticsLoopCorrConfig Topic Columns
-	[Documentation]    Validate the Scheduler_opticsLoopCorrConfig topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate Scheduler Telemetry Scheduler_parkConfig Topic Columns
+	[Documentation]    Validate the Scheduler_parkConfig topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40783,8 +36641,8 @@ Validate Scheduler Telemetry Scheduler_opticsLoopCorrConfig Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry Scheduler_parkConfig Topic Byte Size
-	[Documentation]    Validate the Scheduler_parkConfig topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry Scheduler_generalPropConfig Topic Byte Size
+	[Documentation]    Validate the Scheduler_generalPropConfig topic is less than 65536 bytes in total.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40808,8 +36666,8 @@ Validate Scheduler Telemetry Scheduler_parkConfig Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry Scheduler_parkConfig Topic Columns
-	[Documentation]    Validate the Scheduler_parkConfig topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate Scheduler Telemetry Scheduler_generalPropConfig Topic Columns
+	[Documentation]    Validate the Scheduler_generalPropConfig topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40821,8 +36679,8 @@ Validate Scheduler Telemetry Scheduler_parkConfig Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry Scheduler_generalPropConfig Topic Byte Size
-	[Documentation]    Validate the Scheduler_generalPropConfig topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry Scheduler_sequencePropConfig Topic Byte Size
+	[Documentation]    Validate the Scheduler_sequencePropConfig topic is less than 65536 bytes in total.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40846,8 +36704,8 @@ Validate Scheduler Telemetry Scheduler_generalPropConfig Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry Scheduler_generalPropConfig Topic Columns
-	[Documentation]    Validate the Scheduler_generalPropConfig topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate Scheduler Telemetry Scheduler_sequencePropConfig Topic Columns
+	[Documentation]    Validate the Scheduler_sequencePropConfig topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40859,8 +36717,8 @@ Validate Scheduler Telemetry Scheduler_generalPropConfig Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry Scheduler_sequencePropConfig Topic Byte Size
-	[Documentation]    Validate the Scheduler_sequencePropConfig topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry Scheduler_observatoryState Topic Byte Size
+	[Documentation]    Validate the Scheduler_observatoryState topic is less than 65536 bytes in total.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40884,8 +36742,8 @@ Validate Scheduler Telemetry Scheduler_sequencePropConfig Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry Scheduler_sequencePropConfig Topic Columns
-	[Documentation]    Validate the Scheduler_sequencePropConfig topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate Scheduler Telemetry Scheduler_observatoryState Topic Columns
+	[Documentation]    Validate the Scheduler_observatoryState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40897,8 +36755,8 @@ Validate Scheduler Telemetry Scheduler_sequencePropConfig Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry Scheduler_observatoryState Topic Byte Size
-	[Documentation]    Validate the Scheduler_observatoryState topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry Scheduler_observation Topic Byte Size
+	[Documentation]    Validate the Scheduler_observation topic is less than 65536 bytes in total.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40922,8 +36780,8 @@ Validate Scheduler Telemetry Scheduler_observatoryState Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry Scheduler_observatoryState Topic Columns
-	[Documentation]    Validate the Scheduler_observatoryState topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate Scheduler Telemetry Scheduler_observation Topic Columns
+	[Documentation]    Validate the Scheduler_observation topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40935,8 +36793,8 @@ Validate Scheduler Telemetry Scheduler_observatoryState Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry Scheduler_observation Topic Byte Size
-	[Documentation]    Validate the Scheduler_observation topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry Scheduler_interestedProposal Topic Byte Size
+	[Documentation]    Validate the Scheduler_interestedProposal topic is less than 65536 bytes in total.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40960,8 +36818,8 @@ Validate Scheduler Telemetry Scheduler_observation Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry Scheduler_observation Topic Columns
-	[Documentation]    Validate the Scheduler_observation topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate Scheduler Telemetry Scheduler_interestedProposal Topic Columns
+	[Documentation]    Validate the Scheduler_interestedProposal topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40973,8 +36831,8 @@ Validate Scheduler Telemetry Scheduler_observation Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry Scheduler_interestedProposal Topic Byte Size
-	[Documentation]    Validate the Scheduler_interestedProposal topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry Scheduler_timeHandler Topic Byte Size
+	[Documentation]    Validate the Scheduler_timeHandler topic is less than 65536 bytes in total.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -40998,8 +36856,8 @@ Validate Scheduler Telemetry Scheduler_interestedProposal Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry Scheduler_interestedProposal Topic Columns
-	[Documentation]    Validate the Scheduler_interestedProposal topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate Scheduler Telemetry Scheduler_timeHandler Topic Columns
+	[Documentation]    Validate the Scheduler_timeHandler topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41011,8 +36869,8 @@ Validate Scheduler Telemetry Scheduler_interestedProposal Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry Scheduler_timeHandler Topic Byte Size
-	[Documentation]    Validate the Scheduler_timeHandler topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry Scheduler_bulkCloud Topic Byte Size
+	[Documentation]    Validate the Scheduler_bulkCloud topic is less than 65536 bytes in total.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41036,8 +36894,8 @@ Validate Scheduler Telemetry Scheduler_timeHandler Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry Scheduler_timeHandler Topic Columns
-	[Documentation]    Validate the Scheduler_timeHandler topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate Scheduler Telemetry Scheduler_bulkCloud Topic Columns
+	[Documentation]    Validate the Scheduler_bulkCloud topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41049,8 +36907,8 @@ Validate Scheduler Telemetry Scheduler_timeHandler Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry Scheduler_bulkCloud Topic Byte Size
-	[Documentation]    Validate the Scheduler_bulkCloud topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry Scheduler_cloudMap Topic Byte Size
+	[Documentation]    Validate the Scheduler_cloudMap topic is less than 65536 bytes in total.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41074,8 +36932,8 @@ Validate Scheduler Telemetry Scheduler_bulkCloud Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry Scheduler_bulkCloud Topic Columns
-	[Documentation]    Validate the Scheduler_bulkCloud topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate Scheduler Telemetry Scheduler_cloudMap Topic Columns
+	[Documentation]    Validate the Scheduler_cloudMap topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41087,8 +36945,8 @@ Validate Scheduler Telemetry Scheduler_bulkCloud Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry Scheduler_cloudMap Topic Byte Size
-	[Documentation]    Validate the Scheduler_cloudMap topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry Scheduler_seeing Topic Byte Size
+	[Documentation]    Validate the Scheduler_seeing topic is less than 65536 bytes in total.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41112,8 +36970,8 @@ Validate Scheduler Telemetry Scheduler_cloudMap Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry Scheduler_cloudMap Topic Columns
-	[Documentation]    Validate the Scheduler_cloudMap topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate Scheduler Telemetry Scheduler_seeing Topic Columns
+	[Documentation]    Validate the Scheduler_seeing topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41125,8 +36983,8 @@ Validate Scheduler Telemetry Scheduler_cloudMap Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry Scheduler_seeing Topic Byte Size
-	[Documentation]    Validate the Scheduler_seeing topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry Scheduler_wind Topic Byte Size
+	[Documentation]    Validate the Scheduler_wind topic is less than 65536 bytes in total.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41150,8 +37008,8 @@ Validate Scheduler Telemetry Scheduler_seeing Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry Scheduler_seeing Topic Columns
-	[Documentation]    Validate the Scheduler_seeing topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate Scheduler Telemetry Scheduler_wind Topic Columns
+	[Documentation]    Validate the Scheduler_wind topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41163,8 +37021,8 @@ Validate Scheduler Telemetry Scheduler_seeing Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry Scheduler_wind Topic Byte Size
-	[Documentation]    Validate the Scheduler_wind topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry Scheduler_temperature Topic Byte Size
+	[Documentation]    Validate the Scheduler_temperature topic is less than 65536 bytes in total.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41188,8 +37046,8 @@ Validate Scheduler Telemetry Scheduler_wind Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry Scheduler_wind Topic Columns
-	[Documentation]    Validate the Scheduler_wind topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate Scheduler Telemetry Scheduler_temperature Topic Columns
+	[Documentation]    Validate the Scheduler_temperature topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41201,8 +37059,8 @@ Validate Scheduler Telemetry Scheduler_wind Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry Scheduler_temperature Topic Byte Size
-	[Documentation]    Validate the Scheduler_temperature topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry Scheduler_skyBrightness Topic Byte Size
+	[Documentation]    Validate the Scheduler_skyBrightness topic is less than 65536 bytes in total.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41226,8 +37084,8 @@ Validate Scheduler Telemetry Scheduler_temperature Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry Scheduler_temperature Topic Columns
-	[Documentation]    Validate the Scheduler_temperature topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate Scheduler Telemetry Scheduler_skyBrightness Topic Columns
+	[Documentation]    Validate the Scheduler_skyBrightness topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41239,8 +37097,8 @@ Validate Scheduler Telemetry Scheduler_temperature Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry Scheduler_skyBrightness Topic Byte Size
-	[Documentation]    Validate the Scheduler_skyBrightness topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry Scheduler_photometricQuality Topic Byte Size
+	[Documentation]    Validate the Scheduler_photometricQuality topic is less than 65536 bytes in total.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41264,8 +37122,8 @@ Validate Scheduler Telemetry Scheduler_skyBrightness Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry Scheduler_skyBrightness Topic Columns
-	[Documentation]    Validate the Scheduler_skyBrightness topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate Scheduler Telemetry Scheduler_photometricQuality Topic Columns
+	[Documentation]    Validate the Scheduler_photometricQuality topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41277,8 +37135,8 @@ Validate Scheduler Telemetry Scheduler_skyBrightness Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry Scheduler_photometricQuality Topic Byte Size
-	[Documentation]    Validate the Scheduler_photometricQuality topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry Scheduler_avoidanceRegions Topic Byte Size
+	[Documentation]    Validate the Scheduler_avoidanceRegions topic is less than 65536 bytes in total.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41302,8 +37160,8 @@ Validate Scheduler Telemetry Scheduler_photometricQuality Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry Scheduler_photometricQuality Topic Columns
-	[Documentation]    Validate the Scheduler_photometricQuality topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate Scheduler Telemetry Scheduler_avoidanceRegions Topic Columns
+	[Documentation]    Validate the Scheduler_avoidanceRegions topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41315,8 +37173,8 @@ Validate Scheduler Telemetry Scheduler_photometricQuality Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate Scheduler Telemetry Scheduler_avoidanceRegions Topic Byte Size
-	[Documentation]    Validate the Scheduler_avoidanceRegions topic is less than 65536 bytes in total.
+Validate Scheduler Telemetry Scheduler_downtime Topic Byte Size
+	[Documentation]    Validate the Scheduler_downtime topic is less than 65536 bytes in total.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -41340,51 +37198,13 @@ Validate Scheduler Telemetry Scheduler_avoidanceRegions Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate Scheduler Telemetry Scheduler_avoidanceRegions Topic Columns
-	[Documentation]    Validate the Scheduler_avoidanceRegions topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    Scheduler
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[29]/item)" -n ${folder}/sal_interfaces/Scheduler/Scheduler_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[29]/item/Count" -v . -n ${folder}/sal_interfaces/Scheduler/Scheduler_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate Scheduler Telemetry Scheduler_downtime Topic Byte Size
-	[Documentation]    Validate the Scheduler_downtime topic is less than 65536 bytes in total.
-	[Tags]    smoke    Scheduler
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[30]/item)" -n ${folder}/sal_interfaces/Scheduler/Scheduler_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[30]/item/Count" -v . -n ${folder}/sal_interfaces/Scheduler/Scheduler_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[30]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/Scheduler/Scheduler_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
 Validate Scheduler Telemetry Scheduler_downtime Topic Columns
 	[Documentation]    Validate the Scheduler_downtime topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    Scheduler
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[30]/item)" -n ${folder}/sal_interfaces/Scheduler/Scheduler_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[30]/item/Count" -v . -n ${folder}/sal_interfaces/Scheduler/Scheduler_Telemetry.xml
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[29]/item)" -n ${folder}/sal_interfaces/Scheduler/Scheduler_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[29]/item/Count" -v . -n ${folder}/sal_interfaces/Scheduler/Scheduler_Telemetry.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -42493,8 +38313,8 @@ Validate ScriptQueue Event ScriptQueue_logevent_rootDirectories Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate SummitFacility Event SummitFacility_logevent_internalCommand Topic Byte Size
-	[Documentation]    Validate the SummitFacility_logevent_internalCommand topic is less than 65536 bytes in total.
+Validate SummitFacility Event SummitFacility_logevent_heartbeat Topic Byte Size
+	[Documentation]    Validate the SummitFacility_logevent_heartbeat topic is less than 65536 bytes in total.
 	[Tags]    smoke    SummitFacility
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -42518,127 +38338,13 @@ Validate SummitFacility Event SummitFacility_logevent_internalCommand Topic Byte
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate SummitFacility Event SummitFacility_logevent_internalCommand Topic Columns
-	[Documentation]    Validate the SummitFacility_logevent_internalCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    SummitFacility
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[1]/item/Count" -v . -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate SummitFacility Event SummitFacility_logevent_heartbeat Topic Byte Size
-	[Documentation]    Validate the SummitFacility_logevent_heartbeat topic is less than 65536 bytes in total.
-	[Tags]    smoke    SummitFacility
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/Count" -v . -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
 Validate SummitFacility Event SummitFacility_logevent_heartbeat Topic Columns
 	[Documentation]    Validate the SummitFacility_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    SummitFacility
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/Count" -v . -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate SummitFacility Event SummitFacility_logevent_loopTimeOutOfRange Topic Byte Size
-	[Documentation]    Validate the SummitFacility_logevent_loopTimeOutOfRange topic is less than 65536 bytes in total.
-	[Tags]    smoke    SummitFacility
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/Count" -v . -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate SummitFacility Event SummitFacility_logevent_loopTimeOutOfRange Topic Columns
-	[Documentation]    Validate the SummitFacility_logevent_loopTimeOutOfRange topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    SummitFacility
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/Count" -v . -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate SummitFacility Event SummitFacility_logevent_rejectedCommand Topic Byte Size
-	[Documentation]    Validate the SummitFacility_logevent_rejectedCommand topic is less than 65536 bytes in total.
-	[Tags]    smoke    SummitFacility
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate SummitFacility Event SummitFacility_logevent_rejectedCommand Topic Columns
-	[Documentation]    Validate the SummitFacility_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    SummitFacility
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Events.xml
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[1]/item/Count" -v . -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -42677,44 +38383,6 @@ Validate SummitFacility Telemetry SummitFacility_timestamp Topic Columns
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Telemetry.xml
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/Count" -v . -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate SummitFacility Telemetry SummitFacility_loopTime Topic Byte Size
-	[Documentation]    Validate the SummitFacility_loopTime topic is less than 65536 bytes in total.
-	[Tags]    smoke    SummitFacility
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[2]/item/Count" -v . -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate SummitFacility Telemetry SummitFacility_loopTime Topic Columns
-	[Documentation]    Validate the SummitFacility_loopTime topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    SummitFacility
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[2]/item/Count" -v . -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Telemetry.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}

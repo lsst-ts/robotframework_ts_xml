@@ -28,7 +28,14 @@ file.write("*** Test Cases ***\n")
 for subsystem in xml_common.subsystems:
 
 	# Mark test cases with Jira tickets
-	skipped=""
+	if subsystem == "ATCamera":
+		skipped="    CAP-318"
+	elif subsystem == "MTCamera":
+		skipped="    CAP-318"
+	elif subsystem == "MTM1M3":
+		skipped="    DM-20956"
+	else:
+		skipped=""
 
 	# Get the list of XMLs for each CSC, to include Telemetry, Events and Commands.
 	xmls = glob.glob(os.environ['XML_HOME'] + "/sal_interfaces/" + subsystem + "/" + subsystem + "*")
@@ -39,7 +46,7 @@ for subsystem in xml_common.subsystems:
 		# Create the Test Cases.
 		file.write("Validate " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType + " Attribute Descriptions\n")
 		file.write("\t[Documentation]    Validate the " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType + " attribute descriptions are populated.\n")
-		file.write("\t[Tags]    smoke    " + xml_common.CapitalizeSubsystem(subsystem) + "    " + skipped + "\n")
+		file.write("\t[Tags]    smoke    " + xml_common.CapitalizeSubsystem(subsystem) + skipped + "\n")
 		file.write("\t${output}=    Run    ${xml} sel -t -m \"//SAL" + messageType.rstrip('s') + "Set/SAL" + messageType.rstrip('s') + "/item/Description\" -v . -n ${folder}/sal_interfaces/" + subsystem + "/" + subsystem + "_" + messageType + ".xml |sed -e 's/^[ \\t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\\\n/|/g'\n")
 		file.write("\tLog    ${output}\n")
 		file.write("\tShould Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False\n")
