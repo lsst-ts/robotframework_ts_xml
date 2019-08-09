@@ -188,7 +188,7 @@ Validate ATBuilding Telemetry XML Unit types
 
 Validate ATCamera Commands XML Units
 	[Documentation]    Validate the ATCamera Commands XML Units.
-	[Tags]    smoke    ATCamera
+	[Tags]    smoke    ATCamera    CAP-318
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATCamera/ATCamera_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
@@ -196,7 +196,7 @@ Validate ATCamera Commands XML Units
 
 Validate ATCamera Commands XML Unit types
 	[Documentation]    Validate the ATCamera Commands XML Units conform to standards.
-	[Tags]    smoke    ATCamera
+	[Tags]    smoke    ATCamera    CAP-318
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATCamera/ATCamera_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
@@ -210,7 +210,7 @@ Validate ATCamera Commands XML Unit types
 
 Validate ATCamera Events XML Units
 	[Documentation]    Validate the ATCamera Events XML Units.
-	[Tags]    smoke    ATCamera
+	[Tags]    smoke    ATCamera    CAP-318
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATCamera/ATCamera_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
@@ -218,7 +218,7 @@ Validate ATCamera Events XML Units
 
 Validate ATCamera Events XML Unit types
 	[Documentation]    Validate the ATCamera Events XML Units conform to standards.
-	[Tags]    smoke    ATCamera
+	[Tags]    smoke    ATCamera    CAP-318
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATCamera/ATCamera_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
@@ -232,7 +232,7 @@ Validate ATCamera Events XML Unit types
 
 Validate ATCamera Telemetry XML Units
 	[Documentation]    Validate the ATCamera Telemetry XML Units.
-	[Tags]    smoke    ATCamera
+	[Tags]    smoke    ATCamera    CAP-318
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATCamera/ATCamera_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
@@ -240,7 +240,7 @@ Validate ATCamera Telemetry XML Units
 
 Validate ATCamera Telemetry XML Unit types
 	[Documentation]    Validate the ATCamera Telemetry XML Units conform to standards.
-	[Tags]    smoke    ATCamera
+	[Tags]    smoke    ATCamera    CAP-318
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATCamera/ATCamera_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
@@ -1838,7 +1838,7 @@ Validate MTArchiver Telemetry XML Unit types
 
 Validate MTCamera Commands XML Units
 	[Documentation]    Validate the MTCamera Commands XML Units.
-	[Tags]    smoke    MTCamera
+	[Tags]    smoke    MTCamera    CAP-318
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/MTCamera/MTCamera_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
@@ -1846,7 +1846,7 @@ Validate MTCamera Commands XML Units
 
 Validate MTCamera Commands XML Unit types
 	[Documentation]    Validate the MTCamera Commands XML Units conform to standards.
-	[Tags]    smoke    MTCamera
+	[Tags]    smoke    MTCamera    CAP-318
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/MTCamera/MTCamera_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
@@ -1860,7 +1860,7 @@ Validate MTCamera Commands XML Unit types
 
 Validate MTCamera Events XML Units
 	[Documentation]    Validate the MTCamera Events XML Units.
-	[Tags]    smoke    MTCamera
+	[Tags]    smoke    MTCamera    CAP-318
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
@@ -1868,7 +1868,7 @@ Validate MTCamera Events XML Units
 
 Validate MTCamera Events XML Unit types
 	[Documentation]    Validate the MTCamera Events XML Units conform to standards.
-	[Tags]    smoke    MTCamera
+	[Tags]    smoke    MTCamera    CAP-318
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
@@ -1882,7 +1882,7 @@ Validate MTCamera Events XML Unit types
 
 Validate MTCamera Telemetry XML Units
 	[Documentation]    Validate the MTCamera Telemetry XML Units.
-	[Tags]    smoke    MTCamera
+	[Tags]    smoke    MTCamera    CAP-318
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
@@ -1890,7 +1890,7 @@ Validate MTCamera Telemetry XML Units
 
 Validate MTCamera Telemetry XML Unit types
 	[Documentation]    Validate the MTCamera Telemetry XML Units conform to standards.
-	[Tags]    smoke    MTCamera
+	[Tags]    smoke    MTCamera    CAP-318
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
@@ -2102,7 +2102,7 @@ Validate MTLaserTracker Telemetry XML Unit types
 
 Validate MTM1M3 Commands XML Units
 	[Documentation]    Validate the MTM1M3 Commands XML Units.
-	[Tags]    smoke    MTM1M3
+	[Tags]    smoke    MTM1M3    DM-20956
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
@@ -2110,7 +2110,7 @@ Validate MTM1M3 Commands XML Units
 
 Validate MTM1M3 Commands XML Unit types
 	[Documentation]    Validate the MTM1M3 Commands XML Units conform to standards.
-	[Tags]    smoke    MTM1M3
+	[Tags]    smoke    MTM1M3    DM-20956
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
@@ -2124,7 +2124,7 @@ Validate MTM1M3 Commands XML Unit types
 
 Validate MTM1M3 Events XML Units
 	[Documentation]    Validate the MTM1M3 Events XML Units.
-	[Tags]    smoke    MTM1M3
+	[Tags]    smoke    MTM1M3    DM-20956
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
@@ -2132,7 +2132,7 @@ Validate MTM1M3 Events XML Units
 
 Validate MTM1M3 Events XML Unit types
 	[Documentation]    Validate the MTM1M3 Events XML Units conform to standards.
-	[Tags]    smoke    MTM1M3
+	[Tags]    smoke    MTM1M3    DM-20956
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
@@ -2146,7 +2146,7 @@ Validate MTM1M3 Events XML Unit types
 
 Validate MTM1M3 Telemetry XML Units
 	[Documentation]    Validate the MTM1M3 Telemetry XML Units.
-	[Tags]    smoke    MTM1M3
+	[Tags]    smoke    MTM1M3    DM-20956
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
@@ -2154,7 +2154,7 @@ Validate MTM1M3 Telemetry XML Units
 
 Validate MTM1M3 Telemetry XML Unit types
 	[Documentation]    Validate the MTM1M3 Telemetry XML Units conform to standards.
-	[Tags]    smoke    MTM1M3
+	[Tags]    smoke    MTM1M3    DM-20956
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
