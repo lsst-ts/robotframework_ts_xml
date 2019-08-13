@@ -28,15 +28,7 @@ file.write("*** Test Cases ***\n")
 for subsystem in xml_common.subsystems:
 
 	# Mark test cases with Jira tickets
-	if re.match("^Dome\S+", subsystem):
-		skipped="skipped"
-	elif subsystem == "Hexapod":
-		skipped="skipped"
-	elif subsystem == "MTM2":
-		skipped="skipped"
-	elif subsystem == "MTMount":
-		skipped="skipped"
-	elif subsystem == "Rotator":
+	if subsystem == "na":
 		skipped="skipped"
 	else:
 		skipped=""
