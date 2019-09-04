@@ -1726,6 +1726,28 @@ Validate LinearStage Telemetry XML Unit types
 	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 	END
 
+Validate LOVE Events XML Units
+	[Documentation]    Validate the LOVE Events XML Units.
+	[Tags]    smoke    LOVE
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/LOVE/LOVE_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
+	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
+
+Validate LOVE Events XML Unit types
+	[Documentation]    Validate the LOVE Events XML Units conform to standards.
+	[Tags]    smoke    LOVE
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/LOVE/LOVE_Events.xml |awk 'NF > 0' |uniq
+	@{units}=    Split String    ${output}    ${\n}
+	Log    ${units}
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
+
 Validate MTAOS Commands XML Units
 	[Documentation]    Validate the MTAOS Commands XML Units.
 	[Tags]    smoke    MTAOS

@@ -409,6 +409,14 @@ Validate LinearStage Events XML Topic Alisases
 	Log Many    ${topic_name}    ${alias}
 	Should Match    ${topic_name}    ${alias}
 
+Validate LOVE Events XML Topic Alisases
+	[Documentation]    Validate the LOVE Events XML Topic Alisases.
+	[Tags]    smoke    LOVE
+	${topic_name}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/LOVE/LOVE_Events.xml |cut -d'_' -f 3-
+	${alias}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/LOVE/LOVE_Events.xml
+	Log Many    ${topic_name}    ${alias}
+	Should Match    ${topic_name}    ${alias}
+
 Validate MTAOS Commands XML Topic Alisases
 	[Documentation]    Validate the MTAOS Commands XML Topic Alisases.
 	[Tags]    smoke    MTAOS

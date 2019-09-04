@@ -499,6 +499,16 @@ Validate LinearStage_Commands.xml Does Not Contain Generic Commands
 	:FOR    ${generic}    IN    @{GenericCommands}
 	\    Run Keyword And Continue On Failure    Test Commands    ${commands}    LinearStage_command_${generic}
 
+Validate LOVE_Events.xml Does Not Contain Generic Events
+	[Documentation]    Validate the LOVE_Events.xml does not contain Generic Events.
+	[Tags]    smoke    
+	Comment    Get the CSC Events.
+	${events}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/LOVE/LOVE_Events.xml
+	Log    ${events}
+	:FOR    ${item}    IN    @{GenericEvents}
+	\    Log Many    ${events}    LOVE_logevent_${item}
+	\    Run Keyword And Continue On Failure    Should Not Contain    ${events}    LOVE_logevent_${item}
+
 Validate MTAOS_Events.xml Does Not Contain Generic Events
 	[Documentation]    Validate the MTAOS_Events.xml does not contain Generic Events.
 	[Tags]    smoke    

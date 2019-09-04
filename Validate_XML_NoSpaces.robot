@@ -2192,6 +2192,34 @@ Validate LinearStage Telemetry <EFDB_Name> element
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
+Validate LOVE Events <Subsystem> element
+	[Documentation]    Validate the LOVE Events <Subsystem> elements do not contain embedded spaces.
+	[Tags]    smoke    LOVE
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Subsystem" -v . -n ${folder}/sal_interfaces/LOVE/LOVE_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate LOVE Events <EFDB_Topic> element
+	[Documentation]    Validate the LOVE Events <EFDB_Topic> elements do not contain embedded spaces.
+	[Tags]    smoke    LOVE
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/LOVE/LOVE_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate LOVE Events <Alias> element
+	[Documentation]    Validate the LOVE Events <Alias> elements do not contain embedded spaces.
+	[Tags]    smoke    LOVE
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/LOVE/LOVE_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
+Validate LOVE Events <EFDB_Name> element
+	[Documentation]    Validate the LOVE Events <EFDB_Name> elements do not contain embedded spaces.
+	[Tags]    smoke    LOVE
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/LOVE/LOVE_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
+	Log    ${output}
+	Should Not Contain    ${output}    ${SPACE}
+
 Validate MTAOS Commands <Subsystem> element
 	[Documentation]    Validate the MTAOS Commands <Subsystem> elements do not contain embedded spaces.
 	[Tags]    smoke    MTAOS

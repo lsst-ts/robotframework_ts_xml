@@ -632,6 +632,14 @@ Validate LinearStage Telemetry XML Counts
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
+Validate LOVE Events XML Counts
+	[Documentation]    Validate the LOVE Events XML count.
+	[Tags]    smoke    LOVE
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/LOVE/LOVE_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,
+	Should Not Start With    ${output}    ,
+
 Validate MTAOS Commands XML Counts
 	[Documentation]    Validate the MTAOS Commands XML count.
 	[Tags]    smoke    MTAOS

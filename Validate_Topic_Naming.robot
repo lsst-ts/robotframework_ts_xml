@@ -711,6 +711,15 @@ Validate LinearStage Telemetry Topic Names
 	: FOR    ${item}    IN    @{topics}
 	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
 
+Validate LOVE Events Topic Names
+	[Documentation]    Validate the LOVE Events topic names conform to naming convention.
+	[Tags]    smoke    LOVE    
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/LOVE/LOVE_Events.xml |sed -e 's/\\n/,/g'
+	Log    ${output}
+	@{topics}=    Split to Lines    ${output}
+	: FOR    ${item}    IN    @{topics}
+	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
+
 Validate MTAOS Commands Topic Names
 	[Documentation]    Validate the MTAOS Commands topic names conform to naming convention.
 	[Tags]    smoke    MTAOS    

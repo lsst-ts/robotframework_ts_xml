@@ -633,6 +633,14 @@ Validate LinearStage Telemetry Attribute Descriptions
 	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
 	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
 
+Validate LOVE Events Attribute Descriptions
+	[Documentation]    Validate the LOVE Events attribute descriptions are populated.
+	[Tags]    smoke    LOVE
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Description" -v . -n ${folder}/sal_interfaces/LOVE/LOVE_Events.xml |sed -e 's/^[ \t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\n/|/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
+	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
+
 Validate MTAOS Commands Attribute Descriptions
 	[Documentation]    Validate the MTAOS Commands attribute descriptions are populated.
 	[Tags]    smoke    MTAOS

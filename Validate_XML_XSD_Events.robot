@@ -188,6 +188,12 @@ Validate LinearStage Events XML file
 	Log    ${output}
 	Should Contain    ${output}   LinearStage_Events.xml - valid
 
+Validate LOVE Events XML file
+	[Tags]    smoke    LOVE
+	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/LOVE/LOVE_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   LOVE_Events.xml - valid
+
 Validate MTAOS Events XML file
 	[Tags]    smoke    MTAOS
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/MTAOS/MTAOS_Events.xml

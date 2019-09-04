@@ -695,7 +695,7 @@ Validate LOVE Generics Element
 	[Tags]    smoke    LOVE
 	${output}=    Run    ${xml} sel -t -m "//SALSubsystems/Subsystem/Name[text()='LOVE']/../Generics" -v . -n ${folder}/sal_interfaces/SALSubsystems.xml
 	Log    LOVE has Generics: ${output}
-	Should Be Equal As Strings    ${output}    yes
+	Should Be Equal As Strings    ${output}    no
 
 Validate LOVE Simulator Element
 	[Documentation]    Validate the SALSubsystems.xml dictionary defines the <Simulator> element.

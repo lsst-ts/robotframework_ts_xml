@@ -5747,8 +5747,8 @@ Validate ATMCS Event ATMCS_logevent_nasmyth2Brake Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Telemetry ATMCS_mountEncoders Topic Byte Size
-	[Documentation]    Validate the ATMCS_mountEncoders topic is less than 65536 bytes in total.
+Validate ATMCS Telemetry ATMCS_trajectory Topic Byte Size
+	[Documentation]    Validate the ATMCS_trajectory topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5772,8 +5772,8 @@ Validate ATMCS Telemetry ATMCS_mountEncoders Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Telemetry ATMCS_mountEncoders Topic Columns
-	[Documentation]    Validate the ATMCS_mountEncoders topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ATMCS Telemetry ATMCS_trajectory Topic Columns
+	[Documentation]    Validate the ATMCS_trajectory topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5785,8 +5785,8 @@ Validate ATMCS Telemetry ATMCS_mountEncoders Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Telemetry ATMCS_torqueDemand Topic Byte Size
-	[Documentation]    Validate the ATMCS_torqueDemand topic is less than 65536 bytes in total.
+Validate ATMCS Telemetry ATMCS_mount_AzEl_Encoders Topic Byte Size
+	[Documentation]    Validate the ATMCS_mount_AzEl_Encoders topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5810,8 +5810,8 @@ Validate ATMCS Telemetry ATMCS_torqueDemand Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Telemetry ATMCS_torqueDemand Topic Columns
-	[Documentation]    Validate the ATMCS_torqueDemand topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ATMCS Telemetry ATMCS_mount_AzEl_Encoders Topic Columns
+	[Documentation]    Validate the ATMCS_mount_AzEl_Encoders topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5823,8 +5823,8 @@ Validate ATMCS Telemetry ATMCS_torqueDemand Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Telemetry ATMCS_measuredTorque Topic Byte Size
-	[Documentation]    Validate the ATMCS_measuredTorque topic is less than 65536 bytes in total.
+Validate ATMCS Telemetry ATMCS_mount_Nasmyth_Encoders Topic Byte Size
+	[Documentation]    Validate the ATMCS_mount_Nasmyth_Encoders topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5848,8 +5848,8 @@ Validate ATMCS Telemetry ATMCS_measuredTorque Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Telemetry ATMCS_measuredTorque Topic Columns
-	[Documentation]    Validate the ATMCS_measuredTorque topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ATMCS Telemetry ATMCS_mount_Nasmyth_Encoders Topic Columns
+	[Documentation]    Validate the ATMCS_mount_Nasmyth_Encoders topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5861,8 +5861,8 @@ Validate ATMCS Telemetry ATMCS_measuredTorque Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Telemetry ATMCS_measuredMotorVelocity Topic Byte Size
-	[Documentation]    Validate the ATMCS_measuredMotorVelocity topic is less than 65536 bytes in total.
+Validate ATMCS Telemetry ATMCS_torqueDemand Topic Byte Size
+	[Documentation]    Validate the ATMCS_torqueDemand topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5886,8 +5886,8 @@ Validate ATMCS Telemetry ATMCS_measuredMotorVelocity Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Telemetry ATMCS_measuredMotorVelocity Topic Columns
-	[Documentation]    Validate the ATMCS_measuredMotorVelocity topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ATMCS Telemetry ATMCS_torqueDemand Topic Columns
+	[Documentation]    Validate the ATMCS_torqueDemand topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5899,8 +5899,8 @@ Validate ATMCS Telemetry ATMCS_measuredMotorVelocity Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Telemetry ATMCS_mountMotorEncoders Topic Byte Size
-	[Documentation]    Validate the ATMCS_mountMotorEncoders topic is less than 65536 bytes in total.
+Validate ATMCS Telemetry ATMCS_measuredTorque Topic Byte Size
+	[Documentation]    Validate the ATMCS_measuredTorque topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5924,13 +5924,127 @@ Validate ATMCS Telemetry ATMCS_mountMotorEncoders Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Telemetry ATMCS_mountMotorEncoders Topic Columns
-	[Documentation]    Validate the ATMCS_mountMotorEncoders topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ATMCS Telemetry ATMCS_measuredTorque Topic Columns
+	[Documentation]    Validate the ATMCS_measuredTorque topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[5]/item)" -n ${folder}/sal_interfaces/ATMCS/ATMCS_Telemetry.xml
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[5]/item/Count" -v . -n ${folder}/sal_interfaces/ATMCS/ATMCS_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate ATMCS Telemetry ATMCS_measuredMotorVelocity Topic Byte Size
+	[Documentation]    Validate the ATMCS_measuredMotorVelocity topic is less than 65536 bytes in total.
+	[Tags]    smoke    ATMCS
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[6]/item)" -n ${folder}/sal_interfaces/ATMCS/ATMCS_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[6]/item/Count" -v . -n ${folder}/sal_interfaces/ATMCS/ATMCS_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[6]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATMCS/ATMCS_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate ATMCS Telemetry ATMCS_measuredMotorVelocity Topic Columns
+	[Documentation]    Validate the ATMCS_measuredMotorVelocity topic has less than 4096 total arguments, each representing a column in the EFDs.
+	[Tags]    smoke    ATMCS
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[6]/item)" -n ${folder}/sal_interfaces/ATMCS/ATMCS_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[6]/item/Count" -v . -n ${folder}/sal_interfaces/ATMCS/ATMCS_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate ATMCS Telemetry ATMCS_nasymth_m3_mountMotorEncoders Topic Byte Size
+	[Documentation]    Validate the ATMCS_nasymth_m3_mountMotorEncoders topic is less than 65536 bytes in total.
+	[Tags]    smoke    ATMCS
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[7]/item)" -n ${folder}/sal_interfaces/ATMCS/ATMCS_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[7]/item/Count" -v . -n ${folder}/sal_interfaces/ATMCS/ATMCS_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[7]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATMCS/ATMCS_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate ATMCS Telemetry ATMCS_nasymth_m3_mountMotorEncoders Topic Columns
+	[Documentation]    Validate the ATMCS_nasymth_m3_mountMotorEncoders topic has less than 4096 total arguments, each representing a column in the EFDs.
+	[Tags]    smoke    ATMCS
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[7]/item)" -n ${folder}/sal_interfaces/ATMCS/ATMCS_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[7]/item/Count" -v . -n ${folder}/sal_interfaces/ATMCS/ATMCS_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate ATMCS Telemetry ATMCS_azEl_mountMotorEncoders Topic Byte Size
+	[Documentation]    Validate the ATMCS_azEl_mountMotorEncoders topic is less than 65536 bytes in total.
+	[Tags]    smoke    ATMCS
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[8]/item)" -n ${folder}/sal_interfaces/ATMCS/ATMCS_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[8]/item/Count" -v . -n ${folder}/sal_interfaces/ATMCS/ATMCS_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[8]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATMCS/ATMCS_Telemetry.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate ATMCS Telemetry ATMCS_azEl_mountMotorEncoders Topic Columns
+	[Documentation]    Validate the ATMCS_azEl_mountMotorEncoders topic has less than 4096 total arguments, each representing a column in the EFDs.
+	[Tags]    smoke    ATMCS
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[8]/item)" -n ${folder}/sal_interfaces/ATMCS/ATMCS_Telemetry.xml
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[8]/item/Count" -v . -n ${folder}/sal_interfaces/ATMCS/ATMCS_Telemetry.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -9243,6 +9357,44 @@ Validate ATPtg Command ATPtg_command_stopTracking Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
+Validate ATPtg Command ATPtg_command_startTracking Topic Byte Size
+	[Documentation]    Validate the ATPtg_command_startTracking topic is less than 65536 bytes in total.
+	[Tags]    smoke    ATPtg
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[34]/item)" -n ${folder}/sal_interfaces/ATPtg/ATPtg_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[34]/item/Count" -v . -n ${folder}/sal_interfaces/ATPtg/ATPtg_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[34]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATPtg/ATPtg_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate ATPtg Command ATPtg_command_startTracking Topic Columns
+	[Documentation]    Validate the ATPtg_command_startTracking topic has less than 4096 total arguments, each representing a column in the EFDs.
+	[Tags]    smoke    ATPtg
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[34]/item)" -n ${folder}/sal_interfaces/ATPtg/ATPtg_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[34]/item/Count" -v . -n ${folder}/sal_interfaces/ATPtg/ATPtg_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
 Validate ATPtg Event ATPtg_logevent_focusNameSelected Topic Byte Size
 	[Documentation]    Validate the ATPtg_logevent_focusNameSelected topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATPtg
@@ -10491,6 +10643,44 @@ Validate ATPtg Event ATPtg_logevent_ptgRotCurrentWrap Topic Columns
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[33]/item)" -n ${folder}/sal_interfaces/ATPtg/ATPtg_Events.xml
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[33]/item/Count" -v . -n ${folder}/sal_interfaces/ATPtg/ATPtg_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate ATPtg Event ATPtg_logevent_elLimitWarning Topic Byte Size
+	[Documentation]    Validate the ATPtg_logevent_elLimitWarning topic is less than 65536 bytes in total.
+	[Tags]    smoke    ATPtg
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[34]/item)" -n ${folder}/sal_interfaces/ATPtg/ATPtg_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[34]/item/Count" -v . -n ${folder}/sal_interfaces/ATPtg/ATPtg_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[34]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATPtg/ATPtg_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate ATPtg Event ATPtg_logevent_elLimitWarning Topic Columns
+	[Documentation]    Validate the ATPtg_logevent_elLimitWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
+	[Tags]    smoke    ATPtg
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[34]/item)" -n ${folder}/sal_interfaces/ATPtg/ATPtg_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[34]/item/Count" -v . -n ${folder}/sal_interfaces/ATPtg/ATPtg_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -20181,6 +20371,120 @@ Validate LinearStage Telemetry LinearStage_position Topic Columns
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[1]/item)" -n ${folder}/sal_interfaces/LinearStage/LinearStage_Telemetry.xml
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[1]/item/Count" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Telemetry.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate LOVE Event LOVE_logevent_heartbeat Topic Byte Size
+	[Documentation]    Validate the LOVE_logevent_heartbeat topic is less than 65536 bytes in total.
+	[Tags]    smoke    LOVE
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/LOVE/LOVE_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[1]/item/Count" -v . -n ${folder}/sal_interfaces/LOVE/LOVE_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[1]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/LOVE/LOVE_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate LOVE Event LOVE_logevent_heartbeat Topic Columns
+	[Documentation]    Validate the LOVE_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
+	[Tags]    smoke    LOVE
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[1]/item)" -n ${folder}/sal_interfaces/LOVE/LOVE_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[1]/item/Count" -v . -n ${folder}/sal_interfaces/LOVE/LOVE_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate LOVE Event LOVE_logevent_logMessage Topic Byte Size
+	[Documentation]    Validate the LOVE_logevent_logMessage topic is less than 65536 bytes in total.
+	[Tags]    smoke    LOVE
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/LOVE/LOVE_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/Count" -v . -n ${folder}/sal_interfaces/LOVE/LOVE_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/LOVE/LOVE_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate LOVE Event LOVE_logevent_logMessage Topic Columns
+	[Documentation]    Validate the LOVE_logevent_logMessage topic has less than 4096 total arguments, each representing a column in the EFDs.
+	[Tags]    smoke    LOVE
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[2]/item)" -n ${folder}/sal_interfaces/LOVE/LOVE_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[2]/item/Count" -v . -n ${folder}/sal_interfaces/LOVE/LOVE_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate LOVE Event LOVE_logevent_observingLog Topic Byte Size
+	[Documentation]    Validate the LOVE_logevent_observingLog topic is less than 65536 bytes in total.
+	[Tags]    smoke    LOVE
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/LOVE/LOVE_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/Count" -v . -n ${folder}/sal_interfaces/LOVE/LOVE_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/LOVE/LOVE_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate LOVE Event LOVE_logevent_observingLog Topic Columns
+	[Documentation]    Validate the LOVE_logevent_observingLog topic has less than 4096 total arguments, each representing a column in the EFDs.
+	[Tags]    smoke    LOVE
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[3]/item)" -n ${folder}/sal_interfaces/LOVE/LOVE_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[3]/item/Count" -v . -n ${folder}/sal_interfaces/LOVE/LOVE_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
@@ -33595,6 +33899,44 @@ Validate MTPtg Event MTPtg_logevent_ptgRotCurrentWrap Topic Columns
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[33]/item)" -n ${folder}/sal_interfaces/MTPtg/MTPtg_Events.xml
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[33]/item/Count" -v . -n ${folder}/sal_interfaces/MTPtg/MTPtg_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate MTPtg Event MTPtg_logevent_elLimitWarning Topic Byte Size
+	[Documentation]    Validate the MTPtg_logevent_elLimitWarning topic is less than 65536 bytes in total.
+	[Tags]    smoke    MTPtg
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[34]/item)" -n ${folder}/sal_interfaces/MTPtg/MTPtg_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[34]/item/Count" -v . -n ${folder}/sal_interfaces/MTPtg/MTPtg_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[34]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/MTPtg/MTPtg_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate MTPtg Event MTPtg_logevent_elLimitWarning Topic Columns
+	[Documentation]    Validate the MTPtg_logevent_elLimitWarning topic has less than 4096 total arguments, each representing a column in the EFDs.
+	[Tags]    smoke    MTPtg
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[34]/item)" -n ${folder}/sal_interfaces/MTPtg/MTPtg_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[34]/item/Count" -v . -n ${folder}/sal_interfaces/MTPtg/MTPtg_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}

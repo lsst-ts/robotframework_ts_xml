@@ -554,6 +554,13 @@ Validate LinearStage Telemetry
 	Log    ${output}
 	Should Contain    ${output}   LinearStage_Telemetry.xml - valid
 
+Validate LOVE Events
+	[Documentation]    Validate the LOVE Events XML file.
+	[Tags]    smoke    LOVE
+	${output}=    Run    ${xml} val ${folder}/sal_interfaces/LOVE/LOVE_Events.xml
+	Log    ${output}
+	Should Contain    ${output}   LOVE_Events.xml - valid
+
 Validate MTAOS Commands
 	[Documentation]    Validate the MTAOS Commands XML file.
 	[Tags]    smoke    MTAOS

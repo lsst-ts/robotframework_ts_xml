@@ -99,6 +99,8 @@ for csc in xml_common.subsystems:
 
 	if csc == "Script":
 		value="no"
+	elif csc == "LOVE":
+		value="no"
 	else:
 		value="yes"
 
