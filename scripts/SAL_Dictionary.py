@@ -97,6 +97,7 @@ for csc in xml_common.subsystems:
 	file.write("\tShould Contain    ${cscs}    ${csc}\n")
 	file.write("\n")
 
+	# Set the condition to no for the CSCs that do not utilize the Generic topics.
 	if csc == "Script":
 		value="no"
 	elif csc == "LOVE":

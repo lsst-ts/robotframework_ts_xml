@@ -4569,8 +4569,8 @@ Validate ATMCS Event ATMCS_logevent_m3PortSelected Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_target Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_target topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_positionLimits Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_positionLimits topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4594,8 +4594,8 @@ Validate ATMCS Event ATMCS_logevent_target Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_target Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_target topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ATMCS Event ATMCS_logevent_positionLimits Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_positionLimits topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4607,8 +4607,8 @@ Validate ATMCS Event ATMCS_logevent_target Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_elevationInPosition Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_elevationInPosition topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_target Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_target topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4632,8 +4632,8 @@ Validate ATMCS Event ATMCS_logevent_elevationInPosition Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_elevationInPosition Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_elevationInPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ATMCS Event ATMCS_logevent_target Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_target topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4645,8 +4645,8 @@ Validate ATMCS Event ATMCS_logevent_elevationInPosition Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_azimuthInPosition Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_azimuthInPosition topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_elevationInPosition Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_elevationInPosition topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4670,8 +4670,8 @@ Validate ATMCS Event ATMCS_logevent_azimuthInPosition Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_azimuthInPosition Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_azimuthInPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ATMCS Event ATMCS_logevent_elevationInPosition Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_elevationInPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4683,8 +4683,8 @@ Validate ATMCS Event ATMCS_logevent_azimuthInPosition Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_nasmyth1RotatorInPosition Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_nasmyth1RotatorInPosition topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_azimuthInPosition Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_azimuthInPosition topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4708,8 +4708,8 @@ Validate ATMCS Event ATMCS_logevent_nasmyth1RotatorInPosition Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_nasmyth1RotatorInPosition Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_nasmyth1RotatorInPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ATMCS Event ATMCS_logevent_azimuthInPosition Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_azimuthInPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4721,8 +4721,8 @@ Validate ATMCS Event ATMCS_logevent_nasmyth1RotatorInPosition Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_nasmyth2RotatorInPosition Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_nasmyth2RotatorInPosition topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_nasmyth1RotatorInPosition Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_nasmyth1RotatorInPosition topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4746,8 +4746,8 @@ Validate ATMCS Event ATMCS_logevent_nasmyth2RotatorInPosition Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_nasmyth2RotatorInPosition Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_nasmyth2RotatorInPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ATMCS Event ATMCS_logevent_nasmyth1RotatorInPosition Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_nasmyth1RotatorInPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4759,8 +4759,8 @@ Validate ATMCS Event ATMCS_logevent_nasmyth2RotatorInPosition Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_m3InPosition Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_m3InPosition topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_nasmyth2RotatorInPosition Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_nasmyth2RotatorInPosition topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4784,8 +4784,8 @@ Validate ATMCS Event ATMCS_logevent_m3InPosition Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_m3InPosition Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_m3InPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ATMCS Event ATMCS_logevent_nasmyth2RotatorInPosition Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_nasmyth2RotatorInPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4797,8 +4797,8 @@ Validate ATMCS Event ATMCS_logevent_m3InPosition Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_allAxesInPosition Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_allAxesInPosition topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_m3InPosition Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_m3InPosition topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4822,8 +4822,8 @@ Validate ATMCS Event ATMCS_logevent_allAxesInPosition Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_allAxesInPosition Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_allAxesInPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ATMCS Event ATMCS_logevent_m3InPosition Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_m3InPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4835,8 +4835,8 @@ Validate ATMCS Event ATMCS_logevent_allAxesInPosition Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_azimuthToppleBlockCCW Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_azimuthToppleBlockCCW topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_allAxesInPosition Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_allAxesInPosition topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4860,8 +4860,8 @@ Validate ATMCS Event ATMCS_logevent_azimuthToppleBlockCCW Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_azimuthToppleBlockCCW Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_azimuthToppleBlockCCW topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ATMCS Event ATMCS_logevent_allAxesInPosition Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_allAxesInPosition topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4873,8 +4873,8 @@ Validate ATMCS Event ATMCS_logevent_azimuthToppleBlockCCW Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_azimuthToppleBlockCW Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_azimuthToppleBlockCW topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_azimuthToppleBlockCCW Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_azimuthToppleBlockCCW topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4898,8 +4898,8 @@ Validate ATMCS Event ATMCS_logevent_azimuthToppleBlockCW Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_azimuthToppleBlockCW Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_azimuthToppleBlockCW topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ATMCS Event ATMCS_logevent_azimuthToppleBlockCCW Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_azimuthToppleBlockCCW topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4911,8 +4911,8 @@ Validate ATMCS Event ATMCS_logevent_azimuthToppleBlockCW Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_m3RotatorDetentSwitches Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_m3RotatorDetentSwitches topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_azimuthToppleBlockCW Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_azimuthToppleBlockCW topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4936,8 +4936,8 @@ Validate ATMCS Event ATMCS_logevent_m3RotatorDetentSwitches Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_m3RotatorDetentSwitches Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_m3RotatorDetentSwitches topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ATMCS Event ATMCS_logevent_azimuthToppleBlockCW Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_azimuthToppleBlockCW topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4949,8 +4949,8 @@ Validate ATMCS Event ATMCS_logevent_m3RotatorDetentSwitches Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_elevationLimitSwitchLower Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_elevationLimitSwitchLower topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_m3RotatorDetentSwitches Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_m3RotatorDetentSwitches topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4974,8 +4974,8 @@ Validate ATMCS Event ATMCS_logevent_elevationLimitSwitchLower Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_elevationLimitSwitchLower Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_elevationLimitSwitchLower topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ATMCS Event ATMCS_logevent_m3RotatorDetentSwitches Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_m3RotatorDetentSwitches topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -4987,8 +4987,8 @@ Validate ATMCS Event ATMCS_logevent_elevationLimitSwitchLower Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_elevationLimitSwitchUpper Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_elevationLimitSwitchUpper topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_elevationLimitSwitchLower Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_elevationLimitSwitchLower topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5012,8 +5012,8 @@ Validate ATMCS Event ATMCS_logevent_elevationLimitSwitchUpper Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_elevationLimitSwitchUpper Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_elevationLimitSwitchUpper topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ATMCS Event ATMCS_logevent_elevationLimitSwitchLower Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_elevationLimitSwitchLower topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5025,8 +5025,8 @@ Validate ATMCS Event ATMCS_logevent_elevationLimitSwitchUpper Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_azimuthLimitSwitchCCW Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_azimuthLimitSwitchCCW topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_elevationLimitSwitchUpper Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_elevationLimitSwitchUpper topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5050,8 +5050,8 @@ Validate ATMCS Event ATMCS_logevent_azimuthLimitSwitchCCW Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_azimuthLimitSwitchCCW Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_azimuthLimitSwitchCCW topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ATMCS Event ATMCS_logevent_elevationLimitSwitchUpper Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_elevationLimitSwitchUpper topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5063,8 +5063,8 @@ Validate ATMCS Event ATMCS_logevent_azimuthLimitSwitchCCW Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_azimuthLimitSwitchCW Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_azimuthLimitSwitchCW topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_azimuthLimitSwitchCCW Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_azimuthLimitSwitchCCW topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5088,8 +5088,8 @@ Validate ATMCS Event ATMCS_logevent_azimuthLimitSwitchCW Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_azimuthLimitSwitchCW Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_azimuthLimitSwitchCW topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ATMCS Event ATMCS_logevent_azimuthLimitSwitchCCW Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_azimuthLimitSwitchCCW topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5101,8 +5101,8 @@ Validate ATMCS Event ATMCS_logevent_azimuthLimitSwitchCW Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_nasmyth1LimitSwitchCCW Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_nasmyth1LimitSwitchCCW topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_azimuthLimitSwitchCW Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_azimuthLimitSwitchCW topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5126,8 +5126,8 @@ Validate ATMCS Event ATMCS_logevent_nasmyth1LimitSwitchCCW Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_nasmyth1LimitSwitchCCW Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_nasmyth1LimitSwitchCCW topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ATMCS Event ATMCS_logevent_azimuthLimitSwitchCW Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_azimuthLimitSwitchCW topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5139,8 +5139,8 @@ Validate ATMCS Event ATMCS_logevent_nasmyth1LimitSwitchCCW Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_nasmyth1LimitSwitchCW Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_nasmyth1LimitSwitchCW topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_nasmyth1LimitSwitchCCW Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_nasmyth1LimitSwitchCCW topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5164,8 +5164,8 @@ Validate ATMCS Event ATMCS_logevent_nasmyth1LimitSwitchCW Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_nasmyth1LimitSwitchCW Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_nasmyth1LimitSwitchCW topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ATMCS Event ATMCS_logevent_nasmyth1LimitSwitchCCW Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_nasmyth1LimitSwitchCCW topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5177,8 +5177,8 @@ Validate ATMCS Event ATMCS_logevent_nasmyth1LimitSwitchCW Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_nasmyth2LimitSwitchCCW Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_nasmyth2LimitSwitchCCW topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_nasmyth1LimitSwitchCW Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_nasmyth1LimitSwitchCW topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5202,8 +5202,8 @@ Validate ATMCS Event ATMCS_logevent_nasmyth2LimitSwitchCCW Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_nasmyth2LimitSwitchCCW Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_nasmyth2LimitSwitchCCW topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ATMCS Event ATMCS_logevent_nasmyth1LimitSwitchCW Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_nasmyth1LimitSwitchCW topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5215,8 +5215,8 @@ Validate ATMCS Event ATMCS_logevent_nasmyth2LimitSwitchCCW Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_nasmyth2LimitSwitchCW Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_nasmyth2LimitSwitchCW topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_nasmyth2LimitSwitchCCW Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_nasmyth2LimitSwitchCCW topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5240,8 +5240,8 @@ Validate ATMCS Event ATMCS_logevent_nasmyth2LimitSwitchCW Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_nasmyth2LimitSwitchCW Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_nasmyth2LimitSwitchCW topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ATMCS Event ATMCS_logevent_nasmyth2LimitSwitchCCW Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_nasmyth2LimitSwitchCCW topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5253,8 +5253,8 @@ Validate ATMCS Event ATMCS_logevent_nasmyth2LimitSwitchCW Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_m3RotatorLimitSwitchCCW Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_m3RotatorLimitSwitchCCW topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_nasmyth2LimitSwitchCW Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_nasmyth2LimitSwitchCW topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5278,8 +5278,8 @@ Validate ATMCS Event ATMCS_logevent_m3RotatorLimitSwitchCCW Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_m3RotatorLimitSwitchCCW Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_m3RotatorLimitSwitchCCW topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ATMCS Event ATMCS_logevent_nasmyth2LimitSwitchCW Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_nasmyth2LimitSwitchCW topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5291,8 +5291,8 @@ Validate ATMCS Event ATMCS_logevent_m3RotatorLimitSwitchCCW Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_m3RotatorLimitSwitchCW Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_m3RotatorLimitSwitchCW topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_m3RotatorLimitSwitchCCW Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_m3RotatorLimitSwitchCCW topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5316,8 +5316,8 @@ Validate ATMCS Event ATMCS_logevent_m3RotatorLimitSwitchCW Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_m3RotatorLimitSwitchCW Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_m3RotatorLimitSwitchCW topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ATMCS Event ATMCS_logevent_m3RotatorLimitSwitchCCW Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_m3RotatorLimitSwitchCCW topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5329,8 +5329,8 @@ Validate ATMCS Event ATMCS_logevent_m3RotatorLimitSwitchCW Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_elevationDriveStatus Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_elevationDriveStatus topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_m3RotatorLimitSwitchCW Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_m3RotatorLimitSwitchCW topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5354,8 +5354,8 @@ Validate ATMCS Event ATMCS_logevent_elevationDriveStatus Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_elevationDriveStatus Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_elevationDriveStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ATMCS Event ATMCS_logevent_m3RotatorLimitSwitchCW Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_m3RotatorLimitSwitchCW topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5367,8 +5367,8 @@ Validate ATMCS Event ATMCS_logevent_elevationDriveStatus Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_azimuthDrive1Status Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_azimuthDrive1Status topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_elevationDriveStatus Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_elevationDriveStatus topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5392,8 +5392,8 @@ Validate ATMCS Event ATMCS_logevent_azimuthDrive1Status Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_azimuthDrive1Status Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_azimuthDrive1Status topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ATMCS Event ATMCS_logevent_elevationDriveStatus Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_elevationDriveStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5405,8 +5405,8 @@ Validate ATMCS Event ATMCS_logevent_azimuthDrive1Status Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_azimuthDrive2Status Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_azimuthDrive2Status topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_azimuthDrive1Status Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_azimuthDrive1Status topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5430,8 +5430,8 @@ Validate ATMCS Event ATMCS_logevent_azimuthDrive2Status Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_azimuthDrive2Status Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_azimuthDrive2Status topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ATMCS Event ATMCS_logevent_azimuthDrive1Status Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_azimuthDrive1Status topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5443,8 +5443,8 @@ Validate ATMCS Event ATMCS_logevent_azimuthDrive2Status Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_nasmyth1DriveStatus Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_nasmyth1DriveStatus topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_azimuthDrive2Status Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_azimuthDrive2Status topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5468,8 +5468,8 @@ Validate ATMCS Event ATMCS_logevent_nasmyth1DriveStatus Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_nasmyth1DriveStatus Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_nasmyth1DriveStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ATMCS Event ATMCS_logevent_azimuthDrive2Status Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_azimuthDrive2Status topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5481,8 +5481,8 @@ Validate ATMCS Event ATMCS_logevent_nasmyth1DriveStatus Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_nasmyth2DriveStatus Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_nasmyth2DriveStatus topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_nasmyth1DriveStatus Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_nasmyth1DriveStatus topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5506,8 +5506,8 @@ Validate ATMCS Event ATMCS_logevent_nasmyth2DriveStatus Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_nasmyth2DriveStatus Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_nasmyth2DriveStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ATMCS Event ATMCS_logevent_nasmyth1DriveStatus Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_nasmyth1DriveStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5519,8 +5519,8 @@ Validate ATMCS Event ATMCS_logevent_nasmyth2DriveStatus Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_m3DriveStatus Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_m3DriveStatus topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_nasmyth2DriveStatus Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_nasmyth2DriveStatus topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5544,8 +5544,8 @@ Validate ATMCS Event ATMCS_logevent_m3DriveStatus Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_m3DriveStatus Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_m3DriveStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ATMCS Event ATMCS_logevent_nasmyth2DriveStatus Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_nasmyth2DriveStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5557,8 +5557,8 @@ Validate ATMCS Event ATMCS_logevent_m3DriveStatus Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_elevationBrake Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_elevationBrake topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_m3DriveStatus Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_m3DriveStatus topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5582,8 +5582,8 @@ Validate ATMCS Event ATMCS_logevent_elevationBrake Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_elevationBrake Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_elevationBrake topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ATMCS Event ATMCS_logevent_m3DriveStatus Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_m3DriveStatus topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5595,8 +5595,8 @@ Validate ATMCS Event ATMCS_logevent_elevationBrake Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_azimuthBrake1 Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_azimuthBrake1 topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_elevationBrake Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_elevationBrake topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5620,8 +5620,8 @@ Validate ATMCS Event ATMCS_logevent_azimuthBrake1 Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_azimuthBrake1 Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_azimuthBrake1 topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ATMCS Event ATMCS_logevent_elevationBrake Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_elevationBrake topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5633,8 +5633,8 @@ Validate ATMCS Event ATMCS_logevent_azimuthBrake1 Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_azimuthBrake2 Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_azimuthBrake2 topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_azimuthBrake1 Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_azimuthBrake1 topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5658,8 +5658,8 @@ Validate ATMCS Event ATMCS_logevent_azimuthBrake2 Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_azimuthBrake2 Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_azimuthBrake2 topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ATMCS Event ATMCS_logevent_azimuthBrake1 Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_azimuthBrake1 topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5671,8 +5671,8 @@ Validate ATMCS Event ATMCS_logevent_azimuthBrake2 Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_nasmyth1Brake Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_nasmyth1Brake topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_azimuthBrake2 Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_azimuthBrake2 topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5696,8 +5696,8 @@ Validate ATMCS Event ATMCS_logevent_nasmyth1Brake Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_nasmyth1Brake Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_nasmyth1Brake topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ATMCS Event ATMCS_logevent_azimuthBrake2 Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_azimuthBrake2 topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5709,8 +5709,8 @@ Validate ATMCS Event ATMCS_logevent_nasmyth1Brake Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate ATMCS Event ATMCS_logevent_nasmyth2Brake Topic Byte Size
-	[Documentation]    Validate the ATMCS_logevent_nasmyth2Brake topic is less than 65536 bytes in total.
+Validate ATMCS Event ATMCS_logevent_nasmyth1Brake Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_nasmyth1Brake topic is less than 65536 bytes in total.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -5734,13 +5734,51 @@ Validate ATMCS Event ATMCS_logevent_nasmyth2Brake Topic Byte Size
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate ATMCS Event ATMCS_logevent_nasmyth2Brake Topic Columns
-	[Documentation]    Validate the ATMCS_logevent_nasmyth2Brake topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate ATMCS Event ATMCS_logevent_nasmyth1Brake Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_nasmyth1Brake topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    ATMCS
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[36]/item)" -n ${folder}/sal_interfaces/ATMCS/ATMCS_Events.xml
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[36]/item/Count" -v . -n ${folder}/sal_interfaces/ATMCS/ATMCS_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate ATMCS Event ATMCS_logevent_nasmyth2Brake Topic Byte Size
+	[Documentation]    Validate the ATMCS_logevent_nasmyth2Brake topic is less than 65536 bytes in total.
+	[Tags]    smoke    ATMCS
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[37]/item)" -n ${folder}/sal_interfaces/ATMCS/ATMCS_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[37]/item/Count" -v . -n ${folder}/sal_interfaces/ATMCS/ATMCS_Events.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[37]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/ATMCS/ATMCS_Events.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate ATMCS Event ATMCS_logevent_nasmyth2Brake Topic Columns
+	[Documentation]    Validate the ATMCS_logevent_nasmyth2Brake topic has less than 4096 total arguments, each representing a column in the EFDs.
+	[Tags]    smoke    ATMCS
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[37]/item)" -n ${folder}/sal_interfaces/ATMCS/ATMCS_Events.xml
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[37]/item/Count" -v . -n ${folder}/sal_interfaces/ATMCS/ATMCS_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
