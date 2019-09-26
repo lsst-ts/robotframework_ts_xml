@@ -17717,8 +17717,8 @@ Validate Environment Event Environment_logevent_heartbeat Topic Columns
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate FiberSpectrograph Command FiberSpectrograph_command_captureSpectImage Topic Byte Size
-	[Documentation]    Validate the FiberSpectrograph_command_captureSpectImage topic is less than 65536 bytes in total.
+Validate FiberSpectrograph Command FiberSpectrograph_command_expose Topic Byte Size
+	[Documentation]    Validate the FiberSpectrograph_command_expose topic is less than 65536 bytes in total.
 	[Tags]    smoke    FiberSpectrograph
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17742,8 +17742,8 @@ Validate FiberSpectrograph Command FiberSpectrograph_command_captureSpectImage T
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate FiberSpectrograph Command FiberSpectrograph_command_captureSpectImage Topic Columns
-	[Documentation]    Validate the FiberSpectrograph_command_captureSpectImage topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate FiberSpectrograph Command FiberSpectrograph_command_expose Topic Columns
+	[Documentation]    Validate the FiberSpectrograph_command_expose topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    FiberSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17755,8 +17755,46 @@ Validate FiberSpectrograph Command FiberSpectrograph_command_captureSpectImage T
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate FiberSpectrograph Telemetry FiberSpectrograph_spectTemperature Topic Byte Size
-	[Documentation]    Validate the FiberSpectrograph_spectTemperature topic is less than 65536 bytes in total.
+Validate FiberSpectrograph Command FiberSpectrograph_command_cancelExposure Topic Byte Size
+	[Documentation]    Validate the FiberSpectrograph_command_cancelExposure topic is less than 65536 bytes in total.
+	[Tags]    smoke    FiberSpectrograph
+	[Setup]    Set Test Variable    ${result}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[2]/item/Count" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	Comment    Get the Type of each argument for the topic.
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Commands.xml
+	@{TypeArray}=    Split to Lines    ${output}
+	:FOR    ${index}    IN RANGE    ${itemCount}
+	\    ${key}=    Set Variable    @{TypeArray}[${index}]
+	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
+	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
+	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
+	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
+	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
+	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
+	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
+	\    ${size}=    Convert to Number    ${output}
+	\    ${result}=    Evaluate    ${result}+${size}
+	Log    ${result}
+	Should Be True    ${result} < ${65536}
+
+Validate FiberSpectrograph Command FiberSpectrograph_command_cancelExposure Topic Columns
+	[Documentation]    Validate the FiberSpectrograph_command_cancelExposure topic has less than 4096 total arguments, each representing a column in the EFDs.
+	[Tags]    smoke    FiberSpectrograph
+	[Setup]    Set Test Variable    ${total}    ${0}
+	Comment    Get the Count of each argument for the topic.
+	${itemCount}=    Run    ${xml} sel -t -v "count(/SALCommandSet/SALCommand[2]/item)" -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Commands.xml
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand[2]/item/Count" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Commands.xml
+	@{CountArray}=    Split to Lines    ${output}
+	:FOR    ${item}    IN    @{CountArray}
+	\    ${total}=    Evaluate    ${total}+${item}
+	Log    ${total}
+	Should Be True    ${total} <= ${950}
+
+Validate FiberSpectrograph Telemetry FiberSpectrograph_temperature Topic Byte Size
+	[Documentation]    Validate the FiberSpectrograph_temperature topic is less than 65536 bytes in total.
 	[Tags]    smoke    FiberSpectrograph
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17780,8 +17818,8 @@ Validate FiberSpectrograph Telemetry FiberSpectrograph_spectTemperature Topic By
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate FiberSpectrograph Telemetry FiberSpectrograph_spectTemperature Topic Columns
-	[Documentation]    Validate the FiberSpectrograph_spectTemperature topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate FiberSpectrograph Telemetry FiberSpectrograph_temperature Topic Columns
+	[Documentation]    Validate the FiberSpectrograph_temperature topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    FiberSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17793,46 +17831,8 @@ Validate FiberSpectrograph Telemetry FiberSpectrograph_spectTemperature Topic Co
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate FiberSpectrograph Telemetry FiberSpectrograph_timestamp Topic Byte Size
-	[Documentation]    Validate the FiberSpectrograph_timestamp topic is less than 65536 bytes in total.
-	[Tags]    smoke    FiberSpectrograph
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[2]/item/Count" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[2]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Telemetry.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate FiberSpectrograph Telemetry FiberSpectrograph_timestamp Topic Columns
-	[Documentation]    Validate the FiberSpectrograph_timestamp topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    FiberSpectrograph
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALTelemetrySet/SALTelemetry[2]/item)" -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Telemetry.xml
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry[2]/item/Count" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Telemetry.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate FiberSpectrograph Event FiberSpectrograph_logevent_largeFileObjectAvailable Topic Byte Size
-	[Documentation]    Validate the FiberSpectrograph_logevent_largeFileObjectAvailable topic is less than 65536 bytes in total.
+Validate FiberSpectrograph Event FiberSpectrograph_logevent_heartbeat Topic Byte Size
+	[Documentation]    Validate the FiberSpectrograph_logevent_heartbeat topic is less than 65536 bytes in total.
 	[Tags]    smoke    FiberSpectrograph
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17856,8 +17856,8 @@ Validate FiberSpectrograph Event FiberSpectrograph_logevent_largeFileObjectAvail
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate FiberSpectrograph Event FiberSpectrograph_logevent_largeFileObjectAvailable Topic Columns
-	[Documentation]    Validate the FiberSpectrograph_logevent_largeFileObjectAvailable topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate FiberSpectrograph Event FiberSpectrograph_logevent_heartbeat Topic Columns
+	[Documentation]    Validate the FiberSpectrograph_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    FiberSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17869,8 +17869,8 @@ Validate FiberSpectrograph Event FiberSpectrograph_logevent_largeFileObjectAvail
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate FiberSpectrograph Event FiberSpectrograph_logevent_detailedState Topic Byte Size
-	[Documentation]    Validate the FiberSpectrograph_logevent_detailedState topic is less than 65536 bytes in total.
+Validate FiberSpectrograph Event FiberSpectrograph_logevent_largeFileObjectAvailable Topic Byte Size
+	[Documentation]    Validate the FiberSpectrograph_logevent_largeFileObjectAvailable topic is less than 65536 bytes in total.
 	[Tags]    smoke    FiberSpectrograph
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17894,8 +17894,8 @@ Validate FiberSpectrograph Event FiberSpectrograph_logevent_detailedState Topic 
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate FiberSpectrograph Event FiberSpectrograph_logevent_detailedState Topic Columns
-	[Documentation]    Validate the FiberSpectrograph_logevent_detailedState topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate FiberSpectrograph Event FiberSpectrograph_logevent_largeFileObjectAvailable Topic Columns
+	[Documentation]    Validate the FiberSpectrograph_logevent_largeFileObjectAvailable topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    FiberSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17907,8 +17907,8 @@ Validate FiberSpectrograph Event FiberSpectrograph_logevent_detailedState Topic 
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate FiberSpectrograph Event FiberSpectrograph_logevent_timeout Topic Byte Size
-	[Documentation]    Validate the FiberSpectrograph_logevent_timeout topic is less than 65536 bytes in total.
+Validate FiberSpectrograph Event FiberSpectrograph_logevent_exposureState Topic Byte Size
+	[Documentation]    Validate the FiberSpectrograph_logevent_exposureState topic is less than 65536 bytes in total.
 	[Tags]    smoke    FiberSpectrograph
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17932,8 +17932,8 @@ Validate FiberSpectrograph Event FiberSpectrograph_logevent_timeout Topic Byte S
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate FiberSpectrograph Event FiberSpectrograph_logevent_timeout Topic Columns
-	[Documentation]    Validate the FiberSpectrograph_logevent_timeout topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate FiberSpectrograph Event FiberSpectrograph_logevent_exposureState Topic Columns
+	[Documentation]    Validate the FiberSpectrograph_logevent_exposureState topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    FiberSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17945,8 +17945,8 @@ Validate FiberSpectrograph Event FiberSpectrograph_logevent_timeout Topic Column
 	Log    ${total}
 	Should Be True    ${total} <= ${950}
 
-Validate FiberSpectrograph Event FiberSpectrograph_logevent_rejectedCommand Topic Byte Size
-	[Documentation]    Validate the FiberSpectrograph_logevent_rejectedCommand topic is less than 65536 bytes in total.
+Validate FiberSpectrograph Event FiberSpectrograph_logevent_deviceInfo Topic Byte Size
+	[Documentation]    Validate the FiberSpectrograph_logevent_deviceInfo topic is less than 65536 bytes in total.
 	[Tags]    smoke    FiberSpectrograph
 	[Setup]    Set Test Variable    ${result}    ${0}
 	Comment    Get the Count of each argument for the topic.
@@ -17970,51 +17970,13 @@ Validate FiberSpectrograph Event FiberSpectrograph_logevent_rejectedCommand Topi
 	Log    ${result}
 	Should Be True    ${result} < ${65536}
 
-Validate FiberSpectrograph Event FiberSpectrograph_logevent_rejectedCommand Topic Columns
-	[Documentation]    Validate the FiberSpectrograph_logevent_rejectedCommand topic has less than 4096 total arguments, each representing a column in the EFDs.
+Validate FiberSpectrograph Event FiberSpectrograph_logevent_deviceInfo Topic Columns
+	[Documentation]    Validate the FiberSpectrograph_logevent_deviceInfo topic has less than 4096 total arguments, each representing a column in the EFDs.
 	[Tags]    smoke    FiberSpectrograph
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[4]/item)" -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[4]/item/Count" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	:FOR    ${item}    IN    @{CountArray}
-	\    ${total}=    Evaluate    ${total}+${item}
-	Log    ${total}
-	Should Be True    ${total} <= ${950}
-
-Validate FiberSpectrograph Event FiberSpectrograph_logevent_heartbeat Topic Byte Size
-	[Documentation]    Validate the FiberSpectrograph_logevent_heartbeat topic is less than 65536 bytes in total.
-	[Tags]    smoke    FiberSpectrograph
-	[Setup]    Set Test Variable    ${result}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
-	@{CountArray}=    Split to Lines    ${output}
-	Comment    Get the Type of each argument for the topic.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/IDL_Type" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
-	@{TypeArray}=    Split to Lines    ${output}
-	:FOR    ${index}    IN RANGE    ${itemCount}
-	\    ${key}=    Set Variable    @{TypeArray}[${index}]
-	\    Run Keyword If    '${key}'=='unsigned int'    Set Test Variable    ${key}    uint
-	\    Run Keyword If    '${key}'=='unsigned short'    Set Test Variable    ${key}    ushort
-	\    Run Keyword If    '${key}'=='unsigned long'    Set Test Variable    ${key}    ulong
-	\    Run Keyword If    '${key}'=='unsigned long long'    Set Test Variable    ${key}    ullong
-	\    Run Keyword If    '${key}'=='long long'    Set Test Variable    ${key}    llong
-	\    Log Many    ${key}    ${dict.${key}}    @{CountArray}[${index}]
-	\    ${output}=    Evaluate    ${dict.${key}}*@{CountArray}[${index}]
-	\    ${size}=    Convert to Number    ${output}
-	\    ${result}=    Evaluate    ${result}+${size}
-	Log    ${result}
-	Should Be True    ${result} < ${65536}
-
-Validate FiberSpectrograph Event FiberSpectrograph_logevent_heartbeat Topic Columns
-	[Documentation]    Validate the FiberSpectrograph_logevent_heartbeat topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    FiberSpectrograph
-	[Setup]    Set Test Variable    ${total}    ${0}
-	Comment    Get the Count of each argument for the topic.
-	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[5]/item)" -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent[5]/item/Count" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
 	@{CountArray}=    Split to Lines    ${output}
 	:FOR    ${item}    IN    @{CountArray}
 	\    ${total}=    Evaluate    ${total}+${item}
