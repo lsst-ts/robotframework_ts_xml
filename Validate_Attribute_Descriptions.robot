@@ -489,14 +489,6 @@ Validate Environment Telemetry Attribute Descriptions
 	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
 	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
 
-Validate Environment Events Attribute Descriptions
-	[Documentation]    Validate the Environment Events attribute descriptions are populated.
-	[Tags]    smoke    Environment
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Description" -v . -n ${folder}/sal_interfaces/Environment/Environment_Events.xml |sed -e 's/^[ \t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\n/|/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
-	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
-
 Validate FiberSpectrograph Commands Attribute Descriptions
 	[Documentation]    Validate the FiberSpectrograph Commands attribute descriptions are populated.
 	[Tags]    smoke    FiberSpectrograph
@@ -1077,14 +1069,6 @@ Validate ScriptQueue Events Attribute Descriptions
 	[Documentation]    Validate the ScriptQueue Events attribute descriptions are populated.
 	[Tags]    smoke    ScriptQueue
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Description" -v . -n ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Events.xml |sed -e 's/^[ \t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\n/|/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
-	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False
-
-Validate SummitFacility Events Attribute Descriptions
-	[Documentation]    Validate the SummitFacility Events attribute descriptions are populated.
-	[Tags]    smoke    SummitFacility
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Description" -v . -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Events.xml |sed -e 's/^[ \t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\n/|/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False
 	Should Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False

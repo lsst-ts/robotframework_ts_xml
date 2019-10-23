@@ -549,15 +549,6 @@ Validate Environment Telemetry Topic Names
 	: FOR    ${item}    IN    @{topics}
 	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
 
-Validate Environment Events Topic Names
-	[Documentation]    Validate the Environment Events topic names conform to naming convention.
-	[Tags]    smoke    Environment    
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/Environment/Environment_Events.xml |sed -e 's/\\n/,/g'
-	Log    ${output}
-	@{topics}=    Split to Lines    ${output}
-	: FOR    ${item}    IN    @{topics}
-	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
-
 Validate FiberSpectrograph Commands Topic Names
 	[Documentation]    Validate the FiberSpectrograph Commands topic names conform to naming convention.
 	[Tags]    smoke    FiberSpectrograph    
@@ -1210,15 +1201,6 @@ Validate ScriptQueue Events Topic Names
 	[Documentation]    Validate the ScriptQueue Events topic names conform to naming convention.
 	[Tags]    smoke    ScriptQueue    
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Events.xml |sed -e 's/\\n/,/g'
-	Log    ${output}
-	@{topics}=    Split to Lines    ${output}
-	: FOR    ${item}    IN    @{topics}
-	\    Run Keyword and Continue on Failure    Should Match Regexp    ${item}    ^[a-z]([a-z0-9]*)    msg="${item} does not conform to naming conventions."    values=False
-
-Validate SummitFacility Events Topic Names
-	[Documentation]    Validate the SummitFacility Events topic names conform to naming convention.
-	[Tags]    smoke    SummitFacility    
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Events.xml |sed -e 's/\\n/,/g'
 	Log    ${output}
 	@{topics}=    Split to Lines    ${output}
 	: FOR    ${item}    IN    @{topics}

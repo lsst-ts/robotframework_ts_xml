@@ -1688,34 +1688,6 @@ Validate Environment Telemetry <EFDB_Name> element
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 
-Validate Environment Events <Subsystem> element
-	[Documentation]    Validate the Environment Events <Subsystem> elements do not contain embedded spaces.
-	[Tags]    smoke    Environment
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Subsystem" -v . -n ${folder}/sal_interfaces/Environment/Environment_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate Environment Events <EFDB_Topic> element
-	[Documentation]    Validate the Environment Events <EFDB_Topic> elements do not contain embedded spaces.
-	[Tags]    smoke    Environment
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/Environment/Environment_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate Environment Events <Alias> element
-	[Documentation]    Validate the Environment Events <Alias> elements do not contain embedded spaces.
-	[Tags]    smoke    Environment
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/Environment/Environment_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate Environment Events <EFDB_Name> element
-	[Documentation]    Validate the Environment Events <EFDB_Name> elements do not contain embedded spaces.
-	[Tags]    smoke    Environment
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/Environment/Environment_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
 Validate FiberSpectrograph Commands <Subsystem> element
 	[Documentation]    Validate the FiberSpectrograph Commands <Subsystem> elements do not contain embedded spaces.
 	[Tags]    smoke    FiberSpectrograph
@@ -3757,34 +3729,6 @@ Validate ScriptQueue Events <EFDB_Name> element
 	[Documentation]    Validate the ScriptQueue Events <EFDB_Name> elements do not contain embedded spaces.
 	[Tags]    smoke    ScriptQueue
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate SummitFacility Events <Subsystem> element
-	[Documentation]    Validate the SummitFacility Events <Subsystem> elements do not contain embedded spaces.
-	[Tags]    smoke    SummitFacility
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Subsystem" -v . -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate SummitFacility Events <EFDB_Topic> element
-	[Documentation]    Validate the SummitFacility Events <EFDB_Topic> elements do not contain embedded spaces.
-	[Tags]    smoke    SummitFacility
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate SummitFacility Events <Alias> element
-	[Documentation]    Validate the SummitFacility Events <Alias> elements do not contain embedded spaces.
-	[Tags]    smoke    SummitFacility
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain    ${output}    ${SPACE}
-
-Validate SummitFacility Events <EFDB_Name> element
-	[Documentation]    Validate the SummitFacility Events <EFDB_Name> elements do not contain embedded spaces.
-	[Tags]    smoke    SummitFacility
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Events.xml |awk '{$1=$1};1' |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain    ${output}    ${SPACE}
 

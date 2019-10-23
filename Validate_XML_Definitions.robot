@@ -428,13 +428,6 @@ Validate Environment Telemetry
 	Log    ${output}
 	Should Contain    ${output}   Environment_Telemetry.xml - valid
 
-Validate Environment Events
-	[Documentation]    Validate the Environment Events XML file.
-	[Tags]    smoke    Environment
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/Environment/Environment_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   Environment_Events.xml - valid
-
 Validate FiberSpectrograph Commands
 	[Documentation]    Validate the FiberSpectrograph Commands XML file.
 	[Tags]    smoke    FiberSpectrograph
@@ -945,13 +938,6 @@ Validate ScriptQueue Events
 	${output}=    Run    ${xml} val ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   ScriptQueue_Events.xml - valid
-
-Validate SummitFacility Events
-	[Documentation]    Validate the SummitFacility Events XML file.
-	[Tags]    smoke    SummitFacility
-	${output}=    Run    ${xml} val ${folder}/sal_interfaces/SummitFacility/SummitFacility_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   SummitFacility_Events.xml - valid
 
 Validate SummitFacility Telemetry
 	[Documentation]    Validate the SummitFacility Telemetry XML file.

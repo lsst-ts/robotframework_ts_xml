@@ -969,22 +969,6 @@ Validate Environment Telemetry EFDB_Name Values Do Not Use MySQL Reserved Words
 	Log    ${output}
 	Should Not Contain MySQL Reserved Word    ${output}
 
-Validate Environment Events EFDB_Name Values Do Not Use IDL Reserved words
-	[Documentation]    Validate the Environment Events <EFDB_Name> tags do not contain IDL Reserved Words.
-	[Tags]    smoke    Environment
-	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/Environment/Environment_Events.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain IDL Reserved Word    ${output}
-
-Validate Environment Events EFDB_Name Values Do Not Use MySQL Reserved Words
-	[Documentation]    Validate the Environment Events <EFDB_Name> tags do not contain MySQL Reserved Words.
-	[Tags]    smoke    Environment
-	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/Environment/Environment_Events.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain MySQL Reserved Word    ${output}
-
 Validate FiberSpectrograph Commands EFDB_Name Values Do Not Use IDL Reserved words
 	[Documentation]    Validate the FiberSpectrograph Commands <EFDB_Name> tags do not contain IDL Reserved Words.
 	[Tags]    smoke    FiberSpectrograph
@@ -2150,22 +2134,6 @@ Validate ScriptQueue Events EFDB_Name Values Do Not Use MySQL Reserved Words
 	[Tags]    smoke    ScriptQueue
 	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Events.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain MySQL Reserved Word    ${output}
-
-Validate SummitFacility Events EFDB_Name Values Do Not Use IDL Reserved words
-	[Documentation]    Validate the SummitFacility Events <EFDB_Name> tags do not contain IDL Reserved Words.
-	[Tags]    smoke    SummitFacility
-	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Events.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
-	Log    ${output}
-	Should Not Contain IDL Reserved Word    ${output}
-
-Validate SummitFacility Events EFDB_Name Values Do Not Use MySQL Reserved Words
-	[Documentation]    Validate the SummitFacility Events <EFDB_Name> tags do not contain MySQL Reserved Words.
-	[Tags]    smoke    SummitFacility
-	Comment    Find all the EFDB_Name values in the XML. Combine them into a list, separated by the | character.
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/EFDB_Name" -v . -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Events.xml |awk '{$1=$1};1' |uniq |tr '\n' '|'
 	Log    ${output}
 	Should Not Contain MySQL Reserved Word    ${output}
 

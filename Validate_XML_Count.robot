@@ -488,14 +488,6 @@ Validate Environment Telemetry XML Counts
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,
 
-Validate Environment Events XML Counts
-	[Documentation]    Validate the Environment Events XML count.
-	[Tags]    smoke    Environment
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/Environment/Environment_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
 Validate FiberSpectrograph Commands XML Counts
 	[Documentation]    Validate the FiberSpectrograph Commands XML count.
 	[Tags]    smoke    FiberSpectrograph
@@ -1076,14 +1068,6 @@ Validate ScriptQueue Events XML Counts
 	[Documentation]    Validate the ScriptQueue Events XML count.
 	[Tags]    smoke    ScriptQueue
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,
-	Should Not Start With    ${output}    ,
-
-Validate SummitFacility Events XML Counts
-	[Documentation]    Validate the SummitFacility Events XML count.
-	[Tags]    smoke    SummitFacility
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Count" -v . -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,
 	Should Not Start With    ${output}    ,

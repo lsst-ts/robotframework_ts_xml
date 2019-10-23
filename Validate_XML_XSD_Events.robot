@@ -146,12 +146,6 @@ Validate Electrometer Events XML file
 	Log    ${output}
 	Should Contain    ${output}   Electrometer_Events.xml - valid
 
-Validate Environment Events XML file
-	[Tags]    smoke    Environment
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/Environment/Environment_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   Environment_Events.xml - valid
-
 Validate FiberSpectrograph Events XML file
 	[Tags]    smoke    FiberSpectrograph
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml
@@ -325,12 +319,6 @@ Validate ScriptQueue Events XML file
 	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Events.xml
 	Log    ${output}
 	Should Contain    ${output}   ScriptQueue_Events.xml - valid
-
-Validate SummitFacility Events XML file
-	[Tags]    smoke    SummitFacility
-	${output}=    Run    ${xml} val -e --xsd ${folder}/schema/SALEventSet.xsd ${folder}/sal_interfaces/SummitFacility/SummitFacility_Events.xml
-	Log    ${output}
-	Should Contain    ${output}   SummitFacility_Events.xml - valid
 
 Validate Test Events XML file
 	[Tags]    smoke    Test
