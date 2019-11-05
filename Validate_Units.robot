@@ -10,6 +10,28 @@ Resource    Global_Vars.robot
 ${xml}    xml
 
 *** Test Cases ***
+Validate ATAOS Telemetry XML Units
+	[Documentation]    Validate the ATAOS Telemetry XML Units.
+	[Tags]    smoke    ATAOS
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATAOS/ATAOS_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
+	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
+
+Validate ATAOS Telemetry XML Unit types
+	[Documentation]    Validate the ATAOS Telemetry XML Units conform to standards.
+	[Tags]    smoke    ATAOS
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATAOS/ATAOS_Telemetry.xml |awk 'NF > 0' |uniq
+	@{units}=    Split String    ${output}    ${\n}
+	Log    ${units}
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
+
 Validate ATAOS Commands XML Units
 	[Documentation]    Validate the ATAOS Commands XML Units.
 	[Tags]    smoke    ATAOS
@@ -44,50 +66,6 @@ Validate ATAOS Events XML Unit types
 	[Documentation]    Validate the ATAOS Events XML Units conform to standards.
 	[Tags]    smoke    ATAOS
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATAOS/ATAOS_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}    ${\n}
-	Log    ${units}
-	FOR    ${unit}    IN    @{units}
-	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	   Log    ${output}
-	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-	END
-
-Validate ATAOS Telemetry XML Units
-	[Documentation]    Validate the ATAOS Telemetry XML Units.
-	[Tags]    smoke    ATAOS
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATAOS/ATAOS_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate ATAOS Telemetry XML Unit types
-	[Documentation]    Validate the ATAOS Telemetry XML Units conform to standards.
-	[Tags]    smoke    ATAOS
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATAOS/ATAOS_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}    ${\n}
-	Log    ${units}
-	FOR    ${unit}    IN    @{units}
-	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	   Log    ${output}
-	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-	END
-
-Validate ATArchiver Commands XML Units
-	[Documentation]    Validate the ATArchiver Commands XML Units.
-	[Tags]    smoke    ATArchiver
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATArchiver/ATArchiver_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate ATArchiver Commands XML Unit types
-	[Documentation]    Validate the ATArchiver Commands XML Units conform to standards.
-	[Tags]    smoke    ATArchiver
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATArchiver/ATArchiver_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	FOR    ${unit}    IN    @{units}
@@ -142,18 +120,18 @@ Validate ATArchiver Telemetry XML Unit types
 	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 	END
 
-Validate ATBuilding Events XML Units
-	[Documentation]    Validate the ATBuilding Events XML Units.
-	[Tags]    smoke    ATBuilding
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATBuilding/ATBuilding_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+Validate ATArchiver Commands XML Units
+	[Documentation]    Validate the ATArchiver Commands XML Units.
+	[Tags]    smoke    ATArchiver
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATArchiver/ATArchiver_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
 	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
 
-Validate ATBuilding Events XML Unit types
-	[Documentation]    Validate the ATBuilding Events XML Units conform to standards.
-	[Tags]    smoke    ATBuilding
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATBuilding/ATBuilding_Events.xml |awk 'NF > 0' |uniq
+Validate ATArchiver Commands XML Unit types
+	[Documentation]    Validate the ATArchiver Commands XML Units conform to standards.
+	[Tags]    smoke    ATArchiver
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATArchiver/ATArchiver_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	FOR    ${unit}    IN    @{units}
@@ -186,18 +164,18 @@ Validate ATBuilding Telemetry XML Unit types
 	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 	END
 
-Validate ATCamera Commands XML Units
-	[Documentation]    Validate the ATCamera Commands XML Units.
-	[Tags]    smoke    ATCamera    CAP-318
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATCamera/ATCamera_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+Validate ATBuilding Events XML Units
+	[Documentation]    Validate the ATBuilding Events XML Units.
+	[Tags]    smoke    ATBuilding
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATBuilding/ATBuilding_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
 	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
 
-Validate ATCamera Commands XML Unit types
-	[Documentation]    Validate the ATCamera Commands XML Units conform to standards.
-	[Tags]    smoke    ATCamera    CAP-318
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATCamera/ATCamera_Commands.xml |awk 'NF > 0' |uniq
+Validate ATBuilding Events XML Unit types
+	[Documentation]    Validate the ATBuilding Events XML Units conform to standards.
+	[Tags]    smoke    ATBuilding
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATBuilding/ATBuilding_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	FOR    ${unit}    IN    @{units}
@@ -230,6 +208,28 @@ Validate ATCamera Events XML Unit types
 	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 	END
 
+Validate ATCamera Commands XML Units
+	[Documentation]    Validate the ATCamera Commands XML Units.
+	[Tags]    smoke    ATCamera    CAP-318
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATCamera/ATCamera_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
+	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
+
+Validate ATCamera Commands XML Unit types
+	[Documentation]    Validate the ATCamera Commands XML Units conform to standards.
+	[Tags]    smoke    ATCamera    CAP-318
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATCamera/ATCamera_Commands.xml |awk 'NF > 0' |uniq
+	@{units}=    Split String    ${output}    ${\n}
+	Log    ${units}
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
+
 Validate ATCamera Telemetry XML Units
 	[Documentation]    Validate the ATCamera Telemetry XML Units.
 	[Tags]    smoke    ATCamera    CAP-318
@@ -252,28 +252,6 @@ Validate ATCamera Telemetry XML Unit types
 	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 	END
 
-Validate ATDome Commands XML Units
-	[Documentation]    Validate the ATDome Commands XML Units.
-	[Tags]    smoke    ATDome
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATDome/ATDome_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate ATDome Commands XML Unit types
-	[Documentation]    Validate the ATDome Commands XML Units conform to standards.
-	[Tags]    smoke    ATDome
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATDome/ATDome_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}    ${\n}
-	Log    ${units}
-	FOR    ${unit}    IN    @{units}
-	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	   Log    ${output}
-	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-	END
-
 Validate ATDome Events XML Units
 	[Documentation]    Validate the ATDome Events XML Units.
 	[Tags]    smoke    ATDome
@@ -286,6 +264,28 @@ Validate ATDome Events XML Unit types
 	[Documentation]    Validate the ATDome Events XML Units conform to standards.
 	[Tags]    smoke    ATDome
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATDome/ATDome_Events.xml |awk 'NF > 0' |uniq
+	@{units}=    Split String    ${output}    ${\n}
+	Log    ${units}
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
+
+Validate ATDome Commands XML Units
+	[Documentation]    Validate the ATDome Commands XML Units.
+	[Tags]    smoke    ATDome
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATDome/ATDome_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
+	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
+
+Validate ATDome Commands XML Unit types
+	[Documentation]    Validate the ATDome Commands XML Units conform to standards.
+	[Tags]    smoke    ATDome
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATDome/ATDome_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	FOR    ${unit}    IN    @{units}
@@ -384,28 +384,6 @@ Validate ATHexapod Commands XML Unit types
 	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 	END
 
-Validate ATHexapod Events XML Units
-	[Documentation]    Validate the ATHexapod Events XML Units.
-	[Tags]    smoke    ATHexapod
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate ATHexapod Events XML Unit types
-	[Documentation]    Validate the ATHexapod Events XML Units conform to standards.
-	[Tags]    smoke    ATHexapod
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}    ${\n}
-	Log    ${units}
-	FOR    ${unit}    IN    @{units}
-	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	   Log    ${output}
-	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-	END
-
 Validate ATHexapod Telemetry XML Units
 	[Documentation]    Validate the ATHexapod Telemetry XML Units.
 	[Tags]    smoke    ATHexapod
@@ -418,6 +396,28 @@ Validate ATHexapod Telemetry XML Unit types
 	[Documentation]    Validate the ATHexapod Telemetry XML Units conform to standards.
 	[Tags]    smoke    ATHexapod
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Telemetry.xml |awk 'NF > 0' |uniq
+	@{units}=    Split String    ${output}    ${\n}
+	Log    ${units}
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
+
+Validate ATHexapod Events XML Units
+	[Documentation]    Validate the ATHexapod Events XML Units.
+	[Tags]    smoke    ATHexapod
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
+	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
+
+Validate ATHexapod Events XML Unit types
+	[Documentation]    Validate the ATHexapod Events XML Units conform to standards.
+	[Tags]    smoke    ATHexapod
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATHexapod/ATHexapod_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	FOR    ${unit}    IN    @{units}
@@ -450,28 +450,6 @@ Validate ATMCS Commands XML Unit types
 	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 	END
 
-Validate ATMCS Events XML Units
-	[Documentation]    Validate the ATMCS Events XML Units.
-	[Tags]    smoke    ATMCS
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATMCS/ATMCS_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate ATMCS Events XML Unit types
-	[Documentation]    Validate the ATMCS Events XML Units conform to standards.
-	[Tags]    smoke    ATMCS
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATMCS/ATMCS_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}    ${\n}
-	Log    ${units}
-	FOR    ${unit}    IN    @{units}
-	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	   Log    ${output}
-	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-	END
-
 Validate ATMCS Telemetry XML Units
 	[Documentation]    Validate the ATMCS Telemetry XML Units.
 	[Tags]    smoke    ATMCS
@@ -484,6 +462,28 @@ Validate ATMCS Telemetry XML Unit types
 	[Documentation]    Validate the ATMCS Telemetry XML Units conform to standards.
 	[Tags]    smoke    ATMCS
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATMCS/ATMCS_Telemetry.xml |awk 'NF > 0' |uniq
+	@{units}=    Split String    ${output}    ${\n}
+	Log    ${units}
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
+
+Validate ATMCS Events XML Units
+	[Documentation]    Validate the ATMCS Events XML Units.
+	[Tags]    smoke    ATMCS
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATMCS/ATMCS_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
+	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
+
+Validate ATMCS Events XML Unit types
+	[Documentation]    Validate the ATMCS Events XML Units conform to standards.
+	[Tags]    smoke    ATMCS
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATMCS/ATMCS_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	FOR    ${unit}    IN    @{units}
@@ -516,28 +516,6 @@ Validate ATMonochromator Commands XML Unit types
 	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 	END
 
-Validate ATMonochromator Events XML Units
-	[Documentation]    Validate the ATMonochromator Events XML Units.
-	[Tags]    smoke    ATMonochromator
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATMonochromator/ATMonochromator_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate ATMonochromator Events XML Unit types
-	[Documentation]    Validate the ATMonochromator Events XML Units conform to standards.
-	[Tags]    smoke    ATMonochromator
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATMonochromator/ATMonochromator_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}    ${\n}
-	Log    ${units}
-	FOR    ${unit}    IN    @{units}
-	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	   Log    ${output}
-	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-	END
-
 Validate ATMonochromator Telemetry XML Units
 	[Documentation]    Validate the ATMonochromator Telemetry XML Units.
 	[Tags]    smoke    ATMonochromator
@@ -550,6 +528,28 @@ Validate ATMonochromator Telemetry XML Unit types
 	[Documentation]    Validate the ATMonochromator Telemetry XML Units conform to standards.
 	[Tags]    smoke    ATMonochromator
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATMonochromator/ATMonochromator_Telemetry.xml |awk 'NF > 0' |uniq
+	@{units}=    Split String    ${output}    ${\n}
+	Log    ${units}
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
+
+Validate ATMonochromator Events XML Units
+	[Documentation]    Validate the ATMonochromator Events XML Units.
+	[Tags]    smoke    ATMonochromator
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATMonochromator/ATMonochromator_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
+	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
+
+Validate ATMonochromator Events XML Unit types
+	[Documentation]    Validate the ATMonochromator Events XML Units conform to standards.
+	[Tags]    smoke    ATMonochromator
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATMonochromator/ATMonochromator_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	FOR    ${unit}    IN    @{units}
@@ -692,28 +692,6 @@ Validate ATPtg Telemetry XML Unit types
 	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 	END
 
-Validate ATSpectrograph Commands XML Units
-	[Documentation]    Validate the ATSpectrograph Commands XML Units.
-	[Tags]    smoke    ATSpectrograph
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATSpectrograph/ATSpectrograph_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate ATSpectrograph Commands XML Unit types
-	[Documentation]    Validate the ATSpectrograph Commands XML Units conform to standards.
-	[Tags]    smoke    ATSpectrograph
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATSpectrograph/ATSpectrograph_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}    ${\n}
-	Log    ${units}
-	FOR    ${unit}    IN    @{units}
-	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	   Log    ${output}
-	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-	END
-
 Validate ATSpectrograph Events XML Units
 	[Documentation]    Validate the ATSpectrograph Events XML Units.
 	[Tags]    smoke    ATSpectrograph
@@ -726,6 +704,28 @@ Validate ATSpectrograph Events XML Unit types
 	[Documentation]    Validate the ATSpectrograph Events XML Units conform to standards.
 	[Tags]    smoke    ATSpectrograph
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ATSpectrograph/ATSpectrograph_Events.xml |awk 'NF > 0' |uniq
+	@{units}=    Split String    ${output}    ${\n}
+	Log    ${units}
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
+
+Validate ATSpectrograph Commands XML Units
+	[Documentation]    Validate the ATSpectrograph Commands XML Units.
+	[Tags]    smoke    ATSpectrograph
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATSpectrograph/ATSpectrograph_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
+	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
+
+Validate ATSpectrograph Commands XML Unit types
+	[Documentation]    Validate the ATSpectrograph Commands XML Units conform to standards.
+	[Tags]    smoke    ATSpectrograph
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATSpectrograph/ATSpectrograph_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	FOR    ${unit}    IN    @{units}
@@ -758,18 +758,18 @@ Validate ATSpectrograph Telemetry XML Unit types
 	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 	END
 
-Validate ATTCS Commands XML Units
-	[Documentation]    Validate the ATTCS Commands XML Units.
+Validate ATTCS Telemetry XML Units
+	[Documentation]    Validate the ATTCS Telemetry XML Units.
 	[Tags]    smoke    ATTCS
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATTCS/ATTCS_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATTCS/ATTCS_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
 	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
 
-Validate ATTCS Commands XML Unit types
-	[Documentation]    Validate the ATTCS Commands XML Units conform to standards.
+Validate ATTCS Telemetry XML Unit types
+	[Documentation]    Validate the ATTCS Telemetry XML Units conform to standards.
 	[Tags]    smoke    ATTCS
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATTCS/ATTCS_Commands.xml |awk 'NF > 0' |uniq
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATTCS/ATTCS_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	FOR    ${unit}    IN    @{units}
@@ -802,40 +802,18 @@ Validate ATTCS Events XML Unit types
 	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 	END
 
-Validate ATTCS Telemetry XML Units
-	[Documentation]    Validate the ATTCS Telemetry XML Units.
+Validate ATTCS Commands XML Units
+	[Documentation]    Validate the ATTCS Commands XML Units.
 	[Tags]    smoke    ATTCS
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATTCS/ATTCS_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATTCS/ATTCS_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
 	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
 
-Validate ATTCS Telemetry XML Unit types
-	[Documentation]    Validate the ATTCS Telemetry XML Units conform to standards.
+Validate ATTCS Commands XML Unit types
+	[Documentation]    Validate the ATTCS Commands XML Units conform to standards.
 	[Tags]    smoke    ATTCS
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/ATTCS/ATTCS_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}    ${\n}
-	Log    ${units}
-	FOR    ${unit}    IN    @{units}
-	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	   Log    ${output}
-	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-	END
-
-Validate ATWhiteLight Commands XML Units
-	[Documentation]    Validate the ATWhiteLight Commands XML Units.
-	[Tags]    smoke    ATWhiteLight
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate ATWhiteLight Commands XML Unit types
-	[Documentation]    Validate the ATWhiteLight Commands XML Units conform to standards.
-	[Tags]    smoke    ATWhiteLight
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Commands.xml |awk 'NF > 0' |uniq
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATTCS/ATTCS_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	FOR    ${unit}    IN    @{units}
@@ -890,18 +868,18 @@ Validate ATWhiteLight Telemetry XML Unit types
 	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 	END
 
-Validate CatchupArchiver Events XML Units
-	[Documentation]    Validate the CatchupArchiver Events XML Units.
-	[Tags]    smoke    CatchupArchiver
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+Validate ATWhiteLight Commands XML Units
+	[Documentation]    Validate the ATWhiteLight Commands XML Units.
+	[Tags]    smoke    ATWhiteLight
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
 	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
 
-Validate CatchupArchiver Events XML Unit types
-	[Documentation]    Validate the CatchupArchiver Events XML Units conform to standards.
-	[Tags]    smoke    CatchupArchiver
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Events.xml |awk 'NF > 0' |uniq
+Validate ATWhiteLight Commands XML Unit types
+	[Documentation]    Validate the ATWhiteLight Commands XML Units conform to standards.
+	[Tags]    smoke    ATWhiteLight
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/ATWhiteLight/ATWhiteLight_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	FOR    ${unit}    IN    @{units}
@@ -924,6 +902,28 @@ Validate CatchupArchiver Telemetry XML Unit types
 	[Documentation]    Validate the CatchupArchiver Telemetry XML Units conform to standards.
 	[Tags]    smoke    CatchupArchiver
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Telemetry.xml |awk 'NF > 0' |uniq
+	@{units}=    Split String    ${output}    ${\n}
+	Log    ${units}
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
+
+Validate CatchupArchiver Events XML Units
+	[Documentation]    Validate the CatchupArchiver Events XML Units.
+	[Tags]    smoke    CatchupArchiver
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
+	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
+
+Validate CatchupArchiver Events XML Unit types
+	[Documentation]    Validate the CatchupArchiver Events XML Units conform to standards.
+	[Tags]    smoke    CatchupArchiver
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/CatchupArchiver/CatchupArchiver_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	FOR    ${unit}    IN    @{units}
@@ -1022,28 +1022,6 @@ Validate DIMM Telemetry XML Unit types
 	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 	END
 
-Validate Dome Commands XML Units
-	[Documentation]    Validate the Dome Commands XML Units.
-	[Tags]    smoke    Dome
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/Dome/Dome_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate Dome Commands XML Unit types
-	[Documentation]    Validate the Dome Commands XML Units conform to standards.
-	[Tags]    smoke    Dome
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/Dome/Dome_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}    ${\n}
-	Log    ${units}
-	FOR    ${unit}    IN    @{units}
-	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	   Log    ${output}
-	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-	END
-
 Validate Dome Events XML Units
 	[Documentation]    Validate the Dome Events XML Units.
 	[Tags]    smoke    Dome
@@ -1056,6 +1034,28 @@ Validate Dome Events XML Unit types
 	[Documentation]    Validate the Dome Events XML Units conform to standards.
 	[Tags]    smoke    Dome
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/Dome/Dome_Events.xml |awk 'NF > 0' |uniq
+	@{units}=    Split String    ${output}    ${\n}
+	Log    ${units}
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
+
+Validate Dome Commands XML Units
+	[Documentation]    Validate the Dome Commands XML Units.
+	[Tags]    smoke    Dome
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/Dome/Dome_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
+	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
+
+Validate Dome Commands XML Unit types
+	[Documentation]    Validate the Dome Commands XML Units conform to standards.
+	[Tags]    smoke    Dome
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/Dome/Dome_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	FOR    ${unit}    IN    @{units}
@@ -1176,28 +1176,6 @@ Validate EAS Telemetry XML Unit types
 	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 	END
 
-Validate EFD Events XML Units
-	[Documentation]    Validate the EFD Events XML Units.
-	[Tags]    smoke    EFD
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/EFD/EFD_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate EFD Events XML Unit types
-	[Documentation]    Validate the EFD Events XML Units conform to standards.
-	[Tags]    smoke    EFD
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/EFD/EFD_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}    ${\n}
-	Log    ${units}
-	FOR    ${unit}    IN    @{units}
-	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	   Log    ${output}
-	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-	END
-
 Validate EFD Telemetry XML Units
 	[Documentation]    Validate the EFD Telemetry XML Units.
 	[Tags]    smoke    EFD
@@ -1210,6 +1188,28 @@ Validate EFD Telemetry XML Unit types
 	[Documentation]    Validate the EFD Telemetry XML Units conform to standards.
 	[Tags]    smoke    EFD
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/EFD/EFD_Telemetry.xml |awk 'NF > 0' |uniq
+	@{units}=    Split String    ${output}    ${\n}
+	Log    ${units}
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
+
+Validate EFD Events XML Units
+	[Documentation]    Validate the EFD Events XML Units.
+	[Tags]    smoke    EFD
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/EFD/EFD_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
+	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
+
+Validate EFD Events XML Unit types
+	[Documentation]    Validate the EFD Events XML Units conform to standards.
+	[Tags]    smoke    EFD
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/EFD/EFD_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	FOR    ${unit}    IN    @{units}
@@ -1264,28 +1264,6 @@ Validate EFDTransformationServer Telemetry XML Unit types
 	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 	END
 
-Validate Electrometer Commands XML Units
-	[Documentation]    Validate the Electrometer Commands XML Units.
-	[Tags]    smoke    Electrometer
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/Electrometer/Electrometer_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate Electrometer Commands XML Unit types
-	[Documentation]    Validate the Electrometer Commands XML Units conform to standards.
-	[Tags]    smoke    Electrometer
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/Electrometer/Electrometer_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}    ${\n}
-	Log    ${units}
-	FOR    ${unit}    IN    @{units}
-	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	   Log    ${output}
-	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-	END
-
 Validate Electrometer Events XML Units
 	[Documentation]    Validate the Electrometer Events XML Units.
 	[Tags]    smoke    Electrometer
@@ -1298,6 +1276,28 @@ Validate Electrometer Events XML Unit types
 	[Documentation]    Validate the Electrometer Events XML Units conform to standards.
 	[Tags]    smoke    Electrometer
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/Electrometer/Electrometer_Events.xml |awk 'NF > 0' |uniq
+	@{units}=    Split String    ${output}    ${\n}
+	Log    ${units}
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
+
+Validate Electrometer Commands XML Units
+	[Documentation]    Validate the Electrometer Commands XML Units.
+	[Tags]    smoke    Electrometer
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/Electrometer/Electrometer_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
+	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
+
+Validate Electrometer Commands XML Unit types
+	[Documentation]    Validate the Electrometer Commands XML Units conform to standards.
+	[Tags]    smoke    Electrometer
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/Electrometer/Electrometer_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	FOR    ${unit}    IN    @{units}
@@ -1352,28 +1352,6 @@ Validate FiberSpectrograph Commands XML Unit types
 	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 	END
 
-Validate FiberSpectrograph Events XML Units
-	[Documentation]    Validate the FiberSpectrograph Events XML Units.
-	[Tags]    smoke    FiberSpectrograph
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate FiberSpectrograph Events XML Unit types
-	[Documentation]    Validate the FiberSpectrograph Events XML Units conform to standards.
-	[Tags]    smoke    FiberSpectrograph
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}    ${\n}
-	Log    ${units}
-	FOR    ${unit}    IN    @{units}
-	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	   Log    ${output}
-	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-	END
-
 Validate FiberSpectrograph Telemetry XML Units
 	[Documentation]    Validate the FiberSpectrograph Telemetry XML Units.
 	[Tags]    smoke    FiberSpectrograph
@@ -1396,18 +1374,18 @@ Validate FiberSpectrograph Telemetry XML Unit types
 	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 	END
 
-Validate GenericCamera Commands XML Units
-	[Documentation]    Validate the GenericCamera Commands XML Units.
-	[Tags]    smoke    GenericCamera
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/GenericCamera/GenericCamera_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+Validate FiberSpectrograph Events XML Units
+	[Documentation]    Validate the FiberSpectrograph Events XML Units.
+	[Tags]    smoke    FiberSpectrograph
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
 	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
 
-Validate GenericCamera Commands XML Unit types
-	[Documentation]    Validate the GenericCamera Commands XML Units conform to standards.
-	[Tags]    smoke    GenericCamera
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/GenericCamera/GenericCamera_Commands.xml |awk 'NF > 0' |uniq
+Validate FiberSpectrograph Events XML Unit types
+	[Documentation]    Validate the FiberSpectrograph Events XML Units conform to standards.
+	[Tags]    smoke    FiberSpectrograph
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/FiberSpectrograph/FiberSpectrograph_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	FOR    ${unit}    IN    @{units}
@@ -1452,6 +1430,28 @@ Validate GenericCamera Telemetry XML Unit types
 	[Documentation]    Validate the GenericCamera Telemetry XML Units conform to standards.
 	[Tags]    smoke    GenericCamera
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/GenericCamera/GenericCamera_Telemetry.xml |awk 'NF > 0' |uniq
+	@{units}=    Split String    ${output}    ${\n}
+	Log    ${units}
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
+
+Validate GenericCamera Commands XML Units
+	[Documentation]    Validate the GenericCamera Commands XML Units.
+	[Tags]    smoke    GenericCamera
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/GenericCamera/GenericCamera_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
+	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
+
+Validate GenericCamera Commands XML Unit types
+	[Documentation]    Validate the GenericCamera Commands XML Units conform to standards.
+	[Tags]    smoke    GenericCamera
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/GenericCamera/GenericCamera_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	FOR    ${unit}    IN    @{units}
@@ -1528,28 +1528,6 @@ Validate Hexapod Commands XML Unit types
 	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 	END
 
-Validate Hexapod Events XML Units
-	[Documentation]    Validate the Hexapod Events XML Units.
-	[Tags]    smoke    Hexapod
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/Hexapod/Hexapod_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate Hexapod Events XML Unit types
-	[Documentation]    Validate the Hexapod Events XML Units conform to standards.
-	[Tags]    smoke    Hexapod
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/Hexapod/Hexapod_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}    ${\n}
-	Log    ${units}
-	FOR    ${unit}    IN    @{units}
-	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	   Log    ${output}
-	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-	END
-
 Validate Hexapod Telemetry XML Units
 	[Documentation]    Validate the Hexapod Telemetry XML Units.
 	[Tags]    smoke    Hexapod
@@ -1562,6 +1540,28 @@ Validate Hexapod Telemetry XML Unit types
 	[Documentation]    Validate the Hexapod Telemetry XML Units conform to standards.
 	[Tags]    smoke    Hexapod
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/Hexapod/Hexapod_Telemetry.xml |awk 'NF > 0' |uniq
+	@{units}=    Split String    ${output}    ${\n}
+	Log    ${units}
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
+
+Validate Hexapod Events XML Units
+	[Documentation]    Validate the Hexapod Events XML Units.
+	[Tags]    smoke    Hexapod
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/Hexapod/Hexapod_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
+	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
+
+Validate Hexapod Events XML Unit types
+	[Documentation]    Validate the Hexapod Events XML Units conform to standards.
+	[Tags]    smoke    Hexapod
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/Hexapod/Hexapod_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	FOR    ${unit}    IN    @{units}
@@ -1638,28 +1638,6 @@ Validate HVAC Telemetry XML Unit types
 	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 	END
 
-Validate LinearStage Commands XML Units
-	[Documentation]    Validate the LinearStage Commands XML Units.
-	[Tags]    smoke    LinearStage
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate LinearStage Commands XML Unit types
-	[Documentation]    Validate the LinearStage Commands XML Units conform to standards.
-	[Tags]    smoke    LinearStage
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}    ${\n}
-	Log    ${units}
-	FOR    ${unit}    IN    @{units}
-	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	   Log    ${output}
-	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-	END
-
 Validate LinearStage Events XML Units
 	[Documentation]    Validate the LinearStage Events XML Units.
 	[Tags]    smoke    LinearStage
@@ -1672,6 +1650,28 @@ Validate LinearStage Events XML Unit types
 	[Documentation]    Validate the LinearStage Events XML Units conform to standards.
 	[Tags]    smoke    LinearStage
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Events.xml |awk 'NF > 0' |uniq
+	@{units}=    Split String    ${output}    ${\n}
+	Log    ${units}
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
+
+Validate LinearStage Commands XML Units
+	[Documentation]    Validate the LinearStage Commands XML Units.
+	[Tags]    smoke    LinearStage
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
+	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
+
+Validate LinearStage Commands XML Unit types
+	[Documentation]    Validate the LinearStage Commands XML Units conform to standards.
+	[Tags]    smoke    LinearStage
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/LinearStage/LinearStage_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	FOR    ${unit}    IN    @{units}
@@ -1748,6 +1748,28 @@ Validate MTAOS Commands XML Unit types
 	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 	END
 
+Validate MTAOS Telemetry XML Units
+	[Documentation]    Validate the MTAOS Telemetry XML Units.
+	[Tags]    smoke    MTAOS
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
+	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
+
+Validate MTAOS Telemetry XML Unit types
+	[Documentation]    Validate the MTAOS Telemetry XML Units conform to standards.
+	[Tags]    smoke    MTAOS
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Telemetry.xml |awk 'NF > 0' |uniq
+	@{units}=    Split String    ${output}    ${\n}
+	Log    ${units}
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
+
 Validate MTAOS Events XML Units
 	[Documentation]    Validate the MTAOS Events XML Units.
 	[Tags]    smoke    MTAOS
@@ -1770,18 +1792,18 @@ Validate MTAOS Events XML Unit types
 	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 	END
 
-Validate MTAOS Telemetry XML Units
-	[Documentation]    Validate the MTAOS Telemetry XML Units.
-	[Tags]    smoke    MTAOS
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+Validate MTArchiver Telemetry XML Units
+	[Documentation]    Validate the MTArchiver Telemetry XML Units.
+	[Tags]    smoke    MTArchiver
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTArchiver/MTArchiver_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
 	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
 
-Validate MTAOS Telemetry XML Unit types
-	[Documentation]    Validate the MTAOS Telemetry XML Units conform to standards.
-	[Tags]    smoke    MTAOS
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTAOS/MTAOS_Telemetry.xml |awk 'NF > 0' |uniq
+Validate MTArchiver Telemetry XML Unit types
+	[Documentation]    Validate the MTArchiver Telemetry XML Units conform to standards.
+	[Tags]    smoke    MTArchiver
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTArchiver/MTArchiver_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	FOR    ${unit}    IN    @{units}
@@ -1814,18 +1836,18 @@ Validate MTArchiver Events XML Unit types
 	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 	END
 
-Validate MTArchiver Telemetry XML Units
-	[Documentation]    Validate the MTArchiver Telemetry XML Units.
-	[Tags]    smoke    MTArchiver
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTArchiver/MTArchiver_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+Validate MTCamera Telemetry XML Units
+	[Documentation]    Validate the MTCamera Telemetry XML Units.
+	[Tags]    smoke    MTCamera    CAP-318
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
 	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
 
-Validate MTArchiver Telemetry XML Unit types
-	[Documentation]    Validate the MTArchiver Telemetry XML Units conform to standards.
-	[Tags]    smoke    MTArchiver
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTArchiver/MTArchiver_Telemetry.xml |awk 'NF > 0' |uniq
+Validate MTCamera Telemetry XML Unit types
+	[Documentation]    Validate the MTCamera Telemetry XML Units conform to standards.
+	[Tags]    smoke    MTCamera    CAP-318
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	FOR    ${unit}    IN    @{units}
@@ -1880,18 +1902,18 @@ Validate MTCamera Events XML Unit types
 	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 	END
 
-Validate MTCamera Telemetry XML Units
-	[Documentation]    Validate the MTCamera Telemetry XML Units.
-	[Tags]    smoke    MTCamera    CAP-318
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+Validate MTDomeTrajectory Telemetry XML Units
+	[Documentation]    Validate the MTDomeTrajectory Telemetry XML Units.
+	[Tags]    smoke    MTDomeTrajectory
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTDomeTrajectory/MTDomeTrajectory_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
 	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
 
-Validate MTCamera Telemetry XML Unit types
-	[Documentation]    Validate the MTCamera Telemetry XML Units conform to standards.
-	[Tags]    smoke    MTCamera    CAP-318
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTCamera/MTCamera_Telemetry.xml |awk 'NF > 0' |uniq
+Validate MTDomeTrajectory Telemetry XML Unit types
+	[Documentation]    Validate the MTDomeTrajectory Telemetry XML Units conform to standards.
+	[Tags]    smoke    MTDomeTrajectory
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTDomeTrajectory/MTDomeTrajectory_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	FOR    ${unit}    IN    @{units}
@@ -1914,28 +1936,6 @@ Validate MTDomeTrajectory Events XML Unit types
 	[Documentation]    Validate the MTDomeTrajectory Events XML Units conform to standards.
 	[Tags]    smoke    MTDomeTrajectory
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTDomeTrajectory/MTDomeTrajectory_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}    ${\n}
-	Log    ${units}
-	FOR    ${unit}    IN    @{units}
-	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	   Log    ${output}
-	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-	END
-
-Validate MTDomeTrajectory Telemetry XML Units
-	[Documentation]    Validate the MTDomeTrajectory Telemetry XML Units.
-	[Tags]    smoke    MTDomeTrajectory
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTDomeTrajectory/MTDomeTrajectory_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate MTDomeTrajectory Telemetry XML Unit types
-	[Documentation]    Validate the MTDomeTrajectory Telemetry XML Units conform to standards.
-	[Tags]    smoke    MTDomeTrajectory
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTDomeTrajectory/MTDomeTrajectory_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	FOR    ${unit}    IN    @{units}
@@ -1990,28 +1990,6 @@ Validate MTEEC Events XML Unit types
 	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 	END
 
-Validate MTGuider Events XML Units
-	[Documentation]    Validate the MTGuider Events XML Units.
-	[Tags]    smoke    MTGuider
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTGuider/MTGuider_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate MTGuider Events XML Unit types
-	[Documentation]    Validate the MTGuider Events XML Units conform to standards.
-	[Tags]    smoke    MTGuider
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTGuider/MTGuider_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}    ${\n}
-	Log    ${units}
-	FOR    ${unit}    IN    @{units}
-	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	   Log    ${output}
-	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-	END
-
 Validate MTGuider Telemetry XML Units
 	[Documentation]    Validate the MTGuider Telemetry XML Units.
 	[Tags]    smoke    MTGuider
@@ -2024,6 +2002,28 @@ Validate MTGuider Telemetry XML Unit types
 	[Documentation]    Validate the MTGuider Telemetry XML Units conform to standards.
 	[Tags]    smoke    MTGuider
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTGuider/MTGuider_Telemetry.xml |awk 'NF > 0' |uniq
+	@{units}=    Split String    ${output}    ${\n}
+	Log    ${units}
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
+
+Validate MTGuider Events XML Units
+	[Documentation]    Validate the MTGuider Events XML Units.
+	[Tags]    smoke    MTGuider
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTGuider/MTGuider_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
+	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
+
+Validate MTGuider Events XML Unit types
+	[Documentation]    Validate the MTGuider Events XML Units conform to standards.
+	[Tags]    smoke    MTGuider
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTGuider/MTGuider_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	FOR    ${unit}    IN    @{units}
@@ -2100,18 +2100,18 @@ Validate MTLaserTracker Telemetry XML Unit types
 	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 	END
 
-Validate MTM1M3 Commands XML Units
-	[Documentation]    Validate the MTM1M3 Commands XML Units.
+Validate MTM1M3 Telemetry XML Units
+	[Documentation]    Validate the MTM1M3 Telemetry XML Units.
 	[Tags]    smoke    MTM1M3    DM-20956
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
 	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
 
-Validate MTM1M3 Commands XML Unit types
-	[Documentation]    Validate the MTM1M3 Commands XML Units conform to standards.
+Validate MTM1M3 Telemetry XML Unit types
+	[Documentation]    Validate the MTM1M3 Telemetry XML Units conform to standards.
 	[Tags]    smoke    MTM1M3    DM-20956
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Commands.xml |awk 'NF > 0' |uniq
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	FOR    ${unit}    IN    @{units}
@@ -2144,18 +2144,18 @@ Validate MTM1M3 Events XML Unit types
 	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 	END
 
-Validate MTM1M3 Telemetry XML Units
-	[Documentation]    Validate the MTM1M3 Telemetry XML Units.
+Validate MTM1M3 Commands XML Units
+	[Documentation]    Validate the MTM1M3 Commands XML Units.
 	[Tags]    smoke    MTM1M3    DM-20956
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
 	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
 
-Validate MTM1M3 Telemetry XML Unit types
-	[Documentation]    Validate the MTM1M3 Telemetry XML Units conform to standards.
+Validate MTM1M3 Commands XML Unit types
+	[Documentation]    Validate the MTM1M3 Commands XML Units conform to standards.
 	[Tags]    smoke    MTM1M3    DM-20956
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Telemetry.xml |awk 'NF > 0' |uniq
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/MTM1M3/MTM1M3_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	FOR    ${unit}    IN    @{units}
@@ -2188,28 +2188,6 @@ Validate MTM1M3TS Commands XML Unit types
 	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 	END
 
-Validate MTM1M3TS Events XML Units
-	[Documentation]    Validate the MTM1M3TS Events XML Units.
-	[Tags]    smoke    MTM1M3TS
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTM1M3TS/MTM1M3TS_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate MTM1M3TS Events XML Unit types
-	[Documentation]    Validate the MTM1M3TS Events XML Units conform to standards.
-	[Tags]    smoke    MTM1M3TS
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTM1M3TS/MTM1M3TS_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}    ${\n}
-	Log    ${units}
-	FOR    ${unit}    IN    @{units}
-	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	   Log    ${output}
-	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-	END
-
 Validate MTM1M3TS Telemetry XML Units
 	[Documentation]    Validate the MTM1M3TS Telemetry XML Units.
 	[Tags]    smoke    MTM1M3TS
@@ -2232,18 +2210,18 @@ Validate MTM1M3TS Telemetry XML Unit types
 	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 	END
 
-Validate MTM2 Commands XML Units
-	[Documentation]    Validate the MTM2 Commands XML Units.
-	[Tags]    smoke    MTM2
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/MTM2/MTM2_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+Validate MTM1M3TS Events XML Units
+	[Documentation]    Validate the MTM1M3TS Events XML Units.
+	[Tags]    smoke    MTM1M3TS
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTM1M3TS/MTM1M3TS_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
 	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
 
-Validate MTM2 Commands XML Unit types
-	[Documentation]    Validate the MTM2 Commands XML Units conform to standards.
-	[Tags]    smoke    MTM2
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/MTM2/MTM2_Commands.xml |awk 'NF > 0' |uniq
+Validate MTM1M3TS Events XML Unit types
+	[Documentation]    Validate the MTM1M3TS Events XML Units conform to standards.
+	[Tags]    smoke    MTM1M3TS
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTM1M3TS/MTM1M3TS_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	FOR    ${unit}    IN    @{units}
@@ -2276,6 +2254,28 @@ Validate MTM2 Events XML Unit types
 	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 	END
 
+Validate MTM2 Commands XML Units
+	[Documentation]    Validate the MTM2 Commands XML Units.
+	[Tags]    smoke    MTM2
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/MTM2/MTM2_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
+	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
+
+Validate MTM2 Commands XML Unit types
+	[Documentation]    Validate the MTM2 Commands XML Units conform to standards.
+	[Tags]    smoke    MTM2
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/MTM2/MTM2_Commands.xml |awk 'NF > 0' |uniq
+	@{units}=    Split String    ${output}    ${\n}
+	Log    ${units}
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
+
 Validate MTM2 Telemetry XML Units
 	[Documentation]    Validate the MTM2 Telemetry XML Units.
 	[Tags]    smoke    MTM2
@@ -2288,28 +2288,6 @@ Validate MTM2 Telemetry XML Unit types
 	[Documentation]    Validate the MTM2 Telemetry XML Units conform to standards.
 	[Tags]    smoke    MTM2
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTM2/MTM2_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}    ${\n}
-	Log    ${units}
-	FOR    ${unit}    IN    @{units}
-	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	   Log    ${output}
-	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-	END
-
-Validate MTMount Commands XML Units
-	[Documentation]    Validate the MTMount Commands XML Units.
-	[Tags]    smoke    MTMount
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate MTMount Commands XML Unit types
-	[Documentation]    Validate the MTMount Commands XML Units conform to standards.
-	[Tags]    smoke    MTMount
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	FOR    ${unit}    IN    @{units}
@@ -2342,6 +2320,28 @@ Validate MTMount Events XML Unit types
 	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 	END
 
+Validate MTMount Commands XML Units
+	[Documentation]    Validate the MTMount Commands XML Units.
+	[Tags]    smoke    MTMount
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
+	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
+
+Validate MTMount Commands XML Unit types
+	[Documentation]    Validate the MTMount Commands XML Units conform to standards.
+	[Tags]    smoke    MTMount
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Commands.xml |awk 'NF > 0' |uniq
+	@{units}=    Split String    ${output}    ${\n}
+	Log    ${units}
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
+
 Validate MTMount Telemetry XML Units
 	[Documentation]    Validate the MTMount Telemetry XML Units.
 	[Tags]    smoke    MTMount
@@ -2354,6 +2354,28 @@ Validate MTMount Telemetry XML Unit types
 	[Documentation]    Validate the MTMount Telemetry XML Units conform to standards.
 	[Tags]    smoke    MTMount
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTMount/MTMount_Telemetry.xml |awk 'NF > 0' |uniq
+	@{units}=    Split String    ${output}    ${\n}
+	Log    ${units}
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
+
+Validate MTPtg Telemetry XML Units
+	[Documentation]    Validate the MTPtg Telemetry XML Units.
+	[Tags]    smoke    MTPtg
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTPtg/MTPtg_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
+	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
+
+Validate MTPtg Telemetry XML Unit types
+	[Documentation]    Validate the MTPtg Telemetry XML Units conform to standards.
+	[Tags]    smoke    MTPtg
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTPtg/MTPtg_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	FOR    ${unit}    IN    @{units}
@@ -2408,28 +2430,6 @@ Validate MTPtg Events XML Unit types
 	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 	END
 
-Validate MTPtg Telemetry XML Units
-	[Documentation]    Validate the MTPtg Telemetry XML Units.
-	[Tags]    smoke    MTPtg
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTPtg/MTPtg_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate MTPtg Telemetry XML Unit types
-	[Documentation]    Validate the MTPtg Telemetry XML Units conform to standards.
-	[Tags]    smoke    MTPtg
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/MTPtg/MTPtg_Telemetry.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}    ${\n}
-	Log    ${units}
-	FOR    ${unit}    IN    @{units}
-	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	   Log    ${output}
-	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-	END
-
 Validate MTTCS Commands XML Units
 	[Documentation]    Validate the MTTCS Commands XML Units.
 	[Tags]    smoke    MTTCS
@@ -2442,28 +2442,6 @@ Validate MTTCS Commands XML Unit types
 	[Documentation]    Validate the MTTCS Commands XML Units conform to standards.
 	[Tags]    smoke    MTTCS
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}    ${\n}
-	Log    ${units}
-	FOR    ${unit}    IN    @{units}
-	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	   Log    ${output}
-	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-	END
-
-Validate MTTCS Events XML Units
-	[Documentation]    Validate the MTTCS Events XML Units.
-	[Tags]    smoke    MTTCS
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate MTTCS Events XML Unit types
-	[Documentation]    Validate the MTTCS Events XML Units conform to standards.
-	[Tags]    smoke    MTTCS
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	FOR    ${unit}    IN    @{units}
@@ -2496,6 +2474,28 @@ Validate MTTCS Telemetry XML Unit types
 	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 	END
 
+Validate MTTCS Events XML Units
+	[Documentation]    Validate the MTTCS Events XML Units.
+	[Tags]    smoke    MTTCS
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
+	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
+
+Validate MTTCS Events XML Unit types
+	[Documentation]    Validate the MTTCS Events XML Units conform to standards.
+	[Tags]    smoke    MTTCS
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTTCS/MTTCS_Events.xml |awk 'NF > 0' |uniq
+	@{units}=    Split String    ${output}    ${\n}
+	Log    ${units}
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
+
 Validate MTVMS Commands XML Units
 	[Documentation]    Validate the MTVMS Commands XML Units.
 	[Tags]    smoke    MTVMS
@@ -2508,28 +2508,6 @@ Validate MTVMS Commands XML Unit types
 	[Documentation]    Validate the MTVMS Commands XML Units conform to standards.
 	[Tags]    smoke    MTVMS
 	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/MTVMS/MTVMS_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}    ${\n}
-	Log    ${units}
-	FOR    ${unit}    IN    @{units}
-	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	   Log    ${output}
-	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-	END
-
-Validate MTVMS Events XML Units
-	[Documentation]    Validate the MTVMS Events XML Units.
-	[Tags]    smoke    MTVMS
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTVMS/MTVMS_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate MTVMS Events XML Unit types
-	[Documentation]    Validate the MTVMS Events XML Units conform to standards.
-	[Tags]    smoke    MTVMS
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTVMS/MTVMS_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	FOR    ${unit}    IN    @{units}
@@ -2562,40 +2540,18 @@ Validate MTVMS Telemetry XML Unit types
 	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 	END
 
-Validate OCS Commands XML Units
-	[Documentation]    Validate the OCS Commands XML Units.
-	[Tags]    smoke    OCS
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/OCS/OCS_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+Validate MTVMS Events XML Units
+	[Documentation]    Validate the MTVMS Events XML Units.
+	[Tags]    smoke    MTVMS
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTVMS/MTVMS_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
 	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
 
-Validate OCS Commands XML Unit types
-	[Documentation]    Validate the OCS Commands XML Units conform to standards.
-	[Tags]    smoke    OCS
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/OCS/OCS_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}    ${\n}
-	Log    ${units}
-	FOR    ${unit}    IN    @{units}
-	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	   Log    ${output}
-	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-	END
-
-Validate OCS Events XML Units
-	[Documentation]    Validate the OCS Events XML Units.
-	[Tags]    smoke    OCS
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/OCS/OCS_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate OCS Events XML Unit types
-	[Documentation]    Validate the OCS Events XML Units conform to standards.
-	[Tags]    smoke    OCS
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/OCS/OCS_Events.xml |awk 'NF > 0' |uniq
+Validate MTVMS Events XML Unit types
+	[Documentation]    Validate the MTVMS Events XML Units conform to standards.
+	[Tags]    smoke    MTVMS
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/MTVMS/MTVMS_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	FOR    ${unit}    IN    @{units}
@@ -2628,18 +2584,62 @@ Validate OCS Telemetry XML Unit types
 	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 	END
 
-Validate PointingComponent Commands XML Units
-	[Documentation]    Validate the PointingComponent Commands XML Units.
-	[Tags]    smoke    PointingComponent
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+Validate OCS Events XML Units
+	[Documentation]    Validate the OCS Events XML Units.
+	[Tags]    smoke    OCS
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/OCS/OCS_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
 	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
 
-Validate PointingComponent Commands XML Unit types
-	[Documentation]    Validate the PointingComponent Commands XML Units conform to standards.
+Validate OCS Events XML Unit types
+	[Documentation]    Validate the OCS Events XML Units conform to standards.
+	[Tags]    smoke    OCS
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/OCS/OCS_Events.xml |awk 'NF > 0' |uniq
+	@{units}=    Split String    ${output}    ${\n}
+	Log    ${units}
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
+
+Validate OCS Commands XML Units
+	[Documentation]    Validate the OCS Commands XML Units.
+	[Tags]    smoke    OCS
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/OCS/OCS_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
+	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
+
+Validate OCS Commands XML Unit types
+	[Documentation]    Validate the OCS Commands XML Units conform to standards.
+	[Tags]    smoke    OCS
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/OCS/OCS_Commands.xml |awk 'NF > 0' |uniq
+	@{units}=    Split String    ${output}    ${\n}
+	Log    ${units}
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
+
+Validate PointingComponent Telemetry XML Units
+	[Documentation]    Validate the PointingComponent Telemetry XML Units.
 	[Tags]    smoke    PointingComponent
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml |awk 'NF > 0' |uniq
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
+	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
+
+Validate PointingComponent Telemetry XML Unit types
+	[Documentation]    Validate the PointingComponent Telemetry XML Units conform to standards.
+	[Tags]    smoke    PointingComponent
+	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	FOR    ${unit}    IN    @{units}
@@ -2672,18 +2672,18 @@ Validate PointingComponent Events XML Unit types
 	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 	END
 
-Validate PointingComponent Telemetry XML Units
-	[Documentation]    Validate the PointingComponent Telemetry XML Units.
+Validate PointingComponent Commands XML Units
+	[Documentation]    Validate the PointingComponent Commands XML Units.
 	[Tags]    smoke    PointingComponent
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
 	Log    ${output}
 	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
 	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
 
-Validate PointingComponent Telemetry XML Unit types
-	[Documentation]    Validate the PointingComponent Telemetry XML Units conform to standards.
+Validate PointingComponent Commands XML Unit types
+	[Documentation]    Validate the PointingComponent Commands XML Units conform to standards.
 	[Tags]    smoke    PointingComponent
-	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Telemetry.xml |awk 'NF > 0' |uniq
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/PointingComponent/PointingComponent_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	FOR    ${unit}    IN    @{units}
@@ -2760,28 +2760,6 @@ Validate Rotator Commands XML Unit types
 	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 	END
 
-Validate Rotator Events XML Units
-	[Documentation]    Validate the Rotator Events XML Units.
-	[Tags]    smoke    Rotator
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/Rotator/Rotator_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate Rotator Events XML Unit types
-	[Documentation]    Validate the Rotator Events XML Units conform to standards.
-	[Tags]    smoke    Rotator
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/Rotator/Rotator_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}    ${\n}
-	Log    ${units}
-	FOR    ${unit}    IN    @{units}
-	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	   Log    ${output}
-	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-	END
-
 Validate Rotator Telemetry XML Units
 	[Documentation]    Validate the Rotator Telemetry XML Units.
 	[Tags]    smoke    Rotator
@@ -2794,6 +2772,28 @@ Validate Rotator Telemetry XML Unit types
 	[Documentation]    Validate the Rotator Telemetry XML Units conform to standards.
 	[Tags]    smoke    Rotator
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/Rotator/Rotator_Telemetry.xml |awk 'NF > 0' |uniq
+	@{units}=    Split String    ${output}    ${\n}
+	Log    ${units}
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
+
+Validate Rotator Events XML Units
+	[Documentation]    Validate the Rotator Events XML Units.
+	[Tags]    smoke    Rotator
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/Rotator/Rotator_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
+	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
+
+Validate Rotator Events XML Unit types
+	[Documentation]    Validate the Rotator Events XML Units conform to standards.
+	[Tags]    smoke    Rotator
+	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/Rotator/Rotator_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	FOR    ${unit}    IN    @{units}
@@ -3024,28 +3024,6 @@ Validate Test Telemetry XML Unit types
 	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 	END
 
-Validate TunableLaser Commands XML Units
-	[Documentation]    Validate the TunableLaser Commands XML Units.
-	[Tags]    smoke    TunableLaser
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/TunableLaser/TunableLaser_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate TunableLaser Commands XML Unit types
-	[Documentation]    Validate the TunableLaser Commands XML Units conform to standards.
-	[Tags]    smoke    TunableLaser
-	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/TunableLaser/TunableLaser_Commands.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}    ${\n}
-	Log    ${units}
-	FOR    ${unit}    IN    @{units}
-	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	   Log    ${output}
-	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-	END
-
 Validate TunableLaser Events XML Units
 	[Documentation]    Validate the TunableLaser Events XML Units.
 	[Tags]    smoke    TunableLaser
@@ -3080,6 +3058,28 @@ Validate TunableLaser Telemetry XML Unit types
 	[Documentation]    Validate the TunableLaser Telemetry XML Units conform to standards.
 	[Tags]    smoke    TunableLaser
 	${output}=    Run    ${xml} sel -t -m "//SALTelemetrySet/SALTelemetry/item/Units" -v . -n ${folder}/sal_interfaces/TunableLaser/TunableLaser_Telemetry.xml |awk 'NF > 0' |uniq
+	@{units}=    Split String    ${output}    ${\n}
+	Log    ${units}
+	FOR    ${unit}    IN    @{units}
+	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
+	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
+	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
+	   Log    ${output}
+	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
+	END
+
+Validate TunableLaser Commands XML Units
+	[Documentation]    Validate the TunableLaser Commands XML Units.
+	[Tags]    smoke    TunableLaser
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/TunableLaser/TunableLaser_Commands.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
+	Log    ${output}
+	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
+	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
+
+Validate TunableLaser Commands XML Unit types
+	[Documentation]    Validate the TunableLaser Commands XML Units conform to standards.
+	[Tags]    smoke    TunableLaser
+	${output}=    Run    ${xml} sel -t -m "//SALCommandSet/SALCommand/item/Units" -v . -n ${folder}/sal_interfaces/TunableLaser/TunableLaser_Commands.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	FOR    ${unit}    IN    @{units}
