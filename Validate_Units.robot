@@ -1308,28 +1308,6 @@ Validate Electrometer Events XML Unit types
 	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
 	END
 
-Validate Environment Events XML Units
-	[Documentation]    Validate the Environment Events XML Units.
-	[Tags]    smoke    Environment
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/Environment/Environment_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate Environment Events XML Unit types
-	[Documentation]    Validate the Environment Events XML Units conform to standards.
-	[Tags]    smoke    Environment
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/Environment/Environment_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}    ${\n}
-	Log    ${units}
-	FOR    ${unit}    IN    @{units}
-	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	   Log    ${output}
-	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-	END
-
 Validate Environment Telemetry XML Units
 	[Documentation]    Validate the Environment Telemetry XML Units.
 	[Tags]    smoke    Environment
@@ -2948,28 +2926,6 @@ Validate ScriptQueue Events XML Unit types
 	[Documentation]    Validate the ScriptQueue Events XML Units conform to standards.
 	[Tags]    smoke    ScriptQueue
 	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Events.xml |awk 'NF > 0' |uniq
-	@{units}=    Split String    ${output}    ${\n}
-	Log    ${units}
-	FOR    ${unit}    IN    @{units}
-	   ${output}=    Run Keyword If    "${unit}" == "unitless"    Set Variable    Parameter is unitless
-	   ...    ELSE IF    "${unit}" == "dimensionless"    Set Variable    Parameter is dimensionless
-	   ...    ELSE    Unit_Validator.Check Unit    ${unit}
-	   Log    ${output}
-	   Run Keyword and Continue on Failure    Should Not Contain    ${output}    Error    msg=${output}    values=False
-	END
-
-Validate SummitFacility Events XML Units
-	[Documentation]    Validate the SummitFacility Events XML Units.
-	[Tags]    smoke    SummitFacility
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Events.xml |sed -e ':a' -e 'N' -e '$!ba' -e 's/\\n/,/g'
-	Log    ${output}
-	Should Not Contain    ${output}    ,,    msg=Contains undefined units.    values=False
-	Should Not Start With    ${output}    ,    msg=Contains undefined units.    values=False
-
-Validate SummitFacility Events XML Unit types
-	[Documentation]    Validate the SummitFacility Events XML Units conform to standards.
-	[Tags]    smoke    SummitFacility
-	${output}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/item/Units" -v . -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Events.xml |awk 'NF > 0' |uniq
 	@{units}=    Split String    ${output}    ${\n}
 	Log    ${units}
 	FOR    ${unit}    IN    @{units}

@@ -313,14 +313,6 @@ Validate Electrometer Events XML Topic Alisases
 	Log Many    ${topic_name}    ${alias}
 	Should Match    ${topic_name}    ${alias}
 
-Validate Environment Events XML Topic Alisases
-	[Documentation]    Validate the Environment Events XML Topic Alisases.
-	[Tags]    smoke    Environment
-	${topic_name}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/Environment/Environment_Events.xml |cut -d'_' -f 3-
-	${alias}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/Environment/Environment_Events.xml
-	Log Many    ${topic_name}    ${alias}
-	Should Match    ${topic_name}    ${alias}
-
 Validate FiberSpectrograph Commands XML Topic Alisases
 	[Documentation]    Validate the FiberSpectrograph Commands XML Topic Alisases.
 	[Tags]    smoke    FiberSpectrograph
@@ -710,14 +702,6 @@ Validate ScriptQueue Events XML Topic Alisases
 	[Tags]    smoke    ScriptQueue
 	${topic_name}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Events.xml |cut -d'_' -f 3-
 	${alias}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/ScriptQueue/ScriptQueue_Events.xml
-	Log Many    ${topic_name}    ${alias}
-	Should Match    ${topic_name}    ${alias}
-
-Validate SummitFacility Events XML Topic Alisases
-	[Documentation]    Validate the SummitFacility Events XML Topic Alisases.
-	[Tags]    smoke    SummitFacility
-	${topic_name}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/EFDB_Topic" -v . -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Events.xml |cut -d'_' -f 3-
-	${alias}=    Run    ${xml} sel -t -m "//SALEventSet/SALEvent/Alias" -v . -n ${folder}/sal_interfaces/SummitFacility/SummitFacility_Events.xml
 	Log Many    ${topic_name}    ${alias}
 	Should Match    ${topic_name}    ${alias}
 
