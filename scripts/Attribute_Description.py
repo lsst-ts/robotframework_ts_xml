@@ -30,6 +30,10 @@ for subsystem in xml_common.subsystems:
 	# Mark test cases with Jira tickets
 	if subsystem == "ATCamera":
 		skipped="    CAP-318"
+	elif subsystem == "Hexapod":
+		skipped="    DM-20971"
+	elif subsystem == "MTEEC":
+		skipped="    CAP-374"
 	elif subsystem == "MTCamera":
 		skipped="    CAP-318"
 	elif subsystem == "MTM1M3":
@@ -47,7 +51,7 @@ for subsystem in xml_common.subsystems:
 		file.write("Validate " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType + " Attribute Descriptions\n")
 		file.write("\t[Documentation]    Validate the " + xml_common.CapitalizeSubsystem(subsystem) + " " + messageType + " attribute descriptions are populated.\n")
 		file.write("\t[Tags]    smoke    " + xml_common.CapitalizeSubsystem(subsystem) + skipped + "\n")
-		file.write("\t${output}=    Run    ${xml} sel -t -m \"//SAL" + messageType.rstrip('s') + "Set/SAL" + messageType.rstrip('s') + "/item/Description\" -v . -n ${folder}/sal_interfaces/" + subsystem + "/" + subsystem + "_" + messageType + ".xml |sed -e 's/^[ \\t]*//' -e ':a' -e 'N' -e '$!ba' -e 's/\\\\n/|/g'\n")
+		file.write("\t${output}=    Run    ${xml} sel -t -m \"//SAL" + messageType.rstrip('s') + "Set/SAL" + messageType.rstrip('s') + "/item/Description\" -v . -n ${folder}/sal_interfaces/" + subsystem + "/" + subsystem + "_" + messageType + ".xml |tr '\\\\n' '|'\n")
 		file.write("\tLog    ${output}\n")
 		file.write("\tShould Not Contain    ${output}    ||    msg=Contains unpopulated descriptions.    values=False\n")
 		file.write("\tShould Not Start With    ${output}    |    msg=Contains unpopulated descriptions.    values=False\n")
