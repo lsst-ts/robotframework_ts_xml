@@ -22380,7 +22380,7 @@ Validate MTCamera Event MTCamera_logevent_startRotateCarousel Topic Byte Size
 
 Validate MTCamera Event MTCamera_logevent_startRotateCarousel Topic Columns
 	[Documentation]    Validate the MTCamera_logevent_startRotateCarousel topic has less than 4096 total arguments, each representing a column in the EFDs.
-	[Tags]    smoke    MTCamera
+	[Tags]    smoke    MTCamera	TSEIA-119
 	[Setup]    Set Test Variable    ${total}    ${0}
 	Comment    Get the Count of each argument for the topic.
 	${itemCount}=    Run    ${xml} sel -t -v "count(/SALEventSet/SALEvent[32]/item)" -n ${folder}/sal_interfaces/MTCamera/MTCamera_Events.xml

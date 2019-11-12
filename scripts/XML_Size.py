@@ -56,6 +56,8 @@ for subsystem in xml_common.subsystems:
 			byte_skipped=col_skipped=""
 			if subsystem == "MTCamera" and topic.decode("utf-8") == "MTCamera_logevent_imageReadoutParameters":
 				col_skipped="	TSEIA-119"
+			elif subsystem == "MTCamera" and topic.decode("utf-8") == "MTCamera_logevent_startRotateCarousel":
+				col_skipped="	TSEIA-119"
 			else:
 				byte_skipped=""
 				col_skipped=""
